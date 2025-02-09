@@ -2,7 +2,7 @@
 Türkiye Cumhuriyeti Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü yüksek lisans ve doktora için **RESMÎ OLMAYAN** tez önerisi ve tez şablonudur.
 [Republic of Turkey Necmettin Erbakan University Institute of Educational Sciences **UNOFFICIAL** thesis proposal and thesis template for master's and doctorate.]
 
-# Teşekkür [Acknowledgement]
+## Teşekkür [Acknowledgement]
 Bu proje yazılmadan önce ve sonrasında aşağıdaki projeler incelenerek bazı durumlarda fikir almak için yararlanılmıştır:
 [Before and after writing this project, the following projects were examined and in some cases used for ideas:]
 - [typst-thesis-template](https://github.com/mrtz-j/typst-thesis-template) from Moritz Jörg <@mrtz-j> and Ole Tytlandsvik <@otytlandsvik>.
@@ -16,14 +16,14 @@ Bu projelerde emeği geçen herkese çok büyük teşşekürlerimi sunarım.
 Ve ayrıca [Typst YouTube Oynatma Listesi](https://youtube.com/playlist?list=PLCO-MGSsHcdArXIfeOGoUwjH0oz8vMr8M&si=c_kTmN4FKmwdMitE) için <@isaacew>'e büyük teşekkürlerimi sunarım.
 [And also a big thank you to <@isaacew> for [Typst YouTube Playlist](https://youtube.com/playlist?list=PLCO-MGSsHcdArXIfeOGoUwjH0oz8vMr8M&si=c_kTmN4FKmwdMitE). It was very helpfull to start Typst.]
 
-# Kullanım [Usage]
+## Kullanım [Usage]
 TODO
 
-# Kurulum [Usage]
+## Kurulum [Usage]
 TODO
 
-## Çevrim İçi [Online]
+### Çevrim İçi [Online]
 TODO
 
-## Çevrim Dışı [Ofline]
+### Çevrim Dışı [Ofline]
 TODO
