@@ -1,0 +1,1 @@
+= bilimsel etik beyannamesi

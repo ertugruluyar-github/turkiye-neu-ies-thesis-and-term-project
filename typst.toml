@@ -1,0 +1,34 @@
+[package]
+name = "turkiye-neu-ies-thesis"
+version = "0.1.0"
+entrypoint = "src/lib.typ"
+authors = ["Ertuğrul UYAR <@ertugruluyar-github>"]
+license = "MIT"
+description = " Türkiye Cumhuriyeti Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü yüksek lisans ve doktora için tez önerisi ve tez şablonudur."
+repository = "https://github.com/ertugruluyar-github/turkiye-neu-ies-thesis"
+categories = ["thesis"]
+keywords = [
+    "thesis",
+    "tez",
+    "proposal",
+    "öneri",
+    "master",
+    "yüksek lisans",
+    "bachelor",
+    "doktora",
+    "university",
+    "üniversite",
+    "NEÜ",
+    "Necmettin Erbakan"
+    "Türkiye",
+]
+compiler = "0.12.0"
+exclude = [
+    "thumbnails",
+    "*.pdf",
+]
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "thumbnails/thumbnail-1.png"
