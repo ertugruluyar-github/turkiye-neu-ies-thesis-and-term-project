@@ -21,5 +21,7 @@ Bu proje yazılmadan önce ve sonrasında aşağıdaki projeler incelenerek baz�
 - [parcio-typst](https://github.com/xkevio/parcio-typst) from Kevin Kulot <@xkevio>.
 - [aiaa-typst](https://github.com/isaacew/aiaa-typst) from <@isaacew> and Alexander Von Moll <@avonmoll>.
 - [ThesIST](https://github.com/tfachada/thesist) from Tomás Fachada <@tfachada> and ThesIST contributors.
+Bu projelerde emeği geçen herkese çok büyük teşşekürlerimi sunarım.
+[I sincerely thank everyone who contributed to these projects.]
 
-AND big thanks to <@isaacew> for the [Typst YouTube Playlist](https://youtube.com/playlist?list=PLCO-MGSsHcdArXIfeOGoUwjH0oz8vMr8M&si=c_kTmN4FKmwdMitE). It was very helpfull to start Typst.
+AND also big thanks to <@isaacew> for the [Typst YouTube Playlist](https://youtube.com/playlist?list=PLCO-MGSsHcdArXIfeOGoUwjH0oz8vMr8M&si=c_kTmN4FKmwdMitE). It was very helpfull to start Typst.
