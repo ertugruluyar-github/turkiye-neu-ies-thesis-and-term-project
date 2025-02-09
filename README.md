@@ -25,4 +25,5 @@ Bu proje yazılmadan önce ve sonrasında aşağıdaki projeler incelenerek baz�
 Bu projelerde emeği geçen herkese çok büyük teşşekürlerimi sunarım.
 [I sincerely thank everyone who contributed to these projects.]
 
-AND also big thanks to <@isaacew> for the [Typst YouTube Playlist](https://youtube.com/playlist?list=PLCO-MGSsHcdArXIfeOGoUwjH0oz8vMr8M&si=c_kTmN4FKmwdMitE). It was very helpfull to start Typst.
+Ve ayrıca [Typst YouTube Oynatma Listesi](https://youtube.com/playlist?list=PLCO-MGSsHcdArXIfeOGoUwjH0oz8vMr8M&si=c_kTmN4FKmwdMitE) için <@isaacew>'e büyük teşekkürlerimi sunarım.
+[And also a big thank you to <@isaacew> for [Typst YouTube Playlist](https://youtube.com/playlist?list=PLCO-MGSsHcdArXIfeOGoUwjH0oz8vMr8M&si=c_kTmN4FKmwdMitE). It was very helpfull to start Typst.]
