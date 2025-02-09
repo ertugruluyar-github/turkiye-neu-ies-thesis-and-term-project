@@ -1,7 +1,7 @@
-= simgeler ve kısaltmalar
+= SİMGELER VE KISALTMALAR
 
-== simgeler
+== Simgeler
 
 #pagebreak()
 
-== kısaltmalar
+== Kısaltmalar

@@ -1,1 +1,1 @@
-= tez çalışması orijinallik raporu
+= TEZ ÇALIŞMASI ORİJİNALLİK RAPORU

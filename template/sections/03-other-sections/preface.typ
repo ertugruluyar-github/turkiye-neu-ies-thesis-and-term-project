@@ -1,2 +1,2 @@
-= ön söz (teşekkür)
+= ÖN SÖZ (TEŞEKKÜR)
 #lorem(100)

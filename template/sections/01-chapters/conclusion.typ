@@ -1,4 +1,4 @@
-= Tartışma, Sonuç ve Öneriler
+= TARTIŞMA, SONUÇ VE ÖNERİLER
 #lorem(50)
 == Tartışma
 #lorem(50)

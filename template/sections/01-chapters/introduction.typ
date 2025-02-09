@@ -1,4 +1,4 @@
-= Giriş
+= GİRİŞ
 #lorem(50)
 == Problem Durumu
 #lorem(50)

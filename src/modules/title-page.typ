@@ -12,16 +12,16 @@
 ) = {
   set align(center)
 
-  let thesis-suffix = if is-thesis-proposal { STRING_THESIS_PROPOSAL_SUFFIX } else { STRING_THESIS_SUFFIX }
+  let thesis-suffix = if is-thesis-proposal { STRING-THESIS-PROPOSAL-SUFFIX } else { STRING-THESIS-SUFFIX }
   let thesis-type = thesis-type + thesis-suffix
 
   header-logo
 
   v(4.75em)
 
-  text(_Large, font: FONT_NAME)[*#thesis-type*]
+  text(_Large, font: FONT-NAME)[*#thesis-type*]
   v(2.5em)
-  text(_huge, font: FONT_NAME)[
+  text(_huge, font: FONT-NAME)[
     #set par(justify: false)
     *#title*
   ]
@@ -48,16 +48,16 @@
     let supervisor-name = reviewers.at(2, default: none)
 
     [
-      #STRING_FIRST-REVİEWER:\
+      #STRING-FIRST-REVIEWER:\
       #first-reviewer-name\ \
       #v(-1.5em)
   
-      #STRING_SECOND-REVİEWER:\
+      #STRING-SECOND-REVIEWER:\
       #second-reviewer-name\ \
       #v(-1.5em)
 
       #if supervisor-name != none [
-        #STRING_SUPERVISOR:\
+        #STRING-SUPERVISOR:\
         #supervisor-name
       ]
     ]

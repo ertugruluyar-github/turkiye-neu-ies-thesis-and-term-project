@@ -1,4 +1,4 @@
-= Yöntem
+= YÖNTEM
 #lorem(50)
 == Araştırmanın Modeli
 #lorem(50)

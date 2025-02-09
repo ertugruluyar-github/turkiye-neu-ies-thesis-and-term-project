@@ -1,4 +1,4 @@
-= Alan Yazın (İlgili Araştırmalar)
+= ALAN YAZIN (İLGİLİ ARAŞTIRMALAR)
 #lorem(50)
 == İkinci Bölüm İkinci Düzey Başlık
 #lorem(50)

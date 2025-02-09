@@ -1,1 +1,1 @@
-= bilimsel etik beyannamesi
+= BİLİMSEL ETİK BEYANNAMESİ

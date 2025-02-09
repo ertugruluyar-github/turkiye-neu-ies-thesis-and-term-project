@@ -1,5 +1,6 @@
 #import "@preview/drafting:0.2.0": margin-note, set-page-properties
 #import "@preview/subpar:0.1.1"
+#import "../constants.typ": *
 
 #let ovgu-blue = rgb("#0068B4")
 #let ovgu-darkgray = rgb("#606060")
@@ -18,7 +19,7 @@
 #let if-none(x, other) = if other == none { x } else { other }
 #let roman-numbering(doc, reset: true) = {
   if reset { counter(page).update(1) }
-  set page(footer: auto, numbering: "i")
+  set page(footer: auto, numbering: PAGE_NUMBERING_ROMAN)
   doc
 }
 
@@ -29,13 +30,13 @@
     context {
       let page-count = counter(page).get().first()
       let page-align = if calc.odd(page-count) { right } else { left } 
-      align(page-align, counter(page).display("1"))
+      align(page-align, counter(page).display(PAGE_NUMBERING_ARABIC))
     }
   } else {
     auto
   }
 
-  set page(footer: footer, numbering: "1")
+  set page(footer: footer, numbering: PAGE_NUMBERING_ARABIC)
   doc
 }
 
@@ -61,8 +62,14 @@
 // A neat inline-section in smallcaps and sans font.
 #let inline-section(title) = smallcaps[*#text(font: "Libertinus Sans", title)*] 
 
-// Fully empty page, no page numbering.
-#let empty-page = page([], footer: [])
+// Tamamen boş sayfa, sayfa numrasız. [Fully empty page, no page numbering.]
+#let empty-page-with-no-page-numbering = page([], footer: [])
+
+// Boş sayfa, Arapça sayfa numralı. [Empty page, with arabic page numbering.]
+#let empty-page-with-arabic-numbering = page([], numbering: PAGE_NUMBERING_ARABIC)
+
+// Boş sayfa, Roman sayfa numralı. [Empty page, with romen page numbering.]
+#let empty-page-with-romen-numbering = page([], numbering: PAGE_NUMBERING_ROMAN)
 
 // Subfigures.
 #let subfigure = subpar.grid.with(
@@ -87,7 +94,9 @@
 )
 
 // Nicer handling of (multiple) appendices. Specify `reset: true` with your first appendix to reset the heading counter!
-#let appendix(reset: false, label: none, body) = {
+#let appendix(reset: false, label-text: none, body) = {
   if reset { counter(heading).update(0) }
-  [#heading(numbering: "A.", supplement: "Appendix", body)#label]
+  [
+    #heading(level: 2, numbering: APPENDICES_NUMBERING, supplement: APPENDICES_SUPPLEMENT, body)#label(lower(STRING-APPANDIX) + label-text)
+  ]
 }
