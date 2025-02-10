@@ -94,9 +94,9 @@
 )
 
 // Nicer handling of (multiple) appendices. Specify `reset: true` with your first appendix to reset the heading counter!
-#let appendix(reset: false, label-text: none, body) = {
+#let appendix(reset: false, title:"Ekin Başlığı", label-text: none, body) = {
   if reset { counter(heading).update(0) }
   [
-    #heading(level: 2, numbering: APPENDICES_NUMBERING, supplement: APPENDICES_SUPPLEMENT, body)#label(lower(STRING-APPANDIX) + label-text)
+    #heading(level: 2, numbering: APPENDICES_NUMBERING, supplement: APPENDICES_SUPPLEMENT, title)#label(lower(STRING-APPANDIX) + label-text)
   ]
 }

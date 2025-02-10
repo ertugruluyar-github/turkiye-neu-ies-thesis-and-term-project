@@ -3,7 +3,7 @@
 = EKLER
 
 // Ek eklemek için bu özel fonksiyonu kullanın.
-#appendix(reset: false, label-text: "meb-izin-kağıdı")[
+#appendix(reset: false, title: "Meb İzin Kağıdı", label-text: "meb-izin-kağıdı")[
   Ek İçeriği
 ]
 
