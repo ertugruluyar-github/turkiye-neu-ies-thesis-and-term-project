@@ -1,6 +1,7 @@
 #import "modules/title-page.typ": *
 #import "modules/custom-functions.typ": *
 #import "constants.typ": *
+#import "styles.typ": *
 
 #let template-configurations(
   title: [Title], 
@@ -75,39 +76,6 @@
 
   /* ---- Stylization of headings / chapters. ---- */
 
-  // Diğer bölümlerdeki 1. düzey başlık, ortalı, numaralandırma yok, İçindekiler tablosunda var, PDF dökümanı hatlarında var.
-  let other-sections-h1-style-center(content) = [
-    #show heading.where(level: 1): h1 => {
-      set heading(numbering: none, outlined: true, bookmarked: true)
-      set align(center)
-      h1
-    }
-    #content
-  ]
-
-  let other-sections-h1-style-left(content) = [
-    #show heading.where(level: 1): h1 => {
-      set heading(numbering: none, outlined: true, bookmarked: true)
-      set align(left)
-      h1
-    }
-    #content
-  ]
-
-  show: other-sections-h1-style-center
-
-  // Diğer bölümlerdeki 2. düzey başlık, ortalı, numaralandırma yok, İçindekiler tablosunda yok, PDF dökümanı hatlarında var.
-  let other-sections-h2-style(content) = [
-    #show heading.where(level: 2): h2 => {
-      set heading(numbering: none, outlined: false, bookmarked: true)
-      set align(left)
-      h2
-    }
-    #content
-  ]
-
-  show: other-sections-h2-style
-
   // Create "Chapter X." heading for every numbered level 1 heading.
   show heading.where(level: 1): h1 => {
     if h1.numbering != none {
@@ -120,14 +88,15 @@
 
       align(center)[
         #set text(_huge)
+        // DÜZELTİLECEK!
         #let heading-prefix = if h1.supplement == [#STRING-APPANDIX] [
           #upper(STRING-APPANDIX) #counter(heading).display(h.numbering)
         ] else [
           #set heading(level: 1, numbering: HEADING-NUMBERING, outlined: false, bookmarked: false)
           #upper(STRING-CHAPTER) #counter(heading).get().first() // Sondaki noktayı kaldır.
         ]
-        #heading-prefix
-        #v(0.25em)
+        #heading-prefix \
+        #v(0.2em)
       ]
     }
     h1
@@ -148,20 +117,51 @@
 
   /* ---- Table of Contents Style ---- */
 
-  show outline: outline => {
-    show heading: pad.with(bottom: 0em)
-    outline
+  // Level 2 and level 3.
+  show outline.entry.where(level: 2)
+    .or(outline.entry.where(level: 3)): it => {
+    let cc = numbering(TABLE-OF-CONTENTS-NUMBERING, ..counter(heading).at(it.element.location()))
+    let indent = h(1.5em + ((it.level - 2) * 1.5em))
+    
+    box(
+      grid(
+        columns: (auto, 1fr, auto),
+        indent + link(it.element.location())[#cc #h(0.1em) #it.element.body #h(5pt)],
+        it.fill,
+        box(width: 1.5em, align(right, it.page)),
+      ),
+    )
   }
 
-  // Level 1 chapters get bold and no dots.
+  // Level 1 and level 2.
+  show outline.entry.where(level: 1)
+    .or(outline.entry.where(level: 2)): it => {
+    let parent = query(
+      heading.where(level: 1).before(it.element.location())
+    ).last()
+    let cc = if it.level == 2 and parent.body == [#STRING-APPENDICES] {
+      numbering(APPENDICES-NUMBERING, ..counter(heading).at(it.element.location()))
+    } else {
+      numbering(TABLE-OF-CONTENTS-NUMBERING, ..counter(heading).at(it.element.location()))
+    }
+    let indent = h(1.5em + ((it.level - 2) * 1.5em))
+    
+    box(
+      grid(
+        columns: (auto, 1fr, auto),
+        indent + link(it.element.location())[#cc #h(0.1em) #it.element.body #h(5pt)],
+        it.fill,
+        box(width: 1.5em, align(right, it.page)),
+      ),
+    )
+  }
+
+    // Level 1 chapters get bold.
   show outline.entry.where(level: 1): it => {
     set text(weight: "bold")
 
     let cc = if it.element.numbering != none {
-      numbering(
-        it.element.numbering, 
-        ..counter(heading).at(it.element.location())
-      )
+      numbering(it.element.numbering, ..counter(heading).at(it.element.location()))
     } else {
       h(-0.5em)
     }
@@ -174,22 +174,6 @@
       it.fill,
       box(width: 1.5em, align(right, it.page)),
     ))
-  }
-
-  // Level 2 and deeper.
-  show outline.entry.where(level: 2)
-    .or(outline.entry.where(level: 3)): it => {
-    let cc = numbering(TABLE-OF-CONTENTS-NUMBERING, ..counter(heading).at(it.element.location()))
-    let indent = h(1.5em + ((it.level - 2) * 2.5em))
-    
-    box(
-      grid(
-        columns: (auto, 1fr, auto),
-        indent + link(it.element.location())[#cc #h(1em) #it.element.body #h(5pt)],
-        it.fill,
-        box(width: 1.5em, align(right, it.page)),
-      ),
-    )
   }
 
   /* ----------------------------- */
@@ -238,103 +222,118 @@
   show raw: set text(12pt * 0.95)
   set-page-properties()
 
-  /* --- DİĞER BÖLÜMLER [OTHER SECTIONS] --- */
-  
-  /* --- Ön Söz [Preface] --- */
-  par(justify: true)[#include "../template/sections/03-other-sections/preface.typ"]
-  
-  pagebreak()
+  {
+    /* --- DİĞER BÖLÜMLER [OTHER SECTIONS] --- */
+    // 
+    show heading: set heading(numbering: none, bookmarked: true)
+    show heading.where(level: 1): set heading(outlined: true)
+    show: set-heading1-style-for-other-sections
 
-  /* --- İçindekiler [Table of Contents] --- */
-  outline(depth: 4, indent: n => n * 1em, fill: repeat(justify: true, gap: 0.1em)[.], title: [= #upper(STRING-CONTENTS)])
+    // 
+    show heading.where(level: 2)
+      .or(heading.where(level: 3))
+      .or(heading.where(level: 4))
+      .or(heading.where(level: 5))
+      .or(heading.where(level: 6)): set heading(outlined: false)
+    show: set-heading2-style-for-other-sections
+
+    /* --- Ön Söz [Preface] --- */
+    par(justify: true)[#include "../template/sections/03-other-sections/preface.typ"]
+    
+    pagebreak()
+    
+    /* --- İçindekiler [Table of Contents] --- */
+    outline(depth: 3, indent: n => n * 1em, fill: repeat(justify: true, gap: 0.1em)[.], title: upper(STRING-CONTENTS))
+    
+    pagebreak()
+
+    /* --- Tez Çalışması Örijinallik Raporu [Originality Report] --- */
+    par(justify: true)[#include "../template/sections/03-other-sections/originality-report.typ"]
+    
+    pagebreak()
+
+    /* --- Bilimsel Etik Beyannamesi [Scientific Ethics Declaration] --- */
+    par(justify: true)[#include "../template/sections/03-other-sections/scientific-ethics-declaration.typ"]
+    
+    pagebreak()
+
+    /* --- Simgeler ve Kısaltmalar [Symbols and Abbreviations] --- */
+    par(justify: true)[#include "../template/sections/03-other-sections/symbols-and-abbreviations.typ"]
+    
+    pagebreak()
+
+    /* --- Özet [Abstract] --- */
+
+    par(justify: true)[#include "../template/sections/03-other-sections/abstract-tur.typ"]
+    align(left)[*Anahtar Kelimeler:* #keywords-tur]
+    
+    pagebreak()
+
+    par(justify: true)[#include "../template/sections/03-other-sections/abstract-eng.typ"]
+    align(left)[*Keywords:* #keywords-eng]
+    
+    pagebreak(to: "odd")
+  }
   
-  pagebreak()
-
-  /* --- Tez Çalışması Örijinallik Raporu [Originality Report] --- */
-  par(justify: true)[#include "../template/sections/03-other-sections/originality-report.typ"]
-  
-  pagebreak()
-
-  /* --- Bilimsel Etik Beyannamesi [Scientific Ethics Declaration] --- */
-  par(justify: true)[#include "../template/sections/03-other-sections/scientific-ethics-declaration.typ"]
-  
-  pagebreak()
-
-  /* --- Simgeler ve Kısaltmalar [Symbols and Abbreviations] --- */
-  par(justify: true)[#include "../template/sections/03-other-sections/symbols-and-abbreviations.typ"]
-  
-  pagebreak()
-
-  /* --- Özet [Abstract] --- */
-
-  par(justify: true)[#include "../template/sections/03-other-sections/abstract-tur.typ"]
-  align(left)[*Anahtar Kelimeler:* #keywords-tur]
-  
-  pagebreak()
-
-  par(justify: true)[#include "../template/sections/03-other-sections/abstract-eng.typ"]
-  align(left)[*Keywords:* #keywords-eng]
-  
-  pagebreak(to: "odd")
-
   // Set arabic numbering and alternate page number position.
   show: arabic-numbering
+
+  {
+    /* --- ANA BÖLÜMLER --- */
+    // Tezin ana bölümlerindeki 1 ve 2. düzey başlık "diğer bölümler" kısmından farklı olacak şekilde değiştirildi.
+    set heading(numbering: HEADING-NUMBERING, outlined: true, bookmarked: true)
+    show heading.where(level: 4): set heading(numbering: none, outlined: true, bookmarked: true)
+    show: set-heading-styles-for-main-sections
+    show: set-heading4-style-for-main-sections
+
+    // Bölüm 1 [Chapter 1]
+    include "../template/sections/01-chapters/introduction.typ"
+    pagebreak()
+
+    // Bölüm 2 [Chapter 2]
+    include "../template/sections/01-chapters/literature.typ"
+    pagebreak()
+
+    // Bölüm 3 [Chapter 3]
+    include "../template/sections/01-chapters/methodology.typ"
+    pagebreak()
+
+    // Bölüm 4 [Chapter 4]
+    include "../template/sections/01-chapters/results.typ"
+    pagebreak()
+
+    // Bölüm 5 [Chapter 5]
+    include "../template/sections/01-chapters/conclusion.typ"
+    pagebreak()
+
+    empty-page-with-arabic-page-numbering
+ }
+
+ {
+    /* ---- Back matter of your thesis ---- */
+    show heading: set align(left)
+    show heading.where(level: 1): set heading(numbering: none, outlined: true, bookmarked: true)
+    show heading.where(level: 2): set heading(numbering: none, outlined: true, bookmarked: true)
+    show heading.where(level: 3): set heading(outlined: false)
+    show heading.where(level: 4): set heading(outlined: false, bookmarked: false)
+    show heading.where(level: 5): set heading(outlined: false, bookmarked: false)
+    show heading.where(level: 6): set heading(outlined: false, bookmarked: false)
+    
+    // Kaynakça [Bibliography]
+    bibliography(
+      "../template/bibliography-sources/references.bib",
+      style: "../template/bibliography-styles/apa7-tr.csl",
+      title: STRING-BIBLIOGRAPHY,
+      full: false
+    )
+
+    empty-page-with-arabic-page-numbering
+    
+    // Ekler [Appendices]
+    include "../template/sections/02-appendices/02-appendices.typ"
   
-  // Tezin ana bölümlerindeki 1 ve 2. düzey başlık "diğer bölümler" kısmından farklı olacak şekilde değiştirildi.
-  set heading(numbering: HEADING-NUMBERING, outlined: true, bookmarked: true)
-  show: other-sections-h1-style-left
-
-  /* --- ANA BÖLÜMLER --- */
-  
-  // Bölüm 1 [Chapter 1]
-  include "../template/sections/01-chapters/introduction.typ"
-
-  // Bölüm 2 [Chapter 2]
-  include "../template/sections/01-chapters/literature.typ"
-
-  // Bölüm 3 [Chapter 3]
-  include "../template/sections/01-chapters/methodology.typ"
-
-  // Bölüm 4 [Chapter 4]
-  include "../template/sections/01-chapters/results.typ"
-
-  // Bölüm 5 [Chapter 5]
-  include "../template/sections/01-chapters/conclusion.typ"
-
-  /* ---- Back matter of your thesis ---- */
-
-  empty-page-with-arabic-numbering
-
-  let h1-style-left(content) = [    
-    #set heading(numbering: none, outlined: true, bookmarked: true)
-    #content
-  ]
-
-  show: h1-style-left
-
-  show heading.where(level: 2): h2 => {
-    set heading(numbering: APPENDICES_NUMBERING, outlined: true, bookmarked: true)
-    set align(left)
-    h2
+    empty-page-with-no-page-numbering
   }
-
-  counter(heading).update(0)
-  
-  // Kaynakça [Bibliography]
-  bibliography(
-    "../template/bibliography-sources/references.bib",
-    style: "../template/bibliography-styles/apa7-tr.csl",
-    title: STRING-BIBLIOGRAPHY,
-    full: false
-  )
-
-  empty-page-with-arabic-numbering
-  
-  // Ekler [Appendices]
-  include "../template/sections/02-appendices/02-appendices.typ"
-  
-  empty-page-with-no-page-numbering
-
   // Gövdeyi pasif hale getir [Disable the body]
   //body
 }

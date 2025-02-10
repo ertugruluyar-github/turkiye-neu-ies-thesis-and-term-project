@@ -12,7 +12,8 @@
 #let STRING-CONTENTS = "İÇİNDEKİLER"
 #let STRING-CHAPTER = "BÖLÜM"
 #let STRING-SECTION = "KISIM"
-#let STRING-APPANDIX = "Ek-"
+#let STRING-APPANDIX = "Ek"
+#let APPANDIX-PREFIX-SEPERATOR = "-"
 #let STRING-THESIS-SUFFIX = " Tezi"
 #let STRING-THESIS-PROPOSAL-SUFFIX = " Tez Önerisi"
 
@@ -23,10 +24,11 @@
 #let FIGURE-NUMBERING = "1.1." // Simgeler [Figures]
 #let MATH-NUMBERING = "(1)" // Simgeler [Figures]
 #let TABLE-OF-CONTENTS-NUMBERING = "1.1." // İçindekiler [Table of Contents]
-#let APPENDICES_NUMBERING = upper(STRING-APPANDIX) + "111" // Ekler [Appendices]
+#let APPENDICES-NUMBERING(.., last) = STRING-APPANDIX + APPANDIX-PREFIX-SEPERATOR + str(last) + ":" // Ekler [Appendices]
 
 // Ekler [Supplements]
-#let APPENDICES_SUPPLEMENT = STRING-APPANDIX
+#let STRING-APPENDICES = "EKLER"
+#let APPENDICES_SUPPLEMENT = none
 
 // Başlık Sayfası [Title Page]
 #let STRING-FIRST-REVIEWER = "1. Juri Üyesi"

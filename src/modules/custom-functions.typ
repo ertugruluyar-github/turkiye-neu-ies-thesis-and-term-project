@@ -17,13 +17,14 @@
 /* ---- Convencience functions ---- */
 
 #let if-none(x, other) = if other == none { x } else { other }
-#let roman-numbering(doc, reset: true) = {
+
+#let roman-numbering(content, reset: true) = {
   if reset { counter(page).update(1) }
   set page(footer: auto, numbering: PAGE_NUMBERING_ROMAN)
-  doc
+  content
 }
 
-#let arabic-numbering(doc, alternate: true, reset: true) = {
+#let arabic-numbering(content, alternate: true, reset: true) = {
   if reset { counter(page).update(1) }
 
   let footer = if alternate {
@@ -37,7 +38,7 @@
   }
 
   set page(footer: footer, numbering: PAGE_NUMBERING_ARABIC)
-  doc
+  content
 }
 
 /* ------------------------------- */
@@ -66,10 +67,10 @@
 #let empty-page-with-no-page-numbering = page([], footer: [])
 
 // Boş sayfa, Arapça sayfa numralı. [Empty page, with arabic page numbering.]
-#let empty-page-with-arabic-numbering = page([], numbering: PAGE_NUMBERING_ARABIC)
+#let empty-page-with-arabic-page-numbering = page([], numbering: PAGE_NUMBERING_ARABIC)
 
 // Boş sayfa, Roman sayfa numralı. [Empty page, with romen page numbering.]
-#let empty-page-with-romen-numbering = page([], numbering: PAGE_NUMBERING_ROMAN)
+#let empty-page-with-romen-page-numbering = page([], numbering: PAGE_NUMBERING_ROMAN)
 
 // Subfigures.
 #let subfigure = subpar.grid.with(
@@ -95,8 +96,9 @@
 
 // Nicer handling of (multiple) appendices. Specify `reset: true` with your first appendix to reset the heading counter!
 #let appendix(reset: false, title:"Ekin Başlığı", label-text: none, body) = {
-  if reset { counter(heading).update(0) }
+  if reset { counter(heading).update(1) }
   [
-    #heading(level: 2, numbering: APPENDICES_NUMBERING, supplement: APPENDICES_SUPPLEMENT, title)#label(lower(STRING-APPANDIX) + label-text)
+    #heading(level: 2, numbering: APPENDICES-NUMBERING, supplement: APPENDICES_SUPPLEMENT, title)#label(lower(STRING-APPANDIX) + APPANDIX-PREFIX-SEPERATOR + label-text)
+    #body
   ]
 }
