@@ -1,6 +1,6 @@
 // #import "@local/turkiye-neu-ies-thesis:0.1.0": *
-#import "../src/lib.typ": template-configurations
-#import "../src/modules/custom-functions.typ": *
+#import "/src/lib.typ": template-configurations
+#import "/src/modules/custom-functions.typ": *
 
 /* ---- Thesis configurations ----  
   title: Tezinizin başlığı.
