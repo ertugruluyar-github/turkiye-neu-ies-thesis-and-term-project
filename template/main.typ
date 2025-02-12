@@ -25,5 +25,5 @@
   keywords-tur: "anahtar kelime 1, anahtar kelime 2, anahtar kelime 3",
   keywords-eng: "keyword 1, keyword 2, keyword 3",
   reviewers: ("Prof. Dr. Musterfrau", "Prof. Dr. Mustermann", "Dr. Evil"),
-  header-logo: image("organization-logos/university-logo.png", width: 66%),
+  header-logo: image("/template/organization-logos/university-logo.png", width: 33%),
 )
