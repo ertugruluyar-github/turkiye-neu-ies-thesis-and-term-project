@@ -22,9 +22,6 @@
 // Diğer bölümlerdeki 2. düzey başlık, ortalı, numaralandırma yok, İçindekiler tablosunda yok, PDF dökümanı hatlarında var.
 #let set-heading-styles-for-main-sections(content) = {    
     show heading: it => {
-      if it.level == 4 {
-        set text(style: "italic")
-      }
       set align(left)
       it
     }

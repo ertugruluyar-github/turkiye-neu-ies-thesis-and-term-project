@@ -40,13 +40,13 @@
     region: REGION, 
     ligatures: false,
   )
-/*
+
   set heading(
     numbering: none,
     outlined: true, 
     bookmarked: true,
   )
-*/
+
   set par(
     justify: true,
   )
@@ -114,36 +114,24 @@
       it.supplement
     }
   })
-
+  
   /* ---- Table of Contents Style ---- */
+  
+  // Set Level 1 outlines' text bold.
+  show outline.entry.where(level: 1): set text(weight: "bold")
 
-  // Level 2 and level 3.
-  show outline.entry.where(level: 2)
-    .or(outline.entry.where(level: 3)): it => {
-    let cc = numbering(TABLE-OF-CONTENTS-NUMBERING, ..counter(heading).at(it.element.location()))
-    let indent = h(1.5em + ((it.level - 2) * 1.5em))
-    
-    box(
-      grid(
-        columns: (auto, 1fr, auto),
-        indent + link(it.element.location())[#cc #h(0.1em) #it.element.body #h(5pt)],
-        it.fill,
-        box(width: 1.5em, align(right, it.page)),
-      ),
-    )
-  }
-
-  // Level 1 and level 2.
+  // Set headings and special appendices numbering
   show outline.entry.where(level: 1)
-    .or(outline.entry.where(level: 2)): it => {
-    let parent = query(
-      heading.where(level: 1).before(it.element.location())
-    ).last()
-    let cc = if it.level == 2 and parent.body == [#STRING-APPENDICES] {
-      numbering(APPENDICES-NUMBERING, ..counter(heading).at(it.element.location()))
-    } else {
-      numbering(TABLE-OF-CONTENTS-NUMBERING, ..counter(heading).at(it.element.location()))
-    }
+    .or(outline.entry.where(level: 2))
+    .or(outline.entry.where(level: 3)): it => {
+    let parent = query(heading.where(level: 1).before(it.element.location())).last()
+  
+    let cc = if it.element.numbering != none {
+        numbering(it.element.numbering, ..counter(heading).at(it.element.location()))
+      } else {
+        h(-0.5em)
+      }
+  
     let indent = h(1.5em + ((it.level - 2) * 1.5em))
     
     box(
@@ -155,27 +143,7 @@
       ),
     )
   }
-
-    // Level 1 chapters get bold.
-  show outline.entry.where(level: 1): it => {
-    set text(weight: "bold")
-
-    let cc = if it.element.numbering != none {
-      numbering(it.element.numbering, ..counter(heading).at(it.element.location()))
-    } else {
-      h(-0.5em)
-    }
-    
-    v(0.1em)
-    
-    box(grid(
-      columns: (auto, 1fr, auto),
-      link(it.element.location())[#cc #h(0.5em) #it.element.body #h(5pt)],
-      it.fill,
-      box(width: 1.5em, align(right, it.page)),
-    ))
-  }
-
+  
   /* ----------------------------- */
 
   show raw.where(block: true): r => {
@@ -222,11 +190,13 @@
   show raw: set text(12pt * 0.95)
   set-page-properties()
 
-  {
-    /* --- DİĞER BÖLÜMLER [OTHER SECTIONS] --- */
+  { /* --- DİĞER BÖLÜMLER [OTHER SECTIONS] --- */
+    
     // 
     show heading: set heading(numbering: none, bookmarked: true)
     show heading.where(level: 1): set heading(outlined: true)
+    
+    //
     show: set-heading1-style-for-other-sections
 
     // 
@@ -235,6 +205,8 @@
       .or(heading.where(level: 4))
       .or(heading.where(level: 5))
       .or(heading.where(level: 6)): set heading(outlined: false)
+    
+    //
     show: set-heading2-style-for-other-sections
 
     /* --- Ön Söz [Preface] --- */
@@ -278,8 +250,7 @@
   // Set arabic numbering and alternate page number position.
   show: arabic-numbering
 
-  {
-    /* --- ANA BÖLÜMLER --- */
+  { /* --- ANA BÖLÜMLER --- */    
     // Tezin ana bölümlerindeki 1 ve 2. düzey başlık "diğer bölümler" kısmından farklı olacak şekilde değiştirildi.
     set heading(numbering: HEADING-NUMBERING, outlined: true, bookmarked: true)
     show heading.where(level: 4): set heading(numbering: none, outlined: true, bookmarked: true)
@@ -309,11 +280,14 @@
     empty-page-with-arabic-page-numbering
  }
 
- {
-    /* ---- Back matter of your thesis ---- */
+ { /* ---- Back matter of your thesis ---- */    
+    // Başlık numarlandırmasını 1'den başlat.
+    counter(heading).update(1)
+    // Başlık stilleri
     show heading: set align(left)
     show heading.where(level: 1): set heading(numbering: none, outlined: true, bookmarked: true)
-    show heading.where(level: 2): set heading(numbering: none, outlined: true, bookmarked: true)
+    show heading.where(level: 2): set heading(numbering: APPENDICES-NUMBERING, outlined: true, bookmarked: true)
+    show heading.where(level: 2): it => {STRING-APPANDIX + APPANDIX-PREFIX-SEPERATOR + it}
     show heading.where(level: 3): set heading(outlined: false)
     show heading.where(level: 4): set heading(outlined: false, bookmarked: false)
     show heading.where(level: 5): set heading(outlined: false, bookmarked: false)
@@ -330,10 +304,13 @@
     empty-page-with-arabic-page-numbering
     
     // Ekler [Appendices]
+    // Başlık numarlandırmasını 1'den başlat.
+    counter(heading).update(1)
     include "../template/sections/02-appendices/02-appendices.typ"
   
     empty-page-with-no-page-numbering
   }
+
   // Gövdeyi pasif hale getir [Disable the body]
   //body
 }

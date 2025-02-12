@@ -23,7 +23,7 @@
 #let HEADING-NUMBERING = "1.1." // Başlıklar [Headings]
 #let FIGURE-NUMBERING = "1.1." // Simgeler [Figures]
 #let MATH-NUMBERING = "(1)" // Simgeler [Figures]
-#let TABLE-OF-CONTENTS-NUMBERING = "1.1." // İçindekiler [Table of Contents]
+//#let TABLE-OF-CONTENTS-NUMBERING = "a.1.1." // İçindekiler [Table of Contents]
 #let APPENDICES-NUMBERING(.., last) = STRING-APPANDIX + APPANDIX-PREFIX-SEPERATOR + str(last) + ":" // Ekler [Appendices]
 
 // Ekler [Supplements]
