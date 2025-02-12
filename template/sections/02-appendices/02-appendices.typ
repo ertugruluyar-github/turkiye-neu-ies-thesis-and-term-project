@@ -20,6 +20,8 @@ Herhangi bir eki referans göstermek: @ek-meb-izin-kağıdı.
 #lorem(20)
 
 ...
+// Devamındaki içeriğin yeni bir sayfadan başlamasını sağlamak için "pagebreak()" fonksiyonunu kullanabilirsiniz.
+#pagebreak()
 
 // İsterseniz ayrı ayrı dosyalardaki ekleri "02-appendices" klasörüne koyarak da ekleyebilirsiniz.
 #include "/template/sections/02-appendices/appendix-1.typ"// Mutlak yol belirletek ekleyebilirsiniz.

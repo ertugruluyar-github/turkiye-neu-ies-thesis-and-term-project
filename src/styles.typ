@@ -1,55 +1,72 @@
-#import "constants.typ": HEADING-NUMBERING
+#import "constants.typ": HEADING-NUMBERING, APPENDICES-NUMBERING, STRING-APPANDIX, APPANDIX-PREFIX-SEPERATOR
 #import "modules/custom-functions.typ": _huge, _large, _Large
 
 // Diğer bölümlerdeki 1. düzey başlık, ortalı, numaralandırma yok, İçindekiler tablosunda var, PDF dökümanı hatlarında var.
-#let set-heading1-style-for-other-sections(content) = {    
-  show heading.where(level: 1): it => {
-    set align(center)
-    it
-  }
+#let set-heading-styles-for-front-matter-of-thesis(content) = {
+  // 
+  show heading.where(level: 1): set heading(numbering: none, outlined: true, bookmarked: true)
+  
+  // 
+  show heading.where(level: 2)
+    .or(heading.where(level: 3))
+    .or(heading.where(level: 4))
+    .or(heading.where(level: 5))
+    .or(heading.where(level: 6)): set heading(numbering: none, outlined: false, bookmarked: true)
+  
+  // 
+  show heading.where(level: 1): set align(center)
+  
+  //
+  show heading.where(level: 2)
+    .or(heading.where(level: 3))
+    .or(heading.where(level: 4))
+    .or(heading.where(level: 5))
+    .or(heading.where(level: 6)): set align(left)
+  
+  // 
+  show heading.where(level: 4)
+    .or(heading.where(level: 5))
+    .or(heading.where(level: 6)): set text(style: "italic")  
   content
 }
 
 // Diğer bölümlerdeki 2. düzey başlık, ortalı, numaralandırma yok, İçindekiler tablosunda yok, PDF dökümanı hatlarında var.
-#let set-heading2-style-for-other-sections(content) = {    
-  show heading.where(level: 2): it => {
-    set align(left)
-    it
-  }
+#let set-heading-styles-for-main-sections-of-thesis(content) = {
+  // 
+  set heading(numbering: HEADING-NUMBERING, outlined: true, bookmarked: true)
+  // 
+  show heading.where(level: 4)
+    .or(heading.where(level: 5))
+    .or(heading.where(level: 6)): set heading(numbering: none, outlined: true, bookmarked: true)
+  // 
+  show heading.where(level: 4)
+    .or(heading.where(level: 5))
+    .or(heading.where(level: 6)): set text(style: "italic")
+  // 
+  show heading: set align(left)
   content
-}
-
-// Diğer bölümlerdeki 2. düzey başlık, ortalı, numaralandırma yok, İçindekiler tablosunda yok, PDF dökümanı hatlarında var.
-#let set-heading-styles-for-main-sections(content) = {    
-    show heading: it => {
-      set align(left)
-      it
-    }
-    content
 }
 
 // 
-#let set-heading4-style-for-main-sections(content) = {    
-    show heading.where(level: 4): it => {
-      set text(style: "italic")
-      set align(left)
-      it
-    }
-    content
-}
-
-#let set-heading1-style-for-bibliography-and-later(content) = {
-  show heading.where(level: 1): it => {
-    set align(left)
-    it
-  }
-  content
-}
-
-#let set-heading2-style-for-bibliography-and-later(content) = {   
-  show heading.where(level: 2): it => {
-    set align(left)
-    it
-  }
+#let set-heading-styles-for-back-matter-of-thesis(content) = {
+  // 
+  show heading: set align(left)
+  
+  //
+  show heading.where(level: 1): set heading(numbering: none, outlined: true, bookmarked: true)
+  
+  //
+  show heading.where(level: 2): set heading(numbering: APPENDICES-NUMBERING, outlined: true, bookmarked: true)
+  
+  //
+  show heading.where(level: 3)
+    .or(heading.where(level: 4))
+    .or(heading.where(level: 5))
+    .or(heading.where(level: 6)): set heading(outlined: false, bookmarked: false)
+  
+  // 
+  show heading.where(level: 4)
+    .or(heading.where(level: 5))
+    .or(heading.where(level: 6)): set text(style: "italic")  
   content
 }
