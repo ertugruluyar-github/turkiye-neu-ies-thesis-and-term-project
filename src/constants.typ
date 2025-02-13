@@ -9,6 +9,10 @@
 #let LANGUAGE = "tr"
 #let REGION = "tr"
 #let FONT-NAME = "Times New Roman"
+#let FONT-SIZE = 12pt
+#let PARAGRAPH_FIRST_LINE_INDENT = 1.25cm
+
+// STRING CONSTANTS
 #let STRING-CONTENTS = "İÇİNDEKİLER"
 #let STRING-CHAPTER = "BÖLÜM"
 #let STRING-SECTION = "KISIM"

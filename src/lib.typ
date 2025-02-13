@@ -38,7 +38,7 @@
 
   set text(
     font: FONT-NAME, 
-    size: 12pt, 
+    size: FONT-SIZE, 
     lang: LANGUAGE, 
     region: REGION, 
     ligatures: false,
@@ -52,6 +52,7 @@
 
   set par(
     justify: true,
+    first-line-indent: PARAGRAPH_FIRST_LINE_INDENT,
   )
   
   set math.equation(
@@ -193,7 +194,7 @@
   { /* ---- TEZİN ÖN KISMI [FRONT MATTER OF THESIS] ---- */ 
     // 
     show: set-heading-styles-for-front-matter-of-thesis
-    show par: set par(justify: true)
+    show par: set par(justify: true, first-line-indent: PARAGRAPH_FIRST_LINE_INDENT)
 
     /* --- Ön Söz [Preface] --- */
     include "/template/sections/03-other-sections/preface.typ"
