@@ -28,6 +28,7 @@
 // Ekler [Supplements]
 #let STRING-APPENDICES = "EKLER"
 #let APPENDICES_SUPPLEMENT = none
+#let MATH_EQUATION_SUPPLEMENT = "Denklem."
 
 // Başlık Sayfası [Title Page]
 #let STRING-FIRST-REVIEWER = "1. Juri Üyesi"

@@ -56,6 +56,7 @@
   
   set math.equation(
     numbering: MATH-NUMBERING,
+    supplement: MATH_EQUATION_SUPPLEMENT,
   )
 
   /* ---- General design choices. --- */
