@@ -1,4 +1,3 @@
-#import "custom-functions.typ": _huge, _large, _Large
 #import "../constants.typ": *
 
 #let title-page(
@@ -10,6 +9,10 @@
   reviewers,
   date,
 ) = {
+  let _large = 14pt
+  let _Large = 16pt 
+  let _LARGE = 20pt
+  let _huge = 24pt
   set align(center)
 
   let thesis-suffix = if is-thesis-proposal { STRING-THESIS-PROPOSAL-SUFFIX } else { STRING-THESIS-SUFFIX }

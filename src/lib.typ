@@ -92,7 +92,6 @@
       counter(figure.where(kind: raw)).update(0)
 
       align(center)[
-        #set text(_huge)
         // DÜZELTİLECEK!
         #let heading-prefix = if h1.supplement == [#STRING-APPANDIX] [
           #upper(STRING-APPANDIX) #counter(heading).display(h.numbering)
@@ -168,7 +167,6 @@
   /* ----------------------------- */
 
   show heading: set block(spacing: 1.25em)
-  show heading: set text(font: FONT-NAME, _Large)
   
   set footnote.entry(separator: line(length: 40%, stroke: 0.5pt))
   set list(marker: (sym.bullet, "◦", "-"))
@@ -240,6 +238,7 @@
   { /* --- TEZİN ANA BÖLÜMLERİ --- */
     
     show: set-heading-styles-for-main-sections-of-thesis
+    show par: set par(justify: true, first-line-indent: PARAGRAPH_FIRST_LINE_INDENT)
 
     /* ---- Bölüm 1 [Chapter 1] ---- */
     include "/template/sections/01-chapters/introduction.typ"
@@ -270,6 +269,7 @@
     
     // Başlık stilleri
     show: set-heading-styles-for-back-matter-of-thesis
+    set par(justify: true, first-line-indent: PARAGRAPH_FIRST_LINE_INDENT)
     
     // Kaynakça [Bibliography]
     bibliography(

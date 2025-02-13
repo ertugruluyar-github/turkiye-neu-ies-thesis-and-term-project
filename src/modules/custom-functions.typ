@@ -9,11 +9,6 @@
 #let ovgu-purple = rgb("#7A003F")
 #let ovgu-red = rgb("#D13F58")
 
-#let _large = 14.4pt
-#let _Large = 17.28pt 
-#let _LARGE = 20.74pt
-#let _huge = 24.88pt
-
 /* ---- Convencience functions ---- */
 
 #let if-none(x, other) = if other == none { x } else { other }
