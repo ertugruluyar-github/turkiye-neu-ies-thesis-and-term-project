@@ -23,7 +23,7 @@
   set document(
     title: title, 
     author: author.fullname,
-    keywords: keywords-tur + keywords-eng
+    keywords: keywords-tur + keywords-eng,
   )
 
   set page(
