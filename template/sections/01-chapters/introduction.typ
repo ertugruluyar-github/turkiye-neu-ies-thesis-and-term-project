@@ -1,8 +1,17 @@
 = GİRİŞ
-#lorem(50)
+First line #lorem(50)
+
+First line #lorem(50) \
+First line #lorem(50)
+
+First line #lorem(50)
 == Problem Durumu
+  First line #lorem(50)
+
 #lorem(50)
-== Araştırmanın Amacı
+== Araştırmanın Amacı \
+First line #lorem(50)
+
 #lorem(50)
 == Araştırmanın Önemi
 #lorem(50)

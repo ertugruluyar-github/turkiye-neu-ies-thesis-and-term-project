@@ -18,8 +18,8 @@
 #let STRING-CONTENTS = "İÇİNDEKİLER"
 #let STRING-CHAPTER = "BÖLÜM"
 #let STRING-SECTION = "KISIM"
-#let STRING-APPANDIX = "Ek"
-#let APPANDIX-PREFIX-SEPERATOR = "-"
+#let STRING-APPENDIX = "Ek"
+#let APPENDIX-PREFIX-SEPERATOR = "-"
 #let STRING-THESIS-SUFFIX = " Tezi"
 #let STRING-THESIS-PROPOSAL-SUFFIX = " Tez Önerisi"
 
@@ -29,7 +29,7 @@
 #let HEADING-NUMBERING = "1.1." // Başlıklar [Headings]
 #let FIGURE-NUMBERING = "1.1." // Simgeler [Figures]
 #let MATH-NUMBERING = "(1)" // Simgeler [Figures]
-#let APPENDICES-NUMBERING(.., last) = STRING-APPANDIX + APPANDIX-PREFIX-SEPERATOR + str(last) + ":" // Ekler [Appendices]
+#let APPENDICES-NUMBERING(.., last) = STRING-APPENDIX + APPENDIX-PREFIX-SEPERATOR + str(last) + ":" // Ekler [Appendices]
 
 // Ekler [Supplements]
 #let STRING-APPENDICES = "EKLER"

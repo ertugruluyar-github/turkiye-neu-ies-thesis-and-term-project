@@ -1,4 +1,4 @@
-#import "constants.typ": HEADING-NUMBERING, APPENDICES-NUMBERING, STRING-APPANDIX, APPANDIX-PREFIX-SEPERATOR
+#import "constants.typ": HEADING-NUMBERING, APPENDICES-NUMBERING, STRING-APPENDIX, APPENDIX-PREFIX-SEPERATOR
 
 // Diğer bölümlerdeki 1. düzey başlık, ortalı, numaralandırma yok, İçindekiler tablosunda var, PDF dökümanı hatlarında var.
 #let set-heading-styles-for-front-matter-of-thesis(content) = {

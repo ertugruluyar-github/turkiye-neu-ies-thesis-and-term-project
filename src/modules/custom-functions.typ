@@ -94,7 +94,7 @@
 #let appendix(reset: false, title:"Ekin Başlığı", label-text: none, body) = {
   if reset { counter(heading).update(1) }
   [
-    #heading(level: 2, numbering: APPENDICES-NUMBERING, supplement: APPENDICES_SUPPLEMENT, title)#label(lower(STRING-APPANDIX) + APPANDIX-PREFIX-SEPERATOR + label-text)
+    #heading(level: 2, numbering: APPENDICES-NUMBERING, supplement: APPENDICES_SUPPLEMENT, title)#label(lower(STRING-APPENDIX) + APPENDIX-PREFIX-SEPERATOR + label-text)
     #body
   ]
 }

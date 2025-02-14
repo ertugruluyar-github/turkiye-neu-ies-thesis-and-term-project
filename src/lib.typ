@@ -93,8 +93,8 @@
 
       align(center)[
         // DÜZELTİLECEK!
-        #let heading-prefix = if h1.supplement == [#STRING-APPANDIX] [
-          #upper(STRING-APPANDIX) #counter(heading).display(h.numbering)
+        #let heading-prefix = if h1.supplement == [#STRING-APPENDIX] [
+          #upper(STRING-APPENDIX) #counter(heading).display(h.numbering)
         ] else [
           #set heading(level: 1, numbering: HEADING-NUMBERING, outlined: false, bookmarked: false)
           #upper(STRING-CHAPTER) #counter(heading).get().first() // Sondaki noktayı kaldır.
