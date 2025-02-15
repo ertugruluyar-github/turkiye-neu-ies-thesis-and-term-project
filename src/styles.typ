@@ -1,4 +1,4 @@
-#import "constants.typ": HEADING-NUMBERING, APPENDICES-NUMBERING, STRING-APPENDIX, APPENDIX-PREFIX-SEPERATOR
+#import "constants.typ": HEADING-NUMBERING, APPENDICES-NUMBERING, STRING-APPENDIX, APPENDIX-PREFIX-SEPERATOR, APPENDICES-SUPPLEMENT
 
 // Diğer bölümlerdeki 1. düzey başlık, ortalı, numaralandırma yok, İçindekiler tablosunda var, PDF dökümanı hatlarında var.
 #let set-heading-styles-for-front-matter-of-thesis(content) = {
@@ -55,7 +55,7 @@
   show heading.where(level: 1): set heading(numbering: none, outlined: true, bookmarked: true)
   
   //
-  show heading.where(level: 2): set heading(numbering: APPENDICES-NUMBERING, outlined: true, bookmarked: true)
+  show heading.where(level: 2): set heading(numbering: APPENDICES-NUMBERING, supplement: APPENDICES-SUPPLEMENT, outlined: true, bookmarked: true)
   
   //
   show heading.where(level: 3)
@@ -68,4 +68,9 @@
     .or(heading.where(level: 5))
     .or(heading.where(level: 6)): set text(style: "italic")  
   content
+
+  //
+  show heading.where(level: 2): it => {
+    numbering(it.numbering) + APPENDICES-SUFFIX
+  }
 }

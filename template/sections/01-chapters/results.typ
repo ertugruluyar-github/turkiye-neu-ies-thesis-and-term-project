@@ -7,6 +7,6 @@
 ==== Dördüncü bölüm dördüncü düzey başlık
 #lorem(50)
 
-#include "../../examples/table-figure-example.typ"
+Tablo figürü örneğine gitmek için "@figür-örnek-tablo-figürü" kısmına tıklayınız.
 
-#include "../../examples/image-figure-example.typ"
+Resim figürü örneğine gitmek için "@figür-örnek-resim-figürü" kısmına tıklayınız.

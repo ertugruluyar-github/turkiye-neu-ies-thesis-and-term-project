@@ -15,7 +15,7 @@
 
 #let roman-numbering(content, reset: true) = {
   if reset { counter(page).update(1) }
-  set page(footer: auto, numbering: PAGE_NUMBERING_ROMAN)
+  set page(footer: auto, numbering: PAGE-NUMBERING-ROMAN)
   content
 }
 
@@ -26,13 +26,13 @@
     context {
       let page-count = counter(page).get().first()
       let page-align = if calc.odd(page-count) { right } else { left } 
-      align(page-align, counter(page).display(PAGE_NUMBERING_ARABIC))
+      align(page-align, counter(page).display(PAGE-NUMBERING-ARABIC))
     }
   } else {
     auto
   }
 
-  set page(footer: footer, numbering: PAGE_NUMBERING_ARABIC)
+  set page(footer: footer, numbering: PAGE-NUMBERING-ARABIC)
   content
 }
 
@@ -62,10 +62,10 @@
 #let empty-page-with-no-page-numbering = page([], footer: [])
 
 // Boş sayfa, Arapça sayfa numralı. [Empty page, with arabic page numbering.]
-#let empty-page-with-arabic-page-numbering = page([], numbering: PAGE_NUMBERING_ARABIC)
+#let empty-page-with-arabic-page-numbering = page([], numbering: PAGE-NUMBERING-ARABIC)
 
 // Boş sayfa, Roman sayfa numralı. [Empty page, with romen page numbering.]
-#let empty-page-with-romen-page-numbering = page([], numbering: PAGE_NUMBERING_ROMAN)
+#let empty-page-with-romen-page-numbering = page([], numbering: PAGE-NUMBERING-ROMAN)
 
 // Subfigures.
 #let subfigure = subpar.grid.with(
@@ -94,7 +94,7 @@
 #let appendix(reset: false, title:"Ekin Başlığı", label-text: none, body) = {
   if reset { counter(heading).update(1) }
   [
-    #heading(level: 2, numbering: APPENDICES-NUMBERING, supplement: APPENDICES_SUPPLEMENT, title)#label(lower(STRING-APPENDIX) + APPENDIX-PREFIX-SEPERATOR + label-text)
+    #heading(level: 2, numbering: APPENDICES-NUMBERING, supplement: APPENDICES-SUPPLEMENT, title)#label(lower(STRING-APPENDIX) + APPENDIX-PREFIX-SEPERATOR + label-text)
     #body
   ]
 }

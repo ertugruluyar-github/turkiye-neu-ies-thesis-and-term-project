@@ -12,29 +12,35 @@
 #let FONT-SIZE = 12pt
 #let FIGURE-TITLE-TEXT-FONT-SIZE = 10pt
 #let FIGURE-CONTENT-TEXT-FONT-SIZE = 10pt
-#let PARAGRAPH_FIRST_LINE_INDENT = 1.25cm
+#let PARAGRAPH-FIRST-LINE-INDENT = 1.25cm
 
 // STRING CONSTANTS
 #let STRING-CONTENTS = "İÇİNDEKİLER"
 #let STRING-CHAPTER = "BÖLÜM"
 #let STRING-SECTION = "KISIM"
+#let STRING-APPENDICES = "EKLER"
 #let STRING-APPENDIX = "Ek"
-#let APPENDIX-PREFIX-SEPERATOR = "-"
 #let STRING-THESIS-SUFFIX = " Tezi"
 #let STRING-THESIS-PROPOSAL-SUFFIX = " Tez Önerisi"
 
-// Numaralandırma [Numbering]
-#let PAGE_NUMBERING_ROMAN = "i" // Sayfalar [Pages]
-#let PAGE_NUMBERING_ARABIC = "1" // Sayfalar [Pages]
-#let HEADING-NUMBERING = "1.1." // Başlıklar [Headings]
-#let FIGURE-NUMBERING = "1.1." // Simgeler [Figures]
-#let MATH-NUMBERING = "(1)" // Simgeler [Figures]
-#let APPENDICES-NUMBERING(.., last) = STRING-APPENDIX + APPENDIX-PREFIX-SEPERATOR + str(last) + ":" // Ekler [Appendices]
-
 // Ekler [Supplements]
-#let STRING-APPENDICES = "EKLER"
-#let APPENDICES_SUPPLEMENT = none
-#let MATH_EQUATION_SUPPLEMENT = "Denklem."
+#let APPENDICES-SUPPLEMENT = none
+#let APPENDICES-SUFFIX = ":"
+#let MATH-EQUATION-SUPPLEMENT = "Denklem"
+#let TABLE-FIGURE-SUPPLEMENT = "Tablo"
+#let IMAGE-FIGURE-SUPPLEMENT = "Şekil"
+
+// Ayraçlar [Separators]
+#let APPENDIX-PREFIX-SEPERATOR = "-"
+#let FIGURE-CAPTION-SEPARATOR = ". "
+
+// Numaralandırma [Numbering]
+#let PAGE-NUMBERING-ROMAN = "i" // Sayfalar [Pages]
+#let PAGE-NUMBERING-ARABIC = "1" // Sayfalar [Pages]
+#let HEADING-NUMBERING = "1.1." // Başlıklar [Headings]
+#let FIGURE-NUMBERING = "1.1" // Simgeler [Figures]
+#let MATH-NUMBERING = "(1)" // Simgeler [Figures]
+#let APPENDICES-NUMBERING(.., last) = STRING-APPENDIX + APPENDIX-PREFIX-SEPERATOR + str(last) // Ekler [Appendices]
 
 // Başlık Sayfası [Title Page]
 #let STRING-FIRST-REVIEWER = "1. Juri Üyesi"

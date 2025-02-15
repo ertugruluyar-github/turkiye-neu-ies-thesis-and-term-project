@@ -9,4 +9,8 @@
 
 #include "../../examples/table-figure-example.typ"
 
+@figür-örnek-tablo-figürü örnek bir tablo içerikli figürdür.
+
 #include "../../examples/image-figure-example.typ"
+
+@figür-örnek-resim-figürü örnek bir resim içerikli figürdür.

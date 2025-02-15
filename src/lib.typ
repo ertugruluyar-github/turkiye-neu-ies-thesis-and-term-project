@@ -32,7 +32,7 @@
     footer: none,
     margin: MARGIN,
     number-align: right,
-    numbering: PAGE_NUMBERING_ROMAN,
+    numbering: PAGE-NUMBERING-ROMAN,
     columns: 1,
   )
 
@@ -52,13 +52,37 @@
 
   set par(
     justify: true,
-    first-line-indent: PARAGRAPH_FIRST_LINE_INDENT,
+    first-line-indent: PARAGRAPH-FIRST-LINE-INDENT,
   )
   
   set math.equation(
     numbering: MATH-NUMBERING,
-    supplement: MATH_EQUATION_SUPPLEMENT,
+    supplement: MATH-EQUATION-SUPPLEMENT,
   )
+
+  show table.cell.where(y: 0): set text(weight: "bold")
+  let normal-stroke-size = 1pt
+  let bold-stroke-size = 1.5pt
+
+  set table(
+    align: center + horizon,
+    gutter: 0pt,
+    inset: (x: 0.3cm, y: 0.25cm),
+    stroke: (x, y) => (
+      left: none,
+      top: if y == 0 { bold-stroke-size } else { 0pt },
+      right: none,
+      bottom: if y > 1 {normal-stroke-size} else if y == 1 or (x == 0 and y == 0) { bold-stroke-size } else { 0pt },
+    ),
+    fill: none,
+  )
+
+  show figure.where(kind: table): set figure(supplement: TABLE-FIGURE-SUPPLEMENT, placement: none, gap: 0.5em)
+  
+  show figure.where(kind: table): set figure.caption(position: top, separator: FIGURE-CAPTION-SEPARATOR)
+
+
+  show figure.where(kind: image): set figure(supplement: IMAGE-FIGURE-SUPPLEMENT, placement: none, gap: 0.5em)
 
   /* ---- General design choices. --- */
 
@@ -69,15 +93,7 @@
     gap: 1em
   )
 
-  // Add final period after fig-numbering (1.1 -> 1.1.).
-  // Additionally, left align caption if it spans multiple lines.
-  show figure.caption: c => {
-    grid(
-      columns: 2,
-      align(top)[#c.supplement #context c.counter.display(c.numbering).#c.separator],
-      align(left, c.body),
-    )
-  }
+
 
   /* ---- Stylization of headings / chapters. ---- */
 
@@ -192,7 +208,7 @@
   { /* ---- TEZİN ÖN KISMI [FRONT MATTER OF THESIS] ---- */ 
     // 
     show: set-heading-styles-for-front-matter-of-thesis
-    show par: set par(justify: true, first-line-indent: PARAGRAPH_FIRST_LINE_INDENT)
+    show par: set par(justify: true, first-line-indent: PARAGRAPH-FIRST-LINE-INDENT)
 
     /* --- Ön Söz [Preface] --- */
     include "/template/sections/03-other-sections/preface.typ"
@@ -238,7 +254,7 @@
   { /* --- TEZİN ANA BÖLÜMLERİ --- */
     
     show: set-heading-styles-for-main-sections-of-thesis
-    show par: set par(justify: true, first-line-indent: PARAGRAPH_FIRST_LINE_INDENT)
+    show par: set par(justify: true, first-line-indent: PARAGRAPH-FIRST-LINE-INDENT)
 
     /* ---- Bölüm 1 [Chapter 1] ---- */
     include "/template/sections/01-chapters/introduction.typ"
@@ -269,7 +285,7 @@
     
     // Başlık stilleri
     show: set-heading-styles-for-back-matter-of-thesis
-    set par(justify: true, first-line-indent: PARAGRAPH_FIRST_LINE_INDENT)
+    set par(justify: true, first-line-indent: PARAGRAPH-FIRST-LINE-INDENT)
     
     // Kaynakça [Bibliography]
     bibliography(
@@ -284,6 +300,9 @@
     // Ekler [Appendices]
     // Başlık numarlandırmasını 1'den başlat.
     counter(heading).update(1)
+    // Ekler bölümünde yer alan referansların eki
+    //show ref: set ref(supplement: APPENDICES-SUPPLEMENT)
+
     include "/template/sections/02-appendices/02-appendices.typ"
   
     empty-page-with-no-page-numbering
