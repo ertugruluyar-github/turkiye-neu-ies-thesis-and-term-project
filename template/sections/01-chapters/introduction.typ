@@ -9,7 +9,7 @@ First line #lorem(50)
   First line #lorem(50)
 
 #lorem(50)
-== Araştırmanın Amacı \
+== Araştırmanın Amacı
 First line #lorem(50)
 
 #lorem(50)
