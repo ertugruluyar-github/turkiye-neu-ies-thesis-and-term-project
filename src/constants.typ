@@ -10,8 +10,11 @@
 #let REGION = "tr"
 #let FONT-NAME = "Times New Roman"
 #let FONT-SIZE = 12pt
-#let FIGURE-TITLE-TEXT-FONT-SIZE = 10pt
-#let FIGURE-CONTENT-TEXT-FONT-SIZE = 10pt
+#let ALTERNATE-FONT-SIZE = 10pt
+#let ABSTRACT-TEXT-FONT-SIZE = ALTERNATE-FONT-SIZE
+#let FIGURE-TITLE-TEXT-FONT-SIZE = ALTERNATE-FONT-SIZE
+#let FIGURE-CONTENT-TEXT-FONT-SIZE = ALTERNATE-FONT-SIZE
+#let FOOTNOTE-TEXT-FONT-SIZE = ALTERNATE-FONT-SIZE
 #let PARAGRAPH-FIRST-LINE-INDENT = 1.25cm
 
 // STRING CONSTANTS
@@ -23,16 +26,16 @@
 #let STRING-THESIS-SUFFIX = " Tezi"
 #let STRING-THESIS-PROPOSAL-SUFFIX = " Tez Önerisi"
 
+// Ayraçlar [Separators]
+#let APPENDIX-PREFIX-SEPERATOR = "-"
+#let FIGURE-CAPTION-SEPARATOR = ". "
+
 // Ekler [Supplements]
-#let APPENDICES-SUPPLEMENT = none
+#let APPENDICES-SUPPLEMENT = STRING-APPENDIX + APPENDIX-PREFIX-SEPERATOR
 #let APPENDICES-SUFFIX = ":"
 #let MATH-EQUATION-SUPPLEMENT = "Denklem"
 #let TABLE-FIGURE-SUPPLEMENT = "Tablo"
 #let IMAGE-FIGURE-SUPPLEMENT = "Şekil"
-
-// Ayraçlar [Separators]
-#let APPENDIX-PREFIX-SEPERATOR = "-"
-#let FIGURE-CAPTION-SEPARATOR = ". "
 
 // Numaralandırma [Numbering]
 #let PAGE-NUMBERING-ROMAN = "i" // Sayfalar [Pages]
@@ -40,7 +43,8 @@
 #let HEADING-NUMBERING = "1.1." // Başlıklar [Headings]
 #let FIGURE-NUMBERING = "1.1" // Simgeler [Figures]
 #let MATH-NUMBERING = "(1)" // Simgeler [Figures]
-#let APPENDICES-NUMBERING(.., last) = STRING-APPENDIX + APPENDIX-PREFIX-SEPERATOR + str(last) // Ekler [Appendices]
+#let APPENDICES-HEADING-NUMBERING(.., last) = APPENDICES-SUPPLEMENT + str(last) + APPENDICES-SUFFIX // Ekler [Appendices]
+#let APPENDICES-REFERENCE-NUMBERING(.., last) = str(last) // Ekler [Appendices]
 
 // Başlık Sayfası [Title Page]
 #let STRING-FIRST-REVIEWER = "1. Juri Üyesi"

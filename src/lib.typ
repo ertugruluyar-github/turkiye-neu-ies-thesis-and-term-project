@@ -49,12 +49,14 @@
     outlined: true, 
     bookmarked: true,
   )
+  
+  show heading: set text(size: FONT-SIZE)
 
   set par(
     justify: true,
     first-line-indent: PARAGRAPH-FIRST-LINE-INDENT,
   )
-  
+
   set math.equation(
     numbering: MATH-NUMBERING,
     supplement: MATH-EQUATION-SUPPLEMENT,
@@ -109,8 +111,8 @@
 
       align(center)[
         // DÜZELTİLECEK!
-        #let heading-prefix = if h1.supplement == [#STRING-APPENDIX] [
-          #upper(STRING-APPENDIX) #counter(heading).display(h.numbering)
+        #let heading-prefix = if h1.body == [#STRING-APPENDICES] [
+          #upper(STRING-APPENDIX) #counter(heading).display(h1.numbering)
         ] else [
           #set heading(level: 1, numbering: HEADING-NUMBERING, outlined: false, bookmarked: false)
           #upper(STRING-CHAPTER) #counter(heading).get().first() // Sondaki noktayı kaldır.
@@ -208,7 +210,7 @@
   { /* ---- TEZİN ÖN KISMI [FRONT MATTER OF THESIS] ---- */ 
     // 
     show: set-heading-styles-for-front-matter-of-thesis
-    show par: set par(justify: true, first-line-indent: PARAGRAPH-FIRST-LINE-INDENT)
+    set par(justify: true, first-line-indent: 0cm)
 
     /* --- Ön Söz [Preface] --- */
     include "/template/sections/03-other-sections/preface.typ"
@@ -236,6 +238,8 @@
     pagebreak()
 
     /* --- Özet [Abstract] --- */
+    // Özet metni normal yazı büyüklüğünden daha küçük olacak şekilde ayarlandı.
+    set text(size: ABSTRACT-TEXT-FONT-SIZE)
 
     include "/template/sections/03-other-sections/abstract-tur.typ"
     align(left)[*Anahtar Kelimeler:* #keywords-tur]
@@ -254,7 +258,7 @@
   { /* --- TEZİN ANA BÖLÜMLERİ --- */
     
     show: set-heading-styles-for-main-sections-of-thesis
-    show par: set par(justify: true, first-line-indent: PARAGRAPH-FIRST-LINE-INDENT)
+    set par(justify: true, first-line-indent: PARAGRAPH-FIRST-LINE-INDENT)
 
     /* ---- Bölüm 1 [Chapter 1] ---- */
     include "/template/sections/01-chapters/introduction.typ"
@@ -300,9 +304,7 @@
     // Ekler [Appendices]
     // Başlık numarlandırmasını 1'den başlat.
     counter(heading).update(1)
-    // Ekler bölümünde yer alan referansların eki
-    //show ref: set ref(supplement: APPENDICES-SUPPLEMENT)
-
+    
     include "/template/sections/02-appendices/02-appendices.typ"
   
     empty-page-with-no-page-numbering
