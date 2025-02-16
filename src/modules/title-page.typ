@@ -10,7 +10,7 @@
   date,
 ) = {
   let _large = 14pt
-  let _Large = 16pt 
+  let _Large = 16pt
   let _LARGE = 20pt
   let _huge = 24pt
   set align(center)
@@ -32,7 +32,7 @@
 
   set text(_Large)
   show raw: set text(_large * 0.95)
-  
+
   author.fullname
   v(0.75em, weak: true)
   link("https://orcid.org/" + author.orcid)[#author.orcid]
@@ -54,7 +54,7 @@
       #STRING-FIRST-REVIEWER:\
       #first-reviewer-name\ \
       #v(-1.5em)
-  
+
       #STRING-SECOND-REVIEWER:\
       #second-reviewer-name\ \
       #v(-1.5em)

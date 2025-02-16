@@ -1,3 +1,4 @@
+
 // Genel [General]
 #let PAPER = "a4"
 #let MARGIN = (
@@ -43,7 +44,9 @@
 #let HEADING-NUMBERING = "1.1." // Başlıklar [Headings]
 #let FIGURE-NUMBERING = "1.1" // Simgeler [Figures]
 #let MATH-NUMBERING = "(1)" // Simgeler [Figures]
-#let APPENDICES-HEADING-NUMBERING(.., last) = APPENDICES-SUPPLEMENT + str(last) + APPENDICES-SUFFIX // Ekler [Appendices]
+#let APPENDICES-HEADING-NUMBERING(.., last) = (
+  APPENDICES-SUPPLEMENT + str(last) + APPENDICES-SUFFIX
+) // Ekler [Appendices]
 #let APPENDICES-REFERENCE-NUMBERING(.., last) = str(last) // Ekler [Appendices]
 
 // Başlık Sayfası [Title Page]
@@ -58,4 +61,17 @@
 #let DATE-FORMAT = "[day] [month repr:long] [year]"
 
 // Türkçe Aylar [Months Turkish]
-#let MONTHS = ("Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık")
+#let MONTHS = (
+  "Ocak",
+  "Şubat",
+  "Mart",
+  "Nisan",
+  "Mayıs",
+  "Haziran",
+  "Temmuz",
+  "Ağustos",
+  "Eylül",
+  "Ekim",
+  "Kasım",
+  "Aralık",
+)

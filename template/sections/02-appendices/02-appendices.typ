@@ -1,9 +1,9 @@
 = EKLER
 Herhangi bir eki referans göstermek: @ek-meb-izin-kağıdı.
 // İsterseniz tek bir dosyada bütün ekleri ekleyebilirsiniz.
-== İlk Sıradaki Ek
+== İlk Sıradaki Ek <ek-ilk-sıradaki-ek>
 #lorem(50)
-  
+
 ...
 // 3. düzey ve sonrası başlıklarla devam edin.
 === Örnek başlık 3
@@ -17,9 +17,9 @@ Herhangi bir eki referans göstermek: @ek-meb-izin-kağıdı.
 
 ...
 
-== İkinci Sıradaki Ek
+== İkinci Sıradaki Ek <ek-ikinci-sıradaki-ek>
 #lorem(50)
-  
+
 ...
 // 3. düzey ve sonrası başlıklarla devam edin.
 === Örnek başlık 3

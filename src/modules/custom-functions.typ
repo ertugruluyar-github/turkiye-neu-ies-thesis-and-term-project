@@ -25,7 +25,7 @@
   let footer = if alternate {
     context {
       let page-count = counter(page).get().first()
-      let page-align = if calc.odd(page-count) { right } else { left } 
+      let page-align = if calc.odd(page-count) { right } else { left }
       align(page-align, counter(page).display(PAGE-NUMBERING-ARABIC))
     }
   } else {
@@ -45,7 +45,7 @@
     stroke: black + 0.5pt,
     radius: 0.25em,
     width: 100%,
-    body
+    body,
   )
 } else {
   set rect(fill: ovgu-orange)
@@ -56,7 +56,7 @@
 #let section = heading.with(level: 2, outlined: false, numbering: none)
 
 // A neat inline-section in smallcaps and sans font.
-#let inline-section(title) = smallcaps[*#text(font: "Libertinus Sans", title)*] 
+#let inline-section(title) = smallcaps[*#text(font: "Libertinus Sans", title)*]
 
 // Tamamen boş sayfa, sayfa numrasız. [Fully empty page, no page numbering.]
 #let empty-page-with-no-page-numbering = page([], footer: [])
@@ -69,10 +69,10 @@
 
 // Subfigures.
 #let subfigure = subpar.grid.with(
-  numbering: (num) => {
+  numbering: num => {
     numbering("1.1", counter(heading).get().first(), num)
   },
-  numbering-sub-ref: (sup, sub) => { 
+  numbering-sub-ref: (sup, sub) => {
     numbering("1.1a", counter(heading).get().first(), sup, sub)
   },
 )
@@ -85,7 +85,7 @@
     left: 0.5pt,
     right: 0.5pt,
     top: if y <= 1 { 0.5pt },
-    bottom: if y == 0 or y == max-rows - 1 { 0.5pt }
+    bottom: if y == 0 or y == max-rows - 1 { 0.5pt },
   )
 )
 

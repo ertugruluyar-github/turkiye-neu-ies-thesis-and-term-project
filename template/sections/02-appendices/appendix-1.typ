@@ -1,5 +1,4 @@
-// Her 2. düzey başlık bir ektir ve İçindekiler tablosunda yer alır. 
-== Meb İzin Kağıdı <ek-meb-izin-kağıdı>
+== Meb İzin Kağıdı <ek-meb-izin-kağıdı> // Her 2. düzey başlık bir ektir ve İçindekiler tablosunda yer alır.
 #lorem(50)
 
 ...
@@ -14,4 +13,3 @@
 #lorem(20)
 
 ...
-  

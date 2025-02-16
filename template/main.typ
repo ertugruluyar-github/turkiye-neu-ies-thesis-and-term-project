@@ -1,8 +1,9 @@
+
 // #import "@local/turkiye-neu-ies-thesis:0.1.0": *
 #import "/src/lib.typ": template-configurations
 #import "/src/modules/custom-functions.typ": *
 
-/* ---- Thesis configurations ----  
+/* ---- Thesis configurations ----
   title: Tezinizin başlığı.
   author: (fullname: "", orcid: "") şeklinde adınız soyadınız ve ORCID numaranız.
   abstract: Tezinizin özeti.
@@ -13,12 +14,13 @@
   lang: the text language for smartquotes & hyphenation (specify as ISO 639-1/2/3 code, default: "en").
   header-logo: your faculty and/or organization banner (default: none).
 */
+
 #show: template-configurations.with(
-  title: "Title", 
+  title: "Title",
   author: (
     fullname: "Yazarın Adı Soyadı",
     orcid: "xxxx-xxxx-xxxx-xxxx",
-  ),  
+  ),
   thesis-type: "Doktora",
   is-thesis-proposal: false,
   date: datetime.today(),

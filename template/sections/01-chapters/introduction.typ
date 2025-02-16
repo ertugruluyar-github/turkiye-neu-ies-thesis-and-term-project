@@ -1,4 +1,6 @@
 = GİRİŞ
+Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni.
+
 First line #lorem(50)
 
 First line #lorem(50) \
@@ -6,7 +8,7 @@ First line #lorem(50)
 
 First line #lorem(50)
 == Problem Durumu
-  First line #lorem(50)
+First line #lorem(50)
 
 #lorem(50)
 == Araştırmanın Amacı
