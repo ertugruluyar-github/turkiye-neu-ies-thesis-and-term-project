@@ -56,8 +56,8 @@
   set par(
     justify: true,
     first-line-indent: PARAGRAPH-FIRST-LINE-INDENT,
-    leading: 1.5em,
-    spacing: 1em,
+    leading: PARAGRAPH-LEADING-SIZE,
+    spacing: PARAGRAPH-SPACING-SIZE,
   )
 
   set math.equation(
@@ -93,7 +93,8 @@
           #upper(STRING-CHAPTER) #counter(heading).get().first() // Sondaki noktayı kaldır.
         ]
         #heading-prefix \
-        #v(0.2em)
+        // 1.5 satır aralığı (1em karakterin kendisi + 0.5em) ve paragraflar arası boşluk miktarı kadar boşluk eklendi.
+        #v(0.5em + PARAGRAPH-SPACING-SIZE)
       ]
     }
     h1
@@ -114,13 +115,10 @@
     },
   )
 
-  /* ---- Table of Contents Style ---- */
-  show: set-table-of-contents-style
-
   /* ----------------------------- */
 
   show raw.where(block: true): r => {
-    set par(justify: false)
+    set par(justify: false, first-line-indent: 0pt, leading: PARAGRAPH-LEADING-SIZE, spacing: PARAGRAPH-SPACING-SIZE)
     show raw.line: l => {
       box(
         table(
@@ -139,8 +137,6 @@
   }
 
   /* ----------------------------- */
-
-  show heading: set block(spacing: 1.25em)
 
   set footnote.entry(separator: line(length: 40%, stroke: 0.5pt))
   set list(marker: (sym.bullet, "◦", "-"))
@@ -167,7 +163,7 @@
     /* ---- TEZİN ÖN KISMI [FRONT MATTER OF THESIS] ---- */
     //
     show: set-heading-styles-for-front-matter-of-thesis
-    set par(justify: true, first-line-indent: 0cm)
+    set par(justify: true, first-line-indent: 0cm, leading: PARAGRAPH-LEADING-SIZE, spacing: PARAGRAPH-SPACING-SIZE)
 
     /* --- Ön Söz [Preface] --- */
     include "/template/sections/03-other-sections/preface.typ"
@@ -175,7 +171,16 @@
     pagebreak()
 
     /* --- İçindekiler [Table of Contents] --- */
-    outline(depth: 3, indent: n => n * 1em, fill: repeat(justify: true, gap: 0.1em)[.], title: upper(STRING-CONTENTS))
+
+    /* ---- Table of Contents Style ---- */
+    show: set-table-of-contents-style(
+      outline(
+        depth: 3,
+        indent: n => n * 1em,
+        fill: repeat(justify: true, gap: 0.1em)[.],
+        title: upper(STRING-CONTENTS),
+      ),
+    )
 
     pagebreak()
 
@@ -214,9 +219,16 @@
 
   {
     /* --- TEZİN ANA BÖLÜMLERİ --- */
-
+    //
     show: set-heading-styles-for-main-sections-of-thesis
-    set par(justify: true, first-line-indent: PARAGRAPH-FIRST-LINE-INDENT)
+
+    //
+    set par(
+      justify: true,
+      first-line-indent: PARAGRAPH-FIRST-LINE-INDENT,
+      leading: PARAGRAPH-LEADING-SIZE,
+      spacing: PARAGRAPH-SPACING-SIZE,
+    )
 
     /* ---- Bölüm 1 [Chapter 1] ---- */
     include "/template/sections/01-chapters/introduction.typ"
@@ -250,11 +262,13 @@
     show: set-styles-for-back-matter-of-thesis
 
     // Kaynakça [Bibliography]
-    bibliography(
-      "/template/bibliography-sources/references.bib",
-      style: "/template/bibliography-styles/apa7-tr.csl",
-      title: STRING-BIBLIOGRAPHY,
-      full: false,
+    set-bibliography-styles(
+      bibliography(
+        "/template/bibliography-sources/references.bib",
+        style: "/template/bibliography-styles/apa7-tr.csl",
+        title: STRING-BIBLIOGRAPHY,
+        full: false,
+      ),
     )
 
     empty-page-with-arabic-page-numbering

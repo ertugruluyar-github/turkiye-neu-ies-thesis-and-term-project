@@ -17,6 +17,9 @@
 #let FIGURE-CONTENT-TEXT-FONT-SIZE = ALTERNATE-FONT-SIZE
 #let FOOTNOTE-TEXT-FONT-SIZE = ALTERNATE-FONT-SIZE
 #let PARAGRAPH-FIRST-LINE-INDENT = 1.25cm
+// 1,5 satır yani 1.5em = FONT-SIZE * 1.5
+#let PARAGRAPH-LEADING-SIZE = 1.5em
+#let PARAGRAPH-SPACING-SIZE = 12pt
 
 // Yazı Kalınlıkları [Font Weights]
 #let DEFAULT-TEXT-FONT-WEIGHT = 400
@@ -48,7 +51,7 @@
 #let PAGE-NUMBERING-ARABIC = "1" // Sayfalar [Pages]
 #let HEADING-NUMBERING = "1.1." // Başlıklar [Headings]
 #let FIGURE-NUMBERING = "1.1" // Simgeler [Figures]
-#let MATH-NUMBERING = "(1)" // Simgeler [Figures]
+#let MATH-NUMBERING = "(1.1)" // Simgeler [Figures]
 #let APPENDICES-HEADING-NUMBERING(.., last) = (
   APPENDICES-SUPPLEMENT + str(last) + APPENDICES-SUFFIX
 ) // Ekler [Appendices]

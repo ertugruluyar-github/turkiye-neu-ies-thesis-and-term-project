@@ -11,7 +11,33 @@
   FIGURE-CAPTION-PREFIX-TEXT-FONT-WEIGHT,
   FIGURE-CAPTION-TITLE-TEXT-FONT-WEIGHT,
   FIGURE-NUMBERING,
+  PARAGRAPH-LEADING-SIZE,
+  PARAGRAPH-SPACING-SIZE,
 )
+
+#let set-bibliography-styles(content) = {
+  set par(
+    justify: true,
+    first-line-indent: 0pt,
+    leading: 1em,
+    spacing: PARAGRAPH-SPACING-SIZE,
+  )
+  content
+}
+
+#let set-heading-spacing(content) = {
+  // 1.5 satır aralığı yapmak için 0.5 satır aralığı kadar boşluk eklendi ve paragrafdan sonraki boşluk eklendi. NOT: 1em = FONT-SIZE = 12pt ve buna 0.5em eklenerek 1.5 satır aralığı başlığa uygulanmış oldu.
+  show heading.where(level: 1): set block(above: 0pt, below: 0.5em + PARAGRAPH-SPACING-SIZE)
+
+  // Başlığın üstünde, 1.5 satır aralığı yapmak için 0.5 satır aralığı kadar boşluk + paragrafdan sonraki boşluk miktarı kadar boşluk eklendi. Başlığın altında 1.5 satır aralığı yapmak için 0.5 satır aralığı kadar boşluk eklendi.
+  show heading
+    .where(level: 2)
+    .or(heading.where(level: 3))
+    .or(heading.where(level: 4))
+    .or(heading.where(level: 5))
+    .or(heading.where(level: 6)): set block(above: 0.5em + PARAGRAPH-SPACING-SIZE, below: 0.5em)
+  content
+}
 
 // Diğer bölümlerdeki 1. düzey başlık, ortalı, numaralandırma yok, İçindekiler tablosunda var, PDF dökümanı hatlarında var.
 #let set-heading-styles-for-front-matter-of-thesis(content) = {
@@ -39,6 +65,9 @@
 
   //
   show heading.where(level: 4).or(heading.where(level: 5)).or(heading.where(level: 6)): set text(style: "italic")
+
+  //
+  show: set-heading-spacing
   content
 }
 
@@ -60,6 +89,20 @@
     ),
     fill: none,
   )
+
+  show table: it => {
+    set text(size: ALTERNATE-FONT-SIZE)
+    set table.footer(repeat: true)
+    show table.footer: set table.cell(align: left, colspan: 9)
+    it
+  }
+
+  show table.footer: it => {
+    set table.footer(repeat: true)
+    set table.cell(align: left, colspan: 9)
+    set text(size: ALTERNATE-FONT-SIZE)
+    it
+  }
   content
 }
 
@@ -104,12 +147,12 @@
   }
 
   // Tabloyu bölme
-  // show figure.where(kind: table): set block(breakable: true)
+  //show figure.where(kind: table): set block(breakable: true)
 
   /* ---- General design choices. --- */
 
-  // Enable heading specific figure numbering and increase spacing.
-  show figure: set block(spacing: 1.5em)
+  // Set spacing of figures.
+  show figure: set block(above: 1.5em, below: 0.5em)
   set figure(
     numbering: n => numbering(FIGURE-NUMBERING, counter(heading).get().first(), n),
     gap: 1em,
@@ -119,6 +162,9 @@
 
 /* ---- Table of Contents Style ---- */
 #let set-table-of-contents-style(content) = {
+  //
+  set par(leading: 0.75em, spacing: 1em)
+
   // Set Level 1 outlines' text bold.
   show outline.entry.where(level: 1): set text(weight: "bold")
 
@@ -156,6 +202,9 @@
   show heading.where(level: 4).or(heading.where(level: 5)).or(heading.where(level: 6)): set text(style: "italic")
   //
   show heading: set align(left)
+
+  //
+  show: set-heading-spacing
   content
 }
 
@@ -192,5 +241,8 @@
 
   //
   set par(justify: true, first-line-indent: PARAGRAPH-FIRST-LINE-INDENT)
+
+  //
+  show: set-heading-spacing
   content
 }

@@ -1,10 +1,10 @@
 = GİRİŞ
-Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni.
+Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Atıf yapma örneği @isguzel_2006_UluslararasiOgrenciDegerlendirme[s. 5].
 
-First line #lorem(50)
+First line #lorem(50) Atıf yapma örneği @you_etal_2021_CloserLookUS[ss. 1, 2, 3].
 
 First line #lorem(50) \
-First line #lorem(50)
+First line #lorem(50) Atıf yapma örneği @weng_luo_2023_ComparativeAnalysisData[ss. 1-3].
 
 First line #lorem(50)
 == Problem Durumu
