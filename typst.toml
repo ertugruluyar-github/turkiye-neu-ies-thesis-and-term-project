@@ -22,7 +22,7 @@ keywords = [
     "Necmettin Erbakan"
     "Türkiye",
 ]
-compiler = "0.13.0"
+compiler = "0.12.0"
 exclude = [
     "thumbnails",
     "*.pdf",
