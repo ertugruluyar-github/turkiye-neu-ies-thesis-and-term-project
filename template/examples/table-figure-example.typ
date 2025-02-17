@@ -29,4 +29,4 @@
   ),
   caption: [Tablo figürü örneği],
 ) <figür-örnek-tablo-figürü>
-#text(size: 10pt)[Tablo açıklaması varsa tablonun hemen altına yazınız.]
+#par(leading: 1em, text(size: 10pt)[Tablo açıklaması varsa tablonun hemen altına yazınız.])
