@@ -172,7 +172,7 @@
     )
 
     /* --- Ön Söz [Preface] --- */
-    include "/template/sections/03-other-sections/preface.typ"
+    include "/template/sections/03-other-pages/preface.typ"
 
     pagebreak()
 
@@ -191,17 +191,17 @@
     pagebreak()
 
     /* --- Tez Çalışması Örijinallik Raporu [Originality Report] --- */
-    include "/template/sections/03-other-sections/originality-report.typ"
+    include "/template/sections/03-other-pages/originality-report.typ"
 
     pagebreak()
 
     /* --- Bilimsel Etik Beyannamesi [Scientific Ethics Declaration] --- */
-    include "/template/sections/03-other-sections/scientific-ethics-declaration.typ"
+    include "/template/sections/03-other-pages/scientific-ethics-declaration.typ"
 
     pagebreak()
 
     /* --- Simgeler ve Kısaltmalar [Symbols and Abbreviations] --- */
-    include "/template/sections/03-other-sections/symbols-and-abbreviations.typ"
+    include "/template/sections/03-other-pages/symbols-and-abbreviations.typ"
 
     pagebreak()
 
@@ -209,7 +209,7 @@
     // Özet metni normal yazı büyüklüğünden daha küçük olacak şekilde ayarlandı.
     set text(size: ABSTRACT-TEXT-FONT-SIZE)
 
-    include "/template/sections/03-other-sections/abstract-tur.typ"
+    include "/template/sections/03-other-pages/abstract-text-tur.typ"
     keywords-component(
       title: STRING-KEYWORDS-TUR,
       keywords: keywords-tur,
@@ -217,7 +217,7 @@
 
     pagebreak()
 
-    include "/template/sections/03-other-sections/abstract-eng.typ"
+    include "/template/sections/03-other-pages/abstract-text-eng.typ"
     keywords-component(
       title: STRING-KEYWORDS-ENG,
       keywords: keywords-eng,
