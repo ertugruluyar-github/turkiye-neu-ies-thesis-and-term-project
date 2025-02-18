@@ -1,4 +1,4 @@
-#import "constants.typ": (
+#import "/src/constants.typ": (
   HEADING-NUMBERING,
   APPENDICES-HEADING-NUMBERING,
   APPENDICES-REFERENCE-NUMBERING,

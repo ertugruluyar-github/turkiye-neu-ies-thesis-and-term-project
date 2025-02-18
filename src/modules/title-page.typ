@@ -1,5 +1,5 @@
-#import "../constants.typ": *
-#import "custom-functions.typ": change-long-month-name
+#import "/src/constants.typ": *
+#import "/src/modules/custom-functions.typ": change-long-month-name
 
 #let title-page(
   title,
