@@ -2,6 +2,7 @@
 #import "modules/custom-functions.typ": *
 #import "constants.typ": *
 #import "styles.typ": *
+#import "components/keywords-component.typ": keywords-component
 
 #let template-configurations(
   title: [Title],
@@ -163,7 +164,12 @@
     /* ---- TEZİN ÖN KISMI [FRONT MATTER OF THESIS] ---- */
     //
     show: set-heading-styles-for-front-matter-of-thesis
-    set par(justify: true, first-line-indent: 0cm, leading: PARAGRAPH-LEADING-SIZE, spacing: PARAGRAPH-SPACING-SIZE)
+    set par(
+      justify: true,
+      first-line-indent: PARAGRAPH-FIRST-LINE-INDENT,
+      leading: PARAGRAPH-LEADING-SIZE,
+      spacing: PARAGRAPH-SPACING-SIZE,
+    )
 
     /* --- Ön Söz [Preface] --- */
     include "/template/sections/03-other-sections/preface.typ"
@@ -173,7 +179,7 @@
     /* --- İçindekiler [Table of Contents] --- */
 
     /* ---- Table of Contents Style ---- */
-    show: set-table-of-contents-style(
+    set-table-of-contents-style(
       outline(
         depth: 3,
         indent: n => n * 1em,
@@ -204,12 +210,18 @@
     set text(size: ABSTRACT-TEXT-FONT-SIZE)
 
     include "/template/sections/03-other-sections/abstract-tur.typ"
-    align(left)[*Anahtar Kelimeler:* #keywords-tur]
+    keywords-component(
+      title: STRING-KEYWORDS-TUR,
+      keywords: keywords-tur,
+    )
 
     pagebreak()
 
     include "/template/sections/03-other-sections/abstract-eng.typ"
-    align(left)[*Keywords:* #keywords-eng]
+    keywords-component(
+      title: STRING-KEYWORDS-ENG,
+      keywords: keywords-eng,
+    )
 
     pagebreak(to: "odd")
   }
