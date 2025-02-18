@@ -1,3 +1,3 @@
 
 // Türkçe özeti yazınız.
-#lorem(100)
+Özet metnini, tez hazırlama kılavuzunda verilen açıklamaları dikkate alarak yazınız. ……………………………… …………………………………………………………………………………………………………………………………………………………………………………… ……………………………………………………………………………………………………………………………………………………

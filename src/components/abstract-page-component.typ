@@ -1,5 +1,5 @@
-#import "../constants.typ": ABSTRACT-TEXT-FONT-SIZE
-#import "keywords-component.typ": keywords-component
+#import "/src/constants.typ": ABSTRACT-TEXT-FONT-SIZE
+#import "/src/components/keywords-component.typ": keywords-component
 
 #let abstract-page-component(
   title: "Title",

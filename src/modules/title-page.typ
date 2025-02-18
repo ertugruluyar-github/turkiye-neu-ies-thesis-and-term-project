@@ -1,4 +1,5 @@
 #import "../constants.typ": *
+#import "custom-functions.typ": change-long-month-name
 
 #let title-page(
   title,
@@ -33,14 +34,13 @@
   set text(_Large)
   show raw: set text(_large * 0.95)
 
-  author.fullname
+  author.first-name + " " + author.last-name
   v(0.75em, weak: true)
   link("https://orcid.org/" + author.orcid)[#author.orcid]
 
   v(0.5em)
   [
-    #show regex("[a-zA-Z]+"): r => MONTHS.at(date.month() - 1)
-    #date.display(DATE-FORMAT)
+    #show: change-long-month-name(date: date, month-names: TURKISH-MONTH-NAMES, date.display(FULL-DATE-FORMAT))
   ]
   v(5.35em)
 

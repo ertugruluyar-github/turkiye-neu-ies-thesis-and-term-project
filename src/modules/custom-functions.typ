@@ -11,6 +11,11 @@
 
 /* ---- Convencience functions ---- */
 
+#let change-long-month-name(date: datetime.today(), month-names: none, content) = {
+  show regex("[a-zA-Z]+"): month-name => TURKISH-MONTH-NAMES.at(date.month() - 1)
+  content
+}
+
 #let if-none(x, other) = if other == none { x } else { other }
 
 #let roman-numbering(content, reset: true) = {

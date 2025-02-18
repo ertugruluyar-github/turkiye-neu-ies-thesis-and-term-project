@@ -4,11 +4,16 @@
 #import "styles.typ": *
 #import "components/keywords-component.typ": keywords-component
 #import "components/abstract-page-component.typ": abstract-page-component
+#import "components/author-fullname-component.typ": author-fullname-component
+#import "components/month-year-component.typ": month-year-component
+#import "sections/03-other-pages/preface-page.typ": preface-page
+#import "/src/sections/03-other-pages/table-of-contents-page.typ": table-of-contents-page
 
 #let template-configurations(
   title: [Title],
   author: (
-    fullname: "Author's fullname",
+    first-name: "Author's firstname",
+    last-name: "Author's lastname",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
   keywords-tur: "anahtar kelime 1, anahtar kelime 2, anahtar kelime 3, anahtar kelime 4, anahtar kelime 5",
@@ -23,7 +28,7 @@
   /* Basic document rules. */
   set document(
     title: title,
-    author: author.fullname,
+    author: author.first-name + " " + author.last-name,
     keywords: keywords-tur + keywords-eng,
   )
 
@@ -173,23 +178,13 @@
     )
 
     /* --- Ön Söz [Preface] --- */
-    include "/template/sections/03-other-pages/preface.typ"
-
-    pagebreak()
-
-    /* --- İçindekiler [Table of Contents] --- */
-
-    /* ---- Table of Contents Style ---- */
-    set-table-of-contents-style(
-      outline(
-        depth: 3,
-        indent: n => n * 1em,
-        fill: repeat(justify: true, gap: 0.1em)[.],
-        title: upper(STRING-CONTENTS),
-      ),
+    preface-page(
+      author: author,
+      date: date,
     )
 
-    pagebreak()
+    /* --- İçindekiler Sayfası [Table of Contents Page] --- */
+    table-of-contents-page()
 
     /* --- Tez Çalışması Örijinallik Raporu [Originality Report] --- */
     include "/template/sections/03-other-pages/originality-report.typ"
@@ -206,8 +201,7 @@
 
     pagebreak()
 
-    /* --- Özet [Abstract] --- */
-    // Türkçe Özet
+    /* --- Türkçe Özet Sayfası [Turkish Abstract Page] --- */
     abstract-page-component(
       title: STRING-ABSTRACT-TUR,
       abstract-text-content-file-path: "/template/sections/03-other-pages/abstract-text-tur.typ",
@@ -215,7 +209,7 @@
       keywords: keywords-tur,
     )
 
-    // İngilizce Özet
+    /* --- İngilizce Özet Sayfası [English Abstract Page] --- */
     abstract-page-component(
       title: STRING-ABSTRACT-ENG,
       abstract-text-content-file-path: "/template/sections/03-other-pages/abstract-text-eng.typ",

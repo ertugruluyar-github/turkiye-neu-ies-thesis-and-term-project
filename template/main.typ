@@ -18,14 +18,15 @@
 #show: template-configurations.with(
   title: "Title",
   author: (
-    fullname: "Yazarın Adı Soyadı",
+    first-name: "Yazarın Adı",
+    last-name: "Soyadı",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
   thesis-type: "Doktora",
   is-thesis-proposal: false,
   date: datetime.today(),
-  keywords-tur: "anahtar kelime 1, anahtar kelime 2, anahtar kelime 3",
-  keywords-eng: "keyword 1, keyword 2, keyword 3",
+  keywords-tur: "Tez hazırlama kılavuzunda verilen açıklamaları dikkate alarak tezle ilgili en az üç, en fazla beş anahtar kelime yazılmalıdır. (Örnek: anahtar kelime 1, anahtar kelime 2, anahtar kelime 3)",
+  keywords-eng: "Türkçe özetteki anahtar kelimelerin İngilizcesini yazınız. (Örnek: keyword 1, keyword 2, keyword 3)",
   reviewers: ("Prof. Dr. Musterfrau", "Prof. Dr. Mustermann", "Dr. Evil"),
   header-logo: image("/template/organization-logos/university-logo.png", width: 33%),
 )

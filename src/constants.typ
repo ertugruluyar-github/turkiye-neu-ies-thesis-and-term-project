@@ -1,4 +1,7 @@
 
+// Organization Info
+#let STRING-UNIVERSITY-NAME = "Necmettin Erbakan Üniversitesi"
+#let STRING-INSTITUTE-NAME = "Eğitim Bilimleri Enstitüsü"
 // Genel [General]
 #let PAPER = "a4"
 #let MARGIN = (
@@ -70,10 +73,12 @@
 #let STRING-BIBLIOGRAPHY = "KAYNAKLAR"
 
 // Tarih Formatı [Date Format]
-#let DATE-FORMAT = "[day] [month repr:long] [year]"
+#let FULL-DATE-FORMAT = "[day] [month repr:long] [year]"
+#let MONTH-YEAR-DATE-FORMAT = "[month repr:long] [year]"
+#let LONG-MONTH-YEAR-DATE-FORMAT = "[month repr:long] [year]"
 
 // Türkçe Aylar [Months Turkish]
-#let MONTHS = (
+#let TURKISH-MONTH-NAMES = (
   "Ocak",
   "Şubat",
   "Mart",
