@@ -1,2 +1,3 @@
-= ABSTRACT
+
+// İnglizce özeti yazınız.
 #lorem(100)

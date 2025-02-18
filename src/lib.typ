@@ -3,6 +3,7 @@
 #import "constants.typ": *
 #import "styles.typ": *
 #import "components/keywords-component.typ": keywords-component
+#import "components/abstract-page-component.typ": abstract-page-component
 
 #let template-configurations(
   title: [Title],
@@ -206,24 +207,21 @@
     pagebreak()
 
     /* --- Özet [Abstract] --- */
-    // Özet metni normal yazı büyüklüğünden daha küçük olacak şekilde ayarlandı.
-    set text(size: ABSTRACT-TEXT-FONT-SIZE)
-
-    include "/template/sections/03-other-pages/abstract-text-tur.typ"
-    keywords-component(
-      title: STRING-KEYWORDS-TUR,
+    // Türkçe Özet
+    abstract-page-component(
+      title: STRING-ABSTRACT-TUR,
+      abstract-text-content-file-path: "/template/sections/03-other-pages/abstract-text-tur.typ",
+      keywords-title: STRING-KEYWORDS-TUR,
       keywords: keywords-tur,
     )
 
-    pagebreak()
-
-    include "/template/sections/03-other-pages/abstract-text-eng.typ"
-    keywords-component(
-      title: STRING-KEYWORDS-ENG,
+    // İngilizce Özet
+    abstract-page-component(
+      title: STRING-ABSTRACT-ENG,
+      abstract-text-content-file-path: "/template/sections/03-other-pages/abstract-text-eng.typ",
+      keywords-title: STRING-KEYWORDS-ENG,
       keywords: keywords-eng,
     )
-
-    pagebreak(to: "odd")
   }
 
   // Set arabic numbering and alternate page number position.
