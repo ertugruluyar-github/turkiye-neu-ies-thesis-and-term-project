@@ -1,12 +1,12 @@
-#import "modules/title-page.typ": *
-#import "modules/custom-functions.typ": *
-#import "constants.typ": *
-#import "styles.typ": *
-#import "components/keywords-component.typ": keywords-component
-#import "components/abstract-page-component.typ": abstract-page-component
-#import "components/author-fullname-component.typ": author-fullname-component
-#import "components/month-year-component.typ": month-year-component
-#import "sections/03-other-pages/preface-page.typ": preface-page
+#import "/src/modules/title-page.typ": *
+#import "/src/modules/custom-functions.typ": *
+#import "/src/constants.typ": *
+#import "/src/styles.typ": *
+#import "/src/components/keywords-component.typ": keywords-component
+#import "/src/components/abstract-page-component.typ": abstract-page-component
+#import "/src/components/author-fullname-component.typ": author-fullname-component
+#import "/src/components/month-year-component.typ": month-year-component
+#import "/src/sections/03-other-pages/preface-page.typ": preface-page
 #import "/src/sections/03-other-pages/table-of-contents-page.typ": table-of-contents-page
 
 #let template-configurations(
