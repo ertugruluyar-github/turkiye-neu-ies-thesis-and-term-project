@@ -14,18 +14,21 @@
 ) = {
   // Özet metni normal yazı büyüklüğünden daha küçük olacak şekilde ayarlandı.
   set text(size: ABSTRACT-TEXT-FONT-SIZE)
-  set par(leading: 1em)
+  set par(spacing: 1em)
 
   heading(level: 1, page-title)
 
   align(center, university-name + ", " + institute-name)
   align(center, university-name + ", " + institute-name)
   align(center, university-name + ", " + institute-name)
+  v(1em)
   align(center, thesis-title)
+  v(1em)
   align(center, author-fullname-component(author: author))
 
   v(24pt)
 
+  set par(leading: 1em, spacing: 0cm)
   include abstract-text-content-file-path
 
   v(10pt)
