@@ -3,7 +3,7 @@
 #import "/src/constants.typ": *
 #import "/src/styles.typ": *
 #import "/src/components/keywords-component.typ": keywords-component
-#import "/src/components/abstract-page-component.typ": abstract-page-component
+#import "/src/sections/03-other-pages/abstract-page.typ": abstract-page
 #import "/src/components/author-fullname-component.typ": author-fullname-component
 #import "/src/components/long-month-year-component.typ": long-month-year-component
 #import "/src/sections/03-other-pages/preface-page.typ": preface-page
@@ -219,7 +219,7 @@
     }
 
     /* --- Türkçe Özet Sayfası [Turkish Abstract Page] --- */
-    abstract-page-component(
+    abstract-page(
       title: STRING-ABSTRACT-TUR,
       abstract-text-content-file-path: "/template/sections/03-other-pages/abstract-text-tur.typ",
       keywords-title: STRING-KEYWORDS-TUR,
@@ -227,7 +227,7 @@
     )
 
     /* --- İngilizce Özet Sayfası [English Abstract Page] --- */
-    abstract-page-component(
+    abstract-page(
       title: STRING-ABSTRACT-ENG,
       abstract-text-content-file-path: "/template/sections/03-other-pages/abstract-text-eng.typ",
       keywords-title: STRING-KEYWORDS-ENG,
