@@ -18,7 +18,7 @@
 #let set-bibliography-styles(content) = {
   set par(
     justify: true,
-    first-line-indent: 0pt,
+    first-line-indent: (amount: 0cm, all: true),
     leading: 1em,
     spacing: PARAGRAPH-SPACING-SIZE,
   )

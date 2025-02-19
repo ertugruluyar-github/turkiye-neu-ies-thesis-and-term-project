@@ -137,7 +137,7 @@
   /* ----------------------------- */
   /*
     show raw.where(block: true): r => {
-      set par(justify: false, first-line-indent: 0pt, leading: PARAGRAPH-LEADING-SIZE, spacing: PARAGRAPH-SPACING-SIZE)
+      set par(justify: false, first-line-indent: 0cm, leading: PARAGRAPH-LEADING-SIZE, spacing: PARAGRAPH-SPACING-SIZE)
       show raw.line: line => {
         box(
           table(
