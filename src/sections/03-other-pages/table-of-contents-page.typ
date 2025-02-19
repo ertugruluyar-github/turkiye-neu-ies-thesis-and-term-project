@@ -6,7 +6,7 @@
     outline(
       depth: 3,
       indent: n => n * 1em,
-      fill: repeat(justify: true, gap: 0.1em)[.],
+      //fill: repeat(justify: true, gap: 0.1em)[.],
       title: upper(STRING-CONTENTS),
     ),
   )
