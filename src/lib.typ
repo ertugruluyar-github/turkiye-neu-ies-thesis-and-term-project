@@ -9,6 +9,7 @@
 #import "/src/sections/03-other-pages/preface-page.typ": preface-page
 #import "/src/sections/03-other-pages/table-of-contents-page.typ": table-of-contents-page
 #import "/src/sections/03-other-pages/originality-report-page.typ": originality-report-page
+#import "/src/sections/03-other-pages/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
 
 #let template-configurations(
   title: [Title],
@@ -201,7 +202,10 @@
     )
 
     /* --- Bilimsel Etik Beyannamesi [Scientific Ethics Declaration] --- */
-    include "/template/sections/03-other-pages/scientific-ethics-declaration.typ"
+    scientific-ethics-declaration-page(
+      author: author,
+      date: date,
+    )
 
     pagebreak()
 

@@ -1,5 +1,4 @@
-#import "/src/components/author-fullname-component.typ": author-fullname-component
-#import "/src/components/full-date-component.typ": full-date-component
+#import "/src/components/full-date-with-author-fullname-component.typ": full-date-with-author-fullname-component
 #import "/src/components/advisor-faculty-member-fullname-with-title.typ": advisor-faculty-member-fullname-with-title
 
 #let originality-report-page(
@@ -32,13 +31,9 @@
   v(1em)
   [Necmettin Erbakan Üniversitesi Tez Çalışması Orijinallik Raporu Uygulama Esaslarını inceledim ve tez çalışmamın, bu uygulama esaslarında belirtilen azami benzerlik oranının (%30) altında olduğunu ve intihal içermediğini; aksinin tespit edileceği muhtemel durumda doğabilecek her türlü hukuki sorumluluğu kabul ettiğimi ve yukarıda vermiş olduğum bilgilerin doğru olduğunu beyan ederim.]
 
-  grid(
-    columns: (70%, auto),
-    rows: auto,
-    row-gutter: 1em,
-    align: center,
-    [], full-date-component(date: date),
-    [], author-fullname-component(author: author),
+  full-date-with-author-fullname-component(
+    author: author,
+    date: date,
   )
 
   v(2em)
