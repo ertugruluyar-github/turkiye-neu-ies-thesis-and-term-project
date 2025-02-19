@@ -5,15 +5,22 @@
 #import "/src/components/keywords-component.typ": keywords-component
 #import "/src/components/abstract-page-component.typ": abstract-page-component
 #import "/src/components/author-fullname-component.typ": author-fullname-component
-#import "/src/components/month-year-component.typ": month-year-component
+#import "/src/components/long-month-year-component.typ": long-month-year-component
 #import "/src/sections/03-other-pages/preface-page.typ": preface-page
 #import "/src/sections/03-other-pages/table-of-contents-page.typ": table-of-contents-page
+#import "/src/sections/03-other-pages/originality-report-page.typ": originality-report-page
 
 #let template-configurations(
   title: [Title],
   author: (
     first-name: "Author's firstname",
     last-name: "Author's lastname",
+    orcid: "xxxx-xxxx-xxxx-xxxx",
+  ),
+  advisor: (
+    title: "Advisor's title",
+    first-name: "Advisor's firstname",
+    last-name: "Advisor's lastname",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
   keywords-tur: "anahtar kelime 1, anahtar kelime 2, anahtar kelime 3, anahtar kelime 4, anahtar kelime 5",
@@ -123,26 +130,26 @@
   )
 
   /* ----------------------------- */
+  /*
+    show raw.where(block: true): r => {
+      set par(justify: false, first-line-indent: 0pt, leading: PARAGRAPH-LEADING-SIZE, spacing: PARAGRAPH-SPACING-SIZE)
+      show raw.line: line => {
+        box(
+          table(
+            columns: (-1.25em, 100%),
+            stroke: 0pt,
+            inset: 0em,
+            column-gutter: 1em,
+            align: (x, y) => if x == 0 { right } else { left },
+            text(fill: ovgu-darkgray, str(line.number)), line.body,
+          ),
+        )
+      }
 
-  show raw.where(block: true): r => {
-    set par(justify: false, first-line-indent: 0pt, leading: PARAGRAPH-LEADING-SIZE, spacing: PARAGRAPH-SPACING-SIZE)
-    show raw.line: l => {
-      box(
-        table(
-          columns: (-1.25em, 100%),
-          stroke: 0pt,
-          inset: 0em,
-          column-gutter: 1em,
-          align: (x, y) => if x == 0 { right } else { left },
-          text(fill: ovgu-darkgray, str(l.number)), l.body,
-        ),
-      )
+      set align(left)
+      rect(width: 100%, stroke: gray + 0.5pt, inset: 0.75em, r)
     }
-
-    set align(left)
-    rect(width: 100%, stroke: gray + 0.5pt, inset: 0.75em, r)
-  }
-
+  */
   /* ----------------------------- */
 
   set footnote.entry(separator: line(length: 40%, stroke: 0.5pt))
@@ -187,9 +194,11 @@
     table-of-contents-page()
 
     /* --- Tez Çalışması Örijinallik Raporu [Originality Report] --- */
-    include "/template/sections/03-other-pages/originality-report.typ"
-
-    pagebreak()
+    originality-report-page(
+      author: author,
+      advisor: advisor,
+      date: date,
+    )
 
     /* --- Bilimsel Etik Beyannamesi [Scientific Ethics Declaration] --- */
     include "/template/sections/03-other-pages/scientific-ethics-declaration.typ"

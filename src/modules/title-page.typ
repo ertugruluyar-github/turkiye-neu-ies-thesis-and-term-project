@@ -40,7 +40,11 @@
 
   v(0.5em)
   [
-    #show: change-long-month-name(date: date, month-names: TURKISH-MONTH-NAMES, date.display(FULL-DATE-FORMAT))
+    #show: change-long-month-name(
+      date: date,
+      month-names: TURKISH-MONTH-NAMES,
+      date.display(FULL-DATE-WITH-LONG-MONTH-FORMAT),
+    )
   ]
   v(5.35em)
 

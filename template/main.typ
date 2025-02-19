@@ -22,6 +22,12 @@
     last-name: "Soyadı",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
+  advisor: (
+    title: "Ünvan",
+    first-name: "Danışman Adı",
+    last-name: "Soyadı",
+    orcid: "xxxx-xxxx-xxxx-xxxx",
+  ),
   thesis-type: "Doktora",
   is-thesis-proposal: false,
   date: datetime.today(),

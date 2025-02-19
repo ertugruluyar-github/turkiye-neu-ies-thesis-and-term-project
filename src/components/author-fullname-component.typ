@@ -1,6 +1,3 @@
-#let author-fullname-component(
-  first-name: "Öğrenci Adı",
-  last-name: "Soyadı",
-) = {
-  par(first-line-indent: 0cm, [#first-name #last-name])
+#let author-fullname-component(author: none) = {
+  par(first-line-indent: 0cm, [#author.first-name #author.last-name])
 }

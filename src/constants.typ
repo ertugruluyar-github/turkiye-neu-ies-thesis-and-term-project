@@ -73,7 +73,8 @@
 #let STRING-BIBLIOGRAPHY = "KAYNAKLAR"
 
 // Tarih Formatı [Date Format]
-#let FULL-DATE-FORMAT = "[day] [month repr:long] [year]"
+#let FULL-DATE-WITH-LONG-MONTH-FORMAT = "[day] [month repr:long] [year]"
+#let FULL-DATE-FORMAT = "[day]/[month]/[year]"
 #let MONTH-YEAR-DATE-FORMAT = "[month repr:long] [year]"
 #let LONG-MONTH-YEAR-DATE-FORMAT = "[month repr:long] [year]"
 
