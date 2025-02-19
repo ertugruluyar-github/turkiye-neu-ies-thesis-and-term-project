@@ -13,6 +13,8 @@
   date: your thesis deadline (default: datetime.today()).
   lang: the text language for smartquotes & hyphenation (specify as ISO 639-1/2/3 code, default: "en").
   header-logo: your faculty and/or organization banner (default: none).
+  have-symbols: Semboller sayfasını kaldırmak için "false" yapınız.
+  have-abbreviations: Kısaltmalar sayfasını kaldırmak için "false" yapınız.
 */
 
 #show: template-configurations.with(
@@ -35,4 +37,6 @@
   keywords-eng: "Türkçe özetteki anahtar kelimelerin İngilizcesini yazınız. (Örnek: keyword 1, keyword 2, keyword 3)",
   reviewers: ("Prof. Dr. Musterfrau", "Prof. Dr. Mustermann", "Dr. Evil"),
   header-logo: image("/template/organization-logos/university-logo.png", width: 33%),
+  have-symbols: true,
+  have-abbreviations: true,
 )

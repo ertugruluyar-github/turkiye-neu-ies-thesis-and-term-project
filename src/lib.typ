@@ -10,6 +10,7 @@
 #import "/src/sections/03-other-pages/table-of-contents-page.typ": table-of-contents-page
 #import "/src/sections/03-other-pages/originality-report-page.typ": originality-report-page
 #import "/src/sections/03-other-pages/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
+#import "/src/sections/03-other-pages/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
 
 #let template-configurations(
   title: [Title],
@@ -31,6 +32,8 @@
   reviewers: (),
   date: datetime.today(),
   header-logo: none,
+  have-symbols: true,
+  have-abbreviations: true,
   body,
 ) = {
   /* Basic document rules. */
@@ -208,9 +211,12 @@
     )
 
     /* --- Simgeler ve Kısaltmalar [Symbols and Abbreviations] --- */
-    include "/template/sections/03-other-pages/symbols-and-abbreviations.typ"
-
-    pagebreak()
+    if have-symbols or have-abbreviations {
+      symbols-and-abbreviations-page(
+        have-symbols: have-symbols,
+        have-abbreviations: have-abbreviations,
+      )
+    }
 
     /* --- Türkçe Özet Sayfası [Turkish Abstract Page] --- */
     abstract-page-component(
