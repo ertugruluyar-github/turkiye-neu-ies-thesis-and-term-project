@@ -169,10 +169,7 @@
   set outline(indent: auto)
 
   //
-  show outline.entry: it => {
-    set outline.entry(fill: repeat(justify: true, gap: 0.1em)[.])
-    it
-  }
+  set outline.entry(fill: repeat(justify: true, gap: 0.1em)[.])
 
   // Set Level 1 outlines' text bold.
   show outline.entry.where(level: 1): set text(weight: "bold")
