@@ -74,7 +74,7 @@
 
   set par(
     justify: true,
-    first-line-indent: PARAGRAPH-FIRST-LINE-INDENT,
+    first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: true),
     leading: PARAGRAPH-LEADING-SIZE,
     spacing: PARAGRAPH-SPACING-SIZE,
   )
@@ -184,7 +184,7 @@
     show: set-heading-styles-for-front-matter-of-thesis
     set par(
       justify: true,
-      first-line-indent: PARAGRAPH-FIRST-LINE-INDENT,
+      first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: true),
       leading: PARAGRAPH-LEADING-SIZE,
       spacing: PARAGRAPH-SPACING-SIZE,
     )
@@ -255,7 +255,7 @@
     //
     set par(
       justify: true,
-      first-line-indent: PARAGRAPH-FIRST-LINE-INDENT,
+      first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: true),
       leading: PARAGRAPH-LEADING-SIZE,
       spacing: PARAGRAPH-SPACING-SIZE,
     )

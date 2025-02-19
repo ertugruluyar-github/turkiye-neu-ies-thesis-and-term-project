@@ -253,7 +253,7 @@
   show heading.where(level: 4).or(heading.where(level: 5)).or(heading.where(level: 6)): set text(style: "italic")
 
   //
-  set par(justify: true, first-line-indent: PARAGRAPH-FIRST-LINE-INDENT)
+  set par(justify: true, first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: true))
 
   //
   show: set-heading-spacing
