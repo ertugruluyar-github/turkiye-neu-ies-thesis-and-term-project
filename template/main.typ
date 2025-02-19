@@ -19,6 +19,8 @@
 */
 
 #show: template-configurations.with(
+  department: "Ana Bilim Dalı",
+  program: "Bilim Dalı",
   thesis-title: "Tezin Başlığı",
   thesis-title-eng: "Tezin İngilizce Başlığı",
   author: (

@@ -7,6 +7,8 @@
   page-title: none,
   university-name: "University Name",
   institute-name: "Institute Name",
+  department: none,
+  program: none,
   thesis-type: none,
   is-thesis-proposal: none,
   thesis-title: none,
@@ -21,8 +23,8 @@
 
   heading(level: 1, page-title)
 
-  align(center, university-name + ", " + institute-name)
-  align(center, university-name + ", " + institute-name)
+  align(center, department)
+  align(center, program)
   align(center, thesis-type-component(thesis-type: thesis-type, is-thesis-proposal: is-thesis-proposal))
   v(1em)
   align(center, thesis-title)

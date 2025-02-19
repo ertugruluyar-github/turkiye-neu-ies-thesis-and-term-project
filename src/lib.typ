@@ -13,6 +13,8 @@
 #import "/src/sections/03-other-pages/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
 
 #let template-configurations(
+  department: "Department",
+  program: "Program",
   thesis-title: "Title",
   thesis-title-eng: "English Title",
   author: (
@@ -224,6 +226,8 @@
       page-title: STRING-ABSTRACT-TUR,
       university-name: STRING-UNIVERSITY-NAME-TUR,
       institute-name: STRING-INSTITUTE-NAME-TUR,
+      department: department,
+      program: program,
       thesis-type: thesis-type,
       is-thesis-proposal: is-thesis-proposal,
       thesis-title: thesis-title,
@@ -238,6 +242,8 @@
       page-title: STRING-ABSTRACT-ENG,
       university-name: STRING-UNIVERSITY-NAME-ENG,
       institute-name: STRING-INSTITUTE-NAME-ENG,
+      department: department,
+      program: program,
       thesis-type: thesis-type,
       is-thesis-proposal: is-thesis-proposal,
       thesis-title: thesis-title-eng,
