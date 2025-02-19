@@ -222,10 +222,12 @@
     /* --- Türkçe Özet Sayfası [Turkish Abstract Page] --- */
     abstract-page(
       page-title: STRING-ABSTRACT-TUR,
-      thesis-title: thesis-title,
-      author: author,
       university-name: STRING-UNIVERSITY-NAME-TUR,
       institute-name: STRING-INSTITUTE-NAME-TUR,
+      thesis-type: thesis-type,
+      is-thesis-proposal: is-thesis-proposal,
+      thesis-title: thesis-title,
+      author: author,
       abstract-text-content-file-path: "/template/sections/03-other-pages/abstract-text-tur.typ",
       keywords-title: STRING-KEYWORDS-TUR,
       keywords: keywords-tur,
@@ -234,10 +236,12 @@
     /* --- İngilizce Özet Sayfası [English Abstract Page] --- */
     abstract-page(
       page-title: STRING-ABSTRACT-ENG,
-      thesis-title: thesis-title-eng,
-      author: author,
       university-name: STRING-UNIVERSITY-NAME-ENG,
       institute-name: STRING-INSTITUTE-NAME-ENG,
+      thesis-type: thesis-type,
+      is-thesis-proposal: is-thesis-proposal,
+      thesis-title: thesis-title-eng,
+      author: author,
       abstract-text-content-file-path: "/template/sections/03-other-pages/abstract-text-eng.typ",
       keywords-title: STRING-KEYWORDS-ENG,
       keywords: keywords-eng,

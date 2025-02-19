@@ -1,3 +1,6 @@
 #let author-fullname-component(author: none) = {
-  par(first-line-indent: (amount: 0cm, all: true), [#author.first-name #author.last-name])
+  [
+    #set par(first-line-indent: (amount: 0cm, all: true))
+    #author.first-name #author.last-name
+  ]
 }

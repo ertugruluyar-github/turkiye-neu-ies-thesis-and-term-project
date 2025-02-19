@@ -1,5 +1,6 @@
 #import "/src/constants.typ": *
 #import "/src/modules/custom-functions.typ": change-long-month-name
+#import "/src/components/thesis-type-component.typ": thesis-type-component
 
 #let title-page(
   title,
@@ -16,14 +17,11 @@
   let _huge = 24pt
   set align(center)
 
-  let thesis-suffix = if is-thesis-proposal { STRING-THESIS-PROPOSAL-SUFFIX } else { STRING-THESIS-SUFFIX }
-  let thesis-type = thesis-type + thesis-suffix
-
   header-logo
 
   v(4.75em)
 
-  text(_Large, font: FONT-NAME)[*#thesis-type*]
+  text(_Large, font: FONT-NAME, thesis-type-component(thesis-type: thesis-type, is-thesis-proposal: is-thesis-proposal))
   v(2.5em)
   text(_huge, font: FONT-NAME)[
     #set par(justify: false)

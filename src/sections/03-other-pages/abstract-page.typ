@@ -1,13 +1,16 @@
 #import "/src/constants.typ": ABSTRACT-TEXT-FONT-SIZE
 #import "/src/components/keywords-component.typ": keywords-component
 #import "/src/components/author-fullname-component.typ": author-fullname-component
+#import "/src/components/thesis-type-component.typ": thesis-type-component
 
 #let abstract-page(
   page-title: none,
-  thesis-title: none,
-  author: none,
   university-name: "University Name",
   institute-name: "Institute Name",
+  thesis-type: none,
+  is-thesis-proposal: none,
+  thesis-title: none,
+  author: none,
   abstract-text-content-file-path: none,
   keywords-title: "Keywords Title",
   keywords: "Keyword 1, Keyword 2",
@@ -20,7 +23,7 @@
 
   align(center, university-name + ", " + institute-name)
   align(center, university-name + ", " + institute-name)
-  align(center, university-name + ", " + institute-name)
+  align(center, thesis-type-component(thesis-type: thesis-type, is-thesis-proposal: is-thesis-proposal))
   v(1em)
   align(center, thesis-title)
   v(1em)
