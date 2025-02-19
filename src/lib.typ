@@ -13,7 +13,8 @@
 #import "/src/sections/03-other-pages/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
 
 #let template-configurations(
-  title: [Title],
+  thesis-title: "Title",
+  thesis-title-eng: "English Title",
   author: (
     first-name: "Author's firstname",
     last-name: "Author's lastname",
@@ -38,7 +39,7 @@
 ) = {
   /* Basic document rules. */
   set document(
-    title: title,
+    title: [#thesis-title (#thesis-title-eng)],
     author: author.first-name + " " + author.last-name,
     keywords: keywords-tur + keywords-eng,
   )
@@ -162,7 +163,7 @@
   /* --- BAŞLIK SAYFASI [TITLE PAGE] --- */
 
   title-page(
-    title,
+    thesis-title,
     author,
     thesis-type,
     is-thesis-proposal,
@@ -220,7 +221,11 @@
 
     /* --- Türkçe Özet Sayfası [Turkish Abstract Page] --- */
     abstract-page(
-      title: STRING-ABSTRACT-TUR,
+      page-title: STRING-ABSTRACT-TUR,
+      thesis-title: thesis-title,
+      author: author,
+      university-name: STRING-UNIVERSITY-NAME-TUR,
+      institute-name: STRING-INSTITUTE-NAME-TUR,
       abstract-text-content-file-path: "/template/sections/03-other-pages/abstract-text-tur.typ",
       keywords-title: STRING-KEYWORDS-TUR,
       keywords: keywords-tur,
@@ -228,7 +233,11 @@
 
     /* --- İngilizce Özet Sayfası [English Abstract Page] --- */
     abstract-page(
-      title: STRING-ABSTRACT-ENG,
+      page-title: STRING-ABSTRACT-ENG,
+      thesis-title: thesis-title-eng,
+      author: author,
+      university-name: STRING-UNIVERSITY-NAME-ENG,
+      institute-name: STRING-INSTITUTE-NAME-ENG,
       abstract-text-content-file-path: "/template/sections/03-other-pages/abstract-text-eng.typ",
       keywords-title: STRING-KEYWORDS-ENG,
       keywords: keywords-eng,

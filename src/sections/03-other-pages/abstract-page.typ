@@ -1,18 +1,34 @@
 #import "/src/constants.typ": ABSTRACT-TEXT-FONT-SIZE
 #import "/src/components/keywords-component.typ": keywords-component
+#import "/src/components/author-fullname-component.typ": author-fullname-component
 
 #let abstract-page(
-  title: "Title",
+  page-title: none,
+  thesis-title: none,
+  author: none,
+  university-name: "University Name",
+  institute-name: "Institute Name",
   abstract-text-content-file-path: none,
   keywords-title: "Keywords Title",
   keywords: "Keyword 1, Keyword 2",
 ) = {
   // Özet metni normal yazı büyüklüğünden daha küçük olacak şekilde ayarlandı.
   set text(size: ABSTRACT-TEXT-FONT-SIZE)
+  set par(leading: 1em)
 
-  heading(level: 1, title)
+  heading(level: 1, page-title)
+
+  align(center, university-name + ", " + institute-name)
+  align(center, university-name + ", " + institute-name)
+  align(center, university-name + ", " + institute-name)
+  align(center, thesis-title)
+  align(center, author-fullname-component(author: author))
+
+  v(24pt)
 
   include abstract-text-content-file-path
+
+  v(10pt)
 
   keywords-component(
     keywords-title: keywords-title,

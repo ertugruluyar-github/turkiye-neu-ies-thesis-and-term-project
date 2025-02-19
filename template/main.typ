@@ -4,7 +4,8 @@
 #import "/src/modules/custom-functions.typ": *
 
 /* ---- Thesis configurations ----
-  title: Tezinizin başlığı.
+  thesis-title: Tezinizin başlığı.
+  thesis-title-eng: Tezinizin İngilizce Başlığı.
   author: (fullname: "", orcid: "") şeklinde adınız soyadınız ve ORCID numaranız.
   abstract: Tezinizin özeti.
   thesis-type: Tezinizin türü olarak "Yüksek Lisans" ya da "Doktora" yazınız.
@@ -18,7 +19,8 @@
 */
 
 #show: template-configurations.with(
-  title: "Title",
+  thesis-title: "Tezin Başlığı",
+  thesis-title-eng: "Tezin İngilizce Başlığı",
   author: (
     first-name: "Yazarın Adı",
     last-name: "Soyadı",

@@ -1,7 +1,10 @@
 
 // Organization Info
-#let STRING-UNIVERSITY-NAME = "Necmettin Erbakan Üniversitesi"
-#let STRING-INSTITUTE-NAME = "Eğitim Bilimleri Enstitüsü"
+#let STRING-UNIVERSITY-NAME-TUR = "Necmettin Erbakan Üniversitesi"
+#let STRING-UNIVERSITY-NAME-ENG = "Necmettin Erbakan University"
+#let STRING-INSTITUTE-NAME-TUR = "Eğitim Bilimleri Enstitüsü"
+#let STRING-INSTITUTE-NAME-ENG = "Graduate School of Educational Sciences"
+
 // Genel [General]
 #let PAPER = "a4"
 #let MARGIN = (
