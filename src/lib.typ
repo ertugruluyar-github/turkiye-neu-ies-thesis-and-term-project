@@ -15,8 +15,8 @@
 #let template-configurations(
   department: "Department",
   program: "Program",
-  thesis-title: "Title",
-  thesis-title-eng: "English Title",
+  thesis-title: "Thesis Title",
+  thesis-title-eng: "Thesis English Title",
   author: (
     first-name: "Author's firstname",
     last-name: "Author's lastname",
@@ -28,13 +28,22 @@
     last-name: "Advisor's lastname",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
+  second-advisor: (
+    title: "Second Advisor's title",
+    first-name: "Second Advisor's firstname",
+    last-name: "Second Advisor's lastname",
+    orcid: "xxxx-xxxx-xxxx-xxxx",
+  ),
+  thesis-study-funding-organization: (
+    name: "Name of the Funding Organization Supporting the Thesis Study",
+    project-no: "Project No",
+  ),
   keywords-tur: "anahtar kelime 1, anahtar kelime 2, anahtar kelime 3, anahtar kelime 4, anahtar kelime 5",
   keywords-eng: "keyword 1, keyword 2, keyword 3, keyword 4, keyword 5",
   thesis-type: "Yüksek Lisans/Doktora",
   is-thesis-proposal: false,
   reviewers: (),
   date: datetime.today(),
-  header-logo: none,
   have-symbols: true,
   have-abbreviations: true,
   body,
@@ -62,6 +71,7 @@
     lang: LANGUAGE,
     region: REGION,
     ligatures: false,
+    hyphenate: false,
     style: "normal",
     weight: DEFAULT-TEXT-FONT-WEIGHT,
   )
@@ -165,16 +175,18 @@
   /* --- BAŞLIK SAYFASI [TITLE PAGE] --- */
 
   title-page(
-    thesis-title,
-    author,
-    thesis-type,
-    is-thesis-proposal,
-    header-logo,
-    reviewers,
-    date,
+    department: department,
+    program: program,
+    thesis-title: thesis-title,
+    author: author,
+    advisor: advisor,
+    second-advisor: second-advisor,
+    thesis-study-funding-organization: thesis-study-funding-organization,
+    thesis-type: thesis-type,
+    is-thesis-proposal: is-thesis-proposal,
+    reviewers: reviewers,
+    date: date,
   )
-
-  pagebreak()
 
   show: roman-numbering.with(reset: false)
   show raw: set text(12pt * 0.95)
@@ -224,8 +236,8 @@
     /* --- Türkçe Özet Sayfası [Turkish Abstract Page] --- */
     abstract-page(
       page-title: STRING-ABSTRACT-TUR,
-      university-name: STRING-UNIVERSITY-NAME-TUR,
-      institute-name: STRING-INSTITUTE-NAME-TUR,
+      university-name: STRING-UNIVERSITY-NAME-TUR-TITLE-CASE,
+      institute-name: STRING-INSTITUTE-NAME-TUR-TITLE-CASE,
       department: department,
       program: program,
       thesis-type: thesis-type,
@@ -240,8 +252,8 @@
     /* --- İngilizce Özet Sayfası [English Abstract Page] --- */
     abstract-page(
       page-title: STRING-ABSTRACT-ENG,
-      university-name: STRING-UNIVERSITY-NAME-ENG,
-      institute-name: STRING-INSTITUTE-NAME-ENG,
+      university-name: STRING-UNIVERSITY-NAME-ENG-TITLE-CASE,
+      institute-name: STRING-INSTITUTE-NAME-ENG-TITLE-CASE,
       department: department,
       program: program,
       thesis-type: thesis-type,

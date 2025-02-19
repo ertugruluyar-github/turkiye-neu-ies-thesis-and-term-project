@@ -1,70 +1,81 @@
 #import "/src/constants.typ": *
-#import "/src/modules/custom-functions.typ": change-long-month-name
+#import "/src/modules/custom-functions.typ": change-long-month-name, empty-page-with-no-page-numbering
 #import "/src/components/thesis-type-component.typ": thesis-type-component
+#import "../components/author-fullname-component.typ": author-fullname-component
+#import "../components/orcid-with-prefix-component.typ": orcid-with-prefix-component
+#import "../components/advisor-faculty-member-fullname-with-title.typ": advisor-faculty-member-fullname-with-title
+#import "../components/thesis-study-funding-organization-component.typ": thesis-study-funding-organization-component
 
 #let title-page(
-  title,
-  author,
-  thesis-type,
-  is-thesis-proposal,
-  header-logo,
-  reviewers,
-  date,
+  department: none,
+  program: none,
+  thesis-title: none,
+  author: none,
+  advisor: none,
+  second-advisor: none,
+  thesis-study-funding-organization: none,
+  thesis-type: none,
+  is-thesis-proposal: none,
+  reviewers: none,
+  date: none,
 ) = {
-  let _large = 14pt
-  let _Large = 16pt
-  let _LARGE = 20pt
-  let _huge = 24pt
   set align(center)
 
-  header-logo
-
-  v(4.75em)
-
-  text(_Large, font: FONT-NAME, thesis-type-component(thesis-type: thesis-type, is-thesis-proposal: is-thesis-proposal))
-  v(2.5em)
-  text(_huge, font: FONT-NAME)[
-    #set par(justify: false)
-    *#title*
-  ]
-  v(1.25em)
-
-  set text(_Large)
-  show raw: set text(_large * 0.95)
-
-  author.first-name + " " + author.last-name
-  v(0.75em, weak: true)
-  link("https://orcid.org/" + author.orcid)[#author.orcid]
-
-  v(0.5em)
-  [
-    #show: change-long-month-name(
-      date: date,
-      month-names: TURKISH-MONTH-NAMES,
-      date.display(FULL-DATE-WITH-LONG-MONTH-FORMAT),
-    )
-  ]
-  v(5.35em)
-
-  /* First and second reviewer are required, supervisor is optional. */
-  if reviewers.len() >= 2 {
-    let first-reviewer-name = reviewers.first()
-    let second-reviewer-name = reviewers.at(1)
-    let supervisor-name = reviewers.at(2, default: none)
-
+  grid(
+    columns: (1fr, 6fr, 1fr),
+    align: center + horizon,
+    row-gutter: 1em,
+    image("/src/organization-logos/university-logo.png", width: 2.7cm, height: 2.7cm),
     [
-      #STRING-FIRST-REVIEWER:\
-      #first-reviewer-name\ \
-      #v(-1.5em)
+      #set text(weight: "bold")
+      #set par(leading: 1em)
+      T.C.\
+      #STRING-UNIVERSITY-NAME-TUR-UPPER-CASE\
+      #STRING-INSTITUTE-NAME-TUR-UPPER-CASE
+    ],
+    image("/src/organization-logos/university-logo.png", width: 2.7cm, height: 2.7cm),
+  )
 
-      #STRING-SECOND-REVIEWER:\
-      #second-reviewer-name\ \
-      #v(-1.5em)
+  v(2.5cm)
 
-      #if supervisor-name != none [
-        #STRING-SUPERVISOR:\
-        #supervisor-name
-      ]
-    ]
+  align(center, department)
+  align(center, program)
+
+  v(1cm)
+
+  thesis-type-component(thesis-type: thesis-type, is-thesis-proposal: is-thesis-proposal)
+
+  v(2.5cm)
+
+  [
+    #set text(weight: "bold")
+    #thesis-title
+  ]
+
+  v(2.5cm)
+
+  author-fullname-component(author: author)
+  orcid-with-prefix-component(orcid: author.orcid)
+
+  v(1.5cm)
+
+
+  STRING-ADVISOR
+  advisor-faculty-member-fullname-with-title(advisor: advisor)
+  if STRING-SECOND-ADVISOR != none {
+    STRING-SECOND-ADVISOR
+    advisor-faculty-member-fullname-with-title(advisor: second-advisor)
   }
+
+
+  v(1cm)
+
+  thesis-study-funding-organization-component(thesis-study-funding-organization: thesis-study-funding-organization)
+
+  v(0.25cm)
+
+  [#CITY-NAME - #date.display(ONLY-YEAR-DATE-FORMAT)]
+
+  pagebreak()
+  empty-page-with-no-page-numbering
 }

@@ -1,9 +1,5 @@
 
-// Organization Info
-#let STRING-UNIVERSITY-NAME-TUR = "Necmettin Erbakan Üniversitesi"
-#let STRING-UNIVERSITY-NAME-ENG = "Necmettin Erbakan University"
-#let STRING-INSTITUTE-NAME-TUR = "Eğitim Bilimleri Enstitüsü"
-#let STRING-INSTITUTE-NAME-ENG = "Graduate School of Educational Sciences"
+
 
 // Genel [General]
 #let PAPER = "a4"
@@ -33,6 +29,8 @@
 #let FIGURE-CAPTION-PREFIX-TEXT-FONT-WEIGHT = 700
 
 // Yazı Sabitleri [String Constants]
+#let CITY-NAME = "Konya"
+#let STRING-ORCID = "ORCID"
 #let STRING-CONTENTS = "İÇİNDEKİLER"
 #let STRING-CHAPTER = "BÖLÜM"
 #let STRING-SECTION = "KISIM"
@@ -44,6 +42,20 @@
 #let STRING-APPENDIX = "Ek"
 #let STRING-THESIS-SUFFIX = " Tezi"
 #let STRING-THESIS-PROPOSAL-SUFFIX = " Tez Önerisi"
+#let STRING-ADVISOR = "Danışman"
+#let STRING-SECOND-ADVISOR = "İkinci Danışman"
+#let STRING-FIRST-REVIEWER = "1. Juri Üyesi"
+#let STRING-SECOND-REVIEWER = "2. Juri Üyesi"
+#let STRING-BIBLIOGRAPHY = "KAYNAKLAR"
+// Organization Info
+#let STRING-UNIVERSITY-NAME-TUR-UPPER-CASE = "NECMETTİN ERBAKAN ÜNİVERSİTESİ"
+#let STRING-UNIVERSITY-NAME-ENG-UPPER-CASE = "NECMETTİN ERBAKAN UNIVERSITY"
+#let STRING-INSTITUTE-NAME-TUR-UPPER-CASE = "EĞİTİM BİLİMLERİ ENSTİTÜSÜ"
+#let STRING-INSTITUTE-NAME-ENG-UPPER-CASE = "GRADUATE SCHOOL OF EDUCATIONAL SCIENCES"
+#let STRING-UNIVERSITY-NAME-TUR-TITLE-CASE = "Necmettin Erbakan Üniversitesi"
+#let STRING-UNIVERSITY-NAME-ENG-TITLE-CASE = "Necmettin Erbakan University"
+#let STRING-INSTITUTE-NAME-TUR-TITLE-CASE = "Eğitim Bilimleri Enstitüsü"
+#let STRING-INSTITUTE-NAME-ENG-TITLE-CASE = "Graduate School of Educational Sciences"
 
 // Ayraçlar [Separators]
 #let APPENDIX-PREFIX-SEPERATOR = "-"
@@ -67,18 +79,10 @@
 ) // Ekler [Appendices]
 #let APPENDICES-REFERENCE-NUMBERING(.., last) = str(last) // Ekler [Appendices]
 
-// Başlık Sayfası [Title Page]
-#let STRING-FIRST-REVIEWER = "1. Juri Üyesi"
-#let STRING-SECOND-REVIEWER = "2. Juri Üyesi"
-#let STRING-SUPERVISOR = "Danışman"
-
-// Kaynakça [Bibliography]
-#let STRING-BIBLIOGRAPHY = "KAYNAKLAR"
-
 // Tarih Formatı [Date Format]
 #let FULL-DATE-WITH-LONG-MONTH-FORMAT = "[day] [month repr:long] [year]"
 #let FULL-DATE-FORMAT = "[day]/[month]/[year]"
-#let MONTH-YEAR-DATE-FORMAT = "[month repr:long] [year]"
+#let ONLY-YEAR-DATE-FORMAT = "[year]"
 #let LONG-MONTH-YEAR-DATE-FORMAT = "[month repr:long] [year]"
 
 // Türkçe Aylar [Months Turkish]
