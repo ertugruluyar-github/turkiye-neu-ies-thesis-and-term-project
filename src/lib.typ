@@ -207,8 +207,6 @@
       date: date,
     )
 
-    pagebreak()
-
     /* --- Simgeler ve Kısaltmalar [Symbols and Abbreviations] --- */
     include "/template/sections/03-other-pages/symbols-and-abbreviations.typ"
 
