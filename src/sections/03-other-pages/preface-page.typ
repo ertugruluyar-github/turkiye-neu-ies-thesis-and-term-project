@@ -7,6 +7,8 @@
 ) = {
   include "/template/sections/03-other-pages/preface-text.typ"
 
+  v(2em)
+
   grid(
     columns: (auto, 1fr),
     rows: auto,

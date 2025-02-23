@@ -23,11 +23,12 @@
 
   heading(level: 1, page-title)
 
+  align(center, university-name + ", " + institute-name)
   align(center, department)
   align(center, program)
   align(center, thesis-type-component(thesis-type: thesis-type, is-thesis-proposal: is-thesis-proposal))
   v(1em)
-  align(center, thesis-title)
+  align(center, text(weight: "bold", upper(thesis-title)))
   v(1em)
   align(center, author-fullname-component(author: author))
 

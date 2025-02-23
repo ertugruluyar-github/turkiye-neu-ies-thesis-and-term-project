@@ -20,7 +20,10 @@
 #show: template-configurations.with(
   department: "Ana Bilim Dalı",
   program: "Bilim Dalı",
-  thesis-title: "TEZİN BAŞLIĞI",
+  thesis-type: "Doktora",
+  is-thesis-proposal: false,
+  date: datetime.today(),
+  thesis-title: "Tezin Başlığı",
   thesis-title-eng: "Tezin İngilizce Başlığı",
   author: (
     first-name: "Yazarın Adı",
@@ -44,9 +47,10 @@
     name: "Tez Çalışmasını Destekleyen Kuruluşun Adı",
     project-no: "Proje Numarası",
   ),
-  thesis-type: "Doktora",
-  is-thesis-proposal: false,
-  date: datetime.today(),
+  thesis-originalty: (
+    included-page-count: 0,
+    similarity-score: 0,
+  ),
   keywords-tur: "Tez hazırlama kılavuzunda verilen açıklamaları dikkate alarak tezle ilgili en az üç, en fazla beş anahtar kelime yazılmalıdır. (Örnek: anahtar kelime 1, anahtar kelime 2, anahtar kelime 3)",
   keywords-eng: "Türkçe özetteki anahtar kelimelerin İngilizcesini yazınız. (Örnek: keyword 1, keyword 2, keyword 3)",
   reviewers: ("Prof. Dr. Musterfrau", "Prof. Dr. Mustermann", "Dr. Evil"),

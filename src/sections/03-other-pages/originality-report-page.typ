@@ -1,14 +1,19 @@
+#import "/src/modules/turkish-case-handler.typ": title-case-tr
 #import "/src/components/full-date-with-author-fullname-component.typ": full-date-with-author-fullname-component
 #import "/src/components/advisor-faculty-member-fullname-with-title.typ": advisor-faculty-member-fullname-with-title
+#import "/src/components/full-date-component.typ": full-date-component
 
 #let originality-report-page(
+  thesis-title: none,
   author: none,
   advisor: none,
   date: none,
+  included-page-count: none,
+  similarity-score: none,
 ) = {
   heading(level: 1)[TEZ ÇALIŞMASI ORİJİNALLİK RAPORU]
 
-  [#emph[Tez Başlığı] başlıklı tez çalışmamın toplam Sayfa Sayısı sayfalık kısmına ilişkin, Tarih Seçiniz tarihinde tez danışmanım tarafından strong[Turnitin] adlı intihal tespit programından aşağıda belirtilen filtrelemeler uygulanarak alınmış olan orijinallik raporuna göre, tezimin benzerlik oranı strong[%];Benzerlik Oranı olarak belirlenmiştir.]
+  [#text(style: "italic", title-case-tr(thesis-title)) başlıklı tez çalışmamın toplam #included-page-count sayfalık kısmına ilişkin, #full-date-component(date: date) tarihinde tez danışmanım tarafından #text(weight: "bold")[Turnitin] adlı intihal tespit programından aşağıda belirtilen filtrelemeler uygulanarak alınmış olan orijinallik raporuna göre, tezimin benzerlik oranı #text(weight: "bold")[%#similarity-score] olarak belirlenmiştir.]
 
   v(1em)
 
@@ -33,7 +38,10 @@
   ]
 
   v(1em)
+
   [Necmettin Erbakan Üniversitesi Tez Çalışması Orijinallik Raporu Uygulama Esaslarını inceledim ve tez çalışmamın, bu uygulama esaslarında belirtilen azami benzerlik oranının (%30) altında olduğunu ve intihal içermediğini; aksinin tespit edileceği muhtemel durumda doğabilecek her türlü hukuki sorumluluğu kabul ettiğimi ve yukarıda vermiş olduğum bilgilerin doğru olduğunu beyan ederim.]
+
+  v(2em)
 
   full-date-with-author-fullname-component(
     author: author,

@@ -1,6 +1,3 @@
-
-
-
 // Genel [General]
 #let PAPER = "a4"
 #let MARGIN = (
@@ -48,14 +45,10 @@
 #let STRING-SECOND-REVIEWER = "2. Juri Üyesi"
 #let STRING-BIBLIOGRAPHY = "KAYNAKLAR"
 // Organization Info
-#let STRING-UNIVERSITY-NAME-TUR-UPPER-CASE = "NECMETTİN ERBAKAN ÜNİVERSİTESİ"
-#let STRING-UNIVERSITY-NAME-ENG-UPPER-CASE = "NECMETTİN ERBAKAN UNIVERSITY"
-#let STRING-INSTITUTE-NAME-TUR-UPPER-CASE = "EĞİTİM BİLİMLERİ ENSTİTÜSÜ"
-#let STRING-INSTITUTE-NAME-ENG-UPPER-CASE = "GRADUATE SCHOOL OF EDUCATIONAL SCIENCES"
-#let STRING-UNIVERSITY-NAME-TUR-TITLE-CASE = "Necmettin Erbakan Üniversitesi"
-#let STRING-UNIVERSITY-NAME-ENG-TITLE-CASE = "Necmettin Erbakan University"
-#let STRING-INSTITUTE-NAME-TUR-TITLE-CASE = "Eğitim Bilimleri Enstitüsü"
-#let STRING-INSTITUTE-NAME-ENG-TITLE-CASE = "Graduate School of Educational Sciences"
+#let STRING-UNIVERSITY-NAME-TUR = "Necmettin Erbakan Üniversitesi"
+#let STRING-UNIVERSITY-NAME-ENG = "Necmettin Erbakan University"
+#let STRING-INSTITUTE-NAME-TUR = "Eğitim Bilimleri Enstitüsü"
+#let STRING-INSTITUTE-NAME-ENG = "Graduate School of Educational Sciences"
 
 // Ayraçlar [Separators]
 #let APPENDIX-PREFIX-SEPERATOR = "-"

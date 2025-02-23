@@ -1,5 +1,6 @@
 #import "/src/modules/title-page.typ": *
 #import "/src/modules/custom-functions.typ": *
+#import "/src/modules/turkish-case-handler.typ": title-case-tr
 #import "/src/constants.typ": *
 #import "/src/styles.typ": *
 #import "/src/components/keywords-component.typ": keywords-component
@@ -15,6 +16,9 @@
 #let template-configurations(
   department: "Department",
   program: "Program",
+  thesis-type: "Yüksek Lisans/Doktora",
+  is-thesis-proposal: false,
+  date: datetime.today(),
   thesis-title: "Thesis Title",
   thesis-title-eng: "Thesis English Title",
   author: (
@@ -38,12 +42,13 @@
     name: "Name of the Funding Organization Supporting the Thesis Study",
     project-no: "Project No",
   ),
+  thesis-originalty: (
+    included-page-count: 0,
+    similarity-score: 0,
+  ),
   keywords-tur: "anahtar kelime 1, anahtar kelime 2, anahtar kelime 3, anahtar kelime 4, anahtar kelime 5",
   keywords-eng: "keyword 1, keyword 2, keyword 3, keyword 4, keyword 5",
-  thesis-type: "Yüksek Lisans/Doktora",
-  is-thesis-proposal: false,
   reviewers: (),
-  date: datetime.today(),
   have-symbols: true,
   have-abbreviations: true,
   body,
@@ -214,9 +219,12 @@
 
     /* --- Tez Çalışması Örijinallik Raporu [Originality Report] --- */
     originality-report-page(
+      thesis-title: thesis-title,
       author: author,
       advisor: advisor,
       date: date,
+      included-page-count: thesis-originalty.included-page-count,
+      similarity-score: thesis-originalty.similarity-score,
     )
 
     /* --- Bilimsel Etik Beyannamesi [Scientific Ethics Declaration] --- */
@@ -236,8 +244,8 @@
     /* --- Türkçe Özet Sayfası [Turkish Abstract Page] --- */
     abstract-page(
       page-title: STRING-ABSTRACT-TUR,
-      university-name: STRING-UNIVERSITY-NAME-TUR-TITLE-CASE,
-      institute-name: STRING-INSTITUTE-NAME-TUR-TITLE-CASE,
+      university-name: title-case-tr(STRING-UNIVERSITY-NAME-TUR),
+      institute-name: title-case-tr(STRING-INSTITUTE-NAME-TUR),
       department: department,
       program: program,
       thesis-type: thesis-type,
@@ -252,8 +260,8 @@
     /* --- İngilizce Özet Sayfası [English Abstract Page] --- */
     abstract-page(
       page-title: STRING-ABSTRACT-ENG,
-      university-name: STRING-UNIVERSITY-NAME-ENG-TITLE-CASE,
-      institute-name: STRING-INSTITUTE-NAME-ENG-TITLE-CASE,
+      university-name: STRING-UNIVERSITY-NAME-ENG,
+      institute-name: STRING-INSTITUTE-NAME-ENG,
       department: department,
       program: program,
       thesis-type: thesis-type,
