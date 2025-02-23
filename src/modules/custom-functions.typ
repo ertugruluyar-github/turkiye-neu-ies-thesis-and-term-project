@@ -16,30 +16,35 @@
   content
 }
 
-#let if-none(x, other) = if other == none { x } else { other }
-
-#let roman-numbering(content, reset: true) = {
-  if reset { counter(page).update(1) }
-  set page(footer: auto, numbering: PAGE-NUMBERING-ROMAN)
-  content
-}
-
-#let arabic-numbering(content, alternate: true, reset: true) = {
+#let set-page-numbering(
+  content,
+  numbering: PAGE-NUMBERING-ARABIC,
+  number-align: right,
+  is-one-left-one-right: false,
+  reset: true,
+) = {
   if reset { counter(page).update(1) }
 
-  let footer = if alternate {
-    context {
-      let page-count = counter(page).get().first()
-      let page-align = if calc.odd(page-count) { right } else { left }
-      align(page-align, counter(page).display(PAGE-NUMBERING-ARABIC))
-    }
+  let footer = context if is-one-left-one-right and number-align != center {
+    let page-number = counter(page).get().first()
+    number-align = if calc.odd(page-number) { right } else { left }
+    align(number-align, counter(page).display())
   } else {
-    auto
+    align(number-align, counter(page).display())
   }
 
-  set page(footer: footer, numbering: PAGE-NUMBERING-ARABIC)
+  set page(footer: footer, numbering: numbering)
   content
 }
+
+// Tamamen boş sayfa, sayfa numrasız. [Fully empty page, no page numbering.]
+#let empty-page-with-no-page-numbering = page([], footer: [])
+
+// Boş sayfa, Arapça sayfa numralı. [Empty page, with arabic page numbering.]
+#let empty-page-with-arabic-page-numbering = page([], numbering: PAGE-NUMBERING-ARABIC)
+
+// Boş sayfa, Roman sayfa numralı. [Empty page, with romen page numbering.]
+#let empty-page-with-romen-page-numbering = page([], numbering: PAGE-NUMBERING-ROMAN)
 
 /* ------------------------------- */
 
@@ -56,21 +61,6 @@
   set rect(fill: ovgu-orange)
   margin-note(stroke: ovgu-orange, body)
 }
-
-// Like \section* in LaTeX. (unnumbered level 2 heading, not in ToC).
-#let section = heading.with(level: 2, outlined: false, numbering: none)
-
-// A neat inline-section in smallcaps and sans font.
-#let inline-section(title) = smallcaps[*#text(font: "Libertinus Sans", title)*]
-
-// Tamamen boş sayfa, sayfa numrasız. [Fully empty page, no page numbering.]
-#let empty-page-with-no-page-numbering = page([], footer: [])
-
-// Boş sayfa, Arapça sayfa numralı. [Empty page, with arabic page numbering.]
-#let empty-page-with-arabic-page-numbering = page([], numbering: PAGE-NUMBERING-ARABIC)
-
-// Boş sayfa, Roman sayfa numralı. [Empty page, with romen page numbering.]
-#let empty-page-with-romen-page-numbering = page([], numbering: PAGE-NUMBERING-ROMAN)
 
 // Subfigures.
 #let subfigure = subpar.grid.with(

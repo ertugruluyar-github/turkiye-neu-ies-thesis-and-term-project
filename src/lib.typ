@@ -1,6 +1,6 @@
 #import "/src/sections/00-other-pages/title-page.typ": *
 #import "/src/modules/custom-functions.typ": *
-#import "/src/modules/turkish-case-handler.typ": title-case-tr
+#import "/src/modules/turkish-case-handler.typ": title-case-tr, upper-case-tr
 #import "/src/constants.typ": *
 #import "/src/styles.typ": *
 #import "/src/components/keywords-component.typ": keywords-component
@@ -96,7 +96,7 @@
 
   set math.equation(
     numbering: MATH-NUMBERING,
-    supplement: MATH-EQUATION-SUPPLEMENT,
+    supplement: MATH-EQUATION-REFERENCE-SUPPLEMENT,
   )
 
   /* ---- Table Style ---- */
@@ -105,47 +105,8 @@
   /* ---- Figure Styles ---- */
   show: set-figure-styles
 
-
-  /* ---- Stylization of headings / chapters. ---- */
-
-  // Create "Chapter X." heading for every numbered level 1 heading.
-  show heading.where(level: 1): h1 => {
-    if h1.numbering != none {
-      // Reset figure counters.
-      counter(figure.where(kind: image)).update(0)
-      counter(figure.where(kind: table)).update(0)
-      counter(figure.where(kind: raw)).update(0)
-
-      align(center)[
-        #let chapter-heading-prefix = [
-          #set heading(level: 1, numbering: HEADING-NUMBERING, outlined: false, bookmarked: false)
-          // Sondaki noktayı kaldır.
-          #upper(STRING-CHAPTER) #counter(heading).get().first()
-        ]
-        #chapter-heading-prefix \
-        // 1.5 satır aralığı (1em karakterin kendisi + 0.5em) ve paragraflar arası boşluk miktarı kadar boşluk eklendi.
-        #v(0.5em + PARAGRAPH-SPACING-SIZE)
-      ]
-    }
-    h1
-  }
-
-  /* Adjust refs: "Chapter XYZ" instead of "Section XYZ". */
-  set ref(
-    supplement: it => {
-      if it.func() == heading and it.supplement == auto {
-        if it.level > 1 {
-          STRING-SECTION
-        } else {
-          STRING-CHAPTER
-        }
-      } else {
-        it.supplement
-      }
-    },
-  )
-
   /* ----------------------------- */
+
   /*
     show raw.where(block: true): r => {
       set par(justify: false, first-line-indent: 0cm, leading: PARAGRAPH-LEADING-SIZE, spacing: PARAGRAPH-SPACING-SIZE)
@@ -166,6 +127,7 @@
       rect(width: 100%, stroke: gray + 0.5pt, inset: 0.75em, r)
     }
   */
+
   /* ----------------------------- */
 
   set footnote.entry(separator: line(length: 40%, stroke: 0.5pt))
@@ -187,7 +149,9 @@
     date: date,
   )
 
-  show: roman-numbering.with(reset: false)
+  // Set centered arabic page numbering.
+  show: set-page-numbering.with(numbering: PAGE-NUMBERING-ROMAN, number-align: center)
+
   show raw: set text(12pt * 0.95)
   set-page-properties()
 
@@ -237,7 +201,7 @@
 
     /* --- Türkçe Özet Sayfası [Turkish Abstract Page] --- */
     abstract-page(
-      page-title: STRING-ABSTRACT-TUR,
+      page-title: upper-case-tr(STRING-ABSTRACT-TUR),
       university-name: title-case-tr(STRING-UNIVERSITY-NAME-TUR),
       institute-name: title-case-tr(STRING-INSTITUTE-NAME-TUR),
       department: department,
@@ -247,13 +211,13 @@
       thesis-title: thesis-title,
       author: author,
       abstract-text-content-file-path: "/template/sections/00-other-pages/abstract-text-tur.typ",
-      keywords-title: STRING-KEYWORDS-TUR,
+      keywords-title: title-case-tr(STRING-KEYWORDS-TUR),
       keywords: keywords-tur,
     )
 
     /* --- İngilizce Özet Sayfası [English Abstract Page] --- */
     abstract-page(
-      page-title: STRING-ABSTRACT-ENG,
+      page-title: upper(STRING-ABSTRACT-ENG),
       university-name: STRING-UNIVERSITY-NAME-ENG,
       institute-name: STRING-INSTITUTE-NAME-ENG,
       department: department,
@@ -268,8 +232,8 @@
     )
   }
 
-  // Set arabic numbering and alternate page number position.
-  show: arabic-numbering
+  // Set centered arabic page numbering.
+  show: set-page-numbering.with(numbering: PAGE-NUMBERING-ARABIC, number-align: center)
 
   {
     /* --- TEZİN ANA BÖLÜMLERİ --- */
@@ -320,7 +284,7 @@
       bibliography(
         "/template/bibliography-sources/references.bib",
         style: "/template/bibliography-styles/apa7-tr.csl",
-        title: STRING-BIBLIOGRAPHY,
+        title: upper-case-tr(STRING-BIBLIOGRAPHY),
         full: false,
       ),
     )

@@ -26,17 +26,16 @@
 #let FIGURE-CAPTION-PREFIX-TEXT-FONT-WEIGHT = 700
 
 // Yazı Sabitleri [String Constants]
-#let CITY-NAME = "Konya"
+#let STRING-CITY-NAME = "Konya"
 #let STRING-ORCID = "ORCID"
 #let STRING-CONTENTS = "İÇİNDEKİLER"
 #let STRING-CHAPTER = "BÖLÜM"
-#let STRING-SECTION = "KISIM"
 #let STRING-ABSTRACT-TUR = "ÖZET"
 #let STRING-ABSTRACT-ENG = "ABSTRACT"
 #let STRING-KEYWORDS-TUR = "Anahtar Kelimeler"
 #let STRING-KEYWORDS-ENG = "Keywords"
 #let STRING-APPENDICES = "EKLER"
-#let STRING-APPENDIX = "Ek"
+#let STRING-APPENDIX = "EK"
 #let STRING-THESIS-SUFFIX = " Tezi"
 #let STRING-THESIS-PROPOSAL-SUFFIX = " Tez Önerisi"
 #let STRING-ADVISOR = "Danışman"
@@ -53,13 +52,16 @@
 // Ayraçlar [Separators]
 #let APPENDIX-PREFIX-SEPERATOR = "-"
 #let FIGURE-CAPTION-SEPARATOR = ". "
+#let APPENDIX-HEADING-SUFFIX-SEPARATOR = ":"
+#let APPENDIX-REFERENCE-SUFFIX-SEPARATOR = ": "
 
-// Ekler [Supplements]
-#let APPENDICES-SUPPLEMENT = STRING-APPENDIX + APPENDIX-PREFIX-SEPERATOR
-#let APPENDICES-SUFFIX = ":"
-#let MATH-EQUATION-SUPPLEMENT = "Denklem"
-#let TABLE-FIGURE-SUPPLEMENT = "Tablo"
-#let IMAGE-FIGURE-SUPPLEMENT = "Şekil"
+// Atıf Ekleri [Reference Supplements]
+#let CHAPTER-REFERENCE-SUPPLEMENT = "Bölüm"
+#let HEADING-REFERENCE-SUPPLEMENT = "Başlık"
+#let MATH-EQUATION-REFERENCE-SUPPLEMENT = "Denklem"
+#let TABLE-FIGURE-REFERENCE-SUPPLEMENT = "Tablo"
+#let IMAGE-FIGURE-REFERENCE-SUPPLEMENT = "Şekil"
+#let APPENDIX-REFERENCE-SUPPLEMENT = STRING-APPENDIX + APPENDIX-PREFIX-SEPERATOR
 
 // Numaralandırma [Numbering]
 #let PAGE-NUMBERING-ROMAN = "i" // Sayfalar [Pages]
@@ -67,10 +69,10 @@
 #let HEADING-NUMBERING = "1.1." // Başlıklar [Headings]
 #let FIGURE-NUMBERING = "1.1" // Simgeler [Figures]
 #let MATH-NUMBERING = "(1.1)" // Simgeler [Figures]
-#let APPENDICES-HEADING-NUMBERING(.., last) = (
-  APPENDICES-SUPPLEMENT + str(last) + APPENDICES-SUFFIX
+#let APPENDIX-HEADING-NUMBERING(..nums) = (
+  APPENDIX-REFERENCE-SUPPLEMENT + nums.pos().slice(1).map(str).join(".") + APPENDIX-HEADING-SUFFIX-SEPARATOR
 ) // Ekler [Appendices]
-#let APPENDICES-REFERENCE-NUMBERING(.., last) = str(last) // Ekler [Appendices]
+#let APPENDIX-REFERENCE-NUMBERING(..nums) = nums.pos().slice(1).map(str).join(".") // Ekler [Appendices]
 
 // Tarih Formatı [Date Format]
 #let FULL-DATE-WITH-LONG-MONTH-FORMAT = "[day] [month repr:long] [year]"

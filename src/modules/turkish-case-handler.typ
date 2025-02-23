@@ -1,5 +1,5 @@
 // Only Turkish special characters mapping (lowercase -> uppercase)
-#let lower-to-upper-special-char-map-tr = (
+#let _lower-to-upper-special-char-map-tr = (
   "i": "İ",
   "ı": "I",
   "ğ": "Ğ",
@@ -10,16 +10,16 @@
 )
 
 // Create reverse mapping (uppercase -> lowercase)
-#let upper-to-lower-special-char-map-tr = {
+#let _upper-to-lower-special-char-map-tr = {
   let map = (:)
-  for (key, value) in lower-to-upper-special-char-map-tr {
+  for (key, value) in _lower-to-upper-special-char-map-tr {
     map.insert(value, key)
   }
   map
 }
 
 // Words that should remain lowercase in titles according to TDK
-#let special-lowercase-words-tr = (
+#let _special-lowercase-words-tr = (
   // Connecting words
   "ve", // and
   "ile", // with
@@ -40,8 +40,8 @@
 #let lower-case-tr(text) = {
   let text = str(text)
   text = text.replace(
-    regex("[" + upper-to-lower-special-char-map-tr.keys().join() + "]"),
-    char => upper-to-lower-special-char-map-tr.at(char.text),
+    regex("[" + _upper-to-lower-special-char-map-tr.keys().join() + "]"),
+    char => _upper-to-lower-special-char-map-tr.at(char.text),
   )
   return lower(text)
 }
@@ -49,8 +49,8 @@
 #let upper-case-tr(text) = {
   let text = str(text)
   text = text.replace(
-    regex("[" + lower-to-upper-special-char-map-tr.keys().join() + "]"),
-    char => lower-to-upper-special-char-map-tr.at(char.text),
+    regex("[" + _lower-to-upper-special-char-map-tr.keys().join() + "]"),
+    char => _lower-to-upper-special-char-map-tr.at(char.text),
   )
   return upper(text)
 }
@@ -74,7 +74,7 @@
       let lower-word = lower-case-tr(word)
 
       // Keep certain words lowercase unless they're at the start
-      if i != 0 and (lower-word in special-lowercase-words-tr) {
+      if i != 0 and (lower-word in _special-lowercase-words-tr) {
         lower-word
       } else {
         let first-char = word.first()

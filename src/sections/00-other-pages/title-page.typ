@@ -6,6 +6,7 @@
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
 #import "/src/components/advisor-with-orcid-component.typ": advisor-with-orcid-component
 #import "/src/components/thesis-study-funding-organization-component.typ": thesis-study-funding-organization-component
+#import "/src/modules/turkish-case-handler.typ": title-case-tr
 
 #let title-page(
   department: none,
@@ -57,11 +58,11 @@
 
   v(1.25cm)
 
-  STRING-ADVISOR
+  title-case-tr(STRING-ADVISOR)
   advisor-with-orcid-component(advisor: advisor)
   v(0.5cm)
   if STRING-SECOND-ADVISOR != none {
-    STRING-SECOND-ADVISOR
+    title-case-tr(STRING-SECOND-ADVISOR)
     advisor-with-orcid-component(advisor: second-advisor)
   }
 
@@ -71,7 +72,7 @@
 
   v(0.5cm)
 
-  [#CITY-NAME - #date.display(ONLY-YEAR-DATE-FORMAT)]
+  [#title-case-tr(STRING-CITY-NAME) - #date.display(ONLY-YEAR-DATE-FORMAT)]
 
   pagebreak()
 

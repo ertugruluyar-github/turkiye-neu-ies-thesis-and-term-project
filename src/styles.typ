@@ -1,16 +1,20 @@
 #import "/src/constants.typ": (
+  STRING-CHAPTER,
   HEADING-NUMBERING,
-  APPENDICES-HEADING-NUMBERING,
-  APPENDICES-REFERENCE-NUMBERING,
-  APPENDICES-SUPPLEMENT,
-  PARAGRAPH-FIRST-LINE-INDENT,
-  TABLE-FIGURE-SUPPLEMENT,
+  APPENDIX-HEADING-NUMBERING,
+  APPENDIX-REFERENCE-NUMBERING,
+  CHAPTER-REFERENCE-SUPPLEMENT,
+  HEADING-REFERENCE-SUPPLEMENT,
+  APPENDIX-REFERENCE-SUPPLEMENT,
+  APPENDIX-REFERENCE-SUFFIX-SEPARATOR,
+  TABLE-FIGURE-REFERENCE-SUPPLEMENT,
+  IMAGE-FIGURE-REFERENCE-SUPPLEMENT,
+  FIGURE-NUMBERING,
   FIGURE-CAPTION-SEPARATOR,
-  IMAGE-FIGURE-SUPPLEMENT,
-  ALTERNATE-FONT-SIZE,
   FIGURE-CAPTION-PREFIX-TEXT-FONT-WEIGHT,
   FIGURE-CAPTION-TITLE-TEXT-FONT-WEIGHT,
-  FIGURE-NUMBERING,
+  ALTERNATE-FONT-SIZE,
+  PARAGRAPH-FIRST-LINE-INDENT,
   PARAGRAPH-LEADING-SIZE,
   PARAGRAPH-SPACING-SIZE,
 )
@@ -22,6 +26,7 @@
     leading: 1em,
     spacing: PARAGRAPH-SPACING-SIZE,
   )
+
   content
 }
 
@@ -36,6 +41,7 @@
     .or(heading.where(level: 4))
     .or(heading.where(level: 5))
     .or(heading.where(level: 6)): set block(above: 0.5em + PARAGRAPH-SPACING-SIZE, below: 0.5em)
+
   content
 }
 
@@ -68,6 +74,7 @@
 
   //
   show: set-heading-spacing
+
   content
 }
 
@@ -103,6 +110,7 @@
     set text(size: ALTERNATE-FONT-SIZE)
     it
   }
+
   content
 }
 
@@ -110,7 +118,7 @@
 #let set-figure-styles(content) = {
   //
   show figure.where(kind: table): set figure(
-    supplement: TABLE-FIGURE-SUPPLEMENT,
+    supplement: TABLE-FIGURE-REFERENCE-SUPPLEMENT,
     placement: none,
     gap: 0.5em,
   )
@@ -123,7 +131,7 @@
 
   //
   show figure.where(kind: image): set figure(
-    supplement: IMAGE-FIGURE-SUPPLEMENT,
+    supplement: IMAGE-FIGURE-REFERENCE-SUPPLEMENT,
     placement: none,
     gap: 0.5em,
   )
@@ -157,6 +165,7 @@
     numbering: n => numbering(FIGURE-NUMBERING, counter(heading).get().first(), n),
     gap: 1em,
   )
+
   content
 }
 
@@ -195,26 +204,72 @@
     it
   }
   */
+
   content
 }
 
 // Diğer bölümlerdeki 2. düzey başlık, ortalı, numaralandırma yok, İçindekiler tablosunda yok, PDF dökümanı hatlarında var.
 #let set-heading-styles-for-main-sections-of-thesis(content) = {
   //
-  set heading(numbering: HEADING-NUMBERING, outlined: true, bookmarked: true)
+  show heading: set align(left)
+
+  //
+  show heading.where(level: 1).or(heading.where(level: 2)).or(heading.where(level: 3)): set heading(
+    numbering: HEADING-NUMBERING,
+    outlined: true,
+    bookmarked: true,
+  )
+
   //
   show heading.where(level: 4).or(heading.where(level: 5)).or(heading.where(level: 6)): set heading(
     numbering: none,
     outlined: true,
     bookmarked: true,
   )
+
   //
   show heading.where(level: 4).or(heading.where(level: 5)).or(heading.where(level: 6)): set text(style: "italic")
-  //
-  show heading: set align(left)
 
   //
   show: set-heading-spacing
+
+  // Create "Chapter X." heading for every numbered level 1 heading.
+  show heading.where(level: 1): it => {
+    if it.numbering != none {
+      // Reset figure counters.
+      counter(figure.where(kind: image)).update(0)
+      counter(figure.where(kind: table)).update(0)
+      counter(figure.where(kind: raw)).update(0)
+
+      align(center)[
+        #let chapter-heading-prefix = [
+          #set heading(level: 1, numbering: HEADING-NUMBERING, outlined: false, bookmarked: false)
+          // Sondaki noktayı kaldır.
+          #upper(STRING-CHAPTER) #counter(heading).get().first()
+        ]
+        #chapter-heading-prefix \
+        // 1.5 satır aralığı (1em karakterin kendisi + 0.5em) ve paragraflar arası boşluk miktarı kadar boşluk eklendi.
+        #v(0.5em + PARAGRAPH-SPACING-SIZE)
+      ]
+    }
+    it
+  }
+
+  /* Adjust refs: "Chapter XYZ" instead of "Section XYZ". */
+  set ref(
+    supplement: it => {
+      if it.func() == heading {
+        if it.level == 1 {
+          CHAPTER-REFERENCE-SUPPLEMENT
+        } else {
+          HEADING-REFERENCE-SUPPLEMENT
+        }
+      } else {
+        it.supplement
+      }
+    },
+  )
+
   content
 }
 
@@ -224,27 +279,28 @@
   show heading: set align(left)
 
   //
-  show heading.where(level: 1): set heading(numbering: none, outlined: true, bookmarked: true)
-
-  //
-  show heading.where(level: 2): set heading(
-    numbering: APPENDICES-HEADING-NUMBERING,
-    supplement: APPENDICES-SUPPLEMENT,
+  show heading.where(level: 1): set heading(
+    numbering: none,
     outlined: true,
     bookmarked: true,
+    supplement: CHAPTER-REFERENCE-SUPPLEMENT,
   )
 
   //
-  show ref: it => {
-    APPENDICES-SUPPLEMENT + numbering(APPENDICES-REFERENCE-NUMBERING, ..counter(heading).at(it.element.location()))
-  }
+  show heading.where(level: 2).or(heading.where(level: 3)): set heading(
+    numbering: APPENDIX-HEADING-NUMBERING,
+    outlined: true,
+    bookmarked: true,
+    supplement: APPENDIX-REFERENCE-SUPPLEMENT,
+  )
 
   //
-  show heading
-    .where(level: 3)
-    .or(heading.where(level: 4))
-    .or(heading.where(level: 5))
-    .or(heading.where(level: 6)): set heading(outlined: false, bookmarked: false)
+  show heading.where(level: 4).or(heading.where(level: 5)).or(heading.where(level: 6)): set heading(
+    numbering: none,
+    outlined: false,
+    bookmarked: false,
+    supplement: HEADING-REFERENCE-SUPPLEMENT,
+  )
 
   //
   show heading.where(level: 4).or(heading.where(level: 5)).or(heading.where(level: 6)): set text(style: "italic")
@@ -254,5 +310,24 @@
 
   //
   show: set-heading-spacing
+
+  //
+  show ref: it => {
+    if it.element != none and it.element.func() == heading {
+      if it.element.level == 1 {
+        it.element.supplement + APPENDIX-REFERENCE-SUFFIX-SEPARATOR + it.element.body
+      } else if it.element.level == 2 or it.element.level == 3 {
+        (
+          APPENDIX-REFERENCE-SUPPLEMENT
+            + numbering(APPENDIX-REFERENCE-NUMBERING, ..counter(heading).at(it.element.location()))
+        )
+      } else {
+        it.element.supplement + APPENDIX-REFERENCE-SUFFIX-SEPARATOR + it.element.body
+      }
+    } else {
+      it
+    }
+  }
+
   content
 }

@@ -1,4 +1,5 @@
 #import "/src/constants.typ": STRING-THESIS-PROPOSAL-SUFFIX, STRING-THESIS-SUFFIX
+#import "/src/modules/turkish-case-handler.typ": title-case-tr
 
 #let thesis-type-component(
   thesis-type: none,
@@ -8,5 +9,5 @@
 
   let thesis-type-with-suffix = thesis-type + thesis-suffix
 
-  thesis-type-with-suffix
+  title-case-tr(thesis-type-with-suffix)
 }
