@@ -6,7 +6,7 @@
   author: none,
   date: none,
 ) = {
-  include "/template/sections/03-other-pages/preface-text.typ"
+  include "/template/sections/00-other-pages/preface-text.typ"
 
   v(2em)
 

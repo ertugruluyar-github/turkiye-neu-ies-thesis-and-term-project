@@ -1,15 +1,15 @@
-#import "/src/sections/03-other-pages/title-page.typ": *
+#import "/src/sections/00-other-pages/title-page.typ": *
 #import "/src/modules/custom-functions.typ": *
 #import "/src/modules/turkish-case-handler.typ": title-case-tr
 #import "/src/constants.typ": *
 #import "/src/styles.typ": *
 #import "/src/components/keywords-component.typ": keywords-component
-#import "/src/sections/03-other-pages/abstract-page.typ": abstract-page
-#import "/src/sections/03-other-pages/preface-page.typ": preface-page
-#import "/src/sections/03-other-pages/table-of-contents-page.typ": table-of-contents-page
-#import "/src/sections/03-other-pages/originality-report-page.typ": originality-report-page
-#import "/src/sections/03-other-pages/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
-#import "/src/sections/03-other-pages/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
+#import "/src/sections/00-other-pages/abstract-page.typ": abstract-page
+#import "/src/sections/00-other-pages/preface-page.typ": preface-page
+#import "/src/sections/00-other-pages/table-of-contents-page.typ": table-of-contents-page
+#import "/src/sections/00-other-pages/originality-report-page.typ": originality-report-page
+#import "/src/sections/00-other-pages/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
+#import "/src/sections/00-other-pages/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
 
 #let template-configurations(
   department: "Department",
@@ -246,7 +246,7 @@
       is-thesis-proposal: is-thesis-proposal,
       thesis-title: thesis-title,
       author: author,
-      abstract-text-content-file-path: "/template/sections/03-other-pages/abstract-text-tur.typ",
+      abstract-text-content-file-path: "/template/sections/00-other-pages/abstract-text-tur.typ",
       keywords-title: STRING-KEYWORDS-TUR,
       keywords: keywords-tur,
     )
@@ -262,7 +262,7 @@
       is-thesis-proposal: is-thesis-proposal,
       thesis-title: thesis-title-eng,
       author: author,
-      abstract-text-content-file-path: "/template/sections/03-other-pages/abstract-text-eng.typ",
+      abstract-text-content-file-path: "/template/sections/00-other-pages/abstract-text-eng.typ",
       keywords-title: STRING-KEYWORDS-ENG,
       keywords: keywords-eng,
     )
@@ -331,7 +331,7 @@
     // Başlık numarlandırmasını 1'den başlat.
     counter(heading).update(1)
 
-    include "/template/sections/02-appendices/02-appendices.typ"
+    include "/template/sections/02-appendices/appendices.typ"
 
     empty-page-with-no-page-numbering
   }

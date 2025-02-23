@@ -6,7 +6,7 @@
   if have-symbols {
     heading(level: 2)[Simgeler]
 
-    include "/template/sections/03-other-pages/symbols-text.typ"
+    include "/template/sections/00-other-pages/symbols-text.typ"
 
     pagebreak()
   }
@@ -14,7 +14,7 @@
   if have-abbreviations {
     heading(level: 2)[Kısaltmalar]
 
-    include "/template/sections/03-other-pages/abbreviations-text.typ"
+    include "/template/sections/00-other-pages/abbreviations-text.typ"
 
     pagebreak()
   }
