@@ -1,5 +1,5 @@
-#import "@preview/drafting:0.2.0": margin-note, set-page-properties
-#import "@preview/subpar:0.1.1"
+//#import "@preview/drafting:0.2.2": margin-note, set-page-properties
+//#import "@preview/subpar:0.2.1"
 #import "/src/constants.typ": *
 
 #let ovgu-blue = rgb("#0068B4")
@@ -47,7 +47,7 @@
 #let empty-page-with-romen-page-numbering = page([], numbering: PAGE-NUMBERING-ROMAN)
 
 /* ------------------------------- */
-
+/*
 // A TODO marker. (inline: false -> margin note, inline: true -> box).
 #let todo(inline: false, body) = if inline {
   rect(
@@ -62,6 +62,7 @@
   margin-note(stroke: ovgu-orange, body)
 }
 
+
 // Subfigures.
 #let subfigure = subpar.grid.with(
   numbering: num => {
@@ -71,6 +72,7 @@
     numbering("1.1a", counter(heading).get().first(), sup, sub)
   },
 )
+*/
 
 // A ParCIO-like table with a design taken from the LaTeX template.
 #let parcio-table(max-rows, ..args) = table(

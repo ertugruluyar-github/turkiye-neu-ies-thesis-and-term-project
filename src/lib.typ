@@ -153,7 +153,7 @@
   show: set-page-numbering.with(numbering: PAGE-NUMBERING-ROMAN, number-align: center)
 
   show raw: set text(12pt * 0.95)
-  set-page-properties()
+  //set-page-properties()
 
   {
     /* ---- TEZİN ÖN KISMI [FRONT MATTER OF THESIS] ---- */
