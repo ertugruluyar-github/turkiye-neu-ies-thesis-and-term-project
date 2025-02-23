@@ -1,12 +1,11 @@
 #import "/src/constants.typ": *
-#import "/src/modules/custom-functions.typ": change-long-month-name, empty-page-with-no-page-numbering
+#import "/src/modules/custom-functions.typ": empty-page-with-no-page-numbering
 #import "/src/modules/turkish-case-handler.typ": upper-case-tr
 #import "/src/components/thesis-type-component.typ": thesis-type-component
-#import "../components/author-fullname-component.typ": author-fullname-component
-#import "../components/orcid-with-prefix-component.typ": orcid-with-prefix-component
-#import "../components/advisor-faculty-member-fullname-with-title.typ": advisor-faculty-member-fullname-with-title
+#import "/src/components/author-fullname-component.typ": author-fullname-component
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
-#import "../components/thesis-study-funding-organization-component.typ": thesis-study-funding-organization-component
+#import "/src/components/advisor-with-orcid-component.typ": advisor-with-orcid-component
+#import "/src/components/thesis-study-funding-organization-component.typ": thesis-study-funding-organization-component
 
 #let title-page(
   department: none,
@@ -49,10 +48,7 @@
 
   v(1.75cm)
 
-  [
-    #set text(weight: "bold")
-    #upper-case-tr(thesis-title)
-  ]
+  text(weight: "bold")[#upper-case-tr(thesis-title)]
 
   v(1.75cm)
 
@@ -61,15 +57,12 @@
 
   v(1.25cm)
 
-
   STRING-ADVISOR
-  advisor-faculty-member-fullname-with-title(advisor: advisor)
-  orcid-with-prefix-component(orcid: advisor.orcid)
+  advisor-with-orcid-component(advisor: advisor)
   v(0.5cm)
   if STRING-SECOND-ADVISOR != none {
     STRING-SECOND-ADVISOR
-    advisor-faculty-member-fullname-with-title(advisor: second-advisor)
-    orcid-with-prefix-component(orcid: second-advisor.orcid)
+    advisor-with-orcid-component(advisor: second-advisor)
   }
 
   v(0.75cm)
@@ -81,5 +74,6 @@
   [#CITY-NAME - #date.display(ONLY-YEAR-DATE-FORMAT)]
 
   pagebreak()
+
   empty-page-with-no-page-numbering
 }

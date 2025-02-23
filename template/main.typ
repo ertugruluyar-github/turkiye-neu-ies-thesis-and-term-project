@@ -1,7 +1,7 @@
-
-// #import "@local/turkiye-neu-ies-thesis:0.1.0": *
+// Şablonu internetten kullanmak.
+//#import "@local/turkiye-neu-ies-thesis:0.1.0": *
+// Şablonu internetten kullanmak.
 #import "/src/lib.typ": template-configurations
-#import "/src/modules/custom-functions.typ": *
 
 /* ---- Thesis configurations ----
   thesis-title: Tezinizin başlığı.

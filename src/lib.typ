@@ -1,12 +1,10 @@
-#import "/src/modules/title-page.typ": *
+#import "/src/sections/03-other-pages/title-page.typ": *
 #import "/src/modules/custom-functions.typ": *
 #import "/src/modules/turkish-case-handler.typ": title-case-tr
 #import "/src/constants.typ": *
 #import "/src/styles.typ": *
 #import "/src/components/keywords-component.typ": keywords-component
 #import "/src/sections/03-other-pages/abstract-page.typ": abstract-page
-#import "/src/components/author-fullname-component.typ": author-fullname-component
-#import "/src/components/long-month-year-component.typ": long-month-year-component
 #import "/src/sections/03-other-pages/preface-page.typ": preface-page
 #import "/src/sections/03-other-pages/table-of-contents-page.typ": table-of-contents-page
 #import "/src/sections/03-other-pages/originality-report-page.typ": originality-report-page
@@ -113,22 +111,18 @@
   // Create "Chapter X." heading for every numbered level 1 heading.
   show heading.where(level: 1): h1 => {
     if h1.numbering != none {
-      pagebreak(weak: true)
-
       // Reset figure counters.
       counter(figure.where(kind: image)).update(0)
       counter(figure.where(kind: table)).update(0)
       counter(figure.where(kind: raw)).update(0)
 
       align(center)[
-        // DÜZELTİLECEK!
-        #let heading-prefix = if h1.body == [#STRING-APPENDICES] [
-          #upper(STRING-APPENDIX) #counter(heading).display(h1.numbering)
-        ] else [
+        #let chapter-heading-prefix = [
           #set heading(level: 1, numbering: HEADING-NUMBERING, outlined: false, bookmarked: false)
-          #upper(STRING-CHAPTER) #counter(heading).get().first() // Sondaki noktayı kaldır.
+          // Sondaki noktayı kaldır.
+          #upper(STRING-CHAPTER) #counter(heading).get().first()
         ]
-        #heading-prefix \
+        #chapter-heading-prefix \
         // 1.5 satır aralığı (1em karakterin kendisi + 0.5em) ve paragraflar arası boşluk miktarı kadar boşluk eklendi.
         #v(0.5em + PARAGRAPH-SPACING-SIZE)
       ]

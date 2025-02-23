@@ -1,5 +1,6 @@
 #import "/src/components/author-fullname-component.typ": author-fullname-component
-#import "/src/components/long-month-year-component.typ": long-month-year-component
+#import "/src/components/date-component.typ": date-component
+#import "/src/constants.typ": LONG-MONTH-YEAR-DATE-FORMAT
 
 #let preface-page(
   author: none,
@@ -15,7 +16,7 @@
     row-gutter: 1em,
     align: right,
     [], author-fullname-component(author: author),
-    [], long-month-year-component(date: date),
+    [], date-component(date: date, display-format: LONG-MONTH-YEAR-DATE-FORMAT),
   )
 
   pagebreak()

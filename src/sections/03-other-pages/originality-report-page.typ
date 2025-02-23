@@ -1,7 +1,7 @@
 #import "/src/modules/turkish-case-handler.typ": title-case-tr
 #import "/src/components/full-date-with-author-fullname-component.typ": full-date-with-author-fullname-component
 #import "/src/components/advisor-faculty-member-fullname-with-title.typ": advisor-faculty-member-fullname-with-title
-#import "/src/components/full-date-component.typ": full-date-component
+#import "/src/components/date-component.typ": date-component
 
 #let originality-report-page(
   thesis-title: none,
@@ -13,7 +13,7 @@
 ) = {
   heading(level: 1)[TEZ ÇALIŞMASI ORİJİNALLİK RAPORU]
 
-  [#text(style: "italic", title-case-tr(thesis-title)) başlıklı tez çalışmamın toplam #included-page-count sayfalık kısmına ilişkin, #full-date-component(date: date) tarihinde tez danışmanım tarafından #text(weight: "bold")[Turnitin] adlı intihal tespit programından aşağıda belirtilen filtrelemeler uygulanarak alınmış olan orijinallik raporuna göre, tezimin benzerlik oranı #text(weight: "bold")[%#similarity-score] olarak belirlenmiştir.]
+  [#text(style: "italic", title-case-tr(thesis-title)) başlıklı tez çalışmamın toplam #included-page-count sayfalık kısmına ilişkin, #date-component(date: date) tarihinde tez danışmanım tarafından #text(weight: "bold")[Turnitin] adlı intihal tespit programından aşağıda belirtilen filtrelemeler uygulanarak alınmış olan orijinallik raporuna göre, tezimin benzerlik oranı #text(weight: "bold")[%#similarity-score] olarak belirlenmiştir.]
 
   v(1em)
 
