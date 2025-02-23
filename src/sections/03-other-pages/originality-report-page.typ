@@ -26,7 +26,7 @@
   v(1em)
 
   [
-    #set enum(indent: 0.5cm)
+    #set enum(indent: 0.5cm, spacing: 1em)
     + Tez çalışması orijinallik raporu sayfası hariç
     + Bilimsel etik beyannamesi sayfası hariç
     + Önsöz hariç
