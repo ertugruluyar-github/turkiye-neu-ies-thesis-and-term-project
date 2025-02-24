@@ -26,6 +26,7 @@
 #let FIGURE-CAPTION-PREFIX-TEXT-FONT-WEIGHT = 700
 
 // Yazı Sabitleri [String Constants]
+#let STRING-TC = "T.C."
 #let STRING-CITY-NAME = "Konya"
 #let STRING-ORCID = "ORCID"
 #let STRING-CONTENTS = "İÇİNDEKİLER"

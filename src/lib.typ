@@ -1,15 +1,15 @@
-#import "/src/sections/00-other-pages/title-page.typ": *
-#import "/src/modules/custom-functions.typ": *
-#import "/src/modules/turkish-case-handler.typ": title-case-tr, upper-case-tr
 #import "/src/constants.typ": *
 #import "/src/styles.typ": *
+#import "/src/modules/custom-functions.typ": *
+#import "/src/modules/turkish-case-handler.typ": title-case-tr, upper-case-tr
 #import "/src/components/keywords-component.typ": keywords-component
-#import "/src/sections/00-other-pages/abstract-page.typ": abstract-page
+#import "/src/sections/00-other-pages/title-page.typ": *
 #import "/src/sections/00-other-pages/preface-page.typ": preface-page
 #import "/src/sections/00-other-pages/table-of-contents-page.typ": table-of-contents-page
 #import "/src/sections/00-other-pages/originality-report-page.typ": originality-report-page
 #import "/src/sections/00-other-pages/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
 #import "/src/sections/00-other-pages/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
+#import "/src/sections/00-other-pages/abstract-page.typ": abstract-page
 
 #let template-configurations(
   department: "Department",

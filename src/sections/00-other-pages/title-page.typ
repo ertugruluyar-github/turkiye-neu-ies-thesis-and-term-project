@@ -31,7 +31,7 @@
     [
       #set text(weight: "bold")
       #set par(leading: 1em)
-      T.C.\
+      #upper-case-tr(STRING-TC)\
       #upper-case-tr(STRING-UNIVERSITY-NAME-TUR)\
       #upper-case-tr(STRING-INSTITUTE-NAME-TUR)
     ],
