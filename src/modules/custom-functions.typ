@@ -1,5 +1,5 @@
-//#import "@preview/drafting:0.2.2": margin-note, set-page-properties
-//#import "@preview/subpar:0.2.1"
+#import "@preview/drafting:0.2.2": margin-note, set-page-properties
+#import "@preview/subpar:0.2.1"
 #import "/src/constants.typ": *
 
 #let ovgu-blue = rgb("#0068B4")
@@ -39,12 +39,6 @@
 
 // Tamamen boş sayfa, sayfa numrasız. [Fully empty page, no page numbering.]
 #let empty-page-with-no-page-numbering = page([], footer: [])
-
-// Boş sayfa, Arapça sayfa numralı. [Empty page, with arabic page numbering.]
-#let empty-page-with-arabic-page-numbering = page([], numbering: PAGE-NUMBERING-ARABIC)
-
-// Boş sayfa, Roman sayfa numralı. [Empty page, with romen page numbering.]
-#let empty-page-with-romen-page-numbering = page([], numbering: PAGE-NUMBERING-ROMAN)
 
 /* ------------------------------- */
 /*

@@ -153,7 +153,7 @@
   show: set-page-numbering.with(numbering: PAGE-NUMBERING-ROMAN, number-align: center)
 
   show raw: set text(12pt * 0.95)
-  //set-page-properties()
+  set-page-properties()
 
   {
     /* ---- TEZİN ÖN KISMI [FRONT MATTER OF THESIS] ---- */
@@ -232,6 +232,9 @@
     )
   }
 
+  // Sonraki sayfa boş değilse (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
+  pagebreak(weak: true, to: "odd")
+
   // Set centered arabic page numbering.
   show: set-page-numbering.with(numbering: PAGE-NUMBERING-ARABIC, number-align: center)
 
@@ -266,9 +269,9 @@
 
     /* ---- Bölüm 5 [Chapter 5] ---- */
     include "/template/sections/01-chapters/conclusion.typ"
-    pagebreak()
 
-    empty-page-with-arabic-page-numbering
+    // Sonraki sayfa boş değilse (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
+    pagebreak(weak: true, to: "odd")
   }
 
   {
@@ -289,15 +292,14 @@
       ),
     )
 
-    empty-page-with-arabic-page-numbering
+    // Sonraki sayfa boş değilse (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
+    pagebreak(weak: true, to: "odd")
 
     // Ekler [Appendices]
     // Başlık numarlandırmasını 1'den başlat.
     counter(heading).update(1)
 
     include "/template/sections/02-appendices/appendices.typ"
-
-    empty-page-with-no-page-numbering
   }
 
   // Gövdeyi pasif hale getir [Disable the body]
