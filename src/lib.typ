@@ -11,6 +11,7 @@
 #import "/src/sections/00-other-pages/abstract-page.typ": abstract-page
 
 #let template-configurations(
+  language: LANGUAGES.TR-TR,
   department: "Department",
   program: "Program",
   thesis-type: "Master/PhD",
@@ -57,9 +58,9 @@
 ) = {
   /* Basic document rules. */
   set document(
-    title: [#thesis-title (#thesis-title-eng)],
-    author: author.first-name + " " + author.last-name,
-    keywords: keywords-tur + keywords-eng,
+    title: thesis-title.title-case + " (" + thesis-title-eng.title-case + ")",
+    author: (author.first-name + " " + upper(author.last-name)),
+    keywords: (keywords-tur, keywords-eng),
   )
 
   set page(
@@ -75,8 +76,8 @@
   set text(
     font: FONT-NAME,
     size: FONT-SIZE,
-    lang: LANGUAGE,
-    region: REGION,
+    lang: language.language-code,
+    region: language.region-code,
     ligatures: false,
     hyphenate: false,
     style: "normal",

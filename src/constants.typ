@@ -6,8 +6,22 @@
   right: 2.5cm,
   bottom: 2.5cm,
 )
-#let LANGUAGE = "tr"
-#let REGION = "tr"
+
+/*
+TR-TR: Türkçe (Türkiye) [Turkish (Türkiye)]\
+EN-US: İngilizce (ABD) [English (US)]
+*/
+#let LANGUAGES = (
+  TR-TR: (
+    language-code: "tr",
+    region-code: "tr",
+  ),
+  EN-US: (
+    language-code: "en",
+    region-code: "us",
+  ),
+)
+
 #let FONT-NAME = "Times New Roman"
 #let FONT-SIZE = 12pt
 #let ALTERNATE-FONT-SIZE = 10pt
