@@ -170,32 +170,38 @@
     )
 
     /* --- Ön Söz [Preface] --- */
-    preface-page(
-      author: author,
-      date: date,
-    )
+    if is-thesis-proposal == false {
+      preface-page(
+        author: author,
+        date: date,
+      )
+    }
 
     /* --- İçindekiler Sayfası [Table of Contents Page] --- */
     table-of-contents-page()
 
     /* --- Tez Çalışması Örijinallik Raporu [Originality Report] --- */
-    originality-report-page(
-      thesis-title: thesis-title,
-      author: author,
-      advisor: advisor,
-      date: date,
-      included-page-count: thesis-originalty.included-page-count,
-      similarity-score: thesis-originalty.similarity-score,
-    )
+    if is-thesis-proposal == false {
+      originality-report-page(
+        thesis-title: thesis-title,
+        author: author,
+        advisor: advisor,
+        date: date,
+        included-page-count: thesis-originalty.included-page-count,
+        similarity-score: thesis-originalty.similarity-score,
+      )
+    }
 
     /* --- Bilimsel Etik Beyannamesi [Scientific Ethics Declaration] --- */
-    scientific-ethics-declaration-page(
-      author: author,
-      date: date,
-    )
+    if is-thesis-proposal == false {
+      scientific-ethics-declaration-page(
+        author: author,
+        date: date,
+      )
+    }
 
     /* --- Simgeler ve Kısaltmalar [Symbols and Abbreviations] --- */
-    if have-symbols or have-abbreviations {
+    if is-thesis-proposal == false and (have-symbols or have-abbreviations) {
       symbols-and-abbreviations-page(
         have-symbols: have-symbols,
         have-abbreviations: have-abbreviations,
@@ -203,36 +209,40 @@
     }
 
     /* --- Türkçe Özet Sayfası [Turkish Abstract Page] --- */
-    abstract-page(
-      page-title: STRING-ABSTRACT-TUR,
-      university-name: STRING-UNIVERSITY-NAME-TUR.title-case,
-      institute-name: STRING-INSTITUTE-NAME-TUR.title-case,
-      department: department,
-      program: program,
-      thesis-type: thesis-type,
-      is-thesis-proposal: is-thesis-proposal,
-      thesis-title: thesis-title,
-      author: author,
-      abstract-text-content-file-path: "/template/sections/00-other-pages/abstract-text-tur.typ",
-      keywords-title: STRING-KEYWORDS-TUR,
-      keywords: keywords-tur,
-    )
+    if is-thesis-proposal == false {
+      abstract-page(
+        page-title: STRING-ABSTRACT-TUR,
+        university-name: STRING-UNIVERSITY-NAME-TUR.title-case,
+        institute-name: STRING-INSTITUTE-NAME-TUR.title-case,
+        department: department,
+        program: program,
+        thesis-type: thesis-type,
+        is-thesis-proposal: is-thesis-proposal,
+        thesis-title: thesis-title,
+        author: author,
+        abstract-text-content-file-path: "/template/sections/00-other-pages/abstract-text-tur.typ",
+        keywords-title: STRING-KEYWORDS-TUR,
+        keywords: keywords-tur,
+      )
+    }
 
     /* --- İngilizce Özet Sayfası [English Abstract Page] --- */
-    abstract-page(
-      page-title: STRING-ABSTRACT-ENG,
-      university-name: STRING-UNIVERSITY-NAME-ENG.title-case,
-      institute-name: STRING-INSTITUTE-NAME-ENG.title-case,
-      department: department,
-      program: program,
-      thesis-type: thesis-type,
-      is-thesis-proposal: is-thesis-proposal,
-      thesis-title: thesis-title-eng,
-      author: author,
-      abstract-text-content-file-path: "/template/sections/00-other-pages/abstract-text-eng.typ",
-      keywords-title: STRING-KEYWORDS-ENG,
-      keywords: keywords-eng,
-    )
+    if is-thesis-proposal == false {
+      abstract-page(
+        page-title: STRING-ABSTRACT-ENG,
+        university-name: STRING-UNIVERSITY-NAME-ENG.title-case,
+        institute-name: STRING-INSTITUTE-NAME-ENG.title-case,
+        department: department,
+        program: program,
+        thesis-type: thesis-type,
+        is-thesis-proposal: is-thesis-proposal,
+        thesis-title: thesis-title-eng,
+        author: author,
+        abstract-text-content-file-path: "/template/sections/00-other-pages/abstract-text-eng.typ",
+        keywords-title: STRING-KEYWORDS-ENG,
+        keywords: keywords-eng,
+      )
+    }
   }
 
   // Sonraki sayfa boş değilse (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
@@ -267,11 +277,13 @@
     pagebreak()
 
     /* ---- Bölüm 4 [Chapter 4] ---- */
-    include "/template/sections/01-chapters/results.typ"
-    pagebreak()
+    if is-thesis-proposal == false {
+      include "/template/sections/01-chapters/results.typ"
+      pagebreak()
+    }
 
     /* ---- Bölüm 5 [Chapter 5] ---- */
-    include "/template/sections/01-chapters/conclusion.typ"
+    if is-thesis-proposal == false { include "/template/sections/01-chapters/conclusion.typ" }
 
     // Sonraki sayfa boş değilse (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
     pagebreak(weak: true, to: "odd")
@@ -284,6 +296,12 @@
 
     // Başlık stilleri
     show: set-styles-for-back-matter-of-thesis
+
+    // Çalışma takvimi
+    if is-thesis-proposal == true {
+      include "/template/sections/00-other-pages/work-schedule.typ"
+      pagebreak()
+    }
 
     // Kaynakça [Bibliography]
     set-bibliography-styles(

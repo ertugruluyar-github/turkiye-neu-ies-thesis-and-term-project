@@ -20,7 +20,7 @@
   department: "Ana Bilim Dalı",
   program: "Bilim Dalı",
   thesis-type: "Doktora",
-  is-thesis-proposal: false,
+  is-thesis-proposal: true,
   date: datetime.today(),
   thesis-title: (
     title-case: "Tezin Başlığı",
