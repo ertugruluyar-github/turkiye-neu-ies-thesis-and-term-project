@@ -16,9 +16,6 @@
   content
 }
 
-// Tamamen boş sayfa, sayfa numrasız. [Fully empty page, no page numbering.]
-#let empty-page-with-no-page-numbering = page([], footer: [])
-
 /* ------------------------------- */
 
 // A TODO marker. (inline: false -> margin note, inline: true -> box).

@@ -13,7 +13,7 @@
 #let template-configurations(
   department: "Department",
   program: "Program",
-  thesis-type: "Yüksek Lisans/Doktora",
+  thesis-type: "Master/PhD",
   is-thesis-proposal: false,
   date: datetime.today(),
   thesis-title: (
@@ -245,7 +245,7 @@
     }
   }
 
-  // Sonraki sayfa boş değilse (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
+  // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
   pagebreak(weak: true, to: "odd")
 
   // Set centered arabic page numbering.
@@ -266,26 +266,30 @@
 
     /* ---- Bölüm 1 [Chapter 1] ---- */
     include "/template/sections/01-chapters/introduction.typ"
-    pagebreak()
+    // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
+    pagebreak(weak: true)
 
     /* ---- Bölüm 2 [Chapter 2] ---- */
     include "/template/sections/01-chapters/literature.typ"
-    pagebreak()
+    // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
+    pagebreak(weak: true)
 
     /* ---- Bölüm 3 [Chapter 3] ---- */
     include "/template/sections/01-chapters/methodology.typ"
-    pagebreak()
+    // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
+    pagebreak(weak: true)
 
     /* ---- Bölüm 4 [Chapter 4] ---- */
     if is-thesis-proposal == false {
       include "/template/sections/01-chapters/results.typ"
-      pagebreak()
+      // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
+      pagebreak(weak: true)
     }
 
     /* ---- Bölüm 5 [Chapter 5] ---- */
     if is-thesis-proposal == false { include "/template/sections/01-chapters/conclusion.typ" }
 
-    // Sonraki sayfa boş değilse (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
+    // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
     pagebreak(weak: true, to: "odd")
   }
 
@@ -300,7 +304,8 @@
     // Çalışma takvimi
     if is-thesis-proposal == true {
       include "/template/sections/00-other-pages/work-schedule.typ"
-      pagebreak()
+      // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
+      pagebreak(weak: true)
     }
 
     // Kaynakça [Bibliography]
@@ -313,7 +318,7 @@
       ),
     )
 
-    // Sonraki sayfa boş değilse (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
+    // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
     pagebreak(weak: true, to: "odd")
 
     // Ekler [Appendices]

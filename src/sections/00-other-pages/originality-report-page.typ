@@ -51,5 +51,6 @@
 
   align(center, advisor-faculty-member-fullname-with-title(advisor: advisor))
 
-  pagebreak()
+  // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
+  pagebreak(weak: true)
 }

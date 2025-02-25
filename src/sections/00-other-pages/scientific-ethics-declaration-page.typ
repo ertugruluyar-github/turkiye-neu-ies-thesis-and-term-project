@@ -16,5 +16,6 @@
     date: date,
   )
 
-  pagebreak()
+  // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
+  pagebreak(weak: true)
 }

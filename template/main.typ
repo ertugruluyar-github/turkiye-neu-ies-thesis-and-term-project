@@ -19,7 +19,7 @@
 #show: template-configurations.with(
   department: "Ana Bilim Dalı",
   program: "Bilim Dalı",
-  thesis-type: "Doktora",
+  thesis-type: "Yüksek Lisans/Doktora",
   is-thesis-proposal: true,
   date: datetime.today(),
   thesis-title: (

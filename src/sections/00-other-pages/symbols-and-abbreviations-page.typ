@@ -8,7 +8,8 @@
 
     include "/template/sections/00-other-pages/symbols-text.typ"
 
-    pagebreak()
+    // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
+    pagebreak(weak: true)
   }
 
   if have-abbreviations {
@@ -16,6 +17,7 @@
 
     include "/template/sections/00-other-pages/abbreviations-text.typ"
 
-    pagebreak()
+    // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
+    pagebreak(weak: true)
   }
 }

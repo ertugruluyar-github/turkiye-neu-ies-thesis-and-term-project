@@ -19,5 +19,6 @@
     [], date-component(date: date, display-format: LONG-MONTH-YEAR-DATE-FORMAT),
   )
 
-  pagebreak()
+  // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
+  pagebreak(weak: true)
 }

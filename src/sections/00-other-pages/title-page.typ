@@ -1,5 +1,13 @@
-#import "/src/constants.typ": *
-#import "/src/modules/custom-functions.typ": empty-page-with-no-page-numbering
+#import "/src/constants.typ": (
+  MARGIN,
+  STRING-TC,
+  STRING-UNIVERSITY-NAME-TUR,
+  STRING-INSTITUTE-NAME-TUR,
+  STRING-ADVISOR,
+  STRING-SECOND-ADVISOR,
+  STRING-CITY-NAME,
+  ONLY-YEAR-DATE-FORMAT,
+)
 #import "/src/components/thesis-type-component.typ": thesis-type-component
 #import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
@@ -18,6 +26,13 @@
   is-thesis-proposal: none,
   date: none,
 ) = {
+  set page(
+    header: none,
+    footer: none,
+    margin: MARGIN,
+    numbering: none,
+    columns: 1,
+  )
   set align(center)
   set par(leading: 1em, spacing: 1em)
 
@@ -78,7 +93,6 @@
 
   [#STRING-CITY-NAME - #date.display(ONLY-YEAR-DATE-FORMAT)]
 
-  pagebreak()
-
-  empty-page-with-no-page-numbering
+  // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
+  pagebreak(weak: true, to: "odd")
 }
