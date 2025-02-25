@@ -51,7 +51,6 @@
   ),
   keywords-tur: "anahtar kelime 1, anahtar kelime 2, anahtar kelime 3, anahtar kelime 4, anahtar kelime 5",
   keywords-eng: "keyword 1, keyword 2, keyword 3, keyword 4, keyword 5",
-  reviewers: (),
   have-symbols: true,
   have-abbreviations: true,
   body,
@@ -150,7 +149,6 @@
     thesis-study-funding-organization: thesis-study-funding-organization,
     thesis-type: thesis-type,
     is-thesis-proposal: is-thesis-proposal,
-    reviewers: reviewers,
     date: date,
   )
 

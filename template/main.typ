@@ -10,7 +10,6 @@
   abstract: Tezinizin özeti.
   thesis-type: Tezinizin türü olarak "Yüksek Lisans" ya da "Doktora" yazınız.
   is-thesis-proposal: Tez önerisi mi? (varsayılan: true).
-  reviewers: your thesis reviewers, specify in order "first-reviewer", "second-reviewer" and (if needed) "supervisor".
   date: your thesis deadline (default: datetime.today()).
   lang: the text language for smartquotes & hyphenation (specify as ISO 639-1/2/3 code, default: "en").
   have-symbols: Semboller sayfasını kaldırmak için "false" yapınız.
@@ -60,7 +59,6 @@
   ),
   keywords-tur: "Tez hazırlama kılavuzunda verilen açıklamaları dikkate alarak tezle ilgili en az üç, en fazla beş anahtar kelime yazılmalıdır. (Örnek: anahtar kelime 1, anahtar kelime 2, anahtar kelime 3)",
   keywords-eng: "Türkçe özetteki anahtar kelimelerin İngilizcesini yazınız. (Örnek: keyword 1, keyword 2, keyword 3)",
-  reviewers: ("Prof. Dr. Musterfrau", "Prof. Dr. Mustermann", "Dr. Evil"),
   have-symbols: true,
   have-abbreviations: true,
 )

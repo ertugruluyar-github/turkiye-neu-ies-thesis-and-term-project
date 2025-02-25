@@ -16,7 +16,6 @@
   thesis-study-funding-organization: none,
   thesis-type: none,
   is-thesis-proposal: none,
-  reviewers: none,
   date: none,
 ) = {
   set align(center)
