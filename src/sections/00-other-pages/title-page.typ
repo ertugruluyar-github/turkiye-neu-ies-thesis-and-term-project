@@ -22,15 +22,14 @@
   date: none,
 ) = {
   set align(center)
+  set par(leading: 1em, spacing: 1em)
 
   grid(
     columns: (1fr, 6fr, 1fr),
     align: center + horizon,
-    row-gutter: 1em,
+    row-gutter: 12pt,
     "", //image("/src/organization-logos/university-logo.png", width: 2.7cm, height: 2.7cm),
-    [
-      #set text(weight: "bold")
-      #set par(leading: 1em)
+    text(weight: "bold")[
       #upper-case-tr(STRING-TC)\
       #upper-case-tr(STRING-UNIVERSITY-NAME-TUR)\
       #upper-case-tr(STRING-INSTITUTE-NAME-TUR)
@@ -60,15 +59,23 @@
 
   title-case-tr(STRING-ADVISOR)
   advisor-with-orcid-component(advisor: advisor)
+
   v(0.5cm)
-  if STRING-SECOND-ADVISOR != none {
+
+  if second-advisor != none {
     title-case-tr(STRING-SECOND-ADVISOR)
     advisor-with-orcid-component(advisor: second-advisor)
+  } else {
+    v(5em)
   }
 
   v(0.75cm)
 
-  thesis-study-funding-organization-component(thesis-study-funding-organization: thesis-study-funding-organization)
+  if thesis-study-funding-organization != none {
+    thesis-study-funding-organization-component(thesis-study-funding-organization: thesis-study-funding-organization)
+  } else {
+    v(3.3em)
+  }
 
   v(0.5cm)
 

@@ -43,6 +43,7 @@
     last-name: "SOYADI",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
+  // Tez çalışması destekleyen herhangi bir kuruluş yoksa "thesis-study-funding-organization: none" yapınız.
   thesis-study-funding-organization: (
     name: "Tez Çalışmasını Destekleyen Kuruluşun Adı",
     project-no: "Proje Numarası",
