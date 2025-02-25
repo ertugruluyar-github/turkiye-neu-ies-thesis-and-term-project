@@ -23,25 +23,31 @@
   thesis-type: "Doktora",
   is-thesis-proposal: false,
   date: datetime.today(),
-  thesis-title: "Tezin Başlığı",
-  thesis-title-eng: "Tezin İngilizce Başlığı",
+  thesis-title: (
+    title-case: "Tezin Başlığı",
+    upper-case: "TEZİN BAŞLIĞI",
+  ),
+  thesis-title-eng: (
+    title-case: "Tezin İnglizce Başlığı",
+    upper-case: "TEZİN İNGİLİZCE BAŞLIĞI",
+  ),
   author: (
     first-name: "Yazarın Adı",
     last-name: "SOYADI",
-    orcid: "xxxx-xxxx-xxxx-xxxx",
+    orcid: "XXXX-XXXX-XXXX-XXXX",
   ),
   advisor: (
     title: "Ünvan",
     first-name: "Danışman Adı",
     last-name: "SOYADI",
-    orcid: "xxxx-xxxx-xxxx-xxxx",
+    orcid: "XXXX-XXXX-XXXX-XXXX",
   ),
   // İkinci Danışman yoksa "second-advisor: none" yapınız.
   second-advisor: (
     title: "Ünvan",
     first-name: "İkinci Danışman Adı",
     last-name: "SOYADI",
-    orcid: "xxxx-xxxx-xxxx-xxxx",
+    orcid: "XXXX-XXXX-XXXX-XXXX",
   ),
   // Tez çalışması destekleyen herhangi bir kuruluş yoksa "thesis-study-funding-organization: none" yapınız.
   thesis-study-funding-organization: (

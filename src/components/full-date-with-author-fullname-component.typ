@@ -1,4 +1,4 @@
-#import "/src/components/author-fullname-component.typ": author-fullname-component
+#import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/date-component.typ": date-component
 #import "/src/constants.typ": FULL-DATE-FORMAT
 
@@ -12,6 +12,6 @@
     row-gutter: 1em,
     align: center,
     [], date-component(date: date, display-format: FULL-DATE-FORMAT),
-    [], author-fullname-component(author: author),
+    [], fullname-component(first-name: author.first-name, last-name: author.last-name),
   )
 }

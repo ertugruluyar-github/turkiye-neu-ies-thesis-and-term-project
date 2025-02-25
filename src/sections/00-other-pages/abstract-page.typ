@@ -1,6 +1,6 @@
 #import "/src/constants.typ": ABSTRACT-TEXT-FONT-SIZE
 #import "/src/components/keywords-component.typ": keywords-component
-#import "/src/components/author-fullname-component.typ": author-fullname-component
+#import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/thesis-type-component.typ": thesis-type-component
 
 #let abstract-page(
@@ -21,16 +21,16 @@
   set text(size: ABSTRACT-TEXT-FONT-SIZE)
   set par(spacing: 1em)
 
-  heading(level: 1, page-title)
+  heading(level: 1, upper(page-title))
 
   align(center, university-name + ", " + institute-name)
   align(center, department)
   align(center, program)
   align(center, thesis-type-component(thesis-type: thesis-type, is-thesis-proposal: is-thesis-proposal))
   v(1em)
-  align(center, text(weight: "bold", upper(thesis-title)))
+  align(center, text(weight: "bold", upper(thesis-title.upper-case)))
   v(1em)
-  align(center, author-fullname-component(author: author))
+  align(center, fullname-component(first-name: author.first-name, last-name: author.last-name))
 
   v(24pt)
 

@@ -1,12 +1,10 @@
 #import "/src/constants.typ": *
 #import "/src/modules/custom-functions.typ": empty-page-with-no-page-numbering
-#import "/src/modules/turkish-case-handler.typ": upper-case-tr
 #import "/src/components/thesis-type-component.typ": thesis-type-component
-#import "/src/components/author-fullname-component.typ": author-fullname-component
+#import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
 #import "/src/components/advisor-with-orcid-component.typ": advisor-with-orcid-component
 #import "/src/components/thesis-study-funding-organization-component.typ": thesis-study-funding-organization-component
-#import "/src/modules/turkish-case-handler.typ": title-case-tr
 
 #let title-page(
   department: none,
@@ -30,9 +28,9 @@
     row-gutter: 12pt,
     "", //image("/src/organization-logos/university-logo.png", width: 2.7cm, height: 2.7cm),
     text(weight: "bold")[
-      #upper-case-tr(STRING-TC)\
-      #upper-case-tr(STRING-UNIVERSITY-NAME-TUR)\
-      #upper-case-tr(STRING-INSTITUTE-NAME-TUR)
+      #upper(STRING-TC)\
+      #upper(STRING-UNIVERSITY-NAME-TUR.upper-case)\
+      #upper(STRING-INSTITUTE-NAME-TUR.upper-case)
     ],
     "", //image("/src/organization-logos/university-logo.png", width: 2.7cm, height: 2.7cm),
   )
@@ -48,22 +46,22 @@
 
   v(1.75cm)
 
-  text(weight: "bold")[#upper-case-tr(thesis-title)]
+  text(weight: "bold")[#upper(thesis-title.upper-case)]
 
   v(1.75cm)
 
-  author-fullname-component(author: author)
+  fullname-component(first-name: author.first-name, last-name: author.last-name)
   orcid-with-prefix-component(orcid: author.orcid)
 
   v(1.25cm)
 
-  title-case-tr(STRING-ADVISOR)
+  STRING-ADVISOR
   advisor-with-orcid-component(advisor: advisor)
 
   v(0.5cm)
 
   if second-advisor != none {
-    title-case-tr(STRING-SECOND-ADVISOR)
+    STRING-SECOND-ADVISOR
     advisor-with-orcid-component(advisor: second-advisor)
   } else {
     v(5em)
@@ -79,7 +77,7 @@
 
   v(0.5cm)
 
-  [#title-case-tr(STRING-CITY-NAME) - #date.display(ONLY-YEAR-DATE-FORMAT)]
+  [#STRING-CITY-NAME - #date.display(ONLY-YEAR-DATE-FORMAT)]
 
   pagebreak()
 

@@ -1,3 +1,4 @@
+/*
 // Only Turkish special characters mapping (lowercase -> uppercase)
 #let _lower-to-upper-special-char-map-tr = (
   "i": "İ",

@@ -1,4 +1,4 @@
-#import "/src/components/author-fullname-component.typ": author-fullname-component
+#import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/date-component.typ": date-component
 #import "/src/constants.typ": LONG-MONTH-YEAR-DATE-FORMAT
 
@@ -15,7 +15,7 @@
     rows: auto,
     row-gutter: 1em,
     align: right,
-    [], author-fullname-component(author: author),
+    [], fullname-component(first-name: author.first-name, last-name: author.last-name),
     [], date-component(date: date, display-format: LONG-MONTH-YEAR-DATE-FORMAT),
   )
 

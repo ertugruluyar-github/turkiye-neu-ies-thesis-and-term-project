@@ -37,18 +37,30 @@
 #let STRING-KEYWORDS-ENG = "Keywords"
 #let STRING-APPENDICES = "EKLER"
 #let STRING-APPENDIX = "EK"
-#let STRING-THESIS-SUFFIX = " Tezi"
-#let STRING-THESIS-PROPOSAL-SUFFIX = " Tez Önerisi"
+#let STRING-THESIS-SUFFIX = "Tezi"
+#let STRING-THESIS-PROPOSAL-SUFFIX = "Tez Önerisi"
 #let STRING-ADVISOR = "Danışman"
 #let STRING-SECOND-ADVISOR = "İkinci Danışman"
 #let STRING-FIRST-REVIEWER = "1. Juri Üyesi"
 #let STRING-SECOND-REVIEWER = "2. Juri Üyesi"
 #let STRING-BIBLIOGRAPHY = "KAYNAKLAR"
 // Organization Info
-#let STRING-UNIVERSITY-NAME-TUR = "Necmettin Erbakan Üniversitesi"
-#let STRING-UNIVERSITY-NAME-ENG = "Necmettin Erbakan University"
-#let STRING-INSTITUTE-NAME-TUR = "Eğitim Bilimleri Enstitüsü"
-#let STRING-INSTITUTE-NAME-ENG = "Graduate School of Educational Sciences"
+#let STRING-UNIVERSITY-NAME-TUR = (
+  title-case: "Necmettin Erbakan Üniversitesi",
+  upper-case: "NECMETTİN ERBAKAN ÜNİVERSİTESİ",
+)
+#let STRING-UNIVERSITY-NAME-ENG = (
+  title-case: "Necmettin Erbakan University",
+  upper-case: "NECMETTİN ERBAKAN UNİVERSITY",
+)
+#let STRING-INSTITUTE-NAME-TUR = (
+  title-case: "Eğitim Bilimleri Enstitüsü",
+  upper-case: "EĞİTİM BİLİMLERİ ENSTİTÜSÜ",
+)
+#let STRING-INSTITUTE-NAME-ENG = (
+  title-case: "Graduate School of Educational Sciences",
+  upper-case: "GRADUATE SCHOOL OF EDUCATIONAL SCIENCES",
+)
 
 // Ayraçlar [Separators]
 #let APPENDIX-PREFIX-SEPERATOR = "-"

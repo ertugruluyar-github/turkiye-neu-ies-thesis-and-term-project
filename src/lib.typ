@@ -1,7 +1,6 @@
 #import "/src/constants.typ": *
 #import "/src/styles.typ": *
 #import "/src/modules/custom-functions.typ": *
-#import "/src/modules/turkish-case-handler.typ": title-case-tr, upper-case-tr
 #import "/src/components/keywords-component.typ": keywords-component
 #import "/src/sections/00-other-pages/title-page.typ": *
 #import "/src/sections/00-other-pages/preface-page.typ": preface-page
@@ -17,8 +16,14 @@
   thesis-type: "Yüksek Lisans/Doktora",
   is-thesis-proposal: false,
   date: datetime.today(),
-  thesis-title: "Thesis Title",
-  thesis-title-eng: "Thesis English Title",
+  thesis-title: (
+    title-case: "Thesis Title",
+    upper-case: "THESIS TITLE",
+  ),
+  thesis-title-eng: (
+    title-case: "Thesis English Title",
+    upper-case: "THESIS ENGLISH TITLE",
+  ),
   author: (
     first-name: "Author's firstname",
     last-name: "Author's lastname",
@@ -201,9 +206,9 @@
 
     /* --- Türkçe Özet Sayfası [Turkish Abstract Page] --- */
     abstract-page(
-      page-title: upper-case-tr(STRING-ABSTRACT-TUR),
-      university-name: title-case-tr(STRING-UNIVERSITY-NAME-TUR),
-      institute-name: title-case-tr(STRING-INSTITUTE-NAME-TUR),
+      page-title: STRING-ABSTRACT-TUR,
+      university-name: STRING-UNIVERSITY-NAME-TUR.title-case,
+      institute-name: STRING-INSTITUTE-NAME-TUR.title-case,
       department: department,
       program: program,
       thesis-type: thesis-type,
@@ -211,15 +216,15 @@
       thesis-title: thesis-title,
       author: author,
       abstract-text-content-file-path: "/template/sections/00-other-pages/abstract-text-tur.typ",
-      keywords-title: title-case-tr(STRING-KEYWORDS-TUR),
+      keywords-title: STRING-KEYWORDS-TUR,
       keywords: keywords-tur,
     )
 
     /* --- İngilizce Özet Sayfası [English Abstract Page] --- */
     abstract-page(
-      page-title: upper(STRING-ABSTRACT-ENG),
-      university-name: STRING-UNIVERSITY-NAME-ENG,
-      institute-name: STRING-INSTITUTE-NAME-ENG,
+      page-title: STRING-ABSTRACT-ENG,
+      university-name: STRING-UNIVERSITY-NAME-ENG.title-case,
+      institute-name: STRING-INSTITUTE-NAME-ENG.title-case,
       department: department,
       program: program,
       thesis-type: thesis-type,
@@ -287,7 +292,7 @@
       bibliography(
         "/template/bibliography-sources/references.bib",
         style: "/template/bibliography-styles/apa7-tr.csl",
-        title: upper-case-tr(STRING-BIBLIOGRAPHY),
+        title: upper(STRING-BIBLIOGRAPHY),
         full: false,
       ),
     )
