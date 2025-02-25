@@ -1,6 +1,6 @@
 # turkiye-neu-ies-thesis
-Türkiye Cumhuriyeti Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü yüksek lisans ve doktora için **RESMÎ OLMAYAN** tez önerisi ve tez şablonudur.
-[Republic of Turkey Necmettin Erbakan University Institute of Educational Sciences **UNOFFICIAL** thesis proposal and thesis template for master's and doctorate.]
+Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eğitim için **RESMÎ OLMAYAN** tez önerisi, tez ve dönem projesi şablonudur.
+[Necmettin Erbakan University Institute of Educational Sciences is an **UNOFFICIAL** thesis proposal, thesis and term project template for graduate education.]
 
 ## Teşekkür [Acknowledgement]
 Bu proje yazılmadan önce ve sonrasında aşağıdaki projeler incelenerek bazı durumlarda fikir almak için yararlanılmıştır:

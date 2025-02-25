@@ -1,10 +1,10 @@
 [package]
-name = "turkiye-neu-ies-thesis"
+name = "turkiye-neu-ies-thesis-and-term-project"
 version = "0.1.0"
 entrypoint = "src/lib.typ"
 authors = ["Ertuğrul UYAR <@ertugruluyar-github>"]
 license = "MIT"
-description = "Türkiye Cumhuriyeti Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü yüksek lisans ve doktora için RESMÎ OLMAYAN tez önerisi ve tez şablonudur."
+description = "Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eğitim için RESMÎ OLMAYAN tez önerisi, tez ve dönem projesi şablonudur. [Necmettin Erbakan University Institute of Educational Sciences is an UNOFFICIAL thesis proposal, thesis and term project template for graduate education.]"
 repository = "https://github.com/ertugruluyar-github/turkiye-neu-ies-thesis"
 categories = ["thesis"]
 keywords = [
