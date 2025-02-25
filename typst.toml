@@ -14,12 +14,14 @@ keywords = [
     "öneri",
     "master",
     "yüksek lisans",
-    "bachelor",
+    "ph.d.",
+    "PhD",
+    "doctorate",
     "doktora",
     "university",
     "üniversite",
     "NEÜ",
-    "Necmettin Erbakan"
+    "Necmettin Erbakan",
     "Türkiye",
 ]
 compiler = "0.13.0"
