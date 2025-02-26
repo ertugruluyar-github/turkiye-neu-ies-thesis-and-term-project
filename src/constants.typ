@@ -116,7 +116,6 @@ TERM-PROJECT: "Dönem Projesi"
 #let APPENDIX-REFERENCE-NUMBERING(..nums) = nums.pos().slice(1).map(str).join(".") // Ekler [Appendices]
 
 // Tarih Formatı [Date Format]
-#let FULL-DATE-WITH-LONG-MONTH-FORMAT = "[day] [month repr:long] [year]"
 #let FULL-DATE-FORMAT = "[day]/[month]/[year]"
 #let ONLY-YEAR-DATE-FORMAT = "[year]"
 #let LONG-MONTH-YEAR-DATE-FORMAT = "[month repr:long] [year]"
