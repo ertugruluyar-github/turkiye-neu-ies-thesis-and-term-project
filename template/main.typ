@@ -1,13 +1,11 @@
 // Şablonu internetten kullanmak.
 //#import "@local/turkiye-neu-ies-thesis:0.1.0": *
 // Şablonu internetten kullanmak.
-#import "/src/lib.typ": template-configurations, LANGUAGES
+#import "/src/lib.typ": template-configurations, LANGUAGES, REPORT-TYPES
 
 /* ---- Thesis configurations ----
   author: (fullname: "", orcid: "") şeklinde adınız soyadınız ve ORCID numaranız.
   abstract: Tezinizin özeti.
-  thesis-type: Tezinizin türü olarak "Yüksek Lisans" ya da "Doktora" yazınız.
-  is-thesis-proposal: Tez önerisi mi? (varsayılan: true).
   date: your thesis deadline (default: datetime.today()).
   lang: the text language for smartquotes & hyphenation (specify as ISO 639-1/2/3 code, default: "en").
   have-symbols: Semboller sayfasını kaldırmak için "false" yapınız.
@@ -21,10 +19,8 @@
   department: "Ana Bilim Dalı",
   // Bilim Dalı seçiniz.
   program: "Bilim Dalı",
-  // Yüksek Lisans mı Doktora tezi mi?
-  thesis-type: "Yüksek Lisans/Doktora",
-  // "Tez Önerisi" ise "is-thesis-proposal: true" yapınız. Tez önerisi ise sadece tez önerisinde bulunması gereken içerik çıktıya dahil edilir.
-  is-thesis-proposal: true,
+  // Raporun türünü seçiniz.
+  report-type: REPORT-TYPES.TERM-PROJECT,
   // Tez önerisi ya da tezin teslim edildiği tarih. Varsayılan olarak bugünün tarihidir. Elle bir tarih girmek için "datetime(day: 20, month: 3, year: 2025)" yapınız.
   date: datetime.today(),
   // Tezinizin başlığı (başlık ve hepsi büyük harf biçiminde).

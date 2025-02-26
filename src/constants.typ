@@ -22,6 +22,21 @@ EN-US: İngilizce (ABD) [English (US)]
   ),
 )
 
+/*
+MASTER-THESIS-PROPOSAL: "Yüksek Lisans Tez Önerisi"\
+MASTER-THESIS: "Yüksek Lisans Tezi"\
+PHD-THESIS-PROPOSAL: "Doktora Tez Önerisi"\
+PHD-THESIS: "Doktora Tezi"\
+TERM-PROJECT: "Dönem Projesi"
+*/
+#let REPORT-TYPES = (
+  MASTER-THESIS-PROPOSAL: "Yüksek Lisans Tez Önerisi",
+  MASTER-THESIS: "Yüksek Lisans Tezi",
+  PHD-THESIS-PROPOSAL: "Doktora Tez Önerisi",
+  PHD-THESIS: "Doktora Tezi",
+  TERM-PROJECT: "Dönem Projesi",
+)
+
 #let FONT-NAME = "Times New Roman"
 #let FONT-SIZE = 12pt
 #let ALTERNATE-FONT-SIZE = 10pt

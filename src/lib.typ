@@ -14,8 +14,7 @@
   language: LANGUAGES.TR-TR,
   department: "Department",
   program: "Program",
-  thesis-type: "Master/PhD",
-  is-thesis-proposal: false,
+  report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL,
   date: datetime.today(),
   thesis-title: (
     title-case: "Thesis Title",
@@ -148,8 +147,7 @@
     advisor: advisor,
     second-advisor: second-advisor,
     thesis-study-funding-organization: thesis-study-funding-organization,
-    thesis-type: thesis-type,
-    is-thesis-proposal: is-thesis-proposal,
+    report-type: report-type,
     date: date,
   )
 
@@ -171,7 +169,11 @@
     )
 
     /* --- Ön Söz [Preface] --- */
-    if is-thesis-proposal == false {
+    if (
+      report-type == REPORT-TYPES.MASTER-THESIS
+        or report-type == REPORT-TYPES.PHD-THESIS
+        or report-type == REPORT-TYPES.TERM-PROJECT
+    ) {
       preface-page(
         author: author,
         date: date,
@@ -182,7 +184,9 @@
     table-of-contents-page()
 
     /* --- Tez Çalışması Örijinallik Raporu [Originality Report] --- */
-    if is-thesis-proposal == false {
+    if (
+      report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.PHD-THESIS
+    ) {
       originality-report-page(
         thesis-title: thesis-title,
         author: author,
@@ -194,7 +198,11 @@
     }
 
     /* --- Bilimsel Etik Beyannamesi [Scientific Ethics Declaration] --- */
-    if is-thesis-proposal == false {
+    if (
+      report-type == REPORT-TYPES.MASTER-THESIS
+        or report-type == REPORT-TYPES.PHD-THESIS
+        or report-type == REPORT-TYPES.TERM-PROJECT
+    ) {
       scientific-ethics-declaration-page(
         author: author,
         date: date,
@@ -202,7 +210,14 @@
     }
 
     /* --- Simgeler ve Kısaltmalar [Symbols and Abbreviations] --- */
-    if is-thesis-proposal == false and (have-symbols or have-abbreviations) {
+    if (
+      (
+        report-type == REPORT-TYPES.MASTER-THESIS
+          or report-type == REPORT-TYPES.PHD-THESIS
+          or report-type == REPORT-TYPES.TERM-PROJECT
+      )
+        and (have-symbols or have-abbreviations)
+    ) {
       symbols-and-abbreviations-page(
         have-symbols: have-symbols,
         have-abbreviations: have-abbreviations,
@@ -210,15 +225,18 @@
     }
 
     /* --- Türkçe Özet Sayfası [Turkish Abstract Page] --- */
-    if is-thesis-proposal == false {
+    if (
+      report-type == REPORT-TYPES.MASTER-THESIS
+        or report-type == REPORT-TYPES.PHD-THESIS
+        or report-type == REPORT-TYPES.TERM-PROJECT
+    ) {
       abstract-page(
         page-title: STRING-ABSTRACT-TUR,
         university-name: STRING-UNIVERSITY-NAME-TUR.title-case,
         institute-name: STRING-INSTITUTE-NAME-TUR.title-case,
         department: department,
         program: program,
-        thesis-type: thesis-type,
-        is-thesis-proposal: is-thesis-proposal,
+        report-type: report-type,
         thesis-title: thesis-title,
         author: author,
         abstract-text-content-file-path: "/template/sections/00-other-pages/abstract-text-tur.typ",
@@ -228,15 +246,18 @@
     }
 
     /* --- İngilizce Özet Sayfası [English Abstract Page] --- */
-    if is-thesis-proposal == false {
+    if (
+      report-type == REPORT-TYPES.MASTER-THESIS
+        or report-type == REPORT-TYPES.PHD-THESIS
+        or report-type == REPORT-TYPES.TERM-PROJECT
+    ) {
       abstract-page(
         page-title: STRING-ABSTRACT-ENG,
         university-name: STRING-UNIVERSITY-NAME-ENG.title-case,
         institute-name: STRING-INSTITUTE-NAME-ENG.title-case,
         department: department,
         program: program,
-        thesis-type: thesis-type,
-        is-thesis-proposal: is-thesis-proposal,
+        report-type: report-type,
         thesis-title: thesis-title-eng,
         author: author,
         abstract-text-content-file-path: "/template/sections/00-other-pages/abstract-text-eng.typ",
@@ -281,14 +302,22 @@
     pagebreak(weak: true)
 
     /* ---- Bölüm 4 [Chapter 4] ---- */
-    if is-thesis-proposal == false {
+    if (
+      report-type == REPORT-TYPES.MASTER-THESIS
+        or report-type == REPORT-TYPES.PHD-THESIS
+        or report-type == REPORT-TYPES.TERM-PROJECT
+    ) {
       include "/template/sections/01-chapters/results.typ"
       // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
       pagebreak(weak: true)
     }
 
     /* ---- Bölüm 5 [Chapter 5] ---- */
-    if is-thesis-proposal == false { include "/template/sections/01-chapters/conclusion.typ" }
+    if (
+      report-type == REPORT-TYPES.MASTER-THESIS
+        or report-type == REPORT-TYPES.PHD-THESIS
+        or report-type == REPORT-TYPES.TERM-PROJECT
+    ) { include "/template/sections/01-chapters/conclusion.typ" }
 
     // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
     pagebreak(weak: true, to: "odd")
@@ -303,8 +332,23 @@
     show: set-styles-for-back-matter-of-thesis
 
     // Çalışma takvimi
-    if is-thesis-proposal == true {
+    if (
+      report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.PHD-THESIS-PROPOSAL
+    ) {
       include "/template/sections/00-other-pages/work-schedule.typ"
+      // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
+      pagebreak(weak: true)
+    }
+
+    // Genişletilmiş Türkçe Özet
+    if (
+      LANGUAGES == LANGUAGES.EN-US
+        or report-type == REPORT-TYPES.MASTER-THESIS
+        or report-type == REPORT-TYPES.PHD-THESIS
+        or report-type == REPORT-TYPES.TERM-PROJECT
+    ) {
+      //include "/template/sections/00-other-pages/work-schedule.typ"
+      "TODO: Genişletilmiş Türkçe Özet"
       // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
       pagebreak(weak: true)
     }

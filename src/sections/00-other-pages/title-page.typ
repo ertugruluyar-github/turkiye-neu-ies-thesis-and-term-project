@@ -8,7 +8,6 @@
   STRING-CITY-NAME,
   ONLY-YEAR-DATE-FORMAT,
 )
-#import "/src/components/thesis-type-component.typ": thesis-type-component
 #import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
 #import "/src/components/advisor-with-orcid-component.typ": advisor-with-orcid-component
@@ -22,8 +21,7 @@
   advisor: none,
   second-advisor: none,
   thesis-study-funding-organization: none,
-  thesis-type: none,
-  is-thesis-proposal: none,
+  report-type: none,
   date: none,
 ) = {
   set page(
@@ -56,7 +54,7 @@
 
   v(1cm)
 
-  thesis-type-component(thesis-type: thesis-type, is-thesis-proposal: is-thesis-proposal)
+  report-type
 
   v(1.75cm)
 

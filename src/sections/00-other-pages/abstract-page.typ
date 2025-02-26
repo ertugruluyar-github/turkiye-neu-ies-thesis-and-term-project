@@ -1,21 +1,19 @@
 #import "/src/constants.typ": ABSTRACT-TEXT-FONT-SIZE
 #import "/src/components/keywords-component.typ": keywords-component
 #import "/src/components/fullname-component.typ": fullname-component
-#import "/src/components/thesis-type-component.typ": thesis-type-component
 
 #let abstract-page(
   page-title: none,
-  university-name: "University Name",
-  institute-name: "Institute Name",
+  university-name: none,
+  institute-name: none,
   department: none,
   program: none,
-  thesis-type: none,
-  is-thesis-proposal: none,
+  report-type: none,
   thesis-title: none,
   author: none,
   abstract-text-content-file-path: none,
-  keywords-title: "Keywords Title",
-  keywords: "Keyword 1, Keyword 2",
+  keywords-title: none,
+  keywords: none,
 ) = {
   // Özet metni normal yazı büyüklüğünden daha küçük olacak şekilde ayarlandı.
   set text(size: ABSTRACT-TEXT-FONT-SIZE)
@@ -26,7 +24,7 @@
   align(center, university-name + ", " + institute-name)
   align(center, department)
   align(center, program)
-  align(center, thesis-type-component(thesis-type: thesis-type, is-thesis-proposal: is-thesis-proposal))
+  align(center, report-type)
   v(1em)
   align(center, text(weight: "bold", upper(thesis-title.upper-case)))
   v(1em)
