@@ -34,7 +34,7 @@ TERM-PROJECT: "Dönem Projesi"
   MASTER-THESIS: "Yüksek Lisans Tezi",
   PHD-THESIS-PROPOSAL: "Doktora Tez Önerisi",
   PHD-THESIS: "Doktora Tezi",
-  TERM-PROJECT: "Dönem Projesi",
+  TERM-PROJECT: "Tezsiz Yüksek Lisans Dönem Projesi",
 )
 
 #let FONT-NAME = "Times New Roman"
