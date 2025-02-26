@@ -349,7 +349,6 @@
             or report-type == REPORT-TYPES.TERM-PROJECT
         )
     ) {
-      //include "/template/sections/00-other-pages/work-schedule.typ"
       abstract-page(
         page-title: STRING-EXPANDED-TURKISH-ABSTRACT-TUR,
         university-name: STRING-UNIVERSITY-NAME-TUR.title-case,
@@ -385,8 +384,19 @@
     counter(heading).update(1)
 
     include "/template/sections/02-appendices/appendices.typ"
+
+    // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
+    pagebreak(weak: true, to: "odd")
+
+    // Özgeçmiş [Curriculum Vitae]
+    if report-type == REPORT-TYPES.TERM-PROJECT {
+      include "/template/sections/00-other-pages/curriculum-vitae.typ"
+
+      // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
+      pagebreak(weak: true)
+    }
   }
 
-  // Gövdeyi pasif hale getir [Disable the body]
+  // Gövdeyi pasif hale getir. [Disable the body.]
   //body
 }
