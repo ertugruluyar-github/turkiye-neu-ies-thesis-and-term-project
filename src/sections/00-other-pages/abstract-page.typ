@@ -18,6 +18,7 @@
   // Özet metni normal yazı büyüklüğünden daha küçük olacak şekilde ayarlandı.
   set text(size: ABSTRACT-TEXT-FONT-SIZE)
   set par(spacing: 1em)
+  show heading.where(level: 1): set align(center)
 
   heading(level: 1, upper(page-title))
 
@@ -35,12 +36,14 @@
   set par(leading: 1em, spacing: 0cm)
   include abstract-text-content-file-path
 
-  v(10pt)
+  if keywords-title != none and keywords != none {
+    v(10pt)
 
-  keywords-component(
-    keywords-title: keywords-title,
-    keywords: keywords,
-  )
+    keywords-component(
+      keywords-title: keywords-title,
+      keywords: keywords,
+    )
+  }
 
   // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
   pagebreak(weak: true)

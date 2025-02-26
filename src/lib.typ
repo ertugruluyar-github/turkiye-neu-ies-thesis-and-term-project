@@ -342,13 +342,27 @@
 
     // Genişletilmiş Türkçe Özet
     if (
-      LANGUAGES == LANGUAGES.EN-US
-        or report-type == REPORT-TYPES.MASTER-THESIS
-        or report-type == REPORT-TYPES.PHD-THESIS
-        or report-type == REPORT-TYPES.TERM-PROJECT
+      language == LANGUAGES.EN-US
+        and (
+          report-type == REPORT-TYPES.MASTER-THESIS
+            or report-type == REPORT-TYPES.PHD-THESIS
+            or report-type == REPORT-TYPES.TERM-PROJECT
+        )
     ) {
       //include "/template/sections/00-other-pages/work-schedule.typ"
-      "TODO: Genişletilmiş Türkçe Özet"
+      abstract-page(
+        page-title: STRING-EXPANDED-TURKISH-ABSTRACT-TUR,
+        university-name: STRING-UNIVERSITY-NAME-TUR.title-case,
+        institute-name: STRING-INSTITUTE-NAME-TUR.title-case,
+        department: department,
+        program: program,
+        report-type: report-type,
+        thesis-title: thesis-title,
+        author: author,
+        abstract-text-content-file-path: "/template/sections/00-other-pages/expanded-turkish-abstract-text.typ",
+        keywords-title: none,
+        keywords: none,
+      )
       // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
       pagebreak(weak: true)
     }
