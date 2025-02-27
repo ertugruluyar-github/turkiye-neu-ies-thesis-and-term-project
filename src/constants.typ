@@ -72,6 +72,7 @@ TERM-PROJECT: "Dönem Projesi"
 #let STRING-FIRST-REVIEWER = "1. Juri Üyesi"
 #let STRING-SECOND-REVIEWER = "2. Juri Üyesi"
 #let STRING-BIBLIOGRAPHY = "KAYNAKLAR"
+
 // Organization Info
 #let STRING-UNIVERSITY-NAME-TUR = (
   title-case: "Necmettin Erbakan Üniversitesi",
@@ -135,3 +136,28 @@ TERM-PROJECT: "Dönem Projesi"
   "Kasım",
   "Aralık",
 )
+
+// Özgeçmiş [Curriculum Vitae]
+#let STRING-CURRICULUM-VITAE = "ÖZ GEÇMİŞ"
+#let STRING-GENERAL-INFO = "Genel Bilgiler"
+#let STRING-FIRST-NAME-LAST-NAME = "Adı Soyadı"
+#let STRING-SIGNATURE = "İmza"
+#let STRING-BIRTHDAY = "Dogüm Yeri"
+#let STRING-BIRTHPLACE = "Doğum Günü"
+#let STRING-ADRESS = "Adres"
+#let STRING-MARITAL-STATUS = "Medeni Durumu"
+#let STRING-PHONE-NUMBER = "Telefon No"
+#let STRING-EMAIL = "E-Posta"
+#let STRING-EDUCATIONAL-BACKGROUND = "Öğrenim Hayatı"
+#let STRING-SCHOOL-TYPE = "Okul Türü"
+#let STRING-SCHOOL-NAME = "Okul Adı"
+#let STRING-PROGRAM = "Program"
+#let STRING-PLACE = "Yer"
+#let STRING-YEAR = "Yıl"
+#let STRING-HIGH-SCHOOL = "Lise"
+#let STRING-UNDERGRADUATE = "Lisans"
+#let STRING-MASTERS-DEGREE = "Yüksek Lisans"
+#let STRING-WORK-BACKGROUND = "Çalışma Hayatı"
+#let STRING-SKILLS = "Becerileri"
+#let STRING-WORK-EXPERIENCES = "İş Deneyimleri"
+#let STRING-GET-INFO-FROM-RECOMMENDED-PEOPLES = "Hakkımda bilgi\n almak için\n önerebileceğim\n şahıslar"

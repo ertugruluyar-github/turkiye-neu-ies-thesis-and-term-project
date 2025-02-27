@@ -9,6 +9,7 @@
 #import "/src/sections/00-other-pages/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
 #import "/src/sections/00-other-pages/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
 #import "/src/sections/00-other-pages/abstract-page.typ": abstract-page
+#import "/src/sections/00-other-pages/curriculum-vitae-page.typ": curriculum-vitae-page
 
 #let template-configurations(
   language: LANGUAGES.TR-TR,
@@ -53,6 +54,59 @@
   keywords-eng: "keyword 1, keyword 2, keyword 3, keyword 4, keyword 5",
   have-symbols: true,
   have-abbreviations: true,
+  curriculum-vitae-info: (
+    birthplace: "Konya",
+    birthday: datetime.today(),
+    address: "Adress",
+    marital-status: "Single/Married",
+    phone-number: "+90 555 55 55",
+    email: "email@mail.com",
+    high-school: (
+      name: "High School Name",
+      program: "Mathematics-Science",
+      place: "Konya",
+      start-year: 2025,
+    ),
+    undergraduate: (
+      name: "Undergraduate - University Name",
+      program: "Elementary School Teacher",
+      place: "Konya",
+      start-year: 2029,
+    ),
+    masters-degree: (
+      name: "Master's Degree - University Name",
+      program: "Mathematics Education",
+      place: "Konya",
+      start-year: 2032,
+    ),
+    skills: "Skill 1, Skill 2, ...",
+    work-experiences: (
+      (
+        start-date: "04/2030",
+        end-date: "06/2033",
+        organization-name: "Organization Name that you worked",
+        title: "Title/Job",
+      ),
+      (
+        start-date: "07/2033",
+        end-date: "03/2037",
+        organization-name: "Organization Name that you worked",
+        title: "Title/Job",
+      ),
+    ),
+    get-info-from-recommended-peoples: (
+      (
+        name-with-title: "Prof. Dr. Firstname LASTNAME",
+        orcid: "xxxx-xxxx-xxxx-xxxx",
+        email: "email@mail.com",
+      ),
+      (
+        name-with-title: "Assoc. Prof. Dr. Adı LASTNAME",
+        orcid: "xxxx-xxxx-xxxx-xxxx",
+        email: "email@mail.com",
+      ),
+    ),
+  ),
   body,
 ) = {
   /* Basic document rules. */
@@ -317,10 +371,12 @@
       report-type == REPORT-TYPES.MASTER-THESIS
         or report-type == REPORT-TYPES.PHD-THESIS
         or report-type == REPORT-TYPES.TERM-PROJECT
-    ) { include "/template/sections/01-chapters/conclusion.typ" }
+    ) {
+      include "/template/sections/01-chapters/conclusion.typ"
 
-    // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
-    pagebreak(weak: true, to: "odd")
+      // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
+      pagebreak(weak: true, to: "odd")
+    }
   }
 
   {
@@ -362,8 +418,6 @@
         keywords-title: none,
         keywords: none,
       )
-      // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
-      pagebreak(weak: true)
     }
 
     // Kaynakça [Bibliography]
@@ -390,10 +444,11 @@
 
     // Özgeçmiş [Curriculum Vitae]
     if report-type == REPORT-TYPES.TERM-PROJECT {
-      include "/template/sections/00-other-pages/curriculum-vitae.typ"
-
-      // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
-      pagebreak(weak: true)
+      curriculum-vitae-page(
+        first-name: author.first-name,
+        last-name: author.last-name,
+        ..curriculum-vitae-info,
+      )
     }
   }
 

@@ -71,4 +71,58 @@
   have-symbols: true,
   // Tez çalışmasında kısaltmalar kullandıysanız "Kısaltmalar" başlığındaki içeriğin teze dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik teze dahil edilmeyecektir.
   have-abbreviations: true,
+  // Dönem Projesinin sonunda yer alan "Öz Geçmiş" sayfasında yer alan bilgilerdir. "report-type: REPORT-TYPES.TERM-PROJECT" değilse gözükmeyecektir, doldurulmasına gerek yoktur.
+  curriculum-vitae-info: (
+    birthplace: "Konya",
+    birthday: datetime(day: 27, month: 11, year: 2014),
+    address: "Adres",
+    marital-status: "Bekar/Evli",
+    phone-number: "+90 555 55 55",
+    email: "eposta@mail.com",
+    high-school: (
+      name: "Lise Adı",
+      program: "Matematik-Fen",
+      place: "Konya",
+      start-year: 2025,
+    ),
+    undergraduate: (
+      name: "Lisans - Üniversite Adı",
+      program: "İlköğretim Matematik Öğretmenliği",
+      place: "Konya",
+      start-year: 2029,
+    ),
+    masters-degree: (
+      name: "Yüksek Lisans - Üniversite Adı",
+      program: "Matematik Eğitimi",
+      place: "Konya",
+      start-year: 2032,
+    ),
+    skills: "Beceri 1, Beceri 2, ...",
+    work-experiences: (
+      (
+        start-date: "04/2030",
+        end-date: "06/2033",
+        organization-name: "Çalıştın Kurumun Adı",
+        title: "Ünvanın/Görevin",
+      ),
+      (
+        start-date: "07/2033",
+        end-date: "03/2037",
+        organization-name: "Çalıştın Kurumun Adı",
+        title: "Ünvanın/Görevin",
+      ),
+    ),
+    get-info-from-recommended-peoples: (
+      (
+        name-with-title: "Prof. Dr. Adı SOYADI",
+        orcid: "xxxx-xxxx-xxxx-xxxx",
+        email: "eposta@mail.com",
+      ),
+      (
+        name-with-title: "Doç. Dr. Adı SOYADI",
+        orcid: "xxxx-xxxx-xxxx-xxxx",
+        email: "eposta@mail.com",
+      ),
+    ),
+  ),
 )
