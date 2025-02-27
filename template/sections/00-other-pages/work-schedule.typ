@@ -1,4 +1,5 @@
 = ÇALIŞMA TAKVİMİ <bölüm-çalışma-takvimi>
+// TODO: Çalışma Talviminide yüksek lisans ve doktorayı otomatik olarak ayarlayacak şekilde yap.
 #strong[İP 1];: Alan Yazın taranması
 
 #strong[]

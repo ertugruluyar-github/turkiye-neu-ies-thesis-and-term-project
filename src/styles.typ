@@ -104,6 +104,7 @@
 }
 
 /* ---- Table Style ---- */
+// TODO: Tablo stillerini yap.
 #let set-table-style(content) = {
   show table.cell.where(y: 0): set text(weight: "bold")
   let normal-stroke-size = 1pt
