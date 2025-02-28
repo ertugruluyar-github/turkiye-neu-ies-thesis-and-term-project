@@ -38,13 +38,13 @@
     columns: (1fr, 6fr, 1fr),
     align: center + horizon,
     row-gutter: 12pt,
-    "", //image("/src/organization-logos/university-logo.png", width: 2.7cm, height: 2.7cm),
+    image("/src/organization-logos/university-logo.png", width: 2.7cm, height: 2.7cm),
     text(weight: "bold")[
       #upper(STRING-TC)\
       #upper(STRING-UNIVERSITY-NAME-TUR.upper-case)\
       #upper(STRING-INSTITUTE-NAME-TUR.upper-case)
     ],
-    "", //image("/src/organization-logos/university-logo.png", width: 2.7cm, height: 2.7cm),
+    image("/src/organization-logos/university-logo.png", width: 2.7cm, height: 2.7cm),
   )
 
   v(3.5cm)
