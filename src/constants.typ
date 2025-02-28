@@ -137,6 +137,14 @@ TERM-PROJECT: "Dönem Projesi"
   "Aralık",
 )
 
+// Çalışma Takvimi [Work Schedule]
+#let STRING-WORK-SCHEDULE = "ÇALIŞMA TAKVİMİ"
+#let STRING-WORK-PACKAGE = "İş Paketi"
+#let STRING-SHORT-WORK-PACKAGE = "İP"
+#let STRING-MONTHS = "Aylar"
+#let MASTER-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT = 12
+#let PHD-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT = 16
+
 // Özgeçmiş [Curriculum Vitae]
 #let STRING-CURRICULUM-VITAE = "ÖZ GEÇMİŞ"
 #let STRING-GENERAL-INFO = "Genel Bilgiler"

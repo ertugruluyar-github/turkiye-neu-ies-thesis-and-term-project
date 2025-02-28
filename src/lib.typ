@@ -9,6 +9,7 @@
 #import "/src/sections/00-other-pages/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
 #import "/src/sections/00-other-pages/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
 #import "/src/sections/00-other-pages/abstract-page.typ": abstract-page
+#import "/src/components/work-schedule-page.typ": work-schedule-page
 #import "/src/sections/00-other-pages/curriculum-vitae-page.typ": curriculum-vitae-page
 
 #let template-configurations(
@@ -54,6 +55,28 @@
   keywords-eng: "keyword 1, keyword 2, keyword 3, keyword 4, keyword 5",
   have-symbols: true,
   have-abbreviations: true,
+  work-packages: (
+    (
+      description: "Description 1",
+      months: (1, 2),
+    ),
+    (
+      description: "Description 2",
+      months: (2, 3, 4, 5),
+    ),
+    (
+      description: "Description 3",
+      months: (5, 6, 7),
+    ),
+    (
+      description: "Description 4",
+      months: (7, 8, 9),
+    ),
+    (
+      description: "Description 5",
+      months: (9, 10, 11, 12),
+    ),
+  ),
   curriculum-vitae-info: (
     birthplace: "Konya",
     birthday: datetime.today(),
@@ -391,9 +414,10 @@
     if (
       report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.PHD-THESIS-PROPOSAL
     ) {
-      include "/template/sections/00-other-pages/work-schedule.typ"
-      // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
-      pagebreak(weak: true)
+      work-schedule-page(
+        report-type: report-type,
+        work-packages: work-packages,
+      )
     }
 
     // Genişletilmiş Türkçe Özet

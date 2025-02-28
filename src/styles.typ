@@ -126,17 +126,17 @@
   show table: it => {
     set text(size: ALTERNATE-FONT-SIZE)
     set table.footer(repeat: true)
-    show table.footer: set table.cell(align: left, colspan: 9)
+    show table.footer: set table.cell(align: left)
     it
   }
-
-  show table.footer: it => {
-    set table.footer(repeat: true)
-    set table.cell(align: left, colspan: 9)
-    set text(size: ALTERNATE-FONT-SIZE)
-    it
-  }
-
+  /*
+    show table.footer: it => {
+      set table.footer(repeat: true)
+      set table.cell(align: right)
+      set text(size: ALTERNATE-FONT-SIZE)
+      it
+    }
+  */
   content
 }
 

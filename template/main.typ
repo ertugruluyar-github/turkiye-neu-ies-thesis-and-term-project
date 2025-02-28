@@ -71,6 +71,29 @@
   have-symbols: true,
   // Tez çalışmasında kısaltmalar kullandıysanız "Kısaltmalar" başlığındaki içeriğin teze dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik teze dahil edilmeyecektir.
   have-abbreviations: true,
+  // Tez Önerisinde yer alan "Çalışma Takvimi" sayfasındaki "Çalışma Paketleri" kısmını doldurmak için her bir iş paketinizin açıklamasını ve hangi aylarda yapılacağını belirtiniz. Yüksek Lisans Tez Önerisi ise 12 aylık bir süre, Doktora Tez Önerisi ise 16 aylık bir süre için doldurulmalıdır. "report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL" ya da report-type: REPORT-TYPES.PHD-THESIS-PROPOSAL" değilse çıktıda gözükmeyecektir.
+  work-packages: (
+    (
+      description: "Alan Yazın taranması",
+      months: (1, 2),
+    ),
+    (
+      description: "Ölçme aracının geliştirilmesi",
+      months: (2, 3, 4, 5),
+    ),
+    (
+      description: "Ölçme aracının uygulanması",
+      months: (5, 6, 7),
+    ),
+    (
+      description: "Verilerin çözümlenmesi ve yorumlanması",
+      months: (7, 8, 9),
+    ),
+    (
+      description: "Raporun (tezin) yazılması",
+      months: (9, 10, 11, 12),
+    ),
+  ),
   // Dönem Projesinin sonunda yer alan "Öz Geçmiş" sayfasında yer alan bilgilerdir. "report-type: REPORT-TYPES.TERM-PROJECT" değilse gözükmeyecektir, doldurulmasına gerek yoktur.
   curriculum-vitae-info: (
     birthplace: "Konya",
