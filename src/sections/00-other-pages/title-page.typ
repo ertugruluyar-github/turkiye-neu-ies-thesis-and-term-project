@@ -34,6 +34,7 @@
   set align(center)
   set par(leading: 1em, spacing: 1em)
 
+  // TODO: Yüksek Lisansdaki başlık sayfasının bu kısmı farklı. Onu düzelt.
   grid(
     columns: (1fr, 6fr, 1fr),
     align: center + horizon,
