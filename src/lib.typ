@@ -13,7 +13,7 @@
 #import "/src/sections/00-other-pages/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
 #import "/src/sections/00-other-pages/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
 #import "/src/sections/00-other-pages/abstract-page.typ": abstract-page
-#import "/src/components/work-schedule-page.typ": work-schedule-page
+#import "/src/sections/00-other-pages/work-schedule-page.typ": work-schedule-page
 #import "/src/sections/00-other-pages/curriculum-vitae-page.typ": curriculum-vitae-page
 
 #let template-configurations(
