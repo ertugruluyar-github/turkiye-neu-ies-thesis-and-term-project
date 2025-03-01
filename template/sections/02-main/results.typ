@@ -7,6 +7,6 @@
 ==== Dördüncü bölüm dördüncü düzey başlık
 #lorem(50)
 
-Tablo figürü örneğine gitmek için "@figür-örnek-tablo-figürü" kısmına tıklayınız.
+Tablo figürü örneğine gitmek için "@figür-fiziksel-ve-kimyasal-olaylar-sorularının-frekans-analizi" kısmına tıklayınız.
 
-Resim figürü örneğine gitmek için "@figür-örnek-resim-figürü" kısmına tıklayınız.
+Resim figürü örneğine gitmek için "@figür-neü-logo" kısmına tıklayınız.

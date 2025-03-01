@@ -27,6 +27,6 @@
     [S83], [220], [84,6], [38], [14,6], [2], [0,8], [260], [100],
     table.footer(repeat: true, table.cell(colspan: 9)[Tablo açıklaması varsa tablonun hemen altına yazınız.]),
   ),
-  caption: [Tablo figürü örneği],
-) <figür-örnek-tablo-figürü>
+  caption: [Fiziksel ve kimyasal olaylar sorularının frekans analizi.],
+) <figür-fiziksel-ve-kimyasal-olaylar-sorularının-frekans-analizi>
 #par(leading: 1em, text(size: 10pt)[Tablo açıklaması varsa tablonun hemen altına yazınız.])
