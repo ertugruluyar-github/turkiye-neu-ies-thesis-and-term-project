@@ -1,6 +1,7 @@
 #import "/src/constants.typ": *
 #import "/src/styles.typ": *
 #import "/src/styles/page-numbering-style.typ": page-numbering-style
+#import "/src/styles/bibliography-section-style.typ": bibliography-section-style
 #import "/src/modules/custom-functions.typ": *
 #import "/src/components/keywords-component.typ": keywords-component
 #import "/src/sections/00-other-pages/title-page.typ": *
@@ -446,7 +447,7 @@
     }
 
     // Kaynakça [Bibliography]
-    set-bibliography-styles(
+    bibliography-section-style(
       bibliography(
         "/template/bibliography-sources/references.bib",
         style: "/template/bibliography-styles/apa7-tr.csl",

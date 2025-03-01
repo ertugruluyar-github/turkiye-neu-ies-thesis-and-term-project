@@ -20,18 +20,6 @@
 )
 
 //
-#let set-bibliography-styles(content) = {
-  set par(
-    justify: true,
-    first-line-indent: (amount: 0cm, all: true),
-    leading: 1em,
-    spacing: PARAGRAPH-SPACING-SIZE,
-  )
-
-  content
-}
-
-//
 #let set-heading-spacing(content) = {
   // 1.5 satır aralığı yapmak için 0.5 satır aralığı kadar boşluk eklendi ve paragrafdan sonraki boşluk eklendi. NOT: 1em = FONT-SIZE = 12pt ve buna 0.5em eklenerek 1.5 satır aralığı başlığa uygulanmış oldu.
   show heading.where(level: 1): set block(above: 0pt, below: 0.5em + PARAGRAPH-SPACING-SIZE)
