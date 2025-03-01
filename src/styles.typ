@@ -1,7 +1,6 @@
 #import "/src/constants.typ": (
   STRING-CHAPTER,
   HEADING-NUMBERING,
-  PAGE-NUMBERING-ARABIC,
   APPENDIX-HEADING-NUMBERING,
   APPENDIX-REFERENCE-NUMBERING,
   CHAPTER-REFERENCE-SUPPLEMENT,
@@ -19,28 +18,6 @@
   PARAGRAPH-LEADING-SIZE,
   PARAGRAPH-SPACING-SIZE,
 )
-
-//
-#let set-page-numbering(
-  content,
-  numbering: PAGE-NUMBERING-ARABIC,
-  number-align: right,
-  is-one-left-one-right: false,
-  reset: true,
-) = {
-  if reset { counter(page).update(1) }
-
-  let footer = context if is-one-left-one-right and number-align != center {
-    let page-number = counter(page).get().first()
-    number-align = if calc.odd(page-number) { right } else { left }
-    align(number-align, counter(page).display())
-  } else {
-    align(number-align, counter(page).display())
-  }
-
-  set page(footer: footer, numbering: numbering)
-  content
-}
 
 //
 #let set-bibliography-styles(content) = {

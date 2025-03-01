@@ -1,5 +1,6 @@
 #import "/src/constants.typ": *
 #import "/src/styles.typ": *
+#import "/src/styles/page-numbering-style.typ": page-numbering-style
 #import "/src/modules/custom-functions.typ": *
 #import "/src/components/keywords-component.typ": keywords-component
 #import "/src/sections/00-other-pages/title-page.typ": *
@@ -229,7 +230,7 @@
   )
 
   // Set centered arabic page numbering.
-  show: set-page-numbering.with(numbering: PAGE-NUMBERING-ROMAN, number-align: center)
+  show: page-numbering-style.with(numbering: PAGE-NUMBERING-ROMAN, number-align: center)
 
   show raw: set text(12pt * 0.95)
   set-page-properties()
@@ -348,7 +349,7 @@
   pagebreak(weak: true, to: "odd")
 
   // Set centered arabic page numbering.
-  show: set-page-numbering.with(numbering: PAGE-NUMBERING-ARABIC, number-align: center)
+  show: page-numbering-style.with(numbering: PAGE-NUMBERING-ARABIC, number-align: center)
 
   {
     /* --- TEZİN ANA BÖLÜMLERİ --- */
