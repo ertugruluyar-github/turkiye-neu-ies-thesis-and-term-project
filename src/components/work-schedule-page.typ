@@ -47,6 +47,8 @@
     stroke: 0.25pt + black,
   )
 
+  show table: set text(size: ALTERNATE-FONT-SIZE)
+
   set table.header(repeat: false)
 
   set table.footer(repeat: false)
