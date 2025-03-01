@@ -6,15 +6,15 @@
 #import "/src/styles/figure-style.typ": figure-style
 #import "/src/modules/custom-functions.typ": *
 #import "/src/components/keywords-component.typ": keywords-component
-#import "/src/sections/00-other-pages/title-page.typ": *
-#import "/src/sections/00-other-pages/preface-page.typ": preface-page
-#import "/src/sections/00-other-pages/table-of-contents-page.typ": table-of-contents-page
-#import "/src/sections/00-other-pages/originality-report-page.typ": originality-report-page
-#import "/src/sections/00-other-pages/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
-#import "/src/sections/00-other-pages/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
-#import "/src/sections/00-other-pages/abstract-page.typ": abstract-page
-#import "/src/sections/00-other-pages/work-schedule-page.typ": work-schedule-page
-#import "/src/sections/00-other-pages/curriculum-vitae-page.typ": curriculum-vitae-page
+#import "/src/sections/01-front/title-page.typ": *
+#import "/src/sections/01-front/preface-page.typ": preface-page
+#import "/src/sections/01-front/table-of-contents-page.typ": table-of-contents-page
+#import "/src/sections/01-front/originality-report-page.typ": originality-report-page
+#import "/src/sections/01-front/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
+#import "/src/sections/01-front/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
+#import "/src/sections/01-front/abstract-page.typ": abstract-page
+#import "/src/sections/03-back/work-schedule-page.typ": work-schedule-page
+#import "/src/sections/03-back/curriculum-vitae-page.typ": curriculum-vitae-page
 
 #let template-configurations(
   language: LANGUAGES.TR-TR,
