@@ -1,5 +1,5 @@
 #import "/src/constants.typ": (
-  STRING-ABSTRACT-TUR,
+  STRING-EXPANDED-TURKISH-ABSTRACT,
   STRING-UNIVERSITY-NAME-TUR,
   STRING-INSTITUTE-NAME-TUR,
   STRING-KEYWORDS-TUR,
@@ -12,10 +12,9 @@
   report-type: none,
   thesis-title: none,
   author: none,
-  keywords: none,
 ) = {
   abstract-page-component(
-    page-title: STRING-ABSTRACT-TUR,
+    page-title: STRING-EXPANDED-TURKISH-ABSTRACT,
     university-name: STRING-UNIVERSITY-NAME-TUR.title-case,
     institute-name: STRING-INSTITUTE-NAME-TUR.title-case,
     department: department,
@@ -25,6 +24,6 @@
     author: author,
     abstract-text-content-file-path: "/template/sections/03-back/expanded-turkish-abstract-text.typ",
     keywords-title: STRING-KEYWORDS-TUR,
-    keywords: keywords,
+    keywords: none,
   )
 }

@@ -431,7 +431,6 @@
         report-type: report-type,
         thesis-title: thesis-title,
         author: author,
-        keywords: none,
       )
     }
 
