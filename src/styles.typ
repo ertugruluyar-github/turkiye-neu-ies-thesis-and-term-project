@@ -7,12 +7,6 @@
   HEADING-REFERENCE-SUPPLEMENT,
   APPENDIX-REFERENCE-SUPPLEMENT,
   APPENDIX-REFERENCE-SUFFIX-SEPARATOR,
-  TABLE-FIGURE-REFERENCE-SUPPLEMENT,
-  IMAGE-FIGURE-REFERENCE-SUPPLEMENT,
-  FIGURE-NUMBERING,
-  FIGURE-CAPTION-SEPARATOR,
-  FIGURE-CAPTION-PREFIX-TEXT-FONT-WEIGHT,
-  FIGURE-CAPTION-TITLE-TEXT-FONT-WEIGHT,
   ALTERNATE-FONT-SIZE,
   PARAGRAPH-FIRST-LINE-INDENT,
   PARAGRAPH-LEADING-SIZE,
@@ -49,61 +43,6 @@
 
   //
   show: heading-spacing-style
-
-  content
-}
-
-/* ---- Figure Styles ---- */
-#let set-figure-styles(content) = {
-  //
-  show figure.where(kind: table): set figure(
-    supplement: TABLE-FIGURE-REFERENCE-SUPPLEMENT,
-    placement: none,
-    gap: 0.5em,
-  )
-
-  //
-  show figure.where(kind: table): set figure.caption(
-    position: top,
-    separator: FIGURE-CAPTION-SEPARATOR,
-  )
-
-  //
-  show figure.where(kind: image): set figure(
-    supplement: IMAGE-FIGURE-REFERENCE-SUPPLEMENT,
-    placement: none,
-    gap: 0.5em,
-  )
-
-  //
-  show figure.where(kind: image): set figure.caption(
-    position: bottom,
-    separator: FIGURE-CAPTION-SEPARATOR,
-  )
-
-  //
-  show figure.caption: it => {
-    set text(size: ALTERNATE-FONT-SIZE)
-    (
-      text(
-        weight: FIGURE-CAPTION-PREFIX-TEXT-FONT-WEIGHT,
-        it.supplement + " " + context it.counter.display(it.numbering) + it.separator,
-      )
-        + text(weight: FIGURE-CAPTION-TITLE-TEXT-FONT-WEIGHT, it.body)
-    )
-  }
-
-  // Tabloyu bölme
-  //show figure.where(kind: table): set block(breakable: true)
-
-  /* ---- General design choices. --- */
-
-  // Set spacing of figures.
-  show figure: set block(above: 1.5em, below: 0.5em)
-  set figure(
-    numbering: n => numbering(FIGURE-NUMBERING, counter(heading).get().first(), n),
-    gap: 1em,
-  )
 
   content
 }

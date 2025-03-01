@@ -3,6 +3,7 @@
 #import "/src/styles/page-numbering-style.typ": page-numbering-style
 #import "/src/styles/bibliography-section-style.typ": bibliography-section-style
 #import "/src/styles/table-style.typ": table-style
+#import "/src/styles/figure-style.typ": figure-style
 #import "/src/modules/custom-functions.typ": *
 #import "/src/components/keywords-component.typ": keywords-component
 #import "/src/sections/00-other-pages/title-page.typ": *
@@ -187,7 +188,7 @@
   show: table-style
 
   /* ---- Figure Styles ---- */
-  show: set-figure-styles
+  show: figure-style
 
   /* ----------------------------- */
 
