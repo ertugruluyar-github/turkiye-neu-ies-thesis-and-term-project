@@ -17,13 +17,13 @@
 #let title-page(
   department: none,
   program: none,
+  report-type: none,
+  date: none,
   thesis-title: none,
   author: none,
   advisor: none,
   second-advisor: none,
   thesis-study-funding-organization: none,
-  report-type: none,
-  date: none,
 ) = {
   set page(
     header: none,

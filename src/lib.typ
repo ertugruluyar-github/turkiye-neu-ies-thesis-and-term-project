@@ -219,13 +219,13 @@
   title-page(
     department: department,
     program: program,
+    report-type: report-type,
+    date: date,
     thesis-title: thesis-title,
     author: author,
     advisor: advisor,
     second-advisor: second-advisor,
     thesis-study-funding-organization: thesis-study-funding-organization,
-    report-type: report-type,
-    date: date,
   )
 
   // Set centered arabic page numbering.
