@@ -320,7 +320,7 @@
         report-type: report-type,
         thesis-title: thesis-title,
         author: author,
-        abstract-text-content-file-path: "/template/sections/00-other-pages/abstract-text-tur.typ",
+        abstract-text-content-file-path: "/template/sections/01-front/abstract-text-tur.typ",
         keywords-title: STRING-KEYWORDS-TUR,
         keywords: keywords-tur,
       )
@@ -341,7 +341,7 @@
         report-type: report-type,
         thesis-title: thesis-title-eng,
         author: author,
-        abstract-text-content-file-path: "/template/sections/00-other-pages/abstract-text-eng.typ",
+        abstract-text-content-file-path: "/template/sections/01-front/abstract-text-eng.typ",
         keywords-title: STRING-KEYWORDS-ENG,
         keywords: keywords-eng,
       )
@@ -368,17 +368,17 @@
     )
 
     /* ---- Bölüm 1 [Chapter 1] ---- */
-    include "/template/sections/01-chapters/introduction.typ"
+    include "/template/sections/02-main/introduction.typ"
     // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
     pagebreak(weak: true)
 
     /* ---- Bölüm 2 [Chapter 2] ---- */
-    include "/template/sections/01-chapters/literature.typ"
+    include "/template/sections/02-main/literature.typ"
     // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
     pagebreak(weak: true)
 
     /* ---- Bölüm 3 [Chapter 3] ---- */
-    include "/template/sections/01-chapters/methodology.typ"
+    include "/template/sections/02-main/methodology.typ"
     // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
     pagebreak(weak: true)
 
@@ -388,7 +388,7 @@
         or report-type == REPORT-TYPES.PHD-THESIS
         or report-type == REPORT-TYPES.TERM-PROJECT
     ) {
-      include "/template/sections/01-chapters/results.typ"
+      include "/template/sections/02-main/results.typ"
       // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
       pagebreak(weak: true)
     }
@@ -399,7 +399,7 @@
         or report-type == REPORT-TYPES.PHD-THESIS
         or report-type == REPORT-TYPES.TERM-PROJECT
     ) {
-      include "/template/sections/01-chapters/conclusion.typ"
+      include "/template/sections/02-main/conclusion.typ"
 
       // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
       pagebreak(weak: true, to: "odd")
@@ -442,7 +442,7 @@
         report-type: report-type,
         thesis-title: thesis-title,
         author: author,
-        abstract-text-content-file-path: "/template/sections/00-other-pages/expanded-turkish-abstract-text.typ",
+        abstract-text-content-file-path: "/template/sections/03-back/expanded-turkish-abstract-text.typ",
         keywords-title: none,
         keywords: none,
       )
@@ -465,7 +465,7 @@
     // Başlık numarlandırmasını 1'den başlat.
     counter(heading).update(1)
 
-    include "/template/sections/02-appendices/appendices.typ"
+    include "/template/sections/03-back/appendices.typ"
 
     // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
     pagebreak(weak: true, to: "odd")
