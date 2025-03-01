@@ -6,7 +6,7 @@
   STRING-SHORT-WORK-PACKAGE,
   STRING-MONTHS,
   MASTER-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
-  PHD-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
+  DOCTORAL-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
 )
 
 #let work-schedule-page(
@@ -19,8 +19,8 @@
   // Rapor türüne göre çalışma takvimi aylarını belirle [Determine the months of the work schedule according to the type of report]
   let month-numbers = if report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL {
     array.range(1, MASTER-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT + 1, step: 1)
-  } else if report-type == REPORT-TYPES.PHD-THESIS-PROPOSAL {
-    array.range(1, PHD-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT + 1, step: 1)
+  } else if report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL {
+    array.range(1, DOCTORAL-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT + 1, step: 1)
   }
 
   // Sütun sayısını belirle [Determine the number of columns]

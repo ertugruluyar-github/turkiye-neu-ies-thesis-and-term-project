@@ -12,9 +12,11 @@
 #import "/src/sections/01-front/originality-report-page.typ": originality-report-page
 #import "/src/sections/01-front/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
 #import "/src/sections/01-front/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
-#import "/src/sections/01-front/abstract-page.typ": abstract-page
+#import "/src/sections/01-front/turkish-abstract-page.typ": turkish-abstract-page
+#import "/src/sections/01-front/english-abstract-page.typ": english-abstract-page
 #import "/src/sections/03-back/work-schedule-page.typ": work-schedule-page
 #import "/src/sections/03-back/curriculum-vitae-page.typ": curriculum-vitae-page
+#import "/src/sections/03-back/expanded-turkish-abstract-page.typ": expanded-turkish-abstract-page
 
 #let template-configurations(
   language: LANGUAGES.TR-TR,
@@ -252,7 +254,7 @@
     /* --- Ön Söz [Preface] --- */
     if (
       report-type == REPORT-TYPES.MASTER-THESIS
-        or report-type == REPORT-TYPES.PHD-THESIS
+        or report-type == REPORT-TYPES.DOCTORAL-THESIS
         or report-type == REPORT-TYPES.TERM-PROJECT
     ) {
       preface-page(
@@ -266,7 +268,7 @@
 
     /* --- Tez Çalışması Örijinallik Raporu [Originality Report] --- */
     if (
-      report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.PHD-THESIS
+      report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.DOCTORAL-THESIS
     ) {
       originality-report-page(
         thesis-title: thesis-title,
@@ -281,7 +283,7 @@
     /* --- Bilimsel Etik Beyannamesi [Scientific Ethics Declaration] --- */
     if (
       report-type == REPORT-TYPES.MASTER-THESIS
-        or report-type == REPORT-TYPES.PHD-THESIS
+        or report-type == REPORT-TYPES.DOCTORAL-THESIS
         or report-type == REPORT-TYPES.TERM-PROJECT
     ) {
       scientific-ethics-declaration-page(
@@ -294,7 +296,7 @@
     if (
       (
         report-type == REPORT-TYPES.MASTER-THESIS
-          or report-type == REPORT-TYPES.PHD-THESIS
+          or report-type == REPORT-TYPES.DOCTORAL-THESIS
           or report-type == REPORT-TYPES.TERM-PROJECT
       )
         and (have-symbols or have-abbreviations)
@@ -308,20 +310,15 @@
     /* --- Türkçe Özet Sayfası [Turkish Abstract Page] --- */
     if (
       report-type == REPORT-TYPES.MASTER-THESIS
-        or report-type == REPORT-TYPES.PHD-THESIS
+        or report-type == REPORT-TYPES.DOCTORAL-THESIS
         or report-type == REPORT-TYPES.TERM-PROJECT
     ) {
-      abstract-page(
-        page-title: STRING-ABSTRACT-TUR,
-        university-name: STRING-UNIVERSITY-NAME-TUR.title-case,
-        institute-name: STRING-INSTITUTE-NAME-TUR.title-case,
+      turkish-abstract-page(
         department: department,
         program: program,
         report-type: report-type,
         thesis-title: thesis-title,
         author: author,
-        abstract-text-content-file-path: "/template/sections/01-front/abstract-text-tur.typ",
-        keywords-title: STRING-KEYWORDS-TUR,
         keywords: keywords-tur,
       )
     }
@@ -329,20 +326,15 @@
     /* --- İngilizce Özet Sayfası [English Abstract Page] --- */
     if (
       report-type == REPORT-TYPES.MASTER-THESIS
-        or report-type == REPORT-TYPES.PHD-THESIS
+        or report-type == REPORT-TYPES.DOCTORAL-THESIS
         or report-type == REPORT-TYPES.TERM-PROJECT
     ) {
-      abstract-page(
-        page-title: STRING-ABSTRACT-ENG,
-        university-name: STRING-UNIVERSITY-NAME-ENG.title-case,
-        institute-name: STRING-INSTITUTE-NAME-ENG.title-case,
+      english-abstract-page(
         department: department,
         program: program,
         report-type: report-type,
         thesis-title: thesis-title-eng,
         author: author,
-        abstract-text-content-file-path: "/template/sections/01-front/abstract-text-eng.typ",
-        keywords-title: STRING-KEYWORDS-ENG,
         keywords: keywords-eng,
       )
     }
@@ -385,7 +377,7 @@
     /* ---- Bölüm 4 [Chapter 4] ---- */
     if (
       report-type == REPORT-TYPES.MASTER-THESIS
-        or report-type == REPORT-TYPES.PHD-THESIS
+        or report-type == REPORT-TYPES.DOCTORAL-THESIS
         or report-type == REPORT-TYPES.TERM-PROJECT
     ) {
       include "/template/sections/02-main/results.typ"
@@ -396,7 +388,7 @@
     /* ---- Bölüm 5 [Chapter 5] ---- */
     if (
       report-type == REPORT-TYPES.MASTER-THESIS
-        or report-type == REPORT-TYPES.PHD-THESIS
+        or report-type == REPORT-TYPES.DOCTORAL-THESIS
         or report-type == REPORT-TYPES.TERM-PROJECT
     ) {
       include "/template/sections/02-main/conclusion.typ"
@@ -416,7 +408,7 @@
 
     // Çalışma takvimi
     if (
-      report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.PHD-THESIS-PROPOSAL
+      report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
     ) {
       work-schedule-page(
         report-type: report-type,
@@ -429,21 +421,16 @@
       language == LANGUAGES.EN-US
         and (
           report-type == REPORT-TYPES.MASTER-THESIS
-            or report-type == REPORT-TYPES.PHD-THESIS
+            or report-type == REPORT-TYPES.DOCTORAL-THESIS
             or report-type == REPORT-TYPES.TERM-PROJECT
         )
     ) {
-      abstract-page(
-        page-title: STRING-EXPANDED-TURKISH-ABSTRACT-TUR,
-        university-name: STRING-UNIVERSITY-NAME-TUR.title-case,
-        institute-name: STRING-INSTITUTE-NAME-TUR.title-case,
+      expanded-turkish-abstract-page(
         department: department,
         program: program,
         report-type: report-type,
         thesis-title: thesis-title,
         author: author,
-        abstract-text-content-file-path: "/template/sections/03-back/expanded-turkish-abstract-text.typ",
-        keywords-title: none,
         keywords: none,
       )
     }

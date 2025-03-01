@@ -36,7 +36,7 @@
   set par(leading: 1em, spacing: 1em)
 
   if (
-    report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.PHD-THESIS-PROPOSAL
+    report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
   ) {
     grid(
       columns: 1fr,
@@ -53,7 +53,7 @@
     v(1cm)
   } else if (
     report-type == REPORT-TYPES.MASTER-THESIS
-      or report-type == REPORT-TYPES.PHD-THESIS
+      or report-type == REPORT-TYPES.DOCTORAL-THESIS
       or report-type == REPORT-TYPES.TERM-PROJECT
   ) {
     grid(
@@ -77,7 +77,7 @@
 
   v(1cm)
 
-  report-type
+  report-type.TR-TR
 
   v(1.75cm)
 
@@ -91,7 +91,7 @@
   v(1.25cm)
   if (
     report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL
-      or report-type == REPORT-TYPES.PHD-THESIS-PROPOSAL
+      or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
       or report-type == REPORT-TYPES.TERM-PROJECT
   ) {
     v(1.75cm)
@@ -104,7 +104,7 @@
 
   if (
     (
-      report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.PHD-THESIS
+      report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.DOCTORAL-THESIS
     )
       and second-advisor != none
   ) {
@@ -117,7 +117,7 @@
 
   if (
     (
-      report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.PHD-THESIS
+      report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.DOCTORAL-THESIS
     )
       and thesis-study-funding-organization != none
   ) {

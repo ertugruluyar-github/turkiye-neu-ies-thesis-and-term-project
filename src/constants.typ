@@ -25,16 +25,31 @@ EN-US: İngilizce (ABD) [English (US)]
 /*
 MASTER-THESIS-PROPOSAL: "Yüksek Lisans Tez Önerisi"\
 MASTER-THESIS: "Yüksek Lisans Tezi"\
-PHD-THESIS-PROPOSAL: "Doktora Tez Önerisi"\
-PHD-THESIS: "Doktora Tezi"\
+DOCTORAL-THESIS-PROPOSAL: "Doktora Tez Önerisi"\
+DOCTORAL-THESIS: "Doktora Tezi"\
 TERM-PROJECT: "Dönem Projesi"
 */
 #let REPORT-TYPES = (
-  MASTER-THESIS-PROPOSAL: "Yüksek Lisans Tez Önerisi",
-  MASTER-THESIS: "Yüksek Lisans Tezi",
-  PHD-THESIS-PROPOSAL: "Doktora Tez Önerisi",
-  PHD-THESIS: "Doktora Tezi",
-  TERM-PROJECT: "Tezsiz Yüksek Lisans Dönem Projesi",
+  MASTER-THESIS-PROPOSAL: (
+    TR-TR: "Yüksek Lisans Tez Önerisi",
+    EN-US: "Master Thesis Proposal",
+  ),
+  MASTER-THESIS: (
+    TR-TR: "Yüksek Lisans Tezi",
+    EN-US: "Master Thesis",
+  ),
+  DOCTORAL-THESIS-PROPOSAL: (
+    TR-TR: "Doktora Tez Önerisi",
+    EN-US: "Doctoral Thesis Proposal",
+  ),
+  DOCTORAL-THESIS: (
+    TR-TR: "Doktora Tezi",
+    EN-US: "Doctoral Thesis",
+  ),
+  TERM-PROJECT: (
+    TR-TR: "Tezsiz Yüksek Lisans Dönem Projesi",
+    EN-US: "Term Project of Non-Thesis Master",
+  ),
 )
 
 #let FONT-NAME = "Times New Roman"
@@ -143,7 +158,7 @@ TERM-PROJECT: "Dönem Projesi"
 #let STRING-SHORT-WORK-PACKAGE = "İP"
 #let STRING-MONTHS = "Aylar"
 #let MASTER-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT = 12
-#let PHD-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT = 16
+#let DOCTORAL-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT = 16
 
 // Özgeçmiş [Curriculum Vitae]
 #let STRING-CURRICULUM-VITAE = "ÖZ GEÇMİŞ"

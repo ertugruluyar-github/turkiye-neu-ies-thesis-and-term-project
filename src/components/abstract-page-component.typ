@@ -2,7 +2,7 @@
 #import "/src/components/keywords-component.typ": keywords-component
 #import "/src/components/fullname-component.typ": fullname-component
 
-#let abstract-page(
+#let abstract-page-component(
   page-title: none,
   university-name: none,
   institute-name: none,
