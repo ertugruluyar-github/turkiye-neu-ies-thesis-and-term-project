@@ -50,7 +50,36 @@ Bölüme atıf yapma örneği: @bölüm-ekler
 // Devamındaki içeriğin yeni bir sayfadan başlamasını sağlamak için "pagebreak()" fonksiyonunu kullanabilirsiniz.
 #pagebreak()
 
-// İsterseniz ayrı ayrı dosyalardaki ekleri "02-appendices" klasörüne koyarak da ekleyebilirsiniz.
-#include "/template/sections/02-appendices/appendix-1.typ"// Mutlak yol belirletek ekleyebilirsiniz.
+// Her 2. düzey başlık bir ektir ve İçindekiler tablosunda yer alır.
+== Meb İzin Kağıdı <ek-meb-izin-kağıdı>
+#lorem(50)
 
-#include "appendix-2.typ" // Göreceli yol belirterek "bu (02-appendices.typ) dosyayla aynı konumdaki" şeklinde de ekleyebilirsiniz.
+...
+// 3. düzey ve sonrası başlıklarla devam edin.
+=== Örnek başlık 3
+#lorem(20)
+==== Örnek başlık 4
+#lorem(20)
+===== Örnek başlık 5
+#lorem(20)
+====== Örnek başlık 6
+#lorem(20)
+
+...
+
+// Her 2. düzey başlık bir ektir ve İçindekiler tablosunda yer alır.
+== Görüşme Örneği <ek-görüşme-örneği>
+#lorem(50)
+
+...
+// 3. düzey ve sonrası başlıklarla devam edin.
+=== Örnek başlık 3
+#lorem(20)
+==== Örnek başlık 4
+#lorem(20)
+===== Örnek başlık 5
+#lorem(20)
+====== Örnek başlık 6
+#lorem(20)
+
+...
