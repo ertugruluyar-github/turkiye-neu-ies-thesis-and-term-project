@@ -1,4 +1,4 @@
-#import "/src/constants.typ": ABSTRACT-TEXT-FONT-SIZE
+#import "/src/styles/abstract-page-style.typ": abstract-page-style
 #import "/src/components/keywords-component.typ": keywords-component
 #import "/src/components/fullname-component.typ": fullname-component
 
@@ -15,10 +15,7 @@
   keywords-title: none,
   keywords: none,
 ) = {
-  // Özet metni normal yazı büyüklüğünden daha küçük olacak şekilde ayarlandı.
-  set text(size: ABSTRACT-TEXT-FONT-SIZE)
-  set par(spacing: 1em)
-  show heading.where(level: 1): set align(center)
+  show: abstract-page-style
 
   heading(level: 1, upper(page-title))
 
@@ -33,8 +30,7 @@
 
   v(24pt)
 
-  set par(leading: 1em, spacing: 0cm)
-  include abstract-text-content-file-path
+  par(spacing: 0pt)[#include abstract-text-content-file-path]
 
   if keywords-title != none and keywords != none {
     v(10pt)
