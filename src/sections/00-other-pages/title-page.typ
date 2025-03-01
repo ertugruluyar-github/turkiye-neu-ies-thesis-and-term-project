@@ -1,5 +1,6 @@
 #import "/src/constants.typ": (
   MARGIN,
+  REPORT-TYPES,
   STRING-TC,
   STRING-UNIVERSITY-NAME-TUR,
   STRING-INSTITUTE-NAME-TUR,
@@ -34,21 +35,42 @@
   set align(center)
   set par(leading: 1em, spacing: 1em)
 
-  // TODO: Yüksek Lisansdaki başlık sayfasının bu kısmı farklı. Onu düzelt.
-  grid(
-    columns: (1fr, 6fr, 1fr),
-    align: center + horizon,
-    row-gutter: 12pt,
-    image("/src/organization-logos/university-logo.png", width: 2.7cm, height: 2.7cm),
-    text(weight: "bold")[
-      #upper(STRING-TC)\
-      #upper(STRING-UNIVERSITY-NAME-TUR.upper-case)\
-      #upper(STRING-INSTITUTE-NAME-TUR.upper-case)
-    ],
-    image("/src/organization-logos/university-logo.png", width: 2.7cm, height: 2.7cm),
-  )
+  if (
+    report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.PHD-THESIS-PROPOSAL
+  ) {
+    grid(
+      columns: 1fr,
+      align: center + horizon,
+      row-gutter: 12pt,
+      image("/src/organization-logos/institute-logo.png", width: 3.4cm, height: 3.4cm),
+      text(weight: "bold")[
+        #upper(STRING-TC)\
+        #upper(STRING-UNIVERSITY-NAME-TUR.upper-case)\
+        #upper(STRING-INSTITUTE-NAME-TUR.upper-case)
+      ],
+    )
 
-  v(3.5cm)
+    v(1cm)
+  } else if (
+    report-type == REPORT-TYPES.MASTER-THESIS
+      or report-type == REPORT-TYPES.PHD-THESIS
+      or report-type == REPORT-TYPES.TERM-PROJECT
+  ) {
+    grid(
+      columns: (1fr, 6fr, 1fr),
+      align: center + horizon,
+      row-gutter: 12pt,
+      image("/src/organization-logos/university-logo.png", width: 2.7cm, height: 2.7cm),
+      text(weight: "bold")[
+        #upper(STRING-TC)\
+        #upper(STRING-UNIVERSITY-NAME-TUR.upper-case)\
+        #upper(STRING-INSTITUTE-NAME-TUR.upper-case)
+      ],
+      image("/src/organization-logos/institute-logo.png", width: 2.7cm, height: 2.7cm),
+    )
+
+    v(3.5cm)
+  }
 
   align(center, department)
   align(center, program)
