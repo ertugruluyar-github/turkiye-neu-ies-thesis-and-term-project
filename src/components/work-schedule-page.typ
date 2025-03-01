@@ -1,5 +1,5 @@
+#import "/src/styles/work-schedule-page-style.typ": work-schedule-page-style
 #import "/src/constants.typ": (
-  ALTERNATE-FONT-SIZE,
   REPORT-TYPES,
   STRING-WORK-SCHEDULE,
   STRING-WORK-PACKAGE,
@@ -13,59 +13,33 @@
   report-type: none,
   work-packages: none,
 ) = {
-  //
+  // Sayfa stilini uygula [Apply page style]
+  show: work-schedule-page-style
+
+  // Rapor türüne göre çalışma takvimi aylarını belirle [Determine the months of the work schedule according to the type of report]
   let month-numbers = if report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL {
     array.range(1, MASTER-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT + 1, step: 1)
   } else if report-type == REPORT-TYPES.PHD-THESIS-PROPOSAL {
     array.range(1, PHD-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT + 1, step: 1)
   }
 
-  //
+  // Sütun sayısını belirle [Determine the number of columns]
   let column-count = month-numbers.len()
 
-  // Sayfa başlığını ortala
-  show heading.where(level: 1): set align(center)
-
-  set par(
-    justify: false,
-    leading: 1em,
-    spacing: 1.5em,
-    first-line-indent: (amount: 0cm, all: true),
-  )
-
-  set table(
-    column-gutter: auto,
-    rows: auto,
-    row-gutter: auto,
-    inset: (
-      left: 0.5em,
-      top: 1em,
-      bottom: 1em,
-      right: 0.5em,
-    ),
-    align: left,
-    stroke: 0.25pt + black,
-  )
-
-  show table: set text(size: ALTERNATE-FONT-SIZE)
-
-  set table.header(repeat: false)
-
-  set table.footer(repeat: false)
-
+  // Sayfa başlığı [Page title]
   heading(level: 1, STRING-WORK-SCHEDULE)
 
-  //
+  // İş paketleri listesi [Work packages list]
   for (index, work-package) in work-packages.enumerate(start: 1) {
     [*İP #index:* #work-package.description\ ]
   }
 
-  //
+  // Tablo başlığındaki aylar [Months in the table header]
   let table-header-months = month-numbers.map(index => {
     [*#index*]
   })
 
-  //
+  // Tablo hücreleri [Table cells]
   let table-cells = for (index, work-package) in work-packages.enumerate(start: 1) {
     (
       [*#STRING-SHORT-WORK-PACKAGE #index*],
@@ -79,7 +53,7 @@
     )
   }
 
-  //
+  // Çalışma takvimi tablosu [Work schedule table]
   align(
     center,
     table(
@@ -104,6 +78,6 @@
     ),
   )
 
-  // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
+  // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true) [If the page at the end of the page is empty, the end of the page should be passive]
   pagebreak(weak: true)
 }
