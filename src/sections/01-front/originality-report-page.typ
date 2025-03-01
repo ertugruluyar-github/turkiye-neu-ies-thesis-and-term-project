@@ -1,5 +1,5 @@
 #import "/src/components/full-date-with-author-fullname-component.typ": full-date-with-author-fullname-component
-#import "/src/components/advisor-faculty-member-fullname-with-title.typ": advisor-faculty-member-fullname-with-title
+#import "/src/components/advisor-fullname-with-title-component.typ": advisor-fullname-with-title-component
 #import "/src/components/date-component.typ": date-component
 
 #let originality-report-page(
@@ -49,7 +49,7 @@
 
   v(2em)
 
-  align(center, advisor-faculty-member-fullname-with-title(advisor: advisor))
+  align(center, advisor-fullname-with-title-component(advisor: advisor))
 
   // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
   pagebreak(weak: true)
