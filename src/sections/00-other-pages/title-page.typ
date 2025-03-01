@@ -89,28 +89,43 @@
   orcid-with-prefix-component(orcid: author.orcid)
 
   v(1.25cm)
+  if (
+    report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL
+      or report-type == REPORT-TYPES.PHD-THESIS-PROPOSAL
+      or report-type == REPORT-TYPES.TERM-PROJECT
+  ) {
+    v(1.75cm)
+  }
 
   STRING-ADVISOR
   advisor-with-orcid-component(advisor: advisor)
 
   v(0.5cm)
 
-  if second-advisor != none {
+  if (
+    (
+      report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.PHD-THESIS
+    )
+      and second-advisor != none
+  ) {
     STRING-SECOND-ADVISOR
     advisor-with-orcid-component(advisor: second-advisor)
+    v(0.75cm)
   } else {
-    v(5em)
+    v(1.5cm)
   }
 
-  v(0.75cm)
-
-  if thesis-study-funding-organization != none {
+  if (
+    (
+      report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.PHD-THESIS
+    )
+      and thesis-study-funding-organization != none
+  ) {
     thesis-study-funding-organization-component(thesis-study-funding-organization: thesis-study-funding-organization)
+    v(0.5cm)
   } else {
-    v(3.3em)
+    v(1cm)
   }
-
-  v(0.5cm)
 
   [#STRING-CITY-NAME - #date.display(ONLY-YEAR-DATE-FORMAT)]
 
