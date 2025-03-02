@@ -81,7 +81,7 @@
 
   v(1.75cm)
 
-  text(weight: "bold")[#upper(thesis-title.upper-case)]
+  text(weight: "bold")[#upper(thesis-title.tur.upper-case)]
 
   v(1.75cm)
 

@@ -21,7 +21,7 @@
     department: department,
     program: program,
     report-type: report-type.EN-US,
-    thesis-title: thesis-title,
+    thesis-title: thesis-title.eng,
     author: author,
     abstract-text-content-file-path: "/template/sections/01-front/abstract-text-eng.typ",
     keywords-title: STRING-KEYWORDS-ENG,

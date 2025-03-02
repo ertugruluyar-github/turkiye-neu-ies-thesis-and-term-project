@@ -20,18 +20,19 @@
   // Bilim Dalı seçiniz.
   program: "Bilim Dalı",
   // Raporun türünü seçiniz.
-  report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL,
+  report-type: REPORT-TYPES.DOCTORAL-THESIS,
   // Tez önerisi ya da tezin teslim edildiği tarih. Varsayılan olarak bugünün tarihidir. Elle bir tarih girmek için "datetime(day: 20, month: 3, year: 2025)" yapınız.
   date: datetime.today(),
-  // Tezinizin başlığı (başlık ve hepsi büyük harf biçiminde).
+  // Tezinizin Türkçe ve İngilizce başlığı (başlık ve hepsi büyük harf biçiminde).
   thesis-title: (
-    title-case: "Tezin Başlığı",
-    upper-case: "TEZİN BAŞLIĞI",
-  ),
-  // Tezinizin İngilizce Başlığı (başlık ve hepsi büyük harf biçiminde).
-  thesis-title-eng: (
-    title-case: "Tezin İnglizce Başlığı",
-    upper-case: "TEZİN İNGİLİZCE BAŞLIĞI",
+    tur: (
+      title-case: "Tezin Başlığı",
+      upper-case: "TEZİN BAŞLIĞI",
+    ),
+    eng: (
+      title-case: "Tezin İngilizce Başlığı",
+      upper-case: "TEZİN İNGİLİZCE BAŞLIĞI",
+    ),
   ),
   // Yazarın adı, soyadı ve ORCID numarası.
   author: (
@@ -71,7 +72,7 @@
   have-symbols: true,
   // Tez çalışmasında kısaltmalar kullandıysanız "Kısaltmalar" başlığındaki içeriğin teze dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik teze dahil edilmeyecektir.
   have-abbreviations: true,
-  // Tez Önerisinde yer alan "Çalışma Takvimi" sayfasındaki "Çalışma Paketleri" kısmını doldurmak için her bir iş paketinizin açıklamasını ve hangi aylarda yapılacağını belirtiniz. Yüksek Lisans Tez Önerisi ise 12 aylık bir süre, Doktora Tez Önerisi ise 16 aylık bir süre için doldurulmalıdır. "report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL" ya da report-type: REPORT-TYPES.PHD-THESIS-PROPOSAL" değilse çıktıda gözükmeyecektir.
+  // Tez Önerisinde yer alan "Çalışma Takvimi" sayfasındaki "Çalışma Paketleri" kısmını doldurmak için her bir iş paketinizin açıklamasını ve hangi aylarda yapılacağını belirtiniz. Yüksek Lisans Tez Önerisi ise 12 aylık bir süre, Doktora Tez Önerisi ise 16 aylık bir süre için doldurulmalıdır. "report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL" ya da report-type: REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL" değilse çıktıda gözükmeyecektir.
   work-packages: (
     (
       description: "Alan Yazın taranması",

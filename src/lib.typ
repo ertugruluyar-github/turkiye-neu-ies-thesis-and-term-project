@@ -25,12 +25,14 @@
   report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL,
   date: datetime.today(),
   thesis-title: (
-    title-case: "Thesis Title",
-    upper-case: "THESIS TITLE",
-  ),
-  thesis-title-eng: (
-    title-case: "Thesis English Title",
-    upper-case: "THESIS ENGLISH TITLE",
+    tur: (
+      title-case: "Thesis Title",
+      upper-case: "THESIS TITLE",
+    ),
+    eng: (
+      title-case: "Thesis English Title",
+      upper-case: "THESIS ENGLISH TITLE",
+    ),
   ),
   author: (
     first-name: "Author's firstname",
@@ -140,7 +142,7 @@
 ) = {
   /* Basic document rules. */
   set document(
-    title: thesis-title.title-case + " (" + thesis-title-eng.title-case + ")",
+    title: thesis-title.tur.title-case + " (" + thesis-title.eng.title-case + ")",
     author: (author.first-name + " " + upper(author.last-name)),
     keywords: (keywords-tur, keywords-eng),
   )
@@ -333,7 +335,7 @@
         department: department,
         program: program,
         report-type: report-type,
-        thesis-title: thesis-title-eng,
+        thesis-title: thesis-title,
         author: author,
         keywords: keywords-eng,
       )

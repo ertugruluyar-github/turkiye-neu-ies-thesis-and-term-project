@@ -20,7 +20,7 @@
     department: department,
     program: program,
     report-type: report-type.TR-TR,
-    thesis-title: thesis-title,
+    thesis-title: thesis-title.tur,
     author: author,
     abstract-text-content-file-path: "/template/sections/03-back/expanded-turkish-abstract-text.typ",
     keywords-title: STRING-KEYWORDS-TUR,
