@@ -3,15 +3,6 @@
 // Şablonu internetten kullanmak.
 #import "/src/lib.typ": template-configurations, LANGUAGES, REPORT-TYPES
 
-/* ---- Thesis configurations ----
-  author: (fullname: "", orcid: "") şeklinde adınız soyadınız ve ORCID numaranız.
-  abstract: Tezinizin özeti.
-  date: your thesis deadline (default: datetime.today()).
-  lang: the text language for smartquotes & hyphenation (specify as ISO 639-1/2/3 code, default: "en").
-  have-symbols: Semboller sayfasını kaldırmak için "false" yapınız.
-  have-abbreviations: Kısaltmalar sayfasını kaldırmak için "false" yapınız.
-*/
-
 #show: template-configurations.with(
   // Tezi hangi dilde yazdığınızı seçiniz.
   language: LANGUAGES.TR-TR,
