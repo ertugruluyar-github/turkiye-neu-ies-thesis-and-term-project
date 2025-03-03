@@ -1,11 +1,18 @@
+#import "/src/constants.typ": STRING-CONTENTS
+
 #let table-of-contents-style(content) = {
   // Paragraflardaki boşluk ayarları. [Paragraph spacing settings.]
-  set par(leading: 0.75em, spacing: 1em)
+  set par(leading: 1em, spacing: 1em)
 
   // Satırlardaki girinti ayarları. [Line indentation settings.]
-  set outline(indent: auto)
+  set outline(
+    depth: 3,
+    indent: n => n * 1em,
+    target: heading,
+    title: upper(STRING-CONTENTS),
+  )
 
-  // Satırların içeriği. [Outline entry content.]
+  // Satırların içeriğindeki doldurma stili. [Outline entry content's fill style.]
   set outline.entry(fill: repeat(justify: true, gap: 0.1em)[.])
 
   // Düzey 1 satırlardaki metni kalın yap. [Set Level 1 outlines' text bold.]

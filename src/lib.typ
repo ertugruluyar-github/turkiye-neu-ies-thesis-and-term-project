@@ -9,6 +9,8 @@
 #import "/src/sections/01-front/title-page.typ": *
 #import "/src/sections/01-front/preface-page.typ": preface-page
 #import "/src/sections/01-front/table-of-contents-page.typ": table-of-contents-page
+#import "/src/sections/01-front/list-of-tables-page.typ": list-of-tables-page
+#import "/src/sections/01-front/list-of-images-page.typ": list-of-images-page
 #import "/src/sections/01-front/originality-report-page.typ": originality-report-page
 #import "/src/sections/01-front/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
 #import "/src/sections/01-front/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
@@ -61,6 +63,8 @@
   ),
   keywords-tur: "anahtar kelime 1, anahtar kelime 2, anahtar kelime 3, anahtar kelime 4, anahtar kelime 5",
   keywords-eng: "keyword 1, keyword 2, keyword 3, keyword 4, keyword 5",
+  show-list-of-tables: true,
+  show-list-of-images: true,
   have-symbols: true,
   have-abbreviations: true,
   work-packages: (
@@ -267,6 +271,16 @@
 
     /* --- İçindekiler Sayfası [Table of Contents Page] --- */
     table-of-contents-page()
+
+    /* --- Tablolar Listesi Sayfası [List of Tables Page] --- */
+    if show-list-of-tables {
+      list-of-tables-page()
+    }
+
+    /* --- Şekiller Listesi Sayfası [List of Images Page] --- */
+    if show-list-of-images {
+      list-of-images-page()
+    }
 
     /* --- Tez Çalışması Örijinallik Raporu [Originality Report] --- */
     if (
