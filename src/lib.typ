@@ -247,9 +247,9 @@
   set-page-properties()
 
   {
-    /* ---- TEZİN ÖN KISMI [FRONT MATTER OF THESIS] ---- */
+    /* ---- TEZİN ÖN KISMI [FRONT SECTION OF THESIS] ---- */
     //
-    show: set-heading-styles-for-front-matter-of-thesis
+    show: set-styles-for-front-section-of-thesis
     set par(
       justify: true,
       first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: true),
@@ -363,9 +363,9 @@
   show: page-numbering-style.with(numbering: PAGE-NUMBERING-ARABIC, number-align: center)
 
   {
-    /* --- TEZİN ANA BÖLÜMLERİ --- */
+    /* --- TEZİN ANA KISMI [MAIN SECTION OF THESIS] --- */
     //
-    show: set-heading-styles-for-main-sections-of-thesis
+    show: set-styles-for-main-section-of-thesis
 
     //
     set par(
@@ -415,12 +415,12 @@
   }
 
   {
-    /* ---- TEZİN ARKA KISMI [BACK MATTER OF THESIS] ---- */
+    /* ---- TEZİN ARKA KISMI [BACK SECTION OF THESIS] ---- */
     // Başlık numarlandırmasını 1'den başlat.
     counter(heading).update(1)
 
     // Başlık stilleri
-    show: set-styles-for-back-matter-of-thesis
+    show: set-styles-for-back-section-of-thesis
 
     // Çalışma takvimi
     if (

@@ -14,7 +14,7 @@
 )
 #import "/src/styles/heading-spacing-style.typ": heading-spacing-style
 
-#let set-heading-styles-for-front-matter-of-thesis(content) = {
+#let set-styles-for-front-section-of-thesis(content) = {
   // 1. düzey başlıklar ortaya hizalandı. [1st level headings are aligned center.]
   show heading.where(level: 1): set align(center)
 
@@ -46,7 +46,7 @@
   content
 }
 
-#let set-heading-styles-for-main-sections-of-thesis(content) = {
+#let set-styles-for-main-section-of-thesis(content) = {
   // Başlıklar sola hizalandı. [Headings are aligned left.]
   show heading: set align(left)
 
@@ -110,7 +110,7 @@
   content
 }
 
-#let set-styles-for-back-matter-of-thesis(content) = {
+#let set-styles-for-back-section-of-thesis(content) = {
   // Başlıklar sola hizalandı. [Headings are aligned left.]
   show heading: set align(left)
 
