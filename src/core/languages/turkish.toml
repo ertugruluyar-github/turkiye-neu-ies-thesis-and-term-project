@@ -1,0 +1,92 @@
+[translations]
+SHORT-REPUPLIC-OF-TURKIYE = "T.C."
+CITY-NAME = "Konya"
+ORCID = "ORCID"
+
+# Document Sections
+CONTENTS = "İÇİNDEKİLER"
+LIST-OF-TABLES = "TABLOLAR LİSTESİ"
+LIST-OF-IMAGES = "ŞEKİLLER LİSTESİ"
+CHAPTER = "BÖLÜM"
+
+# Abstracts and Keywords
+ABSTRACT = "ÖZET"
+EXPANDED-TURKISH-ABSTRACT = "GENİŞLETİLMİŞ TÜRKÇE ÖZET"
+KEYWORDS = "Anahtar Kelimeler"
+
+# Appendices
+APPENDICES = "EKLER"
+APPENDIX = "EK"
+
+# Thesis Committee
+ADVISOR = "Danışman"
+SECOND-ADVISOR = "İkinci Danışman"
+FIRST-REVIEWER = "1. Juri Üyesi"
+SECOND-REVIEWER = "2. Juri Üyesi"
+
+# Bibliography
+BIBLIOGRAPHY = "KAYNAKLAR"
+
+# University Name
+UNIVERSITY-NAME-TITLE-CASE = "Necmettin Erbakan Üniversitesi"
+UNIVERSITY-NAME-UPPER-CASE = "NECMETTİN ERBAKAN ÜNİVERSİTESİ"
+
+# Institute Name
+INSTITUTE-NAME-TITLE-CASE = "Eğitim Bilimleri Enstitüsü"
+INSTITUTE-NAME-UPPER-CASE = "EĞİTİM BİLİMLERİ ENSTİTÜSÜ"
+
+# Reference Supplements
+CHAPTER-REFERENCE-SUPPLEMENT = "Bölüm"
+HEADING-REFERENCE-SUPPLEMENT = "Başlık"
+MATH-EQUATION-REFERENCE-SUPPLEMENT = "Denklem"
+TABLE-FIGURE-REFERENCE-SUPPLEMENT = "Tablo"
+IMAGE-FIGURE-REFERENCE-SUPPLEMENT = "Şekil"
+
+# Month Names
+JANUARY = "Ocak"
+FEBRUARY = "Şubat"
+MARCH = "Mart"
+APRIL = "Nisan"
+MAY = "Mayıs"
+JUNE = "Haziran"
+JULY = "Temmuz"
+AUGUST = "Ağustos"
+SEPTEMBER = "Eylül"
+OCTOBER = "Ekim"
+NOVEMBER = "Kasım"
+DECEMBER = "Aralık"
+
+# Work Schedule
+WORK-SCHEDULE = "ÇALIŞMA TAKVİMİ"
+WORK-PACKAGE = "İş Paketi"
+SHORT-WORK-PACKAGE = "İP"
+MONTHS = "Aylar"
+
+# Curriculum Vitae
+CURRICULUM-VITAE = "ÖZ GEÇMİŞ"
+GENERAL-INFO = "Genel Bilgiler"
+FIRST-NAME-LAST-NAME = "Adı Soyadı"
+SIGNATURE = "İmza"
+BIRTHDAY = "Dogüm Yeri"
+BIRTHPLACE = "Doğum Günü"
+ADRESS = "Adres"
+MARITAL-STATUS = "Medeni Durumu"
+PHONE-NUMBER = "Telefon No"
+EMAIL = "E-Posta"
+
+# Educational Background
+EDUCATIONAL-BACKGROUND = "Öğrenim Hayatı"
+SCHOOL-TYPE = "Okul Türü"
+SCHOOL-NAME = "Okul Adı"
+PROGRAM = "Program"
+PLACE = "Yer"
+YEAR = "Yıl"
+HIGH-SCHOOL = "Lise"
+UNDERGRADUATE = "Lisans"
+MASTERS-DEGREE = "Yüksek Lisans"
+
+# Work Background
+WORK-BACKGROUND = "Çalışma Hayatı"
+SKILLS = "Becerileri"
+WORK-EXPERIENCES = "İş Deneyimleri"
+GET-INFO-FROM-RECOMMENDED-PEOPLES = "Hakkımda bilgi\nalmak için\nönerebileceğim\nşahıslar"

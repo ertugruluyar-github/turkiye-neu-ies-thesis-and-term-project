@@ -1,13 +1,11 @@
 #import "/src/styles/work-schedule-page-style.typ": work-schedule-page-style
 #import "/src/constants.typ": (
   REPORT-TYPES,
-  STRING-WORK-SCHEDULE,
-  STRING-WORK-PACKAGE,
-  STRING-SHORT-WORK-PACKAGE,
-  STRING-MONTHS,
   MASTER-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
   DOCTORAL-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
 )
+#import "/src/core/language-manager/language-manager.typ": translator
+#import "/src/constants/language-keys.typ": language-keys
 
 #let work-schedule-page(
   report-type: none,
@@ -27,7 +25,7 @@
   let column-count = month-numbers.len()
 
   // Sayfa başlığı [Page title]
-  heading(level: 1, STRING-WORK-SCHEDULE)
+  heading(level: 1, translator(key: language-keys.WORK-SCHEDULE))
 
   // İş paketleri listesi [Work packages list]
   for (index, work-package) in work-packages.enumerate(start: 1) {
@@ -42,7 +40,7 @@
   // Tablo hücreleri [Table cells]
   let table-cells = for (index, work-package) in work-packages.enumerate(start: 1) {
     (
-      [*#STRING-SHORT-WORK-PACKAGE #index*],
+      [*#translator(key: language-keys.SHORT-WORK-PACKAGE) #index*],
       ..month-numbers.map(month => {
         if work-package.months.contains(month) {
           table.cell(fill: rgb(166, 166, 166))[]
@@ -61,7 +59,7 @@
       align: center + horizon,
       table.header(
         table.cell(rowspan: 2)[*İP\**],
-        table.cell(colspan: column-count)[*#STRING-MONTHS*],
+        table.cell(colspan: column-count)[*#translator(key: language-keys.MONTHS)*],
         ..table-header-months,
       ), ..table-cells,
       table.footer(
@@ -73,7 +71,7 @@
             right: 0pt,
             bottom: 0pt,
           ),
-        )[\*#STRING-SHORT-WORK-PACKAGE: #STRING-WORK-PACKAGE],
+        )[\*#translator(key: language-keys.SHORT-WORK-PACKAGE): #translator(key: language-keys.WORK-PACKAGE)],
       ),
     ),
   )

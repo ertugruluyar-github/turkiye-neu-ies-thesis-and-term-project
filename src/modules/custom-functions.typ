@@ -1,6 +1,8 @@
 #import "@preview/drafting:0.2.2": margin-note, set-page-properties
 #import "@preview/subpar:0.2.1"
 #import "/src/constants.typ": *
+#import "/src/core/language-manager/language-manager.typ": translator
+#import "/src/constants/language-keys.typ": language-keys
 
 #let ovgu-blue = rgb("#0068B4")
 #let ovgu-darkgray = rgb("#606060")
@@ -12,7 +14,7 @@
 /* ---- Convencience functions ---- */
 
 #let change-long-month-name(date: datetime.today(), month-names: none, content) = {
-  show regex("[a-zA-Z]+"): month-name => TURKISH-MONTH-NAMES.at(date.month() - 1)
+  show regex("[a-zA-Z]+"): month-name => month-names.at(date.month() - 1)
   content
 }
 

@@ -1,0 +1,4 @@
+[supported-languages]
+tr = { name = "Türkçe (Türkiye)", file-path = "turkish.toml" }
+en = { name = "English (United States)", file-path = "english.toml" }
+# Add more languages as needed

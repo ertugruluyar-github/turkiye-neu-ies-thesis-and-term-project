@@ -1,0 +1,92 @@
+[translations]
+SHORT-REPUPLIC-OF-TURKIYE = "T.R."
+CITY-NAME = "Konya"
+ORCID = "ORCID"
+
+# Document Sections
+CONTENTS = "CONTENTS"
+LIST-OF-TABLES = "LIST OF TABLES"
+LIST-OF-IMAGES = "LIST OF FIGURES"
+CHAPTER = "CHAPTER"
+
+# Abstracts and Keywords
+ABSTRACT = "ABSTRACT"
+EXPANDED-TURKISH-ABSTRACT = "EXPANDED TURKISH ABSTRACT"
+KEYWORDS = "Keywords"
+
+# Appendices
+APPENDICES = "APPENDICES"
+APPENDIX = "APPENDIX"
+
+# Thesis Committee
+ADVISOR = "Advisor"
+SECOND-ADVISOR = "Second Advisor"
+FIRST-REVIEWER = "1st Jury Member"
+SECOND-REVIEWER = "2nd Jury Member"
+
+# Bibliography
+BIBLIOGRAPHY = "REFERENCES"
+
+# University Name
+UNIVERSITY-NAME-TITLE-CASE = "Necmettin Erbakan University"
+UNIVERSITY-NAME-UPPER-CASE = "NECMETTİN ERBAKAN UNIVERSITY"
+
+# Institute Name
+INSTITUTE-NAME-TITLE-CASE = "Graduate School of Educational Sciences"
+INSTITUTE-NAME-UPPER-CASE = "GRADUATE SCHOOL OF EDUCATIONAL SCIENCES"
+
+# Reference Supplements
+CHAPTER-REFERENCE-SUPPLEMENT = "Chapter"
+HEADING-REFERENCE-SUPPLEMENT = "Heading"
+MATH-EQUATION-REFERENCE-SUPPLEMENT = "Equation"
+TABLE-FIGURE-REFERENCE-SUPPLEMENT = "Table"
+IMAGE-FIGURE-REFERENCE-SUPPLEMENT = "Figure"
+
+# Month Names
+JANUARY = "January"
+FEBRUARY = "February"
+MARCH = "March"
+APRIL = "April"
+MAY = "May"
+JUNE = "June"
+JULY = "July"
+AUGUST = "August"
+SEPTEMBER = "September"
+OCTOBER = "October"
+NOVEMBER = "November"
+DECEMBER = "December"
+
+# Work Schedule
+WORK-SCHEDULE = "WORK SCHEDULE"
+WORK-PACKAGE = "Work Package"
+SHORT-WORK-PACKAGE = "WP"
+MONTHS = "Months"
+
+# Curriculum Vitae
+CURRICULUM-VITAE = "CURRICULUM VITAE"
+GENERAL-INFO = "General Information"
+FIRST-NAME-LAST-NAME = "Full Name"
+SIGNATURE = "Signature"
+BIRTHDAY = "Date of Birth"
+BIRTHPLACE = "Place of Birth"
+ADRESS = "Address"
+MARITAL-STATUS = "Marital Status"
+PHONE-NUMBER = "Phone Number"
+EMAIL = "Email"
+
+# Educational Background
+EDUCATIONAL-BACKGROUND = "Educational Background"
+SCHOOL-TYPE = "School Type"
+SCHOOL-NAME = "School Name"
+PROGRAM = "Program"
+PLACE = "Location"
+YEAR = "Year"
+HIGH-SCHOOL = "High School"
+UNDERGRADUATE = "Undergraduate"
+MASTERS-DEGREE = "Master's Degree"
+
+# Work Background
+WORK-BACKGROUND = "Work Experience"
+SKILLS = "Skills"
+WORK-EXPERIENCES = "Work Experiences"
+GET-INFO-FROM-RECOMMENDED-PEOPLES = "References Who Can Provide\nInformation About Me"

@@ -1,9 +1,6 @@
-#import "/src/constants.typ": (
-  STRING-ABSTRACT-TUR,
-  STRING-UNIVERSITY-NAME-TUR,
-  STRING-INSTITUTE-NAME-TUR,
-  STRING-KEYWORDS-TUR,
-)
+#import "/src/constants.typ": LANGUAGES
+#import "/src/core/language-manager/language-manager.typ": translator
+#import "/src/constants/language-keys.typ": language-keys
 #import "/src/components/abstract-page-component.typ": abstract-page-component
 
 #let turkish-abstract-page(
@@ -14,17 +11,19 @@
   author: none,
   keywords: none,
 ) = {
+  let language-code = LANGUAGES.TR-TR.language-code
+
   abstract-page-component(
-    page-title: STRING-ABSTRACT-TUR,
-    university-name: STRING-UNIVERSITY-NAME-TUR.title-case,
-    institute-name: STRING-INSTITUTE-NAME-TUR.title-case,
+    page-title: translator(key: language-keys.ABSTRACT, language-code: language-code),
+    university-name: translator(key: language-keys.UNIVERSITY-NAME-TITLE-CASE),
+    institute-name: translator(key: language-keys.INSTITUTE-NAME-TITLE-CASE),
     department: department,
     program: program,
     report-type: report-type.TR-TR,
     thesis-title: thesis-title.tur,
     author: author,
     abstract-text-content-file-path: "/template/sections/01-front/abstract-text-tur.typ",
-    keywords-title: STRING-KEYWORDS-TUR,
+    keywords-title: translator(key: language-keys.KEYWORDS, language-code: language-code),
     keywords: keywords,
   )
 }

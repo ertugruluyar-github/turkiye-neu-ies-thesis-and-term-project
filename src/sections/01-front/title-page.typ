@@ -1,14 +1,11 @@
 #import "/src/constants.typ": (
   MARGIN,
   REPORT-TYPES,
-  STRING-TC,
-  STRING-UNIVERSITY-NAME-TUR,
-  STRING-INSTITUTE-NAME-TUR,
-  STRING-ADVISOR,
-  STRING-SECOND-ADVISOR,
-  STRING-CITY-NAME,
+  LANGUAGES,
   ONLY-YEAR-DATE-FORMAT,
 )
+#import "/src/core/language-manager/language-manager.typ": translator
+#import "/src/constants/language-keys.typ": language-keys
 #import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
 #import "/src/components/advisor-with-orcid-component.typ": advisor-with-orcid-component
@@ -44,9 +41,9 @@
       row-gutter: 12pt,
       image("/src/organization-logos/institute-logo.png", width: 3.4cm, height: 3.4cm),
       text(weight: "bold")[
-        #upper(STRING-TC)\
-        #upper(STRING-UNIVERSITY-NAME-TUR.upper-case)\
-        #upper(STRING-INSTITUTE-NAME-TUR.upper-case)
+        #upper(translator(key: language-keys.SHORT-REPUPLIC-OF-TURKIYE))\
+        #upper(translator(key: language-keys.UNIVERSITY-NAME-UPPER-CASE))\
+        #upper(translator(key: language-keys.INSTITUTE-NAME-UPPER-CASE))
       ],
     )
 
@@ -62,9 +59,9 @@
       row-gutter: 12pt,
       image("/src/organization-logos/university-logo.png", width: 2.7cm, height: 2.7cm),
       text(weight: "bold")[
-        #upper(STRING-TC)\
-        #upper(STRING-UNIVERSITY-NAME-TUR.upper-case)\
-        #upper(STRING-INSTITUTE-NAME-TUR.upper-case)
+        #upper(translator(key: language-keys.SHORT-REPUPLIC-OF-TURKIYE))\
+        #upper(translator(key: language-keys.UNIVERSITY-NAME-UPPER-CASE))\
+        #upper(translator(key: language-keys.INSTITUTE-NAME-UPPER-CASE))
       ],
       image("/src/organization-logos/institute-logo.png", width: 2.7cm, height: 2.7cm),
     )
@@ -97,7 +94,7 @@
     v(1.75cm)
   }
 
-  STRING-ADVISOR
+  translator(key: language-keys.ADVISOR)
   advisor-with-orcid-component(advisor: advisor)
 
   v(0.5cm)
@@ -108,7 +105,7 @@
     )
       and second-advisor != none
   ) {
-    STRING-SECOND-ADVISOR
+    translator(key: language-keys.SECOND-ADVISOR)
     advisor-with-orcid-component(advisor: second-advisor)
     v(0.75cm)
   } else {
@@ -127,7 +124,7 @@
     v(1cm)
   }
 
-  [#STRING-CITY-NAME - #date.display(ONLY-YEAR-DATE-FORMAT)]
+  [#translator(key: language-keys.CITY-NAME) - #date.display(ONLY-YEAR-DATE-FORMAT)]
 
   // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
   pagebreak(weak: true, to: "odd")

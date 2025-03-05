@@ -1,29 +1,6 @@
-#import "/src/constants.typ": (
-  STRING-CURRICULUM-VITAE,
-  STRING-GENERAL-INFO,
-  FULL-DATE-FORMAT,
-  STRING-FIRST-NAME-LAST-NAME,
-  STRING-SIGNATURE,
-  STRING-BIRTHDAY,
-  STRING-BIRTHPLACE,
-  STRING-ADRESS,
-  STRING-MARITAL-STATUS,
-  STRING-PHONE-NUMBER,
-  STRING-EMAIL,
-  STRING-EDUCATIONAL-BACKGROUND,
-  STRING-SCHOOL-TYPE,
-  STRING-SCHOOL-NAME,
-  STRING-PROGRAM,
-  STRING-PLACE,
-  STRING-YEAR,
-  STRING-HIGH-SCHOOL,
-  STRING-UNDERGRADUATE,
-  STRING-MASTERS-DEGREE,
-  STRING-WORK-BACKGROUND,
-  STRING-SKILLS,
-  STRING-WORK-EXPERIENCES,
-  STRING-GET-INFO-FROM-RECOMMENDED-PEOPLES,
-)
+#import "/src/constants.typ": FULL-DATE-FORMAT
+#import "/src/core/language-manager/language-manager.typ": translator
+#import "/src/constants/language-keys.typ": language-keys
 #import "/src/components/email-link-component.typ": email-link-component
 #import "/src/components/orcid-link-component.typ": orcid-link-component
 
@@ -104,7 +81,7 @@
 
   set table.footer(repeat: false)
 
-  heading(level: 1, STRING-CURRICULUM-VITAE)
+  heading(level: 1, translator(key: language-keys.CURRICULUM-VITAE))
 
   v(1em)
 
@@ -112,11 +89,13 @@
     center,
     table(
       columns: (auto, 2fr, auto, 1fr),
-      table.cell(colspan: 4, align(center)[*#STRING-GENERAL-INFO*]),
-      [*#STRING-FIRST-NAME-LAST-NAME:*], [#first-name #upper(last-name)], [*#STRING-SIGNATURE:*], [],
-      [*#STRING-BIRTHPLACE:*], [#upper(birthplace)], [*#STRING-BIRTHPLACE:*], [#birthday.display(FULL-DATE-FORMAT)],
-      [*#STRING-ADRESS:*], [#address], [*#STRING-MARITAL-STATUS:*], [#marital-status],
-      [*#STRING-PHONE-NUMBER:*], [#phone-number], [*#STRING-EMAIL:*], [#email-link-component(email: email)],
+      table.cell(colspan: 4, align(center)[*#translator(key: language-keys.GENERAL-INFO)*]),
+      [*#translator(key: language-keys.FIRST-NAME-LAST-NAME):*], [#first-name #upper(last-name)], [*#translator(key: language-keys.SIGNATURE):*], [],
+      [*#translator(key: language-keys.BIRTHPLACE):*], [#upper(birthplace)], [*#translator(key: language-keys.BIRTHPLACE):*], [#birthday.display(FULL-DATE-FORMAT)],
+      [*#translator(key: language-keys.ADRESS):*], [#address], [*#translator(key: language-keys.MARITAL-STATUS):*], [#marital-status],
+      [*#translator(key: language-keys.PHONE-NUMBER):*], [#phone-number], [*#translator(key: language-keys.EMAIL):*], [#email-link-component(
+          email: email,
+        )],
     ),
   )
 
@@ -124,11 +103,11 @@
     center,
     table(
       columns: (auto, 4fr, 3fr, 2fr, 1fr),
-      table.cell(colspan: 5, align(center)[*#STRING-EDUCATIONAL-BACKGROUND*]),
-      align(center)[*#STRING-SCHOOL-TYPE*], align(center)[*#STRING-SCHOOL-NAME*], align(center)[*#STRING-PROGRAM*], align(center)[*#STRING-PLACE*], align(center)[*#STRING-YEAR*],
-      [*#STRING-HIGH-SCHOOL:*], [#high-school.name], [#high-school.program], [#high-school.place], [#high-school.start-year],
-      [*#STRING-UNDERGRADUATE:*], [#undergraduate.name], [#undergraduate.program], [#undergraduate.place], [#undergraduate.start-year],
-      [*#STRING-MASTERS-DEGREE:*], [#masters-degree.name], [#masters-degree.program], [#masters-degree.place], [#masters-degree.start-year],
+      table.cell(colspan: 5, align(center)[*#translator(key: language-keys.EDUCATIONAL-BACKGROUND)*]),
+      align(center)[*#translator(key: language-keys.SCHOOL-TYPE)*], align(center)[*#translator(key: language-keys.SCHOOL-NAME)*], align(center)[*#translator(key: language-keys.PROGRAM)*], align(center)[*#translator(key: language-keys.PLACE)*], align(center)[*#translator(key: language-keys.YEAR)*],
+      [*#translator(key: language-keys.HIGH-SCHOOL):*], [#high-school.name], [#high-school.program], [#high-school.place], [#high-school.start-year],
+      [*#translator(key: language-keys.UNDERGRADUATE):*], [#undergraduate.name], [#undergraduate.program], [#undergraduate.place], [#undergraduate.start-year],
+      [*#translator(key: language-keys.MASTERS-DEGREE):*], [#masters-degree.name], [#masters-degree.program], [#masters-degree.place], [#masters-degree.start-year],
     ),
   )
 
@@ -136,16 +115,16 @@
     center,
     table(
       columns: (auto, 1fr),
-      table.cell(colspan: 2, align(center)[*#STRING-WORK-BACKGROUND*]),
-      [*#STRING-SKILLS:*], [#skills],
-      [*#STRING-WORK-EXPERIENCES:*], [#(
+      table.cell(colspan: 2, align(center)[*#translator(key: language-keys.WORK-BACKGROUND)*]),
+      [*#translator(key: language-keys.SKILLS):*], [#skills],
+      [*#translator(key: language-keys.WORK-EXPERIENCES):*], [#(
           work-experiences
             .map(it => (
               "(" + it.start-date + " - " + it.end-date + ")" + ": " + it.organization-name + " (" + it.title + ")"
             ))
             .join("\n")
         )],
-      [*#STRING-GET-INFO-FROM-RECOMMENDED-PEOPLES:*], [#(
+      [*#translator(key: language-keys.GET-INFO-FROM-RECOMMENDED-PEOPLES):*], [#(
           get-info-from-recommended-peoples
             .map(it => (
               it.name-with-title

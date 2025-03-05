@@ -1,17 +1,17 @@
 #import "/src/constants.typ": (
-  TABLE-FIGURE-REFERENCE-SUPPLEMENT,
-  IMAGE-FIGURE-REFERENCE-SUPPLEMENT,
   FIGURE-NUMBERING,
   FIGURE-CAPTION-SEPARATOR,
   FIGURE-CAPTION-PREFIX-TEXT-FONT-WEIGHT,
   FIGURE-CAPTION-TITLE-TEXT-FONT-WEIGHT,
   ALTERNATE-FONT-SIZE,
 )
+#import "/src/core/language-manager/language-manager.typ": translator
+#import "/src/constants/language-keys.typ": language-keys
 
 #let figure-style(content) = {
   // Tablo figürünün stili. [Table Figure Style]
   show figure.where(kind: table): set figure(
-    supplement: TABLE-FIGURE-REFERENCE-SUPPLEMENT,
+    supplement: translator(key: language-keys.TABLE-FIGURE-REFERENCE-SUPPLEMENT),
     placement: none,
     gap: 0.5em,
   )
@@ -24,7 +24,7 @@
 
   // Görsel figürünün stili. [Image Figure Style]
   show figure.where(kind: image): set figure(
-    supplement: IMAGE-FIGURE-REFERENCE-SUPPLEMENT,
+    supplement: translator(key: language-keys.IMAGE-FIGURE-REFERENCE-SUPPLEMENT),
     placement: none,
     gap: 0.5em,
   )

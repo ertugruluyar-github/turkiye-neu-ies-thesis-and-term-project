@@ -1,4 +1,5 @@
-#import "/src/constants.typ": STRING-CONTENTS
+#import "/src/core/language-manager/language-manager.typ": translator
+#import "/src/constants/language-keys.typ": language-keys
 
 #let table-of-contents-style(content) = {
   // Paragraflardaki boşluk ayarları. [Paragraph spacing settings.]
@@ -9,7 +10,7 @@
     depth: 3,
     indent: n => n * 1em,
     target: heading,
-    title: upper(STRING-CONTENTS),
+    title: upper(translator(key: language-keys.CONTENTS)),
   )
 
   // Satırların içeriğindeki doldurma stili. [Outline entry content's fill style.]

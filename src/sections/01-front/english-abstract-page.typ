@@ -1,9 +1,6 @@
-#import "/src/constants.typ": (
-  STRING-ABSTRACT-ENG,
-  STRING-UNIVERSITY-NAME-ENG,
-  STRING-INSTITUTE-NAME-ENG,
-  STRING-KEYWORDS-ENG,
-)
+#import "/src/constants.typ": LANGUAGES
+#import "/src/core/language-manager/language-manager.typ": translator
+#import "/src/constants/language-keys.typ": language-keys
 #import "/src/components/abstract-page-component.typ": abstract-page-component
 
 #let english-abstract-page(
@@ -14,17 +11,19 @@
   author: none,
   keywords: none,
 ) = {
+  let language-code = LANGUAGES.EN-US.language-code
+
   abstract-page-component(
-    page-title: STRING-ABSTRACT-ENG,
-    university-name: STRING-UNIVERSITY-NAME-ENG.title-case,
-    institute-name: STRING-INSTITUTE-NAME-ENG.title-case,
+    page-title: translator(key: language-keys.ABSTRACT, language-code: language-code),
+    university-name: translator(key: language-keys.UNIVERSITY-NAME-TITLE-CASE),
+    institute-name: translator(key: language-keys.INSTITUTE-NAME-TITLE-CASE),
     department: department,
     program: program,
     report-type: report-type.EN-US,
     thesis-title: thesis-title.eng,
     author: author,
     abstract-text-content-file-path: "/template/sections/01-front/abstract-text-eng.typ",
-    keywords-title: STRING-KEYWORDS-ENG,
+    keywords-title: translator(key: language-keys.KEYWORDS, language-code: language-code),
     keywords: keywords,
   )
 }

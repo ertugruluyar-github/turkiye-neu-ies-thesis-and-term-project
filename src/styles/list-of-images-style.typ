@@ -1,4 +1,5 @@
-#import "/src/constants.typ": STRING-LIST-OF-IMAGES
+#import "/src/core/language-manager/language-manager.typ": translator
+#import "/src/constants/language-keys.typ": language-keys
 
 #let list-of-images-style(content) = {
   // Paragraflardaki boşluk ayarları. [Paragraph spacing settings.]
@@ -9,7 +10,7 @@
     depth: none,
     indent: auto,
     target: figure.where(kind: image),
-    title: upper(STRING-LIST-OF-IMAGES),
+    title: upper(translator(key: language-keys.LIST-OF-IMAGES)),
   )
 
   // Satırların içeriğindeki doldurma stili. [Outline entry content's fill style.]

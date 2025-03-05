@@ -19,6 +19,7 @@
 #import "/src/sections/03-back/work-schedule-page.typ": work-schedule-page
 #import "/src/sections/03-back/curriculum-vitae-page.typ": curriculum-vitae-page
 #import "/src/sections/03-back/expanded-turkish-abstract-page.typ": expanded-turkish-abstract-page
+#import "core/language-manager/language-manager.typ": init-language-manager, translator
 
 #let template-configurations(
   language: LANGUAGES.TR-TR,
@@ -144,6 +145,9 @@
   ),
   body,
 ) = {
+  // Initialize the language manager
+  init-language-manager(default-language: language.language-code)
+
   /* Basic document rules. */
   set document(
     title: thesis-title.tur.title-case + " (" + thesis-title.eng.title-case + ")",
@@ -189,7 +193,7 @@
 
   set math.equation(
     numbering: MATH-NUMBERING,
-    supplement: MATH-EQUATION-REFERENCE-SUPPLEMENT,
+    supplement: translator(key: language-keys.MATH-EQUATION-REFERENCE-SUPPLEMENT),
   )
 
   /* ---- Table Style ---- */
@@ -455,7 +459,7 @@
       bibliography(
         "/template/bibliography-sources/references.bib",
         style: "/template/bibliography-styles/apa7-tr.csl",
-        title: upper(STRING-BIBLIOGRAPHY),
+        title: upper(translator(key: language-keys.BIBLIOGRAPHY)),
         full: false,
       ),
     )
