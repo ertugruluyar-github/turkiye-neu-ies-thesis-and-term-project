@@ -12,6 +12,7 @@
   keywords: none,
 ) = {
   let language-code = LANGUAGES.TR-TR.language-code
+  set text(lang: LANGUAGES.TR-TR.language-code)
 
   abstract-page-component(
     page-title: translator(key: language-keys.ABSTRACT, language-code: language-code),
@@ -23,7 +24,7 @@
     thesis-title: thesis-title.tur,
     author: author,
     abstract-text-content-file-path: "/template/sections/01-front/abstract-text-tur.typ",
-    keywords-title: translator(key: language-keys.KEYWORDS, language-code: language-code),
+    keywords-title: translator(key: language-keys.KEYWORDS),
     keywords: keywords,
   )
 }

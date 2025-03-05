@@ -1,11 +1,15 @@
 #import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/date-component.typ": date-component
 #import "/src/constants.typ": LONG-MONTH-YEAR-DATE-FORMAT
+#import "/src/core/language-manager/language-manager.typ": translator
+#import "/src/constants/language-keys.typ": language-keys
 
 #let preface-page(
   author: none,
   date: none,
 ) = {
+  heading(level: 1, upper(translator(key: language-keys.PREFACE)))
+
   include "/template/sections/01-front/preface-text.typ"
 
   v(2em)

@@ -10,7 +10,7 @@
     depth: 3,
     indent: n => n * 1em,
     target: heading,
-    title: upper(translator(key: language-keys.CONTENTS)),
+    title: upper(translator(key: language-keys.TABLE-OF-CONTENTS)),
   )
 
   // Satırların içeriğindeki doldurma stili. [Outline entry content's fill style.]
