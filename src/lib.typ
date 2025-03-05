@@ -11,7 +11,7 @@
 #import "/src/sections/01-front/table-of-contents-page.typ": table-of-contents-page
 #import "/src/sections/01-front/list-of-tables-page.typ": list-of-tables-page
 #import "/src/sections/01-front/list-of-images-page.typ": list-of-images-page
-#import "/src/sections/01-front/originality-report-page.typ": originality-report-page
+#import "/src/sections/01-front/thesis-originality-report-page.typ": thesis-originality-report-page
 #import "/src/sections/01-front/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
 #import "/src/sections/01-front/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
 #import "/src/sections/01-front/turkish-abstract-page.typ": turkish-abstract-page
@@ -290,7 +290,7 @@
     if (
       report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.DOCTORAL-THESIS
     ) {
-      originality-report-page(
+      thesis-originality-report-page(
         thesis-title: thesis-title,
         author: author,
         advisor: advisor,
