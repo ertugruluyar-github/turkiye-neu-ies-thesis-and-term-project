@@ -2,7 +2,6 @@
 SHORT-REPUPLIC-OF-TURKIYE = "T.C."
 CITY-NAME = "Konya"
 ORCID = "ORCID"
-CHAPTER = "BÖLÜM"
 
 # Document Sections
 PREFACE = "ÖN SÖZ (TEŞEKKÜR)"
@@ -16,6 +15,7 @@ SYMBOLS = "Simgeler"
 ABBREVIATIONS = "Kısaltmalar"
 ABSTRACT = "ÖZET"
 KEYWORDS = "Anahtar Kelimeler"
+CHAPTER = "BÖLÜM"
 
 EXPANDED-TURKISH-ABSTRACT = "GENİŞLETİLMİŞ TÜRKÇE ÖZET"
 
