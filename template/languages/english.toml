@@ -1,3 +1,4 @@
 [translations]
 # Document Sections
 PREFACE = "PREFACE (ACKNOWLEDGMENT)" # Birini seçip diğerini siliniz.
+ASSUMPTIONS = "Hypothesis (Assumptions)" # Birini seçip diğerini siliniz.

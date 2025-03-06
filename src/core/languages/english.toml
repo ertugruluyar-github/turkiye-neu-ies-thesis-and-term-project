@@ -16,6 +16,13 @@ ABBREVIATIONS = "Abbreviations"
 ABSTRACT = "ABSTRACT"
 KEYWORDS = "Keywords"
 CHAPTER = "CHAPTER"
+INTRODUCTION = "INTRODUCTION"
+STATEMENT-OF-THE-PROBLEM = "Statement of the Problem"
+THE-PURPOSE-OF-THE-STUDY = "The Purpose of the Study"
+THE-SIGNIFICANCE-OF-THE-STUDY = "The Significance of the Study"
+ASSUMPTIONS = "Hypothesis (Assumptions)"
+LIMITATIONS = "Limitations"
+DEFINITIONS = "Definitions"
 
 EXPANDED-TURKISH-ABSTRACT = "EXPANDED TURKISH ABSTRACT"
 

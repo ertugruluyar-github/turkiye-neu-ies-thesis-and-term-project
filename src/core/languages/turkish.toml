@@ -16,6 +16,13 @@ ABBREVIATIONS = "Kısaltmalar"
 ABSTRACT = "ÖZET"
 KEYWORDS = "Anahtar Kelimeler"
 CHAPTER = "BÖLÜM"
+INTRODUCTION = "GİRİŞ"
+STATEMENT-OF-THE-PROBLEM = "Problem Durumu"
+THE-PURPOSE-OF-THE-STUDY = "Araştırmanın Amacı"
+THE-SIGNIFICANCE-OF-THE-STUDY = "Araştırmanın Önemi"
+ASSUMPTIONS = "Sayıltılar (Varsayımlar)"
+LIMITATIONS = "Sınırlılıklar"
+DEFINITIONS = "Tanımlar"
 
 EXPANDED-TURKISH-ABSTRACT = "GENİŞLETİLMİŞ TÜRKÇE ÖZET"
 

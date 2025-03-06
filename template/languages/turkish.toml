@@ -1,3 +1,4 @@
 [translations]
 # Document Sections
 PREFACE = "ÖN SÖZ (TEŞEKKÜR)" # Birini seçip diğerini siliniz.
+ASSUMPTIONS = "Sayıltılar (Varsayımlar)" # Birini seçip diğerini siliniz.

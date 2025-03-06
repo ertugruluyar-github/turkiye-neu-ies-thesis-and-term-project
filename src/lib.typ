@@ -16,6 +16,7 @@
 #import "/src/sections/01-front/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
 #import "/src/sections/01-front/turkish-abstract-page.typ": turkish-abstract-page
 #import "/src/sections/01-front/english-abstract-page.typ": english-abstract-page
+#import "/src/sections/02-main/introduction-page.typ": introduction-page
 #import "/src/sections/03-back/work-schedule-page.typ": work-schedule-page
 #import "/src/sections/03-back/curriculum-vitae-page.typ": curriculum-vitae-page
 #import "/src/sections/03-back/expanded-turkish-abstract-page.typ": expanded-turkish-abstract-page
@@ -380,9 +381,7 @@
     )
 
     /* ---- Bölüm 1 [Chapter 1] ---- */
-    include "/template/sections/02-main/introduction.typ"
-    // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
-    pagebreak(weak: true)
+    introduction-page()
 
     /* ---- Bölüm 2 [Chapter 2] ---- */
     include "/template/sections/02-main/literature.typ"
