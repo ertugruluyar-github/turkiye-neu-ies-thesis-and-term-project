@@ -17,7 +17,7 @@ Ve ayrıca [Typst YouTube Oynatma Listesi](https://youtube.com/playlist?list=PLC
 [And also a big thank you to <@isaacew> for [Typst YouTube Playlist](https://youtube.com/playlist?list=PLCO-MGSsHcdArXIfeOGoUwjH0oz8vMr8M&si=c_kTmN4FKmwdMitE). It was very helpfull to start Typst.]
 
 ### Kullanılan Paketler [Packages Used]
-- Çoklu dil desteği sağlamak. [To provide multi language support.] -> [Linguify](https://github.com/typst-community/linguify) from <@jomaway> and contributors. [Typst Universe Link](https://typst.app/universe/package/linguify/)
+- Çoklu dil desteği sağlamak. [To provide multi language support.] -> [Linguify](https://github.com/typst-community/linguify) from <@jomaway>, <@SillyFreak> and contributors. [Typst Universe Link](https://typst.app/universe/package/linguify/)
 
 Bu projelerde emeği geçen herkese çok büyük teşşekürlerimi sunarım.
 [I sincerely thank everyone who contributed to these projects.]
