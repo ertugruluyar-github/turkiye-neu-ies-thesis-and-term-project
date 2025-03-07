@@ -20,6 +20,9 @@
 #import "/src/sections/02-main/literature-page.typ": literature-page
 #import "/src/sections/02-main/methodology-page.typ": methodology-page
 #import "/src/sections/02-main/findings-page.typ": findings-page
+#import "/src/sections/02-main/discussion-conclusion-and-suggestions-page.typ": (
+  discussion-conclusion-and-suggestions-page,
+)
 #import "/src/sections/03-back/work-schedule-page.typ": work-schedule-page
 #import "/src/sections/03-back/curriculum-vitae-page.typ": curriculum-vitae-page
 #import "/src/sections/03-back/expanded-turkish-abstract-page.typ": expanded-turkish-abstract-page
@@ -72,6 +75,7 @@
   show-list-of-images: true,
   have-symbols: true,
   have-abbreviations: true,
+  show-separated-sub-headings-in-discussion-conclusion-and-suggestions: true,
   work-packages: (
     (
       description: "Description 1",
@@ -407,10 +411,9 @@
         or report-type == REPORT-TYPES.DOCTORAL-THESIS
         or report-type == REPORT-TYPES.TERM-PROJECT
     ) {
-      include "/template/sections/02-main/conclusion.typ"
-
-      // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
-      pagebreak(weak: true, to: "odd")
+      discussion-conclusion-and-suggestions-page(
+        show-separated-sub-headings: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
+      )
     }
   }
 

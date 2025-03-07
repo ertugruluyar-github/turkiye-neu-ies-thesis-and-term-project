@@ -31,6 +31,10 @@ DATA-COLLECTION-TOOLS = "Veri Toplama Araç ve/veya Teknikleri"
 DATA-COLLECTION-PROCESS = "Verilerin Toplanması"
 DATA-ANALYSIS = "Verilerin Çözümlenmesi (Verilerin Analizi)"
 FINDINGS = "BULGULAR"
+DISCUSSION-CONCLUSION-AND-SUGGESTIONS = "TARTIŞMA, SONUÇ VE ÖNERİLER"
+DISCUSSION = "Tartışma"
+CONCLUSION = "Sonuç"
+SUGGESTIONS = "Öneri̇ler"
 
 EXPANDED-TURKISH-ABSTRACT = "GENİŞLETİLMİŞ TÜRKÇE ÖZET"
 
