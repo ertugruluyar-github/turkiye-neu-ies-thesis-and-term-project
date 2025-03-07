@@ -1,4 +1,3 @@
-= BULGULAR
 #lorem(50)
 == Dördüncü Bölüm İkinci Düzey Başlık
 #lorem(50)

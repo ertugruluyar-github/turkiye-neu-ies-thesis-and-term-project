@@ -19,6 +19,7 @@
 #import "/src/sections/02-main/introduction-page.typ": introduction-page
 #import "/src/sections/02-main/literature-page.typ": literature-page
 #import "/src/sections/02-main/methodology-page.typ": methodology-page
+#import "/src/sections/02-main/findings-page.typ": findings-page
 #import "/src/sections/03-back/work-schedule-page.typ": work-schedule-page
 #import "/src/sections/03-back/curriculum-vitae-page.typ": curriculum-vitae-page
 #import "/src/sections/03-back/expanded-turkish-abstract-page.typ": expanded-turkish-abstract-page
@@ -397,9 +398,7 @@
         or report-type == REPORT-TYPES.DOCTORAL-THESIS
         or report-type == REPORT-TYPES.TERM-PROJECT
     ) {
-      include "/template/sections/02-main/results.typ"
-      // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
-      pagebreak(weak: true)
+      findings-page()
     }
 
     /* ---- Bölüm 5 [Chapter 5] ---- */
