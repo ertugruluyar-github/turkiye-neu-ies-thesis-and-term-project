@@ -1,7 +1,12 @@
-// Şablonu internetten kullanmak.
+// Şablonu çevrim içi kullanmak.
+//#import "@preview/turkiye-neu-ies-thesis:0.1.0": *
+// Şablonu çevrim dışı kullanmak.
 //#import "@local/turkiye-neu-ies-thesis:0.1.0": *
-// Şablonu internetten kullanmak.
-#import "/src/lib.typ": template-configurations, LANGUAGES, REPORT-TYPES
+#import "/src/lib.typ": (
+  template-configurations,
+  LANGUAGES,
+  REPORT-TYPES,
+)
 
 #show: template-configurations.with(
   // Tezi hangi dilde yazdığınızı seçiniz.
