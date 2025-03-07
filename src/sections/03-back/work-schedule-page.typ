@@ -29,7 +29,7 @@
 
   // İş paketleri listesi [Work packages list]
   for (index, work-package) in work-packages.enumerate(start: 1) {
-    [*İP #index:* #work-package.description\ ]
+    [*#translator(key: language-keys.SHORT-WORK-PACKAGE) #index:* #work-package.description\ ]
   }
 
   // Tablo başlığındaki aylar [Months in the table header]
@@ -58,7 +58,7 @@
       columns: (auto,) + ((1fr,) * column-count),
       align: center + horizon,
       table.header(
-        table.cell(rowspan: 2)[*İP\**],
+        table.cell(rowspan: 2)[*#translator(key: language-keys.SHORT-WORK-PACKAGE)\**],
         table.cell(colspan: column-count)[*#translator(key: language-keys.MONTHS)*],
         ..table-header-months,
       ), ..table-cells,
