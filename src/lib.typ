@@ -286,12 +286,26 @@
     table-of-contents-page()
 
     /* --- Tablolar Listesi Sayfası [List of Tables Page] --- */
-    if show-list-of-tables {
+    if (
+      (
+        report-type == REPORT-TYPES.MASTER-THESIS
+          or report-type == REPORT-TYPES.DOCTORAL-THESIS
+          or report-type == REPORT-TYPES.TERM-PROJECT
+      )
+        and show-list-of-tables
+    ) {
       list-of-tables-page()
     }
 
     /* --- Şekiller Listesi Sayfası [List of Images Page] --- */
-    if show-list-of-images {
+    if (
+      (
+        report-type == REPORT-TYPES.MASTER-THESIS
+          or report-type == REPORT-TYPES.DOCTORAL-THESIS
+          or report-type == REPORT-TYPES.TERM-PROJECT
+      )
+        and show-list-of-images
+    ) {
       list-of-images-page()
     }
 
