@@ -458,7 +458,7 @@
     bibliography-section-style(
       bibliography(
         "/template/bibliography-sources/references.bib",
-        style: "/template/bibliography-styles/apa7-tr.csl",
+        style: "/template/bibliography-styles/apa7-" + language.language-code + ".csl",
         title: upper(translator(key: language-keys.BIBLIOGRAPHY)),
         full: false,
       ),
