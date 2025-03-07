@@ -24,6 +24,7 @@
   discussion-conclusion-and-suggestions-page,
 )
 #import "/src/sections/03-back/work-schedule-page.typ": work-schedule-page
+#import "/src/sections/03-back/appendices-page.typ": appendices-page
 #import "/src/sections/03-back/curriculum-vitae-page.typ": curriculum-vitae-page
 #import "/src/sections/03-back/expanded-turkish-abstract-page.typ": expanded-turkish-abstract-page
 #import "core/language-manager/language-manager.typ": init-language-manager, translator
@@ -467,13 +468,7 @@
     pagebreak(weak: true, to: "odd")
 
     // Ekler [Appendices]
-    // Başlık numarlandırmasını 1'den başlat.
-    counter(heading).update(1)
-
-    include "/template/sections/03-back/appendices.typ"
-
-    // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
-    pagebreak(weak: true, to: "odd")
+    appendices-page()
 
     // Özgeçmiş [Curriculum Vitae]
     if report-type == REPORT-TYPES.TERM-PROJECT {
