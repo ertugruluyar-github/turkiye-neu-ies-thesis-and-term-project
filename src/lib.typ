@@ -244,8 +244,8 @@
   set list(marker: (sym.bullet, "◦", "-"))
 
   /* --- BAŞLIK SAYFASI [TITLE PAGE] --- */
-
   title-page(
+    language: language,
     department: department,
     program: program,
     report-type: report-type,

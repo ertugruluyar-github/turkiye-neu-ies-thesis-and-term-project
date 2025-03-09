@@ -3,6 +3,8 @@
   REPORT-TYPES,
   LANGUAGES,
   ONLY-YEAR-DATE-FORMAT,
+  UNIVERSITY-LOGO-PATH,
+  INSTITUTE-LOGO-PATH,
 )
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
@@ -12,6 +14,7 @@
 #import "/src/components/thesis-study-funding-organization-component.typ": thesis-study-funding-organization-component
 
 #let title-page(
+  language: none,
   department: none,
   program: none,
   report-type: none,
@@ -32,6 +35,10 @@
   set align(center)
   set par(leading: 1em, spacing: 1em)
 
+
+  let institute-logo-path = if language == LANGUAGES.TR-TR { INSTITUTE-LOGO-PATH.TR-TR } else if (
+    language == LANGUAGES.EN-US
+  ) { INSTITUTE-LOGO-PATH.EN-US } else { INSTITUTE-LOGO-PATH.TR-TR }
   if (
     report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
   ) {
@@ -39,7 +46,7 @@
       columns: 1fr,
       align: center + horizon,
       row-gutter: 12pt,
-      image("/src/organization-logos/institute-logo.png", width: 3.4cm, height: 3.4cm),
+      image(institute-logo-path, width: 3.4cm, height: 3.4cm),
       text(weight: "bold")[
         #upper(translator(key: language-keys.SHORT-REPUPLIC-OF-TURKIYE))\
         #upper(translator(key: language-keys.UNIVERSITY-NAME-UPPER-CASE))\
@@ -53,17 +60,21 @@
       or report-type == REPORT-TYPES.DOCTORAL-THESIS
       or report-type == REPORT-TYPES.TERM-PROJECT
   ) {
+    let university-logo-path = if language == LANGUAGES.TR-TR { UNIVERSITY-LOGO-PATH.TR-TR } else if (
+      language == LANGUAGES.EN-US
+    ) { UNIVERSITY-LOGO-PATH.EN-US } else { UNIVERSITY-LOGO-PATH.TR-TR }
+
     grid(
       columns: (1fr, 6fr, 1fr),
       align: center + horizon,
       row-gutter: 12pt,
-      image("/src/organization-logos/university-logo.png", width: 2.7cm, height: 2.7cm),
+      image(university-logo-path, width: 2.7cm, height: 2.7cm),
       text(weight: "bold")[
         #upper(translator(key: language-keys.SHORT-REPUPLIC-OF-TURKIYE))\
         #upper(translator(key: language-keys.UNIVERSITY-NAME-UPPER-CASE))\
         #upper(translator(key: language-keys.INSTITUTE-NAME-UPPER-CASE))
       ],
-      image("/src/organization-logos/institute-logo.png", width: 2.7cm, height: 2.7cm),
+      image(institute-logo-path, width: 2.7cm, height: 2.7cm),
     )
 
     v(3.5cm)

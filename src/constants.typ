@@ -1,6 +1,15 @@
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
+#let UNIVERSITY-LOGO-PATH = (
+  TR-TR: "/src/organization-logos/university-logo-tr.png",
+  EN-US: "/src/organization-logos/university-logo-en.png",
+)
+#let INSTITUTE-LOGO-PATH = (
+  TR-TR: "/src/organization-logos/institute-logo-tr.png",
+  EN-US: "/src/organization-logos/institute-logo-en.png",
+)
+
 // Genel [General]
 #let PAPER = "a4"
 #let MARGIN = (
