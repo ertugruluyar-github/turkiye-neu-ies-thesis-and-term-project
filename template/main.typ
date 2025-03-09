@@ -11,7 +11,7 @@
 )
 
 #show: template-configurations.with(
-  // Tezi hangi dilde yazdığınızı seçiniz.
+  // Raporun dilini seçiniz.
   language: LANGUAGES.TR-TR,
   // Ana Bilim Dalı seçiniz.
   department: DEPARTMENTS.DEPARTMENT-OF-MATHEMATICS-AND-SCIENCES-EDUCATION,
