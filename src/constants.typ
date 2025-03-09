@@ -42,26 +42,11 @@ DOCTORAL-THESIS: "Doktora Tezi"\
 TERM-PROJECT: "Dönem Projesi"
 */
 #let REPORT-TYPES = (
-  MASTER-THESIS-PROPOSAL: (
-    TR-TR: "Yüksek Lisans Tez Önerisi",
-    EN-US: "Master Thesis Proposal",
-  ),
-  MASTER-THESIS: (
-    TR-TR: "Yüksek Lisans Tezi",
-    EN-US: "Master Thesis",
-  ),
-  DOCTORAL-THESIS-PROPOSAL: (
-    TR-TR: "Doktora Tez Önerisi",
-    EN-US: "Doctoral Thesis Proposal",
-  ),
-  DOCTORAL-THESIS: (
-    TR-TR: "Doktora Tezi",
-    EN-US: "Doctoral Thesis",
-  ),
-  TERM-PROJECT: (
-    TR-TR: "Tezsiz Yüksek Lisans Dönem Projesi",
-    EN-US: "Term Project of Non-Thesis Master",
-  ),
+  MASTER-THESIS-PROPOSAL: translator(key: language-keys.MASTER-THESIS-PROPOSAL),
+  MASTER-THESIS: translator(key: language-keys.MASTER-THESIS),
+  DOCTORAL-THESIS-PROPOSAL: translator(key: language-keys.DOCTORAL-THESIS-PROPOSAL),
+  DOCTORAL-THESIS: translator(key: language-keys.DOCTORAL-THESIS),
+  TERM-PROJECT: translator(key: language-keys.TERM-PROJECT),
 )
 
 #let FONT-NAME = "Times New Roman"

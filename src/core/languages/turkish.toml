@@ -11,6 +11,13 @@ UNIVERSITY-NAME-UPPER-CASE = "NECMETTİN ERBAKAN ÜNİVERSİTESİ"
 INSTITUTE-NAME-TITLE-CASE = "Eğitim Bilimleri Enstitüsü"
 INSTITUTE-NAME-UPPER-CASE = "EĞİTİM BİLİMLERİ ENSTİTÜSÜ"
 
+# Report Types
+MASTER-THESIS-PROPOSAL = "Yüksek Lisans Tez Önerisi"
+MASTER-THESIS = "Yüksek Lisans Tezi"
+DOCTORAL-THESIS-PROPOSAL = "Doktora Tez Önerisi"
+DOCTORAL-THESIS = "Doktora Tezi"
+TERM-PROJECT = "Tezsiz Yüksek Lisans Dönem Projesi"
+
 # Thesis Committee
 ADVISOR = "Danışman"
 SECOND-ADVISOR = "İkinci Danışman"

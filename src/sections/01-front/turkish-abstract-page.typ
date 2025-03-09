@@ -20,7 +20,7 @@
     institute-name: translator(key: language-keys.INSTITUTE-NAME-TITLE-CASE),
     department: department,
     program: program,
-    report-type: report-type.TR-TR,
+    report-type: report-type,
     thesis-title: thesis-title.tur,
     author: author,
     abstract-text-content-file-path: "/template/sections/01-front/abstract-text-tur.typ",

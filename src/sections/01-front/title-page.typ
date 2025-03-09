@@ -85,7 +85,7 @@
 
   v(1cm)
 
-  report-type.TR-TR
+  report-type
 
   v(1.75cm)
 

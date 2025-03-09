@@ -11,6 +11,13 @@ UNIVERSITY-NAME-UPPER-CASE = "NECMETTİN ERBAKAN UNIVERSITY"
 INSTITUTE-NAME-TITLE-CASE = "Graduate School of Educational Sciences"
 INSTITUTE-NAME-UPPER-CASE = "INSTITUTE OF EDUCATIONAL SCIENCES"
 
+# Report Types
+MASTER-THESIS-PROPOSAL = "Master Thesis Proposal"
+MASTER-THESIS = "Master Thesis"
+DOCTORAL-THESIS-PROPOSAL = "Doctoral Thesis Proposal"
+DOCTORAL-THESIS = "Doctoral Thesis"
+TERM-PROJECT = "Term Project of Non-Thesis Master"
+
 # Thesis Committee
 ADVISOR = "Advisor"
 SECOND-ADVISOR = "Second Advisor"
