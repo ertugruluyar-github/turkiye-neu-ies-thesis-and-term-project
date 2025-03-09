@@ -156,16 +156,17 @@
   // Tezin arka bölümündeki başlıklara yapılan atıfların stilini ayarla. [Set the style of references to headings in the back section of the thesis.]
   show ref: it => {
     if it.element != none and it.element.func() == heading {
-      if it.element.level == 1 {
-        it.element.supplement + APPENDIX-REFERENCE-SUFFIX-SEPARATOR + it.element.body
-      } else if it.element.level == 2 or it.element.level == 3 {
+      if it.element.level == 2 or it.element.level == 3 {
         (
-          it.element.supplement
-            + APPENDIX-PREFIX-SEPERATOR
-            + numbering(APPENDIX-REFERENCE-NUMBERING, ..counter(heading).at(it.element.location()))
+          link(
+            it.element.location(),
+            it.element.supplement
+              + APPENDIX-PREFIX-SEPERATOR
+              + numbering(APPENDIX-REFERENCE-NUMBERING, ..counter(heading).at(it.element.location())),
+          )
         )
       } else {
-        it.element.supplement + APPENDIX-REFERENCE-SUFFIX-SEPARATOR + it.element.body
+        link(it.element.location(), it.element.supplement + APPENDIX-REFERENCE-SUFFIX-SEPARATOR + it.element.body)
       }
     } else {
       it
