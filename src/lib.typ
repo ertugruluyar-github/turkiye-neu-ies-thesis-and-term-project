@@ -4,6 +4,7 @@
 #import "/src/styles/bibliography-section-style.typ": bibliography-section-style
 #import "/src/styles/table-style.typ": table-style
 #import "/src/styles/figure-style.typ": figure-style
+#import "/src/styles/reference-style.typ": reference-style
 #import "/src/modules/custom-functions.typ": *
 #import "/src/components/keywords-component.typ": keywords-component
 #import "/src/sections/01-front/title-page.typ": *
@@ -204,6 +205,9 @@
     numbering: MATH-NUMBERING,
     supplement: translator(key: language-keys.MATH-EQUATION-REFERENCE-SUPPLEMENT),
   )
+
+  /* ---- Reference Style ---- */
+  show: reference-style
 
   /* ---- Table Style ---- */
   show: table-style

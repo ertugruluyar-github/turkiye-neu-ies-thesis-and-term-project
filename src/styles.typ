@@ -89,21 +89,15 @@
     }
     it
   }
-
   // Tezin ana bölümündeki başlıklara yapılan atıfların stilini ayarla. [Set the style of references to headings in the main section of the thesis.]
-  set ref(
-    supplement: it => {
-      if it.func() == heading {
-        if it.level == 1 {
-          translator(key: language-keys.CHAPTER-REFERENCE-SUPPLEMENT)
-        } else {
-          translator(key: language-keys.HEADING-REFERENCE-SUPPLEMENT)
-        }
-      } else {
-        it.supplement
-      }
-    },
-  )
+  // 1. düzey başlıklar ortaya hizalandı. [1st level headings are aligned center.]
+  show heading.where(level: 1): set heading(supplement: translator(key: language-keys.CHAPTER-REFERENCE-SUPPLEMENT))
+  show heading
+    .where(level: 2)
+    .or(heading.where(level: 3))
+    .or(heading.where(level: 4))
+    .or(heading.where(level: 5))
+    .or(heading.where(level: 6)): set heading(supplement: translator(key: language-keys.HEADING-REFERENCE-SUPPLEMENT))
 
   content
 }
@@ -111,10 +105,7 @@
 #let set-styles-for-back-section-of-thesis(content) = {
   //
   let APPENDIX-HEADING-NUMBERING(..nums) = (
-    translator(key: language-keys.APPENDIX)
-      + APPENDIX-PREFIX-SEPERATOR
-      + nums.pos().slice(1).map(str).join(".")
-      + APPENDIX-HEADING-SUFFIX-SEPARATOR
+    translator(key: language-keys.APPENDIX-PREFIX) + numbering("1.1.", ..nums.pos().slice(1))
   )
 
   //
@@ -123,7 +114,7 @@
   // Başlıklar sola hizalandı. [Headings are aligned left.]
   show heading: set align(left)
 
-  // 1. düzey başlıklarda numaralandırma yok, özel ön ek var, İçindekiler tablosunda var, PDF dökümanı hatlarında var. [1st level headings are numbered, has special prefix, listed in the table of contents and appear in the PDF document.]
+  // 1. düzey başlıklarda numaralandırma yok, buna yapılan atıflarda özel ön ek var, İçindekiler tablosunda var, PDF dökümanı hatlarında var. [1st level headings are non-numbered, has special prefix for citings to this, listed in the table of contents and appear in the PDF document.]
   show heading.where(level: 1): set heading(
     numbering: none,
     outlined: true,
@@ -131,12 +122,12 @@
     supplement: translator(key: language-keys.CHAPTER-REFERENCE-SUPPLEMENT),
   )
 
-  // 2. düzey başlıklarda özel numaralandırma var, özel ön ek var, İçindekiler tablosunda var, PDF dökümanı hatlarında var. [2nd level headings has special numbering, has special prefix, listed in the table of contents and appear in the PDF document.]
+  // 2. düzey başlıklarda özel numaralandırma var, buna yapılan atıflarda özel ön ek var, İçindekiler tablosunda var, PDF dökümanı hatlarında var. [2nd level headings has special numbering, has not special prefix for citings to this, listed in the table of contents and appear in the PDF document.]
   show heading.where(level: 2).or(heading.where(level: 3)): set heading(
     numbering: APPENDIX-HEADING-NUMBERING,
     outlined: true,
     bookmarked: true,
-    supplement: translator(key: language-keys.APPENDIX-REFERENCE-SUPPLEMENT),
+    supplement: none,
   )
 
   // 4, 5 ve 6. düzey başlıklarda numaranlandırma yok, İçindekiler tablosunda yok, PDF dökümanı hatlarında yok. [4th, 5th and 6th level headings are not numbered, not listed in the table of contents and do not appear in the PDF document.]
@@ -152,26 +143,6 @@
 
   // Başlıklardan önce ve sonra olan boşluk miktarı ayarlandı. [Set the amount of space before and after headings.]
   show: heading-spacing-style
-
-  // Tezin arka bölümündeki başlıklara yapılan atıfların stilini ayarla. [Set the style of references to headings in the back section of the thesis.]
-  show ref: it => {
-    if it.element != none and it.element.func() == heading {
-      if it.element.level == 2 or it.element.level == 3 {
-        (
-          link(
-            it.element.location(),
-            it.element.supplement
-              + APPENDIX-PREFIX-SEPERATOR
-              + numbering(APPENDIX-REFERENCE-NUMBERING, ..counter(heading).at(it.element.location())),
-          )
-        )
-      } else {
-        link(it.element.location(), it.element.supplement + APPENDIX-REFERENCE-SUFFIX-SEPARATOR + it.element.body)
-      }
-    } else {
-      it
-    }
-  }
 
   content
 }

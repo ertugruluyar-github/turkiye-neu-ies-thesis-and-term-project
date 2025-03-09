@@ -2,7 +2,7 @@ Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş met
 
 Bölüme atıf yapma örneği: @bölüm-giriş
 
-First line #lorem(50)
+#lorem(50)
 
 Birden fazla çalışmaya tek bir atıf yapma örneği:
 
@@ -16,8 +16,9 @@ Ya da
 
 #cite(label("you_etal_2021_CloserLookUS"), supplement: [ss. 1, 2, 3]) #cite(label("isguzel_2006_UluslararasiOgrenciDegerlendirme"), supplement: [s. 5]).
 
-First line #lorem(50) \
-First line #lorem(50) Atıf yapma örneği @weng_luo_2023_ComparativeAnalysisData[ss. 1-3].
+#lorem(50) \
+#lorem(50) Atıf yapma örneği @weng_luo_2023_ComparativeAnalysisData[ss. 1-3].
 
-First line #lorem(50)
+#lorem(50)
 
+Bir eke atıf yapma örneği: @ek-ilk-sıradaki-ek
