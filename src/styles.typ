@@ -136,7 +136,7 @@
     numbering: APPENDIX-HEADING-NUMBERING,
     outlined: true,
     bookmarked: true,
-    supplement: translator(key: language-keys.APPENDIX) + APPENDIX-PREFIX-SEPERATOR,
+    supplement: translator(key: language-keys.APPENDIX-REFERENCE-SUPPLEMENT),
   )
 
   // 4, 5 ve 6. düzey başlıklarda numaranlandırma yok, İçindekiler tablosunda yok, PDF dökümanı hatlarında yok. [4th, 5th and 6th level headings are not numbered, not listed in the table of contents and do not appear in the PDF document.]
@@ -160,7 +160,7 @@
         it.element.supplement + APPENDIX-REFERENCE-SUFFIX-SEPARATOR + it.element.body
       } else if it.element.level == 2 or it.element.level == 3 {
         (
-          translator(key: language-keys.SHORT-APPENDIX-FOR-REFERENCE)
+          it.element.supplement
             + APPENDIX-PREFIX-SEPERATOR
             + numbering(APPENDIX-REFERENCE-NUMBERING, ..counter(heading).at(it.element.location()))
         )
