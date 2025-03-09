@@ -6,15 +6,17 @@
   template-configurations,
   LANGUAGES,
   REPORT-TYPES,
+  DEPARTMENTS,
+  PROGRAMS,
 )
 
 #show: template-configurations.with(
   // Tezi hangi dilde yazdığınızı seçiniz.
   language: LANGUAGES.TR-TR,
   // Ana Bilim Dalı seçiniz.
-  department: "Ana Bilim Dalı",
+  department: DEPARTMENTS.DEPARTMENT-OF-MATHEMATICS-AND-SCIENCES-EDUCATION,
   // Bilim Dalı seçiniz.
-  program: "Bilim Dalı",
+  program: PROGRAMS.MATHEMATICS-EDUCATION-PROGRAM,
   // Raporun türünü seçiniz.
   report-type: REPORT-TYPES.DOCTORAL-THESIS,
   // Tez önerisi ya da tezin teslim edildiği tarih. Varsayılan olarak bugünün tarihidir. Elle bir tarih girmek için "datetime(day: 20, month: 3, year: 2025)" yapınız.

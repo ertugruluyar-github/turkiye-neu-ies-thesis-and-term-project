@@ -32,8 +32,8 @@
 
 #let template-configurations(
   language: LANGUAGES.TR-TR,
-  department: "Department",
-  program: "Program",
+  department: DEPARTMENTS.__DEPARTMENT-PLACE-HOLDER,
+  program: PROGRAMS.__PROGRAM-PLACE-HOLDER,
   report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL,
   date: datetime.today(),
   thesis-title: (
