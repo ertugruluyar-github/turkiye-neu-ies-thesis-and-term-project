@@ -160,7 +160,7 @@
         it.element.supplement + APPENDIX-REFERENCE-SUFFIX-SEPARATOR + it.element.body
       } else if it.element.level == 2 or it.element.level == 3 {
         (
-          translator(key: language-keys.APPENDIX)
+          translator(key: language-keys.SHORT-APPENDIX-FOR-REFERENCE)
             + APPENDIX-PREFIX-SEPERATOR
             + numbering(APPENDIX-REFERENCE-NUMBERING, ..counter(heading).at(it.element.location()))
         )

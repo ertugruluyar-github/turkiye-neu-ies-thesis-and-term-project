@@ -73,9 +73,9 @@ TERM-PROJECT: "Dönem Projesi"
 #let FIGURE-CAPTION-PREFIX-TEXT-FONT-WEIGHT = 700
 
 // Yazı Sabitleri [String Constants]
-#let STRING-APPENDICES = translator(key: language-keys.APPENDICES)
+//#let STRING-APPENDICES = translator(key: language-keys.APPENDICES)
 
-#let STRING-APPENDIX = translator(key: language-keys.APPENDIX)
+//#let STRING-APPENDIX = translator(key: language-keys.APPENDIX)
 
 
 // Ayraçlar [Separators]
@@ -84,7 +84,7 @@ TERM-PROJECT: "Dönem Projesi"
 #let APPENDIX-HEADING-SUFFIX-SEPARATOR = ":"
 #let APPENDIX-REFERENCE-SUFFIX-SEPARATOR = ": "
 
-#let STRING-APPENDIX-REFERENCE-SUPPLEMENT = STRING-APPENDIX + APPENDIX-PREFIX-SEPERATOR
+//#let STRING-APPENDIX-REFERENCE-SUPPLEMENT = STRING-APPENDIX + APPENDIX-PREFIX-SEPERATOR
 
 // Numaralandırma [Numbering]
 #let PAGE-NUMBERING-ROMAN = "i" // Sayfalar [Pages]
