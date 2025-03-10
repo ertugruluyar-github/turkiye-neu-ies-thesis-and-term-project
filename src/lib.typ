@@ -2,6 +2,7 @@
 #import "/src/core/validation/keyword-count-validator.typ": keyword-count-validator
 #import "/src/core/validation/language-validator.typ": language-validator
 #import "/src/core/validation/department-validator.typ": department-validator
+#import "/src/core/validation/program-validator.typ": program-validator
 #import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
 #import "/src/styles/thesis-main-section-heading-style.typ": thesis-main-section-heading-style
 #import "/src/styles/thesis-back-section-heading-style.typ": thesis-back-section-heading-style
@@ -182,6 +183,8 @@
   language-validator(language: language)
   // Ana Bilim Dalını doğrula. [Validate the department.]
   department-validator(department: department)
+  // Bilim Dalını doğrula. [Validate the program.]
+  program-validator(program: program)
   // Anahtar kelime sayısını doğrula. [Validate keyword count.]
   keyword-count-validator(keyword-count: keywords.tur.len())
   keyword-count-validator(keyword-count: keywords.eng.len())
