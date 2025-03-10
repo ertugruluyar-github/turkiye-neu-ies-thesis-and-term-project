@@ -6,8 +6,7 @@
 #import "/src/styles/figure-style.typ": figure-style
 #import "/src/styles/reference-style.typ": reference-style
 #import "/src/modules/custom-functions.typ": *
-#import "/src/components/keywords-component.typ": keywords-component
-#import "/src/sections/01-front/title-page.typ": *
+#import "/src/sections/01-front/title-page.typ": title-page
 #import "/src/sections/01-front/preface-page.typ": preface-page
 #import "/src/sections/01-front/table-of-contents-page.typ": table-of-contents-page
 #import "/src/sections/01-front/list-of-tables-page.typ": list-of-tables-page
