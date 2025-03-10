@@ -36,9 +36,11 @@
   set par(leading: 1em, spacing: 1em)
 
 
-  let institute-logo-path = if language == LANGUAGES.TR-TR { INSTITUTE-LOGO-PATH.TR-TR } else if (
-    language == LANGUAGES.EN-US
-  ) { INSTITUTE-LOGO-PATH.EN-US }
+  let institute-logo-path = if language == LANGUAGES.TR-TR {
+    INSTITUTE-LOGO-PATH.TR-TR
+  } else if language == LANGUAGES.EN-US {
+    INSTITUTE-LOGO-PATH.EN-US
+  }
   if (
     report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
   ) {
@@ -60,9 +62,11 @@
       or report-type == REPORT-TYPES.DOCTORAL-THESIS
       or report-type == REPORT-TYPES.TERM-PROJECT
   ) {
-    let university-logo-path = if language == LANGUAGES.TR-TR { UNIVERSITY-LOGO-PATH.TR-TR } else if (
-      language == LANGUAGES.EN-US
-    ) { UNIVERSITY-LOGO-PATH.EN-US }
+    let university-logo-path = if language == LANGUAGES.TR-TR {
+      UNIVERSITY-LOGO-PATH.TR-TR
+    } else if language == LANGUAGES.EN-US {
+      UNIVERSITY-LOGO-PATH.EN-US
+    }
 
     grid(
       columns: (1fr, 6fr, 1fr),
@@ -90,9 +94,11 @@
   v(1.75cm)
 
   text(weight: "bold")[
-    #let thesis-title = if language == LANGUAGES.TR-TR { thesis-title.tur } else if (
-      language == LANGUAGES.EN-US
-    ) { thesis-title.eng }
+    #let thesis-title = if language == LANGUAGES.TR-TR {
+      thesis-title.tur
+    } else if language == LANGUAGES.EN-US {
+      thesis-title.eng
+    }
     #upper(thesis-title.upper-case)
   ]
 
