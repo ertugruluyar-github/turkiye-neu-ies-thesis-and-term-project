@@ -63,7 +63,7 @@
     included-page-count: 0,
     similarity-score: 0,
   ),
-  // Anahtar kelimelerin ilk harfi büyük diğer harfleri küçük olmalıdır. En az 3 adet ve en fazla 5 adet olmalıdır.
+  // Tez çalışmasının Türkçe ve İngilizce anahtar kelimeleri. Anahtar kelimelerin ilk harfi büyük diğer harfleri küçük olmalıdır. En az 3 adet ve en fazla 5 adet olmalıdır.
   keywords: (
     // Tez çalışmasının Türkçe anahtar kelimeleri.
     tur: (
