@@ -71,6 +71,7 @@
     included-page-count: 0,
     similarity-score: 0,
   ),
+  // TODO: Sözlük haline getir, array biçiminde verilsinler ve 3'ten az ve 5'ten fazla olduğunda uyarı versin.
   keywords-tur: "anahtar kelime 1, anahtar kelime 2, anahtar kelime 3, anahtar kelime 4, anahtar kelime 5",
   keywords-eng: "keyword 1, keyword 2, keyword 3, keyword 4, keyword 5",
   show-list-of-tables: true,
