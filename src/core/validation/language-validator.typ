@@ -4,6 +4,6 @@
   assert(
     language in LANGUAGES.values(),
     message: STRING-ERROR-INLINE-TITLE
-      + "'language' parametresine desteklenmeyen ya da hatalı dil girişi oldu. Lütfen 'LANGUAGES' sözlüğündeki bir dili seçiniz.",
+      + "'language' parametresine desteklenmeyen ya da hatalı bir giriş oldu. Lütfen 'LANGUAGES' sözlüğündeki bir dili seçiniz.",
   )
 }
