@@ -12,7 +12,7 @@
 
 #show: template-configurations.with(
   // Raporun dilini seçiniz.
-  language: LANGUAGES.TR-TR,
+  language: LANGUAGES.EN-US,
   // Ana Bilim Dalı seçiniz.
   department: DEPARTMENTS.DEPARTMENT-OF-MATHEMATICS-AND-SCIENCES-EDUCATION,
   // Bilim Dalı seçiniz.
@@ -36,7 +36,7 @@
   author: (
     first-name: "Yazarın Adı",
     last-name: "SOYADI",
-    orcid: "XXXX-XXXX-XXXX-XXXX",
+    orcid: "XXXX-XXXX-XXXX-XXXX", // TODO: ORCID'e sadece sayı kabulu kontolü ekle.
   ),
   // Danışmanın adı, soyadı ve ORCID numarası.
   advisor: (
