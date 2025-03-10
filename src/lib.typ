@@ -4,6 +4,7 @@
 #import "/src/core/validation/department-validator.typ": department-validator
 #import "/src/core/validation/program-validator.typ": program-validator
 #import "/src/core/validation/report-type-validator.typ": report-type-validator
+#import "/src/core/validation/date-validator.typ": date-validator
 #import "/src/core/validation/title-validator.typ": title-validator
 #import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
 #import "/src/styles/thesis-main-section-heading-style.typ": thesis-main-section-heading-style
@@ -189,6 +190,8 @@
   program-validator(program: program)
   // Rapor türünü doğrula. [Validate the report type.]
   report-type-validator(report-type: report-type)
+  // Tarihi doğrula. [Validate the date.]
+  date-validator(date: date)
   // Ünvanı doğrula. [Validate the title.]
   title-validator(title: advisor.title)
   title-validator(title: second-advisor.title)
