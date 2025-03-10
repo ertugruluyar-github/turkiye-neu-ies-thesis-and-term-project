@@ -1,5 +1,8 @@
 #import "/src/constants.typ": *
 #import "/src/styles.typ": *
+#import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
+#import "/src/styles/thesis-main-section-heading-style.typ": thesis-main-section-heading-style
+#import "/src/styles/thesis-back-section-heading-style.typ": thesis-back-section-heading-style
 #import "/src/styles/page-numbering-style.typ": page-numbering-style
 #import "/src/styles/bibliography-section-style.typ": bibliography-section-style
 #import "/src/styles/table-style.typ": table-style
@@ -282,8 +285,10 @@
 
   {
     /* ---- TEZİN ÖN KISMI [FRONT SECTION OF THESIS] ---- */
+    // Başlık stili
+    show: thesis-front-section-heading-style
+
     //
-    show: set-styles-for-front-section-of-thesis
     set par(
       justify: true,
       first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: true),
@@ -412,8 +417,8 @@
 
   {
     /* --- TEZİN ANA KISMI [MAIN SECTION OF THESIS] --- */
-    //
-    show: set-styles-for-main-section-of-thesis
+    // Başlık stili
+    show: thesis-main-section-heading-style
 
     //
     set par(
@@ -458,8 +463,8 @@
     // Başlık numarlandırmasını 1'den başlat.
     counter(heading).update(1)
 
-    // Başlık stilleri
-    show: set-styles-for-back-section-of-thesis
+    // Başlık stili
+    show: thesis-back-section-heading-style
 
     // Çalışma takvimi
     if (
