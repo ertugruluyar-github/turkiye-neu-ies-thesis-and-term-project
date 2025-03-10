@@ -498,7 +498,7 @@
     bibliography-section-style(
       bibliography(
         "/template/bibliography-sources/references.bib",
-        style: "/template/bibliography-styles/apa7-" + language.language-code + ".csl",
+        style: "american-psychological-association",
         title: upper(translator(key: language-keys.BIBLIOGRAPHY)),
         full: false,
       ),
