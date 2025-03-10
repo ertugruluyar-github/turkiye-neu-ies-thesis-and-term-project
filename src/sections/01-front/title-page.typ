@@ -138,7 +138,10 @@
     )
       and thesis-study-funding-organization != none
   ) {
-    thesis-study-funding-organization-component(thesis-study-funding-organization: thesis-study-funding-organization)
+    thesis-study-funding-organization-component(
+      language: language,
+      thesis-study-funding-organization: thesis-study-funding-organization,
+    )
     v(0.5cm)
   } else {
     v(1cm)
