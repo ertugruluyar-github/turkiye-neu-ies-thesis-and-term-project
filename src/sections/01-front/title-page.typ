@@ -70,7 +70,7 @@
       row-gutter: 12pt,
       image(university-logo-path, width: 2.7cm, height: 2.7cm),
       text(weight: "bold")[
-        #upper(translator(key: language-keys.SHORT-REPUPLIC-OF-TURKIYE))\
+        #upper(translator(key: language-keys.THE-REPUPLIC-OF-TURKIYE))\
         #upper(translator(key: language-keys.UNIVERSITY-NAME-UPPER-CASE))\
         #upper(translator(key: language-keys.INSTITUTE-NAME-UPPER-CASE))
       ],
