@@ -1,4 +1,5 @@
 #import "/src/constants.typ": *
+#import "/src/core/validation/keyword-count-validator.typ": keyword-count-validator
 #import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
 #import "/src/styles/thesis-main-section-heading-style.typ": thesis-main-section-heading-style
 #import "/src/styles/thesis-back-section-heading-style.typ": thesis-back-section-heading-style
@@ -174,6 +175,11 @@
   ),
   body,
 ) = {
+  // Doğrulama işlemlerini gerçekleştir. [Perform the verification process.]
+  // Anahtar kelime sayısını doğrula. [Validate keyword count.]
+  keyword-count-validator(keyword-count: keywords.tur.len())
+  keyword-count-validator(keyword-count: keywords.eng.len())
+
   // Initialize the language manager
   init-language-manager(default-language: language.language-code)
 
