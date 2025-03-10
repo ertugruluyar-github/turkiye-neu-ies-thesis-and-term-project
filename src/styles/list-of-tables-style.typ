@@ -16,5 +16,7 @@
   // Satırların içeriğindeki doldurma stili. [Outline entry content's fill style.]
   set outline.entry(fill: repeat(justify: true, gap: 0.1em)[.])
 
+  // TODO: "Table 2.1" kısmını kalın yazıdır. Şekiller listesi içinde aynı şekilde.
+
   content
 }
