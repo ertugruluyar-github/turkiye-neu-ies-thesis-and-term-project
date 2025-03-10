@@ -38,7 +38,7 @@
 
   let institute-logo-path = if language == LANGUAGES.TR-TR { INSTITUTE-LOGO-PATH.TR-TR } else if (
     language == LANGUAGES.EN-US
-  ) { INSTITUTE-LOGO-PATH.EN-US } else { INSTITUTE-LOGO-PATH.TR-TR }
+  ) { INSTITUTE-LOGO-PATH.EN-US }
   if (
     report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
   ) {
@@ -62,7 +62,7 @@
   ) {
     let university-logo-path = if language == LANGUAGES.TR-TR { UNIVERSITY-LOGO-PATH.TR-TR } else if (
       language == LANGUAGES.EN-US
-    ) { UNIVERSITY-LOGO-PATH.EN-US } else { UNIVERSITY-LOGO-PATH.TR-TR }
+    ) { UNIVERSITY-LOGO-PATH.EN-US }
 
     grid(
       columns: (1fr, 6fr, 1fr),
