@@ -1,6 +1,7 @@
 #import "/src/constants.typ": *
 #import "/src/core/validation/keyword-count-validator.typ": keyword-count-validator
 #import "/src/core/validation/language-validator.typ": language-validator
+#import "/src/core/validation/department-validator.typ": department-validator
 #import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
 #import "/src/styles/thesis-main-section-heading-style.typ": thesis-main-section-heading-style
 #import "/src/styles/thesis-back-section-heading-style.typ": thesis-back-section-heading-style
@@ -177,8 +178,10 @@
   body,
 ) = {
   // Doğrulama işlemlerini gerçekleştir. [Perform the verification process.]
-  // Dili doğrula. [Validate language.]
+  // Dili doğrula. [Validate the language.]
   language-validator(language: language)
+  // Ana Bilim Dalını doğrula. [Validate the department.]
+  department-validator(department: department)
   // Anahtar kelime sayısını doğrula. [Validate keyword count.]
   keyword-count-validator(keyword-count: keywords.tur.len())
   keyword-count-validator(keyword-count: keywords.eng.len())
