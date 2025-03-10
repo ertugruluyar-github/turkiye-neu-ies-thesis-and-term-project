@@ -4,6 +4,7 @@
 #import "/src/core/validation/department-validator.typ": department-validator
 #import "/src/core/validation/program-validator.typ": program-validator
 #import "/src/core/validation/report-type-validator.typ": report-type-validator
+#import "/src/core/validation/title-validator.typ": title-validator
 #import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
 #import "/src/styles/thesis-main-section-heading-style.typ": thesis-main-section-heading-style
 #import "/src/styles/thesis-back-section-heading-style.typ": thesis-back-section-heading-style
@@ -188,6 +189,12 @@
   program-validator(program: program)
   // Rapor türünü doğrula. [Validate the report type.]
   report-type-validator(report-type: report-type)
+  // Ünvanı doğrula. [Validate the title.]
+  title-validator(title: advisor.title)
+  title-validator(title: second-advisor.title)
+  for get-info-from-recommended-people in curriculum-vitae-info.get-info-from-recommended-peoples {
+    title-validator(title: get-info-from-recommended-people.title)
+  }
   // Anahtar kelime sayısını doğrula. [Validate keyword count.]
   keyword-count-validator(keyword-count: keywords.tur.len())
   keyword-count-validator(keyword-count: keywords.eng.len())
