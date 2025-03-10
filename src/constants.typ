@@ -49,6 +49,14 @@ TERM-PROJECT: "Dönem Projesi"
   TERM-PROJECT: translator(key: language-keys.TERM-PROJECT),
 )
 
+#let ACADEMIC-MEMBER-TITLES = (
+  __ACADEMIC-MEMBER-TITLE-PLACE-HOLDER: translator(key: language-keys.ACADEMIC-MEMBER-TITLE-PLACE-HOLDER),
+  ASSISTANT-PROFESSOR-DR: translator(key: language-keys.ASSISTANT-PROFESSOR-DR),
+  ASSOCIATE-PROFESSOR-DR: translator(key: language-keys.ASSOCIATE-PROFESSOR-DR),
+  PROFESSOR: translator(key: language-keys.PROFESSOR),
+  PROFESSOR-DR: translator(key: language-keys.PROFESSOR-DR),
+)
+
 #let FONT-NAME = "Times New Roman"
 #let FONT-SIZE = 12pt
 #let ALTERNATE-FONT-SIZE = 10pt

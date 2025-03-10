@@ -1,4 +1,5 @@
 [translations]
+#
 SHORT-REPUPLIC-OF-TURKIYE = "THE REPUBLIC OF TÜRKİYE"
 CITY-NAME = "Konya"
 ORCID = "ORCID"
@@ -18,11 +19,18 @@ DOCTORAL-THESIS-PROPOSAL = "Doctoral Thesis Proposal"
 DOCTORAL-THESIS = "Doctoral Thesis"
 TERM-PROJECT = "Term Project of Non-Thesis Master"
 
-# Thesis Committee
+# Advisors
 ADVISOR = "Advisor"
 SECOND-ADVISOR = "Second Advisor"
 FIRST-REVIEWER = "1st Jury Member"
 SECOND-REVIEWER = "2nd Jury Member"
+
+# Academic Member Titles
+ACADEMIC-MEMBER-TITLE-PLACE-HOLDER = "Title"
+ASSISTANT-PROFESSOR-DR = "Asst. Prof. Dr."
+ASSOCIATE-PROFESSOR-DR = "Assoc. Prof. Dr."
+PROFESSOR = "Prof."
+PROFESSOR-DR = "Prof. Dr."
 
 # Document Sections
 PREFACE = "PREFACE (ACKNOWLEDGMENT)"

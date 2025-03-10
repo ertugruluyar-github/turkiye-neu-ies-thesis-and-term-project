@@ -52,13 +52,13 @@
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
   advisor: (
-    title: "Advisor's title",
+    title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
     first-name: "Advisor's firstname",
     last-name: "Advisor's lastname",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
   second-advisor: (
-    title: "Second Advisor's title",
+    title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
     first-name: "Second Advisor's firstname",
     last-name: "Second Advisor's lastname",
     orcid: "xxxx-xxxx-xxxx-xxxx",

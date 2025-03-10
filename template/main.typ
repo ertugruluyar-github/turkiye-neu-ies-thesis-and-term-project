@@ -8,6 +8,7 @@
   REPORT-TYPES,
   DEPARTMENTS,
   PROGRAMS,
+  ACADEMIC-MEMBER-TITLES,
 )
 
 #show: template-configurations.with(
@@ -40,14 +41,14 @@
   ),
   // Danışmanın adı, soyadı ve ORCID numarası.
   advisor: (
-    title: "Ünvan",
+    title: ACADEMIC-MEMBER-TITLES.ASSISTANT-PROFESSOR-DR,
     first-name: "Danışman Adı",
     last-name: "SOYADI",
     orcid: "XXXX-XXXX-XXXX-XXXX",
   ),
   // İkinci danışmanın adı, soyadı ve ORCID numarası. İkinci danışman yoksa "second-advisor: none" yapınız.
   second-advisor: (
-    title: "Ünvan",
+    title: ACADEMIC-MEMBER-TITLES.ASSISTANT-PROFESSOR-DR,
     first-name: "İkinci Danışman Adı",
     last-name: "SOYADI",
     orcid: "XXXX-XXXX-XXXX-XXXX",
