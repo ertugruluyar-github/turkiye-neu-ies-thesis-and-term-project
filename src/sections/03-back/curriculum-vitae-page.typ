@@ -1,8 +1,9 @@
 #import "/src/constants.typ": FULL-DATE-FORMAT
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
+#import "/src/components/fullname-with-title-component.typ": fullname-with-title-component
 #import "/src/components/email-link-component.typ": email-link-component
-#import "/src/components/orcid-link-component.typ": orcid-link-component
+#import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
 
 #let curriculum-vitae-page(
   first-name: none,
@@ -61,7 +62,12 @@
 ) = {
   show heading.where(level: 1): set align(center)
 
-  set par(justify: false, leading: 1em, spacing: 1.5em)
+  set par(
+    first-line-indent: 0cm,
+    justify: false,
+    leading: 1em,
+    spacing: 1.5em,
+  )
 
   set table(
     column-gutter: auto,
@@ -73,7 +79,7 @@
       bottom: 1em,
       right: 0.5em,
     ),
-    align: left,
+    align: left + horizon,
     stroke: 0.25pt + black,
   )
 
@@ -127,15 +133,27 @@
       [*#translator(key: language-keys.GET-INFO-FROM-RECOMMENDED-PEOPLES):*], [#(
           get-info-from-recommended-peoples
             .map(it => (
-              it.name-with-title
-                + " ("
-                + orcid-link-component(orcid: it.orcid)
-                + ")"
-                + " ("
+              fullname-with-title-component(
+                title: it.title,
+                first-name: it.first-name,
+                last-name: it.last-name,
+              )
+                + "\n"
+                + orcid-with-prefix-component(orcid: it.orcid)
+                + "\n"
+                + translator(key: language-keys.EMAIL)
+                + ": "
                 + email-link-component(email: it.email)
-                + ")"
             ))
-            .join("\n")
+            .join({
+              align(
+                center,
+                line(
+                  length: 95%,
+                  stroke: (paint: black, thickness: 0.25pt, dash: "dashed"),
+                ),
+              )
+            })
         )],
     ),
   )

@@ -1,5 +1,5 @@
 #import "/src/components/full-date-with-author-fullname-component.typ": full-date-with-author-fullname-component
-#import "/src/components/advisor-fullname-with-title-component.typ": advisor-fullname-with-title-component
+#import "/src/components/fullname-with-title-component.typ": fullname-with-title-component
 #import "/src/components/date-component.typ": date-component
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
@@ -51,7 +51,14 @@
 
   v(2em)
 
-  align(center, advisor-fullname-with-title-component(advisor: advisor))
+  align(
+    center,
+    fullname-with-title-component(
+      title: advisor.title,
+      first-name: advisor.first-name,
+      last-name: advisor.last-name,
+    ),
+  )
 
   // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
   pagebreak(weak: true)

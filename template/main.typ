@@ -143,12 +143,16 @@
     ),
     get-info-from-recommended-peoples: (
       (
-        name-with-title: "Prof. Dr. Adı SOYADI",
+        title: ACADEMIC-MEMBER-TITLES.ASSISTANT-PROFESSOR-DR,
+        first-name: "Adı",
+        last-name: "SOYADI",
         orcid: "xxxx-xxxx-xxxx-xxxx",
         email: "eposta@mail.com",
       ),
       (
-        name-with-title: "Doç. Dr. Adı SOYADI",
+        title: ACADEMIC-MEMBER-TITLES.ASSISTANT-PROFESSOR-DR,
+        first-name: "Adı",
+        last-name: "SOYADI",
         orcid: "xxxx-xxxx-xxxx-xxxx",
         email: "eposta@mail.com",
       ),

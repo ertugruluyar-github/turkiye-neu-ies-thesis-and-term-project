@@ -48,19 +48,19 @@
   ),
   author: (
     first-name: "Author's firstname",
-    last-name: "Author's lastname",
+    last-name: "Author's LASTNAME",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
   advisor: (
     title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
     first-name: "Advisor's firstname",
-    last-name: "Advisor's lastname",
+    last-name: "Advisor's LASTNAME",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
   second-advisor: (
     title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
     first-name: "Second Advisor's firstname",
-    last-name: "Second Advisor's lastname",
+    last-name: "Second Advisor's LASTNAME",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
   thesis-study-funding-organization: (
@@ -143,12 +143,16 @@
     ),
     get-info-from-recommended-peoples: (
       (
-        name-with-title: "Prof. Dr. Firstname LASTNAME",
+        title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
+        first-name: "Firstname",
+        last-name: "LASTNAME",
         orcid: "xxxx-xxxx-xxxx-xxxx",
         email: "email@mail.com",
       ),
       (
-        name-with-title: "Assoc. Prof. Dr. Adı LASTNAME",
+        title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
+        first-name: "Firstname",
+        last-name: "LASTNAME",
         orcid: "xxxx-xxxx-xxxx-xxxx",
         email: "email@mail.com",
       ),

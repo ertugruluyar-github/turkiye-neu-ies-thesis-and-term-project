@@ -100,6 +100,7 @@
   v(1.75cm)
 
   fullname-component(first-name: author.first-name, last-name: author.last-name)
+  linebreak()
   orcid-with-prefix-component(orcid: author.orcid)
 
   v(1.25cm)
@@ -112,6 +113,7 @@
   }
 
   translator(key: language-keys.ADVISOR)
+  linebreak()
   advisor-with-orcid-component(advisor: advisor)
 
   v(0.5cm)
@@ -123,6 +125,7 @@
       and second-advisor != none
   ) {
     translator(key: language-keys.SECOND-ADVISOR)
+    linebreak()
     advisor-with-orcid-component(advisor: second-advisor)
     v(0.75cm)
   } else {
