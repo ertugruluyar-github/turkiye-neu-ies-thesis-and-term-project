@@ -89,7 +89,13 @@
 
   v(1.75cm)
 
-  text(weight: "bold")[#upper(thesis-title.tur.upper-case)]
+  text(weight: "bold")[
+    #let thesis-title = if language == LANGUAGES.TR-TR { thesis-title.tur } else if (
+      language == LANGUAGES.EN-US
+    ) { thesis-title.eng }
+    #upper(thesis-title.upper-case)
+  ]
+
 
   v(1.75cm)
 
