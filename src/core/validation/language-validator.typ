@@ -2,7 +2,7 @@
 
 #let language-validator(language: none) = {
   assert(
-    language == LANGUAGES.TR-TR or language == LANGUAGES.EN-US,
+    language in LANGUAGES.values(),
     message: "Desteklenmeyen ya da hatalı dil girişi oldu. Lütfen 'LANGUAGES' sözlüğündeki bir dili seçiniz.",
   )
 }
