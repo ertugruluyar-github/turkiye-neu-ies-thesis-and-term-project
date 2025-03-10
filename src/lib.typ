@@ -70,9 +70,22 @@
     included-page-count: 0,
     similarity-score: 0,
   ),
-  // TODO: Sözlük haline getir, array biçiminde verilsinler ve 3'ten az ve 5'ten fazla olduğunda uyarı versin.
-  keywords-tur: "anahtar kelime 1, anahtar kelime 2, anahtar kelime 3, anahtar kelime 4, anahtar kelime 5",
-  keywords-eng: "keyword 1, keyword 2, keyword 3, keyword 4, keyword 5",
+  keywords: (
+    tur: (
+      "Anahtar kelime 1",
+      "Anahtar kelime 2",
+      "Anahtar kelime 3",
+      "Anahtar kelime 4",
+      "Anahtar kelime 5",
+    ),
+    eng: (
+      "Keyword 1",
+      "Keyword 2",
+      "Keyword 3",
+      "Keyword 4",
+      "Keyword 5",
+    ),
+  ),
   show-list-of-tables: true,
   show-list-of-images: true,
   have-symbols: true,
@@ -166,7 +179,7 @@
   set document(
     title: thesis-title.tur.title-case + " (" + thesis-title.eng.title-case + ")",
     author: (author.first-name + " " + upper(author.last-name)),
-    keywords: (keywords-tur, keywords-eng),
+    keywords: (..keywords.tur, ..keywords.eng),
   )
 
   set page(
@@ -370,7 +383,7 @@
         report-type: report-type,
         thesis-title: thesis-title,
         author: author,
-        keywords: keywords-tur,
+        keywords: keywords.tur,
       )
     }
 
@@ -386,7 +399,7 @@
         report-type: report-type,
         thesis-title: thesis-title,
         author: author,
-        keywords: keywords-eng,
+        keywords: keywords.eng,
       )
     }
   }

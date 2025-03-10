@@ -63,10 +63,25 @@
     included-page-count: 0,
     similarity-score: 0,
   ),
-  // Tez çalışmasının Türkçe anahtar kelimeleri.
-  keywords-tur: "Tez hazırlama kılavuzunda verilen açıklamaları dikkate alarak tezle ilgili en az üç, en fazla beş anahtar kelime yazılmalıdır. (Örnek: anahtar kelime 1, anahtar kelime 2, anahtar kelime 3)",
-  // Tez çalışmasının İngilizce anahtar kelimeleri.
-  keywords-eng: "Türkçe özetteki anahtar kelimelerin İngilizcesini yazınız. (Örnek: keyword 1, keyword 2, keyword 3)",
+  // Anahtar kelimelerin ilk harfi büyük diğer harfleri küçük olmalıdır. En az 3 adet ve en fazla 5 adet olmalıdır.
+  keywords: (
+    // Tez çalışmasının Türkçe anahtar kelimeleri.
+    tur: (
+      "Anahtar kelime 1",
+      "Anahtar kelime 2",
+      "Anahtar kelime 3",
+      "Anahtar kelime 4",
+      "Anahtar kelime 5",
+    ),
+    // Tez çalışmasının İngilizce anahtar kelimeleri.
+    eng: (
+      "Keyword 1",
+      "Keyword 2",
+      "Keyword 3",
+      "Keyword 4",
+      "Keyword 5",
+    ),
+  ),
   // Tablolar listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-tables: true" yapınız. Yer almasını istemiyorsanız "show-list-of-tables: false" yapınız.
   show-list-of-tables: true,
   // Şekiller listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-images: true" yapınız. Yer almasını istemiyorsanız "show-list-of-images: false" yapınız.

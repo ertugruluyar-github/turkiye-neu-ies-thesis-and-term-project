@@ -92,6 +92,10 @@ TERM-PROJECT: "Dönem Projesi"
 #let ONLY-YEAR-DATE-FORMAT = "[year]"
 #let LONG-MONTH-YEAR-DATE-FORMAT = "[month repr:long] [year]"
 
+// Anahtar Kelime Sayısı Kuralı [Keyword Count Rules]
+#let MIN-KEYWORD-COUNT = 3
+#let MAX-KEYWORD-COUNT = 5
+
 // Aylar [Months]
 #let STRING-MONTH-NAMES = (
   translator(key: language-keys.JANUARY),
