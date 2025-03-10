@@ -107,7 +107,7 @@
   )
 
   //
-  let APPENDIX-REFERENCE-NUMBERING(..nums) = nums.pos().slice(1).map(str).join(".")
+  let APPENDIX-REFERENCE-NUMBERING(..nums) = numbering("1.1", ..nums.pos().slice(1))
 
   // Başlıklar sola hizalandı. [Headings are aligned left.]
   show heading: set align(left)
