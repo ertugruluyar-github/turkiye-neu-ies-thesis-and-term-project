@@ -94,6 +94,10 @@ TERM-PROJECT: "Dönem Projesi"
 
 // Doğrulama [Validation]
 #let STRING-ERROR-INLINE-TITLE = "HATA: "
+#let STRING-RELATED-DOCUMENTATION-INLINE-TITLE = "İlgili Dökümantasyon: "
+#let STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/dictionary/"
+#let STRING-TYPST-DATETIME-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/datetime/"
+
 
 // Anahtar Kelime Sayısı Kuralı [Keyword Count Rules]
 #let MIN-KEYWORD-COUNT = 3
