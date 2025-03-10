@@ -1,11 +1,5 @@
-#import "/src/constants.typ": (
-  HEADING-NUMBERING,
-  APPENDIX-PREFIX-SEPERATOR,
-  APPENDIX-HEADING-SUFFIX-SEPARATOR,
-  APPENDIX-REFERENCE-SUFFIX-SEPARATOR,
-  ALTERNATE-FONT-SIZE,
-  PARAGRAPH-SPACING-SIZE,
-)
+#import "/src/constants.typ": HEADING-NUMBERING, PARAGRAPH-SPACING-SIZE
+
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 #import "/src/styles/heading-spacing-style.typ": heading-spacing-style
