@@ -60,6 +60,10 @@
     ),
   ),
 ) = {
+  let sorted-work-experiences = work-experiences.sorted(
+    key: work-experience => (work-experience.start-date, work-experience.end-date),
+  )
+
   show heading.where(level: 1): set align(center)
 
   set par(
@@ -124,7 +128,7 @@
       table.cell(colspan: 2, align(center)[*#translator(key: language-keys.WORK-BACKGROUND)*]),
       [*#translator(key: language-keys.SKILLS):*], [#skills],
       [*#translator(key: language-keys.WORK-EXPERIENCES):*], [#(
-          work-experiences
+          sorted-work-experiences
             .map(it => (
               "("
                 + it.start-date.display(MONTH-YEAR-DATE-FORMAT)
