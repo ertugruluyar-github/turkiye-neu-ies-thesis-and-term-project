@@ -1,10 +1,10 @@
 #import "/src/core/validation/date-validator.typ": date-validator
-#import "/src/core/validation/minimum-value-validator.typ": minimum-value-validator
-#import "/src/core/validation/maximum-value-validator.typ": maximum-value-validator
+#import "/src/core/validation/orcid-validator.typ": orcid-validator
 
 #let curriculum-vitae-info-validator(
   birthday: none,
   work-experiences: none,
+  get-info-from-recommended-peoples: none,
 ) = {
   date-validator(
     date: birthday,
@@ -53,5 +53,15 @@
         + str(index)
         + ". iş deneyiminde hata var. 'curriculum-vitae parametresindeki work-experience.end-date' tarihi doğum günü tarihinden geride olamaz.",
     )
+  }
+
+  for (index, get-info-from-recommended-people) in get-info-from-recommended-peoples.enumerate(start: 1) {
+    if get-info-from-recommended-people.orcid != none {
+      orcid-validator(
+        orcid: get-info-from-recommended-people.orcid,
+        parameter-name: "curriculum-vitae parametresindeki get-info-from-recommended-people.orcid",
+        parameter-description: "Öz Geçmişteki " + str(index) + ". bilgi almak için önerebileceğim şahsın ORCID'i",
+      )
+    }
   }
 }

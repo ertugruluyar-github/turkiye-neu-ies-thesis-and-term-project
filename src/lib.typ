@@ -208,22 +208,26 @@
     parameter-description: "Şablon ayarlarındaki tarih",
   )
 
-  // ORCID'leri doğrula. [Validate the ORCIDs.]
+  // Yazarın ORCID'ini doğrula. [Validate the author's ORCID.]
   orcid-validator(
     orcid: author.orcid,
     parameter-name: "author.orcid",
     parameter-description: "Yazarın ORCID değeri",
   )
+
+  // Danışmanın ORCID'ini doğrula. [Validate the advisor's ORCID.]
   orcid-validator(
     orcid: advisor.orcid,
     parameter-name: "advisor.orcid",
     parameter-description: "Danışmanın ORCID değeri",
   )
+
+  // İkinci Danışmanın ORCID'ini doğrula. [Validate the second advisor's ORCID.]
   if second-advisor != none {
     orcid-validator(
       orcid: second-advisor.orcid,
       parameter-name: "second-advisor.orcid",
-      parameter-description: "ikinci Danışmanın ORCID değeri",
+      parameter-description: "İkinci Danışmanın ORCID değeri",
     )
   }
 
@@ -249,11 +253,12 @@
     work-packages-months-validator(work-packages: work-packages, report-type: report-type)
   }
 
-  // Öz Geçmişdeki tarihleri doğrula. [Validate dates in the Curriculum Vitae.]
+  // Öz Geçmişi doğrula. [Validate the Curriculum Vitae.]
   if report-type == REPORT-TYPES.TERM-PROJECT {
     curriculum-vitae-info-validator(
       birthday: curriculum-vitae-info.birthday,
       work-experiences: curriculum-vitae-info.work-experiences,
+      get-info-from-recommended-peoples: curriculum-vitae-info.get-info-from-recommended-peoples,
     )
   }
 
