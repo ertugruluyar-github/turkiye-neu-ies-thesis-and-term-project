@@ -182,30 +182,37 @@
   ),
   body,
 ) = {
-  // Doğrulama işlemlerini gerçekleştir. [Perform the verification process.]
+  /* ---- Doğrulama İşlemleri [Verification Process] ---- */
   // Dili doğrula. [Validate the language.]
   language-validator(language: language)
+
   // Ana Bilim Dalını doğrula. [Validate the department.]
   department-validator(department: department)
+
   // Bilim Dalını doğrula. [Validate the program.]
   program-validator(program: program)
+
   // Rapor türünü doğrula. [Validate the report type.]
   report-type-validator(report-type: report-type)
+
   // Tarihi doğrula. [Validate the date.]
   date-validator(date: date)
+
   // Akademik ünvanı doğrula. [Validate the academic title.]
   academic-member-title-validator(academic-member-title: advisor.academic-member-title)
   academic-member-title-validator(academic-member-title: second-advisor.academic-member-title)
+
   // Orijinallik değerlerini doğrula. [Verify the authenticity values.]
   thesis-originalty-validator(thesis-originalty: thesis-originalty)
+
   // Anahtar kelime sayısını doğrula. [Validate keyword count.]
   keyword-count-validator(keyword-count: keywords.tur.len())
   keyword-count-validator(keyword-count: keywords.eng.len())
 
-  // Initialize the language manager
+  /* ---- Initialize the Language Manager ---- */
   init-language-manager(default-language: language.language-code)
 
-  /* Basic document rules. */
+  /* ---- Common Document Rules ---- */
   set document(
     title: thesis-title.tur.title-case + " (" + thesis-title.eng.title-case + ")",
     author: (author.first-name + " " + upper(author.last-name)),
