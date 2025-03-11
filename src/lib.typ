@@ -603,6 +603,7 @@
       curriculum-vitae-page(
         first-name: author.first-name,
         last-name: author.last-name,
+        orcid: author.orcid,
         ..curriculum-vitae-info,
       )
     }

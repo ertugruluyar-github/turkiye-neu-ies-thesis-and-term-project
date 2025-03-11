@@ -3,12 +3,14 @@
 #import "/src/constants/language-keys.typ": language-keys
 #import "/src/styles/curriculum-vitae-page-style.typ": curriculum-vitae-page-style
 #import "/src/components/fullname-with-title-component.typ": fullname-with-title-component
+#import "/src/components/orcid-link-component.typ": orcid-link-component
 #import "/src/components/email-link-component.typ": email-link-component
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
 
 #let curriculum-vitae-page(
   first-name: none,
   last-name: none,
+  orcid: none,
   birthplace: none,
   birthday: none,
   address: none,
@@ -79,10 +81,11 @@
     table.cell(colspan: 4, align(center)[*#translator(key: language-keys.GENERAL-INFO)*]),
     [*#translator(key: language-keys.FIRST-NAME-LAST-NAME):*], [#first-name #upper(last-name)], [*#translator(key: language-keys.SIGNATURE):*], [],
     [*#translator(key: language-keys.BIRTHPLACE):*], [#upper(birthplace)], [*#translator(key: language-keys.BIRTHPLACE):*], [#birthday.display(FULL-DATE-FORMAT)],
-    [*#translator(key: language-keys.ADRESS):*], [#address], [*#translator(key: language-keys.MARITAL-STATUS):*], [#marital-status],
-    [*#translator(key: language-keys.PHONE-NUMBER):*], [#phone-number], [*#translator(key: language-keys.EMAIL):*], [#email-link-component(
-        email: email,
-      )],
+    [*#translator(key: language-keys.PHONE-NUMBER):*], [#phone-number], [*#translator(key: language-keys.MARITAL-STATUS):*], [#marital-status],
+    [*#translator(key: language-keys.ORCID):*], [#orcid-link-component(
+        orcid: orcid,
+      )], [*#translator(key: language-keys.EMAIL):*], [#email-link-component(email: email)],
+    [*#translator(key: language-keys.ADRESS):*], table.cell(colspan: 3)[#address],
   )
 
   // Eğitim Bilgiler tablosu. [Educational Backgorund table.]
