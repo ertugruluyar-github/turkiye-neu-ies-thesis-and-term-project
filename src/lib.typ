@@ -8,6 +8,7 @@
 #import "/src/core/validation/thesis-originalty-validator.typ": thesis-originalty-validator
 #import "/src/core/validation/keyword-count-validator.typ": keyword-count-validator
 #import "/src/core/validation/work-packages-months-validator.typ": work-packages-months-validator
+#import "/src/core/validation/curriculum-vitae-info-validator.typ": curriculum-vitae-info-validator
 #import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
 #import "/src/styles/thesis-main-section-heading-style.typ": thesis-main-section-heading-style
 #import "/src/styles/thesis-back-section-heading-style.typ": thesis-back-section-heading-style
@@ -197,7 +198,11 @@
   report-type-validator(report-type: report-type)
 
   // Tarihi doğrula. [Validate the date.]
-  date-validator(date: date)
+  date-validator(
+    date: date,
+    parameter-name: "template-configurations.date",
+    parameter-description: "Şablon ayarlarındaki tarih",
+  )
 
   // Akademik ünvanı doğrula. [Validate the academic title.]
   academic-member-title-validator(academic-member-title: advisor.academic-member-title)
@@ -220,6 +225,12 @@
   ) {
     work-packages-months-validator(work-packages: work-packages, report-type: report-type)
   }
+
+  //
+  curriculum-vitae-info-validator(
+    birthday: curriculum-vitae-info.birthday,
+    work-experiences: curriculum-vitae-info.work-experiences,
+  )
 
   /* ---- Initialize the Language Manager ---- */
   init-language-manager(default-language: language.language-code)

@@ -142,16 +142,17 @@
       start-year: 2032,
     ),
     skills: "Beceri 1, Beceri 2, ...",
+    // İş deneyimlerinizi geçmişten günümüze doğru sırayla giriniz.
     work-experiences: (
       (
-        start-date: datetime(day: 1, month: 3, year: 2030),
-        end-date: datetime(day: 1, month: 6, year: 2033),
+        start-date: datetime(day: 1, month: 3, year: 2012),
+        end-date: datetime(day: 1, month: 6, year: 2017),
         organization-name: "Çalıştın Kurumun Adı",
         title: "Ünvanın/Görevin",
       ),
       (
-        start-date: datetime(day: 1, month: 7, year: 2033),
-        end-date: datetime(day: 1, month: 3, year: 2037),
+        start-date: datetime(day: 1, month: 7, year: 2017),
+        end-date: datetime(day: 1, month: 3, year: 2025),
         organization-name: "Çalıştın Kurumun Adı",
         title: "Ünvanın/Görevin",
       ),
