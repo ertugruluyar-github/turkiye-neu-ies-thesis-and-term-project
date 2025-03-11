@@ -1,4 +1,4 @@
-#import "/src/constants.typ": FULL-DATE-FORMAT
+#import "/src/constants.typ": FULL-DATE-FORMAT, MONTH-YEAR-DATE-FORMAT
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 #import "/src/components/fullname-with-title-component.typ": fullname-with-title-component
@@ -126,7 +126,16 @@
       [*#translator(key: language-keys.WORK-EXPERIENCES):*], [#(
           work-experiences
             .map(it => (
-              "(" + it.start-date + " - " + it.end-date + ")" + ": " + it.organization-name + " (" + it.title + ")"
+              "("
+                + it.start-date.display(MONTH-YEAR-DATE-FORMAT)
+                + " - "
+                + it.end-date.display(MONTH-YEAR-DATE-FORMAT)
+                + ")"
+                + ": "
+                + it.organization-name
+                + " ("
+                + it.title
+                + ")"
             ))
             .join("\n")
         )],

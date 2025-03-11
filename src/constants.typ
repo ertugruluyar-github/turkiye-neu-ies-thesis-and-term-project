@@ -90,6 +90,7 @@ TERM-PROJECT: "Dönem Projesi"
 // Tarih Formatı [Date Format]
 #let FULL-DATE-FORMAT = "[day]/[month]/[year]"
 #let ONLY-YEAR-DATE-FORMAT = "[year]"
+#let MONTH-YEAR-DATE-FORMAT = "[month]/[year]"
 #let LONG-MONTH-YEAR-DATE-FORMAT = "[month repr:long] [year]"
 
 // Doğrulama [Validation]
