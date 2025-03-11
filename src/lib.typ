@@ -214,7 +214,7 @@
   keyword-count-validator(keyword-count: keywords.tur.len())
   keyword-count-validator(keyword-count: keywords.eng.len())
 
-  //
+  // Çalışma takvimindeki iş paketlerinin aylarının toplamını doğrula. [Validate the sum of the months of work packages in the work schedule.]
   if (
     report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
   ) {
