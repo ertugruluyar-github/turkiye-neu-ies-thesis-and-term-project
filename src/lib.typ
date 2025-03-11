@@ -1,5 +1,4 @@
 #import "/src/constants.typ": *
-#import "/src/core/validation/keyword-count-validator.typ": keyword-count-validator
 #import "/src/core/validation/language-validator.typ": language-validator
 #import "/src/core/validation/department-validator.typ": department-validator
 #import "/src/core/validation/program-validator.typ": program-validator
@@ -7,6 +6,8 @@
 #import "/src/core/validation/date-validator.typ": date-validator
 #import "/src/core/validation/academic-member-title-validator.typ": academic-member-title-validator
 #import "/src/core/validation/thesis-originalty-validator.typ": thesis-originalty-validator
+#import "/src/core/validation/keyword-count-validator.typ": keyword-count-validator
+#import "/src/core/validation/work-packages-months-validator.typ": work-packages-months-validator
 #import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
 #import "/src/styles/thesis-main-section-heading-style.typ": thesis-main-section-heading-style
 #import "/src/styles/thesis-back-section-heading-style.typ": thesis-back-section-heading-style
@@ -208,6 +209,16 @@
   // Anahtar kelime sayısını doğrula. [Validate keyword count.]
   keyword-count-validator(keyword-count: keywords.tur.len())
   keyword-count-validator(keyword-count: keywords.eng.len())
+
+  //
+  if (
+    report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
+  ) {
+    work-packages-months-validator(
+      work-packages: work-packages,
+      report-type: report-type,
+    )
+  }
 
   /* ---- Initialize the Language Manager ---- */
   init-language-manager(default-language: language.language-code)

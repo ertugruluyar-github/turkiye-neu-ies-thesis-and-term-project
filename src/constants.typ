@@ -98,6 +98,7 @@ TERM-PROJECT: "Dönem Projesi"
 #let STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/dictionary/"
 #let STRING-TYPST-DATETIME-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/datetime/"
 #let STRING-TYPST-INT-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/int/"
+#let STRING-TYPST-ARRAY-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/array/"
 
 
 // Anahtar Kelime Sayısı Kuralı [Keyword Count Rules]
