@@ -27,19 +27,31 @@
       work-experience.start-date < datetime.today(),
       message: "Öz Geçmişteki "
         + str(index)
-        + ". iş deneyiminde hata var. 'curriculum-vitae parametresindeki work-experience.start-date' tarihi günümüzden ileride olamaz.",
+        + ". iş deneyiminde hata var. 'curriculum-vitae parametresindeki work-experience.start-date' tarihi bugünün tarihinden ileride olamaz.",
     )
     assert(
       work-experience.end-date < datetime.today(),
       message: "Öz Geçmişteki "
         + str(index)
-        + ". iş deneyiminde hata var. 'curriculum-vitae parametresindeki work-experience.end-date' tarihi günümüzden ileride olamaz.",
+        + ". iş deneyiminde hata var. 'curriculum-vitae parametresindeki work-experience.end-date' tarihi bugünün tarihinden ileride olamaz.",
     )
     assert(
       work-experience.start-date < work-experience.end-date,
       message: "Öz Geçmişteki "
         + str(index)
         + ". iş deneyiminde hata var. 'curriculum-vitae parametresindeki work-experience.start-date' tarihi 'curriculum-vitae parametresindeki work-experience.end-date' tarihinden ileride olamaz.",
+    )
+    assert(
+      work-experience.start-date > birthday,
+      message: "Öz Geçmişteki "
+        + str(index)
+        + ". iş deneyiminde hata var. 'curriculum-vitae parametresindeki work-experience.start-date' tarihi doğum günü tarihinden geride olamaz.",
+    )
+    assert(
+      work-experience.end-date > birthday,
+      message: "Öz Geçmişteki "
+        + str(index)
+        + ". iş deneyiminde hata var. 'curriculum-vitae parametresindeki work-experience.end-date' tarihi doğum günü tarihinden geride olamaz.",
     )
   }
 }

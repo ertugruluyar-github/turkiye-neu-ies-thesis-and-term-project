@@ -118,7 +118,7 @@
   // Dönem Projesinin sonunda yer alan "Öz Geçmiş" sayfasında yer alan bilgilerdir. "report-type: REPORT-TYPES.TERM-PROJECT" değilse gözükmeyecektir, doldurulmasına gerek yoktur.
   curriculum-vitae-info: (
     birthplace: "Konya",
-    birthday: datetime(day: 27, month: 11, year: 2014),
+    birthday: datetime(day: 27, month: 11, year: 2005),
     address: "Adres",
     marital-status: "Bekar/Evli",
     phone-number: "+90 555 55 55",
