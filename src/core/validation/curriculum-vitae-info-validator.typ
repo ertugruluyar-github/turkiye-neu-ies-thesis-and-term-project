@@ -1,8 +1,10 @@
 #import "/src/core/validation/date-validator.typ": date-validator
 #import "/src/core/validation/orcid-validator.typ": orcid-validator
+#import "/src/core/validation/email-validator.typ": email-validator
 
 #let curriculum-vitae-info-validator(
   birthday: none,
+  email: none,
   work-experiences: none,
   get-info-from-recommended-peoples: none,
 ) = {
@@ -10,6 +12,12 @@
     date: birthday,
     parameter-name: "curriculum-vitae.birthday",
     parameter-description: "Öz Geçmiş sayfasındaki doğum tarihi",
+  )
+
+  email-validator(
+    email: email,
+    parameter-name: "curriculum-vitae.email",
+    parameter-description: "Öz Geçmiş sayfasındaki e-posta adresi",
   )
 
   for (index, work-experience) in work-experiences.enumerate(start: 1) {
@@ -63,5 +71,10 @@
         parameter-description: "Öz Geçmişteki " + str(index) + ". bilgi almak için önerebileceğim şahsın ORCID'i",
       )
     }
+    email-validator(
+      email: get-info-from-recommended-people.email,
+      parameter-name: "curriculum-vitae parametresindeki get-info-from-recommended-people.email",
+      parameter-description: "Öz Geçmişteki " + str(index) + ". bilgi almak için önerebileceğim şahsın e-posta adresi",
+    )
   }
 }
