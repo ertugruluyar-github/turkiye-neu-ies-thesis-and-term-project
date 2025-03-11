@@ -37,21 +37,21 @@
   author: (
     first-name: "Yazarın Adı",
     last-name: "SOYADI",
-    orcid: "XXXX-XXXX-XXXX-XXXX", // TODO: ORCID'e sadece sayı kabulu kontolü ekle.
+    orcid: "1234-1234-1234-1234",
   ),
   // Danışmanın adı, soyadı ve ORCID numarası.
   advisor: (
     academic-member-title: ACADEMIC-MEMBER-TITLES.ASSISTANT-PROFESSOR-DR,
     first-name: "Danışman Adı",
     last-name: "SOYADI",
-    orcid: "XXXX-XXXX-XXXX-XXXX",
+    orcid: "1234-1234-1234-1234",
   ),
   // İkinci danışmanın adı, soyadı ve ORCID numarası. İkinci danışman yoksa "second-advisor: none" yapınız.
   second-advisor: (
     academic-member-title: ACADEMIC-MEMBER-TITLES.ASSISTANT-PROFESSOR-DR,
     first-name: "İkinci Danışman Adı",
     last-name: "SOYADI",
-    orcid: "XXXX-XXXX-XXXX-XXXX",
+    orcid: "1234-1234-1234-1234",
   ),
   // Tez çalışması destekleyen kuruluşun adı ve projenin numarası. Tez çalışması destekleyen herhangi bir kuruluş yoksa "thesis-study-funding-organization: none" yapınız.
   thesis-study-funding-organization: (

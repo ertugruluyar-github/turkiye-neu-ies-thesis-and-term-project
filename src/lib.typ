@@ -4,6 +4,7 @@
 #import "/src/core/validation/program-validator.typ": program-validator
 #import "/src/core/validation/report-type-validator.typ": report-type-validator
 #import "/src/core/validation/date-validator.typ": date-validator
+#import "/src/core/validation/orcid-validator.typ": orcid-validator
 #import "/src/core/validation/academic-member-title-validator.typ": academic-member-title-validator
 #import "/src/core/validation/thesis-originalty-validator.typ": thesis-originalty-validator
 #import "/src/core/validation/keyword-count-validator.typ": keyword-count-validator
@@ -206,6 +207,25 @@
     parameter-name: "template-configurations.date",
     parameter-description: "Şablon ayarlarındaki tarih",
   )
+
+  // ORCID'leri doğrula. [Validate the ORCIDs.]
+  orcid-validator(
+    orcid: author.orcid,
+    parameter-name: "author.orcid",
+    parameter-description: "Yazarın ORCID değeri",
+  )
+  orcid-validator(
+    orcid: advisor.orcid,
+    parameter-name: "advisor.orcid",
+    parameter-description: "Danışmanın ORCID değeri",
+  )
+  if second-advisor != none {
+    orcid-validator(
+      orcid: second-advisor.orcid,
+      parameter-name: "second-advisor.orcid",
+      parameter-description: "ikinci Danışmanın ORCID değeri",
+    )
+  }
 
   // Akademik ünvanı doğrula. [Validate the academic title.]
   academic-member-title-validator(academic-member-title: advisor.academic-member-title)
