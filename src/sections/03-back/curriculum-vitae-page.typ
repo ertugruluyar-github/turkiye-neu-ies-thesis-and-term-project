@@ -73,6 +73,7 @@
 
   v(1em)
 
+  // Genel Bilgiler tablosu. [General Information table.]
   table(
     columns: (auto, 2fr, auto, 1fr),
     table.cell(colspan: 4, align(center)[*#translator(key: language-keys.GENERAL-INFO)*]),
@@ -84,6 +85,7 @@
       )],
   )
 
+  // Eğitim Bilgiler tablosu. [Educational Backgorund table.]
   table(
     columns: (auto, 4fr, 3fr, 2fr, 1fr),
     table.cell(colspan: 5, align(center)[*#translator(key: language-keys.EDUCATIONAL-BACKGROUND)*]),
@@ -93,6 +95,7 @@
     [*#translator(key: language-keys.MASTERS-DEGREE):*], [#masters-degree.name], [#masters-degree.program], [#masters-degree.place], [#masters-degree.start-year],
   )
 
+  // Çalışma Hayatı tablosu. [Work Experiences table.]
   table(
     columns: (auto, 1fr),
     table.cell(colspan: 2, align(center)[*#translator(key: language-keys.WORK-BACKGROUND)*]),
