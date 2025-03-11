@@ -150,14 +150,16 @@
       (
         start-date: datetime(day: 1, month: 3, year: 2012),
         end-date: datetime(day: 1, month: 6, year: 2017),
+        title: "Ünvan/Görev",
         organization-name: "Çalışılan Kurumun Adı",
-        title: "Ünvanın/Görevin",
+        place: "Konya",
       ),
       (
         start-date: datetime(day: 1, month: 7, year: 2017),
         end-date: datetime(day: 1, month: 3, year: 2025),
+        title: "Ünvan/Görev",
         organization-name: "Çalışılan Kurumun Adı",
-        title: "Ünvanın/Görevin",
+        place: "Konya",
       ),
     ),
     get-info-from-recommended-peoples: (

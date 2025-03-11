@@ -1,5 +1,10 @@
+#import "/src/constants.typ": ALTERNATE-FONT-SIZE-2
+
 #let curriculum-vitae-page-style(content) = {
   show heading.where(level: 1): set align(center)
+
+  set text(size: ALTERNATE-FONT-SIZE-2)
+  show table.cell: set text(size: ALTERNATE-FONT-SIZE-2)
 
   set par(
     first-line-indent: 0cm,
@@ -27,6 +32,13 @@
   set table.header(repeat: false)
 
   set table.footer(repeat: false)
+
+  set line(
+    length: 95%,
+    stroke: (paint: black, thickness: 0.25pt, dash: "dashed"),
+  )
+
+  show line: set align(center)
 
   content
 }

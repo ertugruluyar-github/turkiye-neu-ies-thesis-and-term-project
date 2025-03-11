@@ -40,14 +40,16 @@
     (
       start-date: none,
       end-date: none,
-      organization-name: none,
       title: none,
+      organization-name: none,
+      place: none,
     ),
     (
       start-date: none,
       end-date: none,
-      organization-name: none,
       title: none,
+      organization-name: none,
+      place: none,
     ),
   ),
   get-info-from-recommended-peoples: (
@@ -80,11 +82,13 @@
     columns: (auto, 2fr, auto, 1fr),
     table.cell(colspan: 4, align(center)[*#translator(key: language-keys.GENERAL-INFO)*]),
     [*#translator(key: language-keys.FIRST-NAME-LAST-NAME):*], [#first-name #upper(last-name)], [*#translator(key: language-keys.SIGNATURE):*], [],
-    [*#translator(key: language-keys.BIRTHPLACE):*], [#upper(birthplace)], [*#translator(key: language-keys.BIRTHPLACE):*], [#birthday.display(FULL-DATE-FORMAT)],
-    [*#translator(key: language-keys.PHONE-NUMBER):*], [#phone-number], [*#translator(key: language-keys.MARITAL-STATUS):*], [#marital-status],
+    [*#translator(key: language-keys.PHONE-NUMBER):*], [#phone-number], [*#translator(key: language-keys.BIRTHDAY):*], [#birthday.display(FULL-DATE-FORMAT)], [*#translator(key: language-keys.EMAIL):*], [#email-link-component(
+        email: email,
+      )],
+    [*#translator(key: language-keys.BIRTHPLACE):*], [#birthplace],
     [*#translator(key: language-keys.ORCID):*], [#orcid-link-component(
         orcid: orcid,
-      )], [*#translator(key: language-keys.EMAIL):*], [#email-link-component(email: email)],
+      )], [*#translator(key: language-keys.MARITAL-STATUS):*], [#marital-status],
     [*#translator(key: language-keys.ADRESS):*], table.cell(colspan: 3)[#address],
   )
 
@@ -93,9 +97,9 @@
     columns: (auto, 4fr, 3fr, 2fr, 1fr),
     table.cell(colspan: 5, align(center)[*#translator(key: language-keys.EDUCATIONAL-BACKGROUND)*]),
     align(center)[*#translator(key: language-keys.SCHOOL-TYPE)*], align(center)[*#translator(key: language-keys.SCHOOL-NAME)*], align(center)[*#translator(key: language-keys.PROGRAM)*], align(center)[*#translator(key: language-keys.PLACE)*], align(center)[*#translator(key: language-keys.YEAR)*],
-    [*#translator(key: language-keys.HIGH-SCHOOL):*], [#high-school.name], [#high-school.program], [#high-school.place], [#high-school.start-year],
-    [*#translator(key: language-keys.UNDERGRADUATE):*], [#undergraduate.name], [#undergraduate.program], [#undergraduate.place], [#undergraduate.start-year],
-    [*#translator(key: language-keys.MASTERS-DEGREE):*], [#masters-degree.name], [#masters-degree.program], [#masters-degree.place], [#masters-degree.start-year],
+    [*#translator(key: language-keys.HIGH-SCHOOL):*], [#high-school.name], [#high-school.program], [#high-school.place], align(center)[#high-school.start-year],
+    [*#translator(key: language-keys.UNDERGRADUATE):*], [#undergraduate.name], [#undergraduate.program], [#undergraduate.place], align(center)[#undergraduate.start-year],
+    [*#translator(key: language-keys.MASTERS-DEGREE):*], [#masters-degree.name], [#masters-degree.program], [#masters-degree.place], align(center)[#masters-degree.start-year],
   )
 
   // Çalışma Hayatı tablosu. [Work Experiences table.]
@@ -106,18 +110,23 @@
     [*#translator(key: language-keys.WORK-EXPERIENCES):*], [#(
         sorted-work-experiences
           .map(it => (
-            "("
-              + it.start-date.display(MONTH-YEAR-DATE-FORMAT)
-              + " - "
-              + it.end-date.display(MONTH-YEAR-DATE-FORMAT)
-              + ")"
-              + ": "
-              + it.organization-name
-              + " ("
-              + it.title
-              + ")"
+            align(
+              center,
+              "("
+                + it.start-date.display(MONTH-YEAR-DATE-FORMAT)
+                + " - "
+                + it.end-date.display(MONTH-YEAR-DATE-FORMAT)
+                + ") "
+                + "("
+                + it.title
+                + ")",
+            )
+              + align(
+                center,
+                it.organization-name + " (" + it.place + ") ",
+              )
           ))
-          .join("\n")
+          .join(line())
       )],
     [*#translator(key: language-keys.GET-INFO-FROM-RECOMMENDED-PEOPLES):*], [#(
         get-info-from-recommended-peoples
@@ -133,15 +142,7 @@
               + ": "
               + email-link-component(email: it.email)
           ))
-          .join({
-            align(
-              center,
-              line(
-                length: 95%,
-                stroke: (paint: black, thickness: 0.25pt, dash: "dashed"),
-              ),
-            )
-          })
+          .join(line())
       )],
   )
 

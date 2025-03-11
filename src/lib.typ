@@ -159,14 +159,16 @@
       (
         start-date: datetime(day: 1, month: 3, year: 2030),
         end-date: datetime(day: 1, month: 6, year: 2033),
-        organization-name: "Organization Name that you worked",
         title: "Title/Job",
+        organization-name: "Organization Name that you worked",
+        place: "Konya",
       ),
       (
         start-date: datetime(day: 1, month: 7, year: 2033),
         end-date: datetime(day: 1, month: 3, year: 2037),
-        organization-name: "Organization Name that you worked",
         title: "Title/Job",
+        organization-name: "Organization Name that you worked",
+        place: "Konya",
       ),
     ),
     get-info-from-recommended-peoples: (
