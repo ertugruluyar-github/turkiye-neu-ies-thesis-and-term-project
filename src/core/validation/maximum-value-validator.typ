@@ -9,9 +9,13 @@
   max-value: none,
   parameter-name: none,
   parameter-description: none,
+  custom-documantation-link: none,
 ) = {
+  let documantation-link = if custom-documantation-link != none { custom-documantation-link } else {
+    STRING-TYPST-INT-DOCUMENTATION-LINK
+  }
   let common-message-1 = "'" + parameter-name + "' parametresine desteklenmeyen ya da hatalı bir giriş oldu. "
-  let common-message-2 = STRING-RELATED-DOCUMENTATION-INLINE-TITLE + STRING-TYPST-INT-DOCUMENTATION-LINK
+  let common-message-2 = STRING-RELATED-DOCUMENTATION-INLINE-TITLE + documantation-link
   assert(
     number <= max-value,
     message: STRING-ERROR-INLINE-TITLE

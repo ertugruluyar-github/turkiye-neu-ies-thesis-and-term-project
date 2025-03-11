@@ -1,26 +1,24 @@
+#import "/src/core/validation/minimum-value-validator.typ": minimum-value-validator
+#import "/src/core/validation/maximum-value-validator.typ": maximum-value-validator
 #import "/src/constants.typ": (
-  STRING-ERROR-INLINE-TITLE,
-  STRING-RELATED-DOCUMENTATION-INLINE-TITLE,
   STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   MIN-KEYWORD-COUNT,
   MAX-KEYWORD-COUNT,
 )
 
 #let keyword-count-validator(keyword-count: none) = {
-  let common-message-1 = "'keywords' parametresine desteklenmeyen ya da hatalı bir giriş oldu. "
-  let common-message-2 = STRING-RELATED-DOCUMENTATION-INLINE-TITLE + STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK
-  assert(
-    keyword-count >= MIN-KEYWORD-COUNT,
-    message: STRING-ERROR-INLINE-TITLE
-      + common-message-1
-      + "Anahtar kelime sayısı 3'ten az olamaz. "
-      + common-message-2,
+  minimum-value-validator(
+    number: keyword-count,
+    min-value: MIN-KEYWORD-COUNT,
+    parameter-name: "keywords",
+    parameter-description: "Anahtar kelime sayısı",
+    custom-documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   )
-  assert(
-    keyword-count <= MAX-KEYWORD-COUNT,
-    message: STRING-ERROR-INLINE-TITLE
-      + common-message-1
-      + "Anahtar kelime sayısı 5'ten çok olamaz. "
-      + common-message-2,
+  maximum-value-validator(
+    number: keyword-count,
+    max-value: MAX-KEYWORD-COUNT,
+    parameter-name: "keywords",
+    parameter-description: "Anahtar kelime sayısı",
+    custom-documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   )
 }
