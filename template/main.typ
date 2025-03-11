@@ -150,13 +150,13 @@
       (
         start-date: datetime(day: 1, month: 3, year: 2012),
         end-date: datetime(day: 1, month: 6, year: 2017),
-        organization-name: "Çalıştın Kurumun Adı",
+        organization-name: "Çalışılan Kurumun Adı",
         title: "Ünvanın/Görevin",
       ),
       (
         start-date: datetime(day: 1, month: 7, year: 2017),
         end-date: datetime(day: 1, month: 3, year: 2025),
-        organization-name: "Çalıştın Kurumun Adı",
+        organization-name: "Çalışılan Kurumun Adı",
         title: "Ünvanın/Görevin",
       ),
     ),
