@@ -222,18 +222,20 @@
   keyword-count-validator(keyword-count: keywords.tur.len())
   keyword-count-validator(keyword-count: keywords.eng.len())
 
-  // Çalışma takvimindeki iş paketlerinin aylarının toplamını doğrula. [Validate the sum of the months of work packages in the work schedule.]
+  // Çalışma Takvimindeki iş paketlerinin aylarının toplamını doğrula. [Validate the sum of the months of work packages in the Work Schedule.]
   if (
     report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
   ) {
     work-packages-months-validator(work-packages: work-packages, report-type: report-type)
   }
 
-  //
-  curriculum-vitae-info-validator(
-    birthday: curriculum-vitae-info.birthday,
-    work-experiences: curriculum-vitae-info.work-experiences,
-  )
+  // Öz Geçmişdeki tarihleri doğrula. [Validate dates in the Curriculum Vitae.]
+  if report-type == REPORT-TYPES.TERM-PROJECT {
+    curriculum-vitae-info-validator(
+      birthday: curriculum-vitae-info.birthday,
+      work-experiences: curriculum-vitae-info.work-experiences,
+    )
+  }
 
   /* ---- Initialize the Language Manager ---- */
   init-language-manager(default-language: language.language-code)
