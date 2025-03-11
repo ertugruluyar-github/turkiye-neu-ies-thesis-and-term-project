@@ -218,10 +218,7 @@
   if (
     report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
   ) {
-    work-packages-months-validator(
-      work-packages: work-packages,
-      report-type: report-type,
-    )
+    work-packages-months-validator(work-packages: work-packages, report-type: report-type)
   }
 
   /* ---- Initialize the Language Manager ---- */
