@@ -6,6 +6,7 @@
 #import "/src/core/validation/report-type-validator.typ": report-type-validator
 #import "/src/core/validation/date-validator.typ": date-validator
 #import "/src/core/validation/title-validator.typ": title-validator
+#import "/src/core/validation/thesis-originalty-validator.typ": thesis-originalty-validator
 #import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
 #import "/src/styles/thesis-main-section-heading-style.typ": thesis-main-section-heading-style
 #import "/src/styles/thesis-back-section-heading-style.typ": thesis-back-section-heading-style
@@ -76,7 +77,7 @@
     project-no: "Project No",
   ),
   thesis-originalty: (
-    included-page-count: 0,
+    included-page-count: 1,
     similarity-score: 0,
   ),
   keywords: (
@@ -198,6 +199,8 @@
   for get-info-from-recommended-people in curriculum-vitae-info.get-info-from-recommended-peoples {
     title-validator(title: get-info-from-recommended-people.title)
   }
+  // Orijinallik değerlerini doğrula. [Verify the authenticity values.]
+  thesis-originalty-validator(thesis-originalty: thesis-originalty)
   // Anahtar kelime sayısını doğrula. [Validate keyword count.]
   keyword-count-validator(keyword-count: keywords.tur.len())
   keyword-count-validator(keyword-count: keywords.eng.len())

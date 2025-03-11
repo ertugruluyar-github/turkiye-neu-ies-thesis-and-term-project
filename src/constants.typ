@@ -97,6 +97,7 @@ TERM-PROJECT: "Dönem Projesi"
 #let STRING-RELATED-DOCUMENTATION-INLINE-TITLE = "İlgili Dökümantasyon: "
 #let STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/dictionary/"
 #let STRING-TYPST-DATETIME-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/datetime/"
+#let STRING-TYPST-INT-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/int/"
 
 
 // Anahtar Kelime Sayısı Kuralı [Keyword Count Rules]
