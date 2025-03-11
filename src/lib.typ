@@ -196,9 +196,6 @@
   // Akademik ünvanı doğrula. [Validate the academic title.]
   academic-member-title-validator(academic-member-title: advisor.academic-member-title)
   academic-member-title-validator(academic-member-title: second-advisor.academic-member-title)
-  for get-info-from-recommended-people in curriculum-vitae-info.get-info-from-recommended-peoples {
-    academic-member-title-validator(academic-member-title: get-info-from-recommended-people.title)
-  }
   // Orijinallik değerlerini doğrula. [Verify the authenticity values.]
   thesis-originalty-validator(thesis-originalty: thesis-originalty)
   // Anahtar kelime sayısını doğrula. [Validate keyword count.]

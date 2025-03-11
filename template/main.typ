@@ -165,7 +165,14 @@
         email: "eposta@mail.com",
       ),
       (
-        title: ACADEMIC-MEMBER-TITLES.ASSISTANT-PROFESSOR-DR,
+        title: "Ünvanı",
+        first-name: "Adı",
+        last-name: "SOYADI",
+        orcid: "xxxx-xxxx-xxxx-xxxx",
+        email: "eposta@mail.com",
+      ),
+      (
+        title: none,
         first-name: "Adı",
         last-name: "SOYADI",
         orcid: "xxxx-xxxx-xxxx-xxxx",
