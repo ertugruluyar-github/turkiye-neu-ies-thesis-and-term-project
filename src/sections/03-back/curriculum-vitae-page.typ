@@ -127,8 +127,8 @@
               first-name: it.first-name,
               last-name: it.last-name,
             )
+              + if it.orcid != none { " (" + orcid-with-prefix-component(orcid: it.orcid) + ")" }
               + "\n"
-              + if it.orcid != none { orcid-with-prefix-component(orcid: it.orcid) + "\n" }
               + translator(key: language-keys.EMAIL)
               + ": "
               + email-link-component(email: it.email)
