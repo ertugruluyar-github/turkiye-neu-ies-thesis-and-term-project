@@ -96,7 +96,7 @@
   table(
     columns: (auto, 1fr),
     table.cell(colspan: 2, align(center)[*#translator(key: language-keys.WORK-BACKGROUND)*]),
-    [*#translator(key: language-keys.SKILLS):*], [#skills],
+    [*#translator(key: language-keys.SKILLS):*], [#skills.join("; ")],
     [*#translator(key: language-keys.WORK-EXPERIENCES):*], [#(
         sorted-work-experiences
           .map(it => (

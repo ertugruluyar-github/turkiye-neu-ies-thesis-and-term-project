@@ -141,7 +141,10 @@
       place: "Konya",
       start-year: 2032,
     ),
-    skills: "Beceri 1, Beceri 2, ...",
+    skills: (
+      "Beceri 1",
+      "Beceri 2",
+    ),
     // İş deneyimlerinizi geçmişten günümüze doğru sırayla giriniz.
     work-experiences: (
       (

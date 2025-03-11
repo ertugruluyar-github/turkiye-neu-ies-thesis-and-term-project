@@ -150,7 +150,10 @@
       place: "Konya",
       start-year: 2032,
     ),
-    skills: "Skill 1, Skill 2, ...",
+    skills: (
+      "Skill 1",
+      "Skill 2",
+    ),
     work-experiences: (
       (
         start-date: datetime(day: 1, month: 3, year: 2030),
