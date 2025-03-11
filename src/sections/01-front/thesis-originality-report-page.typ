@@ -54,7 +54,7 @@
   align(
     center,
     fullname-with-title-component(
-      title: advisor.title,
+      title: advisor.academic-member-title,
       first-name: advisor.first-name,
       last-name: advisor.last-name,
     ),

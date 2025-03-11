@@ -5,7 +5,7 @@
 #import "/src/core/validation/program-validator.typ": program-validator
 #import "/src/core/validation/report-type-validator.typ": report-type-validator
 #import "/src/core/validation/date-validator.typ": date-validator
-#import "/src/core/validation/title-validator.typ": title-validator
+#import "/src/core/validation/academic-member-title-validator.typ": academic-member-title-validator
 #import "/src/core/validation/thesis-originalty-validator.typ": thesis-originalty-validator
 #import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
 #import "/src/styles/thesis-main-section-heading-style.typ": thesis-main-section-heading-style
@@ -61,13 +61,13 @@
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
   advisor: (
-    title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
+    academic-member-title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
     first-name: "Advisor's firstname",
     last-name: "Advisor's LASTNAME",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
   second-advisor: (
-    title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
+    academic-member-title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
     first-name: "Second Advisor's firstname",
     last-name: "Second Advisor's LASTNAME",
     orcid: "xxxx-xxxx-xxxx-xxxx",
@@ -193,11 +193,11 @@
   report-type-validator(report-type: report-type)
   // Tarihi doğrula. [Validate the date.]
   date-validator(date: date)
-  // Ünvanı doğrula. [Validate the title.]
-  title-validator(title: advisor.title)
-  title-validator(title: second-advisor.title)
+  // Akademik ünvanı doğrula. [Validate the academic title.]
+  academic-member-title-validator(academic-member-title: advisor.academic-member-title)
+  academic-member-title-validator(academic-member-title: second-advisor.academic-member-title)
   for get-info-from-recommended-people in curriculum-vitae-info.get-info-from-recommended-peoples {
-    title-validator(title: get-info-from-recommended-people.title)
+    academic-member-title-validator(academic-member-title: get-info-from-recommended-people.title)
   }
   // Orijinallik değerlerini doğrula. [Verify the authenticity values.]
   thesis-originalty-validator(thesis-originalty: thesis-originalty)

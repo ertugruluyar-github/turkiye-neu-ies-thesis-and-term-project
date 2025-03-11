@@ -5,11 +5,11 @@
   ACADEMIC-MEMBER-TITLES,
 )
 
-#let title-validator(title: none) = {
+#let academic-member-title-validator(academic-member-title: none) = {
   assert(
-    title in ACADEMIC-MEMBER-TITLES.values(),
+    academic-member-title in ACADEMIC-MEMBER-TITLES.values(),
     message: STRING-ERROR-INLINE-TITLE
-      + "'title' parametresine desteklenmeyen ya da hatalı bir giriş oldu. Lütfen 'ACADEMIC-MEMBER-TITLES' sözlüğündeki bir ünvanı seçiniz. "
+      + "'academic-member-title' parametresine desteklenmeyen ya da hatalı bir giriş oldu. Lütfen 'ACADEMIC-MEMBER-TITLES' sözlüğündeki bir öğretim üyesi ünvanı seçiniz. "
       + STRING-RELATED-DOCUMENTATION-INLINE-TITLE
       + STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   )
