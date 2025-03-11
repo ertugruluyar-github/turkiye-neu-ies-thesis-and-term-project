@@ -204,7 +204,11 @@
   academic-member-title-validator(academic-member-title: second-advisor.academic-member-title)
 
   // Orijinallik değerlerini doğrula. [Verify the authenticity values.]
-  thesis-originalty-validator(thesis-originalty: thesis-originalty)
+  if (
+    report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.DOCTORAL-THESIS
+  ) {
+    thesis-originalty-validator(thesis-originalty: thesis-originalty)
+  }
 
   // Anahtar kelime sayısını doğrula. [Validate keyword count.]
   keyword-count-validator(keyword-count: keywords.tur.len())
