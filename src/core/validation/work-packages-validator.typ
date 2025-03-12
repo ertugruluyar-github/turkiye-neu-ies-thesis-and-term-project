@@ -12,7 +12,7 @@
   value: none,
   report-type: none,
 ) = {
-  // Dizi veri türünü doğrula. [Validate array data type.]
+  // Dizi parametre türünü doğrula. [Validate array parameter type.]
   array-type-validator(
     value: value,
     value-name: "template-configurations.work-packages",

@@ -8,7 +8,7 @@
 )
 
 #let keywords-validator(value: none) = {
-  // Dizi veri türünü doğrula. [Validate array data type.]
+  // Dizi parametre türünü doğrula. [Validate array parameter type.]
   array-type-validator(
     value: value.tur,
     value-name: "template-configurations.keywords.tur",

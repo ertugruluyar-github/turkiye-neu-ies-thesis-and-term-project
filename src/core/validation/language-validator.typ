@@ -7,7 +7,7 @@
 #import "/src/core/validation/dictionary-type-validator.typ": dictionary-type-validator
 
 #let language-validator(value: none) = {
-  // Sözlük veri türünü doğrula. [Validate dictionary data type.]
+  // Sözlük parametre türünü doğrula. [Validate dictionary parameter type.]
   dictionary-type-validator(
     value: value,
     value-name: "template-configurations.language",

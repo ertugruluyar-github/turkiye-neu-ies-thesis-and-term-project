@@ -197,7 +197,7 @@
 ) = {
   /* ---- Doğrulama İşlemleri [Validation Process] ---- */
 
-  // Dizi veri türünü doğrula. [Validate array data type.]
+  // Dizi parametre türünü doğrula. [Validate array parameter type.]
   array-type-validator(
     value: curriculum-vitae-info.skills,
     value-name: "curriculum-vitae-info.skills",
