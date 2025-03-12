@@ -199,16 +199,6 @@
 
   // Dizi veri türünü doğrula. [Validate array data type.]
   array-type-validator(
-    value: keywords.tur,
-    value-name: "template-configurations.keywords.tur",
-    value-description: "Şablon ayarlarındaki Türkçe anahtar kelimeler",
-  )
-  array-type-validator(
-    value: keywords.eng,
-    value-name: "template-configurations.keywords.eng",
-    value-description: "Şablon ayarlarındaki İngilizce anahtar kelimeler",
-  )
-  array-type-validator(
     value: work-packages,
     value-name: "template-configurations.work-packages",
     value-description: "Şablon ayarlarındaki iş paketleri",
