@@ -15,7 +15,7 @@
   )
 
   email-validator(
-    email: email,
+    parameter: email,
     parameter-name: "curriculum-vitae.email",
     parameter-description: "Öz Geçmiş sayfasındaki e-posta adresi",
   )
@@ -72,7 +72,7 @@
       )
     }
     email-validator(
-      email: get-info-from-recommended-people.email,
+      parameter: get-info-from-recommended-people.email,
       parameter-name: "curriculum-vitae parametresindeki get-info-from-recommended-people.email",
       parameter-description: "Öz Geçmişteki " + str(index) + ". bilgi almak için önerebileceğim şahsın e-posta adresi",
     )

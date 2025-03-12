@@ -5,12 +5,12 @@
 )
 
 #let email-validator(
-  email: none,
+  parameter: none,
   parameter-name: none,
   parameter-description: none,
 ) = {
   assert(
-    type(email.find(regex("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))) == str,
+    type(parameter.find(regex("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))) == str,
     message: STRING-ERROR-INLINE-TITLE
       + parameter-description
       + " alanındaki "
