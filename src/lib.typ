@@ -256,7 +256,7 @@
   language-validator(language: language)
 
   // Ana Bilim Dalını doğrula. [Validate the department.]
-  department-validator(department: department)
+  department-validator(parameter: department)
 
   // Bilim Dalını doğrula. [Validate the program.]
   program-validator(program: program)
