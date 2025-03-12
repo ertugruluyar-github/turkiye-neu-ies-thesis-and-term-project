@@ -1,5 +1,6 @@
 #import "/src/constants.typ": *
 #import "/src/core/validation/boolean-type-validator.typ": boolean-type-validator
+#import "/src/core/validation/array-type-validator.typ": array-type-validator
 #import "/src/core/validation/date-type-validator.typ": date-type-validator
 #import "/src/core/validation/language-validator.typ": language-validator
 #import "/src/core/validation/department-validator.typ": department-validator
@@ -217,6 +218,38 @@
     boolean: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
     parameter-name: "template-configurations.show-separated-sub-headings-in-discussion-conclusion-and-suggestions",
     parameter-description: "Şablon ayarlarındaki 'TARTIŞMA, SONUÇ VE ÖNERİLER' bölümündeki alt başlıkları göster seçeneği",
+  )
+
+  // Dizi veri türünü doğrula. [Validate array data type.]
+  array-type-validator(
+    parameter: keywords.tur,
+    parameter-name: "template-configurations.keywords.tur",
+    parameter-description: "Şablon ayarlarındaki Türkçe anahtar kelimeler",
+  )
+  array-type-validator(
+    parameter: keywords.eng,
+    parameter-name: "template-configurations.keywords.eng",
+    parameter-description: "Şablon ayarlarındaki İngilizce anahtar kelimeler",
+  )
+  array-type-validator(
+    parameter: work-packages,
+    parameter-name: "template-configurations.work-packages",
+    parameter-description: "Şablon ayarlarındaki iş paketleri",
+  )
+  array-type-validator(
+    parameter: curriculum-vitae-info.skills,
+    parameter-name: "curriculum-vitae-info.skills",
+    parameter-description: "Öz Geçmişdeki beceriler",
+  )
+  array-type-validator(
+    parameter: curriculum-vitae-info.work-experiences,
+    parameter-name: "curriculum-vitae-info.work-experiences",
+    parameter-description: "Öz Geçmişdeki iş deneyimleri",
+  )
+  array-type-validator(
+    parameter: curriculum-vitae-info.get-info-from-recommended-peoples,
+    parameter-name: "curriculum-vitae-info.get-info-from-recommended-peoples",
+    parameter-description: "Öz Geçmişdeki bilgi almak için önerebileceğim şahıs",
   )
 
   // Dili doğrula. [Validate the language.]
