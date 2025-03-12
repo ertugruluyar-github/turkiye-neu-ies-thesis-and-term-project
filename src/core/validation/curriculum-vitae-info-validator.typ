@@ -1,4 +1,5 @@
 #import "/src/core/validation/date-type-validator.typ": date-type-validator
+#import "/src/core/validation/array-type-validator.typ": array-type-validator
 #import "/src/core/validation/orcid-validator.typ": orcid-validator
 #import "/src/core/validation/email-validator.typ": email-validator
 
@@ -12,21 +13,21 @@
 
   // Dizi parametre türünü doğrula. [Validate array parameter type.]
   array-type-validator(
-    value: curriculum-vitae-info.skills,
+    value: value.skills,
     value-name: "curriculum-vitae-info.skills",
     value-description: "Öz Geçmişdeki beceriler",
   )
 
   // Dizi parametre türünü doğrula. [Validate array parameter type.]
   array-type-validator(
-    value: curriculum-vitae-info.work-experiences,
+    value: value.work-experiences,
     value-name: "curriculum-vitae-info.work-experiences",
     value-description: "Öz Geçmişdeki iş deneyimleri",
   )
 
   // Dizi parametre türünü doğrula. [Validate array parameter type.]
   array-type-validator(
-    value: curriculum-vitae-info.get-info-from-recommended-peoples,
+    value: value.get-info-from-recommended-peoples,
     value-name: "curriculum-vitae-info.get-info-from-recommended-peoples",
     value-description: "Öz Geçmişdeki bilgi almak için önerebileceğim şahıs",
   )
