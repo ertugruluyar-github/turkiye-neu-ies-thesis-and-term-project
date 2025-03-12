@@ -295,8 +295,8 @@
   }
 
   // Akademik ünvanı doğrula. [Validate the academic title.]
-  academic-member-title-validator(academic-member-title: advisor.academic-member-title)
-  academic-member-title-validator(academic-member-title: second-advisor.academic-member-title)
+  academic-member-title-validator(parameter: advisor.academic-member-title)
+  academic-member-title-validator(parameter: second-advisor.academic-member-title)
 
   // Orijinallik değerlerini doğrula. [Verify the authenticity values.]
   if (
