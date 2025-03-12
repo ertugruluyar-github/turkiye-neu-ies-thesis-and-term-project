@@ -6,6 +6,7 @@
 #import "/src/core/validation/department-validator.typ": department-validator
 #import "/src/core/validation/program-validator.typ": program-validator
 #import "/src/core/validation/report-type-validator.typ": report-type-validator
+#import "/src/core/validation/thesis-title-validator.typ": thesis-title-validator
 #import "/src/core/validation/author-validator.typ": author-validator
 #import "/src/core/validation/advisor-validator.typ": advisor-validator
 #import "/src/core/validation/second-advisor-validator.typ": second-advisor-validator
@@ -215,6 +216,9 @@
     value-name: "template-configurations.date",
     value-description: "Şablon ayarlarındaki tarih",
   )
+
+  // Tez Başlığı parametresini doğrula. [Validate the thesis-title parameter.]
+  thesis-title-validator(value: thesis-title)
 
   // Yazar parametresini doğrula. [Validate the author parameter.]
   author-validator(value: author)
