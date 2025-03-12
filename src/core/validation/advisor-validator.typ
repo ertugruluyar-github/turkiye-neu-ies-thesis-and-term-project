@@ -1,7 +1,15 @@
+#import "/src/core/validation/dictionary-type-validator.typ": dictionary-type-validator
 #import "/src/core/validation/orcid-validator.typ": orcid-validator
 #import "/src/core/validation/academic-member-title-validator.typ": academic-member-title-validator
 
 #let advisor-validator(value: none) = {
+  // Sözlük parametre türünü doğrula. [Validate dictionary parameter type.]
+  dictionary-type-validator(
+    value: value,
+    value-name: "template-configurations.advisor",
+    value-description: "Şablon ayarlarındaki danışman",
+  )
+
   // Danışmanın ORCID parametresini doğrula. [Validate the advisor's ORCID parameter.]
   orcid-validator(
     value: value.orcid,
