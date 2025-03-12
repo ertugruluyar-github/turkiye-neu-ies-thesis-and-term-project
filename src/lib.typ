@@ -1,22 +1,4 @@
 #import "/src/constants.typ": *
-#import "/src/core/validation/boolean-type-validator.typ": boolean-type-validator
-#import "/src/core/validation/array-type-validator.typ": array-type-validator
-#import "/src/core/validation/dictionary-type-validator.typ": dictionary-type-validator
-#import "/src/core/validation/date-type-validator.typ": date-type-validator
-#import "/src/core/validation/language-validator.typ": language-validator
-#import "/src/core/validation/department-validator.typ": department-validator
-#import "/src/core/validation/program-validator.typ": program-validator
-#import "/src/core/validation/report-type-validator.typ": report-type-validator
-#import "/src/core/validation/thesis-title-validator.typ": thesis-title-validator
-#import "/src/core/validation/author-validator.typ": author-validator
-#import "/src/core/validation/advisor-validator.typ": advisor-validator
-#import "/src/core/validation/second-advisor-validator.typ": second-advisor-validator
-#import "/src/core/validation/orcid-validator.typ": orcid-validator
-#import "/src/core/validation/academic-member-title-validator.typ": academic-member-title-validator
-#import "/src/core/validation/thesis-originalty-validator.typ": thesis-originalty-validator
-#import "/src/core/validation/keywords-validator.typ": keywords-validator
-#import "/src/core/validation/work-packages-validator.typ": work-packages-validator
-#import "/src/core/validation/curriculum-vitae-info-validator.typ": curriculum-vitae-info-validator
 #import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
 #import "/src/styles/thesis-main-section-heading-style.typ": thesis-main-section-heading-style
 #import "/src/styles/thesis-back-section-heading-style.typ": thesis-back-section-heading-style
@@ -47,6 +29,7 @@
 #import "/src/sections/03-back/appendices-page.typ": appendices-page
 #import "/src/sections/03-back/curriculum-vitae-page.typ": curriculum-vitae-page
 #import "/src/sections/03-back/expanded-turkish-abstract-page.typ": expanded-turkish-abstract-page
+#import "/src/core/validation-manager/validation-manager.typ": validation-manager
 #import "core/language-manager/language-manager.typ": init-language-manager, translator
 
 #let template-configurations(
@@ -197,109 +180,33 @@
   ),
   body,
 ) = {
-  /* ---- Doğrulama İşlemleri [Validation Process] ---- */
-
-  // Dil parametresini doğrula. [Validate the language parameter.]
-  language-validator(value: language)
-
-  // Ana Bilim Dalı parametresini doğrula. [Validate the department parameter.]
-  department-validator(value: department)
-
-  // Bilim Dalı parametresini doğrula. [Validate the program parameter.]
-  program-validator(value: program)
-
-  // Rapor türü parametresini doğrula. [Validate the report type parameter.]
-  report-type-validator(value: report-type)
-
-  // Tarih parametresini doğrula. [Validate the date parameter.]
-  date-type-validator(
-    value: date,
-    value-name: "template-configurations.date",
-    value-description: "Şablon ayarlarındaki tarih",
+  /* ---- Doğrulama İşlemlerini Başlat [Initialize Validation Process] ---- */
+  validation-manager(
+    language: language,
+    department: department,
+    program: program,
+    report-type: report-type,
+    date: date,
+    thesis-title: thesis-title,
+    author: author,
+    advisor: advisor,
+    second-advisor: second-advisor,
+    thesis-study-funding-organization: thesis-study-funding-organization,
+    thesis-originalty: thesis-originalty,
+    keywords: keywords,
+    show-list-of-tables: show-list-of-tables,
+    show-list-of-images: show-list-of-images,
+    have-symbols: have-symbols,
+    have-abbreviations: have-abbreviations,
+    show-separated-sub-headings-in-discussion-conclusion-and-suggestions: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
+    work-packages: work-packages,
+    curriculum-vitae-info: curriculum-vitae-info,
   )
 
-  // Tez Başlığı parametresini doğrula. [Validate the thesis-title parameter.]
-  thesis-title-validator(value: thesis-title)
-
-  // Yazar parametresini doğrula. [Validate the author parameter.]
-  author-validator(value: author)
-
-  // Danışmanın ORCID parametresini doğrula. [Validate the advisor's ORCID parameter.]
-  advisor-validator(value: advisor)
-
-  // İkinci Danışmanın ORCID parametresini doğrula. [Validate the second advisor's ORCID parameter.]
-  if second-advisor != none {
-    second-advisor-validator(value: second-advisor)
-  }
-
-  // Tez Çalışmasını Destekleyen Kuruluş parametresini doğrula. [Validate thesis-study-funding-organization parameter.]
-  dictionary-type-validator(
-    value: thesis-study-funding-organization,
-    value-name: "template-configurations.thesis-study-funding-organization",
-    value-description: "Şablon ayarlarındaki Tez Çalışmasını Destekleyen Kuruluş",
-  )
-
-  // Orijinallik parametresini doğrula. [Verify the authenticity parameter.]
-  if (
-    report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.DOCTORAL-THESIS
-  ) {
-    thesis-originalty-validator(value: thesis-originalty)
-  }
-
-  // Anahtar Kelimeler parametresini doğrula. [Validate keywords parameter.]
-  keywords-validator(value: keywords)
-
-  // Tablolar listesini göster parametresini doğrula. [Validate show-list-of-tables parameter.]
-  boolean-type-validator(
-    value: show-list-of-tables,
-    value-name: "template-configurations.show-list-of-tables",
-    value-description: "Şablon ayarlarındaki tablolar listesini göster seçeneği",
-  )
-
-  // Şekiller listesini göster parametresini doğrula. [Validate show-list-of-images parameter.]
-  boolean-type-validator(
-    value: show-list-of-images,
-    value-name: "template-configurations.show-list-of-images",
-    value-description: "Şablon ayarlarındaki şekiller listesini göster seçeneği",
-  )
-
-  // Simgelerim var parametresini doğrula. [Validate have-symbols parameter.]
-  boolean-type-validator(
-    value: have-symbols,
-    value-name: "template-configurations.have-symbols",
-    value-description: "Şablon ayarlarındaki simgelerim var seçeneği",
-  )
-
-  // Kısaltmalarım var parametresini doğrula. [Validate have-abbreviations parameter.]
-  boolean-type-validator(
-    value: have-abbreviations,
-    value-name: "template-configurations.have-abbreviations",
-    value-description: "Şablon ayarlarındaki kısaltmalarım var seçeneği",
-  )
-
-  // 'TARTIŞMA, SONUÇ VE ÖNERİLER' bölümündeki alt başlıkları göster parametresini doğrula. [Validate show-separated-sub-headings-in-discussion-conclusion-and-suggestions parameter.]
-  boolean-type-validator(
-    value: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
-    value-name: "template-configurations.show-separated-sub-headings-in-discussion-conclusion-and-suggestions",
-    value-description: "Şablon ayarlarındaki 'TARTIŞMA, SONUÇ VE ÖNERİLER' bölümündeki alt başlıkları göster seçeneği",
-  )
-
-  // Çalışma Takvimindeki iş paketlerinin aylarının toplamını doğrula. [Validate the sum of the months of work packages in the Work Schedule.]
-  if (
-    report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
-  ) {
-    work-packages-validator(value: work-packages, report-type: report-type)
-  }
-
-  // Öz Geçmişi doğrula. [Validate the Curriculum Vitae.]
-  if report-type == REPORT-TYPES.TERM-PROJECT {
-    curriculum-vitae-info-validator(value: curriculum-vitae-info)
-  }
-
-  /* ---- Initialize the Language Manager ---- */
+  /* ---- Dil Yöneticisini Başlat [Initialize the Language Manager] ---- */
   init-language-manager(default-language: language.language-code)
 
-  /* ---- Common Document Rules ---- */
+  /* ---- Ortak Döküman Kuralları [Common Document Rules] ---- */
   set document(
     title: thesis-title.tur.title-case + " (" + thesis-title.eng.title-case + ")",
     author: (author.first-name + " " + upper(author.last-name)),
