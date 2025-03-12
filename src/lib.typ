@@ -259,10 +259,6 @@
     second-advisor-validator(value: second-advisor)
   }
 
-  // Akademik ünvanı doğrula. [Validate the academic title.]
-  academic-member-title-validator(value: advisor.academic-member-title)
-  academic-member-title-validator(value: second-advisor.academic-member-title)
-
   // Orijinallik değerlerini doğrula. [Verify the authenticity values.]
   if (
     report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.DOCTORAL-THESIS
