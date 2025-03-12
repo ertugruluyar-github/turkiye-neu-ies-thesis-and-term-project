@@ -263,7 +263,7 @@
   if (
     report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.DOCTORAL-THESIS
   ) {
-    thesis-originalty-validator(thesis-originalty: thesis-originalty)
+    thesis-originalty-validator(value: thesis-originalty)
   }
 
   // Anahtar kelime sayısını doğrula. [Validate keyword count.]
