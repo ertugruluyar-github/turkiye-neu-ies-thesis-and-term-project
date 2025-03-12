@@ -7,6 +7,8 @@
 #import "/src/core/validation/program-validator.typ": program-validator
 #import "/src/core/validation/report-type-validator.typ": report-type-validator
 #import "/src/core/validation/author-validator.typ": author-validator
+#import "/src/core/validation/advisor-validator.typ": advisor-validator
+#import "/src/core/validation/second-advisor-validator.typ": second-advisor-validator
 #import "/src/core/validation/orcid-validator.typ": orcid-validator
 #import "/src/core/validation/academic-member-title-validator.typ": academic-member-title-validator
 #import "/src/core/validation/thesis-originalty-validator.typ": thesis-originalty-validator
@@ -250,19 +252,11 @@
   author-validator(value: author)
 
   // Danışmanın ORCID parametresini doğrula. [Validate the advisor's ORCID parameter.]
-  orcid-validator(
-    value: advisor.orcid,
-    value-name: "advisor.orcid",
-    value-description: "Danışmanın ORCID değeri",
-  )
+  advisor-validator(value: advisor)
 
   // İkinci Danışmanın ORCID parametresini doğrula. [Validate the second advisor's ORCID parameter.]
   if second-advisor != none {
-    orcid-validator(
-      value: second-advisor.orcid,
-      value-name: "second-advisor.orcid",
-      value-description: "İkinci Danışmanın ORCID değeri",
-    )
+    second-advisor-validator(value: second-advisor)
   }
 
   // Akademik ünvanı doğrula. [Validate the academic title.]
