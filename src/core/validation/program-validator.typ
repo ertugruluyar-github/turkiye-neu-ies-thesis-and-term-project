@@ -5,9 +5,9 @@
   PROGRAMS,
 )
 
-#let program-validator(program: none) = {
+#let program-validator(value: none) = {
   assert(
-    program in PROGRAMS.values(),
+    value in PROGRAMS.values(),
     message: STRING-ERROR-INLINE-TITLE
       + "'program' parametresine desteklenmeyen ya da hatalı bir giriş oldu. Lütfen 'PROGRAMS' sözlüğündeki bir bilim dalını seçiniz. "
       + STRING-RELATED-DOCUMENTATION-INLINE-TITLE
