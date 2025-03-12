@@ -16,7 +16,7 @@
       + " alanındaki "
       + "'"
       + value-name
-      + "' parametresine desteklenmeyen ya da hatalı bir giriş oldu. Lütfen 'array(1, ...)' ya da '(1, ...)' şeklinde bir dizi giriniz. "
+      + "' parametresine desteklenmeyen ya da hatalı bir giriş oldu. Lütfen 'array(1, ...)' ya da '(1, ...)' şeklinde bir söz dizimi ile dizi (array) giriniz. "
       + STRING-RELATED-DOCUMENTATION-INLINE-TITLE
       + STRING-TYPST-ARRAY-DOCUMENTATION-LINK,
   )
