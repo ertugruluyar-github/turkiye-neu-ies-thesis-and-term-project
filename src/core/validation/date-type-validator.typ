@@ -5,12 +5,12 @@
 )
 
 #let date-type-validator(
-  date: none,
+  parameter: none,
   parameter-name: none,
   parameter-description: none,
 ) = {
   assert(
-    type(date) == datetime,
+    type(parameter) == datetime,
     message: STRING-ERROR-INLINE-TITLE
       + parameter-description
       + " alanındaki "

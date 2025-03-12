@@ -5,12 +5,12 @@
 )
 
 #let orcid-validator(
-  orcid: none,
+  parameter: none,
   parameter-name: none,
   parameter-description: none,
 ) = {
   assert(
-    type(orcid.find(regex("\d{4}-\d{4}-\d{4}-\d{4}"))) == str,
+    type(parameter.find(regex("\d{4}-\d{4}-\d{4}-\d{4}"))) == str,
     message: STRING-ERROR-INLINE-TITLE
       + parameter-description
       + " alanındaki "

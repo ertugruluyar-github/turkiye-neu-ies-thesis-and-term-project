@@ -9,7 +9,7 @@
   get-info-from-recommended-peoples: none,
 ) = {
   date-type-validator(
-    date: birthday,
+    parameter: birthday,
     parameter-name: "curriculum-vitae.birthday",
     parameter-description: "Öz Geçmiş sayfasındaki doğum tarihi",
   )
@@ -66,7 +66,7 @@
   for (index, get-info-from-recommended-people) in get-info-from-recommended-peoples.enumerate(start: 1) {
     if get-info-from-recommended-people.orcid != none {
       orcid-validator(
-        orcid: get-info-from-recommended-people.orcid,
+        parameter: get-info-from-recommended-people.orcid,
         parameter-name: "curriculum-vitae parametresindeki get-info-from-recommended-people.orcid",
         parameter-description: "Öz Geçmişteki " + str(index) + ". bilgi almak için önerebileceğim şahsın ORCID'i",
       )

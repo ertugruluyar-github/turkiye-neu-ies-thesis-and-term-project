@@ -266,21 +266,21 @@
 
   // Tarihi doğrula. [Validate the date.]
   date-type-validator(
-    date: date,
+    parameter: date,
     parameter-name: "template-configurations.date",
     parameter-description: "Şablon ayarlarındaki tarih",
   )
 
   // Yazarın ORCID'ini doğrula. [Validate the author's ORCID.]
   orcid-validator(
-    orcid: author.orcid,
+    parameter: author.orcid,
     parameter-name: "author.orcid",
     parameter-description: "Yazarın ORCID değeri",
   )
 
   // Danışmanın ORCID'ini doğrula. [Validate the advisor's ORCID.]
   orcid-validator(
-    orcid: advisor.orcid,
+    parameter: advisor.orcid,
     parameter-name: "advisor.orcid",
     parameter-description: "Danışmanın ORCID değeri",
   )
@@ -288,7 +288,7 @@
   // İkinci Danışmanın ORCID'ini doğrula. [Validate the second advisor's ORCID.]
   if second-advisor != none {
     orcid-validator(
-      orcid: second-advisor.orcid,
+      parameter: second-advisor.orcid,
       parameter-name: "second-advisor.orcid",
       parameter-description: "İkinci Danışmanın ORCID değeri",
     )
