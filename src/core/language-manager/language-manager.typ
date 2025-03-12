@@ -6,14 +6,17 @@
 /// Define user base path
 #let _user-base-path = "/template/"
 
+/// Folder name of language manager folder
+#let _language-manager-folder-path = _base-path + "language-manager/"
+
 /// Define supported languages file path
-#let _supported-languages-file-path = _base-path + "language-manager/supported-languages.toml"
+#let _supported-languages-file-path = _language-manager-folder-path + "supported-languages.toml"
 
 /// Folder name that language data files saved
 #let _languages-data-folder-name = "languages"
 
 /// Define default language data base path
-#let _default-language-data-base-path = _base-path + _languages-data-folder-name + "/"
+#let _default-language-data-base-path = _language-manager-folder-path + _languages-data-folder-name + "/"
 
 /// Define user language overrides base path
 #let _user-language-overrides-base-path = _user-base-path + _languages-data-folder-name + "/"
