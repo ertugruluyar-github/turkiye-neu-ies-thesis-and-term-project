@@ -8,19 +8,19 @@
   ),
 ) = {
   minimum-value-validator(
-    number: value.included-page-count,
+    value: value.included-page-count,
     min-value: 1,
     value-name: "included-page-count",
     value-description: "Taranan sayfa sayısı",
   )
   minimum-value-validator(
-    number: value.similarity-score,
+    value: value.similarity-score,
     min-value: 0,
     value-name: "similarity-score",
     value-description: "Benzerlik oranı",
   )
   maximum-value-validator(
-    number: value.similarity-score,
+    value: value.similarity-score,
     max-value: 100,
     value-name: "similarity-score",
     value-description: "Benzerlik oranı",
