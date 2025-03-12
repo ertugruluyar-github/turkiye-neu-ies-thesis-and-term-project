@@ -1,5 +1,4 @@
 #import "/src/constants.typ": *
-#import "/src/modules/custom-functions.typ": *
 #import "/src/constants/language-keys.typ": language-keys
 #import "/src/styles/table-style.typ": table-style
 #import "/src/styles/figure-style.typ": figure-style
@@ -70,9 +69,6 @@
 
   // Embeded computer code style
   show raw: set text(ALTERNATE-FONT-SIZE)
-
-  // Enable "drafting" package
-  set-page-properties()
 
   content
 }

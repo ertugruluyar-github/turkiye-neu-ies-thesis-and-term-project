@@ -1,4 +1,5 @@
 #import "/src/constants.typ": *
+#import "/src/modules/custom-functions.typ": *
 #import "/src/styles/common-document-style.typ": common-document-style
 #import "/src/styles/thesis-front-section-style.typ": thesis-front-section-style
 #import "/src/styles/thesis-main-section-style.typ": thesis-main-section-style
@@ -253,6 +254,10 @@
     second-advisor: second-advisor,
     thesis-study-funding-organization: thesis-study-funding-organization,
   )
+
+  // Enable "drafting" package
+  // TODO: Çöz: Aktif edince bir boş sayfa oluşuyor.
+  //set-page-properties()
 
   {
     /* ---- TEZİN ÖN KISMI [FRONT SECTION OF THESIS] ---- */
