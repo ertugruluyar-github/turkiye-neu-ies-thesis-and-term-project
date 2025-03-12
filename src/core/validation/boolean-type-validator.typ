@@ -5,12 +5,12 @@
 )
 
 #let boolean-type-validator(
-  boolean: none,
+  parameter: none,
   parameter-name: none,
   parameter-description: none,
 ) = {
   assert(
-    type(boolean) == bool,
+    type(parameter) == bool,
     message: STRING-ERROR-INLINE-TITLE
       + parameter-description
       + " alanındaki "

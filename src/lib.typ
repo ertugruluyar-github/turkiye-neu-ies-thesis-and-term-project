@@ -195,27 +195,27 @@
   /* ---- Doğrulama İşlemleri [Validation Process] ---- */
   // Mantıksal veri türünü doğrula. [Validate boolean data type.]
   boolean-type-validator(
-    boolean: show-list-of-tables,
+    parameter: show-list-of-tables,
     parameter-name: "template-configurations.show-list-of-tables",
     parameter-description: "Şablon ayarlarındaki tablolar listesini göster seçeneği",
   )
   boolean-type-validator(
-    boolean: show-list-of-images,
+    parameter: show-list-of-images,
     parameter-name: "template-configurations.show-list-of-images",
     parameter-description: "Şablon ayarlarındaki şekiller listesini göster seçeneği",
   )
   boolean-type-validator(
-    boolean: have-symbols,
+    parameter: have-symbols,
     parameter-name: "template-configurations.have-symbols",
     parameter-description: "Şablon ayarlarındaki simgelerim var seçeneği",
   )
   boolean-type-validator(
-    boolean: have-abbreviations,
+    parameter: have-abbreviations,
     parameter-name: "template-configurations.have-abbreviations",
     parameter-description: "Şablon ayarlarındaki kısaltmalarım var seçeneği",
   )
   boolean-type-validator(
-    boolean: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
+    parameter: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
     parameter-name: "template-configurations.show-separated-sub-headings-in-discussion-conclusion-and-suggestions",
     parameter-description: "Şablon ayarlarındaki 'TARTIŞMA, SONUÇ VE ÖNERİLER' bölümündeki alt başlıkları göster seçeneği",
   )
