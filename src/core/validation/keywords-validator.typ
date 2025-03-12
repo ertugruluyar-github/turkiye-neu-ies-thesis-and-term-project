@@ -1,3 +1,4 @@
+#import "/src/core/validation/dictionary-type-validator.typ": dictionary-type-validator
 #import "/src/core/validation/array-type-validator.typ": array-type-validator
 #import "/src/core/validation/minimum-value-validator.typ": minimum-value-validator
 #import "/src/core/validation/maximum-value-validator.typ": maximum-value-validator
@@ -8,6 +9,13 @@
 )
 
 #let keywords-validator(value: none) = {
+  // Sözlük parametre türünü doğrula. [Validate dictionary parameter type.]
+  dictionary-type-validator(
+    value: value,
+    value-name: "template-configurations.keywords",
+    value-description: "Şablon ayarlarındaki anahtar kelimeler",
+  )
+
   // Dizi parametre türünü doğrula. [Validate array parameter type.]
   array-type-validator(
     value: value.tur,
