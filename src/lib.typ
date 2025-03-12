@@ -13,7 +13,7 @@
 #import "/src/core/validation/academic-member-title-validator.typ": academic-member-title-validator
 #import "/src/core/validation/thesis-originalty-validator.typ": thesis-originalty-validator
 #import "/src/core/validation/keywords-validator.typ": keywords-validator
-#import "/src/core/validation/work-packages-months-validator.typ": work-packages-months-validator
+#import "/src/core/validation/work-packages-validator.typ": work-packages-validator
 #import "/src/core/validation/curriculum-vitae-info-validator.typ": curriculum-vitae-info-validator
 #import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
 #import "/src/styles/thesis-main-section-heading-style.typ": thesis-main-section-heading-style
@@ -199,11 +199,6 @@
 
   // Dizi veri türünü doğrula. [Validate array data type.]
   array-type-validator(
-    value: work-packages,
-    value-name: "template-configurations.work-packages",
-    value-description: "Şablon ayarlarındaki iş paketleri",
-  )
-  array-type-validator(
     value: curriculum-vitae-info.skills,
     value-name: "curriculum-vitae-info.skills",
     value-description: "Öz Geçmişdeki beceriler",
@@ -298,7 +293,7 @@
   if (
     report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
   ) {
-    work-packages-months-validator(work-packages: work-packages, report-type: report-type)
+    work-packages-validator(value: work-packages, report-type: report-type)
   }
 
   // Öz Geçmişi doğrula. [Validate the Curriculum Vitae.]

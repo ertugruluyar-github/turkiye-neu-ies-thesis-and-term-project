@@ -6,11 +6,20 @@
   MASTER-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
   DOCTORAL-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
 )
+#import "/src/core/validation/array-type-validator.typ": array-type-validator
 
-#let work-packages-months-validator(
-  work-packages: none,
+#let work-packages-validator(
+  value: none,
   report-type: none,
 ) = {
+  // Dizi veri türünü doğrula. [Validate array data type.]
+  array-type-validator(
+    value: value,
+    value-name: "template-configurations.work-packages",
+    value-description: "Şablon ayarlarındaki iş paketleri",
+  )
+
+  // İş Paketlerinin toplam ay sayısını doğrula. [Validate th sum of the month count of work-packages.]
   let month-count = if report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL {
     MASTER-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT
   } else if report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL {
@@ -18,7 +27,7 @@
   }
 
   let work-packages-months = ()
-  for work-package in work-packages {
+  for work-package in value {
     for month in work-package.months {
       if not (work-packages-months.contains(month)) {
         work-packages-months.push(month)
