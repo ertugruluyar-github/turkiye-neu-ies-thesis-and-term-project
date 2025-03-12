@@ -6,6 +6,7 @@
   MASTER-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
   DOCTORAL-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
 )
+#import "/src/core/validation/dictionary-type-validator.typ": dictionary-type-validator
 #import "/src/core/validation/array-type-validator.typ": array-type-validator
 
 #let work-packages-validator(
@@ -18,6 +19,15 @@
     value-name: "template-configurations.work-packages",
     value-description: "Şablon ayarlarındaki iş paketleri",
   )
+
+  // Sözlük parametre türünü doğrula. [Validate dictionary parameter type.]
+  for (index, work-package) in value.enumerate(start: 1) {
+    dictionary-type-validator(
+      value: work-package,
+      value-name: "template-configurations.work-packages",
+      value-description: "Şablon ayarlarındaki " + str(index) + ". iş paketi",
+    )
+  }
 
   // İş Paketlerinin toplam ay sayısını doğrula. [Validate th sum of the month count of work-packages.]
   let month-count = if report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL {
