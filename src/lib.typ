@@ -1,9 +1,10 @@
 #import "/src/constants.typ": *
+#import "/src/core/validation/boolean-type-validator.typ": boolean-type-validator
+#import "/src/core/validation/date-validator.typ": date-validator
 #import "/src/core/validation/language-validator.typ": language-validator
 #import "/src/core/validation/department-validator.typ": department-validator
 #import "/src/core/validation/program-validator.typ": program-validator
 #import "/src/core/validation/report-type-validator.typ": report-type-validator
-#import "/src/core/validation/date-validator.typ": date-validator
 #import "/src/core/validation/orcid-validator.typ": orcid-validator
 #import "/src/core/validation/academic-member-title-validator.typ": academic-member-title-validator
 #import "/src/core/validation/thesis-originalty-validator.typ": thesis-originalty-validator
@@ -190,7 +191,34 @@
   ),
   body,
 ) = {
-  /* ---- Doğrulama İşlemleri [Verification Process] ---- */
+  /* ---- Doğrulama İşlemleri [Validation Process] ---- */
+  // Mantıksal veri türünü doğrula. [Validate boolean data type.]
+  boolean-type-validator(
+    boolean: show-list-of-tables,
+    parameter-name: "template-configurations.show-list-of-tables",
+    parameter-description: "Şablon ayarlarındaki tablolar listesini göster seçeneği",
+  )
+  boolean-type-validator(
+    boolean: show-list-of-images,
+    parameter-name: "template-configurations.show-list-of-images",
+    parameter-description: "Şablon ayarlarındaki şekiller listesini göster seçeneği",
+  )
+  boolean-type-validator(
+    boolean: have-symbols,
+    parameter-name: "template-configurations.have-symbols",
+    parameter-description: "Şablon ayarlarındaki simgelerim var seçeneği",
+  )
+  boolean-type-validator(
+    boolean: have-abbreviations,
+    parameter-name: "template-configurations.have-abbreviations",
+    parameter-description: "Şablon ayarlarındaki kısaltmalarım var seçeneği",
+  )
+  boolean-type-validator(
+    boolean: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
+    parameter-name: "template-configurations.show-separated-sub-headings-in-discussion-conclusion-and-suggestions",
+    parameter-description: "Şablon ayarlarındaki 'TARTIŞMA, SONUÇ VE ÖNERİLER' bölümündeki alt başlıkları göster seçeneği",
+  )
+
   // Dili doğrula. [Validate the language.]
   language-validator(language: language)
 
