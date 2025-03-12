@@ -262,7 +262,7 @@
   program-validator(value: program)
 
   // Rapor türünü doğrula. [Validate the report type.]
-  report-type-validator(report-type: report-type)
+  report-type-validator(value: report-type)
 
   // Tarihi doğrula. [Validate the date.]
   date-type-validator(
