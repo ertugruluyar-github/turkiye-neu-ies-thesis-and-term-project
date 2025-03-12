@@ -6,6 +6,7 @@
 #import "/src/core/validation/department-validator.typ": department-validator
 #import "/src/core/validation/program-validator.typ": program-validator
 #import "/src/core/validation/report-type-validator.typ": report-type-validator
+#import "/src/core/validation/author-validator.typ": author-validator
 #import "/src/core/validation/orcid-validator.typ": orcid-validator
 #import "/src/core/validation/academic-member-title-validator.typ": academic-member-title-validator
 #import "/src/core/validation/thesis-originalty-validator.typ": thesis-originalty-validator
@@ -193,32 +194,6 @@
   body,
 ) = {
   /* ---- Doğrulama İşlemleri [Validation Process] ---- */
-  // Mantıksal veri türünü doğrula. [Validate boolean data type.]
-  boolean-type-validator(
-    value: show-list-of-tables,
-    value-name: "template-configurations.show-list-of-tables",
-    value-description: "Şablon ayarlarındaki tablolar listesini göster seçeneği",
-  )
-  boolean-type-validator(
-    value: show-list-of-images,
-    value-name: "template-configurations.show-list-of-images",
-    value-description: "Şablon ayarlarındaki şekiller listesini göster seçeneği",
-  )
-  boolean-type-validator(
-    value: have-symbols,
-    value-name: "template-configurations.have-symbols",
-    value-description: "Şablon ayarlarındaki simgelerim var seçeneği",
-  )
-  boolean-type-validator(
-    value: have-abbreviations,
-    value-name: "template-configurations.have-abbreviations",
-    value-description: "Şablon ayarlarındaki kısaltmalarım var seçeneği",
-  )
-  boolean-type-validator(
-    value: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
-    value-name: "template-configurations.show-separated-sub-headings-in-discussion-conclusion-and-suggestions",
-    value-description: "Şablon ayarlarındaki 'TARTIŞMA, SONUÇ VE ÖNERİLER' bölümündeki alt başlıkları göster seçeneği",
-  )
 
   // Dizi veri türünü doğrula. [Validate array data type.]
   array-type-validator(
@@ -252,40 +227,36 @@
     value-description: "Öz Geçmişdeki bilgi almak için önerebileceğim şahıs",
   )
 
-  // Dili doğrula. [Validate the language.]
+  // Dil parametresini doğrula. [Validate the language parameter.]
   language-validator(value: language)
 
-  // Ana Bilim Dalını doğrula. [Validate the department.]
+  // Ana Bilim Dalı parametresini doğrula. [Validate the department parameter.]
   department-validator(value: department)
 
-  // Bilim Dalını doğrula. [Validate the program.]
+  // Bilim Dalı parametresini doğrula. [Validate the program parameter.]
   program-validator(value: program)
 
-  // Rapor türünü doğrula. [Validate the report type.]
+  // Rapor türü parametresini doğrula. [Validate the report type parameter.]
   report-type-validator(value: report-type)
 
-  // Tarihi doğrula. [Validate the date.]
+  // Tarih parametresini doğrula. [Validate the date parameter.]
   date-type-validator(
     value: date,
     value-name: "template-configurations.date",
     value-description: "Şablon ayarlarındaki tarih",
   )
 
-  // Yazarın ORCID'ini doğrula. [Validate the author's ORCID.]
-  orcid-validator(
-    value: author.orcid,
-    value-name: "author.orcid",
-    value-description: "Yazarın ORCID değeri",
-  )
+  // Yazar parametresini doğrula. [Validate the author parameter.]
+  author-validator(value: author)
 
-  // Danışmanın ORCID'ini doğrula. [Validate the advisor's ORCID.]
+  // Danışmanın ORCID parametresini doğrula. [Validate the advisor's ORCID parameter.]
   orcid-validator(
     value: advisor.orcid,
     value-name: "advisor.orcid",
     value-description: "Danışmanın ORCID değeri",
   )
 
-  // İkinci Danışmanın ORCID'ini doğrula. [Validate the second advisor's ORCID.]
+  // İkinci Danışmanın ORCID parametresini doğrula. [Validate the second advisor's ORCID parameter.]
   if second-advisor != none {
     orcid-validator(
       value: second-advisor.orcid,
@@ -308,6 +279,33 @@
   // Anahtar kelime sayısını doğrula. [Validate keyword count.]
   keyword-count-validator(value: keywords.tur.len())
   keyword-count-validator(value: keywords.eng.len())
+
+  // Mantıksal veri türünü doğrula. [Validate boolean data type.]
+  boolean-type-validator(
+    value: show-list-of-tables,
+    value-name: "template-configurations.show-list-of-tables",
+    value-description: "Şablon ayarlarındaki tablolar listesini göster seçeneği",
+  )
+  boolean-type-validator(
+    value: show-list-of-images,
+    value-name: "template-configurations.show-list-of-images",
+    value-description: "Şablon ayarlarındaki şekiller listesini göster seçeneği",
+  )
+  boolean-type-validator(
+    value: have-symbols,
+    value-name: "template-configurations.have-symbols",
+    value-description: "Şablon ayarlarındaki simgelerim var seçeneği",
+  )
+  boolean-type-validator(
+    value: have-abbreviations,
+    value-name: "template-configurations.have-abbreviations",
+    value-description: "Şablon ayarlarındaki kısaltmalarım var seçeneği",
+  )
+  boolean-type-validator(
+    value: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
+    value-name: "template-configurations.show-separated-sub-headings-in-discussion-conclusion-and-suggestions",
+    value-description: "Şablon ayarlarındaki 'TARTIŞMA, SONUÇ VE ÖNERİLER' bölümündeki alt başlıkları göster seçeneği",
+  )
 
   // Çalışma Takvimindeki iş paketlerinin aylarının toplamını doğrula. [Validate the sum of the months of work packages in the Work Schedule.]
   if (
