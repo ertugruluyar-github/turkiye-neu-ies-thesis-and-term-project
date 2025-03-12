@@ -1,6 +1,7 @@
 #import "/src/constants.typ": *
 #import "/src/core/validation/boolean-type-validator.typ": boolean-type-validator
 #import "/src/core/validation/array-type-validator.typ": array-type-validator
+#import "/src/core/validation/dictionary-type-validator.typ": dictionary-type-validator
 #import "/src/core/validation/date-type-validator.typ": date-type-validator
 #import "/src/core/validation/language-validator.typ": language-validator
 #import "/src/core/validation/department-validator.typ": department-validator
@@ -230,6 +231,13 @@
   if second-advisor != none {
     second-advisor-validator(value: second-advisor)
   }
+
+  // Tez Çalışmasını Destekleyen Kuruluş parametresini doğrula. [Validate thesis-study-funding-organization parameter.]
+  dictionary-type-validator(
+    value: thesis-study-funding-organization,
+    value-name: "template-configurations.thesis-study-funding-organization",
+    value-description: "Şablon ayarlarındaki Tez Çalışmasını Destekleyen Kuruluş",
+  )
 
   // Orijinallik parametresini doğrula. [Verify the authenticity parameter.]
   if (
