@@ -269,27 +269,35 @@
   // Anahtar Kelimeler parametresini doğrula. [Validate keywords parameter.]
   keywords-validator(value: keywords)
 
-  // Mantıksal veri türünü doğrula. [Validate boolean data type.]
+  // Tablolar listesini göster parametresini doğrula. [Validate show-list-of-tables parameter.]
   boolean-type-validator(
     value: show-list-of-tables,
     value-name: "template-configurations.show-list-of-tables",
     value-description: "Şablon ayarlarındaki tablolar listesini göster seçeneği",
   )
+
+  // Şekiller listesini göster parametresini doğrula. [Validate show-list-of-images parameter.]
   boolean-type-validator(
     value: show-list-of-images,
     value-name: "template-configurations.show-list-of-images",
     value-description: "Şablon ayarlarındaki şekiller listesini göster seçeneği",
   )
+
+  // Simgelerim var parametresini doğrula. [Validate have-symbols parameter.]
   boolean-type-validator(
     value: have-symbols,
     value-name: "template-configurations.have-symbols",
     value-description: "Şablon ayarlarındaki simgelerim var seçeneği",
   )
+
+  // Kısaltmalarım var parametresini doğrula. [Validate have-abbreviations parameter.]
   boolean-type-validator(
     value: have-abbreviations,
     value-name: "template-configurations.have-abbreviations",
     value-description: "Şablon ayarlarındaki kısaltmalarım var seçeneği",
   )
+
+  // 'TARTIŞMA, SONUÇ VE ÖNERİLER' bölümündeki alt başlıkları göster parametresini doğrula. [Validate show-separated-sub-headings-in-discussion-conclusion-and-suggestions parameter.]
   boolean-type-validator(
     value: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
     value-name: "template-configurations.show-separated-sub-headings-in-discussion-conclusion-and-suggestions",
