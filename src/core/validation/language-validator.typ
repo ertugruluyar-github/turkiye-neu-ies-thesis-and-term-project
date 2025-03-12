@@ -14,6 +14,7 @@
     value-description: "Şablon ayarlarındaki dil",
   )
 
+  // Dil değerini doğrula. [Validate the language value.]
   assert(
     value in LANGUAGES.values(),
     message: STRING-ERROR-INLINE-TITLE
