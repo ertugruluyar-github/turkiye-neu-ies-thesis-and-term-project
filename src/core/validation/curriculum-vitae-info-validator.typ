@@ -10,6 +10,27 @@
     value-description: "Öz Geçmiş sayfasındaki doğum tarihi",
   )
 
+  // Dizi parametre türünü doğrula. [Validate array parameter type.]
+  array-type-validator(
+    value: curriculum-vitae-info.skills,
+    value-name: "curriculum-vitae-info.skills",
+    value-description: "Öz Geçmişdeki beceriler",
+  )
+
+  // Dizi parametre türünü doğrula. [Validate array parameter type.]
+  array-type-validator(
+    value: curriculum-vitae-info.work-experiences,
+    value-name: "curriculum-vitae-info.work-experiences",
+    value-description: "Öz Geçmişdeki iş deneyimleri",
+  )
+
+  // Dizi parametre türünü doğrula. [Validate array parameter type.]
+  array-type-validator(
+    value: curriculum-vitae-info.get-info-from-recommended-peoples,
+    value-name: "curriculum-vitae-info.get-info-from-recommended-peoples",
+    value-description: "Öz Geçmişdeki bilgi almak için önerebileceğim şahıs",
+  )
+
   // E-Posta parametresini doğrula. [Validate the email parameter.]
   email-validator(
     value: value.email,

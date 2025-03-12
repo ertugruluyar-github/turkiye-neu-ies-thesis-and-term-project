@@ -197,23 +197,6 @@
 ) = {
   /* ---- Doğrulama İşlemleri [Validation Process] ---- */
 
-  // Dizi parametre türünü doğrula. [Validate array parameter type.]
-  array-type-validator(
-    value: curriculum-vitae-info.skills,
-    value-name: "curriculum-vitae-info.skills",
-    value-description: "Öz Geçmişdeki beceriler",
-  )
-  array-type-validator(
-    value: curriculum-vitae-info.work-experiences,
-    value-name: "curriculum-vitae-info.work-experiences",
-    value-description: "Öz Geçmişdeki iş deneyimleri",
-  )
-  array-type-validator(
-    value: curriculum-vitae-info.get-info-from-recommended-peoples,
-    value-name: "curriculum-vitae-info.get-info-from-recommended-peoples",
-    value-description: "Öz Geçmişdeki bilgi almak için önerebileceğim şahıs",
-  )
-
   // Dil parametresini doğrula. [Validate the language parameter.]
   language-validator(value: language)
 
