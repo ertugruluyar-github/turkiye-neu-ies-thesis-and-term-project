@@ -259,7 +259,7 @@
   department-validator(value: department)
 
   // Bilim Dalını doğrula. [Validate the program.]
-  program-validator(program: program)
+  program-validator(value: program)
 
   // Rapor türünü doğrula. [Validate the report type.]
   report-type-validator(report-type: report-type)
@@ -306,8 +306,8 @@
   }
 
   // Anahtar kelime sayısını doğrula. [Validate keyword count.]
-  keyword-count-validator(keyword-count: keywords.tur.len())
-  keyword-count-validator(keyword-count: keywords.eng.len())
+  keyword-count-validator(value: keywords.tur.len())
+  keyword-count-validator(value: keywords.eng.len())
 
   // Çalışma Takvimindeki iş paketlerinin aylarının toplamını doğrula. [Validate the sum of the months of work packages in the Work Schedule.]
   if (
