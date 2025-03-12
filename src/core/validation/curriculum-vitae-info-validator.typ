@@ -1,4 +1,4 @@
-#import "/src/core/validation/date-validator.typ": date-validator
+#import "/src/core/validation/date-type-validator.typ": date-type-validator
 #import "/src/core/validation/orcid-validator.typ": orcid-validator
 #import "/src/core/validation/email-validator.typ": email-validator
 
@@ -8,7 +8,7 @@
   work-experiences: none,
   get-info-from-recommended-peoples: none,
 ) = {
-  date-validator(
+  date-type-validator(
     date: birthday,
     parameter-name: "curriculum-vitae.birthday",
     parameter-description: "Öz Geçmiş sayfasındaki doğum tarihi",
@@ -21,12 +21,12 @@
   )
 
   for (index, work-experience) in work-experiences.enumerate(start: 1) {
-    date-validator(
+    date-type-validator(
       date: work-experience.start-date,
       parameter-name: "curriculum-vitae parametresindeki work-experience.start-date",
       parameter-description: "Öz Geçmişteki" + str(index) + ". iş deneyiminin başlangıç tarihi",
     )
-    date-validator(
+    date-type-validator(
       date: work-experience.end-date,
       parameter-name: "curriculum-vitae parametresindeki work-experience.end-date",
       parameter-description: "Öz Geçmişteki" + str(index) + ". iş deneyiminin bitiş tarihi",

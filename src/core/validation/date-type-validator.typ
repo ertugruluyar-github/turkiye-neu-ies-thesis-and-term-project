@@ -4,7 +4,7 @@
   STRING-TYPST-DATETIME-DOCUMENTATION-LINK,
 )
 
-#let date-validator(
+#let date-type-validator(
   date: none,
   parameter-name: none,
   parameter-description: none,

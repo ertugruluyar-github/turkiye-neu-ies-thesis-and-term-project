@@ -1,6 +1,6 @@
 #import "/src/constants.typ": *
 #import "/src/core/validation/boolean-type-validator.typ": boolean-type-validator
-#import "/src/core/validation/date-validator.typ": date-validator
+#import "/src/core/validation/date-type-validator.typ": date-type-validator
 #import "/src/core/validation/language-validator.typ": language-validator
 #import "/src/core/validation/department-validator.typ": department-validator
 #import "/src/core/validation/program-validator.typ": program-validator
@@ -232,7 +232,7 @@
   report-type-validator(report-type: report-type)
 
   // Tarihi doğrula. [Validate the date.]
-  date-validator(
+  date-type-validator(
     date: date,
     parameter-name: "template-configurations.date",
     parameter-description: "Şablon ayarlarındaki tarih",
