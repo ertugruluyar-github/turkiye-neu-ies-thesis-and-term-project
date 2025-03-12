@@ -12,7 +12,7 @@
 #import "/src/core/validation/orcid-validator.typ": orcid-validator
 #import "/src/core/validation/academic-member-title-validator.typ": academic-member-title-validator
 #import "/src/core/validation/thesis-originalty-validator.typ": thesis-originalty-validator
-#import "/src/core/validation/keyword-count-validator.typ": keyword-count-validator
+#import "/src/core/validation/keywords-validator.typ": keywords-validator
 #import "/src/core/validation/work-packages-months-validator.typ": work-packages-months-validator
 #import "/src/core/validation/curriculum-vitae-info-validator.typ": curriculum-vitae-info-validator
 #import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
@@ -259,16 +259,15 @@
     second-advisor-validator(value: second-advisor)
   }
 
-  // Orijinallik değerlerini doğrula. [Verify the authenticity values.]
+  // Orijinallik parametresini doğrula. [Verify the authenticity parameter.]
   if (
     report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.DOCTORAL-THESIS
   ) {
     thesis-originalty-validator(value: thesis-originalty)
   }
 
-  // Anahtar kelime sayısını doğrula. [Validate keyword count.]
-  keyword-count-validator(value: keywords.tur.len())
-  keyword-count-validator(value: keywords.eng.len())
+  // Anahtar Kelimeler parametresini doğrula. [Validate keywords parameter.]
+  keywords-validator(value: keywords)
 
   // Mantıksal veri türünü doğrula. [Validate boolean data type.]
   boolean-type-validator(
