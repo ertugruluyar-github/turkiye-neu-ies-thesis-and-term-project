@@ -1,8 +1,13 @@
+#import "/src/constants.typ": PAGE-NUMBERING-ROMAN
+#import "/src/styles/page-numbering-style.typ": page-numbering-style
+#import "/src/styles/heading-spacing-style.typ": heading-spacing-style
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
-#import "/src/styles/heading-spacing-style.typ": heading-spacing-style
 
 #let thesis-front-section-heading-style(content) = {
+  // Set centered roman page numbering.
+  show: page-numbering-style.with(numbering: PAGE-NUMBERING-ROMAN, number-align: center)
+
   // 1. düzey başlıklar ortaya hizalandı. [1st level headings are aligned center.]
   show heading.where(level: 1): set align(center)
 

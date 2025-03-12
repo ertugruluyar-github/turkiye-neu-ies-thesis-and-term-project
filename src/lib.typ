@@ -1,13 +1,8 @@
 #import "/src/constants.typ": *
-#import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
-#import "/src/styles/thesis-main-section-heading-style.typ": thesis-main-section-heading-style
-#import "/src/styles/thesis-back-section-heading-style.typ": thesis-back-section-heading-style
-#import "/src/styles/page-numbering-style.typ": page-numbering-style
-#import "/src/styles/bibliography-section-style.typ": bibliography-section-style
-#import "/src/styles/table-style.typ": table-style
-#import "/src/styles/figure-style.typ": figure-style
-#import "/src/styles/reference-style.typ": reference-style
-#import "/src/modules/custom-functions.typ": *
+#import "/src/styles/common-document-style.typ": common-document-style
+#import "/src/styles/thesis-front-section-style.typ": thesis-front-section-style
+#import "/src/styles/thesis-main-section-style.typ": thesis-main-section-style
+#import "/src/styles/thesis-back-section-style.typ": thesis-back-section-style
 #import "/src/sections/01-front/title-page.typ": title-page
 #import "/src/sections/01-front/preface-page.typ": preface-page
 #import "/src/sections/01-front/table-of-contents-page.typ": table-of-contents-page
@@ -26,11 +21,13 @@
   discussion-conclusion-and-suggestions-page,
 )
 #import "/src/sections/03-back/work-schedule-page.typ": work-schedule-page
+#import "/src/sections/03-back/bibliography-page.typ": bibliography-page
 #import "/src/sections/03-back/appendices-page.typ": appendices-page
 #import "/src/sections/03-back/curriculum-vitae-page.typ": curriculum-vitae-page
 #import "/src/sections/03-back/expanded-turkish-abstract-page.typ": expanded-turkish-abstract-page
 #import "/src/core/validation-manager/validation-manager.typ": validation-manager
 #import "core/language-manager/language-manager.typ": init-language-manager, translator
+#import "/src/constants/language-keys.typ": language-keys
 
 #let template-configurations(
   language: LANGUAGES.TR-TR,
@@ -206,65 +203,17 @@
   /* ---- Dil Yöneticisini Başlat [Initialize the Language Manager] ---- */
   init-language-manager(default-language: language.language-code)
 
-  /* ---- Ortak Döküman Kuralları [Common Document Rules] ---- */
-  set document(
-    title: thesis-title.tur.title-case + " (" + thesis-title.eng.title-case + ")",
-    author: (author.first-name + " " + upper(author.last-name)),
-    keywords: (..keywords.tur, ..keywords.eng),
+  /* ---- Ortak Döküman Stili [Common Document Style] ---- */
+  show: common-document-style.with(
+    language: language,
+    thesis-title: thesis-title,
+    author: author,
+    keywords: keywords,
   )
-
-  set page(
-    paper: PAPER,
-    header: none,
-    footer: none,
-    margin: MARGIN,
-    number-align: right,
-    numbering: PAGE-NUMBERING-ROMAN,
-    columns: 1,
-  )
-
-  set text(
-    font: FONT-NAME,
-    size: FONT-SIZE,
-    lang: language.language-code,
-    region: language.region-code,
-    ligatures: false,
-    hyphenate: false,
-    style: "normal",
-    weight: DEFAULT-TEXT-FONT-WEIGHT,
-  )
-
-  set heading(
-    numbering: none,
-    outlined: true,
-    bookmarked: true,
-  )
-
-  show heading: set text(size: FONT-SIZE)
-
-  set par(
-    justify: true,
-    first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: true),
-    leading: PARAGRAPH-LEADING-SIZE,
-    spacing: PARAGRAPH-SPACING-SIZE,
-  )
-
-  set math.equation(
-    numbering: MATH-NUMBERING,
-    supplement: translator(key: language-keys.MATH-EQUATION-REFERENCE-SUPPLEMENT),
-  )
-
-  /* ---- Reference Style ---- */
-  show: reference-style
-
-  /* ---- Table Style ---- */
-  show: table-style
-
-  /* ---- Figure Styles ---- */
-  show: figure-style
 
   /* ----------------------------- */
 
+  // TODO: Bu stillerin ne yaptığını öğrenip duruma göre ortak döküman stillerine ekle.
   /*
     show raw.where(block: true): r => {
       set par(justify: false, first-line-indent: 0cm, leading: PARAGRAPH-LEADING-SIZE, spacing: PARAGRAPH-SPACING-SIZE)
@@ -286,10 +235,10 @@
     }
   */
 
-  /* ----------------------------- */
-
   set footnote.entry(separator: line(length: 40%, stroke: 0.5pt))
   set list(marker: (sym.bullet, "◦", "-"))
+
+  /* ----------------------------- */
 
   /* --- BAŞLIK SAYFASI [TITLE PAGE] --- */
   title-page(
@@ -305,24 +254,10 @@
     thesis-study-funding-organization: thesis-study-funding-organization,
   )
 
-  // Set centered arabic page numbering.
-  show: page-numbering-style.with(numbering: PAGE-NUMBERING-ROMAN, number-align: center)
-
-  show raw: set text(12pt * 0.95)
-  set-page-properties()
-
   {
     /* ---- TEZİN ÖN KISMI [FRONT SECTION OF THESIS] ---- */
-    // Başlık stili
-    show: thesis-front-section-heading-style
-
-    //
-    set par(
-      justify: true,
-      first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: true),
-      leading: PARAGRAPH-LEADING-SIZE,
-      spacing: PARAGRAPH-SPACING-SIZE,
-    )
+    // Tezin Ön Kısmının Stilini
+    show: thesis-front-section-style
 
     /* --- Ön Söz [Preface] --- */
     if (
@@ -440,21 +375,10 @@
   // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
   pagebreak(weak: true, to: "odd")
 
-  // Set centered arabic page numbering.
-  show: page-numbering-style.with(numbering: PAGE-NUMBERING-ARABIC, number-align: center)
-
   {
     /* --- TEZİN ANA KISMI [MAIN SECTION OF THESIS] --- */
-    // Başlık stili
-    show: thesis-main-section-heading-style
-
-    //
-    set par(
-      justify: true,
-      first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: true),
-      leading: PARAGRAPH-LEADING-SIZE,
-      spacing: PARAGRAPH-SPACING-SIZE,
-    )
+    // Tezin Ana Kısmının Stilini
+    show: thesis-main-section-style
 
     /* ---- Bölüm 1 [Chapter 1] ---- */
     introduction-page()
@@ -488,11 +412,9 @@
 
   {
     /* ---- TEZİN ARKA KISMI [BACK SECTION OF THESIS] ---- */
-    // Başlık numarlandırmasını 1'den başlat.
-    counter(heading).update(1)
 
-    // Başlık stili
-    show: thesis-back-section-heading-style
+    // Tezin Arka Kısmının Stilini
+    show: thesis-back-section-style
 
     // Çalışma takvimi
     if (
@@ -523,17 +445,7 @@
     }
 
     // Kaynakça [Bibliography]
-    bibliography-section-style(
-      bibliography(
-        "/template/bibliography-sources/references.bib",
-        style: "american-psychological-association",
-        title: upper(translator(key: language-keys.BIBLIOGRAPHY)),
-        full: false,
-      ),
-    )
-
-    // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
-    pagebreak(weak: true, to: "odd")
+    bibliography-page()
 
     // Ekler [Appendices]
     appendices-page()

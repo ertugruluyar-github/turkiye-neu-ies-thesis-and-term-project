@@ -1,9 +1,13 @@
-#import "/src/constants.typ": HEADING-NUMBERING, PARAGRAPH-SPACING-SIZE
+#import "/src/constants.typ": HEADING-NUMBERING, PARAGRAPH-SPACING-SIZE, PAGE-NUMBERING-ARABIC
+#import "/src/styles/page-numbering-style.typ": page-numbering-style
 #import "/src/styles/heading-spacing-style.typ": heading-spacing-style
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
 #let thesis-main-section-heading-style(content) = {
+  // Set centered arabic page numbering.
+  show: page-numbering-style.with(numbering: PAGE-NUMBERING-ARABIC, number-align: center)
+
   // Başlıklar sola hizalandı. [Headings are aligned left.]
   show heading: set align(left)
 

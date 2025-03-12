@@ -1,8 +1,12 @@
+#import "/src/constants.typ": PAGE-NUMBERING-ARABIC
+#import "/src/styles/page-numbering-style.typ": page-numbering-style
 #import "/src/styles/heading-spacing-style.typ": heading-spacing-style
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
 #let thesis-back-section-heading-style(content) = {
+  // Set continued centered arabic page numbering.
+  show: page-numbering-style.with(numbering: PAGE-NUMBERING-ARABIC, number-align: center, reset: false)
   //
   let APPENDIX-HEADING-NUMBERING(..nums) = (
     translator(key: language-keys.APPENDIX-PREFIX) + numbering("1.1.", ..nums.pos().slice(1))
