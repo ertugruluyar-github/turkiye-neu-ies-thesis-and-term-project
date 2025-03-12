@@ -16,7 +16,7 @@
       + " alanındaki "
       + "'"
       + value-name
-      + "' parametresine desteklenmeyen ya da hatalı bir giriş oldu. Lütfen `true` ya da `false` giriniz. "
+      + "' parametresine desteklenmeyen ya da hatalı bir giriş oldu. Lütfen 'true' ya da 'false' giriniz. "
       + STRING-RELATED-DOCUMENTATION-INLINE-TITLE
       + STRING-TYPST-BOOLEAN-DOCUMENTATION-LINK,
   )

@@ -58,7 +58,7 @@
   )
 )
 
-// Nicer handling of (multiple) appendices. Specify `reset: true` with your first appendix to reset the heading counter!
+// Nicer handling of (multiple) appendices. Specify 'reset: true' with your first appendix to reset the heading counter!
 /*
 #let appendix(reset: false, title:"Ekin Başlığı", label-text: none, body) = {
   if reset { counter(heading).update(1) }
