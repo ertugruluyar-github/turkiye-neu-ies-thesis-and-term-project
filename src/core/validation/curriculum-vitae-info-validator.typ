@@ -2,32 +2,30 @@
 #import "/src/core/validation/orcid-validator.typ": orcid-validator
 #import "/src/core/validation/email-validator.typ": email-validator
 
-#let curriculum-vitae-info-validator(
-  birthday: none,
-  email: none,
-  work-experiences: none,
-  get-info-from-recommended-peoples: none,
-) = {
+#let curriculum-vitae-info-validator(value: none) = {
+  // Doğum günü parametresini doğrula. [Validate the birthday parameter.]
   date-type-validator(
-    value: birthday,
+    value: value.birthday,
     value-name: "curriculum-vitae.birthday",
     value-description: "Öz Geçmiş sayfasındaki doğum tarihi",
   )
 
+  // E-Posta parametresini doğrula. [Validate the email parameter.]
   email-validator(
-    value: email,
+    value: value.email,
     value-name: "curriculum-vitae.email",
     value-description: "Öz Geçmiş sayfasındaki e-posta adresi",
   )
 
-  for (index, work-experience) in work-experiences.enumerate(start: 1) {
+  // İş Deneyimleri parametresini doğrula. [Validate the work-experiences parameter.]
+  for (index, work-experience) in value.work-experiences.enumerate(start: 1) {
     date-type-validator(
-      date: work-experience.start-date,
+      value: work-experience.start-date,
       value-name: "curriculum-vitae parametresindeki work-experience.start-date",
       value-description: "Öz Geçmişteki" + str(index) + ". iş deneyiminin başlangıç tarihi",
     )
     date-type-validator(
-      date: work-experience.end-date,
+      value: work-experience.end-date,
       value-name: "curriculum-vitae parametresindeki work-experience.end-date",
       value-description: "Öz Geçmişteki" + str(index) + ". iş deneyiminin bitiş tarihi",
     )
@@ -50,27 +48,31 @@
         + ". iş deneyiminde hata var. 'curriculum-vitae parametresindeki work-experience.start-date' tarihi 'curriculum-vitae parametresindeki work-experience.end-date' tarihinden ileride olamaz.",
     )
     assert(
-      work-experience.start-date > birthday,
+      work-experience.start-date > value.birthday,
       message: "Öz Geçmişteki "
         + str(index)
         + ". iş deneyiminde hata var. 'curriculum-vitae parametresindeki work-experience.start-date' tarihi doğum günü tarihinden geride olamaz.",
     )
     assert(
-      work-experience.end-date > birthday,
+      work-experience.end-date > value.birthday,
       message: "Öz Geçmişteki "
         + str(index)
         + ". iş deneyiminde hata var. 'curriculum-vitae parametresindeki work-experience.end-date' tarihi doğum günü tarihinden geride olamaz.",
     )
   }
 
-  for (index, get-info-from-recommended-people) in get-info-from-recommended-peoples.enumerate(start: 1) {
+  // Bilgi Almak İçin Önerebileceğim Şahıslar parametresini doğrula. [Validate the get-info-from-recommended-people parameter.]
+  for (index, get-info-from-recommended-people) in value.get-info-from-recommended-peoples.enumerate(start: 1) {
     if get-info-from-recommended-people.orcid != none {
+      // ORCID parametresini doğrula. [Validate the ORCID parameter.]
       orcid-validator(
         value: get-info-from-recommended-people.orcid,
         value-name: "curriculum-vitae parametresindeki get-info-from-recommended-people.orcid",
         value-description: "Öz Geçmişteki " + str(index) + ". bilgi almak için önerebileceğim şahsın ORCID'i",
       )
     }
+
+    // E-Posta parametresini doğrula. [Validate the email parameter.]
     email-validator(
       value: get-info-from-recommended-people.email,
       value-name: "curriculum-vitae parametresindeki get-info-from-recommended-people.email",

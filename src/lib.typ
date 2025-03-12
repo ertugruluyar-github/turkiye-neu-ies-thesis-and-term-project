@@ -313,12 +313,7 @@
 
   // Öz Geçmişi doğrula. [Validate the Curriculum Vitae.]
   if report-type == REPORT-TYPES.TERM-PROJECT {
-    curriculum-vitae-info-validator(
-      birthday: curriculum-vitae-info.birthday,
-      email: curriculum-vitae-info.email,
-      work-experiences: curriculum-vitae-info.work-experiences,
-      get-info-from-recommended-peoples: curriculum-vitae-info.get-info-from-recommended-peoples,
-    )
+    curriculum-vitae-info-validator(value: curriculum-vitae-info)
   }
 
   /* ---- Initialize the Language Manager ---- */

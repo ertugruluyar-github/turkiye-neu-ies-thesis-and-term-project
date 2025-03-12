@@ -10,7 +10,7 @@
   value-description: none,
 ) = {
   assert(
-    type(parameter.find(regex("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))) == str,
+    type(value.find(regex("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))) == str,
     message: STRING-ERROR-INLINE-TITLE
       + value-description
       + " alanındaki "
