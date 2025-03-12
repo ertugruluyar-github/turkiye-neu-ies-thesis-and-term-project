@@ -5,17 +5,17 @@
 )
 
 #let email-validator(
-  parameter: none,
-  parameter-name: none,
-  parameter-description: none,
+  value: none,
+  value-name: none,
+  value-description: none,
 ) = {
   assert(
     type(parameter.find(regex("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))) == str,
     message: STRING-ERROR-INLINE-TITLE
-      + parameter-description
+      + value-description
       + " alanındaki "
       + "'"
-      + parameter-name
+      + value-name
       + "' parametresine desteklenmeyen ya da hatalı bir giriş oldu. Lütfen geçerli bir email giriniz. "
       + STRING-RELATED-DOCUMENTATION-INLINE-TITLE
       + STRING-TYPST-STR-DOCUMENTATION-LINK,

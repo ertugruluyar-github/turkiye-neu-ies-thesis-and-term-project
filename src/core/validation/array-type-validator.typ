@@ -5,17 +5,17 @@
 )
 
 #let array-type-validator(
-  parameter: none,
-  parameter-name: none,
-  parameter-description: none,
+  value: none,
+  value-name: none,
+  value-description: none,
 ) = {
   assert(
-    type(parameter) == array,
+    type(value) == array,
     message: STRING-ERROR-INLINE-TITLE
-      + parameter-description
+      + value-description
       + " alanındaki "
       + "'"
-      + parameter-name
+      + value-name
       + "' parametresine desteklenmeyen ya da hatalı bir giriş oldu. Lütfen `array(1, ...)` ya da `(1, ...)` şeklinde bir dizi giriniz. "
       + STRING-RELATED-DOCUMENTATION-INLINE-TITLE
       + STRING-TYPST-ARRAY-DOCUMENTATION-LINK,

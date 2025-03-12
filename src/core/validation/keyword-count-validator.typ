@@ -10,15 +10,15 @@
   minimum-value-validator(
     number: keyword-count,
     min-value: MIN-KEYWORD-COUNT,
-    parameter-name: "keywords",
-    parameter-description: "Anahtar kelime sayısı",
+    value-name: "keywords",
+    value-description: "Anahtar kelime sayısı",
     custom-documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   )
   maximum-value-validator(
     number: keyword-count,
     max-value: MAX-KEYWORD-COUNT,
-    parameter-name: "keywords",
-    parameter-description: "Anahtar kelime sayısı",
+    value-name: "keywords",
+    value-description: "Anahtar kelime sayısı",
     custom-documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   )
 }

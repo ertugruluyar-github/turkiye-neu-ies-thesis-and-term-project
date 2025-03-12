@@ -10,19 +10,19 @@
   minimum-value-validator(
     number: thesis-originalty.included-page-count,
     min-value: 1,
-    parameter-name: "included-page-count",
-    parameter-description: "Taranan sayfa sayısı",
+    value-name: "included-page-count",
+    value-description: "Taranan sayfa sayısı",
   )
   minimum-value-validator(
     number: thesis-originalty.similarity-score,
     min-value: 0,
-    parameter-name: "similarity-score",
-    parameter-description: "Benzerlik oranı",
+    value-name: "similarity-score",
+    value-description: "Benzerlik oranı",
   )
   maximum-value-validator(
     number: thesis-originalty.similarity-score,
     max-value: 100,
-    parameter-name: "similarity-score",
-    parameter-description: "Benzerlik oranı",
+    value-name: "similarity-score",
+    value-description: "Benzerlik oranı",
   )
 }

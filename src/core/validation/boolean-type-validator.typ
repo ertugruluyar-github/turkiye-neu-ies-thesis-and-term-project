@@ -5,17 +5,17 @@
 )
 
 #let boolean-type-validator(
-  parameter: none,
-  parameter-name: none,
-  parameter-description: none,
+  value: none,
+  value-name: none,
+  value-description: none,
 ) = {
   assert(
-    type(parameter) == bool,
+    type(value) == bool,
     message: STRING-ERROR-INLINE-TITLE
-      + parameter-description
+      + value-description
       + " alanındaki "
       + "'"
-      + parameter-name
+      + value-name
       + "' parametresine desteklenmeyen ya da hatalı bir giriş oldu. Lütfen `true` ya da `false` giriniz. "
       + STRING-RELATED-DOCUMENTATION-INLINE-TITLE
       + STRING-TYPST-BOOLEAN-DOCUMENTATION-LINK,

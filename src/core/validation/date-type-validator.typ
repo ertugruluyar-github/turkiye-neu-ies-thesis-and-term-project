@@ -5,17 +5,17 @@
 )
 
 #let date-type-validator(
-  parameter: none,
-  parameter-name: none,
-  parameter-description: none,
+  value: none,
+  value-name: none,
+  value-description: none,
 ) = {
   assert(
-    type(parameter) == datetime,
+    type(value) == datetime,
     message: STRING-ERROR-INLINE-TITLE
-      + parameter-description
+      + value-description
       + " alanındaki "
       + "'"
-      + parameter-name
+      + value-name
       + "' parametresine desteklenmeyen ya da hatalı bir giriş oldu. Lütfen 'datetime' fonksiyonunu kullanarak tarih giriniz. "
       + STRING-RELATED-DOCUMENTATION-INLINE-TITLE
       + STRING-TYPST-DATETIME-DOCUMENTATION-LINK,

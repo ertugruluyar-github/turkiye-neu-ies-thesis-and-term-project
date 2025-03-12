@@ -9,27 +9,27 @@
   get-info-from-recommended-peoples: none,
 ) = {
   date-type-validator(
-    parameter: birthday,
-    parameter-name: "curriculum-vitae.birthday",
-    parameter-description: "Öz Geçmiş sayfasındaki doğum tarihi",
+    value: birthday,
+    value-name: "curriculum-vitae.birthday",
+    value-description: "Öz Geçmiş sayfasındaki doğum tarihi",
   )
 
   email-validator(
-    parameter: email,
-    parameter-name: "curriculum-vitae.email",
-    parameter-description: "Öz Geçmiş sayfasındaki e-posta adresi",
+    value: email,
+    value-name: "curriculum-vitae.email",
+    value-description: "Öz Geçmiş sayfasındaki e-posta adresi",
   )
 
   for (index, work-experience) in work-experiences.enumerate(start: 1) {
     date-type-validator(
       date: work-experience.start-date,
-      parameter-name: "curriculum-vitae parametresindeki work-experience.start-date",
-      parameter-description: "Öz Geçmişteki" + str(index) + ". iş deneyiminin başlangıç tarihi",
+      value-name: "curriculum-vitae parametresindeki work-experience.start-date",
+      value-description: "Öz Geçmişteki" + str(index) + ". iş deneyiminin başlangıç tarihi",
     )
     date-type-validator(
       date: work-experience.end-date,
-      parameter-name: "curriculum-vitae parametresindeki work-experience.end-date",
-      parameter-description: "Öz Geçmişteki" + str(index) + ". iş deneyiminin bitiş tarihi",
+      value-name: "curriculum-vitae parametresindeki work-experience.end-date",
+      value-description: "Öz Geçmişteki" + str(index) + ". iş deneyiminin bitiş tarihi",
     )
     assert(
       work-experience.start-date < datetime.today(),
@@ -66,15 +66,15 @@
   for (index, get-info-from-recommended-people) in get-info-from-recommended-peoples.enumerate(start: 1) {
     if get-info-from-recommended-people.orcid != none {
       orcid-validator(
-        parameter: get-info-from-recommended-people.orcid,
-        parameter-name: "curriculum-vitae parametresindeki get-info-from-recommended-people.orcid",
-        parameter-description: "Öz Geçmişteki " + str(index) + ". bilgi almak için önerebileceğim şahsın ORCID'i",
+        value: get-info-from-recommended-people.orcid,
+        value-name: "curriculum-vitae parametresindeki get-info-from-recommended-people.orcid",
+        value-description: "Öz Geçmişteki " + str(index) + ". bilgi almak için önerebileceğim şahsın ORCID'i",
       )
     }
     email-validator(
-      parameter: get-info-from-recommended-people.email,
-      parameter-name: "curriculum-vitae parametresindeki get-info-from-recommended-people.email",
-      parameter-description: "Öz Geçmişteki " + str(index) + ". bilgi almak için önerebileceğim şahsın e-posta adresi",
+      value: get-info-from-recommended-people.email,
+      value-name: "curriculum-vitae parametresindeki get-info-from-recommended-people.email",
+      value-description: "Öz Geçmişteki " + str(index) + ". bilgi almak için önerebileceğim şahsın e-posta adresi",
     )
   }
 }

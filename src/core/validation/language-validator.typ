@@ -5,9 +5,9 @@
   LANGUAGES,
 )
 
-#let language-validator(language: none) = {
+#let language-validator(value: none) = {
   assert(
-    language in LANGUAGES.values(),
+    value in LANGUAGES.values(),
     message: STRING-ERROR-INLINE-TITLE
       + "'language' parametresine desteklenmeyen ya da hatalı bir giriş oldu. Lütfen 'LANGUAGES' sözlüğündeki bir dili seçiniz. "
       + STRING-RELATED-DOCUMENTATION-INLINE-TITLE

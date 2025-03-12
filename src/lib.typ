@@ -195,68 +195,68 @@
   /* ---- Doğrulama İşlemleri [Validation Process] ---- */
   // Mantıksal veri türünü doğrula. [Validate boolean data type.]
   boolean-type-validator(
-    parameter: show-list-of-tables,
-    parameter-name: "template-configurations.show-list-of-tables",
-    parameter-description: "Şablon ayarlarındaki tablolar listesini göster seçeneği",
+    value: show-list-of-tables,
+    value-name: "template-configurations.show-list-of-tables",
+    value-description: "Şablon ayarlarındaki tablolar listesini göster seçeneği",
   )
   boolean-type-validator(
-    parameter: show-list-of-images,
-    parameter-name: "template-configurations.show-list-of-images",
-    parameter-description: "Şablon ayarlarındaki şekiller listesini göster seçeneği",
+    value: show-list-of-images,
+    value-name: "template-configurations.show-list-of-images",
+    value-description: "Şablon ayarlarındaki şekiller listesini göster seçeneği",
   )
   boolean-type-validator(
-    parameter: have-symbols,
-    parameter-name: "template-configurations.have-symbols",
-    parameter-description: "Şablon ayarlarındaki simgelerim var seçeneği",
+    value: have-symbols,
+    value-name: "template-configurations.have-symbols",
+    value-description: "Şablon ayarlarındaki simgelerim var seçeneği",
   )
   boolean-type-validator(
-    parameter: have-abbreviations,
-    parameter-name: "template-configurations.have-abbreviations",
-    parameter-description: "Şablon ayarlarındaki kısaltmalarım var seçeneği",
+    value: have-abbreviations,
+    value-name: "template-configurations.have-abbreviations",
+    value-description: "Şablon ayarlarındaki kısaltmalarım var seçeneği",
   )
   boolean-type-validator(
-    parameter: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
-    parameter-name: "template-configurations.show-separated-sub-headings-in-discussion-conclusion-and-suggestions",
-    parameter-description: "Şablon ayarlarındaki 'TARTIŞMA, SONUÇ VE ÖNERİLER' bölümündeki alt başlıkları göster seçeneği",
+    value: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
+    value-name: "template-configurations.show-separated-sub-headings-in-discussion-conclusion-and-suggestions",
+    value-description: "Şablon ayarlarındaki 'TARTIŞMA, SONUÇ VE ÖNERİLER' bölümündeki alt başlıkları göster seçeneği",
   )
 
   // Dizi veri türünü doğrula. [Validate array data type.]
   array-type-validator(
-    parameter: keywords.tur,
-    parameter-name: "template-configurations.keywords.tur",
-    parameter-description: "Şablon ayarlarındaki Türkçe anahtar kelimeler",
+    value: keywords.tur,
+    value-name: "template-configurations.keywords.tur",
+    value-description: "Şablon ayarlarındaki Türkçe anahtar kelimeler",
   )
   array-type-validator(
-    parameter: keywords.eng,
-    parameter-name: "template-configurations.keywords.eng",
-    parameter-description: "Şablon ayarlarındaki İngilizce anahtar kelimeler",
+    value: keywords.eng,
+    value-name: "template-configurations.keywords.eng",
+    value-description: "Şablon ayarlarındaki İngilizce anahtar kelimeler",
   )
   array-type-validator(
-    parameter: work-packages,
-    parameter-name: "template-configurations.work-packages",
-    parameter-description: "Şablon ayarlarındaki iş paketleri",
+    value: work-packages,
+    value-name: "template-configurations.work-packages",
+    value-description: "Şablon ayarlarındaki iş paketleri",
   )
   array-type-validator(
-    parameter: curriculum-vitae-info.skills,
-    parameter-name: "curriculum-vitae-info.skills",
-    parameter-description: "Öz Geçmişdeki beceriler",
+    value: curriculum-vitae-info.skills,
+    value-name: "curriculum-vitae-info.skills",
+    value-description: "Öz Geçmişdeki beceriler",
   )
   array-type-validator(
-    parameter: curriculum-vitae-info.work-experiences,
-    parameter-name: "curriculum-vitae-info.work-experiences",
-    parameter-description: "Öz Geçmişdeki iş deneyimleri",
+    value: curriculum-vitae-info.work-experiences,
+    value-name: "curriculum-vitae-info.work-experiences",
+    value-description: "Öz Geçmişdeki iş deneyimleri",
   )
   array-type-validator(
-    parameter: curriculum-vitae-info.get-info-from-recommended-peoples,
-    parameter-name: "curriculum-vitae-info.get-info-from-recommended-peoples",
-    parameter-description: "Öz Geçmişdeki bilgi almak için önerebileceğim şahıs",
+    value: curriculum-vitae-info.get-info-from-recommended-peoples,
+    value-name: "curriculum-vitae-info.get-info-from-recommended-peoples",
+    value-description: "Öz Geçmişdeki bilgi almak için önerebileceğim şahıs",
   )
 
   // Dili doğrula. [Validate the language.]
-  language-validator(language: language)
+  language-validator(value: language)
 
   // Ana Bilim Dalını doğrula. [Validate the department.]
-  department-validator(parameter: department)
+  department-validator(value: department)
 
   // Bilim Dalını doğrula. [Validate the program.]
   program-validator(program: program)
@@ -266,37 +266,37 @@
 
   // Tarihi doğrula. [Validate the date.]
   date-type-validator(
-    parameter: date,
-    parameter-name: "template-configurations.date",
-    parameter-description: "Şablon ayarlarındaki tarih",
+    value: date,
+    value-name: "template-configurations.date",
+    value-description: "Şablon ayarlarındaki tarih",
   )
 
   // Yazarın ORCID'ini doğrula. [Validate the author's ORCID.]
   orcid-validator(
-    parameter: author.orcid,
-    parameter-name: "author.orcid",
-    parameter-description: "Yazarın ORCID değeri",
+    value: author.orcid,
+    value-name: "author.orcid",
+    value-description: "Yazarın ORCID değeri",
   )
 
   // Danışmanın ORCID'ini doğrula. [Validate the advisor's ORCID.]
   orcid-validator(
-    parameter: advisor.orcid,
-    parameter-name: "advisor.orcid",
-    parameter-description: "Danışmanın ORCID değeri",
+    value: advisor.orcid,
+    value-name: "advisor.orcid",
+    value-description: "Danışmanın ORCID değeri",
   )
 
   // İkinci Danışmanın ORCID'ini doğrula. [Validate the second advisor's ORCID.]
   if second-advisor != none {
     orcid-validator(
-      parameter: second-advisor.orcid,
-      parameter-name: "second-advisor.orcid",
-      parameter-description: "İkinci Danışmanın ORCID değeri",
+      value: second-advisor.orcid,
+      value-name: "second-advisor.orcid",
+      value-description: "İkinci Danışmanın ORCID değeri",
     )
   }
 
   // Akademik ünvanı doğrula. [Validate the academic title.]
-  academic-member-title-validator(parameter: advisor.academic-member-title)
-  academic-member-title-validator(parameter: second-advisor.academic-member-title)
+  academic-member-title-validator(value: advisor.academic-member-title)
+  academic-member-title-validator(value: second-advisor.academic-member-title)
 
   // Orijinallik değerlerini doğrula. [Verify the authenticity values.]
   if (
