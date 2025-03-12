@@ -8,14 +8,14 @@
 
 #let keyword-count-validator(value: none) = {
   minimum-value-validator(
-    number: value,
+    value: value,
     min-value: MIN-KEYWORD-COUNT,
     value-name: "keywords",
     value-description: "Anahtar kelime sayısı",
     custom-documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   )
   maximum-value-validator(
-    number: value,
+    value: value,
     max-value: MAX-KEYWORD-COUNT,
     value-name: "keywords",
     value-description: "Anahtar kelime sayısı",

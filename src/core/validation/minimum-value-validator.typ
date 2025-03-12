@@ -5,7 +5,7 @@
 )
 
 #let minimum-value-validator(
-  number: none,
+  value: none,
   min-value: none,
   value-name: none,
   value-description: none,
@@ -19,7 +19,7 @@
     STRING-RELATED-DOCUMENTATION-INLINE-TITLE + documantation-link
   )
   assert(
-    number >= min-value,
+    value >= min-value,
     message: STRING-ERROR-INLINE-TITLE
       + common-message-1
       + value-description

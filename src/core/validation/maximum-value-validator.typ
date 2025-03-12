@@ -5,7 +5,7 @@
 )
 
 #let maximum-value-validator(
-  number: none,
+  value: none,
   max-value: none,
   value-name: none,
   value-description: none,
@@ -17,7 +17,7 @@
   let common-message-1 = "'" + value-name + "' parametresine desteklenmeyen ya da hatalı bir giriş oldu. "
   let common-message-2 = STRING-RELATED-DOCUMENTATION-INLINE-TITLE + documantation-link
   assert(
-    number <= max-value,
+    value <= max-value,
     message: STRING-ERROR-INLINE-TITLE
       + common-message-1
       + value-description
