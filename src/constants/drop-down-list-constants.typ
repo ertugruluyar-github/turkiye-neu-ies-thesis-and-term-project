@@ -76,7 +76,7 @@ TODO
   DEPARTMENT-OF-FOREIGN-LANGUAGE-EDUCATION: translator(key: language-keys.DEPARTMENT-OF-FOREIGN-LANGUAGE-EDUCATION),
 )
 
-// Programs
+// Bilim Dalları [Programs]
 #let PROGRAMS = (
   __PROGRAM-PLACE-HOLDER: translator(key: language-keys.PROGRAM-PLACE-HOLDER),
   GERMAN-LANGUAGE-EDUCATION-PROGRAM: translator(key: language-keys.GERMAN-LANGUAGE-EDUCATION-PROGRAM),
