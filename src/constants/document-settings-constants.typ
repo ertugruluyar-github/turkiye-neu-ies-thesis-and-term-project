@@ -22,17 +22,17 @@
 #let ALTERNATE-FONT-SIZE-2 = 9pt
 // Özet metinlerinin yazı tipi boyutu [Font size of the Abstract texts]
 #let ABSTRACT-TEXT-FONT-SIZE = ALTERNATE-FONT-SIZE
-// Tablo ve Şekil fügürlerinin başlığının yazı tipi boyutu [Font size of the title of table and figure captions]
+// Tablo ve Şekil figürlerinin başlığının yazı tipi boyutu [Font size of the title of table and image figures' caption]
 #let FIGURE-TITLE-TEXT-FONT-SIZE = ALTERNATE-FONT-SIZE
-// Tablo ve Şekil fügürlerinin içerğinin yazı tipi boyutu [Font size of the title of table and figure contents]
+// Tablo ve Şekil figürlerinin içerğinin yazı tipi boyutu [Font size of the title of table and figure contents]
 #let FIGURE-CONTENT-TEXT-FONT-SIZE = ALTERNATE-FONT-SIZE
 // Dipnotların yazı tipi boyutu [Font size of the Footnotes]
 #let FOOTNOTE-TEXT-FONT-SIZE = ALTERNATE-FONT-SIZE
 // Varsayılan yazı kalınlığı [Default font weight]
 #let DEFAULT-TEXT-FONT-WEIGHT = 400
-// Tablo ve Şekil fügürlerinin başlığının yazı kalınlığı [Font weight of the title of table and figure captions]
+// Tablo ve Şekil figürlerinin başlığının yazı kalınlığı [Font weight of the title of table and image figures' caption]
 #let FIGURE-CAPTION-TITLE-TEXT-FONT-WEIGHT = DEFAULT-TEXT-FONT-WEIGHT
-// Tablo ve Şekil fügürlerinin başlığının ön ekinin yazı kalınlığı [Font weight of the title of table and figure captions' prefix]
+// Tablo ve Şekil figürlerinin başlığının ön ekinin yazı kalınlığı [Font weight of the title of table and image figures' caption' prefix]
 #let FIGURE-CAPTION-PREFIX-TEXT-FONT-WEIGHT = 700
 
 /* ---- Paragraf Ayarları [Paragraph Settings] ---- */
