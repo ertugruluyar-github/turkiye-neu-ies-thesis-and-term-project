@@ -49,27 +49,25 @@
   }
 
   // Çalışma takvimi tablosu [Work schedule table]
-  align(
-    center,
-    table(
-      columns: (auto,) + ((1fr,) * column-count),
-      align: center + horizon,
-      table.header(
-        table.cell(rowspan: 2)[*#translator(key: language-keys.SHORT-WORK-PACKAGE)\**],
-        table.cell(colspan: column-count)[*#translator(key: language-keys.MONTHS)*],
-        ..table-header-months,
-      ), ..table-cells,
-      table.footer(
-        table.cell(
-          colspan: column-count + 1,
-          align: left,
-          stroke: (
-            left: 0pt,
-            right: 0pt,
-            bottom: 0pt,
-          ),
-        )[\*#translator(key: language-keys.SHORT-WORK-PACKAGE): #translator(key: language-keys.WORK-PACKAGE)],
-      ),
+
+  table(
+    columns: (auto,) + ((1fr,) * column-count),
+    align: center + horizon,
+    table.header(
+      table.cell(rowspan: 2)[*#translator(key: language-keys.SHORT-WORK-PACKAGE)\**],
+      table.cell(colspan: column-count)[*#translator(key: language-keys.MONTHS)*],
+      ..table-header-months,
+    ), ..table-cells,
+    table.footer(
+      table.cell(
+        colspan: column-count + 1,
+        align: left,
+        stroke: (
+          left: 0pt,
+          right: 0pt,
+          bottom: 0pt,
+        ),
+      )[\*#translator(key: language-keys.SHORT-WORK-PACKAGE): #translator(key: language-keys.WORK-PACKAGE)],
     ),
   )
 

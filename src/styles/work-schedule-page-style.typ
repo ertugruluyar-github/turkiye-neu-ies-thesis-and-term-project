@@ -30,6 +30,9 @@
   // Tablo yazı tipi boyutu
   show table: set text(size: ALTERNATE-FONT-SIZE)
 
+  // Tabloyu ortala
+  show table: set align(center)
+
   // Tablo başlığı ayarları
   set table.header(repeat: false)
 
