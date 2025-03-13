@@ -1,4 +1,4 @@
-#import "/src/constants.typ": (
+#import "/src/constants/validation-constants.typ": (
   STRING-ERROR-INLINE-TITLE,
   STRING-RELATED-DOCUMENTATION-INLINE-TITLE,
   WHAT-IS-MY-ORCID-ID-LINK,

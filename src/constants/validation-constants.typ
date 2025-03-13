@@ -1,0 +1,10 @@
+// Doğrulama [Validation]
+#let STRING-ERROR-INLINE-TITLE = "HATA: "
+#let STRING-RELATED-DOCUMENTATION-INLINE-TITLE = "İlgili Dökümantasyon: "
+#let STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/dictionary/"
+#let STRING-TYPST-DATETIME-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/datetime/"
+#let STRING-TYPST-INT-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/int/"
+#let STRING-TYPST-ARRAY-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/array/"
+#let STRING-TYPST-STR-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/str/"
+#let STRING-TYPST-BOOLEAN-DOCUMENTATION-LINK = "https://typst.app/docs/reference/foundations/bool/"
+#let WHAT-IS-MY-ORCID-ID-LINK = "https://info.orcid.org/what-is-my-id/"

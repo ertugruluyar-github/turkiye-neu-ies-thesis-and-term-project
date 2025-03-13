@@ -1,4 +1,4 @@
-#import "/src/constants.typ": FULL-DATE-FORMAT, MONTH-YEAR-DATE-FORMAT
+#import "/src/constants/date-constants.typ": FULL-DATE-FORMAT, MONTH-YEAR-DATE-FORMAT
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 #import "/src/styles/curriculum-vitae-page-style.typ": curriculum-vitae-page-style

@@ -1,9 +1,9 @@
-#import "/src/constants.typ": (
+#import "/src/constants/validation-constants.typ": (
   STRING-ERROR-INLINE-TITLE,
   STRING-RELATED-DOCUMENTATION-INLINE-TITLE,
   STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
-  ACADEMIC-MEMBER-TITLES,
 )
+#import "/src/constants/drop-down-list-constants.typ": ACADEMIC-MEMBER-TITLES
 
 #let academic-member-title-validator(value: none) = {
   assert(

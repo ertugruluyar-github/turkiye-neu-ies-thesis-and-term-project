@@ -1,4 +1,4 @@
-#import "/src/constants.typ": ALTERNATE-FONT-SIZE
+#import "/src/constants/document-settings-constants.typ": ALTERNATE-FONT-SIZE
 
 #let work-schedule-page-style(content) = {
   // Sayfa başlığını ortala

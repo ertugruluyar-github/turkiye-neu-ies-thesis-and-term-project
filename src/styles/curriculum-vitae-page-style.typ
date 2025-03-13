@@ -1,4 +1,4 @@
-#import "/src/constants.typ": ALTERNATE-FONT-SIZE-2
+#import "/src/constants/document-settings-constants.typ": ALTERNATE-FONT-SIZE-2
 
 #let curriculum-vitae-page-style(content) = {
   show heading.where(level: 1): set align(center)

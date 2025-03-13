@@ -1,4 +1,4 @@
-#import "/src/constants.typ": ABSTRACT-TEXT-FONT-SIZE
+#import "/src/constants/document-settings-constants.typ": ABSTRACT-TEXT-FONT-SIZE
 
 #let abstract-page-style(content) = {
   // Özet metni normal yazı büyüklüğünden daha küçük olacak şekilde ayarlandı. [The abstract text is set smaller than the normal font size.]

@@ -1,4 +1,5 @@
-#import "/src/constants.typ": *
+#import "/src/constants/document-settings-constants.typ": *
+#import "/src/constants/drop-down-list-constants.typ": *
 #import "/src/modules/custom-functions.typ": *
 #import "/src/styles/common-document-style.typ": common-document-style
 #import "/src/styles/thesis-front-section-style.typ": thesis-front-section-style

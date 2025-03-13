@@ -1,4 +1,4 @@
-#import "/src/constants.typ": APPENDIX-REFERENCE-SUFFIX-SEPARATOR
+#import "/src/constants/separator-constants.typ": APPENDIX-REFERENCE-SUFFIX-SEPARATOR
 
 #let reference-style(content) = {
   // Atıfların stilini ayarla. [Set the style of references.]

@@ -1,4 +1,4 @@
-#import "/src/constants.typ": PAGE-NUMBERING-ROMAN
+#import "/src/constants/numbering-constants.typ": PAGE-NUMBERING-ROMAN
 #import "/src/styles/page-numbering-style.typ": page-numbering-style
 #import "/src/styles/heading-spacing-style.typ": heading-spacing-style
 #import "/src/core/language-manager/language-manager.typ": translator

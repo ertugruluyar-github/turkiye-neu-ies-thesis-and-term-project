@@ -1,4 +1,4 @@
-#import "/src/constants.typ": ALTERNATE-FONT-SIZE
+#import "/src/constants/document-settings-constants.typ": ALTERNATE-FONT-SIZE
 
 // TODO: Tablo stillerini yap.
 #let table-style(content) = {

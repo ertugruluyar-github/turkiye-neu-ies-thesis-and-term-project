@@ -1,4 +1,4 @@
-#import "/src/constants.typ": PAGE-NUMBERING-ARABIC
+#import "/src/constants/numbering-constants.typ": PAGE-NUMBERING-ARABIC
 #import "/src/styles/page-numbering-style.typ": page-numbering-style
 #import "/src/styles/thesis-main-section-heading-style.typ": thesis-main-section-heading-style
 

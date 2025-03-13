@@ -1,0 +1,6 @@
+// Numaralandırma [Numbering]
+#let PAGE-NUMBERING-ROMAN = "i" // Sayfalar [Pages]
+#let PAGE-NUMBERING-ARABIC = "1" // Sayfalar [Pages]
+#let HEADING-NUMBERING = "1.1." // Başlıklar [Headings]
+#let FIGURE-NUMBERING = "1.1" // Simgeler [Figures]
+#let MATH-NUMBERING = "(1.1)" // Simgeler [Figures]

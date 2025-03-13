@@ -1,4 +1,4 @@
-#import "/src/constants.typ": FULL-DATE-FORMAT, STRING-MONTH-NAMES
+#import "/src/constants/date-constants.typ": FULL-DATE-FORMAT, STRING-MONTH-NAMES
 #import "/src/modules/custom-functions.typ": change-long-month-name
 
 #let date-component(

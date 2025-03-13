@@ -1,4 +1,4 @@
-#import "/src/constants.typ": PARAGRAPH-SPACING-SIZE
+#import "/src/constants/document-settings-constants.typ": PARAGRAPH-SPACING-SIZE
 
 #let bibliography-section-style(content) = {
   // Kaynakça bölümündeki paragraf stili. [Paragraph Style in Bibliography Section]

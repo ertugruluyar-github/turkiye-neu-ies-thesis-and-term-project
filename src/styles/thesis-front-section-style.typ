@@ -1,4 +1,4 @@
-#import "/src/constants.typ": PAGE-NUMBERING-ROMAN
+#import "/src/constants/numbering-constants.typ": PAGE-NUMBERING-ROMAN
 #import "/src/styles/page-numbering-style.typ": page-numbering-style
 #import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
 

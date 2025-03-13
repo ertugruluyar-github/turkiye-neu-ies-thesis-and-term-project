@@ -1,8 +1,7 @@
-#import "/src/constants.typ": (
-  MARGIN,
-  REPORT-TYPES,
-  LANGUAGES,
-  ONLY-YEAR-DATE-FORMAT,
+#import "/src/constants/document-settings-constants.typ": MARGIN
+#import "/src/constants/date-constants.typ": ONLY-YEAR-DATE-FORMAT
+#import "/src/constants/drop-down-list-constants.typ": LANGUAGES, REPORT-TYPES
+#import "/src/constants/path-constants.typ": (
   UNIVERSITY-LOGO-PATH,
   INSTITUTE-LOGO-PATH,
 )

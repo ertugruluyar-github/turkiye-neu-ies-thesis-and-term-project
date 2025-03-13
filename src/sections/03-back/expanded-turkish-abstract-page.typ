@@ -1,4 +1,4 @@
-#import "/src/constants.typ": LANGUAGES
+#import "/src/constants/drop-down-list-constants.typ": LANGUAGES
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 #import "/src/components/abstract-page-component.typ": abstract-page-component

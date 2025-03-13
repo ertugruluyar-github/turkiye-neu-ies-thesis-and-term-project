@@ -1,9 +1,9 @@
-#import "/src/constants.typ": (
+#import "/src/constants/validation-constants.typ": (
   STRING-ERROR-INLINE-TITLE,
   STRING-RELATED-DOCUMENTATION-INLINE-TITLE,
   STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
-  LANGUAGES,
 )
+#import "/src/constants/drop-down-list-constants.typ": LANGUAGES
 #import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
 
 #let thesis-title-validator(value: none) = {

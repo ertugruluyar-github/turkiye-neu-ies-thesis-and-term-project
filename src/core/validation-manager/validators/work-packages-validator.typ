@@ -1,11 +1,10 @@
-#import "/src/constants.typ": (
-  REPORT-TYPES,
+#import "/src/constants/work-schedule-month-count-rule.typ": work-schedule-month-count-rule
+#import "/src/constants/validation-constants.typ": (
   STRING-ERROR-INLINE-TITLE,
   STRING-RELATED-DOCUMENTATION-INLINE-TITLE,
   STRING-TYPST-ARRAY-DOCUMENTATION-LINK,
-  MASTER-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
-  DOCTORAL-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
 )
+#import "/src/constants/drop-down-list-constants.typ": REPORT-TYPES
 #import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
 #import "/src/core/validation-manager/validators/array-type-validator.typ": array-type-validator
 
@@ -31,9 +30,9 @@
 
   // İş Paketlerinin toplam ay sayısını doğrula. [Validate th sum of the month count of work-packages.]
   let month-count = if report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL {
-    MASTER-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT
+    work-schedule-month-count-rule.MASTER-THESIS-PROPOSAL
   } else if report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL {
-    DOCTORAL-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT
+    work-schedule-month-count-rule.DOCTORAL-THESIS-PROPOSAL
   }
 
   let work-packages-months = ()

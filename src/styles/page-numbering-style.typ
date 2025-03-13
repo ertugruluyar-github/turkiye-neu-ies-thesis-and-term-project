@@ -1,4 +1,4 @@
-#import "/src/constants.typ": PAGE-NUMBERING-ARABIC
+#import "/src/constants/numbering-constants.typ": PAGE-NUMBERING-ARABIC
 
 #let page-numbering-style(
   content,

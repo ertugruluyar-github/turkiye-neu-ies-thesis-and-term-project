@@ -1,4 +1,4 @@
-#import "/src/constants.typ": LANGUAGES
+#import "/src/constants/drop-down-list-constants.typ": LANGUAGES
 
 #let thesis-study-funding-organization-component(
   language: none,

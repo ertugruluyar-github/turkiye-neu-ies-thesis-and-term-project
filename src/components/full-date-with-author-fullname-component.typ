@@ -1,6 +1,6 @@
 #import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/date-component.typ": date-component
-#import "/src/constants.typ": FULL-DATE-FORMAT
+#import "/src/constants/date-constants.typ": FULL-DATE-FORMAT
 
 #let full-date-with-author-fullname-component(
   author: none,

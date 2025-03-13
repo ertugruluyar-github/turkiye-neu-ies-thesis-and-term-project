@@ -1,4 +1,5 @@
-#import "/src/constants.typ": HEADING-NUMBERING, PARAGRAPH-SPACING-SIZE, PAGE-NUMBERING-ARABIC
+#import "/src/constants/document-settings-constants.typ": PARAGRAPH-SPACING-SIZE
+#import "/src/constants/numbering-constants.typ": HEADING-NUMBERING, PAGE-NUMBERING-ARABIC
 #import "/src/styles/page-numbering-style.typ": page-numbering-style
 #import "/src/styles/heading-spacing-style.typ": heading-spacing-style
 #import "/src/core/language-manager/language-manager.typ": translator

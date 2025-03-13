@@ -1,6 +1,6 @@
 #import "@preview/drafting:0.2.2": margin-note, set-page-properties
 #import "@preview/subpar:0.2.1"
-#import "/src/constants.typ": *
+#import "/src/constants/document-settings-constants.typ": *
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 

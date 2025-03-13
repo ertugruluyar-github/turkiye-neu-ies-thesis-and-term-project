@@ -2,11 +2,8 @@
 #import "/src/core/validation-manager/validators/array-type-validator.typ": array-type-validator
 #import "/src/core/validation-manager/validators/minimum-value-validator.typ": minimum-value-validator
 #import "/src/core/validation-manager/validators/maximum-value-validator.typ": maximum-value-validator
-#import "/src/constants.typ": (
-  STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
-  MIN-KEYWORD-COUNT,
-  MAX-KEYWORD-COUNT,
-)
+#import "/src/constants/keyword-count-rule.typ": keyword-count-rule
+#import "/src/constants/validation-constants.typ": STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK
 
 #let keywords-validator(value: none) = {
   // Sözlük parametre türünü doğrula. [Validate dictionary parameter type.]
@@ -31,14 +28,14 @@
   // Türkçe anahtar kelime sayısını doğrula. [Validate Turkish keyword count.]
   minimum-value-validator(
     value: value.tur.len(),
-    min-value: MIN-KEYWORD-COUNT,
+    min-value: keyword-count-rule.MIN,
     value-name: "keywords.tur",
     value-description: "Türkçe anahtar kelime sayısı",
     custom-documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   )
   maximum-value-validator(
     value: value.tur.len(),
-    max-value: MAX-KEYWORD-COUNT,
+    max-value: keyword-count-rule.MAX,
     value-name: "keywords.tur",
     value-description: "Türkçe anahtar kelime sayısı",
     custom-documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
@@ -47,14 +44,14 @@
   // İngilizce anahtar kelime sayısını doğrula. [Validate English keyword count.]
   minimum-value-validator(
     value: value.eng.len(),
-    min-value: MIN-KEYWORD-COUNT,
+    min-value: keyword-count-rule.MIN,
     value-name: "keywords.eng",
     value-description: "İngilizce anahtar kelime sayısı",
     custom-documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   )
   maximum-value-validator(
     value: value.eng.len(),
-    max-value: MAX-KEYWORD-COUNT,
+    max-value: keyword-count-rule.MAX,
     value-name: "keywords.eng",
     value-description: "İngilizce anahtar kelime sayısı",
     custom-documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,

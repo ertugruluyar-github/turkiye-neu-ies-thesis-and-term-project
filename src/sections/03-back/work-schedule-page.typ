@@ -1,9 +1,6 @@
 #import "/src/styles/work-schedule-page-style.typ": work-schedule-page-style
-#import "/src/constants.typ": (
-  REPORT-TYPES,
-  MASTER-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
-  DOCTORAL-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
-)
+#import "/src/constants/work-schedule-month-count-rule.typ": work-schedule-month-count-rule
+#import "/src/constants/drop-down-list-constants.typ": REPORT-TYPES
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
@@ -16,9 +13,9 @@
 
   // Rapor türüne göre çalışma takvimi aylarını belirle [Determine the months of the work schedule according to the type of report]
   let month-numbers = if report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL {
-    array.range(1, MASTER-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT + 1, step: 1)
+    array.range(1, work-schedule-month-count-rule.MASTER-THESIS-PROPOSAL + 1, step: 1)
   } else if report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL {
-    array.range(1, DOCTORAL-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT + 1, step: 1)
+    array.range(1, work-schedule-month-count-rule.DOCTORAL-THESIS-PROPOSAL + 1, step: 1)
   }
 
   // Sütun sayısını belirle [Determine the number of columns]

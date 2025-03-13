@@ -1,9 +1,9 @@
-#import "/src/constants.typ": (
+#import "/src/constants/validation-constants.typ": (
   STRING-ERROR-INLINE-TITLE,
   STRING-RELATED-DOCUMENTATION-INLINE-TITLE,
   STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
-  REPORT-TYPES,
 )
+#import "/src/constants/drop-down-list-constants.typ": REPORT-TYPES
 
 #let report-type-validator(value: none) = {
   assert(
