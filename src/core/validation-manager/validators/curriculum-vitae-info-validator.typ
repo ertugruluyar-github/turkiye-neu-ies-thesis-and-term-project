@@ -1,8 +1,8 @@
-#import "/src/core/validation/date-type-validator.typ": date-type-validator
-#import "/src/core/validation/dictionary-type-validator.typ": dictionary-type-validator
-#import "/src/core/validation/array-type-validator.typ": array-type-validator
-#import "/src/core/validation/orcid-validator.typ": orcid-validator
-#import "/src/core/validation/email-validator.typ": email-validator
+#import "/src/core/validation-manager/validators/date-type-validator.typ": date-type-validator
+#import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
+#import "/src/core/validation-manager/validators/array-type-validator.typ": array-type-validator
+#import "/src/core/validation-manager/validators/orcid-validator.typ": orcid-validator
+#import "/src/core/validation-manager/validators/email-validator.typ": email-validator
 
 #let curriculum-vitae-info-validator(value: none) = {
   // Doğum günü parametresini doğrula. [Validate the birthday parameter.]

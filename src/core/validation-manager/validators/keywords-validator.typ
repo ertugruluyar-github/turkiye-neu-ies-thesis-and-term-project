@@ -1,7 +1,7 @@
-#import "/src/core/validation/dictionary-type-validator.typ": dictionary-type-validator
-#import "/src/core/validation/array-type-validator.typ": array-type-validator
-#import "/src/core/validation/minimum-value-validator.typ": minimum-value-validator
-#import "/src/core/validation/maximum-value-validator.typ": maximum-value-validator
+#import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
+#import "/src/core/validation-manager/validators/array-type-validator.typ": array-type-validator
+#import "/src/core/validation-manager/validators/minimum-value-validator.typ": minimum-value-validator
+#import "/src/core/validation-manager/validators/maximum-value-validator.typ": maximum-value-validator
 #import "/src/constants.typ": (
   STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   MIN-KEYWORD-COUNT,

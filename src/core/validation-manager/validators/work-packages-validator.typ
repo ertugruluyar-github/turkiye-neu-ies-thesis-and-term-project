@@ -6,8 +6,8 @@
   MASTER-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
   DOCTORAL-THESIS-PROPOSAL-WORK-SCHEDULE-MONTH-COUNT,
 )
-#import "/src/core/validation/dictionary-type-validator.typ": dictionary-type-validator
-#import "/src/core/validation/array-type-validator.typ": array-type-validator
+#import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
+#import "/src/core/validation-manager/validators/array-type-validator.typ": array-type-validator
 
 #let work-packages-validator(
   value: none,

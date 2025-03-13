@@ -1,6 +1,6 @@
-#import "/src/core/validation/dictionary-type-validator.typ": dictionary-type-validator
-#import "/src/core/validation/orcid-validator.typ": orcid-validator
-#import "/src/core/validation/academic-member-title-validator.typ": academic-member-title-validator
+#import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
+#import "/src/core/validation-manager/validators/orcid-validator.typ": orcid-validator
+#import "/src/core/validation-manager/validators/academic-member-title-validator.typ": academic-member-title-validator
 
 #let second-advisor-validator(value: none) = {
   // Sözlük parametre türünü doğrula. [Validate dictionary parameter type.]

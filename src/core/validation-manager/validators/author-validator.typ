@@ -1,5 +1,5 @@
-#import "/src/core/validation/dictionary-type-validator.typ": dictionary-type-validator
-#import "/src/core/validation/orcid-validator.typ": orcid-validator
+#import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
+#import "/src/core/validation-manager/validators/orcid-validator.typ": orcid-validator
 
 #let author-validator(value: none) = {
   // Sözlük parametre türünü doğrula. [Validate dictionary parameter type.]

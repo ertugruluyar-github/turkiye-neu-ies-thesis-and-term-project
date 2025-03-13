@@ -4,7 +4,7 @@
   STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   LANGUAGES,
 )
-#import "/src/core/validation/dictionary-type-validator.typ": dictionary-type-validator
+#import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
 
 #let language-validator(value: none) = {
   // Sözlük parametre türünü doğrula. [Validate dictionary parameter type.]

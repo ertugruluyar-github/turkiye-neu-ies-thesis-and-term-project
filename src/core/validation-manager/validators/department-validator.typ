@@ -4,7 +4,7 @@
   STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   DEPARTMENTS,
 )
-#import "/src/core/validation/dictionary-type-validator.typ": dictionary-type-validator
+#import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
 
 #let department-validator(value: none) = {
   // Ana Bilim Dalı değerini doğrula. [Validate the department value.]
