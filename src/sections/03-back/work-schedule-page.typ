@@ -49,7 +49,6 @@
   }
 
   // Çalışma takvimi tablosu [Work schedule table]
-
   table(
     columns: (auto,) + ((1fr,) * column-count),
     align: center + horizon,
