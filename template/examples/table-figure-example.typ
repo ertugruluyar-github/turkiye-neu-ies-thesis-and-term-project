@@ -28,5 +28,5 @@
     table.footer(repeat: true, table.cell(colspan: 9)[Tablo açıklaması varsa tablonun hemen altına yazınız.]),
   ),
   caption: [Fiziksel ve kimyasal olaylar sorularının frekans analizi.],
-) <figür-fiziksel-ve-kimyasal-olaylar-sorularının-frekans-analizi>
+) <figür-tablo-fiziksel-ve-kimyasal-olaylar-sorularının-frekans-analizi>
 #par(leading: 1em, text(size: 10pt)[Tablo açıklaması varsa tablonun hemen altına yazınız.])

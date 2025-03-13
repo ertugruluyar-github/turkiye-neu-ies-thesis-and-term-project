@@ -8,8 +8,8 @@
 
 #include "/template/examples/table-figure-example.typ"
 
-@figür-fiziksel-ve-kimyasal-olaylar-sorularının-frekans-analizi örnek bir tablo içerikli figürdür.
+@figür-tablo-fiziksel-ve-kimyasal-olaylar-sorularının-frekans-analizi örnek bir tablo içerikli figürdür.
 
 #include "/template/examples/image-figure-example.typ"
 
-@figür-neü-logo örnek bir resim içerikli figürdür.
+@figür-şekil-neü-logo örnek bir resim içerikli figürdür.

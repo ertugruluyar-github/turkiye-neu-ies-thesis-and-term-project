@@ -1,4 +1,4 @@
 #figure(
-  image("/template/figures/figure-sample.png"),
+  image("/template/images/sample-image.png"),
   caption: [Necmettin Erbakan Üniversitesi logosu.],
-) <figür-neü-logo>
+) <figür-şekil-neü-logo>
