@@ -10,6 +10,10 @@
 
 @figür-tablo-fiziksel-ve-kimyasal-olaylar-sorularının-frekans-analizi örnek bir tablo içerikli figürdür.
 
+#include "/template/assets/examples/table-figure-from-csv-example-1.typ"
+
+@figür-tablo-csv-dosyasıyla-tablo-örneği-1 CSV dosyasından tablo oluşturmaya örnektir. Bu örnekte tablonun başlığı elle yazıldı ve içeriği CSV dosyasından yüklendi.
+
 #include "/template/assets/examples/image-figure-example.typ"
 
 @figür-şekil-neü-logo örnek bir resim içerikli figürdür.
