@@ -6,10 +6,10 @@
 ==== İkinci bölüm dördüncü düzey başlık
 #lorem(50)
 
-#include "/template/examples/table-figure-example.typ"
+#include "/template/assets/examples/table-figure-example.typ"
 
 @figür-tablo-fiziksel-ve-kimyasal-olaylar-sorularının-frekans-analizi örnek bir tablo içerikli figürdür.
 
-#include "/template/examples/image-figure-example.typ"
+#include "/template/assets/examples/image-figure-example.typ"
 
 @figür-şekil-neü-logo örnek bir resim içerikli figürdür.
