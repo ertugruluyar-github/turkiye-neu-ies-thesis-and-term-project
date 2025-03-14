@@ -5,7 +5,7 @@
 #let bibliography-page() = {
   bibliography-section-style(
     bibliography(
-      "/template/bibliography-sources/references.bib",
+      "/template/assets/bibliography-sources/references.bib",
       style: "american-psychological-association",
       title: upper(translator(key: language-keys.BIBLIOGRAPHY)),
       full: false,
