@@ -20,6 +20,7 @@
   )
 
   show table: it => {
+    set par(first-line-indent: 0cm, leading: 1em)
     set text(size: ALTERNATE-FONT-SIZE)
     set table.footer(repeat: true)
     show table.footer: set table.cell(align: left)
@@ -27,9 +28,10 @@
   }
   /*
     show table.footer: it => {
+      set par(first-line-indent: 0cm, leading: 1em)
+      set text(size: ALTERNATE-FONT-SIZE)
       set table.footer(repeat: true)
       set table.cell(align: right)
-      set text(size: ALTERNATE-FONT-SIZE)
       it
     }
   */
