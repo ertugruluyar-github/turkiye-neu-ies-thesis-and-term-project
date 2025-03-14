@@ -4,7 +4,7 @@
 #let _base-path = "/src/core/"
 
 /// Define user base path
-#let _user-base-path = "/template/"
+#let _user-base-path = "/template/assets/"
 
 /// Folder name of language manager folder
 #let _language-manager-folder-path = _base-path + "language-manager/"
