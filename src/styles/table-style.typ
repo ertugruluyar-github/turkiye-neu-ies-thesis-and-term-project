@@ -20,17 +20,21 @@
   )
 
   show table: it => {
-    set par(first-line-indent: 0cm, leading: 1em)
+    set par(first-line-indent: 0cm, leading: 0.5em)
     set text(size: ALTERNATE-FONT-SIZE)
-    set table.footer(repeat: true)
     show table.footer: set table.cell(align: left)
     it
   }
+
+  set table.cell(breakable: true)
+
+  set table.header(repeat: true)
+
+  set table.footer(repeat: true)
   /*
     show table.footer: it => {
       set par(first-line-indent: 0cm, leading: 1em)
       set text(size: ALTERNATE-FONT-SIZE)
-      set table.footer(repeat: true)
       set table.cell(align: right)
       it
     }
