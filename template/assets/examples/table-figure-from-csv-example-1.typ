@@ -1,6 +1,7 @@
 #let csv-table-data = csv("/template/assets/csv-files/csv-table-data.csv")
 
 #figure(
+  caption: [CSV dosyasıyla tablo örneği.],
   table(
     columns: csv-table-data.first().len(),
     table.header(
@@ -29,6 +30,4 @@
       ),
     ),
   ),
-  caption: [CSV dosyasıyla tablo örneği 1.],
-) <figür-tablo-csv-dosyasıyla-tablo-örneği-1>
-//#par(leading: 1em, text(size: 10pt)[Tablo açıklaması varsa tablonun hemen altına yazınız.])
+) <figür-tablo-csv-dosyasıyla-tablo-örneği>

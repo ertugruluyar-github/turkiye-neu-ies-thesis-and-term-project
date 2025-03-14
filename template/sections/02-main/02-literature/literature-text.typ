@@ -12,7 +12,7 @@
 
 #include "/template/assets/examples/table-figure-from-csv-example-1.typ"
 
-@figür-tablo-csv-dosyasıyla-tablo-örneği-1 CSV dosyasından tablo oluşturmaya örnektir. Bu örnekte tablonun başlığı elle yazıldı ve içeriği CSV dosyasından yüklendi.
+@figür-tablo-csv-dosyasıyla-tablo-örneği CSV dosyasından tablo oluşturmaya örnektir. Bu örnekte tablonun başlığı elle yazıldı ve içeriği CSV dosyasından yüklendi.
 
 #include "/template/assets/examples/image-figure-example.typ"
 

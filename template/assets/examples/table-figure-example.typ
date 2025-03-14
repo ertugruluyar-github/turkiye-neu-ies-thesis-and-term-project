@@ -1,4 +1,5 @@
 #figure(
+  caption: [Fiziksel ve kimyasal olaylar sorularının frekans analizi.],
   table(
     columns: 9,
     table.header(
@@ -25,8 +26,13 @@
     [S81], [246], [94,6], [11], [4,2], [3], [1,2], [260], [100],
     [S82], [233], [89,6], [23], [8,8], [4], [1,5], [260], [100],
     [S83], [220], [84,6], [38], [14,6], [2], [0,8], [260], [100],
-    table.footer(repeat: true, table.cell(colspan: 9)[Tablo açıklaması varsa tablonun hemen altına yazınız.]),
+    table.footer(
+      repeat: true,
+      table.cell(
+        colspan: 9,
+        stroke: none,
+        align(left)[Tablo açıklaması varsa tablonun hemen altına yazınız.],
+      ),
+    ),
   ),
-  caption: [Fiziksel ve kimyasal olaylar sorularının frekans analizi.],
 ) <figür-tablo-fiziksel-ve-kimyasal-olaylar-sorularının-frekans-analizi>
-#par(leading: 1em, text(size: 10pt)[Tablo açıklaması varsa tablonun hemen altına yazınız.])
