@@ -237,7 +237,6 @@
     }
   */
 
-  set footnote.entry(separator: line(length: 40%, stroke: 0.5pt))
   set list(marker: (sym.bullet, "◦", "-"))
 
   /* ----------------------------- */

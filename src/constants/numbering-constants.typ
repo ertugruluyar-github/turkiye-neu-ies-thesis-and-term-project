@@ -3,4 +3,5 @@
 #let PAGE-NUMBERING-ARABIC = "1" // Sayfalar [Pages]
 #let HEADING-NUMBERING = "1.1." // Başlıklar [Headings]
 #let FIGURE-NUMBERING = "1.1" // Simgeler [Figures]
-#let MATH-NUMBERING = "(1.1)" // Simgeler [Figures]
+#let MATH-NUMBERING = "(1.1)" // Matematik [Math]
+#let FOOTNOTE-NUMBERING = "1" // Dipnot [Footnote]

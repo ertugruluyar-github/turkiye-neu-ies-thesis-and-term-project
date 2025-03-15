@@ -5,6 +5,7 @@
 #import "/src/styles/table-style.typ": table-style
 #import "/src/styles/figure-style.typ": figure-style
 #import "/src/styles/reference-style.typ": reference-style
+#import "/src/styles/footnote-style.typ": footnote-style
 
 #let common-document-style(
   language: none,
@@ -71,6 +72,9 @@
 
   // Embeded computer code style
   show raw: set text(ALTERNATE-FONT-SIZE)
+
+  // Dipnot stili [Footnote style]
+  show: footnote-style
 
   content
 }
