@@ -19,12 +19,18 @@
     fill: none,
   )
 
-  show table: it => {
-    set par(first-line-indent: 0cm, leading: 0.5em)
-    set text(size: ALTERNATE-FONT-SIZE)
-    show table.footer: set table.cell(align: left)
-    it
-  }
+  show table: set par(
+    first-line-indent: 0cm,
+    hanging-indent: 0cm,
+    justify: false,
+    leading: 0.5em,
+  )
+
+  show table: set text(size: ALTERNATE-FONT-SIZE)
+
+  show table.footer: set table.cell(align: left + horizon)
+
+  show table.footer: set par(justify: true)
 
   set table.cell(breakable: true)
 
