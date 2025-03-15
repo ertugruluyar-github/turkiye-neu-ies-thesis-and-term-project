@@ -6,6 +6,7 @@
 #import "/src/styles/table-style.typ": table-style
 #import "/src/styles/figure-style.typ": figure-style
 #import "/src/styles/reference-style.typ": reference-style
+#import "/src/styles/raw-style.typ": raw-style
 #import "/src/styles/footnote-style.typ": footnote-style
 
 #let common-document-style(
@@ -62,22 +63,22 @@
     supplement: translator(key: language-keys.MATH-EQUATION-REFERENCE-SUPPLEMENT),
   )
 
-  /* ---- List Style ---- */
+  /* ---- Liste Stili [List Style] ---- */
   show: list-style
 
-  /* ---- Table Style ---- */
+  /* ---- Tablo Stili [Table Style] ---- */
   show: table-style
 
-  /* ---- Figure Styles ---- */
+  /* ---- Figür Stili [Figure Style] ---- */
   show: figure-style
 
-  /* ---- Reference Style ---- */
+  /* ---- Atıf Stili [Reference Style] ---- */
   show: reference-style
 
-  // Embeded computer code style
-  show raw: set text(ALTERNATE-FONT-SIZE)
+  /* ---- Ham/Kod Stili [Raw/Code Style] ---- */
+  show: raw-style
 
-  // Dipnot stili [Footnote style]
+  /* ---- Dipnot Stili [Footnote Style] ---- */
   show: footnote-style
 
   content

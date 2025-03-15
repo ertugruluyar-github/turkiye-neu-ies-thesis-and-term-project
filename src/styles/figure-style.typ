@@ -22,6 +22,9 @@
     separator: FIGURE-CAPTION-SEPARATOR,
   )
 
+  // Tablo figürlerin üstündeki ve altındaki boşlukları ayarlama. [Set spacing above and below table figures.]
+  show figure.where(kind: table): set block(above: 1.5em, below: 1em)
+
   // Görsel figürünün stili. [Image Figure Style]
   show figure.where(kind: image): set figure(
     supplement: translator(key: language-keys.IMAGE-FIGURE-REFERENCE-SUPPLEMENT),
@@ -29,11 +32,30 @@
     gap: 0.5em,
   )
 
-  // Görsel figürünün başlık stili. [Image Figure Caption Style]
+  // Şekil figürünün başlık stili. [Image Figure Caption Style]
   show figure.where(kind: image): set figure.caption(
     position: bottom,
     separator: FIGURE-CAPTION-SEPARATOR,
   )
+
+  // Şekil figürlerin üstündeki ve altındaki boşlukları ayarlama. [Set spacing above and below image figures.]
+  show figure.where(kind: image): set block(above: 1.5em, below: 1em)
+
+  // Kod figürünün stili. [Table Figure Style]
+  show figure.where(kind: raw): set figure(
+    supplement: translator(key: language-keys.RAW-FIGURE-REFERENCE-SUPPLEMENT),
+    placement: none,
+    gap: 0.5em,
+  )
+
+  // Kod figürünün başlık stili. [Table Figure Caption Style]
+  show figure.where(kind: raw): set figure.caption(
+    position: top,
+    separator: FIGURE-CAPTION-SEPARATOR,
+  )
+
+  // Kod figürlerin üstündeki ve altındaki boşlukları ayarlama. [Set spacing above and below raw figures.]
+  show figure.where(kind: raw): set block(above: 1.5em, below: 1.5em)
 
   // Figür başlıklarının stili. [Figure Caption Style]
   show figure.caption: it => {
@@ -47,19 +69,16 @@
     )
   }
 
-  // TODO: Tablo figürlerinin bölünüp bölünmeyeceğini ayarla.
-  // Tabloyu bölünebilir yapma. [Make table breakable.]
-  // NOT: Figür başlıklarının tekrar etmesi ve tekrar eden başlıkların ana başlıktan farklı olmasını sağlayacak özellikler gelene kadar tablolar bölünemez şeklinde kalmalıdır.
-  //show figure.where(kind: table): set block(breakable: true)
-
-  // Figürlerin üstündeki ve altındaki boşlukları ayarlama. [Set spacing above and below figures.]
-  show figure: set block(above: 1.5em, below: 0.5em)
-
   // Figürlerin numaralandırma stilini ayarlama. [Set numbering style of figures.]
   set figure(
     numbering: n => numbering(FIGURE-NUMBERING, counter(heading).get().first(), n),
     gap: 1em,
   )
+
+  // TODO: Tablo figürlerinin bölünüp bölünmeyeceğini ayarla.
+  // Tabloyu bölünebilir yapma. [Make table breakable.]
+  // NOT: Figür başlıklarının tekrar etmesi ve tekrar eden başlıkların ana başlıktan farklı olmasını sağlayacak özellikler gelene kadar tablolar bölünemez şeklinde kalmalıdır.
+  //show figure.where(kind: table): set block(breakable: true)
 
   content
 }

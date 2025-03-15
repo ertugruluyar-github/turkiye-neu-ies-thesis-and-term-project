@@ -17,3 +17,9 @@
 #include "/template/assets/examples/image-figure-example.typ"
 
 @figür-şekil-neü-logo örnek bir resim içerikli figürdür.
+
+#linebreak()
+
+\
+
+#include "/template/assets/examples/code-raw-text-example.typ"

@@ -1,4 +1,3 @@
-#import "/src/constants/document-settings-constants.typ": *
 #import "/src/constants/drop-down-list-constants.typ": *
 #import "/src/modules/custom-functions.typ": *
 #import "/src/styles/common-document-style.typ": common-document-style
@@ -28,8 +27,7 @@
 #import "/src/sections/03-back/curriculum-vitae-page.typ": curriculum-vitae-page
 #import "/src/sections/03-back/expanded-turkish-abstract-page.typ": expanded-turkish-abstract-page
 #import "/src/core/validation-manager/validation-manager.typ": validation-manager
-#import "core/language-manager/language-manager.typ": init-language-manager, translator
-#import "/src/constants/language-keys.typ": language-keys
+#import "core/language-manager/language-manager.typ": init-language-manager
 
 #let template-configurations(
   language: LANGUAGES.TR-TR,
@@ -213,32 +211,6 @@
     keywords: keywords,
   )
 
-  /* ----------------------------- */
-
-  // TODO: Bu stillerin ne yaptığını öğrenip duruma göre ortak döküman stillerine ekle.
-  /*
-    show raw.where(block: true): r => {
-      set par(justify: false, first-line-indent: 0cm, leading: PARAGRAPH-LEADING-SIZE, spacing: PARAGRAPH-SPACING-SIZE)
-      show raw.line: line => {
-        box(
-          table(
-            columns: (-1.25em, 100%),
-            stroke: 0pt,
-            inset: 0em,
-            column-gutter: 1em,
-            align: (x, y) => if x == 0 { right } else { left },
-            text(fill: ovgu-darkgray, str(line.number)), line.body,
-          ),
-        )
-      }
-
-      set align(left)
-      rect(width: 100%, stroke: gray + 0.5pt, inset: 0.75em, r)
-    }
-  */
-
-  /* ----------------------------- */
-
   /* --- BAŞLIK SAYFASI [TITLE PAGE] --- */
   title-page(
     language: language,
@@ -259,6 +231,7 @@
 
   {
     /* ---- TEZİN ÖN KISMI [FRONT SECTION OF THESIS] ---- */
+
     // Tezin Ön Kısmının Stilini
     show: thesis-front-section-style
 
@@ -380,6 +353,7 @@
 
   {
     /* --- TEZİN ANA KISMI [MAIN SECTION OF THESIS] --- */
+
     // Tezin Ana Kısmının Stilini
     show: thesis-main-section-style
 
