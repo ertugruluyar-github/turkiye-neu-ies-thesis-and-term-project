@@ -1,6 +1,5 @@
 #import "/src/constants/document-settings-constants.typ": ALTERNATE-FONT-SIZE
 
-// TODO: Tablo stillerini yap.
 #let table-style(content) = {
   show table.cell.where(y: 0): set text(weight: "bold")
   let normal-stroke-size = 1pt
