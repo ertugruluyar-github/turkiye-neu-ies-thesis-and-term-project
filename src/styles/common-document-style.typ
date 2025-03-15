@@ -2,6 +2,7 @@
 #import "/src/constants/numbering-constants.typ": PAGE-NUMBERING-ROMAN, MATH-NUMBERING
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
+#import "/src/styles/list-style.typ": list-style
 #import "/src/styles/table-style.typ": table-style
 #import "/src/styles/figure-style.typ": figure-style
 #import "/src/styles/reference-style.typ": reference-style
@@ -60,6 +61,9 @@
     numbering: MATH-NUMBERING,
     supplement: translator(key: language-keys.MATH-EQUATION-REFERENCE-SUPPLEMENT),
   )
+
+  /* ---- List Style ---- */
+  show: list-style
 
   /* ---- Table Style ---- */
   show: table-style

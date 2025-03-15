@@ -237,8 +237,6 @@
     }
   */
 
-  set list(marker: (sym.bullet, "◦", "-"))
-
   /* ----------------------------- */
 
   /* --- BAŞLIK SAYFASI [TITLE PAGE] --- */
