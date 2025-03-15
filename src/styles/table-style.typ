@@ -9,7 +9,7 @@
   set table(
     align: center + horizon,
     gutter: 0pt,
-    inset: (x: 0.3cm, y: 0.25cm),
+    inset: (x: 0.15cm, y: 0.25cm),
     stroke: (x, y) => (
       left: none,
       top: if y == 0 { bold-stroke-size } else { 0pt },
