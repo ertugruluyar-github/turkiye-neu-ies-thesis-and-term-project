@@ -7,8 +7,8 @@
 #import "/src/sections/01-front/title-page.typ": title-page
 #import "/src/sections/01-front/preface-page.typ": preface-page
 #import "/src/sections/01-front/table-of-contents-page.typ": table-of-contents-page
-#import "/src/sections/01-front/list-of-tables-page.typ": list-of-tables-page
-#import "/src/sections/01-front/list-of-images-page.typ": list-of-images-page
+#import "/src/sections/01-front/list-of-table-figures-page.typ": list-of-table-figures-page
+#import "/src/sections/01-front/list-of-image-figures-page.typ": list-of-image-figures-page
 #import "/src/sections/01-front/thesis-originality-report-page.typ": thesis-originality-report-page
 #import "/src/sections/01-front/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
 #import "/src/sections/01-front/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
@@ -259,7 +259,7 @@
       )
         and show-list-of-tables
     ) {
-      list-of-tables-page()
+      list-of-table-figures-page()
     }
 
     /* --- Şekiller Listesi Sayfası [List of Images Page] --- */
@@ -271,7 +271,7 @@
       )
         and show-list-of-images
     ) {
-      list-of-images-page()
+      list-of-image-figures-page()
     }
 
     /* --- Tez Çalışması Örijinallik Raporu [Originality Report] --- */
