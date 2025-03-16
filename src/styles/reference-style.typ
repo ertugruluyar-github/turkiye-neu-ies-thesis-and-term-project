@@ -1,4 +1,4 @@
-#import "/src/constants/separator-constants.typ": APPENDIX-REFERENCE-SUFFIX-SEPARATOR
+#import "/src/constants/separator-constants.typ": APPENDIX-REFERENCE-PREFIX-SEPARATOR
 
 #let reference-style(content) = {
   // Atıfların stilini ayarla. [Set the style of references.]
@@ -9,7 +9,7 @@
     if element.func() == heading or element.func() == figure or element.func() == math.equation {
       set text(style: "italic")
       if element.numbering == none {
-        link(element.location(), element.supplement + APPENDIX-REFERENCE-SUFFIX-SEPARATOR + element.body)
+        link(element.location(), element.supplement + APPENDIX-REFERENCE-PREFIX-SEPARATOR + element.body)
       } else {
         it
       }
