@@ -9,6 +9,7 @@
 #import "/src/sections/01-front/table-of-contents-page.typ": table-of-contents-page
 #import "/src/sections/01-front/list-of-table-figures-page.typ": list-of-table-figures-page
 #import "/src/sections/01-front/list-of-image-figures-page.typ": list-of-image-figures-page
+#import "/src/sections/01-front/list-of-code-figures-page.typ": list-of-code-figures-page
 #import "/src/sections/01-front/thesis-originality-report-page.typ": thesis-originality-report-page
 #import "/src/sections/01-front/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
 #import "/src/sections/01-front/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
@@ -86,8 +87,9 @@
       "Keyword 5",
     ),
   ),
-  show-list-of-tables: true,
-  show-list-of-images: true,
+  show-list-of-table-figures: true,
+  show-list-of-image-figures: true,
+  show-list-of-code-figures: true,
   have-symbols: true,
   have-abbreviations: true,
   show-separated-sub-headings-in-discussion-conclusion-and-suggestions: true,
@@ -191,8 +193,9 @@
     thesis-study-funding-organization: thesis-study-funding-organization,
     thesis-originalty: thesis-originalty,
     keywords: keywords,
-    show-list-of-tables: show-list-of-tables,
-    show-list-of-images: show-list-of-images,
+    show-list-of-table-figures: show-list-of-table-figures,
+    show-list-of-image-figures: show-list-of-image-figures,
+    show-list-of-code-figures: show-list-of-code-figures,
     have-symbols: have-symbols,
     have-abbreviations: have-abbreviations,
     show-separated-sub-headings-in-discussion-conclusion-and-suggestions: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
@@ -250,28 +253,40 @@
     /* --- İçindekiler Sayfası [Table of Contents Page] --- */
     table-of-contents-page()
 
-    /* --- Tablolar Listesi Sayfası [List of Tables Page] --- */
+    /* --- Tablo Figürleri Listesi Sayfası [List of Table Figures Page] --- */
     if (
       (
         report-type == REPORT-TYPES.MASTER-THESIS
           or report-type == REPORT-TYPES.DOCTORAL-THESIS
           or report-type == REPORT-TYPES.TERM-PROJECT
       )
-        and show-list-of-tables
+        and show-list-of-table-figures
     ) {
       list-of-table-figures-page()
     }
 
-    /* --- Şekiller Listesi Sayfası [List of Images Page] --- */
+    /* --- Şekil Figürleri Listesi Sayfası [List of Image Figures Page] --- */
     if (
       (
         report-type == REPORT-TYPES.MASTER-THESIS
           or report-type == REPORT-TYPES.DOCTORAL-THESIS
           or report-type == REPORT-TYPES.TERM-PROJECT
       )
-        and show-list-of-images
+        and show-list-of-image-figures
     ) {
       list-of-image-figures-page()
+    }
+
+    /* --- Kod Figürleri Listesi Sayfası [List of Code Figures Page] --- */
+    if (
+      (
+        report-type == REPORT-TYPES.MASTER-THESIS
+          or report-type == REPORT-TYPES.DOCTORAL-THESIS
+          or report-type == REPORT-TYPES.TERM-PROJECT
+      )
+        and show-list-of-code-figures
+    ) {
+      list-of-code-figures-page()
     }
 
     /* --- Tez Çalışması Örijinallik Raporu [Originality Report] --- */

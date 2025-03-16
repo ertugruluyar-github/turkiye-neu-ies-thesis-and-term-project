@@ -31,8 +31,9 @@
   thesis-study-funding-organization: none,
   thesis-originalty: none,
   keywords: none,
-  show-list-of-tables: none,
-  show-list-of-images: none,
+  show-list-of-table-figures: none,
+  show-list-of-image-figures: none,
+  show-list-of-code-figures: none,
   have-symbols: none,
   have-abbreviations: none,
   show-separated-sub-headings-in-discussion-conclusion-and-suggestions: none,
@@ -91,18 +92,25 @@
   // Anahtar Kelimeler parametresini doğrula. [Validate keywords parameter.]
   keywords-validator(value: keywords)
 
-  // Tablolar listesini göster parametresini doğrula. [Validate show-list-of-tables parameter.]
+  // Tablo figürleri listesini göster parametresini doğrula. [Validate show-list-of-table-figures parameter.]
   boolean-type-validator(
-    value: show-list-of-tables,
-    value-name: "template-configurations.show-list-of-tables",
-    value-description: "Şablon ayarlarındaki tablolar listesini göster seçeneği",
+    value: show-list-of-table-figures,
+    value-name: "template-configurations.show-list-of-table-figures",
+    value-description: "Şablon ayarlarındaki tablo figürleri listesini göster seçeneği",
   )
 
-  // Şekiller listesini göster parametresini doğrula. [Validate show-list-of-images parameter.]
+  // Şekil figürleri listesini göster parametresini doğrula. [Validate show-list-of-image-figures parameter.]
   boolean-type-validator(
-    value: show-list-of-images,
-    value-name: "template-configurations.show-list-of-images",
-    value-description: "Şablon ayarlarındaki şekiller listesini göster seçeneği",
+    value: show-list-of-image-figures,
+    value-name: "template-configurations.show-list-of-image-figures",
+    value-description: "Şablon ayarlarındaki şekil figürleri listesini göster seçeneği",
+  )
+
+  // Kod figürleri listesini göster parametresini doğrula. [Validate show-list-of-code-figures parameter.]
+  boolean-type-validator(
+    value: show-list-of-code-figures,
+    value-name: "template-configurations.show-list-of-code-figures",
+    value-description: "Şablon ayarlarındaki kod figürleri listesini göster seçeneği",
   )
 
   // Simgelerim var parametresini doğrula. [Validate have-symbols parameter.]

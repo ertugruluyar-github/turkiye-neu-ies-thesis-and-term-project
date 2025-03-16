@@ -82,10 +82,12 @@
       "Keyword 5",
     ),
   ),
-  // Tablolar listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-tables: true" yapınız. Yer almasını istemiyorsanız "show-list-of-tables: false" yapınız.
-  show-list-of-tables: true,
-  // Şekiller listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-images: true" yapınız. Yer almasını istemiyorsanız "show-list-of-images: false" yapınız.
-  show-list-of-images: true,
+  // Tablo figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-table-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-table-figures: false" yapınız.
+  show-list-of-table-figures: true,
+  // Şekil figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-image-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-image-figures: false" yapınız.
+  show-list-of-image-figures: true,
+  // Kod figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-code-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-code-figures: false" yapınız.
+  show-list-of-code-figures: true,
   // Tez çalışmasında simgeler kullandıysanız "Simgeler" başlığındaki içeriğin teze dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik teze dahil edilmeyecektir.
   have-symbols: true,
   // Tez çalışmasında kısaltmalar kullandıysanız "Kısaltmalar" başlığındaki içeriğin teze dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik teze dahil edilmeyecektir.
