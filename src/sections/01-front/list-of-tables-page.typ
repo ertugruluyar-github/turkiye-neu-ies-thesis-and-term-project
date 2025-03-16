@@ -1,7 +1,7 @@
-#import "/src/styles/list-of-tables-style.typ": list-of-tables-style
+#import "/src/styles/list-of-table-figures-style.typ": list-of-table-figures-style
 
 #let list-of-tables-page() = {
-  list-of-tables-style(outline())
+  list-of-table-figures-style(outline())
 
   // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
   pagebreak(weak: true)

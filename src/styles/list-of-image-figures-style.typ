@@ -2,13 +2,13 @@
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
-#let list-of-tables-style(content) = {
+#let list-of-image-figures-style(content) = {
   // Anahatın style. [Outline setstyletings.]
   set outline(
     depth: none,
     indent: auto,
-    target: figure.where(kind: table),
-    title: upper(translator(key: language-keys.LIST-OF-TABLES)),
+    target: figure.where(kind: image),
+    title: upper(translator(key: language-keys.LIST-OF-IMAGES)),
   )
 
   // Figürler listelerinin girdilerinin stili. [Style of the entries of the figures lists.]
