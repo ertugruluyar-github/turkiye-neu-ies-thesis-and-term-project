@@ -22,4 +22,4 @@
 
 \
 
-#include "/template/assets/examples/code-raw-text-example.typ"
+#include "/template/assets/examples/code-figure-example.typ"
