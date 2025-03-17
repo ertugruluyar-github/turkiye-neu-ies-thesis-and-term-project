@@ -9,6 +9,7 @@
 #import "/src/sections/01-front/table-of-contents-page.typ": table-of-contents-page
 #import "/src/sections/01-front/list-of-table-figures-page.typ": list-of-table-figures-page
 #import "/src/sections/01-front/list-of-image-figures-page.typ": list-of-image-figures-page
+#import "/src/sections/01-front/list-of-equation-figures-page.typ": list-of-equation-figures-page
 #import "/src/sections/01-front/list-of-code-figures-page.typ": list-of-code-figures-page
 #import "/src/sections/01-front/thesis-originality-report-page.typ": thesis-originality-report-page
 #import "/src/sections/01-front/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
@@ -89,6 +90,7 @@
   ),
   show-list-of-table-figures: true,
   show-list-of-image-figures: true,
+  show-list-of-equation-figures: true,
   show-list-of-code-figures: true,
   have-symbols: true,
   have-abbreviations: true,
@@ -195,6 +197,7 @@
     keywords: keywords,
     show-list-of-table-figures: show-list-of-table-figures,
     show-list-of-image-figures: show-list-of-image-figures,
+    show-list-of-equation-figures: show-list-of-equation-figures,
     show-list-of-code-figures: show-list-of-code-figures,
     have-symbols: have-symbols,
     have-abbreviations: have-abbreviations,
@@ -275,6 +278,18 @@
         and show-list-of-image-figures
     ) {
       list-of-image-figures-page()
+    }
+
+    /* --- Denklem Figürleri Listesi Sayfası [List of Equation Figures Page] --- */
+    if (
+      (
+        report-type == REPORT-TYPES.MASTER-THESIS
+          or report-type == REPORT-TYPES.DOCTORAL-THESIS
+          or report-type == REPORT-TYPES.TERM-PROJECT
+      )
+        and show-list-of-equation-figures
+    ) {
+      list-of-equation-figures-page()
     }
 
     /* --- Kod Figürleri Listesi Sayfası [List of Code Figures Page] --- */

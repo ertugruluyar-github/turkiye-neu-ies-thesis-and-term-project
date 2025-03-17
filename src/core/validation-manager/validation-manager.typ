@@ -33,6 +33,7 @@
   keywords: none,
   show-list-of-table-figures: none,
   show-list-of-image-figures: none,
+  show-list-of-equation-figures: none,
   show-list-of-code-figures: none,
   have-symbols: none,
   have-abbreviations: none,
@@ -104,6 +105,13 @@
     value: show-list-of-image-figures,
     value-name: "template-configurations.show-list-of-image-figures",
     value-description: "Şablon ayarlarındaki şekil figürleri listesini göster seçeneği",
+  )
+
+  // Denklem figürleri listesini göster parametresini doğrula. [Validate show-list-of-equation-figures parameter.]
+  boolean-type-validator(
+    value: show-list-of-equation-figures,
+    value-name: "template-configurations.show-list-of-equation-figures",
+    value-description: "Şablon ayarlarındaki denklem figürleri listesini göster seçeneği",
   )
 
   // Kod figürleri listesini göster parametresini doğrula. [Validate show-list-of-code-figures parameter.]
