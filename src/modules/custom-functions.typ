@@ -44,27 +44,3 @@
     numbering("1.1a", counter(heading).get().first(), sup, sub)
   },
 )
-
-
-// A ParCIO-like table with a design taken from the LaTeX template.
-#let parcio-table(max-rows, ..args) = table(
-  ..args,
-  row-gutter: (2.5pt, auto),
-  stroke: (x, y) => (
-    left: 0.5pt,
-    right: 0.5pt,
-    top: if y <= 1 { 0.5pt },
-    bottom: if y == 0 or y == max-rows - 1 { 0.5pt },
-  )
-)
-
-// Nicer handling of (multiple) appendices. Specify 'reset: true' with your first appendix to reset the heading counter!
-/*
-#let appendix(reset: false, title:"Ekin Başlığı", label-text: none, body) = {
-  if reset { counter(heading).update(1) }
-  [
-    #heading(level: 2, numbering: APPENDICES-NUMBERING, supplement: APPENDICES-SUPPLEMENT, title)#label(lower(STRING-APPENDIX) + APPENDIX-PREFIX-SEPERATOR + label-text)
-    #body
-  ]
-}
-*/
