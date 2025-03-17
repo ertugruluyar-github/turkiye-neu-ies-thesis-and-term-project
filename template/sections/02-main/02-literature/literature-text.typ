@@ -23,3 +23,9 @@
 \
 
 #include "/template/assets/examples/code-figure-example.typ"
+
+#linebreak()
+
+\
+
+#include "/template/assets/examples/equation-figure-example.typ"
