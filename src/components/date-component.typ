@@ -1,5 +1,5 @@
 #import "/src/constants/date-constants.typ": FULL-DATE-FORMAT, STRING-MONTH-NAMES
-#import "/src/modules/custom-functions.typ": long-month-name-by-language
+#import "/src/core/custom-functions/long-month-name-by-language.typ": long-month-name-by-language
 
 #let date-component(
   date: datetime.today(),

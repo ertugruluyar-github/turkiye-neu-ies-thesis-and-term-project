@@ -13,18 +13,6 @@
 
 /* ---- Convencience functions ---- */
 
-#let long-month-name-by-language(
-  date: none,
-  month-names: none,
-  content,
-) = {
-  show regex("[a-zA-Z]+"): month-name => month-names.at(date.month() - 1)
-
-  content
-}
-
-/* ------------------------------- */
-
 // A TODO marker. (inline: false -> margin note, inline: true -> box).
 #let todo(inline: false, body) = if inline {
   rect(
