@@ -4,27 +4,20 @@
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
-#let ovgu-blue = rgb("#0068B4")
-#let ovgu-darkgray = rgb("#606060")
-#let ovgu-lightgray = rgb("#C0C0C0")
-#let ovgu-orange = rgb("#F39100")
-#let ovgu-purple = rgb("#7A003F")
-#let ovgu-red = rgb("#D13F58")
-
 /* ---- Convencience functions ---- */
 
 // A TODO marker. (inline: false -> margin note, inline: true -> box).
 #let todo(inline: false, body) = if inline {
   rect(
-    fill: ovgu-orange,
+    fill: orange,
     stroke: black + 0.5pt,
     radius: 0.25em,
     width: 100%,
     body,
   )
 } else {
-  set rect(fill: ovgu-orange)
-  margin-note(stroke: ovgu-orange, body)
+  set rect(fill: orange)
+  margin-note(stroke: orange, body)
 }
 
 
