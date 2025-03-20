@@ -2,6 +2,7 @@
 #import "/src/constants/numbering-constants.typ": PAGE-NUMBERING-ROMAN, MATH-NUMBERING
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
+#import "/src/styles/math-equation-style.typ": math-equation-style
 #import "/src/styles/list-style.typ": list-style
 #import "/src/styles/table-style.typ": table-style
 #import "/src/styles/figure-style.typ": figure-style
@@ -58,10 +59,8 @@
     spacing: PARAGRAPH-SPACING-SIZE,
   )
 
-  set math.equation(
-    numbering: MATH-NUMBERING,
-    supplement: translator(key: language-keys.MATH-EQUATION-REFERENCE-SUPPLEMENT),
-  )
+  /* ---- Matematiksel Denklem Stili [Math Equation Style] ---- */
+  show: math-equation-style
 
   /* ---- Liste Stili [List Style] ---- */
   show: list-style
