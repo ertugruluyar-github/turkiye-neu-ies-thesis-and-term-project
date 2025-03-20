@@ -18,14 +18,10 @@
 
 @figür-şekil-neü-logo örnek bir resim içerikli figürdür.
 
-#linebreak()
-
-\
+#pagebreak()
 
 #include "/template/assets/examples/code-figure-example.typ"
 
-#linebreak()
+#pagebreak()
 
-\
-
-#include "/template/assets/examples/equation-figure-example.typ"
+#include "/template/assets/examples/math-equation-figure-example.typ"
