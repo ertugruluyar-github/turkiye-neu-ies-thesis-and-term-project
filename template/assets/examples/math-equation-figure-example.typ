@@ -6,6 +6,7 @@ $
   cal(A) :=
   { x in RR | x "bir doğal sayı" }
 $
+// Tanımladığınız değişkenleri denklemlerin içinde kullanabilirsiniz:
 #let x = 5
 $ #x < 17 $
 
@@ -48,3 +49,5 @@ Ardışık sayıların toplamı:
 $ sum_(k=1)^n k = (n(n+1)) / 2 $ <figür-denklem-ardışık-sayıların-toplamı>
 
 @figür-denklem-ardışık-sayıların-toplamı ardışık sayıların toplamının formülüdür.
+
+Daha fazla bilgi için #link("https://typst.app/docs/reference/math/") adresini ziyaret edebilirsiniz.
