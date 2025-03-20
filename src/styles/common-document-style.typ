@@ -8,6 +8,7 @@
 #import "/src/styles/figure-style.typ": figure-style
 #import "/src/styles/reference-style.typ": reference-style
 #import "/src/styles/raw-style.typ": raw-style
+#import "/src/styles/quotation-style.typ": quotation-style
 #import "/src/styles/footnote-style.typ": footnote-style
 
 #let common-document-style(
@@ -76,6 +77,9 @@
 
   /* ---- Ham/Kod Stili [Raw/Code Style] ---- */
   show: raw-style
+
+  /* ---- Alıntı Stili [Quotation Style] ---- */
+  show: quotation-style
 
   /* ---- Dipnot Stili [Footnote Style] ---- */
   show: footnote-style

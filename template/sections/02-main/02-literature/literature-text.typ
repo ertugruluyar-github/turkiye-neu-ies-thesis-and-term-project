@@ -25,3 +25,7 @@
 #pagebreak()
 
 #include "/template/assets/examples/math-equation-figure-example.typ"
+
+#pagebreak()
+
+#include "/template/assets/examples/quotation-example.typ"
