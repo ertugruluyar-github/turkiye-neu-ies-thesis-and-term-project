@@ -45,7 +45,23 @@ PROFESSOR-DR: "Prof. Dr."
   PROFESSOR-DR: translator(key: language-keys.PROFESSOR-DR),
 )
 
-// Ana Bilim Dalları [Departments]
+/* Ana Bilim Dalları [Departments]\
+DEPARTMENT-OF-PHYSICAL-EDUCATION-AND-SPORTS = "Beden Eğitimi ve Spor Anabilim Dalı"\
+DEPARTMENT-OF-COMPUTER-EDUCATION-AND-INSTRUCTIONAL-TECHNOLOGY = "Bilgisayar ve Öğretim Teknolojileri Eğitimi Anabilim Dalı"\
+DEPARTMENT-OF-EDUCATIONAL-SCIENCES = "Eğitim Bilimleri Anabilim Dalı"\
+DEPARTMENT-OF-CURRICULUM-AND-INSTRUCTION = "Eğitim Programları ve Öğretim Anabilim Dalı"\
+DEPARTMENT-OF-FINE-ARTS-EDUCATION = "Güzel Sanatlar Eğitimi Anabilim Dalı"\
+DEPARTMENT-OF-ELEMENTARY-EDUCATION = "İlköğretim Anabilim Dalı"\
+DEPARTMENT-OF-ELEMENTARY-RELIGIOUS-CULTURE-AND-ETHICS-EDUCATION = "İlköğretim Din Kültürü ve Ahlak Bilgisi Eğitimi Anabilim Dalı"\
+DEPARTMENT-OF-MATHEMATICS-AND-SCIENCES-EDUCATION = "Matematik ve Fen Bilimleri Eğitimi Anabilim Dalı"\
+DEPARTMENT-OF-SECONDARY-SCIENCE-AND-MATHEMATICS-EDUCATION = "Ortaöğretim Fen ve Matematik Alanları Eğitimi Anabilim Dalı"\
+DEPARTMENT-OF-SECONDARY-SOCIAL-SCIENCES-EDUCATION = "Ortaöğretim Sosyal Alanlar Eğitimi Anabilim Dalı"\
+DEPARTMENT-OF-SPECIAL-EDUCATION = "Özel Eğitim Anabilim Dalı"\
+DEPARTMENT-OF-BASIC-EDUCATION = "Temel Eğitim Anabilim Dalı"\
+DEPARTMENT-OF-TURKISH-EDUCATION = "Türkçe Eğitimi Anabilim Dalı"\
+DEPARTMENT-OF-TURKISH-AND-SOCIAL-SCIENCES-EDUCATION = "Türkçe ve Sosyal Bilimler Eğitimi Anabilim Dalı"\
+DEPARTMENT-OF-FOREIGN-LANGUAGE-EDUCATION = "Yabancı Diller Eğitimi Anabilim Dalı"
+*/
 #let DEPARTMENTS = (
   __DEPARTMENT-PLACE-HOLDER: translator(key: language-keys.DEPARTMENT-PLACE-HOLDER),
   DEPARTMENT-OF-PHYSICAL-EDUCATION-AND-SPORTS: translator(
