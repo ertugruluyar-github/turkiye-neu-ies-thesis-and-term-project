@@ -95,7 +95,38 @@ DEPARTMENT-OF-FOREIGN-LANGUAGE-EDUCATION = "Yabancı Diller Eğitimi Anabilim Da
   DEPARTMENT-OF-FOREIGN-LANGUAGE-EDUCATION: translator(key: language-keys.DEPARTMENT-OF-FOREIGN-LANGUAGE-EDUCATION),
 )
 
-// Bilim Dalları [Programs]
+/* Bilim Dalları [Programs]
+GERMAN-LANGUAGE-EDUCATION-PROGRAM = "Alman Dili Eğitimi Bilim Dalı"\
+PHYSICAL-EDUCATION-AND-SPORTS-PROGRAM = "Beden Eğitimi ve Spor Bilim Dalı"\
+COMPUTER-EDUCATION-AND-INSTRUCTIONAL-TECHNOLOGY-PROGRAM = "Bilgisayar ve Öğretim Teknolojileri Eğitimi Bilim Dalı"\
+BIOLOGY-EDUCATION-PROGRAM = "Biyoloji Eğitimi Bilim Dalı"\
+GEOGRAPHY-EDUCATION-PROGRAM = "Coğrafya Eğitimi Bilim Dalı"\
+CURRICULUM-AND-INSTRUCTION-PROGRAM = "Eğitim Programları ve Öğretim Bilim Dalı"\
+EDUCATION-MANAGEMENT-PROGRAM = "Eğitim Yönetimi Bilim Dalı"\
+EDUCATIONAL-ADMINISTRATION-SUPERVISION-PLANNING-AND-ECONOMICS-PROGRAM = "Eğitim Yönetimi, Denetimi, Planlaması ve Ekonomisi Bilim Dalı"\
+PHILOSOPHY-EDUCATION-PROGRAM = "Felsefe Grubu Eğitimi Bilim Dalı"\
+SCIENCE-EDUCATION-PROGRAM = "Fen Bilgisi Eğitimi Bilim Dalı"\
+PHYSICS-EDUCATION-PROGRAM = "Fizik Eğitimi Bilim Dalı"\
+ELEMENTARY-RELIGIOUS-CULTURE-AND-ETHICS-EDUCATION-PROGRAM = "İlköğretim Din Kültürü ve Ahlak Bilgisi Eğitimi Bilim Dalı"\
+ELEMENTARY-MATHEMATICS-EDUCATION-PROGRAM = "İlköğretim Matematik Eğitimi Bilim Dalı"\
+ENGLISH-LANGUAGE-EDUCATION-PROGRAM = "İngiliz Dili Eğitimi Bilim Dalı"\
+CHEMISTRY-EDUCATION-PROGRAM = "Kimya Eğitimi Bilim Dalı"\
+MATHEMATICS-EDUCATION-PROGRAM = "Matematik Eğitimi Bilim Dalı"\
+MUSIC-EDUCATION-PROGRAM = "Müzik Eğitimi Bilim Dalı"\
+PRESCHOOL-EDUCATION-PROGRAM = "Okul Öncesi Eğitimi Bilim Dalı"\
+SPECIAL-EDUCATION-PROGRAM = "Özel Eğitim Bilim Dalı"\
+LEADERSHIP-AND-MANAGEMENT-IN-SPECIAL-TEACHING-INSTITUTIONS-PROGRAM = "Özel Öğretim Kurumlarında Liderlik ve Yönetim Bilim Dalı"\
+GUIDANCE-AND-PSYCHOLOGICAL-COUNSELING-PROGRAM = "Rehberlik ve Psikolojik Danışmanlık Bilim Dalı"\
+ART-EDUCATION-PROGRAM = "Resim-İş Eğitimi Bilim Dalı"\
+PRIMARY-EDUCATION-PROGRAM = "Sınıf Eğitimi Bilim Dalı"\
+SOCIAL-STUDIES-EDUCATION-PROGRAM = "Sosyal Bilgiler Eğitimi Bilim Dalı"\
+HISTORY-EDUCATION-PROGRAM = "Tarih Eğitimi Bilim Dalı"\
+TURKISH-LANGUAGE-AND-LITERATURE-EDUCATION-PROGRAM = "Türk Dili ve Edebiyatı Eğitimi Bilim Dalı"\
+TURKISH-EDUCATION-PROGRAM = "Türkçe Eğitimi Bilim Dalı"\
+TEACHING-TURKISH-TO-FOREIGNERS-PROGRAM = "Yabancılara Türkçe Öğretimi Bilim Dalı"\
+TURKISH-TEACHING-TO-TURKISH-CHILDREN-ABROAD-PROGRAM = "Yurt Dışındaki Türk Çocuklarına Türkçe Öğretimi Bilim Dalı"\
+MENTALLY-DISABLED-EDUCATION-PROGRAM = "Zihin Engelliler Eğitimi Bilim Dalı"
+*/
 #let PROGRAMS = (
   __PROGRAM-PLACE-HOLDER: translator(key: language-keys.PROGRAM-PLACE-HOLDER),
   GERMAN-LANGUAGE-EDUCATION-PROGRAM: translator(key: language-keys.GERMAN-LANGUAGE-EDUCATION-PROGRAM),
