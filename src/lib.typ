@@ -238,7 +238,7 @@
   {
     /* ---- TEZİN ÖN KISMI [FRONT SECTION OF THESIS] ---- */
 
-    // Tezin Ön Kısmının Stilini
+    // Tezin Ön Kısmının Stili [Style of the Front Section of Thesis]
     show: thesis-front-section-style
 
     /* --- Ön Söz [Preface] --- */
@@ -384,7 +384,7 @@
   {
     /* --- TEZİN ANA KISMI [MAIN SECTION OF THESIS] --- */
 
-    // Tezin Ana Kısmının Stilini
+    // Tezin Ana Kısmının Stili [Style of Main Section of Thesis]
     show: thesis-main-section-style
 
     /* ---- Bölüm 1 [Chapter 1] ---- */
@@ -420,7 +420,7 @@
   {
     /* ---- TEZİN ARKA KISMI [BACK SECTION OF THESIS] ---- */
 
-    // Tezin Arka Kısmının Stilini
+    // Tezin Arka Kısmının Stili [Style of Back Section of Thesis]
     show: thesis-back-section-style
 
     // Çalışma takvimi
