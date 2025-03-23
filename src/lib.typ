@@ -231,10 +231,6 @@
     thesis-study-funding-organization: thesis-study-funding-organization,
   )
 
-  // Enable "drafting" package
-  // TODO: Çöz: Aktif edince bir boş sayfa oluşuyor.
-  //set-page-properties()
-
   {
     /* ---- TEZİN ÖN KISMI [FRONT SECTION OF THESIS] ---- */
 
