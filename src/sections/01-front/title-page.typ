@@ -1,4 +1,5 @@
 #import "/src/constants/document-settings-constants.typ": MARGIN
+#import "/src/constants/language-free-string-constants.typ": STRING-CITY-NAME
 #import "/src/constants/date-constants.typ": ONLY-YEAR-DATE-FORMAT
 #import "/src/constants/drop-down-list-constants.typ": LANGUAGES, REPORT-TYPES
 #import "/src/constants/path-constants.typ": (
@@ -152,7 +153,7 @@
     v(1cm)
   }
 
-  [#translator(key: language-keys.CITY-NAME) - #date.display(ONLY-YEAR-DATE-FORMAT)]
+  [#STRING-CITY-NAME - #date.display(ONLY-YEAR-DATE-FORMAT)]
 
   // Mevcut sayfa zaten boşsa sayfa sonu pasif olsun (weak: true). [Disable page break if the current page is already empty (weak: true).]
   pagebreak(weak: true)

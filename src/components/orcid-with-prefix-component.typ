@@ -1,7 +1,6 @@
-#import "/src/core/language-manager/language-manager.typ": translator
-#import "/src/constants/language-keys.typ": language-keys
+#import "/src/constants/language-free-string-constants.typ": STRING-ORCID
 #import "/src/components/orcid-link-component.typ": orcid-link-component
 
 #let orcid-with-prefix-component(
   orcid: none,
-) = [#upper(translator(key: language-keys.ORCID)): #orcid-link-component(orcid: orcid)]
+) = [#upper(STRING-ORCID): #orcid-link-component(orcid: orcid)]

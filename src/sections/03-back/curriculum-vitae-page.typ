@@ -1,4 +1,5 @@
 #import "/src/constants/date-constants.typ": FULL-DATE-FORMAT, MONTH-YEAR-DATE-FORMAT
+#import "/src/constants/language-free-string-constants.typ": STRING-ORCID
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 #import "/src/styles/curriculum-vitae-page-style.typ": curriculum-vitae-page-style
@@ -86,7 +87,7 @@
         email: email,
       )],
     [*#translator(key: language-keys.BIRTHPLACE):*], [#birthplace],
-    [*#translator(key: language-keys.ORCID):*], [#orcid-link-component(
+    [*#STRING-ORCID:*], [#orcid-link-component(
         orcid: orcid,
       )], [*#translator(key: language-keys.MARITAL-STATUS):*], [#marital-status],
     [*#translator(key: language-keys.ADRESS):*], table.cell(colspan: 3)[#address],
