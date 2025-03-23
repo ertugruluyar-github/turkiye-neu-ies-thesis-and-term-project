@@ -27,6 +27,6 @@
       #include "/template/sections/02-main/05-discussion-conclusion-and-suggestions/suggestions-text.typ"]
   }
 
-  // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true), yazının bitimi tek numaralı sayfada ise sayfa sonu ekle ama çift numaralı sayfada ise sayfa sonu ekleme (to: "odd"). Böylece, yazının bittiği sayfa çift sayfa olacak ve "EKLER" bölümü tek numaralı sayfadan başlayacağı garanti altına alındı. Kısaca yazının bittiği sayfadan sonraki sayfanın tek numaralı bir sayfa olmasını garanti altına almak için (to: "odd") parametresi kullanıldı.
-  #pagebreak(weak: true, to: "odd")
+  // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
+  #pagebreak(weak: true)
 ]
