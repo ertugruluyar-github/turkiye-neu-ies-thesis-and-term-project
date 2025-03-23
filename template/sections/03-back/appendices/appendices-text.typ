@@ -5,10 +5,15 @@ Herhangi bir eki referans göstermek: @ek-meb-izin-kağıdı.
 @ek-ilk-sıradaki-ek
 
 @ek-ikinci-sıradaki-ek
-// İsterseniz tek bir dosyada bütün ekleri ekleyebilirsiniz.
-// Ya da "appendices" klasöründe oluşturacağınız ayrı ayrı dosyaları aşağıdaki gibi ekleyebilir, böylece her bir eki ayrı bir dosyada olacak şekilde ayırarak da yapabilirsiniz. Diğer bölümler için de benzer işlem yapılabilir.
+
+/*
+İsterseniz tek bir dosyada bütün ekleri ekleyebilirsiniz.
+Ya da "appendices" klasöründe oluşturacağınız ayrı ayrı dosyaları aşağıdaki gibi ekleyebilir, böylece her bir eki ayrı bir dosyada olacak şekilde ayırarak da yapabilirsiniz. Diğer bölümler için de benzer işlem yapılabilir.
+*/
+// Başka bir '.typ' uzantılı Typst dosyasındaki içeriği eklemek için "include" komutunu kullanabilirsiniz.
 #include "/template/sections/03-back/appendices/appendix-1.typ"
 
+// Başka bir '.typ' uzantılı Typst dosyasındaki içeriği eklemek için "include" komutunu kullanabilirsiniz.
 #include "/template/sections/03-back/appendices/appendix-2.typ"
 
 // Devamındaki içeriğin yeni bir sayfadan başlamasını sağlamak için "pagebreak()" fonksiyonunu kullanabilirsiniz.
