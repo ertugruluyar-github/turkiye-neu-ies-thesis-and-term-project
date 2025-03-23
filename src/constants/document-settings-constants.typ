@@ -2,7 +2,7 @@
 
 // Kağıt boyutu [Paper size]
 #let PAPER = "a4"
-// Kenar Boşlukları [Margin]
+// Kenar boşlukları [Margin]
 #let MARGIN = (
   left: 2.5cm,
   top: 2.5cm,
