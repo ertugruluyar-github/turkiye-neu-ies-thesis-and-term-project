@@ -70,6 +70,6 @@
     ),
   )
 
-  // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true) [If the page at the end of the page is empty, the end of the page should be passive]
+  // Mevcut sayfa zaten boşsa sayfa sonu pasif olsun (weak: true). [Disable page break if the current page is already empty (weak: true).] [If the page at the end of the page is empty, the end of the page should be passive]
   pagebreak(weak: true)
 }
