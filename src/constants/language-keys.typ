@@ -1,5 +1,5 @@
 #let language-keys = (
-  //
+  // Country
   THE-REPUPLIC-OF-TURKIYE: "THE-REPUPLIC-OF-TURKIYE",
   // University Name
   UNIVERSITY-NAME-TITLE-CASE: "UNIVERSITY-NAME-TITLE-CASE",
