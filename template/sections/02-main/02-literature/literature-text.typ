@@ -18,14 +18,17 @@
 
 @figür-şekil-neü-logo örnek bir resim içerikli figürdür.
 
+// Devamındaki içeriğin yeni bir sayfadan başlamasını sağlamak için "pagebreak()" fonksiyonunu kullanabilirsiniz.
 #pagebreak()
 
 #include "/template/assets/examples/code-figure-example.typ"
 
+// Devamındaki içeriğin yeni bir sayfadan başlamasını sağlamak için "pagebreak()" fonksiyonunu kullanabilirsiniz.
 #pagebreak()
 
 #include "/template/assets/examples/math-equation-figure-example.typ"
 
+// Devamındaki içeriğin yeni bir sayfadan başlamasını sağlamak için "pagebreak()" fonksiyonunu kullanabilirsiniz.
 #pagebreak()
 
 #include "/template/assets/examples/quotation-example.typ"
