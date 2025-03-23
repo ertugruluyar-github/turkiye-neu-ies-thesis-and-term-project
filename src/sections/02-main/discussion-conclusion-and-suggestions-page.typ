@@ -11,20 +11,26 @@
   #include "/template/sections/02-main/05-discussion-conclusion-and-suggestions/discussion-conclusion-and-suggestions-text.typ"
 
   #if show-separated-sub-headings {
-    [#heading(level: 2, translator(key: language-keys.DISCUSSION)) <başlık-tartışma>
-      #include "/template/sections/02-main/05-discussion-conclusion-and-suggestions/discussion-text.typ"]
+    [
+      #heading(level: 2, translator(key: language-keys.DISCUSSION)) <başlık-tartışma>
+      #include "/template/sections/02-main/05-discussion-conclusion-and-suggestions/discussion-text.typ"
+    ]
 
-    [#heading(
+    [
+      #heading(
         level: 2,
         translator(key: language-keys.CONCLUSION),
       ) <başlık-sonuç>
-      #include "/template/sections/02-main/05-discussion-conclusion-and-suggestions/conclusion-text.typ"]
+      #include "/template/sections/02-main/05-discussion-conclusion-and-suggestions/conclusion-text.typ"
+    ]
 
-    [#heading(
+    [
+      #heading(
         level: 2,
         translator(key: language-keys.SUGGESTIONS),
       ) <başlık-öneriler>
-      #include "/template/sections/02-main/05-discussion-conclusion-and-suggestions/suggestions-text.typ"]
+      #include "/template/sections/02-main/05-discussion-conclusion-and-suggestions/suggestions-text.typ"
+    ]
   }
 
   // Sayfa sonu koyulan sayfa boşsa sayfa sonu pasif olsun (weak: true)
