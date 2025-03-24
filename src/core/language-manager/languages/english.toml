@@ -20,8 +20,6 @@ TERM-PROJECT = "Term Project of Non-Thesis Master"
 # Advisors
 ADVISOR = "Advisor"
 SECOND-ADVISOR = "Second Advisor"
-FIRST-REVIEWER = "1st Jury Member"
-SECOND-REVIEWER = "2nd Jury Member"
 
 # Academic Member Titles
 ACADEMIC-MEMBER-TITLE-PLACE-HOLDER = "Title"

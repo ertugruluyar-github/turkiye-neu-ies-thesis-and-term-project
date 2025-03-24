@@ -20,8 +20,6 @@ TERM-PROJECT = "Tezsiz Yüksek Lisans Dönem Projesi"
 # Advisors
 ADVISOR = "Danışman"
 SECOND-ADVISOR = "İkinci Danışman"
-FIRST-REVIEWER = "1. Juri Üyesi"
-SECOND-REVIEWER = "2. Juri Üyesi"
 
 # Academic Member Titles
 ACADEMIC-MEMBER-TITLE-PLACE-HOLDER = "Ünvan"
