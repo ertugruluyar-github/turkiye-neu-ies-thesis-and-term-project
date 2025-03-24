@@ -1,34 +1,36 @@
 [translations]
-# Country
+# Ülke [Country]
 THE-REPUPLIC-OF-TURKIYE = "THE REPUBLIC OF TÜRKİYE"
 
-# University Name
+# Üniversite Adı [University Name]
 UNIVERSITY-NAME-TITLE-CASE = "Necmettin Erbakan University"
 UNIVERSITY-NAME-UPPER-CASE = "NECMETTİN ERBAKAN UNIVERSITY"
 
-# Institute Name
+# Enstitü Adı [Institute Name]
 INSTITUTE-NAME-TITLE-CASE = "Graduate School of Educational Sciences"
 INSTITUTE-NAME-UPPER-CASE = "INSTITUTE OF EDUCATIONAL SCIENCES"
 
-# Report Types
+# Rapor Türleri [Report Types]
 MASTER-THESIS-PROPOSAL = "Master Thesis Proposal"
 MASTER-THESIS = "Master Thesis"
 DOCTORAL-THESIS-PROPOSAL = "Doctoral Thesis Proposal"
 DOCTORAL-THESIS = "Doctoral Thesis"
 TERM-PROJECT = "Term Project of Non-Thesis Master"
 
-# Advisors
+# Danışmanlar [Advisors]
 ADVISOR = "Advisor"
 SECOND-ADVISOR = "Second Advisor"
 
-# Academic Member Titles
+# Öğretim Üyesi Ünvanları [Academic Member Titles]
 ACADEMIC-MEMBER-TITLE-PLACE-HOLDER = "Title"
 ASSISTANT-PROFESSOR-DR = "Asst. Prof. Dr."
 ASSOCIATE-PROFESSOR-DR = "Assoc. Prof. Dr."
 PROFESSOR = "Prof."
 PROFESSOR-DR = "Prof. Dr."
 
-# Document Sections
+# Döküman Bölümleri [Document Sections]
+
+# Tezin Ön Kısmı [Front Section of Thesis]
 PREFACE = "PREFACE (ACKNOWLEDGMENT)"
 TABLE-OF-CONTENTS = "TABLE OF CONTENTS"
 LIST-OF-TABLES = "LIST OF TABLES"
@@ -42,7 +44,10 @@ SYMBOLS = "Symbols"
 ABBREVIATIONS = "Abbreviations"
 ABSTRACT = "ABSTRACT"
 KEYWORDS = "Keywords"
+
+# Tezin Ana Kısmı [Main Section of Thesis]
 CHAPTER = "CHAPTER"
+# Giriş [Introduction]
 INTRODUCTION = "INTRODUCTION"
 STATEMENT-OF-THE-PROBLEM = "Statement of the Problem"
 THE-PURPOSE-OF-THE-STUDY = "The Purpose of the Study"
@@ -50,31 +55,37 @@ THE-SIGNIFICANCE-OF-THE-STUDY = "The Significance of the Study"
 ASSUMPTIONS = "Hypothesis (Assumptions)"
 LIMITATIONS = "Limitations"
 DEFINITIONS = "Definitions"
+# Alan Yazın (İlgi̇li̇ Araştırmalar) [Literature Review]
 LITERATURE-REVIEW = "LITERATURE REVIEW"
+# Yöntem [Methodology]
 METHODOLOGY = "METHODOLOGY"
 RESEARCH-DESIGN = "Research Design"
 RESEARCH-POPULATION-AND-SAMPLE = "Research Population and Sample (Research Study Group) (Participants)"
 DATA-COLLECTION-TOOLS = "Data Collection Tools"
 DATA-COLLECTION-PROCESS = "Data Collection Process"
 DATA-ANALYSIS = "Data Analysis"
+# Bulgular [Findings]
 FINDINGS = "FINDINGS"
+# Tartışma, Sonuç ve Öneriler [Discussion, Conclusion and Suggestions]
 DISCUSSION-CONCLUSION-AND-SUGGESTIONS = "DISCUSSION, CONCLUSION AND SUGGESTIONS"
 DISCUSSION = "Discussion"
 CONCLUSION = "Conclusion"
 SUGGESTIONS = "Suggestions"
-# Work Schedule
+
+# Tezin Arka Kısmı [Back Section of Thesis]
+# Çalışma Takvimi [Work Schedule]
 WORK-SCHEDULE = "WORK SCHEDULE"
 WORK-PACKAGE = "Work Package"
 SHORT-WORK-PACKAGE = "WP"
 MONTHS = "Months"
-# Expanded Turkish Abstract
+# Genişletilmiş Türkçe Özet [Expanded Turkish Abstract]
 EXPANDED-TURKISH-ABSTRACT = "EXPANDED TURKISH ABSTRACT"
-# Bibliography
+# Kaynaklar [References]
 BIBLIOGRAPHY = "REFERENCES"
-# Appendices
+# Ekler [Appendices]
 APPENDICES = "APPENDICES"
 APPENDIX-PREFIX = "APPENDIX "
-# Curriculum Vitae
+# Öz Geçmiş [Curriculum Vitae]
 CURRICULUM-VITAE = "CURRICULUM VITAE"
 GENERAL-INFO = "General Information"
 FIRST-NAME-LAST-NAME = "Full Name"
@@ -99,7 +110,7 @@ SKILLS = "Skills"
 WORK-EXPERIENCES = "Work Experiences"
 GET-INFO-FROM-RECOMMENDED-PEOPLES = "References Who Can\nProvide Information\nAbout Me"
 
-# Reference Supplements
+# Referans Ekleri [Reference Supplements]
 CHAPTER-REFERENCE-SUPPLEMENT = "Chapter"
 HEADING-REFERENCE-SUPPLEMENT = "Heading"
 TABLE-FIGURE-REFERENCE-SUPPLEMENT = "Table"
@@ -107,7 +118,7 @@ IMAGE-FIGURE-REFERENCE-SUPPLEMENT = "Figure"
 MATH-EQUATION-REFERENCE-SUPPLEMENT = "Equation"
 RAW-FIGURE-REFERENCE-SUPPLEMENT = "Code"
 
-# Month Names
+# Uzun Ay Adları [Long Month Names]
 JANUARY = "January"
 FEBRUARY = "February"
 MARCH = "March"
@@ -121,7 +132,7 @@ OCTOBER = "October"
 NOVEMBER = "November"
 DECEMBER = "December"
 
-# Departments
+# Ana Bilim Dalları [Departments]
 DEPARTMENT-PLACE-HOLDER = "Department"
 DEPARTMENT-OF-PHYSICAL-EDUCATION-AND-SPORTS = "Department of Physical Education and Sports"
 DEPARTMENT-OF-COMPUTER-EDUCATION-AND-INSTRUCTIONAL-TECHNOLOGY = "Department of Computer Education and Instructional Technology"
@@ -139,7 +150,7 @@ DEPARTMENT-OF-TURKISH-EDUCATION = "Department of Turkish Education"
 DEPARTMENT-OF-TURKISH-AND-SOCIAL-SCIENCES-EDUCATION = "Department of Turkish and Social Sciences Education"
 DEPARTMENT-OF-FOREIGN-LANGUAGE-EDUCATION = "Department of Foreign Language Education"
 
-# Programs
+# Bilim Dalları [Programs]
 PROGRAM-PLACE-HOLDER = "Program"
 GERMAN-LANGUAGE-EDUCATION-PROGRAM = "German Language Education Program"
 PHYSICAL-EDUCATION-AND-SPORTS-PROGRAM = "Physical Education and Sports Program"

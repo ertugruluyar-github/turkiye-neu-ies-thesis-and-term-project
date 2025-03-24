@@ -2,33 +2,35 @@
 # Country
 THE-REPUPLIC-OF-TURKIYE = "T.C."
 
-# University Name
+# Üniversite Adı [University Name]
 UNIVERSITY-NAME-TITLE-CASE = "Necmettin Erbakan Üniversitesi"
 UNIVERSITY-NAME-UPPER-CASE = "NECMETTİN ERBAKAN ÜNİVERSİTESİ"
 
-# Institute Name
+# Enstitü Adı [Institute Name]
 INSTITUTE-NAME-TITLE-CASE = "Eğitim Bilimleri Enstitüsü"
 INSTITUTE-NAME-UPPER-CASE = "EĞİTİM BİLİMLERİ ENSTİTÜSÜ"
 
-# Report Types
+# Rapor Türleri [Report Types]
 MASTER-THESIS-PROPOSAL = "Yüksek Lisans Tez Önerisi"
 MASTER-THESIS = "Yüksek Lisans Tezi"
 DOCTORAL-THESIS-PROPOSAL = "Doktora Tez Önerisi"
 DOCTORAL-THESIS = "Doktora Tezi"
 TERM-PROJECT = "Tezsiz Yüksek Lisans Dönem Projesi"
 
-# Advisors
+# Danışmanlar [Advisors]
 ADVISOR = "Danışman"
 SECOND-ADVISOR = "İkinci Danışman"
 
-# Academic Member Titles
+# Öğretim Üyesi Ünvanları [Academic Member Titles]
 ACADEMIC-MEMBER-TITLE-PLACE-HOLDER = "Ünvan"
 ASSISTANT-PROFESSOR-DR = "Dr. Öğr. Üyesi"
 ASSOCIATE-PROFESSOR-DR = "Doç. Dr."
 PROFESSOR = "Prof."
 PROFESSOR-DR = "Prof. Dr."
 
-# Document Sections
+# Döküman Bölümleri [Document Sections]
+
+# Tezin Ön Kısmı [Front Section of Thesis]
 PREFACE = "ÖN SÖZ (TEŞEKKÜR)"
 TABLE-OF-CONTENTS = "İÇİNDEKİLER"
 LIST-OF-TABLES = "TABLOLAR LİSTESİ"
@@ -42,7 +44,10 @@ SYMBOLS = "Simgeler"
 ABBREVIATIONS = "Kısaltmalar"
 ABSTRACT = "ÖZET"
 KEYWORDS = "Anahtar Kelimeler"
+
+# Tezin Ana Kısmı [Main Section of Thesis]
 CHAPTER = "BÖLÜM"
+# Giriş [Introduction]
 INTRODUCTION = "GİRİŞ"
 STATEMENT-OF-THE-PROBLEM = "Problem Durumu"
 THE-PURPOSE-OF-THE-STUDY = "Araştırmanın Amacı"
@@ -50,31 +55,37 @@ THE-SIGNIFICANCE-OF-THE-STUDY = "Araştırmanın Önemi"
 ASSUMPTIONS = "Sayıltılar (Varsayımlar)"
 LIMITATIONS = "Sınırlılıklar"
 DEFINITIONS = "Tanımlar"
+# Alan Yazın (İlgi̇li̇ Araştırmalar) [Literature Review]
 LITERATURE-REVIEW = "ALAN YAZIN (İLGİLİ ARAŞTIRMALAR)"
+# Yöntem [Methodology]
 METHODOLOGY = "YÖNTEM"
 RESEARCH-DESIGN = "Araştırmanın Modeli"
 RESEARCH-POPULATION-AND-SAMPLE = "Araştırmanın Evreni ve Örneklemi (Araştırmanın Çalışma Grubu) (Katılımcılar)"
 DATA-COLLECTION-TOOLS = "Veri Toplama Araç ve/veya Teknikleri"
 DATA-COLLECTION-PROCESS = "Verilerin Toplanması"
 DATA-ANALYSIS = "Verilerin Çözümlenmesi (Verilerin Analizi)"
+# Bulgular [Findings]
 FINDINGS = "BULGULAR"
+# Tartışma, Sonuç ve Öneriler [Discussion, Conclusion and Suggestions]
 DISCUSSION-CONCLUSION-AND-SUGGESTIONS = "TARTIŞMA, SONUÇ VE ÖNERİLER"
 DISCUSSION = "Tartışma"
 CONCLUSION = "Sonuç"
 SUGGESTIONS = "Öneri̇ler"
-# Work Schedule
+
+# Tezin Arka Kısmı [Back Section of Thesis]
+# Çalışma Takvimi [Work Schedule]
 WORK-SCHEDULE = "ÇALIŞMA TAKVİMİ"
 WORK-PACKAGE = "İş Paketi"
 SHORT-WORK-PACKAGE = "İP"
 MONTHS = "Aylar"
-# Expanded Turkish Abstract
+# Genişletilmiş Türkçe Özet [Expanded Turkish Abstract]
 EXPANDED-TURKISH-ABSTRACT = "GENİŞLETİLMİŞ TÜRKÇE ÖZET"
-# Bibliography
+# Kaynaklar [References]
 BIBLIOGRAPHY = "KAYNAKLAR"
-# Appendices
+# Ekler [Appendices]
 APPENDICES = "EKLER"
 APPENDIX-PREFIX = "EK "
-# Curriculum Vitae
+# Öz Geçmiş [Curriculum Vitae]
 CURRICULUM-VITAE = "ÖZ GEÇMİŞ"
 GENERAL-INFO = "Genel Bilgiler"
 FIRST-NAME-LAST-NAME = "Adı Soyadı"
@@ -99,7 +110,7 @@ SKILLS = "Becerileri"
 WORK-EXPERIENCES = "İş Deneyimleri"
 GET-INFO-FROM-RECOMMENDED-PEOPLES = "Hakkımda Bilgi\nAlmak İçin\nÖnerebileceğim\nŞahıslar"
 
-# Reference Supplements
+# Referans Ekleri [Reference Supplements]
 CHAPTER-REFERENCE-SUPPLEMENT = "Bölüm"
 HEADING-REFERENCE-SUPPLEMENT = "Başlık"
 TABLE-FIGURE-REFERENCE-SUPPLEMENT = "Tablo"
@@ -107,7 +118,7 @@ IMAGE-FIGURE-REFERENCE-SUPPLEMENT = "Şekil"
 MATH-EQUATION-REFERENCE-SUPPLEMENT = "Denklem"
 RAW-FIGURE-REFERENCE-SUPPLEMENT = "Kod"
 
-# Month Names
+# Uzun Ay Adları [Long Month Names]
 JANUARY = "Ocak"
 FEBRUARY = "Şubat"
 MARCH = "Mart"
@@ -121,7 +132,7 @@ OCTOBER = "Ekim"
 NOVEMBER = "Kasım"
 DECEMBER = "Aralık"
 
-# Departments
+# Ana Bilim Dalları [Departments]
 DEPARTMENT-PLACE-HOLDER = "Ana Bilim Dalı"
 DEPARTMENT-OF-PHYSICAL-EDUCATION-AND-SPORTS = "Beden Eğitimi ve Spor Anabilim Dalı"
 DEPARTMENT-OF-COMPUTER-EDUCATION-AND-INSTRUCTIONAL-TECHNOLOGY = "Bilgisayar ve Öğretim Teknolojileri Eğitimi Anabilim Dalı"
@@ -139,7 +150,7 @@ DEPARTMENT-OF-TURKISH-EDUCATION = "Türkçe Eğitimi Anabilim Dalı"
 DEPARTMENT-OF-TURKISH-AND-SOCIAL-SCIENCES-EDUCATION = "Türkçe ve Sosyal Bilimler Eğitimi Anabilim Dalı"
 DEPARTMENT-OF-FOREIGN-LANGUAGE-EDUCATION = "Yabancı Diller Eğitimi Anabilim Dalı"
 
-# Programs
+# Bilim Dalları [Programs]
 PROGRAM-PLACE-HOLDER = "Bilim Dalı"
 GERMAN-LANGUAGE-EDUCATION-PROGRAM = "Alman Dili Eğitimi Bilim Dalı"
 PHYSICAL-EDUCATION-AND-SPORTS-PROGRAM = "Beden Eğitimi ve Spor Bilim Dalı"

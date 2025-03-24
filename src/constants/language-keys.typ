@@ -1,7 +1,7 @@
 #let language-keys = (
   /* ---- Ülke [Country] ---- */
   THE-REPUPLIC-OF-TURKIYE: "THE-REPUPLIC-OF-TURKIYE",
-  /* ---- Üniversite Adı [University name] ---- */
+  /* ---- Üniversite Adı [University Name] ---- */
   UNIVERSITY-NAME-TITLE-CASE: "UNIVERSITY-NAME-TITLE-CASE",
   UNIVERSITY-NAME-UPPER-CASE: "UNIVERSITY-NAME-UPPER-CASE",
   /* ---- Enstitü Adı [Institute Name] ---- */
@@ -23,6 +23,7 @@
   PROFESSOR: "PROFESSOR",
   PROFESSOR-DR: "PROFESSOR-DR",
   /* ---- Döküman Bölümleri [Document Sections] ---- */
+  /* -- Tezin Ön Kısmı [Front Section of Thesis] -- */
   PREFACE: "PREFACE",
   TABLE-OF-CONTENTS: "TABLE-OF-CONTENTS",
   LIST-OF-TABLES: "LIST-OF-TABLES",
@@ -36,7 +37,9 @@
   ABBREVIATIONS: "ABBREVIATIONS",
   ABSTRACT: "ABSTRACT",
   KEYWORDS: "KEYWORDS",
+  /* -- Tezin Ana Kısmı [Main Section of Thesis] -- */
   CHAPTER: "CHAPTER",
+  // Giriş [Introduction]
   INTRODUCTION: "INTRODUCTION",
   STATEMENT-OF-THE-PROBLEM: "STATEMENT-OF-THE-PROBLEM",
   THE-PURPOSE-OF-THE-STUDY: "THE-PURPOSE-OF-THE-STUDY",
@@ -44,19 +47,24 @@
   ASSUMPTIONS: "ASSUMPTIONS",
   LIMITATIONS: "LIMITATIONS",
   DEFINITIONS: "DEFINITIONS",
+  // Alan Yazın (İlgi̇li̇ Araştırmalar) [Literature Review]
   LITERATURE-REVIEW: "LITERATURE-REVIEW",
+  // Yöntem [Methodology]
   METHODOLOGY: "METHODOLOGY",
   RESEARCH-DESIGN: "RESEARCH-DESIGN",
   RESEARCH-POPULATION-AND-SAMPLE: "RESEARCH-POPULATION-AND-SAMPLE",
   DATA-COLLECTION-TOOLS: "DATA-COLLECTION-TOOLS",
   DATA-COLLECTION-PROCESS: "DATA-COLLECTION-PROCESS",
   DATA-ANALYSIS: "DATA-ANALYSIS",
+  // Bulgular [Findings]
   FINDINGS: "FINDINGS",
+  // Tartışma, Sonuç ve Öneriler [Discussion, Conclusion and Suggestions]
   DISCUSSION-CONCLUSION-AND-SUGGESTIONS: "DISCUSSION-CONCLUSION-AND-SUGGESTIONS",
   DISCUSSION: "DISCUSSION",
   CONCLUSION: "CONCLUSION",
   SUGGESTIONS: "SUGGESTIONS",
-  // Çalışma Takvimi Safası [Work Schedule Page]
+  /* -- Tezin Arka Kısmı [back Section of Thesis] -- */
+  // Çalışma Takvimi [Work Schedule]
   WORK-SCHEDULE: "WORK-SCHEDULE",
   WORK-PACKAGE: "WORK-PACKAGE",
   SHORT-WORK-PACKAGE: "SHORT-WORK-PACKAGE",
@@ -68,7 +76,7 @@
   // Ekler [Appendices]
   APPENDICES: "APPENDICES",
   APPENDIX-PREFIX: "APPENDIX-PREFIX",
-  // Öz Geçmiş Sayfası [Curriculum Vitae Page]
+  // Öz Geçmiş [Curriculum Vitae]
   CURRICULUM-VITAE: "CURRICULUM-VITAE",
   GENERAL-INFO: "GENERAL-INFO",
   FIRST-NAME-LAST-NAME: "FIRST-NAME-LAST-NAME",

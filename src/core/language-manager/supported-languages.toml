@@ -1,4 +1,6 @@
 [supported-languages]
+# Türkçe [Turkish]
 tr = { name = "Türkçe (Türkiye)", file-path = "turkish.toml" }
+# İngilizce [English]
 en = { name = "English (United States)", file-path = "english.toml" }
-# Add more languages as needed
+# Gerektiğindedaha fazla dil eklenebilir. [You can add more languages if needed.]
