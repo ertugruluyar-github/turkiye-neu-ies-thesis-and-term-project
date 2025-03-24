@@ -18,11 +18,7 @@
 
   v(1em)
 
-  [
-    #set par(first-line-indent: (amount: 0cm, all: true))
-    Uygulanan filtrelemeler:
-  ]
-  //par(first-line-indent: (amount: 0cm, all: true))[Uygulanan filtrelemeler:]
+  par(first-line-indent: 0cm)[Uygulanan filtrelemeler:]
 
   v(1em)
 
