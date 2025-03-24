@@ -1,8 +1,4 @@
-#import "/src/constants/document-settings-constants.typ": (
-  FIGURE-CAPTION-PREFIX-TEXT-FONT-WEIGHT,
-  FIGURE-CAPTION-TITLE-TEXT-FONT-WEIGHT,
-  ALTERNATE-FONT-SIZE,
-)
+#import "/src/constants/document-settings-constants.typ": ALTERNATE-FONT-SIZE
 #import "/src/constants/separator-constants.typ": FIGURE-CAPTION-SEPARATOR
 #import "/src/constants/numbering-constants.typ": FIGURE-NUMBERING
 #import "/src/core/language-manager/language-manager.typ": translator
@@ -62,10 +58,10 @@
     set text(size: ALTERNATE-FONT-SIZE)
     (
       text(
-        weight: FIGURE-CAPTION-PREFIX-TEXT-FONT-WEIGHT,
+        weight: "bold",
         it.supplement + " " + context it.counter.display(it.numbering) + it.separator,
       )
-        + text(weight: FIGURE-CAPTION-TITLE-TEXT-FONT-WEIGHT, it.body)
+        + text(it.body)
     )
   }
 

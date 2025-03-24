@@ -29,11 +29,7 @@
 // Dipnotların yazı tipi boyutu [Font size of the Footnotes]
 #let FOOTNOTE-TEXT-FONT-SIZE = ALTERNATE-FONT-SIZE
 // Varsayılan yazı kalınlığı [Default font weight]
-#let DEFAULT-TEXT-FONT-WEIGHT = 400
-// Tablo ve Şekil figürlerinin başlığının yazı kalınlığı [Font weight of the title of table and image figures' caption]
-#let FIGURE-CAPTION-TITLE-TEXT-FONT-WEIGHT = DEFAULT-TEXT-FONT-WEIGHT
-// Tablo ve Şekil figürlerinin başlığının ön ekinin yazı kalınlığı [Font weight of the title of table and image figures' caption' prefix]
-#let FIGURE-CAPTION-PREFIX-TEXT-FONT-WEIGHT = 700
+#let DEFAULT-TEXT-FONT-WEIGHT = "regular"
 
 /* ---- Paragraf Ayarları [Paragraph Settings] ---- */
 
