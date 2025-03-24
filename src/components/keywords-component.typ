@@ -9,7 +9,7 @@
   // Paragraf ayarlarını ayarla. [Set paragraph settings.]
   set par(
     // Paragrafın ilk satır girintisini 0 yap. [Set the first line indent of the paragraph to 0.]
-    first-line-indent: (amount: 0cm, all: true),
+    first-line-indent: 0cm,
     // Paragraflar arası boşluk miktarını 0 yap. [Set the spacing between paragraphs to 0.]
     spacing: 0pt,
   )
