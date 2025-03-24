@@ -2,6 +2,7 @@
 #import "/src/constants/language-keys.typ": language-keys
 
 /*
+Diller [Languages]:\
 TR-TR: Türkçe (Türkiye) [Turkish (Türkiye)]\
 EN-US: İngilizce (ABD) [English (US)]
 */
@@ -17,6 +18,7 @@ EN-US: İngilizce (ABD) [English (US)]
 )
 
 /*
+Rapor Türleri [Report Types]:\
 MASTER-THESIS-PROPOSAL: "Yüksek Lisans Tez Önerisi"\
 MASTER-THESIS: "Yüksek Lisans Tezi"\
 DOCTORAL-THESIS-PROPOSAL: "Doktora Tez Önerisi"\
@@ -32,6 +34,7 @@ TERM-PROJECT: "Dönem Projesi"
 )
 
 /*
+Öğretim Üyesi Ünvanları [Academic Member Titles]:\
 ASSISTANT-PROFESSOR-DR: "Dr. Öğr. Üyesi"\
 ASSOCIATE-PROFESSOR-DR: "Doç. Dr."\
 PROFESSOR: "Prof."\
@@ -45,7 +48,8 @@ PROFESSOR-DR: "Prof. Dr."
   PROFESSOR-DR: translator(key: language-keys.PROFESSOR-DR),
 )
 
-/* Ana Bilim Dalları [Departments]\
+/*
+Ana Bilim Dalları [Departments]:\
 DEPARTMENT-OF-PHYSICAL-EDUCATION-AND-SPORTS = "Beden Eğitimi ve Spor Anabilim Dalı"\
 DEPARTMENT-OF-COMPUTER-EDUCATION-AND-INSTRUCTIONAL-TECHNOLOGY = "Bilgisayar ve Öğretim Teknolojileri Eğitimi Anabilim Dalı"\
 DEPARTMENT-OF-EDUCATIONAL-SCIENCES = "Eğitim Bilimleri Anabilim Dalı"\
@@ -95,7 +99,8 @@ DEPARTMENT-OF-FOREIGN-LANGUAGE-EDUCATION = "Yabancı Diller Eğitimi Anabilim Da
   DEPARTMENT-OF-FOREIGN-LANGUAGE-EDUCATION: translator(key: language-keys.DEPARTMENT-OF-FOREIGN-LANGUAGE-EDUCATION),
 )
 
-/* Bilim Dalları [Programs]
+/*
+Bilim Dalları [Programs]:\
 GERMAN-LANGUAGE-EDUCATION-PROGRAM = "Alman Dili Eğitimi Bilim Dalı"\
 PHYSICAL-EDUCATION-AND-SPORTS-PROGRAM = "Beden Eğitimi ve Spor Bilim Dalı"\
 COMPUTER-EDUCATION-AND-INSTRUCTIONAL-TECHNOLOGY-PROGRAM = "Bilgisayar ve Öğretim Teknolojileri Eğitimi Bilim Dalı"\

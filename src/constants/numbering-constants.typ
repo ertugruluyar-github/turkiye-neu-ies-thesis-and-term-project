@@ -1,8 +1,22 @@
-// Numaralandırma [Numbering]
-#let PAGE-NUMBERING-ROMAN = "i" // Sayfalar [Pages]
-#let PAGE-NUMBERING-ARABIC = "1" // Sayfalar [Pages]
-#let HEADING-NUMBERING = "1.1." // Başlıklar [Headings]
-#let FIGURE-NUMBERING = "1.1" // Simgeler [Figures]
-#let MATH-NUMBERING = "(1.1)" // Matematik Denklemleri [Math Equations]
-#let LIST-NUMBERING = "1." // Numaralı Listeler [Numbered Lists]
-#let FOOTNOTE-NUMBERING = "1" // Dipnotlar [Footnotes]
+/* ---- Numaralandırma [Numbering] ---- */
+
+// Roman rakamlı sayfa numaralandırması. [Roman page numbering.]
+#let PAGE-NUMBERING-ROMAN = "i"
+
+// Arap rakamlı sayfa numaralandırması. [Arabic page numbering.]
+#let PAGE-NUMBERING-ARABIC = "1"
+
+// Başlık numaralandırması. [Heading numbering.]
+#let HEADING-NUMBERING = "1.1."
+
+// Simge numaralandırması. [Figure numbering.]
+#let FIGURE-NUMBERING = "1.1"
+
+// Matematiksel Denklemler numaralandırması. [Math Equations numbering.]
+#let MATH-NUMBERING = "(1.1)"
+
+// Liste numaralandırması. [List numbering.]
+#let LIST-NUMBERING = "1."
+
+// Dipnot numaralandırması. [Footnote numbering.]
+#let FOOTNOTE-NUMBERING = "1"
