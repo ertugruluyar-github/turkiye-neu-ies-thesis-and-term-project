@@ -1,5 +1,6 @@
 #import "/src/constants/drop-down-list-constants.typ": LANGUAGES
 
+// Tez kapağında yer alan "Tez Çalışmasını Destekleyen Kuruluşun Adı" ve "Proje Numarası" metnini oluşturan bileşen fonksiyonudur. [A function that creates the text for the "Tez Çalışmasını Destekleyen Kuruluşun Adı" and "Proje Numarası" in the cover page.]
 #let thesis-study-funding-organization-component(
   language: none,
   thesis-study-funding-organization: none,

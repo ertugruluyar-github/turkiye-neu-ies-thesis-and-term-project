@@ -1,5 +1,6 @@
 #import "/src/components/fullname-component.typ": fullname-component
 
+// Yazarın ünvanı ve adı, soyadını arada bir karakter boşlukla birleştiren içeriği oluşturan bileşen fonksiyonudur. [A function that creates a space-separated string of the author's title, first name, and last name.]
 #let fullname-with-title-component(
   title: none,
   first-name: none,
