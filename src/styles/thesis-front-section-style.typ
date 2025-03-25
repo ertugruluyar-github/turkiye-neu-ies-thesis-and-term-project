@@ -1,10 +1,9 @@
 #import "/src/constants/numbering-constants.typ": PAGE-NUMBERING-ROMAN
-#import "/src/styles/page-numbering-style.typ": page-numbering-style
 #import "/src/styles/thesis-front-section-heading-style.typ": thesis-front-section-heading-style
 
 #let thesis-front-section-style(content) = {
   // Set centered roman page numbering.
-  show: page-numbering-style.with(numbering: PAGE-NUMBERING-ROMAN, number-align: center)
+  set page(numbering: PAGE-NUMBERING-ROMAN)
 
   // Başlık stili
   show: thesis-front-section-heading-style

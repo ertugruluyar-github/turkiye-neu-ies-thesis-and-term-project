@@ -26,10 +26,10 @@
 
   set page(
     paper: PAPER,
-    header: none,
-    footer: none,
+    header: auto,
+    footer: auto,
     margin: MARGIN,
-    number-align: right,
+    number-align: center + bottom,
     numbering: PAGE-NUMBERING-ROMAN,
     columns: 1,
   )

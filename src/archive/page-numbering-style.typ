@@ -1,9 +1,10 @@
+/* ARCHIVE: src/styles/page-numbering-style.typ
 #import "/src/constants/numbering-constants.typ": PAGE-NUMBERING-ARABIC
 
 #let page-numbering-style(
   content,
   numbering: PAGE-NUMBERING-ARABIC,
-  number-align: right,
+  number-align: center + top,
   is-one-left-one-right: false,
   reset: true,
 ) = {
@@ -11,12 +12,12 @@
   if reset { counter(page).update(1) }
 
   // Sayfa altbilgisi [Page footer]
-  let footer = context if is-one-left-one-right and number-align != center {
+  let footer = context if is-one-left-one-right and number-align != center + top {
     let page-number = counter(page).get().first()
     number-align = if calc.odd(page-number) { right } else { left }
-    align(number-align, counter(page).display())
+    align(number-align + top, counter(page).display())
   } else {
-    align(number-align, counter(page).display())
+    align(number-align + top, counter(page).display())
   }
 
   // Sayfa numaralandırmasını ayarlamak. [Set page numbering]

@@ -1,12 +1,11 @@
-#import "/src/constants/document-settings-constants.typ": MARGIN
-
 #let title-page-style(content) = {
   // Sayfa ayarlarını ayarla. [Set page settings.]
   set page(
+    // Başlık kısmını kaldır. [Remove header.]
     header: none,
+    // Sayfa numarasını gizle. [Hide page number.]
     footer: none,
-    margin: MARGIN,
-    numbering: none,
+    // Tek sütun. [Single column.]
     columns: 1,
   )
 
