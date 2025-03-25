@@ -4,7 +4,8 @@
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
-#let thesis-originality-report-page(
+// Tez Çalışması Orijinallik Raporu sayfası. [Thesis Study Originality Report page.]
+#let thesis-study-originality-report-page(
   thesis-title: none,
   author: none,
   advisor: none,
@@ -12,16 +13,23 @@
   included-page-count: none,
   similarity-score: none,
 ) = {
-  heading(level: 1, upper(translator(key: language-keys.THESIS-ORIGINALITY-REPORT)))
+  // Sayfa başlığını ekle. [Add page header.]
+  heading(level: 1, upper(translator(key: language-keys.THESIS-STUDY-ORIGINALITY-REPORT)))
 
+  // Sayfa içeriğini ekle. [Add page content.]
+  // Metin ekle. [Add text.]
   [#text(style: "italic", thesis-title.tur.title-case) başlıklı tez çalışmamın toplam #included-page-count sayfalık kısmına ilişkin, #date-component(date: date) tarihinde tez danışmanım tarafından #text(weight: "bold")[Turnitin] adlı intihal tespit programından aşağıda belirtilen filtrelemeler uygulanarak alınmış olan orijinallik raporuna göre, tezimin benzerlik oranı #text(weight: "bold")[%#similarity-score] olarak belirlenmiştir.]
 
+  // Bir miktar boşluk bırak. [Leave some space.]
   v(1em)
 
+  // Paragraf ilk satır girintisini kaldırarak metin ekle. [Remove the first line indent of the paragraph and add text.]
   par(first-line-indent: 0cm)[Uygulanan filtrelemeler:]
 
+  // Bir miktar boşluk bırak. [Leave some space.]
   v(1em)
 
+  // Listeyi ekle. [Add list.]
   [
     #set enum(indent: 0.5cm, spacing: 1em)
     + Tez çalışması orijinallik raporu sayfası hariç
@@ -34,19 +42,25 @@
     + 7 kelimeden daha az örtüşme içeren metin kısımları hariç
   ]
 
+  // Bir miktar boşluk bırak. [Leave some space.]
   v(1em)
 
+  // Metin ekle. [Add text.]
   [Necmettin Erbakan Üniversitesi Tez Çalışması Orijinallik Raporu Uygulama Esaslarını inceledim ve tez çalışmamın, bu uygulama esaslarında belirtilen azami benzerlik oranının (%30) altında olduğunu ve intihal içermediğini; aksinin tespit edileceği muhtemel durumda doğabilecek her türlü hukuki sorumluluğu kabul ettiğimi ve yukarıda vermiş olduğum bilgilerin doğru olduğunu beyan ederim.]
 
+  // Bir miktar boşluk bırak. [Leave some space.]
   v(2em)
 
+  // Yazar ve tarih bilgilerini ekle. [Add author and date information.]
   full-date-with-author-fullname-component(
     author: author,
     date: date,
   )
 
+  // Bir miktar boşluk bırak. [Leave some space.]
   v(2em)
 
+  // Danışman bilgilerini ekle. [Add advisor information.]
   align(
     center,
     fullname-with-title-component(

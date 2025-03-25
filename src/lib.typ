@@ -10,7 +10,7 @@
 #import "/src/sections/01-front/list-of-image-figures-page.typ": list-of-image-figures-page
 #import "/src/sections/01-front/list-of-equations-page.typ": list-of-equations-page
 #import "/src/sections/01-front/list-of-code-figures-page.typ": list-of-code-figures-page
-#import "/src/sections/01-front/thesis-originality-report-page.typ": thesis-originality-report-page
+#import "/src/sections/01-front/thesis-study-originality-report-page.typ": thesis-study-originality-report-page
 #import "/src/sections/01-front/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
 #import "/src/sections/01-front/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
 #import "/src/sections/01-front/turkish-abstract-page.typ": turkish-abstract-page
@@ -303,7 +303,7 @@
     if (
       report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.DOCTORAL-THESIS
     ) {
-      thesis-originality-report-page(
+      thesis-study-originality-report-page(
         thesis-title: thesis-title,
         author: author,
         advisor: advisor,
