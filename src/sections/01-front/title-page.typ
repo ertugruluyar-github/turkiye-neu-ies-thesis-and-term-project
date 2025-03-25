@@ -1,7 +1,4 @@
 #import "/src/styles/title-page-style.typ": title-page-style
-#import "/src/constants/document-settings-constants.typ": MARGIN
-#import "/src/constants/language-free-string-constants.typ": STRING-CITY-NAME
-#import "/src/constants/date-constants.typ": ONLY-YEAR-DATE-FORMAT
 #import "/src/constants/drop-down-list-constants.typ": REPORT-TYPES
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
@@ -16,6 +13,7 @@
 #import "/src/components/title-page/thesis-study-funding-organization-component.typ": (
   thesis-study-funding-organization-component,
 )
+#import "/src/components/title-page/city-name-with-year-component.typ": city-name-with-year-component
 
 // Kapak sayfası. [Title page.]
 #let title-page(
@@ -100,7 +98,7 @@
   }
 
   // Şehir adı ve yıl bilgisini ekle. [Add city name and year information.]
-  [#STRING-CITY-NAME - #date.display(ONLY-YEAR-DATE-FORMAT)]
+  city-name-with-year-component(date: date)
 
   // Mevcut sayfa zaten boşsa sayfa sonu pasif olsun (weak: true). [Disable page break if the current page is already empty (weak: true).]
   pagebreak(weak: true)
