@@ -38,17 +38,20 @@
   // Ana Bilim Dalı bilgisi. [Department information.]
   align(center, department)
 
+  // Satır sonu ekle. [Add line break.]
+  linebreak()
+
   // Bilim Dalı bilgisi. [Program information.]
   align(center, program)
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1cm)
+  v(1.25cm)
 
   /// Rapor türü bilgisi. [Report type information.]
   report-type
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1.75cm)
+  v(2.25cm)
 
   // Dile göre tez başlığını seç. [Select the thesis title according to the language.]
   let thesis-title = if language == LANGUAGES.TR-TR {
@@ -60,7 +63,7 @@
   thesis-title-text-component(thesis-title: thesis-title)
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1.75cm)
+  v(2.25cm)
 
   // Yazar bilgilerini ekle. [Add author information.]
   fullname-component(first-name: author.first-name, last-name: author.last-name)
@@ -68,7 +71,7 @@
   orcid-with-prefix-component(orcid: author.orcid)
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1.5cm)
+  v(1.25cm)
 
   // Danışman bilgilerini ekle. [Add advisor information.]
   translator(key: language-keys.ADVISOR)
@@ -84,10 +87,13 @@
     translator(key: language-keys.SECOND-ADVISOR)
     linebreak()
     advisor-with-orcid-component(advisor: second-advisor)
-
+  } else {
     // Bir miktar boşluk bırak. [Leave some space.]
-    v(0.5cm)
+    v(1.75cm)
   }
+
+  // Bir miktar boşluk bırak. [Leave some space.]
+  v(0.75cm)
 
   // Rapor türüne ve tez çalışmasını destekleyen kuruluş olup olmamasına göre tez çalışmasını destekleyen kuruluş bilgilerini ekle. [Add thesis study funding organization information according to the report type and whether there is a thesis study funding organization or not.]
   if thesis-study-funding-organization != none {
@@ -96,8 +102,12 @@
       language: language,
       thesis-study-funding-organization: thesis-study-funding-organization,
     )
+
+    // Satır sonu ekle. [Add line break.]
+    linebreak()
+  } else {
     // Bir miktar boşluk bırak. [Leave some space.]
-    v(0.25cm)
+    v(1.25cm)
   }
 
   // Şehir adı ve yıl bilgisini ekle. [Add city name and year information.]

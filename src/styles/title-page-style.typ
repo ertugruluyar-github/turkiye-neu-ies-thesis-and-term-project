@@ -15,7 +15,7 @@
   // Paragraf boşlukları. [Paragraph spacing]
   set par(
     leading: 1em,
-    spacing: 1em,
+    spacing: 0em,
   )
 
   content

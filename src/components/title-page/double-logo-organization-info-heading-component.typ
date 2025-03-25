@@ -27,7 +27,10 @@
   grid(
     columns: (1fr, auto, 1fr),
     align: center + horizon,
-    row-gutter: 12pt,
+    column-gutter: 0pt,
+    inset: (x: 0.2cm, y: 0.35cm),
+    stroke: none,
+    fill: none,
     // Üniversite logosu. [University logo.]
     align(left, image(university-logo-path, width: 2.7cm, height: 2.7cm)),
     // Organizasyon bilgisi başlığı. [Organization information heading.]

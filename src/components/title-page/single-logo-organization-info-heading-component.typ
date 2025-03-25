@@ -18,6 +18,9 @@
     columns: 1fr,
     align: center + horizon,
     row-gutter: 12pt,
+    inset: (:),
+    stroke: none,
+    fill: none,
     // Enstitü logosu. [Institute logo.]
     image(institute-logo-path, width: 3.4cm, height: 3.4cm),
     // Organizasyon bilgisi başlığı. [Organization information heading.]
@@ -25,5 +28,5 @@
   )
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1cm)
+  v(1.25cm)
 }
