@@ -78,11 +78,13 @@
   }
 
   // Tez Çalışmasını Destekleyen Kuruluş parametresini doğrula. [Validate thesis-study-funding-organization parameter.]
-  dictionary-type-validator(
-    value: thesis-study-funding-organization,
-    value-name: "template-configurations.thesis-study-funding-organization",
-    value-description: "Şablon ayarlarındaki Tez Çalışmasını Destekleyen Kuruluş",
-  )
+  if thesis-study-funding-organization != none {
+    dictionary-type-validator(
+      value: thesis-study-funding-organization,
+      value-name: "template-configurations.thesis-study-funding-organization",
+      value-description: "Şablon ayarlarındaki Tez Çalışmasını Destekleyen Kuruluş",
+    )
+  }
 
   // Orijinallik parametresini doğrula. [Verify the authenticity parameter.]
   if (
