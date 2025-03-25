@@ -1,4 +1,4 @@
-#import "/src/core/validation-manager/validators/date-type-validator.typ": date-type-validator
+#import "/src/core/validation-manager/validators/datetime-type-validator.typ": datetime-type-validator
 #import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
 #import "/src/core/validation-manager/validators/array-type-validator.typ": array-type-validator
 #import "/src/core/validation-manager/validators/orcid-validator.typ": orcid-validator
@@ -7,7 +7,7 @@
 // Öz Geçmiş bilgilerini doğrular. [Validates curriculum vitae information.]
 #let curriculum-vitae-info-validator(value: none) = {
   // Doğum günü parametresini doğrula. [Validate the birthday parameter.]
-  date-type-validator(
+  datetime-type-validator(
     value: value.birthday,
     value-name: "curriculum-vitae.birthday",
     value-description: "Öz Geçmiş sayfasındaki doğum tarihi",
@@ -72,14 +72,14 @@
     )
 
     // Başlangıç Tarihi parametresini doğrula. [Validate the start-date parameter.]
-    date-type-validator(
+    datetime-type-validator(
       value: work-experience.start-date,
       value-name: "curriculum-vitae parametresindeki work-experience.start-date",
       value-description: "Öz Geçmişteki" + str(index) + ". iş deneyiminin başlangıç tarihi",
     )
 
     // Bitiş Tarihi parametresini doğrula. [Validate the end-date parameter.]
-    date-type-validator(
+    datetime-type-validator(
       value: work-experience.end-date,
       value-name: "curriculum-vitae parametresindeki work-experience.end-date",
       value-description: "Öz Geçmişteki" + str(index) + ". iş deneyiminin bitiş tarihi",

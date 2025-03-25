@@ -2,7 +2,7 @@
 #import "/src/core/validation-manager/validators/boolean-type-validator.typ": boolean-type-validator
 #import "/src/core/validation-manager/validators/array-type-validator.typ": array-type-validator
 #import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
-#import "/src/core/validation-manager/validators/date-type-validator.typ": date-type-validator
+#import "/src/core/validation-manager/validators/datetime-type-validator.typ": datetime-type-validator
 #import "/src/core/validation-manager/validators/language-validator.typ": language-validator
 #import "/src/core/validation-manager/validators/department-validator.typ": department-validator
 #import "/src/core/validation-manager/validators/program-validator.typ": program-validator
@@ -57,7 +57,7 @@
   report-type-validator(value: report-type)
 
   // Tarih parametresini doğrula. [Validate the date parameter.]
-  date-type-validator(
+  datetime-type-validator(
     value: date,
     value-name: "template-configurations.date",
     value-description: "Şablon ayarlarındaki tarih",

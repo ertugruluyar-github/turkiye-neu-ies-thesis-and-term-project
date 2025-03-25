@@ -5,7 +5,7 @@
 )
 
 // Girdinin tarih-zaman türünde olduğunu doğrular. [Validates if the value is a datetime.]
-#let date-type-validator(
+#let datetime-type-validator(
   value: none,
   value-name: none,
   value-description: none,
