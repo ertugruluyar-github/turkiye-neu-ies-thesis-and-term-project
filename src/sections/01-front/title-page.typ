@@ -3,12 +3,14 @@
 #import "/src/constants/language-free-string-constants.typ": STRING-CITY-NAME
 #import "/src/constants/date-constants.typ": ONLY-YEAR-DATE-FORMAT
 #import "/src/constants/drop-down-list-constants.typ": LANGUAGES, REPORT-TYPES
-#import "/src/constants/path-constants.typ": (
-  UNIVERSITY-LOGO-PATH,
-  INSTITUTE-LOGO-PATH,
-)
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
+#import "/src/components/title-page/single-logo-organization-info-heading-component.typ": (
+  single-logo-organization-info-heading-component,
+)
+#import "/src/components/title-page/double-logo-organization-info-heading-component.typ": (
+  double-logo-organization-info-heading-component,
+)
 #import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
 #import "/src/components/advisor-with-orcid-component.typ": advisor-with-orcid-component
@@ -32,32 +34,12 @@
   // Başlık sayfası stilini uygula. [Apply the style of the title page.]
   show: title-page-style
 
-  // Dile göre enstitü logusunu seç. [Select the institute logo according to the language.]
-  let institute-logo-path = if language == LANGUAGES.TR-TR {
-    INSTITUTE-LOGO-PATH.TR-TR
-  } else if language == LANGUAGES.EN-US {
-    INSTITUTE-LOGO-PATH.EN-US
-  }
-
   // Tez önerisi ise tek logolu başlığı kullan. [Use a single logo heading for a thesis proposal.]
   if (
     report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
   ) {
     // Tek logolu başlık. [Single logo heading.]
-    grid(
-      columns: 1fr,
-      align: center + horizon,
-      row-gutter: 12pt,
-      image(institute-logo-path, width: 3.4cm, height: 3.4cm),
-      text(weight: "bold")[
-        #upper(translator(key: language-keys.THE-REPUPLIC-OF-TURKIYE))\
-        #upper(translator(key: language-keys.UNIVERSITY-NAME-UPPER-CASE))\
-        #upper(translator(key: language-keys.INSTITUTE-NAME-UPPER-CASE))
-      ],
-    )
-
-    // Bir miktar boşluk bırak. [Leave some space.]
-    v(1cm)
+    single-logo-organization-info-heading-component(language: language)
   }
 
   // Tez ise çift logolu başlığı kullan. [Use a double logo heading for a thesis.]
@@ -66,29 +48,7 @@
       or report-type == REPORT-TYPES.DOCTORAL-THESIS
       or report-type == REPORT-TYPES.TERM-PROJECT
   ) {
-    // Dile göre üniversite logusunu seç. [Select the university logo according to the language.]
-    let university-logo-path = if language == LANGUAGES.TR-TR {
-      UNIVERSITY-LOGO-PATH.TR-TR
-    } else if language == LANGUAGES.EN-US {
-      UNIVERSITY-LOGO-PATH.EN-US
-    }
-
-    // Çift logolu başlık. [Double logo heading.]
-    grid(
-      columns: (1fr, auto, 1fr),
-      align: center + horizon,
-      row-gutter: 12pt,
-      align(left, image(university-logo-path, width: 2.7cm, height: 2.7cm)),
-      text(weight: "bold")[
-        #upper(translator(key: language-keys.THE-REPUPLIC-OF-TURKIYE))\
-        #upper(translator(key: language-keys.UNIVERSITY-NAME-UPPER-CASE))\
-        #upper(translator(key: language-keys.INSTITUTE-NAME-UPPER-CASE))
-      ],
-      align(right, image(institute-logo-path, width: 2.7cm, height: 2.7cm)),
-    )
-
-    // Bir miktar boşluk bırak. [Leave some space.]
-    v(3.5cm)
+    double-logo-organization-info-heading-component(language: language)
   }
 
   // Ana Bilim Dalı bilgisi. [Department information.]
