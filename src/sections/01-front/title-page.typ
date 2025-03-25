@@ -1,3 +1,4 @@
+#import "/src/styles/title-page-style.typ": title-page-style
 #import "/src/constants/document-settings-constants.typ": MARGIN
 #import "/src/constants/language-free-string-constants.typ": STRING-CITY-NAME
 #import "/src/constants/date-constants.typ": ONLY-YEAR-DATE-FORMAT
@@ -28,15 +29,8 @@
   second-advisor: none,
   thesis-study-funding-organization: none,
 ) = {
-  set page(
-    header: none,
-    footer: none,
-    margin: MARGIN,
-    numbering: none,
-    columns: 1,
-  )
-  set align(center)
-  set par(leading: 1em, spacing: 1em)
+  // Başlık sayfası stilini uygula. [Apply the style of the title page.]
+  show: title-page-style
 
   // Dile göre enstitü logusunu seç. [Select the institute logo according to the language.]
   let institute-logo-path = if language == LANGUAGES.TR-TR {
