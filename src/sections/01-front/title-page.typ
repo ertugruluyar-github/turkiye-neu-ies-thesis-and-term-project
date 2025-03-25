@@ -11,6 +11,7 @@
 #import "/src/components/title-page/double-logo-organization-info-heading-component.typ": (
   double-logo-organization-info-heading-component,
 )
+#import "/src/components/thesis-title-text-component.typ": thesis-title-text-component
 #import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
 #import "/src/components/advisor-with-orcid-component.typ": advisor-with-orcid-component
@@ -66,18 +67,14 @@
   // Bir miktar boşluk bırak. [Leave some space.]
   v(1.75cm)
 
+  // Dile göre tez başlığını seç. [Select the thesis title according to the language.]
+  let thesis-title = if language == LANGUAGES.TR-TR {
+    thesis-title.tur
+  } else if language == LANGUAGES.EN-US {
+    thesis-title.eng
+  }
   // Tez başlığı. [Thesis title.]
-  text(weight: "bold")[
-    // Dile göre tez başlığını seç. [Select the thesis title according to the language.]
-    #let thesis-title = if language == LANGUAGES.TR-TR {
-      thesis-title.tur
-    } else if language == LANGUAGES.EN-US {
-      thesis-title.eng
-    }
-
-    // Tamamı büyük harfle tez başlığı bilgisi. [Uppercase thesis title information.]
-    #upper(thesis-title.upper-case)
-  ]
+  thesis-title-text-component(thesis-title: thesis-title)
 
   // Bir miktar boşluk bırak. [Leave some space.]
   v(1.75cm)

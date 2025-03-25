@@ -1,4 +1,5 @@
 #import "/src/styles/abstract-page-style.typ": abstract-page-style
+#import "/src/components/thesis-title-text-component.typ": thesis-title-text-component
 #import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/keywords-component.typ": keywords-component
 
@@ -38,7 +39,7 @@
   v(1em)
 
   // Tez başlığı. [Thesis title.]
-  align(center, text(weight: "bold", upper(thesis-title.upper-case)))
+  align(center, thesis-title-text-component(thesis-title: thesis-title))
 
   // 1 karakter kadar miktarda boşluk bırak. [Leave a space of 1 character.]
   v(1em)
