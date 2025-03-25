@@ -4,11 +4,13 @@
   STRING-TYPST-DATETIME-DOCUMENTATION-LINK,
 )
 
+// Girdinin tarih-zaman türünde olduğunu doğrular. [Validates if the value is a datetime.]
 #let date-type-validator(
   value: none,
   value-name: none,
   value-description: none,
 ) = {
+  // Girdi, tarih-zaman türünde değilse hata ver. [Throw error if the value is not a datetime type.]
   assert(
     type(value) == datetime,
     message: STRING-ERROR-INLINE-TITLE

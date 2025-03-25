@@ -1,6 +1,7 @@
 #import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
 #import "/src/core/validation-manager/validators/orcid-validator.typ": orcid-validator
 
+// Yazar bilgilerini doğrular. [Validates author information.]
 #let author-validator(value: none) = {
   // Sözlük parametre türünü doğrula. [Validate dictionary parameter type.]
   dictionary-type-validator(

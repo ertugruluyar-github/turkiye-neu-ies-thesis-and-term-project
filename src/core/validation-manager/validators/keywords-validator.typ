@@ -5,6 +5,7 @@
 #import "/src/constants/keyword-count-rule.typ": keyword-count-rule
 #import "/src/constants/validation-constants.typ": STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK
 
+// Anahtar Kelime girdisinin geçerli ve anahtar kelime sayısı kuralına uygun olduğunu doğrular. [Validates if the keywords value is valid and matches the keyword count rule.]
 #let keywords-validator(value: none) = {
   // Sözlük parametre türünü doğrula. [Validate dictionary parameter type.]
   dictionary-type-validator(

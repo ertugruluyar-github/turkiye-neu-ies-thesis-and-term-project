@@ -2,6 +2,7 @@
 #import "/src/core/validation-manager/validators/minimum-value-validator.typ": minimum-value-validator
 #import "/src/core/validation-manager/validators/maximum-value-validator.typ": maximum-value-validator
 
+// Tez özgünlük raporunu doğrular. [Validates thesis originality report.]
 #let thesis-originalty-validator(value: none) = {
   // Sözlük parametre türünü doğrula. [Validate dictionary parameter type.]
   dictionary-type-validator(

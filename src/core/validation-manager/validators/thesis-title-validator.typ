@@ -6,6 +6,7 @@
 #import "/src/constants/drop-down-list-constants.typ": LANGUAGES
 #import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
 
+// Tez başlığını doğrular. [Validates thesis title.]
 #let thesis-title-validator(value: none) = {
   // Sözlük parametre türünü doğrula. [Validate dictionary parameter type.]
   dictionary-type-validator(

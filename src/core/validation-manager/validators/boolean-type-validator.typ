@@ -4,11 +4,13 @@
   STRING-TYPST-BOOLEAN-DOCUMENTATION-LINK,
 )
 
+// Girdinin mantıksal türde olduğunu doğrular. [Validates boolean type.]
 #let boolean-type-validator(
   value: none,
   value-name: none,
   value-description: none,
 ) = {
+  // Girdi, mantıksal türde değilse hata ver. [Throw error if value is not boolean type.]
   assert(
     type(value) == bool,
     message: STRING-ERROR-INLINE-TITLE

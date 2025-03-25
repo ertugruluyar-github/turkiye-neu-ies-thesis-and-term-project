@@ -4,11 +4,13 @@
   STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
 )
 
+// Girdinin dözlük türünde olduğunu doğrular. [Validates if the value is a dictionary.]
 #let dictionary-type-validator(
   value: none,
   value-name: none,
   value-description: none,
 ) = {
+  // Girdi, sözlük türünde değilse hata ver. [Throw error if the value is not a dictionary type.]
   assert(
     type(value) == dictionary,
     message: STRING-ERROR-INLINE-TITLE

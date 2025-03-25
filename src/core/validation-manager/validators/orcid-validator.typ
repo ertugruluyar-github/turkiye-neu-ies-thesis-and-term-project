@@ -4,11 +4,13 @@
   WHAT-IS-MY-ORCID-ID-LINK,
 )
 
+// ORCID girdisinin geçerli bir ORCID ID olduğunu doğrular. [Validates if the ORCID value is a valid ORCID ID.]
 #let orcid-validator(
   value: none,
   value-name: none,
   value-description: none,
 ) = {
+  // Girdi, geçerli bir ORCID ID değilse hata ver. [Throw error if the ORCID value is not a valid ORCID ID.]
   assert(
     type(value.find(regex("\d{4}-\d{4}-\d{4}-\d{4}"))) == str,
     message: STRING-ERROR-INLINE-TITLE

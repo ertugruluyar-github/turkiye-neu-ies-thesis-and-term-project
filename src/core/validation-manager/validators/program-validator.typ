@@ -5,7 +5,9 @@
 )
 #import "/src/constants/drop-down-list-constants.typ": PROGRAMS
 
+// Bilim Dalını doğrular. [Validates the program.]
 #let program-validator(value: none) = {
+  // Tanımlı Bilim Dalları dışındaki girdilerde hata ver. [Throw error for invalid programs.]
   assert(
     value in PROGRAMS.values(),
     message: STRING-ERROR-INLINE-TITLE

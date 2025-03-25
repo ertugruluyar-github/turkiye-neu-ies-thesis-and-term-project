@@ -6,6 +6,7 @@
 #import "/src/constants/drop-down-list-constants.typ": LANGUAGES
 #import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
 
+// Dili doğrular. [Validates the language.]
 #let language-validator(value: none) = {
   // Sözlük parametre türünü doğrula. [Validate dictionary parameter type.]
   dictionary-type-validator(
@@ -14,7 +15,7 @@
     value-description: "Şablon ayarlarındaki dil",
   )
 
-  // Dil değerini doğrula. [Validate the language value.]
+  // Tanımlı dil değerleri dışındaki girdilerde hata ver. [Throw error for invalid languages.]
   assert(
     value in LANGUAGES.values(),
     message: STRING-ERROR-INLINE-TITLE

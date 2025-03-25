@@ -2,6 +2,7 @@
 #import "/src/core/validation-manager/validators/orcid-validator.typ": orcid-validator
 #import "/src/core/validation-manager/validators/academic-member-title-validator.typ": academic-member-title-validator
 
+// Danışman bilgilerini doğrular. [Validates advisor information.]
 #let advisor-validator(value: none) = {
   // Sözlük parametre türünü doğrula. [Validate dictionary parameter type.]
   dictionary-type-validator(

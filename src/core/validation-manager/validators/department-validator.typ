@@ -6,8 +6,9 @@
 #import "/src/constants/drop-down-list-constants.typ": DEPARTMENTS
 #import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
 
+// Ana Bilim Dalını doğrula. [Validate the department.]
 #let department-validator(value: none) = {
-  // Ana Bilim Dalı değerini doğrula. [Validate the department value.]
+  // Tanımlı Ana Bilim Dalları dışındaki girdilerde hata ver. [Throw error for invalid departments.]
   assert(
     value in DEPARTMENTS.values(),
     message: STRING-ERROR-INLINE-TITLE

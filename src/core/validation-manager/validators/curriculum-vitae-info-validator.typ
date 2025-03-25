@@ -4,6 +4,7 @@
 #import "/src/core/validation-manager/validators/orcid-validator.typ": orcid-validator
 #import "/src/core/validation-manager/validators/email-validator.typ": email-validator
 
+// Öz Geçmiş bilgilerini doğrular. [Validates curriculum vitae information.]
 #let curriculum-vitae-info-validator(value: none) = {
   // Doğum günü parametresini doğrula. [Validate the birthday parameter.]
   date-type-validator(

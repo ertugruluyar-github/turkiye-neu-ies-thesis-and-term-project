@@ -18,6 +18,7 @@
 #import "/src/core/validation-manager/validators/work-packages-validator.typ": work-packages-validator
 #import "/src/core/validation-manager/validators/curriculum-vitae-info-validator.typ": curriculum-vitae-info-validator
 
+// Şablon parametrelerinin doğrulama işlemlerini yapan yönetici fonksiyondur. [Manager function for validating template parameters.]
 #let validation-manager(
   language: none,
   department: none,

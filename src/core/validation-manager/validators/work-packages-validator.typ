@@ -8,6 +8,7 @@
 #import "/src/core/validation-manager/validators/dictionary-type-validator.typ": dictionary-type-validator
 #import "/src/core/validation-manager/validators/array-type-validator.typ": array-type-validator
 
+// İş paketlerini doğrular. [Validates work packages.]
 #let work-packages-validator(
   value: none,
   report-type: none,
@@ -28,13 +29,14 @@
     )
   }
 
-  // İş Paketlerinin toplam ay sayısını doğrula. [Validate th sum of the month count of work-packages.]
+  // Ay sayısını rapor türüne göre seç. [Select the month count according to the report type.]
   let month-count = if report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL {
     work-schedule-month-count-rule.MASTER-THESIS-PROPOSAL
   } else if report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL {
     work-schedule-month-count-rule.DOCTORAL-THESIS-PROPOSAL
   }
 
+  // Girilen iş paketlerinin birleştirerek bir dizi oluştur. [Create an array by combining the entered work packages.]
   let work-packages-months = ()
   for work-package in value {
     for month in work-package.months {
@@ -44,8 +46,10 @@
     }
   }
 
+  // İş paketlerinin doğrulama değerini oluştur. [Create the validation value of the work packages.]
   let assertion-value = array.range(1, month-count + 1, step: 1)
 
+  // İş Paketlerinin toplam ay sayısını doğrula. [Validate th sum of the month count of work-packages.]
   assert(
     work-packages-months == assertion-value,
     message: STRING-ERROR-INLINE-TITLE
