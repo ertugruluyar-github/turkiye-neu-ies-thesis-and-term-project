@@ -10,12 +10,8 @@
   min-value: none,
   value-name: none,
   value-description: none,
-  custom-documantation-link: none,
+  documantation-link: STRING-TYPST-INT-DOCUMENTATION-LINK,
 ) = {
-  let documantation-link = if custom-documantation-link != none { custom-documantation-link } else {
-    STRING-TYPST-INT-DOCUMENTATION-LINK
-  }
-
   // Mesajın ilk kısmı. [The first part of the message.]
   let message-part-1 = "'" + value-name + "' parametresine desteklenmeyen ya da hatalı bir giriş oldu. "
 

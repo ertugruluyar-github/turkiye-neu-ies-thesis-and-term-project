@@ -32,14 +32,14 @@
     min-value: keyword-count-rule.MIN,
     value-name: "keywords.tur",
     value-description: "Türkçe anahtar kelime sayısı",
-    custom-documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
+    documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   )
   maximum-value-validator(
     value: value.tur.len(),
     max-value: keyword-count-rule.MAX,
     value-name: "keywords.tur",
     value-description: "Türkçe anahtar kelime sayısı",
-    custom-documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
+    documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   )
 
   // İngilizce anahtar kelime sayısını doğrula. [Validate English keyword count.]
@@ -48,13 +48,13 @@
     min-value: keyword-count-rule.MIN,
     value-name: "keywords.eng",
     value-description: "İngilizce anahtar kelime sayısı",
-    custom-documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
+    documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   )
   maximum-value-validator(
     value: value.eng.len(),
     max-value: keyword-count-rule.MAX,
     value-name: "keywords.eng",
     value-description: "İngilizce anahtar kelime sayısı",
-    custom-documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
+    documantation-link: STRING-TYPST-DICTIONARY-DOCUMENTATION-LINK,
   )
 }
