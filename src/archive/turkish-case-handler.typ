@@ -1,4 +1,4 @@
-/*
+/* ARCHIVE: src/core/turkish-case-handler.typ
 // Only Turkish special characters mapping (lowercase -> uppercase)
 #let _lower-to-upper-special-char-map-tr = (
   "i": "İ",
