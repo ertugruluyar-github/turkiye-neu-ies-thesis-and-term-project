@@ -85,15 +85,7 @@
   orcid-with-prefix-component(orcid: author.orcid)
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1.25cm)
-  if (
-    report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL
-      or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
-      or report-type == REPORT-TYPES.TERM-PROJECT
-  ) {
-    // Bir miktar boşluk bırak. [Leave some space.]
-    v(1.75cm)
-  }
+  v(1.5cm)
 
   // Danışman bilgilerini ekle. [Add advisor information.]
   translator(key: language-keys.ADVISOR)
