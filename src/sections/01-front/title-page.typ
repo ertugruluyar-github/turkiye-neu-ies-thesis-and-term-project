@@ -57,7 +57,9 @@
     )
 
     v(1cm)
-  } else if (
+  }
+
+  if (
     report-type == REPORT-TYPES.MASTER-THESIS
       or report-type == REPORT-TYPES.DOCTORAL-THESIS
       or report-type == REPORT-TYPES.TERM-PROJECT
