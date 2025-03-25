@@ -4,16 +4,21 @@
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
+// Ön Söz sayfası. [Preface page.]
 #let preface-page(
   author: none,
   date: none,
 ) = {
+  // Sayfa başlığını ekle. [Add page header.]
   heading(level: 1, upper(translator(key: language-keys.PREFACE)))
 
+  // Sayfa içeriğini ekle. [Add page content.]
   include "/template/sections/01-front/preface-text.typ"
 
+  // Bir miktar boşluk bırak. [Leave some space.]
   v(2em)
 
+  // Yazar ve tarih bilgilerini ekle. [Add author and date information.]
   grid(
     columns: (auto, 1fr),
     rows: auto,

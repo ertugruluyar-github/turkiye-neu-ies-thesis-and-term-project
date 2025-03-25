@@ -1,5 +1,6 @@
 #import "/src/styles/list-of-image-figures-style.typ": list-of-image-figures-style
 
+// Şekil Listesi sayfası. [List of Image Figures page.]
 #let list-of-image-figures-page() = {
   // Şekil listelerinin stilini uygula. [Apply the style of the image figure lists.]
   list-of-image-figures-style(outline())

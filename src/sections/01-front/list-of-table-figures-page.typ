@@ -1,5 +1,6 @@
 #import "/src/styles/list-of-table-figures-style.typ": list-of-table-figures-style
 
+// Tablo Listesi sayfası. [List of Table Figures page.]
 #let list-of-table-figures-page() = {
   // Tablo listelerinin stilini uygula. [Apply the style of the table figure lists.]
   list-of-table-figures-style(outline())
