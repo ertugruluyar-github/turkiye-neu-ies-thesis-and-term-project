@@ -1,22 +1,35 @@
-
-#import "/src/constants/drop-down-list-constants.typ": LANGUAGES, REPORT-TYPES
+#import "/src/styles/title-page-style.typ": title-page-style
+#import "/src/constants/drop-down-list-constants.typ": LANGUAGES
+#import "/src/components/title-page/double-logo-organization-info-heading-component.typ": (
+  double-logo-organization-info-heading-component,
+)
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 #import "/src/components/thesis-title-text-component.typ": thesis-title-text-component
 #import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
 #import "/src/components/advisor-with-orcid-component.typ": advisor-with-orcid-component
+#import "/src/components/title-page/city-name-with-year-component.typ": city-name-with-year-component
 
-// Kapak sayfasındaki ortak bilgiler. [Common informations in title page.]
-#let title-page-common-info-component(
+// Dönem Projesi Kapak Sayfası bileşeni. [Term Project Title Page component.]
+#let term-project-title-page-component(
   language: none,
   department: none,
   program: none,
   report-type: none,
+  date: none,
   thesis-title: none,
   author: none,
   advisor: none,
+  second-advisor: none,
+  thesis-study-funding-organization: none,
 ) = {
+  // Başlık sayfası stilini uygula. [Apply the style of the title page.]
+  show: title-page-style
+
+  // Çift logolu başlık. [Double logo heading.]
+  double-logo-organization-info-heading-component(language: language)
+
   // Ana Bilim Dalı bilgisi. [Department information.]
   align(center, department)
 
@@ -58,5 +71,8 @@
   advisor-with-orcid-component(advisor: advisor)
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(0.5cm)
+  v(3.25cm)
+
+  // Şehir adı ve yıl bilgisini ekle. [Add city name and year information.]
+  city-name-with-year-component(date: date)
 }
