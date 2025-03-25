@@ -69,16 +69,16 @@
     }
 
     grid(
-      columns: (1fr, 6fr, 1fr),
+      columns: (1fr, auto, 1fr),
       align: center + horizon,
       row-gutter: 12pt,
-      image(university-logo-path, width: 2.7cm, height: 2.7cm),
+      align(left, image(university-logo-path, width: 2.7cm, height: 2.7cm)),
       text(weight: "bold")[
         #upper(translator(key: language-keys.THE-REPUPLIC-OF-TURKIYE))\
         #upper(translator(key: language-keys.UNIVERSITY-NAME-UPPER-CASE))\
         #upper(translator(key: language-keys.INSTITUTE-NAME-UPPER-CASE))
       ],
-      image(institute-logo-path, width: 2.7cm, height: 2.7cm),
+      align(right, image(institute-logo-path, width: 2.7cm, height: 2.7cm)),
     )
 
     v(3.5cm)
