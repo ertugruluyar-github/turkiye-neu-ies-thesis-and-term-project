@@ -3,8 +3,7 @@
   UNIVERSITY-LOGO-PATH,
   INSTITUTE-LOGO-PATH,
 )
-#import "/src/core/language-manager/language-manager.typ": translator
-#import "/src/constants/language-keys.typ": language-keys
+#import "/src/components/title-page/organization-info-heading-component.typ": organization-info-heading-component
 
 // Çift logolu başlık. [Double logo heading.]
 #let double-logo-organization-info-heading-component(
@@ -29,12 +28,11 @@
     columns: (1fr, auto, 1fr),
     align: center + horizon,
     row-gutter: 12pt,
+    // Üniversite logosu. [University logo.]
     align(left, image(university-logo-path, width: 2.7cm, height: 2.7cm)),
-    text(weight: "bold")[
-      #upper(translator(key: language-keys.THE-REPUPLIC-OF-TURKIYE))\
-      #upper(translator(key: language-keys.UNIVERSITY-NAME-UPPER-CASE))\
-      #upper(translator(key: language-keys.INSTITUTE-NAME-UPPER-CASE))
-    ],
+    // Organizasyon bilgisi başlığı. [Organization information heading.]
+    organization-info-heading-component(),
+    // Enstitü logosu. [Institute logo.]
     align(right, image(institute-logo-path, width: 2.7cm, height: 2.7cm)),
   )
 

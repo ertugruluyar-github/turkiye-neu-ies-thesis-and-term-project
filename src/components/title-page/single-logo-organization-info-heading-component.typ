@@ -1,7 +1,6 @@
 #import "/src/constants/drop-down-list-constants.typ": LANGUAGES
 #import "/src/constants/path-constants.typ": INSTITUTE-LOGO-PATH
-#import "/src/core/language-manager/language-manager.typ": translator
-#import "/src/constants/language-keys.typ": language-keys
+#import "/src/components/title-page/organization-info-heading-component.typ": organization-info-heading-component
 
 // Tek logolu başlık. [Single logo heading.]
 #let single-logo-organization-info-heading-component(
@@ -19,12 +18,10 @@
     columns: 1fr,
     align: center + horizon,
     row-gutter: 12pt,
+    // Enstitü logosu. [Institute logo.]
     image(institute-logo-path, width: 3.4cm, height: 3.4cm),
-    text(weight: "bold")[
-      #upper(translator(key: language-keys.THE-REPUPLIC-OF-TURKIYE))\
-      #upper(translator(key: language-keys.UNIVERSITY-NAME-UPPER-CASE))\
-      #upper(translator(key: language-keys.INSTITUTE-NAME-UPPER-CASE))
-    ],
+    // Organizasyon bilgisi başlığı. [Organization information heading.]
+    organization-info-heading-component()
   )
 
   // Bir miktar boşluk bırak. [Leave some space.]
