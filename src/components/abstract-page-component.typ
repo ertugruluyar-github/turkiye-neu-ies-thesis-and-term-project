@@ -1,6 +1,6 @@
 #import "/src/styles/abstract-page-style.typ": abstract-page-style
-#import "/src/components/keywords-component.typ": keywords-component
 #import "/src/components/fullname-component.typ": fullname-component
+#import "/src/components/keywords-component.typ": keywords-component
 
 // Özet sayfasının yapısını belirleyen fonksiyon. [Function that defines the structure of the abstract page.]
 #let abstract-page-component(
