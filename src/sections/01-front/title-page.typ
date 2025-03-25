@@ -11,7 +11,9 @@
 #import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
 #import "/src/components/advisor-with-orcid-component.typ": advisor-with-orcid-component
-#import "/src/components/thesis-study-funding-organization-component.typ": thesis-study-funding-organization-component
+#import "/src/components/title-page/thesis-study-funding-organization-component.typ": (
+  thesis-study-funding-organization-component,
+)
 
 // Kapak sayfası. [Title page.]
 #let title-page(
