@@ -12,7 +12,7 @@
   // Her şeyi ortaya hizalandı. [Everything is centered.]
   set align(center)
 
-  // Paragraf boşluklarını ayarla. [Set paragraph spacing.]Paragraph spacing.]
+  // Paragraf boşluklarını ayarla. [Set paragraph spacing.]
   set par(
     leading: 1em,
     spacing: 0em,
