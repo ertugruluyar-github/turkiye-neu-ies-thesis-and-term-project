@@ -9,9 +9,14 @@ repository = "https://github.com/ertugruluyar-github/turkiye-neu-ies-thesis"
 categories = ["thesis", "report"]
 keywords = [
     "thesis",
+    "dissertation",
     "tez",
     "proposal",
     "öneri",
+    "term project",
+    "dönem projesi",
+    "graduate education",
+    "lisansüstü eğitim",
     "master",
     "yüksek lisans",
     "ph.d.",
@@ -22,6 +27,8 @@ keywords = [
     "üniversite",
     "NEÜ",
     "Necmettin Erbakan",
+    "eğitim bilimleri enstitüsü",
+    "institute of educational sciences",
     "Türkiye",
 ]
 compiler = "0.13.0"
