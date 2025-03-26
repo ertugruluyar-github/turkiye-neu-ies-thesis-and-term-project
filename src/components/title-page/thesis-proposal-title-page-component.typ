@@ -31,13 +31,13 @@
   single-logo-organization-info-heading-component(language: language)
 
   // Ana Bilim Dalı bilgisi. [Department information.]
-  align(center, department)
+  department
 
   // Satır sonu ekle. [Add line break.]
   linebreak()
 
   // Bilim Dalı bilgisi. [Program information.]
-  align(center, program)
+  program
 
   // Bir miktar boşluk bırak. [Leave some space.]
   v(1.25cm)
