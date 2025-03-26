@@ -14,7 +14,7 @@
 
   // Paragraf boşluklarını ayarla. [Set paragraph spacing.]
   set par(
-    leading: 1em,
+    leading: 0.5em,
     spacing: 0em,
   )
 
