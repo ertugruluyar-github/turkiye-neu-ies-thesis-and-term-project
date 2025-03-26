@@ -47,20 +47,20 @@
     ),
   ),
   author: (
-    first-name: "Author's firstname",
-    last-name: "Author's LASTNAME",
+    first-name: "Student's firstname",
+    last-name: "LASTNAME",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
   advisor: (
     academic-member-title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
     first-name: "Advisor's firstname",
-    last-name: "Advisor's LASTNAME",
+    last-name: "LASTNAME",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
   second-advisor: (
     academic-member-title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
     first-name: "Second Advisor's firstname",
-    last-name: "Second Advisor's LASTNAME",
+    last-name: "LASTNAME",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
   thesis-study-funding-organization: (
