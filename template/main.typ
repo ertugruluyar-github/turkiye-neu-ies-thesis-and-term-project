@@ -35,7 +35,7 @@
   ),
   // Yazarın adı, soyadı ve ORCID numarası.
   author: (
-    first-name: "Yazarın Adı",
+    first-name: "Öğrenci Adı",
     last-name: "SOYADI",
     orcid: "1234-1234-1234-1234",
   ),
@@ -55,7 +55,7 @@
   ),
   // Tez çalışması destekleyen kuruluşun adı ve projenin numarası. Tez çalışması destekleyen herhangi bir kuruluş yoksa "thesis-study-funding-organization: none" yapınız.
   thesis-study-funding-organization: (
-    name: "Tez Çalışmasını Destekleyen Kuruluşun Adı",
+    name: "Tez Çalışmasını Destekleyen Kurum Adı",
     project-no: "Proje Numarası",
   ),
   // Tez çalışmasının orijinallik bilgisi. Örneğin Turnitin yazılımında tezin 78 sayfası taratıldı ve benzerlik oranı %17 çıktıysa "included-page-count: 78" ve "similarity-score: 17" şeklindedir.
