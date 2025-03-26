@@ -45,7 +45,7 @@
 // Paragraf ilk satır girintisi [Paragraph first line indent]
 #let PARAGRAPH-FIRST-LINE-INDENT = 1.25cm
 
-// Paragrafdaki satırlar arası boşluk (1,5 satır yani 1.5em = FONT-SIZE * 1.5). [Space between lines in the paragraph (1.5 lines so 1.5em = FONT-SIZE * 1.5).]
+// Paragrafdaki satırlar arası boşluk (1,5 satır yani 1.5em = FONT-SIZE x 1.5). [Space between lines in the paragraph (1.5 lines so 1.5em = FONT-SIZE x 1.5).]
 #let PARAGRAPH-LEADING-SIZE = 1.5em
 
 // Paragraflar arasındaki boşluk. [Spacing between paragraphs]
