@@ -38,8 +38,8 @@
   // Ana Bilim Dalı bilgisi. [Department information.]
   department
 
-  // Satır sonu ekle. [Add line break.]
-  linebreak()
+  // Bir miktar boşluk bırak. [Leave some space.]
+  v(0.25cm)
 
   // Bilim Dalı bilgisi. [Program information.]
   program
