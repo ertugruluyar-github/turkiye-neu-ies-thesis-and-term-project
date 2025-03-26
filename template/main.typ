@@ -1,7 +1,7 @@
 // Şablonu çevrim içi kullanmak.
-//#import "@preview/turkiye-neu-ies-thesis:0.1.0": *
+//#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *
 // Şablonu çevrim dışı kullanmak.
-//#import "@local/turkiye-neu-ies-thesis:0.1.0": *
+//#import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": *
 #import "/src/lib.typ": (
   template-configurations,
   LANGUAGES,
