@@ -1,2 +1,2 @@
-// Tanımları yazınız.
+// Tanımlar metnini yazınız.
 #lorem(50)

@@ -1,4 +1,4 @@
-// Alan Yazını (İlgili Araştırmaları) yazınız.
+// Alan Yazın (İlgili Araştırmalar) metnini yazınız.
 #lorem(50)
 == İkinci Bölüm İkinci Düzey Başlık
 #lorem(50)

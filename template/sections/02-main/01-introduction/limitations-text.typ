@@ -1,2 +1,2 @@
-// Sınırlılıkları yazınız.
+// Sınırlılıklar metnini yazınız.
 #lorem(50)

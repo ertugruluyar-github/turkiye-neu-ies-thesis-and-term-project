@@ -1,2 +1,2 @@
-// Araştırmanın önemini yazınız.
+// Araştırmanın Önemi metnini yazınız.
 #lorem(50)

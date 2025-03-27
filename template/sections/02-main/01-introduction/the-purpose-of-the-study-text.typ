@@ -1,2 +1,2 @@
-// Araştırmanın amacını yazınız.
+// Araştırmanın Amacı metnini yazınız.
 #lorem(50)

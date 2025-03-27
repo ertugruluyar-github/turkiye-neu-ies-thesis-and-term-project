@@ -1,2 +1,2 @@
-// Sayıltıları (Varsayımları) yazınız.
+// Sayıltılar (Varsayımlar) metnini yazınız.
 #lorem(50)
