@@ -1,3 +1,2 @@
-First line #lorem(50)
-
+// Verilerin Çözümlenmesi (Verilerin Analizi) metnini yazınız.
 #lorem(50)
