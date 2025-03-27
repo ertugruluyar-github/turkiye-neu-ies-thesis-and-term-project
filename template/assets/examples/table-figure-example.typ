@@ -1,5 +1,8 @@
+// Tablo figürü örneği.
 #figure(
+  // Figürün başlığı yazılır.
   caption: [Fiziksel ve kimyasal olaylar sorularının frekans analizi.],
+  // Figürün içeriği eklenir. Tablo eklenir.
   table(
     columns: 9,
     table.header(
@@ -35,4 +38,4 @@
       ),
     ),
   ),
-) <figür-tablo-fiziksel-ve-kimyasal-olaylar-sorularının-frekans-analizi>
+) <figür-tablo-fiziksel-ve-kimyasal-olaylar-sorularının-frekans-analizi> // Figüre atıf yapılırken kullanılacak etiket belirtilir. Bütün figürler 'figür' kelimesi ve türü de (şekilse 'şekil'; tabloysa 'tablo'; kodsa 'kod' vb.) şeklinde sistemli yazılırsa istenen figür aranırken bulması kolaylaşır.

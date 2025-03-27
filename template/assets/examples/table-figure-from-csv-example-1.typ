@@ -1,7 +1,11 @@
+// CSV dosyaının yolu `csv`fonksiyonuna girilerek veri okunur.
 #let csv-table-data = csv("/template/assets/csv-files/csv-table-data.csv")
 
+// CSV dosyasından tablo figürü örneği.
 #figure(
+  // Figürün başlığı yazılır.
   caption: [CSV dosyasıyla tablo örneği.],
+  // Figürün içeriği eklenir. Tablo eklenir.
   table(
     columns: csv-table-data.first().len(),
     table.header(
@@ -24,4 +28,4 @@
       ),
     ),
   ),
-) <figür-tablo-csv-dosyasıyla-tablo-örneği>
+) <figür-tablo-csv-dosyasıyla-tablo-örneği> // Figüre atıf yapılırken kullanılacak etiket belirtilir. Bütün figürler 'figür' kelimesi ve türü de (şekilse 'şekil'; tabloysa 'tablo'; kodsa 'kod' vb.) şeklinde sistemli yazılırsa istenen figür aranırken bulması kolaylaşır.

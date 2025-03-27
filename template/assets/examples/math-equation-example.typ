@@ -45,7 +45,9 @@ $
 
 *Denklemlerinize etiketler koyarak atıfda bulunabilirsiniz:*\
 Ardışık sayıların toplamı:
-$ sum_(k=1)^n k = (n(n+1)) / 2 $ <denklem-ardışık-sayıların-toplamı>
+$
+  sum_(k=1)^n k = (n(n+1)) / 2
+$ <denklem-ardışık-sayıların-toplamı> // Denkleme atıf yapılırken kullanılacak etiket belirtilir. Bütün denklemler 'denklme' kelimesi şeklinde sistemli yazılırsa istenen figür aranırken bulması kolaylaşır.
 
 @denklem-ardışık-sayıların-toplamı ardışık sayıların toplamının formülüdür.
 
