@@ -1,5 +1,5 @@
 [translations]
-# Parantez içinde olmayan ya da parantez içindeki ifadelerden birini seçip diğerlerini siliniz.
+# Başlıklardan sadece birini kullanmak için parantez içinde olmayan ya da parantez içindeki ifadelerden birini seçip diğerlerini siliniz.
 # Document Sections
 PREFACE = "PREFACE (ACKNOWLEDGMENT)"
 ASSUMPTIONS = "Hypothesis (Assumptions)"
