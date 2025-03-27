@@ -1,5 +1,6 @@
 #import "/src/constants/document-settings-constants.typ": PARAGRAPH-FIRST-LINE-INDENT, PARAGRAPH-LEADING-SIZE
 
+// Alıntı içeriği. [Quotation content.]
 #let _quotation-content(quotation: none) = (
   sym.quote.l.double
     + h(0pt, weak: true)
@@ -15,6 +16,7 @@
     }
 )
 
+// Alıntı stili. [Quotation style.]
 #let quotation-style(content) = {
   // Satır içi alıntıların atfının stili. [The style of the attribution of in-line quotations.]
   show quote.where(block: false): it => {
@@ -37,7 +39,7 @@
   // Alıntılar sola hizalandı. [Quotations are alinged left.]
   show quote.where(block: true): set align(left)
 
-  // Satır içi alıntılaardaki satır aralığı. [Line spacing of in-line quotations.]
+  // Satır içi alıntılardaki satır aralığı. [Line spacing of in-line quotations.]
   show quote.where(block: true): set par(
     first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: false),
     leading: PARAGRAPH-LEADING-SIZE,

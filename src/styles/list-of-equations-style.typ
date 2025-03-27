@@ -2,8 +2,9 @@
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
+// Matematiksel Denklem listesi stili. [List of equations style.]
 #let list-of-equations-style(content) = {
-  // Anahatın style. [Outline setstyletings.]
+  // Ana hattın stili. [Outline style.]
   set outline(
     depth: none,
     indent: auto,

@@ -1,10 +1,14 @@
 #import "/src/constants/document-settings-constants.typ": ALTERNATE-FONT-SIZE
 
+// Tablo stili. [Table style.]
 #let table-style(content) = {
-  show table.cell.where(y: 0): set text(weight: "bold")
   let normal-stroke-size = 1pt
   let bold-stroke-size = 1.5pt
 
+  // Tablo başlığını (sadece tablonun ilk satırı) kalın yaz. [Bold the table header (only the first row of the table).]
+  show table.cell.where(y: 0): set text(weight: "bold")
+
+  // Tablo ayarlarını ayarla. [Set table settings.]
   set table(
     align: center + horizon,
     gutter: 0pt,
@@ -18,6 +22,7 @@
     fill: none,
   )
 
+  // Tablo içerisindeki paragraf ayarlarını ayarla. [Set paragraph settings in the table.]
   show table: set par(
     first-line-indent: 0cm,
     hanging-indent: 0cm,
@@ -25,17 +30,24 @@
     leading: 0.5em,
   )
 
+  // Tablo içerisindeki yazı ayarlarını ayarla. [Set text settings in the table.]
   show table: set text(size: ALTERNATE-FONT-SIZE)
 
+  // Tablo altlık satırını yatayda sola ve dikeyde ortaya hizala. [Align the table footer horizontally to the left and vertically to the center.]
   show table.footer: set table.cell(align: left + horizon)
 
+  // Tablo altlık satırının paragraf ayarlarını ayarla. [Set paragraph settings in the table footer.]
   show table.footer: set par(justify: true)
 
+  // Tablo hücrelerini bölünebilir hale getir. [Make table cells breakable.]
   set table.cell(breakable: true)
 
+  // Tablo başlığının tekrarlanmasını etkinleştir. [Enable the repetition of the table header.]
   set table.header(repeat: true)
 
+  // Tablo altlık satırının tekrarlanmasını etkinleştir. [Enable the repetition of the table footer.]
   set table.footer(repeat: true)
+
   /*
     show table.footer: it => {
       set par(first-line-indent: 0cm, leading: 1em)

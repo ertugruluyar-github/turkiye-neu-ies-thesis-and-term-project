@@ -4,6 +4,7 @@
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
+// Tezin ana kısmındaki başlıkların stili. [Style of the headings in the main section of the thesis.]
 #let thesis-main-section-heading-style(content) = {
   // Başlıklar sola hizalandı. [Headings are aligned left.]
   show heading: set align(left)

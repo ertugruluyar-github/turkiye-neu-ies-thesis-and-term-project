@@ -2,7 +2,7 @@
 
 // Kaynaklar sayfası stili. [References page style.]
 #let bibliography-page-style(content) = {
-  // Kaynaklar saygasındaki paragraf stili. [Paragraph style in References page.]
+  // Kaynaklar sayfasındaki paragraf stili. [Paragraph style in References page.]
   set par(
     first-line-indent: 0cm,
     hanging-indent: 1.25cm,

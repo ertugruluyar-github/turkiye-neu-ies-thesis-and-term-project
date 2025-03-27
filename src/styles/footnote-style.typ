@@ -1,5 +1,6 @@
 #import "/src/constants/numbering-constants.typ": FOOTNOTE-NUMBERING
 
+// Dipnot stili. [Footnote style.]
 #let footnote-style(content) = {
   // Dipnot numaralandırma stili. [Footnote numbering style.]
   set footnote(numbering: FOOTNOTE-NUMBERING)

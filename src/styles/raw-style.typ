@@ -1,13 +1,16 @@
 #import "/src/constants/document-settings-constants.typ": ALTERNATE-FONT-SIZE-2, PARAGRAPH-SPACING-SIZE
 
+// Ham/Kod stili. [Raw/Code style.]
 #let raw-style(content) = {
-  //
+  // Yazı boyutunu ayarla. [Set text size.]
   show raw: set text(ALTERNATE-FONT-SIZE-2)
 
-  //
+  // Blok ham/kod stilini ayarla. [Set block raw/code style.]
   show raw.where(block: true): it => {
+    // Ortaya hizala. [Align center.]
     set align(center)
 
+    // Paragraf ayarlarını ayarla. [Set paragraph settings.]
     set par(
       first-line-indent: 0cm,
       hanging-indent: 0cm,
@@ -16,7 +19,7 @@
       spacing: PARAGRAPH-SPACING-SIZE,
     )
 
-    //
+    // Ham/Kod satırlarını ayarla. [Set raw/code lines.]
     show raw.line: line => {
       box(
         grid(
@@ -30,7 +33,7 @@
       )
     }
 
-    //
+    // Dikdörtgen içerisine koy. [Put inside a rectangle.]
     rect(width: 100%, stroke: gray + 0.5pt, inset: 1em, it)
   }
 

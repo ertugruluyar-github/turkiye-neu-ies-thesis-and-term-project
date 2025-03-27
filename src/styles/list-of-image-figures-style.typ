@@ -2,8 +2,9 @@
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
+// Şekil figürleri listesi stili. [List of image figures style.]
 #let list-of-image-figures-style(content) = {
-  // Anahatın style. [Outline setstyletings.]
+  // Ana hattın stili. [Outline style.]
   set outline(
     depth: none,
     indent: auto,

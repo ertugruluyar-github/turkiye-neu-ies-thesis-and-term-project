@@ -1,10 +1,11 @@
 #import "/src/constants/document-settings-constants.typ": ALTERNATE-FONT-SIZE
 
+// Çalışma Takvimi sayfası stili. [Work Schedule page style.]
 #let work-schedule-page-style(content) = {
-  // Sayfa başlığını ortala
+  // Sayfa başlığı ortaya hizalandı. [Center page heading.]
   show heading.where(level: 1): set align(center)
 
-  // Paragraf ayarları
+  // Paragraf ayarları. [Paragraph settings.]
   set par(
     justify: false,
     leading: 1em,
@@ -12,7 +13,7 @@
     first-line-indent: (amount: 0cm, all: true),
   )
 
-  // Tablo ayarları
+  // Tablo ayarları. [Table settings.]
   set table(
     column-gutter: auto,
     rows: auto,
@@ -27,16 +28,16 @@
     stroke: 0.25pt + black,
   )
 
-  // Tablo yazı tipi boyutu
+  // Tablo yazı tipi boyutu. [Table text size.]
   show table: set text(size: ALTERNATE-FONT-SIZE)
 
-  // Tabloyu ortala
+  // Tabloyu ortaya hizala. [Center table.]
   show table: set align(center)
 
-  // Tablo başlığı ayarları
+  // Tablonun başlık satırı tekrar etmeyecek şekilde ayarlandı. [Table header row is set not to repeat.]
   set table.header(repeat: false)
 
-  // Tablo altlığı ayarları
+  // Tablonun altlık satırı tekrar etmeyecek şekilde ayarlandı. [Table footer row is set not to repeat.]
   set table.footer(repeat: false)
 
   content

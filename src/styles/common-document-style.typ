@@ -11,6 +11,7 @@
 #import "/src/styles/quotation-style.typ": quotation-style
 #import "/src/styles/footnote-style.typ": footnote-style
 
+// Dökümandaki ortak stil ayarları. [Common document style settings.]
 #let common-document-style(
   language: none,
   thesis-title: none,
@@ -18,12 +19,14 @@
   keywords: none,
   content,
 ) = {
+  // Döküman üst verisini ayarla. [Set document metadata.]
   set document(
     title: thesis-title.tur.title-case + " (" + thesis-title.eng.title-case + ")",
     author: (author.first-name + " " + upper(author.last-name)),
     keywords: (..keywords.tur, ..keywords.eng),
   )
 
+  // Döküman düzeni ayarlarını ayarla. [Set document layout settings.]
   set page(
     paper: PAPER,
     header: auto,
@@ -34,6 +37,7 @@
     columns: 1,
   )
 
+  // Yazı ayarlarını ayarla. [Set text settings.]
   set text(
     font: FONT-NAME,
     size: FONT-SIZE,
@@ -45,14 +49,17 @@
     weight: DEFAULT-TEXT-FONT-WEIGHT,
   )
 
+  // Başlık ayarlarını ayarla. [Set heading settings.]
   set heading(
     numbering: none,
     outlined: true,
     bookmarked: true,
   )
 
+  // Başlıkların yazı büyüklüğünü ayarla. [Set heading font size.]
   show heading: set text(size: FONT-SIZE)
 
+  // Paragraf ayarlarını ayarla. [Set paragraph settings.]
   set par(
     justify: true,
     first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: true),

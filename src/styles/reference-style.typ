@@ -1,5 +1,6 @@
 #import "/src/constants/separator-constants.typ": APPENDIX-REFERENCE-PREFIX-SEPARATOR
 
+// Atıfların stilini ayarla. [Set the style of references.]
 #let reference-style(content) = {
   // Atıfların stilini ayarla. [Set the style of references.]
   show ref: it => {
@@ -14,7 +15,7 @@
         it
       }
     } else {
-      // Other references as usual.
+      // Diğer atıflar olduğu gibi kalsın. [Other references remain as they are.]
       it
     }
   }

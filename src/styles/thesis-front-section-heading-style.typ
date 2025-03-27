@@ -2,6 +2,7 @@
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
+// Tezin ön kısmındaki başlıkların stili. [Style of the headings in the front section of the thesis.]
 #let thesis-front-section-heading-style(content) = {
   // 1. düzey başlıklar ortaya hizalandı. [1st level headings are aligned center.]
   show heading.where(level: 1): set align(center)

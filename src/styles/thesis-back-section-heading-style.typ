@@ -2,13 +2,14 @@
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
+// Tezin arka kısmındaki başlıkların stili. [Style of the headings in the back section of the thesis.]
 #let thesis-back-section-heading-style(content) = {
-  //
+  // Ek başlıklarının başlık stili. [Appendix headings style.]
   let APPENDIX-HEADING-NUMBERING(..nums) = (
     translator(key: language-keys.APPENDIX-PREFIX) + numbering("1.1.", ..nums.pos().slice(1))
   )
 
-  //
+  // Ek başlıklarına yapılan atıfların numaralandırması. [Numbering of citations to appendix headings.]
   let APPENDIX-REFERENCE-NUMBERING(..nums) = numbering("1.1", ..nums.pos().slice(1))
 
   // Başlıklar sola hizalandı. [Headings are aligned left.]

@@ -1,5 +1,6 @@
 #import "/src/constants/numbering-constants.typ": LIST-NUMBERING
 
+// Liste stili. [List style.]
 #let list-style(content) = {
   // Numaralı liste stili [Numbered list style]
   set enum(

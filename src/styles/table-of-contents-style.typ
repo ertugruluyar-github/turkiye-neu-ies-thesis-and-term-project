@@ -6,7 +6,7 @@
   // Paragraflardaki boşluk ayarları. [Paragraph spacing settings.]
   set par(leading: 1em, spacing: 1em)
 
-  // Satırlardaki girinti ayarları. [Line indentation settings.]
+  // Ana hat ayarları. [Outline settings.]
   set outline(
     depth: 3,
     indent: n => n * 1em,

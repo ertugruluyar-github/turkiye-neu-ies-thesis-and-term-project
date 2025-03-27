@@ -19,7 +19,7 @@
   // Bilim Dalı seçiniz.
   program: PROGRAMS.MATHEMATICS-EDUCATION-PROGRAM,
   // Raporun türünü seçiniz.
-  report-type: REPORT-TYPES.DOCTORAL-THESIS,
+  report-type: REPORT-TYPES.TERM-PROJECT,
   // Tez önerisi ya da tezin teslim edildiği tarih. Varsayılan olarak bugünün tarihidir. Elle bir tarih girmek için "datetime(day: 20, month: 3, year: 2025)" yapınız.
   date: datetime.today(),
   // Tezinizin Türkçe ve İngilizce başlığı (başlık ve hepsi büyük harf biçiminde).
