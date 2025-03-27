@@ -2,7 +2,7 @@
 #import "/src/constants/language-keys.typ": language-keys
 
 #let appendices-page() = [
-  // Başlık numarlandırmasını 1'den başlat.
+  // Başlık numarlandırmasını 1'den başlat. [Start heading numbering from 1.]
   #counter(heading).update(1)
 
   // Bölüm başlığını ekle. [Add a chapter heading.]
