@@ -1,3 +1,4 @@
+// Ayrı bir dosyaya ayrılmış ek metni örneği.
 == İlk Sıradaki Ek <ek-ilk-sıradaki-ek>
 #lorem(20)
 

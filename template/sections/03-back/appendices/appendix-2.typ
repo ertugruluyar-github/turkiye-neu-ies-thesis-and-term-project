@@ -1,3 +1,4 @@
+// Ayrı bir dosyaya ayrılmış ek metni örneği.
 == İkinci Sıradaki Ek <ek-ikinci-sıradaki-ek>
 #lorem(50)
 ...

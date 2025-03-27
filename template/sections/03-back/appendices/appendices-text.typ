@@ -1,3 +1,4 @@
+// Ekler metnini yazınız.
 Herhangi bir eki referans göstermek: @ek-meb-izin-kağıdı.
 
 @ek-görüşme-örneği
