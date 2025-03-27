@@ -32,7 +32,7 @@
 #pagebreak()
 
 // Başka bir '.typ' uzantılı Typst dosyasındaki içeriği eklemek için "include" komutunu kullanabilirsiniz.
-#include "/template/assets/examples/math-equation-figure-example.typ"
+#include "/template/assets/examples/math-equation-example.typ"
 
 // Devamındaki içeriğin yeni bir sayfadan başlamasını sağlamak için "pagebreak()" fonksiyonunu kullanabilirsiniz.
 #pagebreak()
