@@ -56,7 +56,9 @@
   set par(
     justify: true,
     first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: true),
+    // TODO: Paragrafdaki satırlar arası boşluk olayını netleştir. [TODO: Clarify the paragraph line spacing issue.] https://practicaltypography.com/line-spacing.html
     leading: PARAGRAPH-LEADING-SIZE,
+    // TODO: Paragraflar arası boşluk olayını netleştir. [TODO: Clarify the paragraph spacing issue.] https://practicaltypography.com/space-between-paragraphs.html
     spacing: PARAGRAPH-SPACING-SIZE,
   )
 
