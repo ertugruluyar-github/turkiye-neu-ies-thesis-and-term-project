@@ -236,7 +236,7 @@
     // Tezin Ön Kısmının Stili [Style of the Front Section of Thesis]
     show: thesis-front-section-style
 
-    /* --- Ön Söz [Preface] --- */
+    /* --- Ön Söz Sayfası [Preface Page] --- */
     if (
       report-type == REPORT-TYPES.MASTER-THESIS
         or report-type == REPORT-TYPES.DOCTORAL-THESIS
@@ -299,7 +299,7 @@
       list-of-code-figures-page()
     }
 
-    /* --- Tez Çalışması Örijinallik Raporu [Originality Report] --- */
+    /* --- Tez Çalışması Örijinallik Raporu Sayfası [Originality Report Page] --- */
     if (
       report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.DOCTORAL-THESIS
     ) {
@@ -313,7 +313,7 @@
       )
     }
 
-    /* --- Bilimsel Etik Beyannamesi [Scientific Ethics Declaration] --- */
+    /* --- Bilimsel Etik Beyannamesi Sayfası [Scientific Ethics Declaration Page] --- */
     if (
       report-type == REPORT-TYPES.MASTER-THESIS
         or report-type == REPORT-TYPES.DOCTORAL-THESIS
@@ -325,7 +325,7 @@
       )
     }
 
-    /* --- Simgeler ve Kısaltmalar [Symbols and Abbreviations] --- */
+    /* --- Simgeler ve Kısaltmalar Sayfası [Symbols and Abbreviations Page] --- */
     if (
       (
         report-type == REPORT-TYPES.MASTER-THESIS
@@ -382,16 +382,16 @@
     // Tezin Ana Kısmının Stili [Style of Main Section of Thesis]
     show: thesis-main-section-style
 
-    /* ---- Bölüm 1 [Chapter 1] ---- */
+    /* ---- Bölüm 1: Giriş [Chapter 1: Introduction] ---- */
     introduction-page()
 
     /* ---- Bölüm 2: Alan Yazın (İlgi̇li̇ Araştırmalar) [Chapter 2: Literature Review] ---- */
     literature-review-page()
 
-    /* ---- Bölüm 3 [Chapter 3] ---- */
+    /* ---- Bölüm 3: Yöntem [Chapter 3: Methodology] ---- */
     methodology-page()
 
-    /* ---- Bölüm 4 [Chapter 4] ---- */
+    /* ---- Bölüm 4: Bulgular [Chapter 4: Findings] ---- */
     if (
       report-type == REPORT-TYPES.MASTER-THESIS
         or report-type == REPORT-TYPES.DOCTORAL-THESIS
@@ -400,7 +400,7 @@
       findings-page()
     }
 
-    /* ---- Bölüm 5 [Chapter 5] ---- */
+    /* ---- Bölüm 5: Tartışma, Sonuç ve Öneriler [Chapter 5: Discussion, Conclusion and Suggestions] ---- */
     if (
       report-type == REPORT-TYPES.MASTER-THESIS
         or report-type == REPORT-TYPES.DOCTORAL-THESIS
@@ -418,7 +418,7 @@
     // Tezin Arka Kısmının Stili [Style of Back Section of Thesis]
     show: thesis-back-section-style
 
-    // Çalışma takvimi
+    /* --- Çalışma Takvimi Sayfası [Work Schedule Page] --- */
     if (
       report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
     ) {
@@ -428,7 +428,7 @@
       )
     }
 
-    // Genişletilmiş Türkçe Özet
+    /* --- Genişletilmiş Türkçe Özet Sayfası [Expanded Turkish Abstract Page] --- */
     if (
       language == LANGUAGES.EN-US
         and (
@@ -446,13 +446,13 @@
       )
     }
 
-    // Kaynakça [Bibliography]
+    /* --- Kaynaklar Sayfası [References Page]  --- */
     bibliography-page()
 
-    // Ekler [Appendices]
+    /* --- Ekler Sayfası [Appendices Page]  --- */
     appendices-page()
 
-    // Özgeçmiş [Curriculum Vitae]
+    /* --- Öz Geçmiş Sayfası [Curriculum Vitae Page]  --- */
     if report-type == REPORT-TYPES.TERM-PROJECT {
       curriculum-vitae-page(
         first-name: author.first-name,
