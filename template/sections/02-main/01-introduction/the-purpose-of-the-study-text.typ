@@ -1,3 +1,2 @@
-First line #lorem(50)
-
+// Araştırmanın amacını yazınız.
 #lorem(50)

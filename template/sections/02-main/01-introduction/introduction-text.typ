@@ -1,3 +1,4 @@
+// Giriş metnini yazınız.
 Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Bir başka çalışmaya atıf yapma örneği @you_etal_2021_CloserLookUS[s. 5].
 
 Bölüme atıf yapma örneği: @bölüm-giriş
