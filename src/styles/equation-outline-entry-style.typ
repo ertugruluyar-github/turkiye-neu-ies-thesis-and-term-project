@@ -1,6 +1,9 @@
 #import "/src/styles/outline-entry-fill-style.typ": outline-entry-fill-style
 
 #let equation-outline-entry-style(content) = {
+  // Paragraflardaki boşluk ayarları. [Paragraph spacing settings.]
+  set par(leading: 1em, spacing: 1em)
+
   // Satırların içeriğindeki doldurma stili. [Outline entry content's fill style.]
   show: outline-entry-fill-style
 
