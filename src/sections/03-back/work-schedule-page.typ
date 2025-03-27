@@ -4,6 +4,7 @@
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
+// Çalışma Takvimi sayfası. [Work Schedule page.]
 #let work-schedule-page(
   report-type: none,
   work-packages: none,

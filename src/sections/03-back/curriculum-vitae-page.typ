@@ -8,6 +8,7 @@
 #import "/src/components/email-link-component.typ": email-link-component
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
 
+// Öz Geçmiş sayfası. [Curriculum Vitae page.]
 #let curriculum-vitae-page(
   first-name: none,
   last-name: none,
@@ -74,8 +75,10 @@
   // Sayfa stilini uygula. [Apply page style.]
   show: curriculum-vitae-page-style
 
+  // Başlığı ekle. [Add heading.]
   heading(level: 1, translator(key: language-keys.CURRICULUM-VITAE))
 
+  // Bir miktar boşluk bırak. [Leave a little space.]
   v(1em)
 
   // Genel Bilgiler tablosu. [General Information table.]

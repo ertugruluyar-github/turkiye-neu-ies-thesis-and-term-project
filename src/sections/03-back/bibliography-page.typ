@@ -3,11 +3,17 @@
 #import "/src/constants/language-keys.typ": language-keys
 
 #let bibliography-page() = {
+  // Kaynaklar stilini uygula. [Apply bibliography style.]
   bibliography-section-style(
+    // Kaynakları ekle. [Add references.]
     bibliography(
+      // Kaynakların olduğu .bib dosyasının yolu. [Path to the .bib file with references.]
       "/template/assets/bibliography-sources/references.bib",
+      // Kaynakların stilini ayarla. [Set bibliography style.]
       style: "american-psychological-association",
+      // Kaynaklar başlığını ekle. [Add refences title.]
       title: upper(translator(key: language-keys.BIBLIOGRAPHY)),
+      // Yalnızca atıf yapılan kaynakları göster. [Show only cited references.]
       full: false,
     ),
   )
