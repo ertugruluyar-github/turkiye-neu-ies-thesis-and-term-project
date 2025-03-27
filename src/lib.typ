@@ -16,7 +16,7 @@
 #import "/src/sections/01-front/turkish-abstract-page.typ": turkish-abstract-page
 #import "/src/sections/01-front/english-abstract-page.typ": english-abstract-page
 #import "/src/sections/02-main/introduction-page.typ": introduction-page
-#import "/src/sections/02-main/literature-page.typ": literature-page
+#import "/src/sections/02-main/literature-review-page.typ": literature-review-page
 #import "/src/sections/02-main/methodology-page.typ": methodology-page
 #import "/src/sections/02-main/findings-page.typ": findings-page
 #import "/src/sections/02-main/discussion-conclusion-and-suggestions-page.typ": (
@@ -385,8 +385,8 @@
     /* ---- Bölüm 1 [Chapter 1] ---- */
     introduction-page()
 
-    /* ---- Bölüm 2 [Chapter 2] ---- */
-    literature-page()
+    /* ---- Bölüm 2: Alan Yazın (İlgi̇li̇ Araştırmalar) [Chapter 2: Literature Review] ---- */
+    literature-review-page()
 
     /* ---- Bölüm 3 [Chapter 3] ---- */
     methodology-page()

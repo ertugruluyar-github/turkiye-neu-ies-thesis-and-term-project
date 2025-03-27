@@ -2,7 +2,7 @@
 #import "/src/constants/language-keys.typ": language-keys
 
 // Alan Yazın (İlgili Araştırmalar) sayfası. [Literature Review page.]
-#let literature-page() = [
+#let literature-review-page() = [
   // Bölüm başlığını ekle. [Add section heading.]
   #heading(level: 1, upper(translator(key: language-keys.LITERATURE-REVIEW))) <bölüm-ilgili-araştırmalar>
   // Sayfa içeriğini ekle. [Add page content.]
