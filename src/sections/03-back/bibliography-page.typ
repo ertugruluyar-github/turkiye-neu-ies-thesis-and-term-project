@@ -1,10 +1,10 @@
-#import "/src/styles/bibliography-section-style.typ": bibliography-section-style
+#import "/src/styles/bibliography-page-style.typ": bibliography-page-style
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
 #let bibliography-page() = {
   // Kaynaklar stilini uygula. [Apply bibliography style.]
-  bibliography-section-style(
+  bibliography-page-style(
     // Kaynakları ekle. [Add references.]
     bibliography(
       // Kaynakların olduğu .bib dosyasının yolu. [Path to the .bib file with references.]

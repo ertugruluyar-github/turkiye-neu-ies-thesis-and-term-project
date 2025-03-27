@@ -1,9 +1,10 @@
 #import "/src/constants/document-settings-constants.typ": PARAGRAPH-SPACING-SIZE
 
-#let bibliography-section-style(content) = {
-  // Kaynakça bölümündeki paragraf stili. [Paragraph Style in Bibliography Section]
+// Kaynaklar sayfası stili. [References page style.]
+#let bibliography-page-style(content) = {
+  // Kaynaklar saygasındaki paragraf stili. [Paragraph style in References page.]
   set par(
-    first-line-indent: (amount: 0cm, all: true),
+    first-line-indent: 0cm,
     hanging-indent: 1.25cm,
     justify: true,
     leading: 1em,
