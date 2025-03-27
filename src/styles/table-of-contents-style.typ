@@ -1,5 +1,6 @@
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
+#import "/src/styles/outline-entry-fill-style.typ": outline-entry-fill-style
 
 #let table-of-contents-style(content) = {
   // Paragraflardaki boşluk ayarları. [Paragraph spacing settings.]
@@ -13,8 +14,8 @@
     title: upper(translator(key: language-keys.TABLE-OF-CONTENTS)),
   )
 
-  // Satırların içeriğindeki doldurma stili. [Outline entry content's fill style.]
-  set outline.entry(fill: repeat(justify: true, gap: 0.1em)[.])
+  // Ana hattaki girdi satırlarının içeriğindeki doldurma stili. [Outline entry content's fill style.]
+  show: outline-entry-fill-style
 
   // Düzey 1 satırlardaki metni kalın yap. [Set Level 1 outlines' text bold.]
   show outline.entry.where(level: 1): set text(weight: "bold")
