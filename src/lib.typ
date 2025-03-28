@@ -106,7 +106,7 @@
   // Şekil figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-image-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-image-figures: false" yapınız. [To show the list of image figures on the page where the list is located, do "show-list-of-image-figures: true". To not show the list, do "show-list-of-image-figures: false".]
   show-list-of-image-figures: true,
   // Matematiksel Denklemler listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-equations: true" yapınız. Yer almasını istemiyorsanız "show-list-of-equations: false" yapınız. [To show the list of equations on the page where the list is located, do "show-list-of-equations: true". To not show the list, do "show-list-of-equations: false".]
-  show-list-of-equation-figures: true,
+  show-list-of-equations: true,
   // Kod figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-code-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-code-figures: false" yapınız. [To show the list of code figures on the page where the list is located, do "show-list-of-code-figures: true". To not show the list, do "show-list-of-code-figures: false".]
   show-list-of-code-figures: true,
   // Tez çalışmasında simgeler kullandıysanız "Simgeler" başlığındaki içeriğin teze dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik teze dahil edilmeyecektir. [To include the content of the "Symbols" heading in the thesis, do "have-symbols: true". However, if the thesis proposal is "true" or "false", the content of the "Symbols and Abbreviations" heading will not be included in the thesis.]
@@ -231,7 +231,7 @@
     keywords: keywords,
     show-list-of-table-figures: show-list-of-table-figures,
     show-list-of-image-figures: show-list-of-image-figures,
-    show-list-of-equation-figures: show-list-of-equation-figures,
+    show-list-of-equations: show-list-of-equations,
     show-list-of-code-figures: show-list-of-code-figures,
     have-symbols: have-symbols,
     have-abbreviations: have-abbreviations,
@@ -317,7 +317,7 @@
           or report-type == REPORT-TYPES.DOCTORAL-THESIS
           or report-type == REPORT-TYPES.TERM-PROJECT
       )
-        and show-list-of-equation-figures
+        and show-list-of-equations
     ) {
       list-of-equations-page()
     }
