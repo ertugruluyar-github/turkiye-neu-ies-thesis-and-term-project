@@ -33,7 +33,7 @@
       upper-case: "TEZİN İNGİLİZCE BAŞLIĞI",
     ),
   ),
-  // Yazarın adı, soyadı ve ORCID numarası.
+  // Öğrencinin adı, soyadı ve ORCID numarası.
   author: (
     first-name: "Öğrenci Adı",
     last-name: "SOYADI",
@@ -86,7 +86,7 @@
   show-list-of-table-figures: true,
   // Şekil figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-image-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-image-figures: false" yapınız.
   show-list-of-image-figures: true,
-  // Denklem figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-equation-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-equation-figures: false" yapınız.
+  // Matematiksel Denklemler listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-equations: true" yapınız. Yer almasını istemiyorsanız "show-list-of-equations: false" yapınız.
   show-list-of-equation-figures: true,
   // Kod figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-code-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-code-figures: false" yapınız.
   show-list-of-code-figures: true,
@@ -96,30 +96,40 @@
   have-abbreviations: true,
   // Tartışma, Sonuç ve Öneriler bölümünü alt başlıklara ayırarak yazmak istiyorsanız "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: true", alt başlıklar olmadan ana başlık altında yazmak istiyorsanız "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: false" yapınız.
   show-separated-sub-headings-in-discussion-conclusion-and-suggestions: true,
-  // Tez Önerisinde yer alan "Çalışma Takvimi" sayfasındaki "Çalışma Paketleri" kısmını doldurmak için her bir iş paketinizin açıklamasını ve hangi aylarda yapılacağını belirtiniz. Yüksek Lisans Tez Önerisi ise 12 aylık bir süre, Doktora Tez Önerisi ise 16 aylık bir süre için doldurulmalıdır. "report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL" ya da report-type: REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL" değilse çıktıda gözükmeyecektir.
+  // Tez Önerisinde yer alan "Çalışma Takvimi" sayfasındaki "Çalışma Paketleri" kısmını doldurmak için her bir iş paketinizin açıklamasını ve hangi aylarda yapılacağını belirtiniz. Yüksek Lisans Tez Önerisi ise 12 aylık bir süre, Doktora Tez Önerisi ise 16 aylık bir süre için doldurulmalıdır. Yalnızca "report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL" ya da report-type: REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL" olduğunda çıktıda gözükecektir.
   work-packages: (
     (
+      // İş paketinin açıklaması.
       description: "Alan Yazın taranması",
+      // İş paketinin yapılacağı aylar.
       months: (1, 2),
     ),
     (
+      // İş paketinin açıklaması.
       description: "Ölçme aracının geliştirilmesi",
+      // İş paketinin yapılacağı aylar.
       months: (2, 3, 4, 5),
     ),
     (
+      // İş paketinin açıklaması.
       description: "Ölçme aracının uygulanması",
+      // İş paketinin yapılacağı aylar.
       months: (5, 6, 7),
     ),
     (
+      // İş paketinin açıklaması.
       description: "Verilerin çözümlenmesi ve yorumlanması",
+      // İş paketinin yapılacağı aylar.
       months: (7, 8, 9),
     ),
     (
+      // İş paketinin açıklaması.
       description: "Raporun (tezin) yazılması",
+      // İş paketinin yapılacağı aylar.
       months: (9, 10, 11, 12),
     ),
   ),
-  // Dönem Projesinin sonunda yer alan "Öz Geçmiş" sayfasında yer alan bilgilerdir. "report-type: REPORT-TYPES.TERM-PROJECT" değilse gözükmeyecektir, doldurulmasına gerek yoktur.
+  // Dönem Projesinin sonunda yer alan "Öz Geçmiş" sayfasında yer alan bilgilerdir. Yalnızca "report-type: REPORT-TYPES.TERM-PROJECT" olduğunda gözükecektir, diğer durumlarda doldurulmasına gerek yoktur.
   curriculum-vitae-info: (
     birthplace: "Konya",
     birthday: datetime(day: 27, month: 11, year: 2005),
@@ -166,6 +176,7 @@
         place: "Konya",
       ),
     ),
+    // Hakkınızda bilgi alabilecekleri önerebileceğiniz şahısların bilgilerini giriniz.
     get-info-from-recommended-peoples: (
       (
         title: ACADEMIC-MEMBER-TITLES.ASSISTANT-PROFESSOR-DR,

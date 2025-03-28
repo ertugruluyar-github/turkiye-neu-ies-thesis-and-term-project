@@ -31,11 +31,17 @@
 #import "core/language-manager/language-manager.typ": init-language-manager
 
 #let template-configurations(
+  // Raporun dilini seçiniz. [Select the language of the report.]
   language: LANGUAGES.TR-TR,
+  // Ana Bilim Dalı seçiniz. [Select the department.]
   department: DEPARTMENTS.__DEPARTMENT-PLACE-HOLDER,
+  // Bilim Dalı seçiniz. [Select the program.]
   program: PROGRAMS.__PROGRAM-PLACE-HOLDER,
+  // Raporun türünü seçiniz. [Select the report type.]
   report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL,
+  // Tez önerisi ya da tezin teslim edildiği tarih. Varsayılan olarak bugünün tarihidir. Elle bir tarih girmek için "datetime(day: 20, month: 3, year: 2025)" yapınız. [The date of the thesis proposal or the date of the thesis delivery. The default is today's date. To enter a date manually, do "datetime(day: 20, month: 3, year: 2025)".]
   date: datetime.today(),
+  // Tezinizin Türkçe ve İngilizce başlığı (başlık ve hepsi büyük harf biçiminde). [The Turkish and English title of the thesis (titlecase and uppercase).]
   thesis-title: (
     tur: (
       title-case: "Thesis Title",
@@ -46,32 +52,39 @@
       upper-case: "THESIS ENGLISH TITLE",
     ),
   ),
+  // Öğrencinin adı, soyadı ve ORCID numarası. [The student's name, lastname and ORCID number.]
   author: (
     first-name: "Student's Firstname",
     last-name: "LASTNAME",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
+  // Danışmanın adı, soyadı ve ORCID numarası. [The advisor's name, lastname and ORCID number.]
   advisor: (
     academic-member-title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
     first-name: "Advisor's Firstname",
     last-name: "LASTNAME",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
+  // İkinci danışmanın adı, soyadı ve ORCID numarası. İkinci danışman yoksa "second-advisor: none" yapınız. [The second advisor's name, lastname and ORCID number. If there is no second advisor, do "second-advisor: none".]
   second-advisor: (
     academic-member-title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
     first-name: "Second Advisor's Firstname",
     last-name: "LASTNAME",
     orcid: "xxxx-xxxx-xxxx-xxxx",
   ),
+  // Tez çalışması destekleyen kuruluşun adı ve projenin numarası. Tez çalışması destekleyen herhangi bir kuruluş yoksa "thesis-study-funding-organization: none" yapınız. [The name and project number of the organization supporting the thesis study. If there is no organization supporting the thesis study, do "thesis-study-funding-organization: none".]
   thesis-study-funding-organization: (
     name: "Name of the Funding Organization Supporting the Thesis Study",
     project-no: "Project No",
   ),
+  // Tez çalışmasının orijinallik bilgisi. Örneğin Turnitin yazılımında tezin 78 sayfası taratıldı ve benzerlik oranı %17 çıktıysa "included-page-count: 78" ve "similarity-score: 17" şeklindedir. [The originality information of the thesis study. For example, if the thesis has 78 pages scanned in the Turnitin software and the similarity score is %17, it is "included-page-count: 78" and "similarity-score: 17".]
   thesis-originalty: (
     included-page-count: 1,
     similarity-score: 0,
   ),
+  // Tez çalışmasının Türkçe ve İngilizce anahtar kelimeleri. Anahtar kelimelerin ilk harfi büyük diğer harfleri küçük olmalıdır. En az 3 adet ve en fazla 5 adet olmalıdır. [The Turkish and English keywords of the thesis study. The first letter of the keywords must be uppercase and the other letters must be lowercase. There must be at least 3 and at most 5 keywords.]
   keywords: (
+    // Tez çalışmasının Türkçe anahtar kelimeleri. [The Turkish keywords of the thesis study.]
     tur: (
       "Anahtar kelime 1",
       "Anahtar kelime 2",
@@ -79,6 +92,7 @@
       "Anahtar kelime 4",
       "Anahtar kelime 5",
     ),
+    // Tez çalışmasının İngilizce anahtar kelimeleri. [The English keywords of the thesis study.]
     eng: (
       "Keyword 1",
       "Keyword 2",
@@ -87,35 +101,54 @@
       "Keyword 5",
     ),
   ),
+  // Tablo figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-table-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-table-figures: false" yapınız. [To show the list of table figures on the page where the list is located, do "show-list-of-table-figures: true". To not show the list, do "show-list-of-table-figures: false".]
   show-list-of-table-figures: true,
+  // Şekil figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-image-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-image-figures: false" yapınız. [To show the list of image figures on the page where the list is located, do "show-list-of-image-figures: true". To not show the list, do "show-list-of-image-figures: false".]
   show-list-of-image-figures: true,
+  // Matematiksel Denklemler listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-equations: true" yapınız. Yer almasını istemiyorsanız "show-list-of-equations: false" yapınız. [To show the list of equations on the page where the list is located, do "show-list-of-equations: true". To not show the list, do "show-list-of-equations: false".]
   show-list-of-equation-figures: true,
+  // Kod figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-code-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-code-figures: false" yapınız. [To show the list of code figures on the page where the list is located, do "show-list-of-code-figures: true". To not show the list, do "show-list-of-code-figures: false".]
   show-list-of-code-figures: true,
+  // Tez çalışmasında simgeler kullandıysanız "Simgeler" başlığındaki içeriğin teze dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik teze dahil edilmeyecektir. [To include the content of the "Symbols" heading in the thesis, do "have-symbols: true". However, if the thesis proposal is "true" or "false", the content of the "Symbols and Abbreviations" heading will not be included in the thesis.]
   have-symbols: true,
+  // Tez çalışmasında kısaltmalar kullandıysanız "Kısaltmalar" başlığındaki içeriğin teze dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik teze dahil edilmeyecektir. [To include the content of the "Abbreviations" heading in the thesis, do "have-abbreviations: true". However, if the thesis proposal is "true" or "false", the content of the "Symbols and Abbreviations" heading will not be included in the thesis.]
   have-abbreviations: true,
+  // Tartışma, Sonuç ve Öneriler bölümünü alt başlıklara ayırarak yazmak istiyorsanız "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: true", alt başlıklar olmadan ana başlık altında yazmak istiyorsanız "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: false" yapınız. [To write the Discussion, Conclusion and Suggestions section in subheadings, do "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: true". To write the section in the main heading without subheadings, do "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: false".]
   show-separated-sub-headings-in-discussion-conclusion-and-suggestions: true,
+  // Tez Önerisinde yer alan "Çalışma Takvimi" sayfasındaki "Çalışma Paketleri" kısmını doldurmak için her bir iş paketinizin açıklamasını ve hangi aylarda yapılacağını belirtiniz. Yüksek Lisans Tez Önerisi ise 12 aylık bir süre, Doktora Tez Önerisi ise 16 aylık bir süre için doldurulmalıdır. Yalnızca "report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL" ya da report-type: REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL" olduğunda çıktıda gözükecektir. [To fill in the "Work Packages" section of the "Work Schedule" page of the thesis proposal, specify the description of each work package and when it will be done. The Master's thesis proposal is for 12 months and the doctoral thesis proposal is for 16 months. It will only appear in the output when report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type: REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL.]
   work-packages: (
     (
+      // İş paketinin açıklaması. [The description of the work package.]
       description: "Description 1",
+      // İş paketinin yapılacağı aylar. [The months when the work package will be done.]
       months: (1, 2),
     ),
     (
+      // İş paketinin açıklaması. [The description of the work package.]
       description: "Description 2",
+      // İş paketinin yapılacağı aylar. [The months when the work package will be done.]
       months: (2, 3, 4, 5),
     ),
     (
+      // İş paketinin açıklaması. [The description of the work package.]
       description: "Description 3",
+      // İş paketinin yapılacağı aylar. [The months when the work package will be done.]
       months: (5, 6, 7),
     ),
     (
+      // İş paketinin açıklaması. [The description of the work package.]
       description: "Description 4",
+      // İş paketinin yapılacağı aylar. [The months when the work package will be done.]
       months: (7, 8, 9),
     ),
     (
+      // İş paketinin açıklaması. [The description of the work package.]
       description: "Description 5",
+      // İş paketinin yapılacağı aylar. [The months when the work package will be done.]
       months: (9, 10, 11, 12),
     ),
   ),
+  // Dönem Projesinin sonunda yer alan "Öz Geçmiş" sayfasında yer alan bilgilerdir. Yalnızca "report-type: REPORT-TYPES.TERM-PROJECT" olduğunda gözükecektir, diğer durumlarda doldurulmasına gerek yoktur. [Information in the "Curriculum Vitae" page at the end of the term project. It will only appear when report-type: REPORT-TYPES.TERM-PROJECT, otherwise it does not need to be filled.]
   curriculum-vitae-info: (
     birthplace: "Konya",
     birthday: datetime.today(),
@@ -145,6 +178,7 @@
       "Skill 1",
       "Skill 2",
     ),
+    // İş deneyimlerinizi geçmişten günümüze doğru sırayla giriniz. [Enter your work experiences in order from the past to the present.]
     work-experiences: (
       (
         start-date: datetime(day: 1, month: 3, year: 2030),
@@ -161,6 +195,7 @@
         place: "Konya",
       ),
     ),
+    // Hakkınızda bilgi alabilecekleri önerebileceğiniz şahısların bilgilerini giriniz. [Enter the information of the people who can provide information about you.]
     get-info-from-recommended-peoples: (
       (
         title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
