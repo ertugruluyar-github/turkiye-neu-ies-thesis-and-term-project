@@ -1,7 +1,31 @@
-// Şablonu çevrim içi kullanmak.
-//#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *
-// Şablonu çevrim dışı kullanmak.
-//#import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": *
+/* ---- Şablonu Çevrim İçi Kullanmak ---- */
+// Şablonu [Typst.app](https://typst.app/) web sitesinden kullanıyorsanız:
+/*
+#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+  template-configurations,
+  LANGUAGES,
+  REPORT-TYPES,
+  DEPARTMENTS,
+  PROGRAMS,
+  ACADEMIC-MEMBER-TITLES,
+)
+*/
+
+/* ---- Şablonu Çevrim Dışı Kullanmak ---- */
+
+// Şablonu [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) Visual Studio Code uzantısıyla kullanıyorsanız:
+/*
+#import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+  template-configurations,
+  LANGUAGES,
+  REPORT-TYPES,
+  DEPARTMENTS,
+  PROGRAMS,
+  ACADEMIC-MEMBER-TITLES,
+)
+*/
+
+// Şablonu [GitHub Reposu]() üzerinden manuel olarak indirerek kullanıyorsanız: // TODO: GitHub reposu public yapılınca bağlantısı eklenecek.
 #import "/src/lib.typ": (
   template-configurations,
   LANGUAGES,
@@ -19,7 +43,7 @@
   // Bilim Dalı seçiniz.
   program: PROGRAMS.MATHEMATICS-EDUCATION-PROGRAM,
   // Raporun türünü seçiniz.
-  report-type: REPORT-TYPES.TERM-PROJECT,
+  report-type: REPORT-TYPES.DOCTORAL-THESIS,
   // Tez önerisi ya da tezin teslim edildiği tarih. Varsayılan olarak bugünün tarihidir. Elle bir tarih girmek için "datetime(day: 20, month: 3, year: 2025)" yapınız.
   date: datetime.today(),
   // Tezinizin Türkçe ve İngilizce başlığı (başlık ve hepsi büyük harf biçiminde).
