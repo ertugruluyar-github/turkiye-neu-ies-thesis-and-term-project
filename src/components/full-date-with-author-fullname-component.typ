@@ -2,7 +2,10 @@
 #import "/src/components/date-component.typ": date-component
 #import "/src/constants/date-constants.typ": FULL-DATE-FORMAT
 
-// Tarihi ekler ve bunun altına da yeni bir satıra yazar adı ve soyadını ekler. [Adds the date and then adds the author's first name and last name below it.]
+// Tarihi ekler ve bunun altına da yeni bir satıra yazar adı ve soyadını ekler. [Adds the date and then adds the author's first name and last name below it.]\
+/* Örnek [Example]:\
+  [15/03/2025]\n[Öğrenci Adı SOYADI]
+*/
 #let full-date-with-author-fullname-component(
   author: none,
   date: none,

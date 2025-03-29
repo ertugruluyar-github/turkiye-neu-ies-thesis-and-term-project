@@ -1,7 +1,10 @@
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
-// Organizasyon bilgisi başlığı. [Organization information heading.]
+// Organizasyon bilgisi başlığı. [Organization information heading.]\
+/* Örnek [Example]:\
+  [Ülke Adı]\n[Üniversite Adı]\n[Enstitü Adı]
+*/
 #let organization-info-heading-component() = {
   // Yazı kalın yap. [Bold the text.]
   set text(weight: "bold")

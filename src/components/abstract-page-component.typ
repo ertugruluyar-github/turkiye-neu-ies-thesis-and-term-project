@@ -3,7 +3,10 @@
 #import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/keywords-component.typ": keywords-component
 
-// Özet sayfasının yapısını belirleyen fonksiyon. [Function that defines the structure of the abstract page.]
+// Özet sayfasının yapısını belirleyen fonksiyon. [Function that defines the structure of the abstract page.]\
+/* Örnek [Example]:\
+  [*ÖZET*]\n[Üniversite Adı, Enstitü Adı]\n[Ana Bilim Dalı]\n[Bilim Dalı]\n[Tez Türü]\n[*TEZİN BAŞLIĞI*]\n[Öğrenci Adı SOYADI]\n[Özet Metni]\n[*Anahtar Kelimeler:* Anahtar kelime 1, Anahtar kelime 2, Anahtar kelime 3]
+*/
 #let abstract-page-component(
   page-title: none,
   university-name: none,

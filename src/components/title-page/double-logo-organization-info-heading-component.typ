@@ -5,7 +5,10 @@
 )
 #import "/src/components/title-page/organization-info-heading-component.typ": organization-info-heading-component
 
-// Çift logolu başlık. [Double logo heading.]
+// Çift logolu başlık. [Double logo heading.]\
+/* Örnek [Example]:\
+  |[Üniversite Logosu]| |[Ülke Adı]\n[Üniversite Adı]\n[Enstitü Adı]| |[Enstitü Logosu]|
+*/
 #let double-logo-organization-info-heading-component(
   language: none,
 ) = {

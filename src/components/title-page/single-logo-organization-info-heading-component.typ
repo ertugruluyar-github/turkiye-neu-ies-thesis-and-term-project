@@ -2,7 +2,10 @@
 #import "/src/constants/path-constants.typ": INSTITUTE-LOGO-PATH
 #import "/src/components/title-page/organization-info-heading-component.typ": organization-info-heading-component
 
-// Tek logolu başlık. [Single logo heading.]
+// Tek logolu başlık. [Single logo heading.]\
+/* Örnek [Example]:\
+  |[Enstitü Logosu]|\n|[Ülke Adı]\n[Üniversite Adı]|\n|[Enstitü Adı]|
+*/
 #let single-logo-organization-info-heading-component(
   language: none,
 ) = {

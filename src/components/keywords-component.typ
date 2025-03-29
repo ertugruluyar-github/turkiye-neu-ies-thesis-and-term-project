@@ -1,4 +1,5 @@
-// Anahtar kelime dizisini aralarında virgül koyarak birleştirip Özet metninin sonunda yer alan anahtar kelimeler kısmını oluşturan bileşen fonksiyonudur. [A function that joins the keyword array with commas and creates the keywords section in the abstract.]
+// Anahtar kelime dizisini aralarında virgül koyarak birleştirip Özet metninin sonunda yer alan anahtar kelimeler kısmını oluşturan bileşen fonksiyonudur. [A function that joins the keyword array with commas and creates the keywords section in the abstract.]\
+// Örnek [Example]: [*Anahtar Kelimeler:* Anahtar kelime 1, Anahtar kelime 2, Anahtar kelime 3]
 #let keywords-component(
   keywords-title: none,
   keywords: none,

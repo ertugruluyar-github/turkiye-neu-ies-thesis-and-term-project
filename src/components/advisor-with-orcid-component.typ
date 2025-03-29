@@ -1,7 +1,10 @@
 #import "/src/components/fullname-with-title-component.typ": fullname-with-title-component
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
 
-// Danışmanın ünvanı, adı ve soyadını ve bunun altına da yeni bir satıra ORCID numarasını ekler. [Adds the title, first name, and last name of the advisor, and then adds the ORCID number below them.]
+// Danışmanın ünvanı, adı ve soyadını ve bunun altına da yeni bir satıra ORCID numarasını ekler. [Adds the title, first name, and last name of the advisor, and then adds the ORCID number below them.]\
+/* [Örnek]:\
+  [Öğretim Üyesi Ünvanı] [Adı SOYADI]\n[ORCID N]
+*/
 #let advisor-with-orcid-component(
   advisor: none,
 ) = {
