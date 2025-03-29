@@ -178,7 +178,7 @@
       "Skill 1",
       "Skill 2",
     ),
-    // İş deneyimlerinizi geçmişten günümüze doğru sırayla giriniz. [Enter your work experiences in order from the past to the present.]
+    // İş deneyimlerinizi geçmişten günümüze doğru sırayla giriniz. Otomatik olarak sıralanıyor ancak kod ile çıktı arasındaki uyumu sağlayarak daha okunur bir kod yazabilirsiniz. [Enter your work experiences in order from the past to the present. It is automatically sorted, but you can write more readable code by ensuring the consistency between the code and the output.]
     work-experiences: (
       (
         start-date: datetime(day: 1, month: 3, year: 2030),

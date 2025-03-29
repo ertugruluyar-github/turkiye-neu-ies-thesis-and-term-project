@@ -194,7 +194,7 @@
       "Beceri 1",
       "Beceri 2",
     ),
-    // İş deneyimlerinizi geçmişten günümüze doğru sırayla giriniz.
+    // İş deneyimlerinizi geçmişten günümüze doğru sırayla giriniz. Otomatik olarak sıralanıyor ancak kod ile çıktı arasındaki uyumu sağlayarak daha okunur bir kod yazabilirsiniz.
     work-experiences: (
       (
         start-date: datetime(day: 1, month: 3, year: 2012),
