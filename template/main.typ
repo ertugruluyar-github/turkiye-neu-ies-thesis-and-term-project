@@ -1,5 +1,14 @@
-/* ---- Şablonu Çevrim İçi Kullanmak ---- */
-// Şablonu [Typst.app](https://typst.app/) web sitesinden kullanıyorsanız:
+/* ---- ŞABLONU ÇEVRİM İÇİ KULLANMAK ---- */
+
+/* --- Şablonu [Typst.app](https://typst.app/) Web Sitesinden Kullanmak --- */
+
+// Bu durumda internete her zaman bağlı olmanız gerekmektedir.
+
+/* --- Şablonu [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) Visual Studio Code Uzantısıyla Kullanmak --- */
+
+// Bu durumda, ilk defa şablonu indirirken internete ihtiyaç vardır. İlk indirme işleminden sonra internete bağlı olmadan kullanılabilir ve şablonun farklı bir sürümünü indirmek veya yeni bir sürümüne geçmek istediğinizde anlık olarak internete ihtiyaç vardır. Sonrasında internete bağlı olmadan kullanmaya devam edilebilir.
+
+// Şablonu yukarıda bahsedilen araçlarla çevrim içi kullanmak için aşağıdaki gibi içe aktarma yapabilirsiniz:
 /*
 #import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
   template-configurations,
@@ -11,9 +20,11 @@
 )
 */
 
-/* ---- Şablonu Çevrim Dışı Kullanmak ---- */
+/* ---- ŞABLONU ÇEVRİM DIŞI KULLANMAK ---- */
 
-// Şablonu [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) Visual Studio Code uzantısıyla kullanıyorsanız:
+// Şablonu çevrim dışı kullanmak için [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) Visual Studio Code uzantısını kullanabilirsiniz.
+
+// Şablonu [adresindeki](https://github.com/typst/packages/?tab=readme-ov-file#local-packages) bahsedilen konuma indirerek kullanıyorsanız aşağıdaki gibi içe aktarma yapabilirsiniz:
 /*
 #import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
   template-configurations,
@@ -25,7 +36,7 @@
 )
 */
 
-// Şablonu [GitHub Reposu]() üzerinden manuel olarak indirerek kullanıyorsanız: // TODO: GitHub reposu public yapılınca bağlantısı eklenecek.
+// Şablonu, şablonun bütün dosyalarının bulunduğu [GitHub Reposu]() üzerinden manuel olarak bilgisayarınızda istediğiniz herhangi bir konuma indirerek kullanıyorsanız aşağıdaki gibi içe aktarma yapabilirsiniz: // TODO: GitHub reposu public yapılınca bağlantısı eklenecek.
 #import "/src/lib.typ": (
   template-configurations,
   LANGUAGES,
