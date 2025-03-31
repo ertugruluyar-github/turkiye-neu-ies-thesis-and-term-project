@@ -1,4 +1,7 @@
-#import "/src/constants/document-settings-constants.typ": PARAGRAPH-FIRST-LINE-INDENT, PARAGRAPH-LEADING-SIZE
+#import "/src/constants/document-settings-constants.typ": (
+  PARAGRAPH-FIRST-LINE-INDENT,
+  ONE-AND-HALF-LINE-PARAGRAPH-LEADING-SIZE,
+)
 
 // Alıntı içeriği. [Quotation content.]
 #let _quotation-content(quotation: none) = (
@@ -42,7 +45,7 @@
   // Satır içi alıntılardaki satır aralığı. [Line spacing of in-line quotations.]
   show quote.where(block: true): set par(
     first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: false),
-    leading: PARAGRAPH-LEADING-SIZE,
+    leading: ONE-AND-HALF-LINE-PARAGRAPH-LEADING-SIZE,
   )
 
   content
