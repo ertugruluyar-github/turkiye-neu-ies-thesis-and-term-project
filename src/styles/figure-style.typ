@@ -1,4 +1,4 @@
-#import "/src/constants/document-settings-constants.typ": ALTERNATE-FONT-SIZE
+#import "/src/constants/document-settings-constants.typ": ALTERNATE-FONT-SIZE, SINGLE-LINE-PARAGRAPH-LEADING-SIZE
 #import "/src/constants/separator-constants.typ": FIGURE-CAPTION-SEPARATOR
 #import "/src/constants/numbering-constants.typ": FIGURE-NUMBERING
 #import "/src/core/language-manager/language-manager.typ": translator
@@ -57,6 +57,7 @@
   // Figür başlıklarının stili. [Figure caption style.]
   show figure.caption: it => {
     set text(size: ALTERNATE-FONT-SIZE)
+    set par(leading: SINGLE-LINE-PARAGRAPH-LEADING-SIZE)
     (
       text(
         weight: "bold",

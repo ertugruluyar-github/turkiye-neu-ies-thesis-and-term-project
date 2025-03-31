@@ -1,4 +1,4 @@
-#import "/src/constants/document-settings-constants.typ": ALTERNATE-FONT-SIZE
+#import "/src/constants/document-settings-constants.typ": ALTERNATE-FONT-SIZE, SINGLE-LINE-PARAGRAPH-LEADING-SIZE
 
 // Tablo stili. [Table style.]
 #let table-style(content) = {
@@ -27,7 +27,7 @@
     first-line-indent: 0cm,
     hanging-indent: 0cm,
     justify: false,
-    leading: 0.5em,
+    leading: SINGLE-LINE-PARAGRAPH-LEADING-SIZE,
   )
 
   // Tablo içerisindeki yazı ayarlarını ayarla. [Set text settings in the table.]

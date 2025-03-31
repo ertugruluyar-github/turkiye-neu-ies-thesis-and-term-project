@@ -47,6 +47,22 @@
     hyphenate: false,
     style: "normal",
     weight: DEFAULT-TEXT-FONT-WEIGHT,
+    /*
+    Typst varsayılanınını Office 365 Word'deki gibi ayarla.\
+    Paragraflardaki satırlar arası boşluk miktarı.\
+    Office 365 Word'deki 1 satırlık boşluğu ayarı için öncelikle Word'ün aradaki boşluğu hesaplamak için kullandığı noktalar olan `top-edge: "ascender"` ve `bottom-edge: "descender"` yapılır. Word, ilk satırın üst sınırı ile sonraki satırın üst sınırı arasındaki mesafeye göre hesap yaparken Typst ilk satırın alt sınırı ile sonraki satırın üst sınırı arasındaki mesafeye göre hesap yapmaktadır. Word'deki 1 satırlık boşluğu font büyüklüğünün %117 olacak şekilde belirlenmektedir (1,5 satırlık boşluk için %175, 2 satırlık yani çift satırlık boşluk için %233.). Typst'daki hesaplama farklılığından dolayı 1 karakter boyu kadar yani %100 düşüldüğünde yani %17 (0.17em) olarak ayrlandığı taktirde Word'deki 1 satır aralığı elde edilir. Diğerleri için de benzer bir hesap yapılır.\
+    [Set Typst default to Office 365 Word's.]\
+    [Space between lines in the paragraph.\
+    To set the 1 line space in Office 365 Word, first the `top-edge: "ascender"` and `bottom-edge: "descender"` are set. Word calculates the distance between the top of the first line and the top of the second line, while Typst calculates the distance between the bottom of the first line and the top of the second line. The 1 line space in Word is determined as 117% of the font size (1.5 line space is 175%, 2 lines is 233%). Because of the calculation difference, when 1 character width is subtracted (100%), it is 17% (0.17em) and the 1 line space in Word is obtained. Similar calculations are made for others.]
+
+    Kaynaklar [Sources]:
+    - https://practicaltypography.com/line-spacing.html
+    - https://forum.typst.app/t/getting-office-365-word-line-spacing-in-typst/3422
+    - https://github.com/typst/typst/issues/159#issuecomment-1609939896
+    - https://github.com/typst/typst/issues/4224#issuecomment-2755827083
+    */
+    top-edge: "ascender",
+    bottom-edge: "descender",
   )
 
   // Başlık ayarlarını ayarla. [Set heading settings.]
@@ -63,7 +79,6 @@
   set par(
     justify: true,
     first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: true),
-    // TODO: Paragrafdaki satırlar arası boşluk olayını netleştir. [TODO: Clarify the paragraph line spacing issue.] https://practicaltypography.com/line-spacing.html
     leading: ONE-AND-HALF-LINE-PARAGRAPH-LEADING-SIZE,
     // TODO: Paragraflar arası boşluk olayını netleştir. [TODO: Clarify the paragraph spacing issue.] https://practicaltypography.com/space-between-paragraphs.html
     spacing: PARAGRAPH-SPACING-SIZE,
