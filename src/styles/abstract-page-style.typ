@@ -1,4 +1,4 @@
-#import "/src/constants/document-settings-constants.typ": ABSTRACT-TEXT-FONT-SIZE
+#import "/src/constants/document-settings-constants.typ": ABSTRACT-TEXT-FONT-SIZE, SINGLE-LINE-PARAGRAPH-LEADING-SIZE
 
 // Özet sayfası stili. [Abstract page style.]
 #let abstract-page-style(content) = {
@@ -7,7 +7,7 @@
 
   // Paragraf boşluklarını ayarla. [Set paragraph spacing.]
   set par(
-    leading: 1em,
+    leading: SINGLE-LINE-PARAGRAPH-LEADING-SIZE,
     spacing: 1em,
   )
 
