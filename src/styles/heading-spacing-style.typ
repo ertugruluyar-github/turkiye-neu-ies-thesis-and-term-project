@@ -2,16 +2,19 @@
 
 // Başlıklardaki boşluk stili. [Heading spacing style.]
 #let heading-spacing-style(content) = {
-  // 1.5 satır aralığı yapmak için 0.5 satır aralığı kadar boşluk eklendi ve paragrafdan sonraki boşluk eklendi. NOT: 1em = FONT-SIZE = 12pt ve buna 0.5em eklenerek 1.5 satır aralığı başlığa uygulanmış oldu. [For make 1.5 line spacing, 0.5 line spacing was added and paragraph spacing was added. NOTE: 1em = FONT-SIZE = 12pt and 0.5em was added to make 1.5 line spacing applied to the heading.]
-  show heading.where(level: 1): set block(above: 0pt, below: 0.5em + PARAGRAPH-SPACING-SIZE)
+  // Başlıkların paragrafındaki satırlar arasındaki boşluk miktari 1.5 satır aralığı olacak şekilde ayarlandı. [The line spacing between the lines in the heading's paragraph is set to 1.5 line spacing.]
+  show heading: set par(leading: 0.75em)
 
-  // Başlığın üstünde, 1.5 satır aralığı yapmak için 0.5 satır aralığı kadar boşluk + paragrafdan sonraki boşluk miktarı kadar boşluk eklendi. Başlığın altında 1.5 satır aralığı yapmak için 0.5 satır aralığı kadar boşluk eklendi. [Above the heading, 0.5 line spacing was added for 1.5 line spacing + paragraph spacing was added. Below the heading, 0.5 line spacing was added for 1.5 line spacing.]
+  // 1. düzey başlıklardan önce boşluk yok ve sonrasında 12pt boşluk var. [There is no space before level 1 headings and 12pt space after.]
+  show heading.where(level: 1): set block(above: 0pt, below: PARAGRAPH-SPACING-SIZE + 0.5em)
+
+  // Başlıktan önceki paragraftan sonra Word'de olduğu gibi boşluk bırakılmadığı için o boşluk burada eklendi. Başlıktan sonraki ilk paragrafında satırlar arasındaki boşluğu 1,5 satır aralığı olduğu ama Word'de olduğu gibi boşluk bırakılmadığı için o boşluk burada eklendi. [The space between the paragraphs in the Word is not left blank, so this space is added. The space between the lines in the first paragraph after the heading is 1.5 line spacing, but the space is not left blank as in Word, so this space is added.]
   show heading
     .where(level: 2)
     .or(heading.where(level: 3))
     .or(heading.where(level: 4))
     .or(heading.where(level: 5))
-    .or(heading.where(level: 6)): set block(above: 0.5em + PARAGRAPH-SPACING-SIZE, below: 0.5em)
+    .or(heading.where(level: 6)): set block(above: PARAGRAPH-SPACING-SIZE, below: 0.5em)
 
   content
 }

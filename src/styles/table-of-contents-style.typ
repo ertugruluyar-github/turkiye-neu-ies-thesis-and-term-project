@@ -3,9 +3,6 @@
 #import "/src/styles/outline-entry-fill-style.typ": outline-entry-fill-style
 
 #let table-of-contents-style(content) = {
-  // Paragraflardaki boşluk ayarları. [Paragraph spacing settings.]
-  set par(leading: 1em, spacing: 1em)
-
   // Ana hat ayarları. [Outline settings.]
   set outline(
     depth: 3,

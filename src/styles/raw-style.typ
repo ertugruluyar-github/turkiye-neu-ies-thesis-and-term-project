@@ -1,4 +1,8 @@
-#import "/src/constants/document-settings-constants.typ": ALTERNATE-FONT-SIZE-2, PARAGRAPH-SPACING-SIZE
+#import "/src/constants/document-settings-constants.typ": (
+  ALTERNATE-FONT-SIZE-2,
+  SINGLE-LINE-PARAGRAPH-LEADING-SIZE,
+  PARAGRAPH-SPACING-SIZE,
+)
 
 // Ham/Kod stili. [Raw/Code style.]
 #let raw-style(content) = {
@@ -15,7 +19,7 @@
       first-line-indent: 0cm,
       hanging-indent: 0cm,
       justify: false,
-      leading: 1em,
+      leading: SINGLE-LINE-PARAGRAPH-LEADING-SIZE,
       spacing: PARAGRAPH-SPACING-SIZE,
     )
 

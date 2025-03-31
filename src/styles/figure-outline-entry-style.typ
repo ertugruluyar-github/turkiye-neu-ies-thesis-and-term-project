@@ -1,11 +1,9 @@
+#import "/src/constants/document-settings-constants.typ": SINGLE-LINE-PARAGRAPH-LEADING-SIZE
 #import "/src/constants/separator-constants.typ": FIGURE-OUTLINE-ENTRY-PREFIX-SEPARATOR
 #import "/src/styles/outline-entry-fill-style.typ": outline-entry-fill-style
 
 // Şekiller listesinin girdilerinin stili. [Style of the entries of the figures lists.]
 #let figure-outline-entry-style(content) = {
-  // Paragraflardaki boşluk ayarları. [Paragraph spacing settings.]
-  set par(leading: 1em, spacing: 1em)
-
   // Ana hattaki girdi satırlarının içeriğindeki doldurma stili. [Outline entry content's fill style.]
   show: outline-entry-fill-style
 

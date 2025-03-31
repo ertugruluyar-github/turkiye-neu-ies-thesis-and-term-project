@@ -13,8 +13,6 @@
   set par(
     first-line-indent: 0cm,
     justify: false,
-    leading: 1em,
-    spacing: 1.5em,
   )
 
   // Tablo ayarlarını ayarla. [Set table settings.]
