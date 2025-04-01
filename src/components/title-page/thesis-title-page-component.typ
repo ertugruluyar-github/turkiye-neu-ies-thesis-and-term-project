@@ -39,19 +39,19 @@
   department
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(0.5cm)
+  v(0.2cm)
 
   // Bilim Dalı bilgisi. [Program information.]
   program
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1.5cm)
+  v(1.3cm)
 
   /// Rapor türü bilgisi. [Report type information.]
   report-type
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(2.75cm)
+  v(2.35cm)
 
   // Dile göre tez başlığını seç. [Select the thesis title according to the language.]
   let thesis-title = if language == LANGUAGES.TR-TR {
@@ -63,7 +63,7 @@
   thesis-title-text-component(thesis-title: thesis-title)
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(2.5cm)
+  v(2.35cm)
 
   // Yazar bilgilerini ekle. [Add author information.]
   fullname-component(first-name: author.first-name, last-name: author.last-name)
@@ -79,7 +79,7 @@
   advisor-with-orcid-component(advisor: advisor)
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1cm)
+  v(0.8cm)
 
   // Rapor türüne ve ikinci danışmanın olup olmamasına göre ikinci danışman bilgilerini ekle. [Add second advisor information according to the report type and whether there is a second advisor or not.]
   if second-advisor != none {
@@ -89,11 +89,11 @@
     advisor-with-orcid-component(advisor: second-advisor)
   } else {
     // Bir miktar boşluk bırak. [Leave some space.]
-    v(1.5cm)
+    v(1.75cm)
   }
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1.5cm)
+  v(1cm)
 
   // Rapor türüne ve tez çalışmasını destekleyen kuruluş olup olmamasına göre tez çalışmasını destekleyen kuruluş bilgilerini ekle. [Add thesis study funding organization information according to the report type and whether there is a thesis study funding organization or not.]
   if thesis-study-funding-organization != none {
@@ -104,10 +104,10 @@
     )
 
     // Bir miktar boşluk bırak. [Leave some space.]
-    v(0.5cm)
+    v(0.2cm)
   } else {
     // Bir miktar boşluk bırak. [Leave some space.]
-    v(1cm)
+    v(1.3cm)
   }
 
   // Şehir adı ve yıl bilgisini ekle. [Add city name and year information.]

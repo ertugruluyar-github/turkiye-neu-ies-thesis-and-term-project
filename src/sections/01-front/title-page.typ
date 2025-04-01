@@ -3,7 +3,7 @@
 #import "/src/components/title-page/thesis-title-page-component.typ": thesis-title-page-component
 #import "/src/components/title-page/term-project-title-page-component.typ": term-project-title-page-component
 
-//TODO: Üç başlık sayafasının boşluk miktarlarını ayarla.
+//TODO: Üç başlık sayafasının boşluk miktarlarını kıyaslayarak kontrol et.
 // Kapak sayfası. [Title page.]
 #let title-page(
   language: none,

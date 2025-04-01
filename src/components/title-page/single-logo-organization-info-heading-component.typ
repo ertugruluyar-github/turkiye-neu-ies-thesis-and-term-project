@@ -31,5 +31,5 @@
   )
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1.25cm)
+  v(1.5cm)
 }
