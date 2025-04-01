@@ -1,4 +1,4 @@
-#import "/src/constants/document-settings-constants.typ": PARAGRAPH-SPACING-SIZE
+#import "/src/constants/document-settings-constants.typ": DEFAULT-PARAGRAPH-SPACING-SIZE
 #import "/src/constants/numbering-constants.typ": HEADING-NUMBERING
 #import "/src/styles/heading-spacing-style.typ": heading-spacing-style
 #import "/src/core/language-manager/language-manager.typ": translator
@@ -45,7 +45,7 @@
         ]
         #chapter-heading-prefix \
         // 1.5 satır aralığı (1em karakterin kendisi + 0.5em) ve paragraflar arası boşluk miktarı kadar boşluk eklendi.
-        #v(0.5em + PARAGRAPH-SPACING-SIZE)
+        #v(0.5em + DEFAULT-PARAGRAPH-SPACING-SIZE)
       ]
     }
     it

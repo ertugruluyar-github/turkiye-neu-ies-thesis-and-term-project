@@ -1,7 +1,7 @@
 #import "/src/constants/document-settings-constants.typ": (
   ALTERNATE-FONT-SIZE-2,
   SINGLE-LINE-PARAGRAPH-LEADING-SIZE,
-  PARAGRAPH-SPACING-SIZE,
+  DEFAULT-PARAGRAPH-SPACING-SIZE,
 )
 
 // Ham/Kod stili. [Raw/Code style.]
@@ -20,7 +20,7 @@
       hanging-indent: 0cm,
       justify: false,
       leading: SINGLE-LINE-PARAGRAPH-LEADING-SIZE,
-      spacing: PARAGRAPH-SPACING-SIZE,
+      spacing: DEFAULT-PARAGRAPH-SPACING-SIZE,
     )
 
     // Ham/Kod satırlarını ayarla. [Set raw/code lines.]

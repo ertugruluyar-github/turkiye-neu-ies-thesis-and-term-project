@@ -81,7 +81,7 @@
     first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: true),
     leading: ONE-AND-HALF-LINE-PARAGRAPH-LEADING-SIZE,
     // TODO: Paragraflar arası boşluk olayını netleştir. [TODO: Clarify the paragraph spacing issue.] https://practicaltypography.com/space-between-paragraphs.html
-    spacing: PARAGRAPH-SPACING-SIZE,
+    spacing: DEFAULT-PARAGRAPH-SPACING-SIZE,
   )
 
   /* ---- Matematiksel Denklem Stili [Math Equation Style] ---- */

@@ -1,4 +1,7 @@
-#import "/src/constants/document-settings-constants.typ": PARAGRAPH-SPACING-SIZE, SINGLE-LINE-PARAGRAPH-LEADING-SIZE
+#import "/src/constants/document-settings-constants.typ": (
+  DEFAULT-PARAGRAPH-SPACING-SIZE,
+  SINGLE-LINE-PARAGRAPH-LEADING-SIZE,
+)
 
 // Kaynaklar sayfası stili. [References page style.]
 #let bibliography-page-style(content) = {
@@ -8,7 +11,7 @@
     hanging-indent: 1.25cm,
     justify: true,
     leading: SINGLE-LINE-PARAGRAPH-LEADING-SIZE,
-    spacing: PARAGRAPH-SPACING-SIZE,
+    spacing: DEFAULT-PARAGRAPH-SPACING-SIZE,
   )
 
   content

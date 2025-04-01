@@ -74,4 +74,4 @@ Kaynaklar [Sources]:
 #let ONE-AND-HALF-LINE-PARAGRAPH-LEADING-SIZE = 0.75em
 
 // Paragraflar arasındaki boşluk. [Spacing between paragraphs]
-#let PARAGRAPH-SPACING-SIZE = 12pt
+#let DEFAULT-PARAGRAPH-SPACING-SIZE = 12pt + SINGLE-LINE-PARAGRAPH-LEADING-SIZE
