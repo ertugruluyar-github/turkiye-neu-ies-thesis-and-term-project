@@ -58,7 +58,7 @@
   thesis-title-text-component(thesis-title: thesis-title)
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(2.35cm)
+  v(2.75cm)
 
   // Yazar bilgilerini ekle. [Add author information.]
   fullname-component(first-name: author.first-name, last-name: author.last-name)
@@ -74,7 +74,7 @@
   advisor-with-orcid-component(advisor: advisor)
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(2.4cm)
+  v(2.5cm)
 
   // Şehir adı ve yıl bilgisini ekle. [Add city name and year information.]
   city-name-with-year-component(date: date)
