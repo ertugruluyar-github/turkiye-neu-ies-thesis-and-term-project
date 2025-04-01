@@ -80,7 +80,6 @@
     justify: true,
     first-line-indent: (amount: PARAGRAPH-FIRST-LINE-INDENT, all: true),
     leading: ONE-AND-HALF-LINE-PARAGRAPH-LEADING-SIZE,
-    // TODO: Paragraflar arası boşluk olayını netleştir. [TODO: Clarify the paragraph spacing issue.] https://practicaltypography.com/space-between-paragraphs.html
     spacing: DEFAULT-PARAGRAPH-SPACING-SIZE,
   )
 
