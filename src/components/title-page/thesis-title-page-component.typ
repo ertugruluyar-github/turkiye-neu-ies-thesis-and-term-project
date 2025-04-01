@@ -45,13 +45,13 @@
   program
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1.3cm)
+  v(1.5cm)
 
   /// Rapor türü bilgisi. [Report type information.]
   report-type
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(2.35cm)
+  v(2.5cm)
 
   // Dile göre tez başlığını seç. [Select the thesis title according to the language.]
   let thesis-title = if language == LANGUAGES.TR-TR {
@@ -63,7 +63,7 @@
   thesis-title-text-component(thesis-title: thesis-title)
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(2.35cm)
+  v(2.5cm)
 
   // Yazar bilgilerini ekle. [Add author information.]
   fullname-component(first-name: author.first-name, last-name: author.last-name)
@@ -79,7 +79,7 @@
   advisor-with-orcid-component(advisor: advisor)
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(0.8cm)
+  v(1cm)
 
   // Rapor türüne ve ikinci danışmanın olup olmamasına göre ikinci danışman bilgilerini ekle. [Add second advisor information according to the report type and whether there is a second advisor or not.]
   if second-advisor != none {
@@ -89,7 +89,7 @@
     advisor-with-orcid-component(advisor: second-advisor)
   } else {
     // Bir miktar boşluk bırak. [Leave some space.]
-    v(1.75cm)
+    v(1.5cm)
   }
 
   // Bir miktar boşluk bırak. [Leave some space.]
@@ -104,10 +104,10 @@
     )
 
     // Bir miktar boşluk bırak. [Leave some space.]
-    v(0.2cm)
+    v(0.25cm)
   } else {
     // Bir miktar boşluk bırak. [Leave some space.]
-    v(1.3cm)
+    v(1.25cm)
   }
 
   // Şehir adı ve yıl bilgisini ekle. [Add city name and year information.]

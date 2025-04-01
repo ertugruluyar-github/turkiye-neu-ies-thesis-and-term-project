@@ -12,14 +12,14 @@
   // Ülke bilgisini ekle. [Add country information.]
   upper(translator(key: language-keys.THE-REPUPLIC-OF-TURKIYE))
 
-  // Satır sonu ekle. [Add line break.]
-  linebreak()
+  // Bir miktar boşluk bırak. [Leave some space.]
+  v(3pt)
 
   // Üniversite bilgisini ekle. [Add university information.]
   upper(translator(key: language-keys.UNIVERSITY-NAME-UPPER-CASE))
 
-  // Satır sonu ekle. [Add line break.]
-  linebreak()
+  // Bir miktar boşluk bırak. [Leave some space.]
+  v(3pt)
 
   // Enstitü bilgisini ekle. [Add institute information.]
   upper(translator(key: language-keys.INSTITUTE-NAME-UPPER-CASE))
