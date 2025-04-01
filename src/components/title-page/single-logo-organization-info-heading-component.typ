@@ -19,8 +19,9 @@
   // Tek logolu başlık. [Single logo heading.]
   grid(
     columns: 1fr,
+    rows: auto,
     align: center + horizon,
-    row-gutter: 12pt,
+    row-gutter: 10pt,
     inset: (:),
     stroke: none,
     fill: none,
@@ -31,5 +32,5 @@
   )
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1.5cm)
+  v(2cm)
 }
