@@ -438,21 +438,21 @@
   pagebreak(weak: true)
 
   {
-    /* --- TEZİN ANA KISMI [MAIN SECTION OF THESIS] --- */
+    /* ---- TEZİN ANA KISMI [MAIN SECTION OF THESIS] ---- */
 
     // Tezin Ana Kısmının Stili [Style of Main Section of Thesis]
     show: thesis-main-section-style
 
-    /* ---- Bölüm 1: Giriş [Chapter 1: Introduction] ---- */
+    /* --- Bölüm 1: Giriş [Chapter 1: Introduction] --- */
     introduction-page()
 
-    /* ---- Bölüm 2: Alan Yazın (İlgi̇li̇ Araştırmalar) [Chapter 2: Literature Review] ---- */
+    /* --- Bölüm 2: Alan Yazın (İlgi̇li̇ Araştırmalar) [Chapter 2: Literature Review] --- */
     literature-review-page()
 
-    /* ---- Bölüm 3: Yöntem [Chapter 3: Methodology] ---- */
+    /* --- Bölüm 3: Yöntem [Chapter 3: Methodology] --- */
     methodology-page()
 
-    /* ---- Bölüm 4: Bulgular [Chapter 4: Findings] ---- */
+    /* --- Bölüm 4: Bulgular [Chapter 4: Findings] --- */
     if (
       report-type == REPORT-TYPES.MASTER-THESIS
         or report-type == REPORT-TYPES.DOCTORAL-THESIS
@@ -461,7 +461,7 @@
       findings-page()
     }
 
-    /* ---- Bölüm 5: Tartışma, Sonuç ve Öneriler [Chapter 5: Discussion, Conclusion and Suggestions] ---- */
+    /* --- Bölüm 5: Tartışma, Sonuç ve Öneriler [Chapter 5: Discussion, Conclusion and Suggestions] --- */
     if (
       report-type == REPORT-TYPES.MASTER-THESIS
         or report-type == REPORT-TYPES.DOCTORAL-THESIS
