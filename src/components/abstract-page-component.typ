@@ -54,7 +54,7 @@
   v(24pt)
 
   // Yazılan özet metinini ekle. [Add the abstract text.]
-  par(spacing: 0pt)[#include abstract-text-content-file-path]
+  include abstract-text-content-file-path
 
   // Varsa anahtar kelimeler ekle. [Add keywords if they exist.]
   if keywords-title != none and keywords != none {

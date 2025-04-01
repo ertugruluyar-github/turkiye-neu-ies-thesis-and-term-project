@@ -1,4 +1,7 @@
-#import "/src/constants/document-settings-constants.typ": SINGLE-LINE-PARAGRAPH-LEADING-SIZE
+#import "/src/constants/document-settings-constants.typ": (
+  SINGLE-LINE-PARAGRAPH-LEADING-SIZE,
+  ZERO-PARAGRAPH-SPACING-SIZE,
+)
 
 // Başlık Sayfası stili. [Title Page style.]
 #let title-page-style(content) = {
@@ -23,7 +26,7 @@
   */
   set par(
     leading: SINGLE-LINE-PARAGRAPH-LEADING-SIZE,
-    spacing: 0em,
+    spacing: ZERO-PARAGRAPH-SPACING-SIZE,
   )
 
   /*
