@@ -30,6 +30,32 @@
 #import "/src/core/validation-manager/validation-manager.typ": validation-manager
 #import "core/language-manager/language-manager.typ": init-language-manager
 
+/* __Dikkat! [Attention!]__
+  - Tezi yazmaya başlamadan önce Hazırlama Kılavuzu ve Şablon Kullanım Kılavuzu mutlaka okunmalıdır. [Before starting to write the thesis, the Preparation Guide and Template Usage Guide must be read.].\
+  - İç kapaktaki gerekli bilgiler sayfa düzenini bozmadan ve bir sayfayı geçmeyecek biçimde yazılmalıdır. [The necessary information in the inside cover must be written in a way that does not disturb the page layout and does not pass a page.]\
+  - YÖK tarafından yapılan son düzenlemede eski ve yeni Anabilim Dalı ve Bilim Dalı adlarında benzerlik olduğundan hata yapmamanız için öğrenci bilgi sisteminizde görünen Anabilim Dalını ve Bilim Dalını seçiniz. [Due to the similarity of the old and new Department of Science and New Department of Science names made by YÖK, please select the Department of Science and Science Department shown in your student information system.].\
+  - Tez başlığı öğrenci bilgi sisteminde onaylanmış başlık ile aynı olmalıdır. [The thesis title must be the same as the approved title in the student information system.].\
+  - Öğrenciye, danışmana ve ikinci danışmana ait ORCID numaralarını XXXX-XXXX-XXXX-XXXX düzeninde yazınız. [Write the ORCID numbers of the student, advisor and second advisor in the format XXXX-XXXX-XXXX-XXXX.].\
+  - ORIC numarası almak içim gerekli bilgilere web sayfamızdan ulaşabilirsiniz. https://www.erbakan.edu.tr/egitimbilimlerienstitusu/sayfa/10001 [You can access the necessary information from our web site to obtain the ORIC number. https://www.erbakan.edu.tr/egitimbilimlerienstitusu/sayfa/10001].\
+  - İkinci danışman yok ise silinmelidir. [If there is no second advisor, it should be deleted.].\
+  - Tez çalışması bir proje ile desteklenmiş ise yazılmalı, destek alınmamış ise silinmelidir. [If the thesis work is supported by a project, it should be written, if not, it should be deleted.].\
+  - Birini kullanınız, diğerini siliniz. (ÖN SÖZ ya da TEŞEKKÜR) [Use one, delete the other. (PREFACE or ACKNOWLEDGMENT)].\
+  - İçindekiler, hiçbir değişiklik yapılmaksızın tez metninde yer alan birinci, ikinci ve üçüncü düzey başlıkların tamamını içermeli, diğer başlıkları içermemelidir. [The table of contents must contain all the first, second and third level headings in the thesis text without any changes, and must not contain other headings.].\
+  - Simgeler bulunmuyor ise bu sayfayı siliniz. [If there are no symbols, delete this page.].\
+  - Kısaltmalar bulunmuyor ise bu sayfayı siliniz. [If there are no abbreviations, delete this page.].\
+  - Özet metni ve anahtar kelimeler bir sayfayı aşmayacak şekilde 300-500 kelime içerecek şekilde yazılmalıdır. [The abstract text and keywords must be written in a way that does not exceed one page and contains 300-500 words.].\
+  - Tez hazırlama kılavuzunda verilen açıklamaları dikkate alarak tezle ilgili en az üç, en fazla beş anahtar kelime yazılmalıdır. [According to the explanations given in the thesis preparation guide, at least three, but no more than five keywords related to the thesis should be written.].\
+  - Birini kullanınız, diğerini siliniz (Sayıltılar ya da Varsayımlar). [Use one, delete the other. (Hypotheses or Assumptions)].\
+  - Birini kullanınız, diğerini siliniz. (ALAN YAZIN ya da İLGİLİ ARAŞTIRMALAR)\
+  - İkinci, üçüncü ve dördüncü düzey başlıklar örnek olarak verilmiştir. Bu başlıkları tez yazımına başlamadan önce siliniz. [The second, third and fourth level headings are given as examples. Delete these headings before starting to write the thesis.].\
+  - Tablolarda mümkün olduğunca dikey çizgi kullanılmamalıdır. [Vertical lines should not be used in tables as much as possible.].\
+  - Birini kullanınız, diğerlerini siliniz. (Araştırmanın Evreni ve Örneklemi ya da Araştırmanın Çalışma Grubu ya da Katılımcılar) [Use one, delete the others. (Research Population and Sample or Research Study Group or Participants)].\
+  - Birini kullanınız, diğerini siliniz. Verilerin Çözümlenmesi ya da Verilerin Analizi)\
+  - Tartışma, sonuç ve öneriler ayrı ayrı alt başlıklar altında verilebileceği gibi ana başlık altında ayrım yapılmadan da yazılabilir. [Discussion, conclusion and recommendations can be written separately under sub-headings or can be written without making a distinction under the main heading.].\
+  - Genişletilmiş Türkçe Özet, yabancı dilde öğretim yapılan ve yabancı diller anabilim dalına bağlı programlarda, sadece yabancı dilde yazılması kabul edilmiş tezler için yazılacak olup, Türkçe yazılan tezlerde bu bölümü siliniz. [The extended Turkish abstract is written for the thesis written in foreign languages only in programs where foreign languages are taught and in foreign language departments, and is written in Turkish in the thesis written in Turkish. Delete this section in the thesis written in Turkish.].\
+  - İş paketi sayısı, iş paketi tanımları ve tablodaki iş paketlerinin süreleri örnek olarak verilmiş olup, çalışmanıza uygun iş paketi adları ve süreleri yazılmalıdır. [The number of work packages, work package definitions and the durations of the work packages are given as examples, and the work package names and durations should be written according to your work.].\
+  - Dönem projesinin hazırlanması teze benzemekle birlikte, ele alınan konunun gerekleri doğrultusunda Bölüm 1, 2, 3, 4 ve 5’ten hangilerini içereceği ve bunların içeriği danışmanın yapacağı yönlendirmeye göre belirlenir. [Although the preparation of the term project resembles the thesis, the contents of Sections 1, 2, 3, 4 and 5 are determined according to the requirements of the topic to be dealt with and the guidance to be made by the advisor.].
+*/
 #let template-configurations(
   // Raporun dilini seçiniz. [Select the language of the report.]
   language: LANGUAGES.TR-TR,

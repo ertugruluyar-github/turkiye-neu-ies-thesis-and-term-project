@@ -47,6 +47,32 @@
   ACADEMIC-MEMBER-TITLES,
 )
 
+/* Dikkat!
+  - Tezi yazmaya başlamadan önce Hazırlama Kılavuzu ve Şablon Kullanım Kılavuzu mutlaka okunmalıdır.
+  - İç kapaktaki gerekli bilgiler sayfa düzenini bozmadan ve bir sayfayı geçmeyecek biçimde yazılmalıdır.
+  - YÖK tarafından yapılan son düzenlemede eski ve yeni Anabilim Dalı ve Bilim Dalı adlarında benzerlik olduğundan hata yapmamanız için öğrenci bilgi sisteminizde görünen Anabilim Dalını ve Bilim Dalını seçiniz.
+  - Tez başlığı öğrenci bilgi sisteminde onaylanmış başlık ile aynı olmalıdır.
+  - Öğrenciye, danışmana ve ikinci danışmana ait ORCID numaralarını XXXX-XXXX-XXXX-XXXX düzeninde yazınız.
+  - ORIC numarası almak içim gerekli bilgilere web sayfamızdan ulaşabilirsiniz. https://www.erbakan.edu.tr/egitimbilimlerienstitusu/sayfa/10001
+  - İkinci danışman yok ise silinmelidir.
+  - Tez çalışması bir proje ile desteklenmiş ise yazılmalı, destek alınmamış ise silinmelidir.
+  - Birini kullanınız, diğerini siliniz. (ÖN SÖZ ya da TEŞEKKÜR)
+  - İçindekiler, hiçbir değişiklik yapılmaksızın tez metninde yer alan birinci, ikinci ve üçüncü düzey başlıkların tamamını içermeli, diğer başlıkları içermemelidir.
+  - Simgeler bulunmuyor ise bu sayfayı siliniz.
+  - Kısaltmalar bulunmuyor ise bu sayfayı siliniz.
+  - Özet metni ve anahtar kelimeler bir sayfayı aşmayacak şekilde 300-500 kelime içerecek şekilde yazılmalıdır.
+  - Tez hazırlama kılavuzunda verilen açıklamaları dikkate alarak tezle ilgili en az üç, en fazla beş anahtar kelime yazılmalıdır.
+  - Birini kullanınız, diğerini siliniz (Sayıltılar ya da Varsayımlar).
+  - Birini kullanınız, diğerini siliniz. (ALAN YAZIN ya da İLGİLİ ARAŞTIRMALAR)
+  - İkinci, üçüncü ve dördüncü düzey başlıklar örnek olarak verilmiştir. Bu başlıkları tez yazımına başlamadan önce siliniz.
+  - Tablolarda mümkün olduğunca dikey çizgi kullanılmamalıdır.
+  - Birini kullanınız, diğerlerini siliniz. (Araştırmanın Evreni ve Örneklemi ya da Araştırmanın Çalışma Grubu ya da Katılımcılar)
+  - Birini kullanınız, diğerini siliniz. Verilerin Çözümlenmesi ya da Verilerin Analizi)
+  - Tartışma, sonuç ve öneriler ayrı ayrı alt başlıklar altında verilebileceği gibi ana başlık altında ayrım yapılmadan da yazılabilir.
+  - Genişletilmiş Türkçe Özet, yabancı dilde öğretim yapılan ve yabancı diller anabilim dalına bağlı programlarda, sadece yabancı dilde yazılması kabul edilmiş tezler için yazılacak olup, Türkçe yazılan tezlerde bu bölümü siliniz.
+  - İş paketi sayısı, iş paketi tanımları ve tablodaki iş paketlerinin süreleri örnek olarak verilmiş olup, çalışmanıza uygun iş paketi adları ve süreleri yazılmalıdır.
+  - Dönem projesinin hazırlanması teze benzemekle birlikte, ele alınan konunun gerekleri doğrultusunda Bölüm 1, 2, 3, 4 ve 5’ten hangilerini içereceği ve bunların içeriği danışmanın yapacağı yönlendirmeye göre belirlenir.
+*/
 #show: template-configurations.with(
   // Raporun dilini seçiniz.
   language: LANGUAGES.EN-US,
