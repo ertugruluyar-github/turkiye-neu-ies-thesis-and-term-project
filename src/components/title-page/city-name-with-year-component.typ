@@ -3,4 +3,4 @@
 
 // Şehir adı ve yıl bilgisi. [City name and year information.]\
 // Örnek [Example]: "Konya - 2025"
-#let city-name-with-year-component(date: none) = [#STRING-CITY-NAME - #date.display(ONLY-YEAR-DATE-FORMAT)]
+#let city-name-with-year-component(date: none) = [#STRING-CITY-NAME #sym.dash #date.display(ONLY-YEAR-DATE-FORMAT)]
