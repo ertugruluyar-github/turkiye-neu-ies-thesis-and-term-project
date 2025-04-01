@@ -156,6 +156,16 @@
   have-symbols: true,
   // Tez çalışmasında kısaltmalar kullandıysanız "Kısaltmalar" başlığındaki içeriğin teze dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik teze dahil edilmeyecektir.
   have-abbreviations: true,
+  // Dönem projesinde "Giriş" başlığının teze dahil edilmesi için "have-introduction-in-term-project: true", dahil edilmemesi için "have-introduction-in-term-project: false" yapınız.
+  have-introduction-in-term-project: true,
+  // Dönem projesinde "Alan Yazın (İlgili Araştırmalar)" başlığının teze dahil edilmesi için "have-literature-review-in-term-project: true", dahil edilmemesi için "have-literature-review-in-term-project: false" yapınız.
+  have-literature-review-in-term-project: true,
+  // Dönem projesinde "Yöntem" başlığının teze dahil edilmesi için "have-methodology-in-term-project: true", dahil edilmemesi için "have-methodology-in-term-project: false" yapınız.
+  have-methodology-in-term-project: true,
+  // Dönem projesinde "Bulgular" başlığının teze dahil edilmesi için "have-findings-in-term-project: true", dahil edilmemesi için "have-findings-in-term-project: false" yapınız.
+  have-findings-in-term-project: true,
+  // Dönem projesinde "Tartışma, Sonuç ve Öneriler" başlığının teze dahil edilmesi için "have-discussion-conclusion-and-suggestions-in-term-project: true", dahil edilmemesi için "have-discussion-conclusion-and-suggestions-in-term-project: false" yapınız.
+  have-discussion-conclusion-and-suggestions-in-term-project: true,
   // Tartışma, Sonuç ve Öneriler bölümünü alt başlıklara ayırarak yazmak istiyorsanız "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: true", alt başlıklar olmadan ana başlık altında yazmak istiyorsanız "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: false" yapınız.
   show-separated-sub-headings-in-discussion-conclusion-and-suggestions: true,
   // Tez Önerisinde yer alan "Çalışma Takvimi" sayfasındaki "Çalışma Paketleri" kısmını doldurmak için her bir iş paketinizin açıklamasını ve hangi aylarda yapılacağını belirtiniz. Yüksek Lisans Tez Önerisi ise 12 aylık bir süre, Doktora Tez Önerisi ise 16 aylık bir süre için doldurulmalıdır. Yalnızca "report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL" ya da report-type: REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL" olduğunda çıktıda gözükecektir.

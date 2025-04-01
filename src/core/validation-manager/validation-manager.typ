@@ -38,6 +38,11 @@
   show-list-of-code-figures: none,
   have-symbols: none,
   have-abbreviations: none,
+  have-introduction-in-term-project: none,
+  have-literature-review-in-term-project: none,
+  have-methodology-in-term-project: none,
+  have-findings-in-term-project: none,
+  have-discussion-conclusion-and-suggestions-in-term-project: none,
   show-separated-sub-headings-in-discussion-conclusion-and-suggestions: none,
   work-packages: none,
   curriculum-vitae-info: none,
@@ -136,6 +141,41 @@
     value: have-abbreviations,
     value-name: "template-configurations.have-abbreviations",
     value-description: "Şablon ayarlarındaki kısaltmalarım var seçeneği",
+  )
+
+  // Dönem Projemde "Giriş" başlığım var parametresini doğrula. [Validate have-introduction-in-term-project parameter.]
+  boolean-type-validator(
+    value: have-introduction-in-term-project,
+    value-name: "template-configurations.have-introduction-in-term-project",
+    value-description: "Şablon ayarlarındaki dönem projemde 'Giriş' başlığım var seçeneği",
+  )
+
+  // Dönem Projemde "Alan Yazın (İlgili Araştırmalar)" başlığım var parametresini doğrula. [Validate have-literature-review-in-term-project parameter.]
+  boolean-type-validator(
+    value: have-literature-review-in-term-project,
+    value-name: "template-configurations.have-literature-review-in-term-project",
+    value-description: "Şablon ayarlarındaki dönem projemde 'Alan Yazın (İlgili Araştırmalar)' başlığım var seçeneği",
+  )
+
+  // Dönem Projemde "Yöntem" başlığım var parametresini doğrula. [Validate have-methodology-in-term-project parameter.]
+  boolean-type-validator(
+    value: have-methodology-in-term-project,
+    value-name: "template-configurations.have-methodology-in-term-project",
+    value-description: "Şablon ayarlarındaki dönem projemde 'Yöntem' başlığım var seçeneği",
+  )
+
+  // Dönem Projemde "Bulgular" başlığım var parametresini doğrula. [Validate have-findings-in-term-project parameter.]
+  boolean-type-validator(
+    value: have-findings-in-term-project,
+    value-name: "template-configurations.have-findings-in-term-project",
+    value-description: "Şablon ayarlarındaki dönem projemde 'Bulgular' başlığım var seçeneği",
+  )
+
+  // Dönem Projemde "Tartışma, Sonuç ve Öneriler" başlığım var parametresini doğrula. [Validate have-discussion-conclusion-and-suggestions-in-term-project parameter.]
+  boolean-type-validator(
+    value: have-discussion-conclusion-and-suggestions-in-term-project,
+    value-name: "template-configurations.have-discussion-conclusion-and-suggestions-in-term-project",
+    value-description: "Şablon ayarlarındaki dönem projemde 'Tartışma, Sonuç ve Öneriler' başlığım var seçeneği",
   )
 
   // 'TARTIŞMA, SONUÇ VE ÖNERİLER' bölümündeki alt başlıkları göster parametresini doğrula. [Validate show-separated-sub-headings-in-discussion-conclusion-and-suggestions parameter.]

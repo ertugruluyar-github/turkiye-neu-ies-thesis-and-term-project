@@ -139,6 +139,16 @@
   have-symbols: true,
   // Tez çalışmasında kısaltmalar kullandıysanız "Kısaltmalar" başlığındaki içeriğin teze dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik teze dahil edilmeyecektir. [To include the content of the "Abbreviations" heading in the thesis, do "have-abbreviations: true". However, if the thesis proposal is "true" or "false", the content of the "Symbols and Abbreviations" heading will not be included in the thesis.]
   have-abbreviations: true,
+  // Dönem projesinde "Giriş" başlığının teze dahil edilmesi için "have-introduction-in-term-project: true" yapınız. [To include the "Introduction" heading in the term project, do "have-introduction-in-term-project: true".]
+  have-introduction-in-term-project: true,
+  // Dönem projesinde "Alan Yazın (İlgili Araştırmalar)" başlığının teze dahil edilmesi için "have-literature-review-in-term-project: true" yapınız. [To include the "Literature Review" heading in the term project, do "have-literature-review-in-term-project: true".]
+  have-literature-review-in-term-project: true,
+  // Dönem projesinde "Yöntem" başlığının teze dahil edilmesi için "have-methodology-in-term-project: true" yapınız. [To include the "Methodology" heading in the term project, do "have-methodology-in-term-project: true".]
+  have-methodology-in-term-project: true,
+  // Dönem projesinde "Bulgular" başlığının teze dahil edilmesi için "have-findings-in-term-project: true" yapınız. [To include the "Findings" heading in the term project, do "have-findings-in-term-project: true".]
+  have-findings-in-term-project: true,
+  // Dönem projesinde "Tartışma, Sonuç ve Öneriler" başlığının teze dahil edilmesi için "have-discussion-conclusion-and-suggestions-in-term-project: true" yapınız. [To include the "Discussion, Conclusion and Suggestions" heading in the term project, do "have-discussion-conclusion-and-suggestions-in-term-project: true".]
+  have-discussion-conclusion-and-suggestions-in-term-project: true,
   // Tartışma, Sonuç ve Öneriler bölümünü alt başlıklara ayırarak yazmak istiyorsanız "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: true", alt başlıklar olmadan ana başlık altında yazmak istiyorsanız "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: false" yapınız. [To write the Discussion, Conclusion and Suggestions section in subheadings, do "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: true". To write the section in the main heading without subheadings, do "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: false".]
   show-separated-sub-headings-in-discussion-conclusion-and-suggestions: true,
   // Tez Önerisinde yer alan "Çalışma Takvimi" sayfasındaki "Çalışma Paketleri" kısmını doldurmak için her bir iş paketinizin açıklamasını ve hangi aylarda yapılacağını belirtiniz. Yüksek Lisans Tez Önerisi ise 12 aylık bir süre, Doktora Tez Önerisi ise 16 aylık bir süre için doldurulmalıdır. Yalnızca "report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL" ya da report-type: REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL" olduğunda çıktıda gözükecektir. [To fill in the "Work Packages" section of the "Work Schedule" page of the thesis proposal, specify the description of each work package and when it will be done. The Master's thesis proposal is for 12 months and the doctoral thesis proposal is for 16 months. It will only appear in the output when report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type: REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL.]
@@ -261,6 +271,11 @@
     show-list-of-code-figures: show-list-of-code-figures,
     have-symbols: have-symbols,
     have-abbreviations: have-abbreviations,
+    have-introduction-in-term-project: have-introduction-in-term-project,
+    have-literature-review-in-term-project: have-literature-review-in-term-project,
+    have-methodology-in-term-project: have-methodology-in-term-project,
+    have-findings-in-term-project: have-findings-in-term-project,
+    have-discussion-conclusion-and-suggestions-in-term-project: have-discussion-conclusion-and-suggestions-in-term-project,
     show-separated-sub-headings-in-discussion-conclusion-and-suggestions: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
     work-packages: work-packages,
     curriculum-vitae-info: curriculum-vitae-info,
@@ -444,32 +459,54 @@
     show: thesis-main-section-style
 
     /* --- Bölüm 1: Giriş [Chapter 1: Introduction] --- */
-    introduction-page()
+    if (report-type == REPORT-TYPES.TERM-PROJECT and have-introduction-in-term-project == false) {
+      []
+    } else {
+      introduction-page()
+    }
 
     /* --- Bölüm 2: Alan Yazın (İlgi̇li̇ Araştırmalar) [Chapter 2: Literature Review] --- */
-    literature-review-page()
+    if (report-type == REPORT-TYPES.TERM-PROJECT and have-literature-review-in-term-project == false) {
+      []
+    } else {
+      literature-review-page()
+    }
 
     /* --- Bölüm 3: Yöntem [Chapter 3: Methodology] --- */
-    methodology-page()
+    if (report-type == REPORT-TYPES.TERM-PROJECT and have-methodology-in-term-project == false) {
+      []
+    } else {
+      methodology-page()
+    }
 
     /* --- Bölüm 4: Bulgular [Chapter 4: Findings] --- */
-    if (
-      report-type == REPORT-TYPES.MASTER-THESIS
-        or report-type == REPORT-TYPES.DOCTORAL-THESIS
-        or report-type == REPORT-TYPES.TERM-PROJECT
-    ) {
-      findings-page()
+    if (report-type == REPORT-TYPES.TERM-PROJECT and have-findings-in-term-project == false) {
+      []
+    } else {
+      if (
+        report-type == REPORT-TYPES.MASTER-THESIS
+          or report-type == REPORT-TYPES.DOCTORAL-THESIS
+          or report-type == REPORT-TYPES.TERM-PROJECT
+      ) {
+        findings-page()
+      }
     }
 
     /* --- Bölüm 5: Tartışma, Sonuç ve Öneriler [Chapter 5: Discussion, Conclusion and Suggestions] --- */
     if (
-      report-type == REPORT-TYPES.MASTER-THESIS
-        or report-type == REPORT-TYPES.DOCTORAL-THESIS
-        or report-type == REPORT-TYPES.TERM-PROJECT
+      report-type == REPORT-TYPES.TERM-PROJECT and have-discussion-conclusion-and-suggestions-in-term-project == false
     ) {
-      discussion-conclusion-and-suggestions-page(
-        show-separated-sub-headings: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
-      )
+      []
+    } else {
+      if (
+        report-type == REPORT-TYPES.MASTER-THESIS
+          or report-type == REPORT-TYPES.DOCTORAL-THESIS
+          or report-type == REPORT-TYPES.TERM-PROJECT
+      ) {
+        discussion-conclusion-and-suggestions-page(
+          show-separated-sub-headings: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
+        )
+      }
     }
   }
 
