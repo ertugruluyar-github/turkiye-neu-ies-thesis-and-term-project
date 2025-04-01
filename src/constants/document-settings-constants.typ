@@ -73,5 +73,8 @@ Kaynaklar [Sources]:
 */
 #let ONE-AND-HALF-LINE-PARAGRAPH-LEADING-SIZE = 0.75em
 
+// Paragraflar arasında boşluk yok. [No spacing between paragraphs.]
+#let ZERO-PARAGRAPH-SPACING-SIZE = 0pt + SINGLE-LINE-PARAGRAPH-LEADING-SIZE
+
 // Paragraflar arasındaki boşluk. [Spacing between paragraphs]
 #let DEFAULT-PARAGRAPH-SPACING-SIZE = 12pt + SINGLE-LINE-PARAGRAPH-LEADING-SIZE
