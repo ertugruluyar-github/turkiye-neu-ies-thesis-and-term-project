@@ -21,17 +21,16 @@
   [#text(style: "italic", thesis-title.tur.title-case) başlıklı tez çalışmamın toplam #included-page-count sayfalık kısmına ilişkin, #date-component(date: date) tarihinde tez danışmanım tarafından #text(weight: "bold")[Turnitin] adlı intihal tespit programından aşağıda belirtilen filtrelemeler uygulanarak alınmış olan orijinallik raporuna göre, tezimin benzerlik oranı #text(weight: "bold")[%#similarity-score] olarak belirlenmiştir.]
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1em)
+  v(0.5em)
 
   // Paragraf ilk satır girintisini kaldırarak metin ekle. [Remove the first line indent of the paragraph and add text.]
   par(first-line-indent: 0cm)[Uygulanan filtrelemeler:]
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1em)
+  v(0.5em)
 
   // Listeyi ekle. [Add list.]
   [
-    #set enum(indent: 0.5cm, spacing: 1em)
     + Tez çalışması orijinallik raporu sayfası hariç
     + Bilimsel etik beyannamesi sayfası hariç
     + Önsöz hariç
@@ -43,7 +42,7 @@
   ]
 
   // Bir miktar boşluk bırak. [Leave some space.]
-  v(1em)
+  v(0.5em)
 
   // Metin ekle. [Add text.]
   [Necmettin Erbakan Üniversitesi Tez Çalışması Orijinallik Raporu Uygulama Esaslarını inceledim ve tez çalışmamın, bu uygulama esaslarında belirtilen azami benzerlik oranının (%30) altında olduğunu ve intihal içermediğini; aksinin tespit edileceği muhtemel durumda doğabilecek her türlü hukuki sorumluluğu kabul ettiğimi ve yukarıda vermiş olduğum bilgilerin doğru olduğunu beyan ederim.]

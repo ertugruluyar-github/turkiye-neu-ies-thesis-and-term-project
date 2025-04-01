@@ -2,11 +2,13 @@
 
 // Liste stili. [List style.]
 #let list-style(content) = {
+  let body-indent-size = 0.4cm
+  let indent-size = 0.5cm
   // Numaralı liste stili [Numbered list style]
   set enum(
-    body-indent: 0.5em,
+    body-indent: body-indent-size,
     full: false,
-    indent: 0cm,
+    indent: indent-size,
     number-align: end + top,
     numbering: LIST-NUMBERING,
     reversed: false,
@@ -17,8 +19,8 @@
 
   // Madde işaretli liste stili [Bulleted list style]
   set list(
-    body-indent: 0.5em,
-    indent: 0cm,
+    body-indent: body-indent-size,
+    indent: indent-size,
     marker: (sym.circle.filled, sym.circle.stroked, sym.square.filled),
     spacing: auto,
     tight: true,
