@@ -8,7 +8,6 @@
 #lorem(50)
 
 // Başka bir '.typ' uzantılı Typst dosyasındaki içeriği eklemek için "include" komutunu kullanabilirsiniz.
-// Başka bir '.typ' uzantılı Typst dosyasındaki içeriği eklemek için "include" komutunu kullanabilirsiniz.
 #include "/template/assets/examples/table-figure-example.typ"
 
 @figür-tablo-fiziksel-ve-kimyasal-olaylar-sorularının-frekans-analizi örnek bir tablo içerikli figürdür.
