@@ -61,6 +61,7 @@ Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
   - [ ] Tablonun açıklamasının yer aldığı son satırın genişliğinin yani kaç sütunun birleşimi kadar olacağını elle (manuel) olarak belirtmek gerekmektedir. İleriki Typst sürümlerinde bunun otomatik olarak yapılması için gerekli altyapının sağlanması beklenmektedir.
   - [ ] Tablonun açıklamasının yer aldığı son satırın altındaki kenarlığın elle (manuel) olarak kaldırılması gerekmektedir. İleriki Typst sürümlerinde bunun otomatik olarak yapılması için gerekli altyapının sağlanması beklenmektedir.
   - [ ] Tablonun açıklamasının yer aldığı son satırın içeriğinin sola hizalanmasını elle (manuel) olarak belirtmek gerekmektedir. İleriki Typst sürümlerinde bunun otomatik olarak yapılması için gerekli altyapının sağlanması beklenmektedir.
+- [x] Tablo, şekil ve kod figürlerinin otomatik olarak numaralandırılması sağlanmaktadır. Araya yeni bir figür eklendiğinde numaralandırma otomatik olarak güncellenmektedir. Aynı şekilde, bu figürlere metin içinde yapılan atıflardaki numaralandırmalar da otomatik olarak güncellenmektedir.
 - [x] Çoklu dil desteği (Türkçe ve İngilizce) vardır.
 - [x] Açılır liste mantığında tanımlanmış bilgiler içerisinden seçim yapılabilmesi sağlanarak hata yapılması ihtimalini azaltmak.
 
@@ -200,6 +201,7 @@ I sincerely thank everyone who contributed to these projects.
   - [ ] It is necessary to manually specify the width of the last line containing the description of the table, that is, how many columns will be combined. The necessary infrastructure is expected to be provided in future versions of Typst to do this automatically.
   - [ ] The bottom border of the last line containing the description of the table must be removed manually. The necessary infrastructure is expected to be provided in future versions of Typst to do this automatically.
   - [ ] It is necessary to manually specify that the content of the last line containing the description of the table is left-aligned. The necessary infrastructure is expected to be provided in future versions of Typst to do this automatically.
+- [x] Automatic numbering of table, image and code figures is provided. The numbering is automatically updated when a new figure is inserted. Likewise, the numbering of references to these figures in the text is also automatically updated.
 - [x] Multi-language support (Turkish and English) is available.
 - [x] Reducing the possibility of making mistakes by providing the ability to choose from the information defined in the logic of the drop-down list.
 
