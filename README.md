@@ -11,6 +11,7 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Tanıtım Videosu](#tanıtım-videosu)
     - [Teşekkür](#teşekkür)
     - [Kullanılan Paketler](#kullanılan-paketler)
+    - [Özellikler](#özellikler)
     - [Kullanım](#kullanım)
     - [Kurulum](#kurulum)
       - [Gerekli Yazılımlar](#gerekli-yazılımlar)
@@ -22,6 +23,7 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Trailer Video](#trailer-video)
     - [Acknowledgement](#acknowledgement)
     - [Packages Used](#packages-used)
+    - [Features](#features)
     - [Usage](#usage)
     - [Installation](#installation)
       - [Required Softwares](#required-softwares)
@@ -50,6 +52,18 @@ Ve ayrıca [Typst YouTube Oynatma Listesi](https://youtube.com/playlist?list=PLC
 - Çoklu dil desteği sağlamak için. -> [Linguify](https://github.com/typst-community/linguify): <@jomaway>, <@SillyFreak> ve katkıda bulunanlar. ([Typst Universe Bağlantısı](https://typst.app/universe/package/linguify/))
 
 Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
+
+### Özellikler
+- [x] Tek şablonda tez, tez önerisi ve dönem projesi yazılabilir. Örneğin, tez önerinizi bitirdikten sonra bunun koddaki şablon ayarları kısmını (`#show: template-configurations.with(...)`) yorum satırı yaparak pasif hale getirdikten sonra tez için yeni bir şablon ayarı oluşturarak tezinizi yazmaya devam edebilirsiniz. Böylece, tek projede hem tez önerinizi hem de tezinizi yazabilir ve istediğiniz zaman istediğiniz çıktıyı elde edebilirsiniz.
+- [x] ~%98 oranında otomatik olarak şablon kurallarına uygun olarak içeriği düzenler. Otomatik olarak henüz yapılamayan bazı durumlar aşağıdaki gibidir:
+  - [ ] Şekillerin içerisinde alt şekillerin koyulması. Bu özellik için gerekli altyapının sağlanması beklenmektedir. Bunu yapmak için şimdilik [subpar](https://typst.app/universe/package/subpar) Typst Universe paketi kullanılabilir.
+  - [ ] Tabloların başlık satırlarının koyu yazılması sadece tablonun ilk satırı için otomatik olarak olmaktadır. Eğer tablonun başlık kısmı iki ya da daha fazla satırdan oluşuyorsa bu satırların içeriği elle (manuel) olarak koyu yazılması gerekmektedir. İleriki Typst sürümlerinde bunun otomatik olarak yapılması için gerekli altyapının sağlanması beklenmektedir.
+  - [ ] Tabloların başlık kısmının üstündeki ve altındaki kenarlıklar otomatik olarak koyulmaktadır. Eğer tablonun başlık kısmı iki ya da daha fazla satırdan oluşuyorsa bu satırların arasındaki kenarlıkların elle (manuel) olarak koyulması gerekmektedir. İleriki Typst sürümlerinde bunun otomatik olarak yapılması için gerekli altyapının sağlanması beklenmektedir.
+  - [ ] Tablonun açıklamasının yer aldığı son satırın genişliğinin yani kaç sütunun birleşimi kadar olacağını elle (manuel) olarak belirtmek gerekmektedir. İleriki Typst sürümlerinde bunun otomatik olarak yapılması için gerekli altyapının sağlanması beklenmektedir.
+  - [ ] Tablonun açıklamasının yer aldığı son satırın altındaki kenarlığın elle (manuel) olarak kaldırılması gerekmektedir. İleriki Typst sürümlerinde bunun otomatik olarak yapılması için gerekli altyapının sağlanması beklenmektedir.
+  - [ ] Tablonun açıklamasının yer aldığı son satırın içeriğinin sola hizalanmasını elle (manuel) olarak belirtmek gerekmektedir. İleriki Typst sürümlerinde bunun otomatik olarak yapılması için gerekli altyapının sağlanması beklenmektedir.
+- [x] Çoklu dil desteği (Türkçe ve İngilizce) vardır.
+- [x] Açılır liste mantığında tanımlanmış bilgiler içerisinden seçim yapılabilmesi sağlanarak hata yapılması ihtimalini azaltmak.
 
 ### Kullanım
 Öncelikle, şablonu projeniz için içe aktarınız. Daha sonra, şablonun ayarlarını giriniz.
@@ -176,6 +190,18 @@ And also a big thank you to <@isaacew> for [Typst YouTube Playlist](https://yout
 - To provide multi language support. -> [Linguify](https://github.com/typst-community/linguify): <@jomaway>, <@SillyFreak> and contributors. ([Typst Universe Link](https://typst.app/universe/package/linguify/))
 
 I sincerely thank everyone who contributed to these projects.
+
+### Features
+- [x] It can be written thesis, thesis proposal and term project in a single template. For example, after completing your thesis proposal, you can comment out the template settings section in the code (`#show: template-configurations.with(...)`) and create a new template setting for the thesis and continue writing your thesis. Thus, you can write both your thesis proposal and your thesis in a single project and get the output you want at any time.
+- [x] It automatically arranges the content in accordance with the template rules at a rate of ~%98. Some situations that cannot be done automatically yet are as follows:
+  - [ ] Placing sub-shapes inside shapes. The necessary infrastructure is expected to be provided for this feature. For now, the [subpar](https://typst.app/universe/package/subpar) Typst Universe package can be used to do this.
+  - [ ] Writing the header lines of tables in bold is only done automatically for the first line of the table. If the header part of the table consists of two or more lines, the content of these lines must be written in bold manually. The necessary infrastructure is expected to be provided in future versions of Typst to do this automatically.
+  - [ ] The borders above and below the header part of the tables are automatically put in bold. If the header part of the table consists of two or more lines, the borders between these lines must be put in bold manually. The necessary infrastructure is expected to be provided in future versions of Typst to do this automatically.
+  - [ ] It is necessary to manually specify the width of the last line containing the description of the table, that is, how many columns will be combined. The necessary infrastructure is expected to be provided in future versions of Typst to do this automatically.
+  - [ ] The bottom border of the last line containing the description of the table must be removed manually. The necessary infrastructure is expected to be provided in future versions of Typst to do this automatically.
+  - [ ] It is necessary to manually specify that the content of the last line containing the description of the table is left-aligned. The necessary infrastructure is expected to be provided in future versions of Typst to do this automatically.
+- [x] Multi-language support (Turkish and English) is available.
+- [x] Reducing the possibility of making mistakes by providing the ability to choose from the information defined in the logic of the drop-down list.
 
 ### Usage
 First, import the template for your project. Then, enter the template configurations.
