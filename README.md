@@ -52,7 +52,33 @@ Ve ayrıca [Typst YouTube Oynatma Listesi](https://youtube.com/playlist?list=PLC
 Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
 
 ### Kullanım
- 
+Öncelikle, şablonu projeniz için içe aktarınız. Daha sonra, şablonun ayarlarını giriniz.
+
+**NOT:** Şablonu [Kurulum](#kurulum) başlığında bahsedildiği gibi kullandığınızda bu kısım otomatik olarak mevcut olacaktır. Sadece şablon ayarlarındaki bilgileri projenize güncellemeniz yeterlidir.
+
+<details>
+  <summary>Kodu göstermek/gizlemek için tıklayınız</summary>
+
+```typst
+// Şablonu, Kurulum başlığında bahsedilden durumlardan size uygun olana göre içe aktarınız:
+#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+  template-configurations,
+  LANGUAGES,
+  REPORT-TYPES,
+  DEPARTMENTS,
+  PROGRAMS,
+  ACADEMIC-MEMBER-TITLES,
+)
+
+// Şablonun ayarlarını giriniz.
+#show: template-configurations.with(
+  ...
+)
+```
+
+</details>
+
+TODO: Birden fazla başlık seçeneği olan yerlerde bir başlığı seçmenin nasıl yapılacağını göster.
 
 ### Kurulum
 
@@ -152,7 +178,31 @@ And also a big thank you to <@isaacew> for [Typst YouTube Playlist](https://yout
 I sincerely thank everyone who contributed to these projects.
 
 ### Usage
-TODO
+First, import the template for your project. Then, enter the template configurations.
+
+**NOTE:** When you use the template as mentioned in the [Installation](#installation) section, this part will be automatically available. You only need to update the information in the template configurations to your project.
+
+<details>
+  <summary>Click to show/hide code</summary>
+
+```typst
+// Import the template according to the appropriate situation mentioned in the Installation section:
+#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+  template-configurations,
+  LANGUAGES,
+  REPORT-TYPES,
+  DEPARTMENTS,
+  PROGRAMS,
+  ACADEMIC-MEMBER-TITLES,
+)
+
+// Enter the template configurations.
+#show: template-configurations.with(
+  ...
+)
+```
+
+</details>
 
 ### Installation
 
