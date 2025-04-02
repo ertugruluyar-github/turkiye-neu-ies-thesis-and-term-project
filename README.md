@@ -13,6 +13,7 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Kullanılan Paketler](#kullanılan-paketler)
     - [Kullanım](#kullanım)
     - [Kurulum](#kurulum)
+      - [Gerekli Yazılımlar](#gerekli-yazılımlar)
       - [Çevrim İçi](#çevrim-i̇çi)
         - [Şablonu Typst.app Web Sitesinden Kullanmak](#şablonu-typstapp-web-sitesinden-kullanmak)
         - [Şablonu Tinymist Typst Visual Studio Code Uzantısıyla Kullanmak](#şablonu-tinymist-typst-visual-studio-code-uzantısıyla-kullanmak)
@@ -23,6 +24,7 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Packages Used](#packages-used)
     - [Usage](#usage)
     - [Installation](#installation)
+      - [Required Softwares](#required-softwares)
       - [Online](#online)
         - [Using the Template from the Typst.app Website](#using-the-template-from-the-typstapp-website)
         - [Using the Template with the Tinymist Typst Visual Studio Code Extension](#using-the-template-with-the-tinymist-typst-visual-studio-code-extension)
@@ -54,17 +56,25 @@ TODO
 
 ### Kurulum
 
+#### Gerekli Yazılımlar
+- [Typst](https://typst.app/): Typst'ın resmi kod düzenleyicisidir.
+
+YA DA
+
+- [Visual Studio Code](https://code.visualstudio.com/): Typst kodlarını yazmak için kullanılabilen bir kod düzenleyicisidir.
+- [Tinymist Typst Visual Studio Code Uzantısı](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist): Typst kodlarını yazarken yardımcı olan ve eş zamanlı çıktıyı görüntüleme imkanı sağlayan bir uzantıdır.
+
 #### Çevrim İçi
 
 ##### Şablonu [Typst.app](https://typst.app/) Web Sitesinden Kullanmak
 Bu durumda internete her zaman bağlı olmanız gerekmektedir.
 
-##### Şablonu [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) Visual Studio Code Uzantısıyla Kullanmak
+##### Şablonu [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) [Visual Studio Code](https://code.visualstudio.com/) Uzantısıyla Kullanmak
 Bu durumda, ilk defa şablonu indirirken internete ihtiyaç vardır. İlk indirme işleminden sonra internete bağlı olmadan kullanılabilir ve şablonun farklı bir sürümünü indirmek veya yeni bir sürümüne geçmek istediğinizde anlık olarak internete ihtiyaç vardır. Sonrasında internete bağlı olmadan kullanmaya devam edilebilir.
 
 Şablonu yukarıda bahsedilen araçlarla çevrim içi kullanmak için aşağıdaki gibi içe aktarma yapabilirsiniz:
 
-**NOT:** Tinymist Typst uzantısının 'Template Gallery'si üzerinden bir şablonu seçerek proje oluşturduğunuzda bu şekilde içe aktarma yapabilirsiniz.
+**NOT:** [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) uzantısının 'Template Gallery'si üzerinden bir şablonu seçerek proje oluşturduğunuzda bu şekilde içe aktarma yapabilirsiniz.
 ```typst
 #import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
   template-configurations,
@@ -77,7 +87,7 @@ Bu durumda, ilk defa şablonu indirirken internete ihtiyaç vardır. İlk indirm
 ```
 
 #### Çevrim Dışı
-Şablonu çevrim dışı kullanmak için [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) Visual Studio Code uzantısını kullanabilirsiniz.
+Şablonu çevrim dışı kullanmak için [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) [Visual Studio Code](https://code.visualstudio.com/) uzantısını kullanabilirsiniz.
 
 Şablonu [adresindeki](https://github.com/typst/packages/?tab=readme-ov-file#local-packages) bahsedilen konuma indirerek kullanıyorsanız aşağıdaki gibi içe aktarma yapabilirsiniz:
 ```typst
@@ -128,17 +138,25 @@ TODO
 
 ### Installation
 
+#### Required Softwares
+- [Typst](https://typst.app/): Typst is the official code editor.
+
+OR
+
+- [Visual Studio Code](https://code.visualstudio.com/): It is a code editor that can be used to write Typst codes.
+- [Tinymist Typst Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist): It is an extension that helps writing Typst codes and provides simultaneous output viewing.
+
 #### Online
 
 ##### Using the Template from the [Typst.app](https://typst.app/) Website
 In this case, you need to be connected to the internet at all times.
 
-##### Using the Template with the [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) Visual Studio Code Extension
+##### Using the Template with the [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) [Visual Studio Code](https://code.visualstudio.com/) Extension
 In this case, you need the internet when downloading the template for the first time. After the first download, it can be used without being connected to the internet, and you need the internet momentarily when you want to download a different version of the template or switch to a new version. Afterwards, you can continue to use it without being connected to the internet.
 
 To use the template online with the tools mentioned above, you can import it as follows:
 
-**NOTE:** When you create a project by selecting a template from the 'Template Gallery' of the Tinymist Typst extension, you can import it in this way.
+**NOTE:** When you create a project by selecting a template from the 'Template Gallery' of the [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) extension, you can import it in this way.
 ```typst
 #import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
   template-configurations,
@@ -151,7 +169,7 @@ To use the template online with the tools mentioned above, you can import it as 
 ```
 
 #### Offline
-You can use the [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) Visual Studio Code extension to use the template offline.
+You can use the [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) [Visual Studio Code](https://code.visualstudio.com/) extension to use the template offline.
 
 If you are using the template by downloading it to the location mentioned [here](https://github.com/typst/packages/?tab=readme-ov-file#local-packages), you can import it as follows:
 ```typst
