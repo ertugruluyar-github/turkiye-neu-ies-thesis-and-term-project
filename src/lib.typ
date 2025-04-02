@@ -1,7 +1,6 @@
 #import "/src/constants/drop-down-list-constants.typ": *
 #import "/src/styles/common-document-style.typ": common-document-style
 #import "/src/styles/thesis-front-section-style.typ": thesis-front-section-style
-#import "/src/styles/thesis-main-section-style.typ": thesis-main-section-style
 #import "/src/sections/01-front/title-page.typ": title-page
 #import "/src/sections/01-front/preface-page.typ": preface-page
 #import "/src/sections/01-front/table-of-contents-page.typ": table-of-contents-page
@@ -14,13 +13,7 @@
 #import "/src/sections/01-front/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
 #import "/src/sections/01-front/turkish-abstract-page.typ": turkish-abstract-page
 #import "/src/sections/01-front/english-abstract-page.typ": english-abstract-page
-#import "/src/sections/02-main/introduction-page.typ": introduction-page
-#import "/src/sections/02-main/literature-review-page.typ": literature-review-page
-#import "/src/sections/02-main/methodology-page.typ": methodology-page
-#import "/src/sections/02-main/findings-page.typ": findings-page
-#import "/src/sections/02-main/discussion-conclusion-and-suggestions-page.typ": (
-  discussion-conclusion-and-suggestions-page,
-)
+#import "/src/sections/thesis-main-section.typ": thesis-main-section
 #import "/src/sections/thesis-back-section.typ": thesis-back-section
 #import "/src/core/validation-manager/validation-manager.typ": validation-manager
 #import "core/language-manager/language-manager.typ": init-language-manager
@@ -447,63 +440,16 @@
   // Mevcut sayfa zaten boşsa sayfa sonu pasif olsun (weak: true). [Disable page break if the current page is already empty (weak: true).]
   pagebreak(weak: true)
 
-  {
-    /* ---- TEZİN ANA KISMI [MAIN SECTION OF THESIS] ---- */
-
-    // Tezin Ana Kısmının Stili [Style of Main Section of Thesis]
-    show: thesis-main-section-style
-
-    /* --- Bölüm 1: Giriş [Chapter 1: Introduction] --- */
-    if (report-type == REPORT-TYPES.TERM-PROJECT and have-introduction-in-term-project == false) {
-      []
-    } else {
-      introduction-page()
-    }
-
-    /* --- Bölüm 2: Alan Yazın (İlgi̇li̇ Araştırmalar) [Chapter 2: Literature Review] --- */
-    if (report-type == REPORT-TYPES.TERM-PROJECT and have-literature-review-in-term-project == false) {
-      []
-    } else {
-      literature-review-page()
-    }
-
-    /* --- Bölüm 3: Yöntem [Chapter 3: Methodology] --- */
-    if (report-type == REPORT-TYPES.TERM-PROJECT and have-methodology-in-term-project == false) {
-      []
-    } else {
-      methodology-page()
-    }
-
-    /* --- Bölüm 4: Bulgular [Chapter 4: Findings] --- */
-    if (report-type == REPORT-TYPES.TERM-PROJECT and have-findings-in-term-project == false) {
-      []
-    } else {
-      if (
-        report-type == REPORT-TYPES.MASTER-THESIS
-          or report-type == REPORT-TYPES.DOCTORAL-THESIS
-          or report-type == REPORT-TYPES.TERM-PROJECT
-      ) {
-        findings-page()
-      }
-    }
-
-    /* --- Bölüm 5: Tartışma, Sonuç ve Öneriler [Chapter 5: Discussion, Conclusion and Suggestions] --- */
-    if (
-      report-type == REPORT-TYPES.TERM-PROJECT and have-discussion-conclusion-and-suggestions-in-term-project == false
-    ) {
-      []
-    } else {
-      if (
-        report-type == REPORT-TYPES.MASTER-THESIS
-          or report-type == REPORT-TYPES.DOCTORAL-THESIS
-          or report-type == REPORT-TYPES.TERM-PROJECT
-      ) {
-        discussion-conclusion-and-suggestions-page(
-          show-separated-sub-headings: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
-        )
-      }
-    }
-  }
+  /* ---- TEZİN ANA KISMI [MAIN SECTION OF THESIS] ---- */
+  thesis-main-section(
+    report-type: report-type,
+    have-introduction-in-term-project: have-introduction-in-term-project,
+    have-literature-review-in-term-project: have-literature-review-in-term-project,
+    have-methodology-in-term-project: have-methodology-in-term-project,
+    have-findings-in-term-project: have-findings-in-term-project,
+    have-discussion-conclusion-and-suggestions-in-term-project: have-discussion-conclusion-and-suggestions-in-term-project,
+    show-separated-sub-headings-in-discussion-conclusion-and-suggestions: show-separated-sub-headings-in-discussion-conclusion-and-suggestions,
+  )
 
   /* ---- TEZİN ARKA KISMI [BACK SECTION OF THESIS] ---- */
   thesis-back-section(
