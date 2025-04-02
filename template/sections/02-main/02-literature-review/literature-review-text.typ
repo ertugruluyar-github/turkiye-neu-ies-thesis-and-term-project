@@ -14,7 +14,7 @@
 @figür-tablo-fiziksel-ve-kimyasal-olaylar-sorularının-frekans-analizi örnek bir tablo içerikli figürdür.
 
 // Başka bir '.typ' uzantılı Typst dosyasındaki içeriği eklemek için "include" komutunu kullanabilirsiniz.
-#include "/template/assets/examples/table-figure-from-csv-example-1.typ"
+#include "/template/assets/examples/table-figure-from-csv-example.typ"
 
 @figür-tablo-csv-dosyasıyla-tablo-örneği CSV dosyasından tablo oluşturmaya örnektir. Bu örnekte tablonun başlığı elle yazıldı ve içeriği CSV dosyasından yüklendi.
 
