@@ -200,9 +200,13 @@ If you are using the template by downloading it to the location mentioned [here]
   <summary>Click to show/hide code</summary>
 
   ```typst
-  kiye-neu-ies-thesis-and-t (
-    template-configuratt REPORT-TYPES,
-    DEPARTMENt DEMIC-MEMBER-TITLES,
+  #import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+    template-configurations,
+    LANGUAGES,
+    REPORT-TYPES,
+    DEPARTMENTS,
+    PROGRAMS,
+    ACADEMIC-MEMBER-TITLES,
   )
   ```
 
