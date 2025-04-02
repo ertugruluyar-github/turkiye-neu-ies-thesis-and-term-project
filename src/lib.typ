@@ -1,18 +1,7 @@
 #import "/src/constants/drop-down-list-constants.typ": *
 #import "/src/styles/common-document-style.typ": common-document-style
-#import "/src/styles/thesis-front-section-style.typ": thesis-front-section-style
 #import "/src/sections/01-front/title-page.typ": title-page
-#import "/src/sections/01-front/preface-page.typ": preface-page
-#import "/src/sections/01-front/table-of-contents-page.typ": table-of-contents-page
-#import "/src/sections/01-front/list-of-table-figures-page.typ": list-of-table-figures-page
-#import "/src/sections/01-front/list-of-image-figures-page.typ": list-of-image-figures-page
-#import "/src/sections/01-front/list-of-equations-page.typ": list-of-equations-page
-#import "/src/sections/01-front/list-of-code-figures-page.typ": list-of-code-figures-page
-#import "/src/sections/01-front/thesis-study-originality-report-page.typ": thesis-study-originality-report-page
-#import "/src/sections/01-front/scientific-ethics-declaration-page.typ": scientific-ethics-declaration-page
-#import "/src/sections/01-front/symbols-and-abbreviations-page.typ": symbols-and-abbreviations-page
-#import "/src/sections/01-front/turkish-abstract-page.typ": turkish-abstract-page
-#import "/src/sections/01-front/english-abstract-page.typ": english-abstract-page
+#import "/src/sections/thesis-front-section.typ": thesis-front-section
 #import "/src/sections/thesis-main-section.typ": thesis-main-section
 #import "/src/sections/thesis-back-section.typ": thesis-back-section
 #import "/src/core/validation-manager/validation-manager.typ": validation-manager
@@ -294,151 +283,24 @@
     thesis-study-funding-organization: thesis-study-funding-organization,
   )
 
-  {
-    /* ---- TEZİN ÖN KISMI [FRONT SECTION OF THESIS] ---- */
-
-    // Tezin Ön Kısmının Stili [Style of the Front Section of Thesis]
-    show: thesis-front-section-style
-
-    /* --- Ön Söz Sayfası [Preface Page] --- */
-    if (
-      report-type == REPORT-TYPES.MASTER-THESIS
-        or report-type == REPORT-TYPES.DOCTORAL-THESIS
-        or report-type == REPORT-TYPES.TERM-PROJECT
-    ) {
-      preface-page(
-        author: author,
-        date: date,
-      )
-    }
-
-    /* --- İçindekiler Sayfası [Table of Contents Page] --- */
-    table-of-contents-page()
-
-    /* --- Tablo Figürleri Listesi Sayfası [List of Table Figures Page] --- */
-    if (
-      (
-        report-type == REPORT-TYPES.MASTER-THESIS
-          or report-type == REPORT-TYPES.DOCTORAL-THESIS
-          or report-type == REPORT-TYPES.TERM-PROJECT
-      )
-        and show-list-of-table-figures
-    ) {
-      list-of-table-figures-page()
-    }
-
-    /* --- Şekil Figürleri Listesi Sayfası [List of Image Figures Page] --- */
-    if (
-      (
-        report-type == REPORT-TYPES.MASTER-THESIS
-          or report-type == REPORT-TYPES.DOCTORAL-THESIS
-          or report-type == REPORT-TYPES.TERM-PROJECT
-      )
-        and show-list-of-image-figures
-    ) {
-      list-of-image-figures-page()
-    }
-
-    /* --- Denklem Figürleri Listesi Sayfası [List of Equation Figures Page] --- */
-    if (
-      (
-        report-type == REPORT-TYPES.MASTER-THESIS
-          or report-type == REPORT-TYPES.DOCTORAL-THESIS
-          or report-type == REPORT-TYPES.TERM-PROJECT
-      )
-        and show-list-of-equations
-    ) {
-      list-of-equations-page()
-    }
-
-    /* --- Kod Figürleri Listesi Sayfası [List of Code Figures Page] --- */
-    if (
-      (
-        report-type == REPORT-TYPES.MASTER-THESIS
-          or report-type == REPORT-TYPES.DOCTORAL-THESIS
-          or report-type == REPORT-TYPES.TERM-PROJECT
-      )
-        and show-list-of-code-figures
-    ) {
-      list-of-code-figures-page()
-    }
-
-    /* --- Tez Çalışması Örijinallik Raporu Sayfası [Originality Report Page] --- */
-    if (
-      report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.DOCTORAL-THESIS
-    ) {
-      thesis-study-originality-report-page(
-        thesis-title: thesis-title,
-        author: author,
-        advisor: advisor,
-        date: date,
-        included-page-count: thesis-originalty.included-page-count,
-        similarity-score: thesis-originalty.similarity-score,
-      )
-    }
-
-    /* --- Bilimsel Etik Beyannamesi Sayfası [Scientific Ethics Declaration Page] --- */
-    if (
-      report-type == REPORT-TYPES.MASTER-THESIS
-        or report-type == REPORT-TYPES.DOCTORAL-THESIS
-        or report-type == REPORT-TYPES.TERM-PROJECT
-    ) {
-      scientific-ethics-declaration-page(
-        author: author,
-        date: date,
-      )
-    }
-
-    /* --- Simgeler ve Kısaltmalar Sayfası [Symbols and Abbreviations Page] --- */
-    if (
-      (
-        report-type == REPORT-TYPES.MASTER-THESIS
-          or report-type == REPORT-TYPES.DOCTORAL-THESIS
-          or report-type == REPORT-TYPES.TERM-PROJECT
-      )
-        and (have-symbols or have-abbreviations)
-    ) {
-      symbols-and-abbreviations-page(
-        have-symbols: have-symbols,
-        have-abbreviations: have-abbreviations,
-      )
-    }
-
-    /* --- Türkçe Özet Sayfası [Turkish Abstract Page] --- */
-    if (
-      report-type == REPORT-TYPES.MASTER-THESIS
-        or report-type == REPORT-TYPES.DOCTORAL-THESIS
-        or report-type == REPORT-TYPES.TERM-PROJECT
-    ) {
-      turkish-abstract-page(
-        department: department,
-        program: program,
-        report-type: report-type,
-        thesis-title: thesis-title,
-        author: author,
-        keywords: keywords.tur,
-      )
-    }
-
-    /* --- İngilizce Özet Sayfası [English Abstract Page] --- */
-    if (
-      report-type == REPORT-TYPES.MASTER-THESIS
-        or report-type == REPORT-TYPES.DOCTORAL-THESIS
-        or report-type == REPORT-TYPES.TERM-PROJECT
-    ) {
-      english-abstract-page(
-        department: department,
-        program: program,
-        report-type: report-type,
-        thesis-title: thesis-title,
-        author: author,
-        keywords: keywords.eng,
-      )
-    }
-  }
-
-  // Mevcut sayfa zaten boşsa sayfa sonu pasif olsun (weak: true). [Disable page break if the current page is already empty (weak: true).]
-  pagebreak(weak: true)
+  /* ---- TEZİN ÖN KISMI [FRONT SECTION OF THESIS] ---- */
+  thesis-front-section(
+    department: department,
+    program: program,
+    report-type: report-type,
+    date: date,
+    thesis-title: thesis-title,
+    author: author,
+    advisor: advisor,
+    thesis-originalty: thesis-originalty,
+    keywords: keywords,
+    show-list-of-table-figures: show-list-of-table-figures,
+    show-list-of-image-figures: show-list-of-image-figures,
+    show-list-of-equations: show-list-of-equations,
+    show-list-of-code-figures: show-list-of-code-figures,
+    have-symbols: have-symbols,
+    have-abbreviations: have-abbreviations,
+  )
 
   /* ---- TEZİN ANA KISMI [MAIN SECTION OF THESIS] ---- */
   thesis-main-section(
