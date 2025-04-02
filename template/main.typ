@@ -37,7 +37,7 @@
 )
 */
 
-// Şablonu, şablonun bütün dosyalarının bulunduğu [GitHub Reposu]() üzerinden manuel olarak bilgisayarınızda istediğiniz herhangi bir konuma indirerek kullanıyorsanız aşağıdaki gibi içe aktarma yapabilirsiniz: // TODO: GitHub reposu public yapılınca bağlantısı eklenecek.
+// Şablonu, şablonun bütün dosyalarının bulunduğu [Geliştirici GitHub Reposu](https://github.com/ertugruluyar-github/turkiye-neu-ies-thesis-and-term-project) üzerinden manuel olarak bilgisayarınızda istediğiniz herhangi bir konuma indirerek kullanıyorsanız aşağıdaki gibi içe aktarma yapabilirsiniz:
 #import "/src/lib.typ": (
   template-configurations,
   LANGUAGES,
