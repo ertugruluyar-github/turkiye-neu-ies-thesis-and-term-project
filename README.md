@@ -59,7 +59,7 @@ TODO
 #### Gerekli Yazılımlar
 - [Typst](https://typst.app/): Typst'ın resmi kod düzenleyicisidir.
 
-YA DA
+    YA DA
 
 - [Visual Studio Code](https://code.visualstudio.com/): Typst kodlarını yazmak için kullanılabilen bir kod düzenleyicisidir.
 - [Tinymist Typst Visual Studio Code Uzantısı](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist): Typst kodlarını yazarken yardımcı olan ve eş zamanlı çıktıyı görüntüleme imkanı sağlayan bir uzantıdır.
@@ -141,7 +141,7 @@ TODO
 #### Required Softwares
 - [Typst](https://typst.app/): Typst is the official code editor.
 
-OR
+    OR
 
 - [Visual Studio Code](https://code.visualstudio.com/): It is a code editor that can be used to write Typst codes.
 - [Tinymist Typst Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist): It is an extension that helps writing Typst codes and provides simultaneous output viewing.
