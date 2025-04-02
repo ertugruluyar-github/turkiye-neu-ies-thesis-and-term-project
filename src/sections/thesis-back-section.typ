@@ -6,6 +6,7 @@
 #import "/src/sections/03-back/curriculum-vitae-page.typ": curriculum-vitae-page
 #import "/src/sections/03-back/expanded-turkish-abstract-page.typ": expanded-turkish-abstract-page
 
+// Tezin Arka Kısmı. [Back Section of Thesis.]
 #let thesis-back-section(
   language: none,
   department: none,

@@ -12,7 +12,7 @@
 #import "/src/sections/01-front/turkish-abstract-page.typ": turkish-abstract-page
 #import "/src/sections/01-front/english-abstract-page.typ": english-abstract-page
 
-//
+// Tezin Ön Kısmı. [Front Section of Thesis.]
 #let thesis-front-section(
   department: none,
   program: none,

@@ -8,7 +8,7 @@
   discussion-conclusion-and-suggestions-page,
 )
 
-//
+// Tezin Ana Kısmı. [Main Section of Thesis.]
 #let thesis-main-section(
   report-type: none,
   have-introduction-in-term-project: none,
