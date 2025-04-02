@@ -2,7 +2,6 @@
 #import "/src/styles/common-document-style.typ": common-document-style
 #import "/src/styles/thesis-front-section-style.typ": thesis-front-section-style
 #import "/src/styles/thesis-main-section-style.typ": thesis-main-section-style
-#import "/src/styles/thesis-back-section-style.typ": thesis-back-section-style
 #import "/src/sections/01-front/title-page.typ": title-page
 #import "/src/sections/01-front/preface-page.typ": preface-page
 #import "/src/sections/01-front/table-of-contents-page.typ": table-of-contents-page
@@ -22,11 +21,7 @@
 #import "/src/sections/02-main/discussion-conclusion-and-suggestions-page.typ": (
   discussion-conclusion-and-suggestions-page,
 )
-#import "/src/sections/03-back/work-schedule-page.typ": work-schedule-page
-#import "/src/sections/03-back/bibliography-page.typ": bibliography-page
-#import "/src/sections/03-back/appendices-page.typ": appendices-page
-#import "/src/sections/03-back/curriculum-vitae-page.typ": curriculum-vitae-page
-#import "/src/sections/03-back/expanded-turkish-abstract-page.typ": expanded-turkish-abstract-page
+#import "/src/sections/thesis-back-section.typ": thesis-back-section
 #import "/src/core/validation-manager/validation-manager.typ": validation-manager
 #import "core/language-manager/language-manager.typ": init-language-manager
 
@@ -510,56 +505,17 @@
     }
   }
 
-  {
-    /* ---- TEZİN ARKA KISMI [BACK SECTION OF THESIS] ---- */
-
-    // Tezin Arka Kısmının Stili [Style of Back Section of Thesis]
-    show: thesis-back-section-style
-
-    /* --- Çalışma Takvimi Sayfası [Work Schedule Page] --- */
-    if (
-      report-type == REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type == REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL
-    ) {
-      work-schedule-page(
-        report-type: report-type,
-        work-packages: work-packages,
-      )
-    }
-
-    /* --- Genişletilmiş Türkçe Özet Sayfası [Expanded Turkish Abstract Page] --- */
-    if (
-      language == LANGUAGES.EN-US
-        and (
-          report-type == REPORT-TYPES.MASTER-THESIS
-            or report-type == REPORT-TYPES.DOCTORAL-THESIS
-            or report-type == REPORT-TYPES.TERM-PROJECT
-        )
-    ) {
-      expanded-turkish-abstract-page(
-        department: department,
-        program: program,
-        report-type: report-type,
-        thesis-title: thesis-title,
-        author: author,
-      )
-    }
-
-    /* --- Kaynaklar Sayfası [References Page]  --- */
-    bibliography-page()
-
-    /* --- Ekler Sayfası [Appendices Page]  --- */
-    appendices-page()
-
-    /* --- Öz Geçmiş Sayfası [Curriculum Vitae Page]  --- */
-    if report-type == REPORT-TYPES.TERM-PROJECT {
-      curriculum-vitae-page(
-        first-name: author.first-name,
-        last-name: author.last-name,
-        orcid: author.orcid,
-        ..curriculum-vitae-info,
-      )
-    }
-  }
+  /* ---- TEZİN ARKA KISMI [BACK SECTION OF THESIS] ---- */
+  thesis-back-section(
+    language: language,
+    department: department,
+    program: program,
+    report-type: report-type,
+    thesis-title: thesis-title,
+    author: author,
+    work-packages: work-packages,
+    curriculum-vitae-info: curriculum-vitae-info,
+  )
 
   // Gövdeyi pasif hale getir. [Disable the body.]
   //body
