@@ -2,6 +2,7 @@
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
 
+// Kaynaklar sayfası. [References page.]
 #let bibliography-page() = {
   // Kaynaklar stilini uygula. [Apply bibliography style.]
   bibliography-page-style(
