@@ -52,7 +52,7 @@ Ve ayrıca [Typst YouTube Oynatma Listesi](https://youtube.com/playlist?list=PLC
 Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
 
 ### Kullanım
-TODO
+ 
 
 ### Kurulum
 
@@ -75,6 +75,9 @@ Bu durumda, ilk defa şablonu indirirken internete ihtiyaç vardır. İlk indirm
 Şablonu yukarıda bahsedilen araçlarla çevrim içi kullanmak için aşağıdaki gibi içe aktarma yapabilirsiniz:
 
 **NOT:** [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) uzantısının 'Template Gallery'si üzerinden bir şablonu seçerek proje oluşturduğunuzda bu şekilde içe aktarma yapabilirsiniz.
+<details>
+  <summary>Kodu göstermek/gizlemek için tıklayınız</summary>
+
 ```typst
 #import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
   template-configurations,
@@ -86,31 +89,46 @@ Bu durumda, ilk defa şablonu indirirken internete ihtiyaç vardır. İlk indirm
 )
 ```
 
+</details>
+
 #### Çevrim Dışı
 Şablonu çevrim dışı kullanmak için [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) [Visual Studio Code](https://code.visualstudio.com/) uzantısını kullanabilirsiniz.
 
 Şablonu [adresindeki](https://github.com/typst/packages/?tab=readme-ov-file#local-packages) bahsedilen konuma indirerek kullanıyorsanız aşağıdaki gibi içe aktarma yapabilirsiniz:
-```typst
-#import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
-  template-configurations,
-  LANGUAGES,
-  REPORT-TYPES,
-  DEPARTMENTS,
-  PROGRAMS,
-  ACADEMIC-MEMBER-TITLES,
-)
-```
+
+<details>
+  <summary>Kodu göstermek/gizlemek için tıklayınız</summary>
+
+  ```typst
+  #import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+    template-configurations,
+    LANGUAGES,
+    REPORT-TYPES,
+    DEPARTMENTS,
+    PROGRAMS,
+    ACADEMIC-MEMBER-TITLES,
+  )
+  ```
+
+</details>
+
 Şablonu, şablonun bütün dosyalarının bulunduğu [Geliştirici GitHub Reposu](https://github.com/ertugruluyar-github/turkiye-neu-ies-thesis-and-term-project) üzerinden manuel olarak bilgisayarınızda istediğiniz herhangi bir konuma indirerek kullanıyorsanız aşağıdaki gibi içe aktarma yapabilirsiniz:
-```typst
-#import "/src/lib.typ": (
-  template-configurations,
-  LANGUAGES,
-  REPORT-TYPES,
-  DEPARTMENTS,
-  PROGRAMS,
-  ACADEMIC-MEMBER-TITLES,
-)
-```
+
+<details>
+  <summary>Kodu göstermek/gizlemek için tıklayınız</summary>
+
+  ```typst
+  #import "/src/lib.typ": (
+    template-configurations,
+    LANGUAGES,
+    REPORT-TYPES,
+    DEPARTMENTS,
+    PROGRAMS,
+    ACADEMIC-MEMBER-TITLES,
+  )
+  ```
+
+</details>
 
 ## English
 
@@ -157,6 +175,9 @@ In this case, you need the internet when downloading the template for the first 
 To use the template online with the tools mentioned above, you can import it as follows:
 
 **NOTE:** When you create a project by selecting a template from the 'Template Gallery' of the [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) extension, you can import it in this way.
+<details>
+  <summary>Click to show/hide code</summary>
+
 ```typst
 #import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
   template-configurations,
@@ -168,28 +189,39 @@ To use the template online with the tools mentioned above, you can import it as 
 )
 ```
 
+</details>
+
 #### Offline
 You can use the [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) [Visual Studio Code](https://code.visualstudio.com/) extension to use the template offline.
 
 If you are using the template by downloading it to the location mentioned [here](https://github.com/typst/packages/?tab=readme-ov-file#local-packages), you can import it as follows:
-```typst
-#import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
-  template-configurations,
-  LANGUAGES,
-  REPORT-TYPES,
-  DEPARTMENTS,
-  PROGRAMS,
-  ACADEMIC-MEMBER-TITLES,
-)
-```
+
+<details>
+  <summary>Click to show/hide code</summary>
+
+  ```typst
+  kiye-neu-ies-thesis-and-t (
+    template-configuratt REPORT-TYPES,
+    DEPARTMENt DEMIC-MEMBER-TITLES,
+  )
+  ```
+
+</details>
+
 If you are using the template by manually downloading it to any location on your computer from the [Developer GitHub Repo](https://github.com/ertugruluyar-github/turkiye-neu-ies-thesis-and-term-project) where all the template files are located, you can import it as follows:
-```typst
-#import "/src/lib.typ": (
-  template-configurations,
-  LANGUAGES,
-  REPORT-TYPES,
-  DEPARTMENTS,
-  PROGRAMS,
-  ACADEMIC-MEMBER-TITLES,
-)
-```
+
+<details>
+  <summary>Click to show/hide code</summary>
+
+  ```typst
+  #import "/src/lib.typ": (
+    template-configurations,
+    LANGUAGES,
+    REPORT-TYPES,
+    DEPARTMENTS,
+    PROGRAMS,
+    ACADEMIC-MEMBER-TITLES,
+  )
+  ```
+
+</details>
