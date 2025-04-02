@@ -11,6 +11,7 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Kullanılan Paketler](#kullanılan-paketler)
     - [Özellikler](#özellikler)
     - [Kullanım](#kullanım)
+      - [Alternatiflere sahip başlıklardaki alternatiflerden birini seçmek.](#alternatiflere-sahip-başlıklardaki-alternatiflerden-birini-seçmek)
     - [Kurulum](#kurulum)
       - [Gerekli Yazılımlar](#gerekli-yazılımlar)
       - [Çevrim İçi](#çevrim-i̇çi)
@@ -22,7 +23,7 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Acknowledgement](#acknowledgement)
     - [Packages Used](#packages-used)
     - [Features](#features)
-    - [Usage](#usage)
+      - [Selecting one of the alternatives in headings with alternatives](#selecting-one-of-the-alternatives-in-headings-with-alternatives)
     - [Installation](#installation)
       - [Required Softwares](#required-softwares)
       - [Online](#online)
@@ -92,7 +93,24 @@ Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
 
 </details>
 
-TODO: Birden fazla başlık seçeneği olan yerlerde bir başlığı seçmenin nasıl yapılacağını göster.
+#### Alternatiflere sahip başlıklardaki alternatiflerden birini seçmek.
+Türkçe dilindeki başlıklar için `/template/assets/languages/turkish.toml`, İngilizce dilindeki başlıklar için `/template/assets/languages/english.toml` dosyasını açınız. Ardından, kullanmak istediğiniz başlık dışındaki başlıkları siliniz.
+
+Örneğin, `/template/assets/languages/turkish.toml` dosyasında şu şekilde bir değişiklik yapılarak istenen başlık seçilebilir:
+
+<details>
+  <summary>Kodu göstermek/gizlemek için tıklayınız</summary>
+
+```toml
+[translations]
+# Başlıklardan sadece birini kullanmak için parantez içinde olmayan ya da parantez içindeki ifadelerden birini seçip diğerlerini siliniz.
+# Seçmeden önce:
+#PREFACE = "ÖN SÖZ (TEŞEKKÜR)"
+# Seçtikten sonra:
+PREFACE = "ÖN SÖZ"
+```
+
+</details>
 
 ### Kurulum
 
@@ -204,6 +222,22 @@ I sincerely thank everyone who contributed to these projects.
 - [x] Automatic numbering of table, image and code figures is provided. The numbering is automatically updated when a new figure is inserted. Likewise, the numbering of references to these figures in the text is also automatically updated.
 - [x] Multi-language support (Turkish and English) is available.
 - [x] Reducing the possibility of making mistakes by providing the ability to choose from the information defined in the logic of the drop-down list.
+
+#### Selecting one of the alternatives in headings with alternatives
+For Turkish language headings, open the `/template/assets/languages/turkish.toml` file. For English language headings, open the `/template/assets/languages/english.toml` file. Then, delete all headings except the one you want to use.
+
+For example, in the `/template/assets/languages/turkish.toml` file, you can select the desired heading by making the following change:
+
+<details>
+  <summary>Click to show/hide code</summary>
+
+```toml
+[translations]
+# To use only one of the headings, select either the expression not in parentheses or one of the expressions in parentheses and delete the others.
+# Before selection:
+#PREFACE = "PREFACE (ACKNOWLEDGEMENTS)"
+# After selection:
+PREFACE = "PREFACE"
 
 ### Usage
 First, import the template for your project. Then, enter the template configurations.
