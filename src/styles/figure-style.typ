@@ -76,7 +76,7 @@
   // TODO: Tablo figürlerinin bölünüp bölünmeyeceğini ayarla.
   // Tabloyu bölünebilir yapma. [Make table breakable.]
   // NOT: Figür başlıklarının tekrar etmesi ve tekrar eden başlıkların ana başlıktan farklı olmasını sağlayacak özellikler gelene kadar tablolar bölünemez şeklinde kalmalıdır.
-  //show figure.where(kind: table): set block(breakable: true)
+  show figure.where(kind: table): set block(breakable: false)
 
   content
 }
