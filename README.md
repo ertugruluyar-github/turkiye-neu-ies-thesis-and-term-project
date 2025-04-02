@@ -14,6 +14,8 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Kullanım](#kullanım)
     - [Kurulum](#kurulum)
       - [Çevrim İçi](#çevrim-i̇çi)
+        - [Şablonu Typst.app Web Sitesinden Kullanmak](#şablonu-typstapp-web-sitesinden-kullanmak)
+        - [Şablonu Tinymist Typst Visual Studio Code Uzantısıyla Kullanmak](#şablonu-tinymist-typst-visual-studio-code-uzantısıyla-kullanmak)
       - [Çevrim Dışı](#çevrim-dışı)
   - [English](#english)
     - [Trailer Video](#trailer-video)
@@ -22,6 +24,8 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Usage](#usage)
     - [Installation](#installation)
       - [Online](#online)
+        - [Using the Template from the Typst.app Website](#using-the-template-from-the-typstapp-website)
+        - [Using the Template with the Tinymist Typst Visual Studio Code Extension](#using-the-template-with-the-tinymist-typst-visual-studio-code-extension)
       - [Offline](#offline)
 
 ## Türkçe
@@ -49,11 +53,54 @@ Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
 TODO
 
 ### Kurulum
+
 #### Çevrim İçi
-TODO
+
+##### Şablonu [Typst.app](https://typst.app/) Web Sitesinden Kullanmak
+Bu durumda internete her zaman bağlı olmanız gerekmektedir.
+
+##### Şablonu [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) Visual Studio Code Uzantısıyla Kullanmak
+Bu durumda, ilk defa şablonu indirirken internete ihtiyaç vardır. İlk indirme işleminden sonra internete bağlı olmadan kullanılabilir ve şablonun farklı bir sürümünü indirmek veya yeni bir sürümüne geçmek istediğinizde anlık olarak internete ihtiyaç vardır. Sonrasında internete bağlı olmadan kullanmaya devam edilebilir.
+
+Şablonu yukarıda bahsedilen araçlarla çevrim içi kullanmak için aşağıdaki gibi içe aktarma yapabilirsiniz:
+
+**NOT:** Tinymist Typst uzantısının 'Template Gallery'si üzerinden bir şablonu seçerek proje oluşturduğunuzda bu şekilde içe aktarma yapabilirsiniz.
+```typst
+#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+  template-configurations,
+  LANGUAGES,
+  REPORT-TYPES,
+  DEPARTMENTS,
+  PROGRAMS,
+  ACADEMIC-MEMBER-TITLES,
+)
+```
 
 #### Çevrim Dışı
-TODO
+Şablonu çevrim dışı kullanmak için [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) Visual Studio Code uzantısını kullanabilirsiniz.
+
+Şablonu [adresindeki](https://github.com/typst/packages/?tab=readme-ov-file#local-packages) bahsedilen konuma indirerek kullanıyorsanız aşağıdaki gibi içe aktarma yapabilirsiniz:
+```typst
+#import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+  template-configurations,
+  LANGUAGES,
+  REPORT-TYPES,
+  DEPARTMENTS,
+  PROGRAMS,
+  ACADEMIC-MEMBER-TITLES,
+)
+```
+Şablonu, şablonun bütün dosyalarının bulunduğu [Geliştirici GitHub Reposu](https://github.com/ertugruluyar-github/turkiye-neu-ies-thesis-and-term-project) üzerinden manuel olarak bilgisayarınızda istediğiniz herhangi bir konuma indirerek kullanıyorsanız aşağıdaki gibi içe aktarma yapabilirsiniz:
+```typst
+#import "/src/lib.typ": (
+  template-configurations,
+  LANGUAGES,
+  REPORT-TYPES,
+  DEPARTMENTS,
+  PROGRAMS,
+  ACADEMIC-MEMBER-TITLES,
+)
+```
 
 ## English
 
@@ -80,8 +127,51 @@ I sincerely thank everyone who contributed to these projects.
 TODO
 
 ### Installation
+
 #### Online
-TODO
+
+##### Using the Template from the [Typst.app](https://typst.app/) Website
+In this case, you need to be connected to the internet at all times.
+
+##### Using the Template with the [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) Visual Studio Code Extension
+In this case, you need the internet when downloading the template for the first time. After the first download, it can be used without being connected to the internet, and you need the internet momentarily when you want to download a different version of the template or switch to a new version. Afterwards, you can continue to use it without being connected to the internet.
+
+To use the template online with the tools mentioned above, you can import it as follows:
+
+**NOTE:** When you create a project by selecting a template from the 'Template Gallery' of the Tinymist Typst extension, you can import it in this way.
+```typst
+#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+  template-configurations,
+  LANGUAGES,
+  REPORT-TYPES,
+  DEPARTMENTS,
+  PROGRAMS,
+  ACADEMIC-MEMBER-TITLES,
+)
+```
 
 #### Offline
-TODO
+You can use the [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) Visual Studio Code extension to use the template offline.
+
+If you are using the template by downloading it to the location mentioned [here](https://github.com/typst/packages/?tab=readme-ov-file#local-packages), you can import it as follows:
+```typst
+#import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+  template-configurations,
+  LANGUAGES,
+  REPORT-TYPES,
+  DEPARTMENTS,
+  PROGRAMS,
+  ACADEMIC-MEMBER-TITLES,
+)
+```
+If you are using the template by manually downloading it to any location on your computer from the [Developer GitHub Repo](https://github.com/ertugruluyar-github/turkiye-neu-ies-thesis-and-term-project) where all the template files are located, you can import it as follows:
+```typst
+#import "/src/lib.typ": (
+  template-configurations,
+  LANGUAGES,
+  REPORT-TYPES,
+  DEPARTMENTS,
+  PROGRAMS,
+  ACADEMIC-MEMBER-TITLES,
+)
+```
