@@ -3,11 +3,11 @@
   ZERO-PARAGRAPH-SPACING-SIZE,
 )
 
-// Başlık Sayfası stili. [Title Page style.]
-#let title-page-style(content) = {
+// İç Kapak sayfası stili. [Inner Cover page style.]
+#let inner-cover-page-style(content) = {
   // Sayfa ayarlarını ayarla. [Set page settings.]
   set page(
-    // Başlık kısmını kaldır. [Remove header.]
+    // Sayfanın başlık kısmını kaldır. [Remove header of the page.]
     header: none,
     // Sayfa numarasını gizle. [Hide page number.]
     footer: none,

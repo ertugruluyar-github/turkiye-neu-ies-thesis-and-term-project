@@ -1,6 +1,6 @@
 #import "/src/constants/drop-down-list-constants.typ": *
 #import "/src/styles/common-document-style.typ": common-document-style
-#import "/src/sections/01-front/title-page.typ": title-page
+#import "/src/sections/01-front/inner-cover-page.typ": inner-cover-page
 #import "/src/sections/thesis-front-section.typ": thesis-front-section
 #import "/src/sections/thesis-main-section.typ": thesis-main-section
 #import "/src/sections/thesis-back-section.typ": thesis-back-section
@@ -270,7 +270,7 @@
   )
 
   /* --- BAŞLIK SAYFASI [TITLE PAGE] --- */
-  title-page(
+  inner-cover-page(
     language: language,
     department: department,
     program: program,

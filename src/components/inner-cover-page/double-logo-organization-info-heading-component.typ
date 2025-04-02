@@ -3,7 +3,7 @@
   UNIVERSITY-LOGO-PATH,
   INSTITUTE-LOGO-PATH,
 )
-#import "/src/components/title-page/organization-info-heading-component.typ": organization-info-heading-component
+#import "/src/components/inner-cover-page/organization-info-heading-component.typ": organization-info-heading-component
 
 // Çift logolu başlık. [Double logo heading.]\
 /* Örnek [Example]:\

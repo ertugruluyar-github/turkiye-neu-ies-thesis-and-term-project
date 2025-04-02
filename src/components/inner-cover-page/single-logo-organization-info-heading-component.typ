@@ -1,6 +1,6 @@
 #import "/src/constants/drop-down-list-constants.typ": LANGUAGES
 #import "/src/constants/path-constants.typ": INSTITUTE-LOGO-PATH
-#import "/src/components/title-page/organization-info-heading-component.typ": organization-info-heading-component
+#import "/src/components/inner-cover-page/organization-info-heading-component.typ": organization-info-heading-component
 
 // Tek logolu başlık. [Single logo heading.]\
 /* Örnek [Example]:\

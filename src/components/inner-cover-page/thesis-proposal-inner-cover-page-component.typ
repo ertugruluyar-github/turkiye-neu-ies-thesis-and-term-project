@@ -1,6 +1,6 @@
-#import "/src/styles/title-page-style.typ": title-page-style
+#import "/src/styles/inner-cover-page-style.typ": inner-cover-page-style
 #import "/src/constants/drop-down-list-constants.typ": LANGUAGES
-#import "/src/components/title-page/single-logo-organization-info-heading-component.typ": (
+#import "/src/components/inner-cover-page/single-logo-organization-info-heading-component.typ": (
   single-logo-organization-info-heading-component,
 )
 #import "/src/core/language-manager/language-manager.typ": translator
@@ -9,10 +9,10 @@
 #import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
 #import "/src/components/advisor-with-orcid-component.typ": advisor-with-orcid-component
-#import "/src/components/title-page/city-name-with-year-component.typ": city-name-with-year-component
+#import "/src/components/inner-cover-page/city-name-with-year-component.typ": city-name-with-year-component
 
-// Tez Önerisi Kapak Sayfası bileşeni. [Thesis Proposal Title Page component.]
-#let thesis-proposal-title-page-component(
+// Tez Önerisi İç Kapak sayfası bileşeni. [Thesis Proposal Inner Cover page component.]
+#let thesis-proposal-inner-cover-page-component(
   language: none,
   department: none,
   program: none,
@@ -24,8 +24,8 @@
   second-advisor: none,
   thesis-study-funding-organization: none,
 ) = {
-  // Başlık sayfası stilini uygula. [Apply the style of the title page.]
-  show: title-page-style
+  // İç Kapak sayfası stilini uygula. [Apply the style of the Inner Cover page.]
+  show: inner-cover-page-style
 
   // Tek logolu başlık. [Single logo heading.]
   single-logo-organization-info-heading-component(language: language)
