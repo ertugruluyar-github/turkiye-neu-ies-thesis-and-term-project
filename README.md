@@ -1,6 +1,9 @@
 # turkiye-neu-ies-thesis
 Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eğitim için **RESMÎ OLMAYAN** tez önerisi, tez ve dönem projesi şablonudur. [**UNOFFICIAL** thesis proposal, thesis and term project template for graduate education at Necmettin Erbakan University Institute of Educational Sciences.]
 
+## Tanıtım Videosu [Trailer Video]
+TODO
+
 ## Teşekkür [Acknowledgement]
 Bu proje yazılmadan önce ve sonrasında aşağıdaki projeler incelenerek bazı durumlarda fikir almak için yararlanılmıştır:
 [Before and after writing this project, the following projects were examined and in some cases used for ideas:]
