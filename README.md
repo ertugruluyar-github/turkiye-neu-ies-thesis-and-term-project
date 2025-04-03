@@ -148,7 +148,7 @@ PREFACE = "ÖN SÖZ"
 ### Kurulum
 
 #### Gerekli Yazılımlar
-- [Typst](https://typst.app/): Typst'ın resmi kod düzenleyicisidir.
+- [Typst.app](https://typst.app/): Typst'ın resmi kod düzenleyicisidir.
 
     YA DA
 
@@ -306,7 +306,7 @@ First, import the template for your project. Then, enter the template configurat
 ### Installation
 
 #### Required Softwares
-- [Typst](https://typst.app/): Typst is the official code editor.
+- [Typst.app](https://typst.app/): Typst is the official code editor.
 
     OR
 
