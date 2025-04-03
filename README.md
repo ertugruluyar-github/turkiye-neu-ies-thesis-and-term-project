@@ -2,11 +2,26 @@
 Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eğitim için **RESMÎ OLMAYAN** tez önerisi, tez ve dönem projesi şablonudur. [**UNOFFICIAL** thesis proposal, thesis and term project template for graduate education at Necmettin Erbakan University Institute of Educational Sciences.]
 
 ## Ön İzleme Görselleri [Thumbnails]
+TODO
 
+## Örnek Çıktılar [Sample Outputs]
+
+### Türkçe [Turkish]
+[Tez Önerisi Örnek Çıktı](assets/sample-outputs/turkish/main_tez-onerisi-ornek-cikti.pdf)
+[Tez Örnek Çıktı](assets/sample-outputs/turkish/main_tez-ornek-cikti.pdf)
+[Dönem Projesi Örnek Çıktı](assets/sample-outputs/turkish/main_donem-projesi-ornek-cikti.pdf)
+
+### İngilizce [English]
+[Thesis Proposal Sample Output](assets/sample-outputs/english/main_thesis-proposal-sample-output.pdf)
+[Thesis Sample Output](assets/sample-outputs/english/main_thesis-sample-output.pdf)
+[Term Project Sample Output](assets/sample-outputs/english/main_term-project-sample-output.pdf)
 
 ## İçindekiler [Table of Contents]
 - [turkiye-neu-ies-thesis-and-term-project](#turkiye-neu-ies-thesis-and-term-project)
   - [Ön İzleme Görselleri \[Thumbnails\]](#ön-i̇zleme-görselleri-thumbnails)
+  - [Örnek Çıktılar \[Sample Outputs\]](#örnek-çıktılar-sample-outputs)
+    - [Türkçe \[Turkish\]](#türkçe-turkish)
+    - [İngilizce \[English\]](#i̇ngilizce-english)
   - [İçindekiler \[Table of Contents\]](#i̇çindekiler-table-of-contents)
   - [Türkçe](#türkçe)
     - [Tanıtım Videosu](#tanıtım-videosu)
