@@ -44,6 +44,7 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Kullanılan Paketler](#kullanılan-paketler)
     - [Özellikler](#özellikler)
     - [Kullanım](#kullanım)
+      - [Kullanmaya Başlamak](#kullanmaya-başlamak)
       - [Alternatiflere sahip başlıklardaki alternatiflerden birini seçmek.](#alternatiflere-sahip-başlıklardaki-alternatiflerden-birini-seçmek)
     - [Kurulum](#kurulum)
       - [Gerekli Yazılımlar](#gerekli-yazılımlar)
@@ -58,6 +59,7 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Features](#features)
       - [Selecting one of the alternatives in headings with alternatives](#selecting-one-of-the-alternatives-in-headings-with-alternatives)
     - [Usage](#usage)
+      - [Getting Started](#getting-started)
     - [Installation](#installation)
       - [Required Softwares](#required-softwares)
       - [Online](#online)
@@ -101,6 +103,8 @@ Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
 - [x] Açılır liste mantığında tanımlanmış bilgiler içerisinden seçim yapılabilmesi sağlanarak hata yapılması ihtimalini azaltmak.
 
 ### Kullanım
+
+#### Kullanmaya Başlamak
 Öncelikle, şablonu projeniz için içe aktarınız. Daha sonra, şablonun ayarlarını giriniz.
 
 **NOT:** Şablonu [Kurulum](#kurulum) başlığında bahsedildiği gibi kullandığınızda bu kısım otomatik olarak mevcut olacaktır. Sadece şablon ayarlarındaki bilgileri projenize göre güncellemeniz yeterlidir.
@@ -282,6 +286,8 @@ PREFACE = "PREFACE"
 </details>
 
 ### Usage
+
+#### Getting Started
 First, import the template for your project. Then, enter the template configurations.
 
 **NOTE:** When you use the template as mentioned in the [Installation](#installation) section, this part will be automatically available. You only need to update the information in the template configurations according to your project.
