@@ -299,7 +299,7 @@ First, import the template for your project. Then, enter the template configurat
     PROGRAMS,
     ACADEMIC-MEMBER-TITLES,
   )
-  // NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
+  // NOTE: As in the above cases, instead of specifying the imported variables individually, you can also do it by importing all variables as `#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *`.
 
   // Enter the template configurations.
   #show: template-configurations.with(
@@ -343,7 +343,7 @@ To use the template online with the tools mentioned above, you can import it as 
     PROGRAMS,
     ACADEMIC-MEMBER-TITLES,
   )
-  // NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
+  // NOTE: As in the above cases, instead of specifying the imported variables individually, you can also do it by importing all variables as `#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *`.
   ```
 
 </details>
@@ -365,7 +365,7 @@ If you are using the template by downloading it to the location mentioned [here]
     PROGRAMS,
     ACADEMIC-MEMBER-TITLES,
   )
-  // NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
+  // NOTE: As in the above cases, instead of specifying the imported variables individually, you can also do it by importing all variables as `#import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": *`.
   ```
 
 </details>
@@ -384,7 +384,7 @@ If you are using the template by manually downloading it to any location on your
     PROGRAMS,
     ACADEMIC-MEMBER-TITLES,
   )
-  // NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "/src/lib.typ": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
+  // NOTE: As in the above cases, instead of specifying the imported variables individually, you can also do it by importing all variables as `#import "/src/lib.typ": *`.
   ```
 
 </details>
