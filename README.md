@@ -102,7 +102,7 @@ Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
 ### Kullanım
 Öncelikle, şablonu projeniz için içe aktarınız. Daha sonra, şablonun ayarlarını giriniz.
 
-**NOT:** Şablonu [Kurulum](#kurulum) başlığında bahsedildiği gibi kullandığınızda bu kısım otomatik olarak mevcut olacaktır. Sadece şablon ayarlarındaki bilgileri projenize güncellemeniz yeterlidir.
+**NOT:** Şablonu [Kurulum](#kurulum) başlığında bahsedildiği gibi kullandığınızda bu kısım otomatik olarak mevcut olacaktır. Sadece şablon ayarlarındaki bilgileri projenize göre güncellemeniz yeterlidir.
 
 <details>
   <summary>Kodu göstermek/gizlemek için tıklayınız</summary>
@@ -279,7 +279,7 @@ PREFACE = "PREFACE"
 ### Usage
 First, import the template for your project. Then, enter the template configurations.
 
-**NOTE:** When you use the template as mentioned in the [Installation](#installation) section, this part will be automatically available. You only need to update the information in the template configurations to your project.
+**NOTE:** When you use the template as mentioned in the [Installation](#installation) section, this part will be automatically available. You only need to update the information in the template configurations according to your project.
 
 <details>
   <summary>Click to show/hide code</summary>
