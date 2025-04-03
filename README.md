@@ -7,14 +7,14 @@ TODO
 ## Örnek Çıktılar [Sample Outputs]
 
 ### Türkçe [Turkish]
-[Tez Önerisi Örnek Çıktı](assets/sample-outputs/turkish/main_tez-onerisi-ornek-cikti.pdf)
-[Tez Örnek Çıktı](assets/sample-outputs/turkish/main_tez-ornek-cikti.pdf)
-[Dönem Projesi Örnek Çıktı](assets/sample-outputs/turkish/main_donem-projesi-ornek-cikti.pdf)
+- [Tez Önerisi Örnek Çıktı](assets/sample-outputs/turkish/main_tez-onerisi-ornek-cikti.pdf)
+- [Tez Örnek Çıktı](assets/sample-outputs/turkish/main_tez-ornek-cikti.pdf)
+- [Dönem Projesi Örnek Çıktı](assets/sample-outputs/turkish/main_donem-projesi-ornek-cikti.pdf)
 
 ### İngilizce [English]
-[Thesis Proposal Sample Output](assets/sample-outputs/english/main_thesis-proposal-sample-output.pdf)
-[Thesis Sample Output](assets/sample-outputs/english/main_thesis-sample-output.pdf)
-[Term Project Sample Output](assets/sample-outputs/english/main_term-project-sample-output.pdf)
+- [Thesis Proposal Sample Output](assets/sample-outputs/english/main_thesis-proposal-sample-output.pdf)
+- [Thesis Sample Output](assets/sample-outputs/english/main_thesis-sample-output.pdf)
+- [Term Project Sample Output](assets/sample-outputs/english/main_term-project-sample-output.pdf)
 
 ## İçindekiler [Table of Contents]
 - [turkiye-neu-ies-thesis-and-term-project](#turkiye-neu-ies-thesis-and-term-project)
