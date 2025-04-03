@@ -1,9 +1,12 @@
 # turkiye-neu-ies-thesis-and-term-project
 Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eğitim için **RESMÎ OLMAYAN** tez önerisi, tez ve dönem projesi şablonudur. [**UNOFFICIAL** thesis proposal, thesis and term project template for graduate education at Necmettin Erbakan University Institute of Educational Sciences.]
 
+## Ön İzleme Görselleri [Thumbnails]
+
 
 ## İçindekiler [Table of Contents]
 - [turkiye-neu-ies-thesis-and-term-project](#turkiye-neu-ies-thesis-and-term-project)
+  - [Ön İzleme Görselleri \[Thumbnails\]](#ön-i̇zleme-görselleri-thumbnails)
   - [İçindekiler \[Table of Contents\]](#i̇çindekiler-table-of-contents)
   - [Türkçe](#türkçe)
     - [Tanıtım Videosu](#tanıtım-videosu)
@@ -24,6 +27,7 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Packages Used](#packages-used)
     - [Features](#features)
       - [Selecting one of the alternatives in headings with alternatives](#selecting-one-of-the-alternatives-in-headings-with-alternatives)
+    - [Usage](#usage)
     - [Installation](#installation)
       - [Required Softwares](#required-softwares)
       - [Online](#online)
@@ -133,6 +137,7 @@ Bu durumda, ilk defa şablonu indirirken internete ihtiyaç vardır. İlk indirm
 Şablonu yukarıda bahsedilen araçlarla çevrim içi kullanmak için aşağıdaki gibi içe aktarma yapabilirsiniz:
 
 **NOT:** [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) uzantısının 'Template Gallery'si üzerinden bir şablonu seçerek proje oluşturduğunuzda bu şekilde içe aktarma yapabilirsiniz.
+
 <details>
   <summary>Kodu göstermek/gizlemek için tıklayınız</summary>
 
@@ -238,6 +243,8 @@ For example, in the `/template/assets/languages/turkish.toml` file, you can sele
 #PREFACE = "PREFACE (ACKNOWLEDGEMENTS)"
 # After selection:
 PREFACE = "PREFACE"
+```
+</details>
 
 ### Usage
 First, import the template for your project. Then, enter the template configurations.
@@ -287,6 +294,7 @@ In this case, you need the internet when downloading the template for the first 
 To use the template online with the tools mentioned above, you can import it as follows:
 
 **NOTE:** When you create a project by selecting a template from the 'Template Gallery' of the [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) extension, you can import it in this way.
+
 <details>
   <summary>Click to show/hide code</summary>
 
