@@ -2,8 +2,19 @@
 Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eğitim için **RESMÎ OLMAYAN** tez önerisi, tez ve dönem projesi şablonudur. [**UNOFFICIAL** thesis proposal, thesis and term project template for graduate education at Necmettin Erbakan University Institute of Educational Sciences.]
 
 ## Ön İzleme Görselleri [Thumbnails]
-TODO
+### Türkçe [Turkish]
+<p align="center">
+    <img src="assets/thumbnails/turkish/main_tez-onerisi-ornek-cikti-ic-kapak-sayfasi.png" width=33%>&nbsp;
+    <img src="assets/thumbnails/turkish/main_tez-ornek-cikti-ic-kapak-sayfasi.png" width=33%>&nbsp;
+    <img src="assets/thumbnails/turkish/main_donem-projesi-ornek-cikti-ic-kapak-sayfasi.png" width=33%>&nbsp;
+</p>
 
+### İngilizce [English]
+<p align="center">
+    <img src="assets/thumbnails/english/main_thesis-proposal-sample-output-inner-cover-page.png" width=33%>&nbsp;
+    <img src="assets/thumbnails/english/main_thesis-sample-output-inner-cover-page.png" width=33%>&nbsp;
+    <img src="assets/thumbnails/english/main_term-project-sample-output-inner-cover-page.png" width=33%>&nbsp;
+</p>
 ## Örnek Çıktılar [Sample Outputs]
 
 ### Türkçe [Turkish]
@@ -19,9 +30,11 @@ TODO
 ## İçindekiler [Table of Contents]
 - [turkiye-neu-ies-thesis-and-term-project](#turkiye-neu-ies-thesis-and-term-project)
   - [Ön İzleme Görselleri \[Thumbnails\]](#ön-i̇zleme-görselleri-thumbnails)
-  - [Örnek Çıktılar \[Sample Outputs\]](#örnek-çıktılar-sample-outputs)
     - [Türkçe \[Turkish\]](#türkçe-turkish)
     - [İngilizce \[English\]](#i̇ngilizce-english)
+  - [Örnek Çıktılar \[Sample Outputs\]](#örnek-çıktılar-sample-outputs)
+    - [Türkçe \[Turkish\]](#türkçe-turkish-1)
+    - [İngilizce \[English\]](#i̇ngilizce-english-1)
   - [İçindekiler \[Table of Contents\]](#i̇çindekiler-table-of-contents)
   - [Türkçe](#türkçe)
     - [Tanıtım Videosu](#tanıtım-videosu)
