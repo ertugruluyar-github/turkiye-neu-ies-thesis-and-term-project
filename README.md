@@ -2,6 +2,7 @@
 Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eğitim için **RESMÎ OLMAYAN** tez önerisi, tez ve dönem projesi şablonudur. [**UNOFFICIAL** thesis proposal, thesis and term project template for graduate education at Necmettin Erbakan University Institute of Educational Sciences.]
 
 ## Ön İzleme Görselleri [Thumbnails]
+
 ### Türkçe [Turkish]
 <p align="center">
     <img src="assets/thumbnails/turkish/main_tez-onerisi-ornek-cikti-ic-kapak-sayfasi.png" width=33%>&nbsp;
