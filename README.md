@@ -306,7 +306,7 @@ First, import the template for your project. Then, enter the template configurat
 ### Installation
 
 #### Required Softwares
-- [Typst.app](https://typst.app/): It's the official code editor of Typst.
+- [Typst.app](https://typst.app/): It is the official code editor of Typst.
 
     OR
 
