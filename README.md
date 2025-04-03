@@ -57,9 +57,9 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Acknowledgement](#acknowledgement)
     - [Packages Used](#packages-used)
     - [Features](#features)
-      - [Selecting one of the alternatives in headings with alternatives](#selecting-one-of-the-alternatives-in-headings-with-alternatives)
     - [Usage](#usage)
       - [Getting Started](#getting-started)
+      - [Selecting one of the alternatives in headings with alternatives](#selecting-one-of-the-alternatives-in-headings-with-alternatives)
     - [Installation](#installation)
       - [Required Softwares](#required-softwares)
       - [Online](#online)
@@ -266,25 +266,6 @@ I sincerely thank everyone who contributed to these projects.
 - [x] Multi-language support (Turkish and English) is available.
 - [x] Reducing the possibility of making mistakes by providing the ability to choose from the information defined in the logic of the drop-down list.
 
-#### Selecting one of the alternatives in headings with alternatives
-For Turkish language headings, open the `/template/assets/languages/turkish.toml` file. For English language headings, open the `/template/assets/languages/english.toml` file. Then, delete all headings except the one you want to use.
-
-For example, in the `/template/assets/languages/turkish.toml` file, you can select the desired heading by making the following change:
-
-<details>
-  <summary>Click to show/hide code</summary>
-
-```toml
-[translations]
-# To use only one of the headings, select either the expression not in parentheses or one of the expressions in parentheses and delete the others.
-# Before selection:
-#PREFACE = "PREFACE (ACKNOWLEDGEMENTS)"
-# After selection:
-PREFACE = "PREFACE"
-```
-
-</details>
-
 ### Usage
 
 #### Getting Started
@@ -312,6 +293,25 @@ First, import the template for your project. Then, enter the template configurat
     ...
   )
   ```
+
+</details>
+
+#### Selecting one of the alternatives in headings with alternatives
+For Turkish language headings, open the `/template/assets/languages/turkish.toml` file. For English language headings, open the `/template/assets/languages/english.toml` file. Then, delete all headings except the one you want to use.
+
+For example, in the `/template/assets/languages/turkish.toml` file, you can select the desired heading by making the following change:
+
+<details>
+  <summary>Click to show/hide code</summary>
+
+```toml
+[translations]
+# To use only one of the headings, select either the expression not in parentheses or one of the expressions in parentheses and delete the others.
+# Before selection:
+#PREFACE = "PREFACE (ACKNOWLEDGEMENTS)"
+# After selection:
+PREFACE = "PREFACE"
+```
 
 </details>
 
