@@ -15,6 +15,7 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     <img src="assets/thumbnails/english/main_thesis-sample-output-inner-cover-page.png" width=33%>&nbsp;
     <img src="assets/thumbnails/english/main_term-project-sample-output-inner-cover-page.png" width=33%>&nbsp;
 </p>
+
 ## Örnek Çıktılar [Sample Outputs]
 
 ### Türkçe [Turkish]
