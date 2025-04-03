@@ -33,12 +33,11 @@ keywords = [
 ]
 compiler = "0.13.0"
 exclude = [
-    "thumbnails",
-    "example-outputs",
+    "assets",
     "*.pdf",
 ]
 
 [template]
 path = "template"
 entrypoint = "main.typ"
-thumbnail = "thumbnails/thumbnail-1.png"
+thumbnail = "assets/thumbnails/thumbnail-1.png"
