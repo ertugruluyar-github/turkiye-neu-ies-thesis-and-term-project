@@ -108,23 +108,23 @@ Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
 <details>
   <summary>Kodu göstermek/gizlemek için tıklayınız</summary>
 
-```typst
-// Şablonu, Kurulum başlığında bahsedilden durumlardan size uygun olana göre içe aktarınız:
-#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
-  template-configurations,
-  LANGUAGES,
-  REPORT-TYPES,
-  DEPARTMENTS,
-  PROGRAMS,
-  ACADEMIC-MEMBER-TITLES,
-)
-// NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
+  ```typst
+  // Şablonu, Kurulum başlığında bahsedilden durumlardan size uygun olana göre içe aktarınız:
+  #import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+    template-configurations,
+    LANGUAGES,
+    REPORT-TYPES,
+    DEPARTMENTS,
+    PROGRAMS,
+    ACADEMIC-MEMBER-TITLES,
+  )
+  // NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
 
-// Şablonun ayarlarını giriniz.
-#show: template-configurations.with(
-  ...
-)
-```
+  // Şablonun ayarlarını giriniz.
+  #show: template-configurations.with(
+    ...
+  )
+  ```
 
 </details>
 
@@ -172,17 +172,17 @@ Bu durumda, ilk defa şablonu indirirken internete ihtiyaç vardır. İlk indirm
 <details>
   <summary>Kodu göstermek/gizlemek için tıklayınız</summary>
 
-```typst
-#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
-  template-configurations,
-  LANGUAGES,
-  REPORT-TYPES,
-  DEPARTMENTS,
-  PROGRAMS,
-  ACADEMIC-MEMBER-TITLES,
-)
-// NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
-```
+  ```typst
+  #import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+    template-configurations,
+    LANGUAGES,
+    REPORT-TYPES,
+    DEPARTMENTS,
+    PROGRAMS,
+    ACADEMIC-MEMBER-TITLES,
+  )
+  // NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
+  ```
 
 </details>
 
@@ -289,23 +289,23 @@ First, import the template for your project. Then, enter the template configurat
 <details>
   <summary>Click to show/hide code</summary>
 
-```typst
-// Import the template according to the appropriate situation mentioned in the Installation section:
-#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
-  template-configurations,
-  LANGUAGES,
-  REPORT-TYPES,
-  DEPARTMENTS,
-  PROGRAMS,
-  ACADEMIC-MEMBER-TITLES,
-)
-// NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
+  ```typst
+  // Import the template according to the appropriate situation mentioned in the Installation section:
+  #import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+    template-configurations,
+    LANGUAGES,
+    REPORT-TYPES,
+    DEPARTMENTS,
+    PROGRAMS,
+    ACADEMIC-MEMBER-TITLES,
+  )
+  // NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
 
-// Enter the template configurations.
-#show: template-configurations.with(
-  ...
-)
-```
+  // Enter the template configurations.
+  #show: template-configurations.with(
+    ...
+  )
+  ```
 
 </details>
 
@@ -334,17 +334,17 @@ To use the template online with the tools mentioned above, you can import it as 
 <details>
   <summary>Click to show/hide code</summary>
 
-```typst
-#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
-  template-configurations,
-  LANGUAGES,
-  REPORT-TYPES,
-  DEPARTMENTS,
-  PROGRAMS,
-  ACADEMIC-MEMBER-TITLES,
-)
-// NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
-```
+  ```typst
+  #import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+    template-configurations,
+    LANGUAGES,
+    REPORT-TYPES,
+    DEPARTMENTS,
+    PROGRAMS,
+    ACADEMIC-MEMBER-TITLES,
+  )
+  // NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
+  ```
 
 </details>
 
@@ -365,7 +365,7 @@ If you are using the template by downloading it to the location mentioned [here]
     PROGRAMS,
     ACADEMIC-MEMBER-TITLES,
   )
-// NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
+  // NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
   ```
 
 </details>
