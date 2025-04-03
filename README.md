@@ -244,6 +244,7 @@ For example, in the `/template/assets/languages/turkish.toml` file, you can sele
 # After selection:
 PREFACE = "PREFACE"
 ```
+
 </details>
 
 ### Usage
