@@ -45,6 +45,7 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Özellikler](#özellikler)
     - [Kullanım](#kullanım)
       - [Kullanmaya Başlamak](#kullanmaya-başlamak)
+      - [Şablon Yapısı](#şablon-yapısı)
       - [Alternatiflere sahip başlıklardaki alternatiflerden birini seçmek.](#alternatiflere-sahip-başlıklardaki-alternatiflerden-birini-seçmek)
     - [Kurulum](#kurulum)
       - [Gerekli Yazılımlar](#gerekli-yazılımlar)
@@ -128,6 +129,72 @@ Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
   #show: template-configurations.with(
     ...
   )
+  ```
+
+</details>
+
+#### Şablon Yapısı
+
+<details>
+  <summary>Kodu göstermek/gizlemek için tıklayınız</summary>
+
+  ```text
+  template/ <-- Template directory
+  ├── assets/                 <-- Asset files directory
+  │   ├── bibliography-sources/ <-- Bibliography sources
+  │   │   └── references.bib
+  │   ├── csv-files/          <-- CSV data files
+  │   │   └── csv-table-data.csv
+  │   ├── examples/           <-- Example files
+  │   │   ├── code-figure-example.typ
+  │   │   ├── image-figure-example.typ
+  │   │   ├── math-equation-example.typ
+  │   │   ├── quotation-example.typ
+  │   │   ├── table-figure-example.typ
+  │   │   └── table-figure-from-csv-example.typ
+  │   ├── images/             <-- Image assets
+  │   │   └── sample-image.png
+  │   └── languages/          <-- Language configuration
+  │       ├── english.toml
+  │       └── turkish.toml
+  └── sections/               <-- Thesis sections
+      ├── 01-front/           <-- Front section of the thesis
+      │   ├── abbreviations-text.typ
+      │   ├── abstract-text-eng.typ
+      │   ├── abstract-text-tur.typ
+      │   ├── preface-text.typ
+      │   └── symbols-text.typ
+      ├── 02-main/            <-- Main section of the thesis
+      │   ├── 01-introduction/ <-- Introduction subsection of the main section
+      │   │   ├── assumptions-text.typ
+      │   │   ├── definitions-text.typ
+      │   │   ├── introduction-text.typ
+      │   │   ├── limitations-text.typ
+      │   │   ├── statement-of-the-problem-text.typ
+      │   │   └── the-purpose-of-the-study-text.typ
+      │   ├── 02-literature-review/ <-- Literature review subsection of the main section
+      │   │   ├── literature-review-text.typ
+      │   ├── 03-methodology/ <-- Methodology subsection of the main section
+      │   │   ├── data-analysis-text.typ
+      │   │   ├── data-collection-process-text.typ
+      │   │   ├── data-collection-tools-text.typ
+      │   │   ├── methodology-text.typ
+      │   │   ├── research-populations-and-sample-text.typ
+      │   │   ├── research-method-text.typ
+      │   ├── 04-findings/                                        <-- Findings subsection of the main section
+      │   │   ├── findings-text.typ
+      │   └── 05-discussion-conclusion-and-suggestions/           <-- Discussion, conclusion and suggestions subsection of the main section
+      │   │   ├── conclusion-text.typ
+      │   │   ├── discussion-conclusion-and-suggestions-text.typ
+      │   │   ├── discussion-text.typ
+      │   │   ├── suggestions-text.typ
+      └── 03-back/                                                <-- Back section of the thesis
+          ├── expanded-turkish-abstract-text.typ
+          └── appendices/                                         <-- Appendices directory
+              ├── appendices-text.typ
+              ├── appendix-1-text.typ
+              ├── appendix-2-text.typ
+  └── main.typ                                                    <-- Template building entry point file
   ```
 
 </details>
