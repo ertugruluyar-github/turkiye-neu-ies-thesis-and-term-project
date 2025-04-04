@@ -135,6 +135,71 @@ Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
 
 #### Şablon Yapısı
 
+Aşağıdaki Mermaid diyagramı şablon yapısını görselleştirir. "template/" ve "main.typ" gibi şablon diziniyle ilgili kısımlar turuncu renkle vurgulanmıştır:
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f9f9f9', 'primaryTextColor': '#333', 'lineColor': '#333'}}}%%
+graph TD
+    A[template/]:::templateDir
+    A --> B[assets/]
+    B --> B1[bibliography-sources/]
+    B1 --> B12[references.bib]
+    B --> B2[csv-files/]
+    B2 --> B22[csv-table-data.csv]
+    B --> B3[examples/]
+    B3 --> B32[code-figure-example.typ]
+    B3 --> B33[image-figure-example.typ]
+    B3 --> B34[math-equation-example.typ]
+    B3 --> B35[quotation-example.typ]
+    B3 --> B36[table-figure-example.typ]
+    B3 --> B37[table-figure-from-csv-example.typ]
+    B --> B4[images/]
+    B4 --> B42[sample-image.png]
+    B --> B5[languages/]
+    B5 --> B52[english.toml]
+    B5 --> B53[turkish.toml]
+    A --> C[sections/]
+    C --> C1[01-front/]
+    C1 --> C12[abbreviations-text.typ]
+    C1 --> C13[abstract-text-eng.typ]
+    C1 --> C14[abstract-text-tur.typ]
+    C1 --> C15[preface-text.typ]
+    C1 --> C16[symbols-text.typ]
+    C --> C2[02-main/]
+    C2 --> C21[01-introduction/]
+    C21 --> C212[assumptions-text.typ]
+    C21 --> C213[definitions-text.typ]
+    C21 --> C214[introduction-text.typ]
+    C21 --> C215[limitations-text.typ]
+    C21 --> C216[statement-of-the-problem-text.typ]
+    C21 --> C217[the-purpose-of-the-study-text.typ]
+    C2 --> C22[02-literature-review/]
+    C22 --> C222[literature-review-text.typ]
+    C2 --> C23[03-methodology/]
+    C23 --> C232[data-analysis-text.typ]
+    C23 --> C233[data-collection-process-text.typ]
+    C23 --> C234[data-collection-tools-text.typ]
+    C23 --> C235[methodology-text.typ]
+    C23 --> C236[research-populations-and-sample-text.typ]
+    C23 --> C237[research-method-text.typ]
+    C2 --> C24[04-findings/]
+    C24 --> C242[findings-text.typ]
+    C2 --> C25[05-discussion-conclusion-and-suggestions/]
+    C25 --> C252[conclusion-text.typ]
+    C25 --> C253[discussion-conclusion-and-suggestions-text.typ]
+    C25 --> C254[discussion-text.typ]
+    C25 --> C255[suggestions-text.typ]
+    C --> C3[03-back/]
+    C3 --> C32[expanded-turkish-abstract-text.typ]
+    C3 --> C33[appendices/]
+    C33 --> C332[appendices-text.typ]
+    C33 --> C333[appendix-1-text.typ]
+    C33 --> C334[appendix-2-text.typ]
+    A --> D[main.typ:::templateDir]
+
+    classDef templateDir fill:#ff9900,stroke:#333,color:#000
+```
+
 <details>
   <summary>Kodu göstermek/gizlemek için tıklayınız</summary>
 
