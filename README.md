@@ -60,6 +60,7 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Features](#features)
     - [Usage](#usage)
       - [Getting Started](#getting-started)
+      - [Şablon Yapısı](#şablon-yapısı-1)
       - [Selecting one of the alternatives in headings with alternatives](#selecting-one-of-the-alternatives-in-headings-with-alternatives)
     - [Installation](#installation)
       - [Required Softwares](#required-softwares)
@@ -135,68 +136,68 @@ Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
 
 #### Şablon Yapısı
 
-Aşağıdaki diyagramda şablon yapısını yer almaktadır. Burada, şablondaki klasör ve dosyaların hiyerarşik biçimde görebilirsiniz.
+Aşağıdaki şemada şablon yapısını yer almaktadır. Burada, şablondaki klasör ve dosyaların hiyerarşik biçimde görebilirsiniz.
 
 <details>
-  <summary>Kodu göstermek/gizlemek için tıklayınız</summary>
+  <summary>Şemayı göstermek/gizlemek için tıklayınız</summary>
 
   ```
-  template/ <-- Template directory
-  ├── assets/                                                     <-- Asset files
-  │   ├── bibliography-sources/                                   <-- Bibliography sources
+  template/                                                       <-- Şablon klasörü
+  ├── assets/                                                     <-- Varlık dosyaları
+  │   ├── bibliography-sources/                                   <-- Kaynakça kaynakları
   │   │   └── references.bib
-  │   ├── csv-files/                                              <-- CSV data files
+  │   ├── csv-files/                                              <-- CSV veri dosyaları
   │   │   └── csv-table-data.csv
-  │   ├── examples/                                               <-- Example files
+  │   ├── examples/                                               <-- Örnek dosyalar
   │   │   ├── code-figure-example.typ
   │   │   ├── image-figure-example.typ
   │   │   ├── math-equation-example.typ
   │   │   ├── quotation-example.typ
   │   │   ├── table-figure-example.typ
   │   │   └── table-figure-from-csv-example.typ
-  │   ├── images/                                                 <-- Image files
+  │   ├── images/                                                 <-- Görsel dosyaları
   │   │   └── sample-image.png
-  │   └── languages/                                              <-- Language configuration
+  │   └── languages/                                              <-- Dil yapılandırması
   │       ├── english.toml
   │       └── turkish.toml
-  └── sections/                                                   <-- Report sections
-      ├── 01-front/                                               <-- Front section
+  └── sections/                                                   <-- Rapor bölümleri
+      ├── 01-front/                                               <-- Ön kısım
       │   ├── abbreviations-text.typ
       │   ├── abstract-text-eng.typ
       │   ├── abstract-text-tur.typ
       │   ├── preface-text.typ
       │   └── symbols-text.typ
-      ├── 02-main/                                                <-- Main section
-      │   ├── 01-introduction/                                    <-- Introduction subsection
+      ├── 02-main/                                                <-- Ana kısım
+      │   ├── 01-introduction/                                    <-- Giriş alt kısmı
       │   │   ├── assumptions-text.typ
       │   │   ├── definitions-text.typ
       │   │   ├── introduction-text.typ
       │   │   ├── limitations-text.typ
       │   │   ├── statement-of-the-problem-text.typ
       │   │   └── the-purpose-of-the-study-text.typ
-      │   ├── 02-literature-review/                               <-- Literature review subsection
+      │   ├── 02-literature-review/                               <-- Alan Yazın (İlgili Literatür) alt kısmı
       │   │   ├── literature-review-text.typ
-      │   ├── 03-methodology/                                     <-- Methodology subsection
+      │   ├── 03-methodology/                                     <-- Yöntem alt kısmı
       │   │   ├── data-analysis-text.typ
       │   │   ├── data-collection-process-text.typ
       │   │   ├── data-collection-tools-text.typ
       │   │   ├── methodology-text.typ
       │   │   ├── research-populations-and-sample-text.typ
       │   │   ├── research-method-text.typ
-      │   ├── 04-findings/                                        <-- Findings subsection
+      │   ├── 04-findings/                                        <-- Bulgular alt kısmı
       │   │   ├── findings-text.typ
-      │   └── 05-discussion-conclusion-and-suggestions/           <-- Discussion, conclusion and suggestions subsection
+      │   └── 05-discussion-conclusion-and-suggestions/           <-- Tartışma, Sonuç ve Öneriler alt kısmı
       │   │   ├── conclusion-text.typ
       │   │   ├── discussion-conclusion-and-suggestions-text.typ
       │   │   ├── discussion-text.typ
       │   │   ├── suggestions-text.typ
-      └── 03-back/                                                <-- Back section
-          ├── expanded-turkish-abstract-text.typ                  <-- Expanded Turkish Abstract subsection
-          └── appendices/                                         <-- Appendices subsection
+      └── 03-back/                                                <-- Arka kısım
+          ├── expanded-turkish-abstract-text.typ                  <-- Genişletilmiş Türkçe Özet alt kısmı
+          └── appendices/                                         <-- Ekler alt kısmı
               ├── appendices-text.typ
               ├── appendix-1-text.typ
               ├── appendix-2-text.typ
-  └── main.typ                                                    <-- Template building entry point file
+  └── main.typ                                                    <-- Şablondan oluşturmaya başlama dosyası
   ```
 
 </details>
@@ -361,6 +362,74 @@ First, import the template for your project. Then, enter the template configurat
   #show: template-configurations.with(
     ...
   )
+  ```
+
+</details>
+
+#### Şablon Yapısı
+
+The diagram below shows the template structure. Here you can see the hierarchical format of folders and files in the template.
+
+<details>
+  <summary>Click to show/hide diagram</summary>
+
+  ```
+  template/                                                       <-- Template directory
+  ├── assets/                                                     <-- Asset files
+  │   ├── bibliography-sources/                                   <-- Bibliography sources
+  │   │   └── references.bib
+  │   ├── csv-files/                                              <-- CSV data files
+  │   │   └── csv-table-data.csv
+  │   ├── examples/                                               <-- Example files
+  │   │   ├── code-figure-example.typ
+  │   │   ├── image-figure-example.typ
+  │   │   ├── math-equation-example.typ
+  │   │   ├── quotation-example.typ
+  │   │   ├── table-figure-example.typ
+  │   │   └── table-figure-from-csv-example.typ
+  │   ├── images/                                                 <-- Image files
+  │   │   └── sample-image.png
+  │   └── languages/                                              <-- Language configuration
+  │       ├── english.toml
+  │       └── turkish.toml
+  └── sections/                                                   <-- Report sections
+      ├── 01-front/                                               <-- Front section
+      │   ├── abbreviations-text.typ
+      │   ├── abstract-text-eng.typ
+      │   ├── abstract-text-tur.typ
+      │   ├── preface-text.typ
+      │   └── symbols-text.typ
+      ├── 02-main/                                                <-- Main section
+      │   ├── 01-introduction/                                    <-- Introduction subsection
+      │   │   ├── assumptions-text.typ
+      │   │   ├── definitions-text.typ
+      │   │   ├── introduction-text.typ
+      │   │   ├── limitations-text.typ
+      │   │   ├── statement-of-the-problem-text.typ
+      │   │   └── the-purpose-of-the-study-text.typ
+      │   ├── 02-literature-review/                               <-- Literature review subsection
+      │   │   ├── literature-review-text.typ
+      │   ├── 03-methodology/                                     <-- Methodology subsection
+      │   │   ├── data-analysis-text.typ
+      │   │   ├── data-collection-process-text.typ
+      │   │   ├── data-collection-tools-text.typ
+      │   │   ├── methodology-text.typ
+      │   │   ├── research-populations-and-sample-text.typ
+      │   │   ├── research-method-text.typ
+      │   ├── 04-findings/                                        <-- Findings subsection
+      │   │   ├── findings-text.typ
+      │   └── 05-discussion-conclusion-and-suggestions/           <-- Discussion, conclusion and suggestions subsection
+      │   │   ├── conclusion-text.typ
+      │   │   ├── discussion-conclusion-and-suggestions-text.typ
+      │   │   ├── discussion-text.typ
+      │   │   ├── suggestions-text.typ
+      └── 03-back/                                                <-- Back section
+          ├── expanded-turkish-abstract-text.typ                  <-- Expanded Turkish Abstract subsection
+          └── appendices/                                         <-- Appendices subsection
+              ├── appendices-text.typ
+              ├── appendix-1-text.typ
+              ├── appendix-2-text.typ
+  └── main.typ                                                    <-- Entry point file to start building from template
   ```
 
 </details>
