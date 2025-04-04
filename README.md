@@ -60,7 +60,7 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
     - [Features](#features)
     - [Usage](#usage)
       - [Getting Started](#getting-started)
-      - [Şablon Yapısı](#şablon-yapısı-1)
+      - [Template Structure](#template-structure)
       - [Selecting one of the alternatives in headings with alternatives](#selecting-one-of-the-alternatives-in-headings-with-alternatives)
     - [Installation](#installation)
       - [Required Softwares](#required-softwares)
@@ -366,7 +366,7 @@ First, import the template for your project. Then, enter the template configurat
 
 </details>
 
-#### Şablon Yapısı
+#### Template Structure
 
 The diagram below shows the template structure. Here you can see the hierarchical format of folders and files in the template.
 
