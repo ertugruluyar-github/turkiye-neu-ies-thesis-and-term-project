@@ -1,4 +1,4 @@
-// Giriş metnini yazınız.
+// Giriş metnini (bölüm başlığı ile bölümün ilk alt başlığı arasındaki kısmı) yazınız.
 Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Giriş metni. Bir başka çalışmaya atıf yapma örneği @you_etal_2021_CloserLookUS[s. 5].
 
 Bölüme atıf yapma örneği: @bölüm-giriş
