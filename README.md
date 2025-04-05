@@ -176,27 +176,27 @@ Aşağıdaki şemada şablon yapısını yer almaktadır. Burada, şablondaki kl
       │   │   ├── statement-of-the-problem-text.typ
       │   │   └── the-purpose-of-the-study-text.typ
       │   ├── 02-literature-review/                               <-- Alan Yazın (İlgili Literatür) alt kısmı
-      │   │   ├── literature-review-text.typ
+      │   │   └── literature-review-text.typ
       │   ├── 03-methodology/                                     <-- Yöntem alt kısmı
       │   │   ├── data-analysis-text.typ
       │   │   ├── data-collection-process-text.typ
       │   │   ├── data-collection-tools-text.typ
       │   │   ├── methodology-text.typ
       │   │   ├── research-populations-and-sample-text.typ
-      │   │   ├── research-method-text.typ
+      │   │   └── research-method-text.typ
       │   ├── 04-findings/                                        <-- Bulgular alt kısmı
-      │   │   ├── findings-text.typ
+      │   │   └── findings-text.typ
       │   └── 05-discussion-conclusion-and-suggestions/           <-- Tartışma, Sonuç ve Öneriler alt kısmı
       │   │   ├── conclusion-text.typ
       │   │   ├── discussion-conclusion-and-suggestions-text.typ
       │   │   ├── discussion-text.typ
-      │   │   ├── suggestions-text.typ
+      │   │   └── suggestions-text.typ
       └── 03-back/                                                <-- Arka kısım
           ├── expanded-turkish-abstract-text.typ                  <-- Genişletilmiş Türkçe Özet alt kısmı
           └── appendices/                                         <-- Ekler alt kısmı
               ├── appendices-text.typ
               ├── appendix-1-text.typ
-              ├── appendix-2-text.typ
+              └── appendix-2-text.typ
   └── main.typ                                                    <-- Şablondan oluşturmaya başlama dosyası
   ```
 
@@ -408,27 +408,27 @@ The diagram below shows the template structure. Here you can see the hierarchica
       │   │   ├── statement-of-the-problem-text.typ
       │   │   └── the-purpose-of-the-study-text.typ
       │   ├── 02-literature-review/                               <-- Literature review subsection
-      │   │   ├── literature-review-text.typ
+      │   │   └── literature-review-text.typ
       │   ├── 03-methodology/                                     <-- Methodology subsection
       │   │   ├── data-analysis-text.typ
       │   │   ├── data-collection-process-text.typ
       │   │   ├── data-collection-tools-text.typ
       │   │   ├── methodology-text.typ
       │   │   ├── research-populations-and-sample-text.typ
-      │   │   ├── research-method-text.typ
+      │   │   └── research-method-text.typ
       │   ├── 04-findings/                                        <-- Findings subsection
-      │   │   ├── findings-text.typ
+      │   │   └── findings-text.typ
       │   └── 05-discussion-conclusion-and-suggestions/           <-- Discussion, conclusion and suggestions subsection
       │   │   ├── conclusion-text.typ
       │   │   ├── discussion-conclusion-and-suggestions-text.typ
       │   │   ├── discussion-text.typ
-      │   │   ├── suggestions-text.typ
+      │   │   └── suggestions-text.typ
       └── 03-back/                                                <-- Back section
           ├── expanded-turkish-abstract-text.typ                  <-- Expanded Turkish Abstract subsection
           └── appendices/                                         <-- Appendices subsection
               ├── appendices-text.typ
               ├── appendix-1-text.typ
-              ├── appendix-2-text.typ
+              └── appendix-2-text.typ
   └── main.typ                                                    <-- Entry point file to start building from template
   ```
 
