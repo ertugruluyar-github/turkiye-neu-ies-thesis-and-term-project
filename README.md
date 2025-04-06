@@ -52,8 +52,8 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitüsü lisansüstü eğit
 
 Resmî kılavuz ve şablonlar aşağıdaki verilen bağlantılarda yer almaktadır: [Official guidelines and templates are available at the links provided below:]
 - [Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitüsü Tezli Yüksek Lisans için Kılavuz ve Şablonlar [Necmettin Erbakan University Institute of Educational Sciences Guidelines and Templates for Master's Degree with Thesis]](https://erbakan.edu.tr/tr/birim/egitim-bilimleri-enstitusu/sayfa/tezli-yuksek-lisans-kilavuzlari-ve-sablonlari)
-- [Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitüsü Doktora için Kılavuz ve Şablonlar [Necmettin Erbakan University Institute of Educational Sciences Guidelines and Templates for Doctorate (PhD)]](https://erbakan.edu.tr/tr/birim/egitim-bilimleri-enstitusu/sayfa/tezli-yuksek-lisans-kilavuzlari-ve-sablonlari)
-- [Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitüsü II. Öğretim Tezsiz Yüksek Lisans için Kılavuz ve Şablonlar [Necmettin Erbakan University Institute of Educational Sciences Guidelines and Templates for Evening Education Non-Thesis Master's Degree]](https://erbakan.edu.tr/tr/birim/egitim-bilimleri-enstitusu/sayfa/tezli-yuksek-lisans-kilavuzlari-ve-sablonlari)
+- [Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitüsü Doktora için Kılavuz ve Şablonlar [Necmettin Erbakan University Institute of Educational Sciences Guidelines and Templates for Doctorate (PhD)]](https://erbakan.edu.tr/tr/birim/egitim-bilimleri-enstitusu/sayfa/doktora-programi-kilavuz-ve-sablonlari)
+- [Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitüsü II. Öğretim Tezsiz Yüksek Lisans için Kılavuz ve Şablonlar [Necmettin Erbakan University Institute of Educational Sciences Guidelines and Templates for Evening Education Non-Thesis Master's Degree]](https://erbakan.edu.tr/tr/birim/egitim-bilimleri-enstitusu/sayfa/ii-ogretim-tezsiz-yuksek-lisans-kilavuz-ve-sablonlari)
 
 ## Ön İzleme Görselleri [Thumbnails]
 
