@@ -358,7 +358,7 @@ First, import the template for your project. Then, enter the template configurat
 **NOTE:** When you use the template as mentioned in the [Installation](#installation) section, this part will be automatically available. You only need to update the information in the template configurations according to your project.
 
 <details>
-  <summary>Click to show/hide code</summary>
+  <summary>Click to show/hide the code</summary>
 
   ```typst
   // Import the template according to the appropriate situation mentioned in the Installation section:
@@ -385,7 +385,7 @@ First, import the template for your project. Then, enter the template configurat
 The diagram below shows the template structure. Here you can see the hierarchical format of folders and files in the template.
 
 <details>
-  <summary>Click to show/hide diagram</summary>
+  <summary>Click to show/hide the diagram</summary>
 
   ```
   template/                                                       <-- Template directory
@@ -454,7 +454,7 @@ For Turkish language headings, open the `/template/assets/languages/turkish.toml
 For example, in the `/template/assets/languages/turkish.toml` file, you can select the desired heading by making the following change:
 
 <details>
-  <summary>Click to show/hide code</summary>
+  <summary>Click to show/hide the code</summary>
 
 ```toml
 [translations]
@@ -490,7 +490,7 @@ To use the template online with the tools mentioned above, you can import it as 
 **NOTE:** When you create a project by selecting a template from the 'Template Gallery' of the [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) extension, you can import it in this way.
 
 <details>
-  <summary>Click to show/hide code</summary>
+  <summary>Click to show/hide the code</summary>
 
   ```typst
   #import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
@@ -512,7 +512,7 @@ You can use the [Tinymist Typst](https://marketplace.visualstudio.com/items?item
 If you are using the template by downloading it to the location mentioned [here](https://github.com/typst/packages/?tab=readme-ov-file#local-packages), you can import it as follows:
 
 <details>
-  <summary>Click to show/hide code</summary>
+  <summary>Click to show/hide the code</summary>
 
   ```typst
   #import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
@@ -531,7 +531,7 @@ If you are using the template by downloading it to the location mentioned [here]
 If you are using the template by manually downloading it to any location on your computer from the [Developer GitHub Repo](https://github.com/ertugruluyar-github/turkiye-neu-ies-thesis-and-term-project) where all the template files are located, you can import it as follows:
 
 <details>
-  <summary>Click to show/hide code</summary>
+  <summary>Click to show/hide the code</summary>
 
   ```typst
   #import "/src/lib.typ": (
