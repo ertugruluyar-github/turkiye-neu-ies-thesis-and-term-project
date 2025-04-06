@@ -1,5 +1,59 @@
 # turkiye-neu-ies-thesis-and-term-project
-Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eğitim için **RESMÎ OLMAYAN** tez önerisi, tez ve dönem projesi şablonudur. [**UNOFFICIAL** thesis proposal, thesis and term project template for graduate education at Necmettin Erbakan University Institute of Educational Sciences.]
+[Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü](https://erbakan.edu.tr/tr/birim/egitim-bilimleri-enstitusu) lisansüstü eğitim için **RESMÎ OLMAYAN** tez önerisi, tez ve dönem projesi şablonudur. [**UNOFFICIAL** thesis proposal, thesis and term project template for graduate education at [Necmettin Erbakan University Institute of Educational Sciences](https://erbakan.edu.tr/tr/birim/egitim-bilimleri-enstitusu).]
+
+## İçindekiler [Table of Contents]
+<details>
+  <summary>İçindekileri göstermek/gizlemek için tıklayınız [Click to show/hide the Table of Contents]</summary>
+
+- [turkiye-neu-ies-thesis-and-term-project](#turkiye-neu-ies-thesis-and-term-project)
+  - [İçindekiler \[Table of Contents\]](#i̇çindekiler-table-of-contents)
+  - [Resmî Şablon Hakkında \[About the Official Template\]](#resmî-şablon-hakkında-about-the-official-template)
+  - [Ön İzleme Görselleri \[Thumbnails\]](#ön-i̇zleme-görselleri-thumbnails)
+    - [Türkçe \[Turkish\]](#türkçe-turkish)
+    - [İngilizce \[English\]](#i̇ngilizce-english)
+  - [Örnek Çıktılar \[Sample Outputs\]](#örnek-çıktılar-sample-outputs)
+    - [Türkçe \[Turkish\]](#türkçe-turkish-1)
+    - [İngilizce \[English\]](#i̇ngilizce-english-1)
+  - [Türkçe \[Turkish\]](#türkçe-turkish-2)
+    - [Tanıtım Videosu](#tanıtım-videosu)
+    - [Teşekkür](#teşekkür)
+    - [Kullanılan Paketler](#kullanılan-paketler)
+    - [Özellikler](#özellikler)
+    - [Kullanım](#kullanım)
+      - [Kullanmaya Başlamak](#kullanmaya-başlamak)
+      - [Şablon Yapısı](#şablon-yapısı)
+      - [Alternatiflere sahip başlıklardaki alternatiflerden birini seçmek.](#alternatiflere-sahip-başlıklardaki-alternatiflerden-birini-seçmek)
+    - [Kurulum](#kurulum)
+      - [Gerekli Yazılımlar](#gerekli-yazılımlar)
+      - [Çevrim İçi](#çevrim-i̇çi)
+        - [Şablonu Typst.app Web Sitesinden Kullanmak](#şablonu-typstapp-web-sitesinden-kullanmak)
+        - [Şablonu Tinymist Typst Visual Studio Code Uzantısıyla Kullanmak](#şablonu-tinymist-typst-visual-studio-code-uzantısıyla-kullanmak)
+      - [Çevrim Dışı](#çevrim-dışı)
+  - [İngilizce \[English\]](#i̇ngilizce-english-2)
+    - [Trailer Video](#trailer-video)
+    - [Acknowledgement](#acknowledgement)
+    - [Packages Used](#packages-used)
+    - [Features](#features)
+    - [Usage](#usage)
+      - [Getting Started](#getting-started)
+      - [Template Structure](#template-structure)
+      - [Selecting one of the alternatives in headings with alternatives](#selecting-one-of-the-alternatives-in-headings-with-alternatives)
+    - [Installation](#installation)
+      - [Required Softwares](#required-softwares)
+      - [Online](#online)
+        - [Using the Template from the Typst.app Website](#using-the-template-from-the-typstapp-website)
+        - [Using the Template with the Tinymist Typst Visual Studio Code Extension](#using-the-template-with-the-tinymist-typst-visual-studio-code-extension)
+      - [Offline](#offline)
+
+</details>
+
+## Resmî Şablon Hakkında [About the Official Template]
+Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitüsü lisansüstü eğitim için **RESMÎ** tez önerisi, tez ve dönem projesi şablonları [Typst](https://typst.app/home/) ve [LaTeX](https://www.latex-project.org/) formatında bulunmamakta olup yalnızca "docx" uzantılı [Microsoft Word](https://www.microsoft.com/tr-tr/microsoft-365/word) şablonu bulunmaktadır. [Necmettin Erbakan University Institute of Educational Sciences does not have **OFFICIAL** thesis proposal, thesis and term project templates for graduate education in [Typst](https://typst.app/home/) and [LaTeX](https://www.latex-project.org/) format and only [Microsoft Word](https://www.microsoft.com/tr-tr/microsoft-365/word) templates with “docx” extension are available.]
+
+Resmî kılavuz ve şablonlar aşağıdaki verilen bağlantılarda yer almaktadır: [Official guidelines and templates are available at the links provided below:]
+- [Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitüsü Tezli Yüksek Lisans için Kılavuz ve Şablonlar [Necmettin Erbakan University Institute of Educational Sciences Guidelines and Templates for Master's Degree with Thesis]](https://erbakan.edu.tr/tr/birim/egitim-bilimleri-enstitusu/sayfa/tezli-yuksek-lisans-kilavuzlari-ve-sablonlari)
+- [Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitüsü Doktora için Kılavuz ve Şablonlar [Necmettin Erbakan University Institute of Educational Sciences Guidelines and Templates for Doctorate (PhD)]](https://erbakan.edu.tr/tr/birim/egitim-bilimleri-enstitusu/sayfa/tezli-yuksek-lisans-kilavuzlari-ve-sablonlari)
+- [Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitüsü II. Öğretim Tezsiz Yüksek Lisans için Kılavuz ve Şablonlar [Necmettin Erbakan University Institute of Educational Sciences Guidelines and Templates for Evening Education Non-Thesis Master's Degree]](https://erbakan.edu.tr/tr/birim/egitim-bilimleri-enstitusu/sayfa/tezli-yuksek-lisans-kilavuzlari-ve-sablonlari)
 
 ## Ön İzleme Görselleri [Thumbnails]
 
@@ -29,47 +83,7 @@ Necmettin Erbakan Üniversitesi Eğitim Bilimleri Enstitiüsü lisansüstü eği
 - [Thesis Sample Output](assets/sample-outputs/english/main_thesis-sample-output.pdf)
 - [Term Project Sample Output](assets/sample-outputs/english/main_term-project-sample-output.pdf)
 
-## İçindekiler [Table of Contents]
-- [turkiye-neu-ies-thesis-and-term-project](#turkiye-neu-ies-thesis-and-term-project)
-  - [Ön İzleme Görselleri \[Thumbnails\]](#ön-i̇zleme-görselleri-thumbnails)
-    - [Türkçe \[Turkish\]](#türkçe-turkish)
-    - [İngilizce \[English\]](#i̇ngilizce-english)
-  - [Örnek Çıktılar \[Sample Outputs\]](#örnek-çıktılar-sample-outputs)
-    - [Türkçe \[Turkish\]](#türkçe-turkish-1)
-    - [İngilizce \[English\]](#i̇ngilizce-english-1)
-  - [İçindekiler \[Table of Contents\]](#i̇çindekiler-table-of-contents)
-  - [Türkçe](#türkçe)
-    - [Tanıtım Videosu](#tanıtım-videosu)
-    - [Teşekkür](#teşekkür)
-    - [Kullanılan Paketler](#kullanılan-paketler)
-    - [Özellikler](#özellikler)
-    - [Kullanım](#kullanım)
-      - [Kullanmaya Başlamak](#kullanmaya-başlamak)
-      - [Şablon Yapısı](#şablon-yapısı)
-      - [Alternatiflere sahip başlıklardaki alternatiflerden birini seçmek.](#alternatiflere-sahip-başlıklardaki-alternatiflerden-birini-seçmek)
-    - [Kurulum](#kurulum)
-      - [Gerekli Yazılımlar](#gerekli-yazılımlar)
-      - [Çevrim İçi](#çevrim-i̇çi)
-        - [Şablonu Typst.app Web Sitesinden Kullanmak](#şablonu-typstapp-web-sitesinden-kullanmak)
-        - [Şablonu Tinymist Typst Visual Studio Code Uzantısıyla Kullanmak](#şablonu-tinymist-typst-visual-studio-code-uzantısıyla-kullanmak)
-      - [Çevrim Dışı](#çevrim-dışı)
-  - [English](#english)
-    - [Trailer Video](#trailer-video)
-    - [Acknowledgement](#acknowledgement)
-    - [Packages Used](#packages-used)
-    - [Features](#features)
-    - [Usage](#usage)
-      - [Getting Started](#getting-started)
-      - [Template Structure](#template-structure)
-      - [Selecting one of the alternatives in headings with alternatives](#selecting-one-of-the-alternatives-in-headings-with-alternatives)
-    - [Installation](#installation)
-      - [Required Softwares](#required-softwares)
-      - [Online](#online)
-        - [Using the Template from the Typst.app Website](#using-the-template-from-the-typstapp-website)
-        - [Using the Template with the Tinymist Typst Visual Studio Code Extension](#using-the-template-with-the-tinymist-typst-visual-studio-code-extension)
-      - [Offline](#offline)
-
-## Türkçe
+## Türkçe [Turkish]
 
 ### Tanıtım Videosu
 TODO
@@ -301,7 +315,7 @@ Bu durumda, ilk defa şablonu indirirken internete ihtiyaç vardır. İlk indirm
 
 </details>
 
-## English
+## İngilizce [English]
 
 ### Trailer Video
 TODO
