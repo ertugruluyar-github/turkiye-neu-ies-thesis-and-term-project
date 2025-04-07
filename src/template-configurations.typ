@@ -7,7 +7,8 @@
 #import "/src/core/validation-manager/validation-manager.typ": validation-manager
 #import "core/language-manager/language-manager.typ": init-language-manager
 
-/* __Dikkat! [Attention!]__
+/* __Resmî şablonlarda bulunan uyarılar: [Warnings in the official templates:]__\
+  __Dikkat! [Attention!]__
   - Tezi yazmaya başlamadan önce Hazırlama Kılavuzu ve Şablon Kullanım Kılavuzu mutlaka okunmalıdır. [Before starting to write the thesis, the Preparation Guide and Template Usage Guide must be read.].\
   - İç kapaktaki gerekli bilgiler sayfa düzenini bozmadan ve bir sayfayı geçmeyecek biçimde yazılmalıdır. [The necessary information in the inside cover must be written in a way that does not disturb the page layout and does not pass a page.]\
   - YÖK tarafından yapılan son düzenlemede eski ve yeni Anabilim Dalı ve Bilim Dalı adlarında benzerlik olduğundan hata yapmamanız için öğrenci bilgi sisteminizde görünen Anabilim Dalını ve Bilim Dalını seçiniz. [Due to the similarity of the old and new Department of Science and New Department of Science names made by YÖK, please select the Department of Science and Science Department shown in your student information system.].\
