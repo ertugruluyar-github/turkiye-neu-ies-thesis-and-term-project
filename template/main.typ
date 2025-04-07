@@ -97,7 +97,7 @@
       upper-case: "TEZİN İNGİLİZCE BAŞLIĞI",
     ),
   ),
-  // Öğrencinin adı, soyadı ve ORCID numarası.
+  // Yazarın (Öğrencinin) adı, soyadı ve ORCID numarası.
   author: (
     first-name: "Öğrenci Adı",
     last-name: "SOYADI",

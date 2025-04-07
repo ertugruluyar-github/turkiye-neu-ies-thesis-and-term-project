@@ -56,7 +56,7 @@
       upper-case: "THESIS ENGLISH TITLE",
     ),
   ),
-  // Öğrencinin adı, soyadı ve ORCID numarası. [The student's name, lastname and ORCID number.]
+  // Yazarın (Öğrencinin) adı, soyadı ve ORCID numarası. [The author's (student's) name, lastname and ORCID number.]
   author: (
     first-name: "Student's Firstname",
     last-name: "LASTNAME",
