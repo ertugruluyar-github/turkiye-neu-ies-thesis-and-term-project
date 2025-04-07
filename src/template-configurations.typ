@@ -7,6 +7,7 @@
 #import "/src/core/validation-manager/validation-manager.typ": validation-manager
 #import "core/language-manager/language-manager.typ": init-language-manager
 
+// Şablon ayarlarını giriniz. [Enter the template configurations.]\
 /* __Resmî şablonlarda bulunan uyarılar: [Warnings in the official templates:]__\
   __Dikkat! [Attention!]__
   - Tezi yazmaya başlamadan önce Hazırlama Kılavuzu ve Şablon Kullanım Kılavuzu mutlaka okunmalıdır. [Before starting to write the thesis, the Preparation Guide and Template Usage Guide must be read.].\

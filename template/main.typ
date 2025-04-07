@@ -48,6 +48,7 @@
 )
 // NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "/src/lib.typ": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
 
+// Şablon ayarlarını giriniz.\
 /* Resmî şablonlarda bulunan uyarılar:
   Dikkat!
   - Tezi yazmaya başlamadan önce Hazırlama Kılavuzu ve Şablon Kullanım Kılavuzu mutlaka okunmalıdır.
