@@ -76,7 +76,7 @@
     last-name: "LASTNAME",
     orcid: "1234-1234-1234-1234",
   ),
-  // Tez çalışması destekleyen kuruluşun adı ve projenin numarası. Tez çalışması destekleyen herhangi bir kuruluş yoksa "thesis-study-funding-organization: none" yapınız. [The name and project number of the organization supporting the thesis study. If there is no organization supporting the thesis study, do "thesis-study-funding-organization: none".]
+  // Tez çalışmasını destekleyen kuruluşun adı ve projenin numarası. Tez çalışmasını destekleyen herhangi bir kuruluş yoksa "thesis-study-funding-organization: none" yapınız. [The name and project number of the organization supporting the thesis study. If there is no organization supporting the thesis study, do "thesis-study-funding-organization: none".]
   thesis-study-funding-organization: (
     name: "Name of the Funding Organization Supporting the Thesis Study",
     project-no: "Project No",
