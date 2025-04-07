@@ -37,9 +37,9 @@
 #let template-configurations(
   // Raporun dilini seçiniz. [Select the language of the report.]
   language: LANGUAGES.TR-TR,
-  // Ana Bilim Dalı seçiniz. [Select the department.]
+  // Ana Bilim Dalını seçiniz. [Select the department.]
   department: DEPARTMENTS.__DEPARTMENT-PLACE-HOLDER,
-  // Bilim Dalı seçiniz. [Select the program.]
+  // Bilim Dalını seçiniz. [Select the program.]
   program: PROGRAMS.__PROGRAM-PLACE-HOLDER,
   // Raporun türünü seçiniz. [Select the report type.]
   report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL,

@@ -78,9 +78,9 @@
 #show: template-configurations.with(
   // Raporun dilini seçiniz.
   language: LANGUAGES.EN-US,
-  // Ana Bilim Dalı seçiniz.
+  // Ana Bilim Dalını seçiniz.
   department: DEPARTMENTS.DEPARTMENT-OF-MATHEMATICS-AND-SCIENCES-EDUCATION,
-  // Bilim Dalı seçiniz.
+  // Bilim Dalını seçiniz.
   program: PROGRAMS.MATHEMATICS-EDUCATION-PROGRAM,
   // Raporun türünü seçiniz.
   report-type: REPORT-TYPES.DOCTORAL-THESIS,
