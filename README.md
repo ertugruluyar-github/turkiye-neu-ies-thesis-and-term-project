@@ -123,7 +123,7 @@ Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
 #### Kullanmaya Başlamak
 Öncelikle, şablonu projeniz için içe aktarınız. Daha sonra, şablon ayarlarını giriniz.
 
-**NOT:** Şablonu [Kurulum](#kurulum) başlığında bahsedildiği gibi kullandığınızda bu kısım otomatik olarak mevcut olacaktır. Sadece şablon ayarlarındaki bilgileri projenize göre güncellemeniz yeterlidir.
+**NOT:** Şablonu [Kurulum](#kurulum) başlığında bahsedildiği gibi kullandığınızda bu kısım otomatik olarak mevcut olacaktır. Sadece şablon ayarlarındaki bilgileri projenize göre güncellemeniz yeterlidir. Şablon ayarlarında yer alan parametrelerin değerlerinin nasıl girileceğiyle ilgili açıklamalar ilgili parametrenin bir üstündeki satırda yorum satırı olarak yer almaktadır.
 
 <details>
   <summary>Kodu göstermek/gizlemek için tıklayınız</summary>
@@ -355,7 +355,7 @@ I sincerely thank everyone who contributed to these projects.
 #### Getting Started
 First, import the template for your project. Then, enter the template configurations.
 
-**NOTE:** When you use the template as mentioned in the [Installation](#installation) section, this part will be automatically available. You only need to update the information in the template configurations according to your project.
+**NOTE:** When you use the template as mentioned in the [Installation](#installation) section, this part will be automatically available. You only need to update the information in the template configurations according to your project. Explanations on how to set the values of the parameters in the template configurations are given as a comment line on the line above the relevant parameter.
 
 <details>
   <summary>Click to show/hide the code</summary>
