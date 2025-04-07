@@ -7,9 +7,9 @@
 #let inner-cover-page-style(content) = {
   // Sayfa ayarlarını ayarla. [Set page settings.]
   set page(
-    // Sayfanın başlık kısmını kaldır. [Remove header of the page.]
+    // Sayfanın üst bilgisi kısmını kaldır. [Remove header of the page.]
     header: none,
-    // Sayfa numarasını gizle. [Hide page number.]
+    // Sayfanın alt bilgisi kısmını kaldırarak sayfa numarasını gizle. [Hide page number by removing footer of the page.]
     footer: none,
     // Tek sütun. [Single column.]
     columns: 1,
