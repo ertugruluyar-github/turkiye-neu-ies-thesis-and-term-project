@@ -13,7 +13,7 @@
   - İç kapaktaki gerekli bilgiler sayfa düzenini bozmadan ve bir sayfayı geçmeyecek biçimde yazılmalıdır. [The necessary information in the inside cover must be written in a way that does not disturb the page layout and does not pass a page.]\
   - YÖK tarafından yapılan son düzenlemede eski ve yeni Anabilim Dalı ve Bilim Dalı adlarında benzerlik olduğundan hata yapmamanız için öğrenci bilgi sisteminizde görünen Anabilim Dalını ve Bilim Dalını seçiniz. [Due to the similarity of the old and new Department of Science and New Department of Science names made by YÖK, please select the Department of Science and Science Department shown in your student information system.].\
   - Tez başlığı öğrenci bilgi sisteminde onaylanmış başlık ile aynı olmalıdır. [The thesis title must be the same as the approved title in the student information system.].\
-  - Öğrenciye, danışmana ve ikinci danışmana ait ORCID numaralarını XXXX-XXXX-XXXX-XXXX düzeninde yazınız. [Write the ORCID numbers of the student, advisor and second advisor in the format XXXX-XXXX-XXXX-XXXX.].\
+  - Öğrenciye, danışmana ve ikinci danışmana ait ORCID numaralarını 1234-1234-1234-1234 düzeninde yazınız. [Write the ORCID numbers of the student, advisor and second advisor in the format 1234-1234-1234-1234.].\
   - ORIC numarası almak içim gerekli bilgilere web sayfamızdan ulaşabilirsiniz. https://www.erbakan.edu.tr/egitimbilimlerienstitusu/sayfa/10001 [You can access the necessary information from our web site to obtain the ORIC number. https://www.erbakan.edu.tr/egitimbilimlerienstitusu/sayfa/10001].\
   - İkinci danışman yok ise silinmelidir. [If there is no second advisor, it should be deleted.].\
   - Tez çalışması bir proje ile desteklenmiş ise yazılmalı, destek alınmamış ise silinmelidir. [If the thesis work is supported by a project, it should be written, if not, it should be deleted.].\
@@ -60,21 +60,21 @@
   author: (
     first-name: "Student's Firstname",
     last-name: "LASTNAME",
-    orcid: "xxxx-xxxx-xxxx-xxxx",
+    orcid: "1234-1234-1234-1234",
   ),
   // Danışmanın adı, soyadı ve ORCID numarası. [The advisor's name, lastname and ORCID number.]
   advisor: (
     academic-member-title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
     first-name: "Advisor's Firstname",
     last-name: "LASTNAME",
-    orcid: "xxxx-xxxx-xxxx-xxxx",
+    orcid: "1234-1234-1234-1234",
   ),
   // İkinci danışmanın adı, soyadı ve ORCID numarası. İkinci danışman yoksa "second-advisor: none" yapınız. [The second advisor's name, lastname and ORCID number. If there is no second advisor, do "second-advisor: none".]
   second-advisor: (
     academic-member-title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
     first-name: "Second Advisor's Firstname",
     last-name: "LASTNAME",
-    orcid: "xxxx-xxxx-xxxx-xxxx",
+    orcid: "1234-1234-1234-1234",
   ),
   // Tez çalışması destekleyen kuruluşun adı ve projenin numarası. Tez çalışması destekleyen herhangi bir kuruluş yoksa "thesis-study-funding-organization: none" yapınız. [The name and project number of the organization supporting the thesis study. If there is no organization supporting the thesis study, do "thesis-study-funding-organization: none".]
   thesis-study-funding-organization: (
@@ -215,14 +215,14 @@
         title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
         first-name: "Firstname",
         last-name: "LASTNAME",
-        orcid: "xxxx-xxxx-xxxx-xxxx",
+        orcid: "1234-1234-1234-1234",
         email: "email@mail.com",
       ),
       (
         title: ACADEMIC-MEMBER-TITLES.__ACADEMIC-MEMBER-TITLE-PLACE-HOLDER,
         first-name: "Firstname",
         last-name: "LASTNAME",
-        orcid: "xxxx-xxxx-xxxx-xxxx",
+        orcid: "1234-1234-1234-1234",
         email: "email@mail.com",
       ),
     ),
