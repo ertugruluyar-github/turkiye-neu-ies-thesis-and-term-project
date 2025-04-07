@@ -243,7 +243,7 @@ PREFACE = "ÖN SÖZ"
     YA DA
 
 - [Visual Studio Code](https://code.visualstudio.com/): Typst kodlarını yazmak için kullanılabilen bir kod düzenleyicisidir.
-- [Tinymist Typst Visual Studio Code Uzantısı](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist): Typst kodlarını yazarken yardımcı olan ve eş zamanlı çıktıyı görüntüleme imkanı sağlayan bir uzantıdır.
+- [Tinymist Typst Visual Studio Code Uzantısı](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist): Typst kodlarını yazarken yardımcı olan, eş zamanlı olarak çıktıyı görüntüleme imkânı sağlayan ve çıktıyı desteklenen formatlarda oluşturabilen bir uzantıdır.
 
 #### Çevrim İçi
 
@@ -475,7 +475,7 @@ PREFACE = "PREFACE"
     OR
 
 - [Visual Studio Code](https://code.visualstudio.com/): It is a code editor that can be used to write Typst codes.
-- [Tinymist Typst Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist): It is an extension that helps writing Typst codes and provides simultaneous output viewing.
+- [Tinymist Typst Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist): It is an extension that helps when writing Typst code, allows you to view the output simultaneously and render the output in supported formats.
 
 #### Online
 
