@@ -121,7 +121,7 @@ Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
 ### Kullanım
 
 #### Kullanmaya Başlamak
-Öncelikle, şablonu projeniz için içe aktarınız. Daha sonra, şablonun ayarlarını giriniz.
+Öncelikle, şablonu projeniz için içe aktarınız. Daha sonra, şablon ayarlarını giriniz.
 
 **NOT:** Şablonu [Kurulum](#kurulum) başlığında bahsedildiği gibi kullandığınızda bu kısım otomatik olarak mevcut olacaktır. Sadece şablon ayarlarındaki bilgileri projenize göre güncellemeniz yeterlidir.
 
@@ -140,7 +140,7 @@ Bu projelerde emeği geçen herkese çok büyük teşekkürlerimi sunarım.
   )
   // NOT: Yukarıdaki durumlarda olduğu gibi içe aktarılan değişkenleri tek tek belirtmek yerine `#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": *` şeklinde tüm değişkenleri içe aktararak da yapabilirsiniz.
 
-  // Şablonun ayarlarını giriniz.
+  // Şablon ayarlarını giriniz.
   #show: template-configurations.with(
     ...
   )
