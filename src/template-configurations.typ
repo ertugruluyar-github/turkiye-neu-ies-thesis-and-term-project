@@ -45,7 +45,7 @@
   report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL,
   // Tez önerisi ya da tezin teslim edildiği tarih. Varsayılan olarak bugünün tarihidir. Elle bir tarih girmek için "datetime(day: 20, month: 3, year: 2025)" yapınız. [The date of the thesis proposal or the date of the thesis delivery. The default is today's date. To enter a date manually, do "datetime(day: 20, month: 3, year: 2025)".]
   date: datetime.today(),
-  // Tezinizin Türkçe ve İngilizce başlığı (başlık ve hepsi büyük harf biçiminde). [The Turkish and English title of the thesis (titlecase and uppercase).]
+  // Tez çalışmasının Türkçe ve İngilizce başlığı (başlık ve hepsi büyük harf biçiminde). [The Turkish and English title of the thesis study (titlecase and uppercase).]
   thesis-title: (
     tur: (
       title-case: "Thesis Title",
