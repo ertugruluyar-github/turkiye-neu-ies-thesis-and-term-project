@@ -5,7 +5,7 @@
 )
 #import "/src/core/language-manager/language-manager.typ": translator
 #import "/src/constants/language-keys.typ": language-keys
-#import "/src/components/thesis-title-text-component.typ": thesis-title-text-component
+#import "/src/components/report-title-text-component.typ": report-title-text-component
 #import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/orcid-with-prefix-component.typ": orcid-with-prefix-component
 #import "/src/components/advisor-with-orcid-component.typ": advisor-with-orcid-component
@@ -18,7 +18,7 @@
   program: none,
   report-type: none,
   date: none,
-  thesis-title: none,
+  report-title: none,
   author: none,
   advisor: none,
   second-advisor: none,
@@ -48,14 +48,14 @@
   // Bir miktar boşluk bırak. [Leave some space.]
   v(2.5cm)
 
-  // Dile göre tez başlığını seç. [Select the thesis title according to the language.]
-  let thesis-title = if language == LANGUAGES.TR-TR {
-    thesis-title.tur
+  // Dile göre rapor başlığını seç. [Select the report title according to the language.]
+  let report-title = if language == LANGUAGES.TR-TR {
+    report-title.tur
   } else if language == LANGUAGES.EN-US {
-    thesis-title.eng
+    report-title.eng
   }
-  // Tez başlığı. [Thesis title.]
-  thesis-title-text-component(thesis-title: thesis-title)
+  // Rapor başlığı. [Report title.]
+  report-title-text-component(report-title: report-title)
 
   // Bir miktar boşluk bırak. [Leave some space.]
   v(2.5cm)

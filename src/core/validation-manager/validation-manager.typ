@@ -7,7 +7,7 @@
 #import "/src/core/validation-manager/validators/department-validator.typ": department-validator
 #import "/src/core/validation-manager/validators/program-validator.typ": program-validator
 #import "/src/core/validation-manager/validators/report-type-validator.typ": report-type-validator
-#import "/src/core/validation-manager/validators/thesis-title-validator.typ": thesis-title-validator
+#import "/src/core/validation-manager/validators/report-title-validator.typ": report-title-validator
 #import "/src/core/validation-manager/validators/author-validator.typ": author-validator
 #import "/src/core/validation-manager/validators/advisor-validator.typ": advisor-validator
 #import "/src/core/validation-manager/validators/second-advisor-validator.typ": second-advisor-validator
@@ -25,7 +25,7 @@
   program: none,
   report-type: none,
   date: none,
-  thesis-title: none,
+  report-title: none,
   author: none,
   advisor: none,
   second-advisor: none,
@@ -68,8 +68,8 @@
     value-description: "Şablon ayarlarındaki tarih",
   )
 
-  // Tez Başlığı parametresini doğrula. [Validate the thesis-title parameter.]
-  thesis-title-validator(value: thesis-title)
+  // Rapor Başlığı parametresini doğrula. [Validate the report-title parameter.]
+  report-title-validator(value: report-title)
 
   // Yazar parametresini doğrula. [Validate the author parameter.]
   author-validator(value: author)

@@ -46,14 +46,14 @@
   // Tez önerisi ya da tezin teslim edildiği tarih. Varsayılan olarak bugünün tarihidir. Elle bir tarih girmek için "datetime(day: 20, month: 3, year: 2025)" yapınız. [The date of the thesis proposal or the date of the thesis delivery. The default is today's date. To enter a date manually, do "datetime(day: 20, month: 3, year: 2025)".]
   date: datetime.today(),
   // Raporun Türkçe ve İngilizce başlığı (başlık ve hepsi büyük harf biçiminde). [The Turkish and English title of the report (titlecase and uppercase).]
-  thesis-title: (
+  report-title: (
     tur: (
-      title-case: "Thesis Title",
-      upper-case: "THESIS TITLE",
+      title-case: "Report Title",
+      upper-case: "REPORT TITLE",
     ),
     eng: (
-      title-case: "Thesis English Title",
-      upper-case: "THESIS ENGLISH TITLE",
+      title-case: "Report English Title",
+      upper-case: "REPORT ENGLISH TITLE",
     ),
   ),
   // Yazarın (Öğrencinin) adı, soyadı ve ORCID numarası. [The author's (student's) name, lastname and ORCID number.]
@@ -236,7 +236,7 @@
     program: program,
     report-type: report-type,
     date: date,
-    thesis-title: thesis-title,
+    report-title: report-title,
     author: author,
     advisor: advisor,
     second-advisor: second-advisor,
@@ -265,7 +265,7 @@
   /* ---- Ortak Döküman Stili [Common Document Style] ---- */
   show: common-document-style.with(
     language: language,
-    thesis-title: thesis-title,
+    report-title: report-title,
     author: author,
     keywords: keywords,
   )
@@ -277,7 +277,7 @@
     program: program,
     report-type: report-type,
     date: date,
-    thesis-title: thesis-title,
+    report-title: report-title,
     author: author,
     advisor: advisor,
     second-advisor: second-advisor,
@@ -290,7 +290,7 @@
     program: program,
     report-type: report-type,
     date: date,
-    thesis-title: thesis-title,
+    report-title: report-title,
     author: author,
     advisor: advisor,
     thesis-originalty: thesis-originalty,
@@ -320,7 +320,7 @@
     department: department,
     program: program,
     report-type: report-type,
-    thesis-title: thesis-title,
+    report-title: report-title,
     author: author,
     work-packages: work-packages,
     curriculum-vitae-info: curriculum-vitae-info,

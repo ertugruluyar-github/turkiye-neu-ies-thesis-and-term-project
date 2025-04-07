@@ -14,14 +14,14 @@
 // Dökümandaki ortak stil ayarları. [Common document style settings.]
 #let common-document-style(
   language: none,
-  thesis-title: none,
+  report-title: none,
   author: none,
   keywords: none,
   content,
 ) = {
   // Döküman üst verisini ayarla. [Set document metadata.]
   set document(
-    title: thesis-title.tur.title-case + " (" + thesis-title.eng.title-case + ")",
+    title: report-title.tur.title-case + " (" + report-title.eng.title-case + ")",
     author: (author.first-name + " " + upper(author.last-name)),
     keywords: (..keywords.tur, ..keywords.eng),
   )

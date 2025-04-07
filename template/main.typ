@@ -87,14 +87,14 @@
   // Tez önerisi ya da tezin teslim edildiği tarih. Varsayılan olarak bugünün tarihidir. Elle bir tarih girmek için "datetime(day: 20, month: 3, year: 2025)" yapınız.
   date: datetime.today(),
   // Raporun Türkçe ve İngilizce başlığı (başlık ve hepsi büyük harf biçiminde).
-  thesis-title: (
+  report-title: (
     tur: (
-      title-case: "Tezin Başlığı",
-      upper-case: "TEZİN BAŞLIĞI",
+      title-case: "Raporun Başlığı",
+      upper-case: "RAPORUN BAŞLIĞI",
     ),
     eng: (
-      title-case: "Tezin İngilizce Başlığı",
-      upper-case: "TEZİN İNGİLİZCE BAŞLIĞI",
+      title-case: "Raporun İngilizce Başlığı",
+      upper-case: "RAPORUN İNGİLİZCE BAŞLIĞI",
     ),
   ),
   // Yazarın (Öğrencinin) adı, soyadı ve ORCID numarası.

@@ -18,7 +18,7 @@
   program: none,
   report-type: none,
   date: none,
-  thesis-title: none,
+  report-title: none,
   author: none,
   advisor: none,
   thesis-originalty: none,
@@ -101,7 +101,7 @@
     report-type == REPORT-TYPES.MASTER-THESIS or report-type == REPORT-TYPES.DOCTORAL-THESIS
   ) {
     thesis-study-originality-report-page(
-      thesis-title: thesis-title,
+      report-title: report-title,
       author: author,
       advisor: advisor,
       date: date,
@@ -147,7 +147,7 @@
       department: department,
       program: program,
       report-type: report-type,
-      thesis-title: thesis-title,
+      report-title: report-title,
       author: author,
       keywords: keywords.tur,
     )
@@ -163,7 +163,7 @@
       department: department,
       program: program,
       report-type: report-type,
-      thesis-title: thesis-title,
+      report-title: report-title,
       author: author,
       keywords: keywords.eng,
     )

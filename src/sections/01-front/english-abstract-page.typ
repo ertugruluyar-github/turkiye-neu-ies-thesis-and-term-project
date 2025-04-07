@@ -8,7 +8,7 @@
   department: none,
   program: none,
   report-type: none,
-  thesis-title: none,
+  report-title: none,
   author: none,
   keywords: none,
 ) = {
@@ -26,7 +26,7 @@
     department: department,
     program: program,
     report-type: report-type,
-    thesis-title: thesis-title.eng,
+    report-title: report-title.eng,
     author: author,
     abstract-text-content-file-path: "/template/sections/01-front/abstract-text-eng.typ",
     keywords-title: translator(key: language-keys.KEYWORDS),

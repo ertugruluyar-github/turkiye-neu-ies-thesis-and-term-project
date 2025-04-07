@@ -12,7 +12,7 @@
   department: none,
   program: none,
   report-type: none,
-  thesis-title: none,
+  report-title: none,
   author: none,
   work-packages: none,
   curriculum-vitae-info: none,
@@ -43,7 +43,7 @@
       department: department,
       program: program,
       report-type: report-type,
-      thesis-title: thesis-title,
+      report-title: report-title,
       author: author,
     )
   }

@@ -8,7 +8,7 @@
   department: none,
   program: none,
   report-type: none,
-  thesis-title: none,
+  report-title: none,
   author: none,
 ) = {
   // Dil kodunu al. [Get the language code.]
@@ -25,7 +25,7 @@
     department: department,
     program: program,
     report-type: report-type,
-    thesis-title: thesis-title.tur,
+    report-title: report-title.tur,
     author: author,
     abstract-text-content-file-path: "/template/sections/03-back/expanded-turkish-abstract-text.typ",
     keywords-title: translator(key: language-keys.KEYWORDS),

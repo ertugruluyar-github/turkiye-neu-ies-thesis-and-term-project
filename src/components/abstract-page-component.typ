@@ -1,5 +1,5 @@
 #import "/src/styles/abstract-page-style.typ": abstract-page-style
-#import "/src/components/thesis-title-text-component.typ": thesis-title-text-component
+#import "/src/components/report-title-text-component.typ": report-title-text-component
 #import "/src/components/fullname-component.typ": fullname-component
 #import "/src/components/keywords-component.typ": keywords-component
 
@@ -14,7 +14,7 @@
   department: none,
   program: none,
   report-type: none,
-  thesis-title: none,
+  report-title: none,
   author: none,
   abstract-text-content-file-path: none,
   keywords-title: none,
@@ -41,8 +41,8 @@
   // 1 karakter kadar miktarda boşluk bırak. [Leave a space of 1 character.]
   v(1em)
 
-  // Tez başlığı. [Thesis title.]
-  align(center, thesis-title-text-component(thesis-title: thesis-title))
+  // Rapor başlığı. [Report title.]
+  align(center, report-title-text-component(report-title: report-title))
 
   // 1 karakter kadar miktarda boşluk bırak. [Leave a space of 1 character.]
   v(1em)

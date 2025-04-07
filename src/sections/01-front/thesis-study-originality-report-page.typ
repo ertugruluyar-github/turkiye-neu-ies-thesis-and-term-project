@@ -6,7 +6,7 @@
 
 // Tez Çalışması Orijinallik Raporu sayfası. [Thesis Study Originality Report page.]
 #let thesis-study-originality-report-page(
-  thesis-title: none,
+  report-title: none,
   author: none,
   advisor: none,
   date: none,
@@ -18,7 +18,7 @@
 
   // Sayfa içeriğini ekle. [Add page content.]
   // Metin ekle. [Add text.]
-  [#text(style: "italic", thesis-title.tur.title-case) başlıklı tez çalışmamın toplam #included-page-count sayfalık kısmına ilişkin, #date-component(date: date) tarihinde tez danışmanım tarafından #text(weight: "bold")[Turnitin] adlı intihal tespit programından aşağıda belirtilen filtrelemeler uygulanarak alınmış olan orijinallik raporuna göre, tezimin benzerlik oranı #text(weight: "bold")[%#similarity-score] olarak belirlenmiştir.]
+  [#text(style: "italic", report-title.tur.title-case) başlıklı tez çalışmamın toplam #included-page-count sayfalık kısmına ilişkin, #date-component(date: date) tarihinde tez danışmanım tarafından #text(weight: "bold")[Turnitin] adlı intihal tespit programından aşağıda belirtilen filtrelemeler uygulanarak alınmış olan orijinallik raporuna göre, tezimin benzerlik oranı #text(weight: "bold")[%#similarity-score] olarak belirlenmiştir.]
 
   // Bir miktar boşluk bırak. [Leave some space.]
   v(0.5em)
