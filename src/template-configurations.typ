@@ -89,7 +89,6 @@
   ),
   // Raporun Türkçe ve İngilizce anahtar kelimeleri. Anahtar kelimelerin ilk harfi büyük diğer harfleri küçük olmalıdır. En az 3 adet ve en fazla 5 adet olmalıdır. [The Turkish and English keywords of the report. The first letter of the keywords must be uppercase and the other letters must be lowercase. There must be at least 3 and at most 5 keywords.]
   keywords: (
-    // Raporun Türkçe anahtar kelimeleri. [The Turkish keywords of the report.]
     tur: (
       "Anahtar kelime 1",
       "Anahtar kelime 2",
@@ -97,7 +96,6 @@
       "Anahtar kelime 4",
       "Anahtar kelime 5",
     ),
-    // Raporun İngilizce anahtar kelimeleri. [The English keywords of the report.]
     eng: (
       "Keyword 1",
       "Keyword 2",
@@ -139,27 +137,19 @@
       months: (1, 2),
     ),
     (
-      // İş paketinin açıklaması. [The description of the work package.]
       description: "Description 2",
-      // İş paketinin yapılacağı aylar. [The months when the work package will be done.]
       months: (2, 3, 4, 5),
     ),
     (
-      // İş paketinin açıklaması. [The description of the work package.]
       description: "Description 3",
-      // İş paketinin yapılacağı aylar. [The months when the work package will be done.]
       months: (5, 6, 7),
     ),
     (
-      // İş paketinin açıklaması. [The description of the work package.]
       description: "Description 4",
-      // İş paketinin yapılacağı aylar. [The months when the work package will be done.]
       months: (7, 8, 9),
     ),
     (
-      // İş paketinin açıklaması. [The description of the work package.]
       description: "Description 5",
-      // İş paketinin yapılacağı aylar. [The months when the work package will be done.]
       months: (9, 10, 11, 12),
     ),
   ),

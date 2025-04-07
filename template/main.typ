@@ -130,7 +130,6 @@
   ),
   // Raporun Türkçe ve İngilizce anahtar kelimeleri. Anahtar kelimelerin ilk harfi büyük diğer harfleri küçük olmalıdır. En az 3 adet ve en fazla 5 adet olmalıdır.
   keywords: (
-    // Raporun Türkçe anahtar kelimeleri.
     tur: (
       "Anahtar kelime 1",
       "Anahtar kelime 2",
@@ -138,7 +137,6 @@
       "Anahtar kelime 4",
       "Anahtar kelime 5",
     ),
-    // Raporun İngilizce anahtar kelimeleri.
     eng: (
       "Keyword 1",
       "Keyword 2",
@@ -180,27 +178,19 @@
       months: (1, 2),
     ),
     (
-      // İş paketinin açıklaması.
       description: "Ölçme aracının geliştirilmesi",
-      // İş paketinin yapılacağı aylar.
       months: (2, 3, 4, 5),
     ),
     (
-      // İş paketinin açıklaması.
       description: "Ölçme aracının uygulanması",
-      // İş paketinin yapılacağı aylar.
       months: (5, 6, 7),
     ),
     (
-      // İş paketinin açıklaması.
       description: "Verilerin çözümlenmesi ve yorumlanması",
-      // İş paketinin yapılacağı aylar.
       months: (7, 8, 9),
     ),
     (
-      // İş paketinin açıklaması.
       description: "Raporun (tezin) yazılması",
-      // İş paketinin yapılacağı aylar.
       months: (9, 10, 11, 12),
     ),
   ),
