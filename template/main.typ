@@ -86,7 +86,7 @@
   report-type: REPORT-TYPES.DOCTORAL-THESIS,
   // Tez önerisi ya da tezin teslim edildiği tarih. Varsayılan olarak bugünün tarihidir. Elle bir tarih girmek için "datetime(day: 20, month: 3, year: 2025)" yapınız.
   date: datetime.today(),
-  // Tez çalışmasının Türkçe ve İngilizce başlığı (başlık ve hepsi büyük harf biçiminde).
+  // Raporun Türkçe ve İngilizce başlığı (başlık ve hepsi büyük harf biçiminde).
   thesis-title: (
     tur: (
       title-case: "Tezin Başlığı",
@@ -122,14 +122,14 @@
     name: "Tez Çalışmasını Destekleyen Kurum Adı",
     project-no: "Proje Numarası",
   ),
-  // Tez çalışmasının orijinallik bilgisi. Örneğin Turnitin yazılımında tezin 78 sayfası taratıldı ve benzerlik oranı %17 çıktıysa "included-page-count: 78" ve "similarity-score: 17" şeklindedir.
+  // Tez çalışmasının orijinallik bilgisi. Örneğin Turnitin yazılımında tezin 78 sayfası taratıldı ve benzerlik oranı %17 ise "included-page-count: 78" ve "similarity-score: 17" şeklindedir.
   thesis-originalty: (
     included-page-count: 1,
     similarity-score: 0,
   ),
-  // Tez çalışmasının Türkçe ve İngilizce anahtar kelimeleri. Anahtar kelimelerin ilk harfi büyük diğer harfleri küçük olmalıdır. En az 3 adet ve en fazla 5 adet olmalıdır.
+  // Raporun Türkçe ve İngilizce anahtar kelimeleri. Anahtar kelimelerin ilk harfi büyük diğer harfleri küçük olmalıdır. En az 3 adet ve en fazla 5 adet olmalıdır.
   keywords: (
-    // Tez çalışmasının Türkçe anahtar kelimeleri.
+    // Raporun Türkçe anahtar kelimeleri.
     tur: (
       "Anahtar kelime 1",
       "Anahtar kelime 2",
@@ -137,7 +137,7 @@
       "Anahtar kelime 4",
       "Anahtar kelime 5",
     ),
-    // Tez çalışmasının İngilizce anahtar kelimeleri.
+    // Raporun İngilizce anahtar kelimeleri.
     eng: (
       "Keyword 1",
       "Keyword 2",
@@ -146,17 +146,17 @@
       "Keyword 5",
     ),
   ),
-  // Tablo figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-table-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-table-figures: false" yapınız.
+  // Tablo figürleri listesinin raporda yer almasını istiyorsanız "show-list-of-table-figures: true", istemiyorsanız "show-list-of-table-figures: false" yapınız.
   show-list-of-table-figures: true,
-  // Şekil figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-image-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-image-figures: false" yapınız.
+  // Şekil figürleri listesinin raporda yer almasını istiyorsanız "show-list-of-image-figures: true", istemiyorsanız "show-list-of-image-figures: false" yapınız.
   show-list-of-image-figures: true,
-  // Matematiksel Denklemler listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-equations: true" yapınız. Yer almasını istemiyorsanız "show-list-of-equations: false" yapınız.
+  // Matematiksel Denklemler listesinin raporda yer almasını istiyorsanız "show-list-of-equations: true", istemiyorsanız "show-list-of-equations: false" yapınız.
   show-list-of-equations: true,
-  // Kod figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-code-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-code-figures: false" yapınız.
+  // Kod figürleri listesinin raporda yer almasını istiyorsanız "show-list-of-code-figures: true", istemiyorsanız "show-list-of-code-figures: false" yapınız.
   show-list-of-code-figures: true,
-  // Tez çalışmasında simgeler kullandıysanız "Simgeler" başlığındaki içeriğin teze dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik teze dahil edilmeyecektir.
+  // Raporda simgeler kullandıysanız "Simgeler" başlığındaki içeriğin rapora dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik rapora dahil edilmeyecektir.
   have-symbols: true,
-  // Tez çalışmasında kısaltmalar kullandıysanız "Kısaltmalar" başlığındaki içeriğin teze dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik teze dahil edilmeyecektir.
+  // Raporda kısaltmalar kullandıysanız "Kısaltmalar" başlığındaki içeriğin rapora dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik rapora dahil edilmeyecektir.
   have-abbreviations: true,
   // Dönem projesinde "Giriş" başlığının teze dahil edilmesi için "have-introduction-in-term-project: true", dahil edilmemesi için "have-introduction-in-term-project: false" yapınız.
   have-introduction-in-term-project: true,
@@ -170,7 +170,7 @@
   have-discussion-conclusion-and-suggestions-in-term-project: true,
   // Tartışma, Sonuç ve Öneriler bölümünü alt başlıklara ayırarak yazmak istiyorsanız "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: true", alt başlıklar olmadan ana başlık altında yazmak istiyorsanız "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: false" yapınız.
   show-separated-sub-headings-in-discussion-conclusion-and-suggestions: true,
-  // Tez Önerisinde yer alan "Çalışma Takvimi" sayfasındaki "Çalışma Paketleri" kısmını doldurmak için her bir iş paketinizin açıklamasını ve hangi aylarda yapılacağını belirtiniz. Yüksek Lisans Tez Önerisi ise 12 aylık bir süre, Doktora Tez Önerisi ise 16 aylık bir süre için doldurulmalıdır. Yalnızca "report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL" ya da report-type: REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL" olduğunda çıktıda gözükecektir.
+  // Tez Önerisinde yer alan "Çalışma Takvimi" sayfasındaki "Çalışma Paketleri" kısmını doldurmak için her bir iş paketinizin açıklamasını ve hangi aylarda yapılacağını belirtiniz. Yüksek Lisans Tez Önerisi ise 12 aylık bir süre, Doktora Tez Önerisi ise 16 aylık bir süre için doldurulmalıdır. Yalnızca "report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL" ya da report-type: REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL" olduğunda raporda gözükecektir.
   work-packages: (
     (
       // İş paketinin açıklaması.

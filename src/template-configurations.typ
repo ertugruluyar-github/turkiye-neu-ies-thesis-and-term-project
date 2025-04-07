@@ -45,7 +45,7 @@
   report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL,
   // Tez önerisi ya da tezin teslim edildiği tarih. Varsayılan olarak bugünün tarihidir. Elle bir tarih girmek için "datetime(day: 20, month: 3, year: 2025)" yapınız. [The date of the thesis proposal or the date of the thesis delivery. The default is today's date. To enter a date manually, do "datetime(day: 20, month: 3, year: 2025)".]
   date: datetime.today(),
-  // Tez çalışmasının Türkçe ve İngilizce başlığı (başlık ve hepsi büyük harf biçiminde). [The Turkish and English title of the thesis study (titlecase and uppercase).]
+  // Raporun Türkçe ve İngilizce başlığı (başlık ve hepsi büyük harf biçiminde). [The Turkish and English title of the report (titlecase and uppercase).]
   thesis-title: (
     tur: (
       title-case: "Thesis Title",
@@ -81,14 +81,14 @@
     name: "Name of the Funding Organization Supporting the Thesis Study",
     project-no: "Project No",
   ),
-  // Tez çalışmasının orijinallik bilgisi. Örneğin Turnitin yazılımında tezin 78 sayfası taratıldı ve benzerlik oranı %17 çıktıysa "included-page-count: 78" ve "similarity-score: 17" şeklindedir. [The originality information of the thesis study. For example, if the thesis has 78 pages scanned in the Turnitin software and the similarity score is %17, it is "included-page-count: 78" and "similarity-score: 17".]
+  // Tez çalışmasının orijinallik bilgisi. Örneğin Turnitin yazılımında tezin 78 sayfası taratıldı ve benzerlik oranı %17 ise "included-page-count: 78" ve "similarity-score: 17" şeklindedir. [The originality information of the thesis study. For example, if the thesis has 78 pages scanned in the Turnitin software and the similarity score is %17, it is "included-page-count: 78" and "similarity-score: 17".]
   thesis-originalty: (
     included-page-count: 1,
     similarity-score: 0,
   ),
-  // Tez çalışmasının Türkçe ve İngilizce anahtar kelimeleri. Anahtar kelimelerin ilk harfi büyük diğer harfleri küçük olmalıdır. En az 3 adet ve en fazla 5 adet olmalıdır. [The Turkish and English keywords of the thesis study. The first letter of the keywords must be uppercase and the other letters must be lowercase. There must be at least 3 and at most 5 keywords.]
+  // Raporun Türkçe ve İngilizce anahtar kelimeleri. Anahtar kelimelerin ilk harfi büyük diğer harfleri küçük olmalıdır. En az 3 adet ve en fazla 5 adet olmalıdır. [The Turkish and English keywords of the report. The first letter of the keywords must be uppercase and the other letters must be lowercase. There must be at least 3 and at most 5 keywords.]
   keywords: (
-    // Tez çalışmasının Türkçe anahtar kelimeleri. [The Turkish keywords of the thesis study.]
+    // Raporun Türkçe anahtar kelimeleri. [The Turkish keywords of the report.]
     tur: (
       "Anahtar kelime 1",
       "Anahtar kelime 2",
@@ -96,7 +96,7 @@
       "Anahtar kelime 4",
       "Anahtar kelime 5",
     ),
-    // Tez çalışmasının İngilizce anahtar kelimeleri. [The English keywords of the thesis study.]
+    // Raporun İngilizce anahtar kelimeleri. [The English keywords of the report.]
     eng: (
       "Keyword 1",
       "Keyword 2",
@@ -105,17 +105,17 @@
       "Keyword 5",
     ),
   ),
-  // Tablo figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-table-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-table-figures: false" yapınız. [To show the list of table figures on the page where the list is located, do "show-list-of-table-figures: true". To not show the list, do "show-list-of-table-figures: false".]
+  // Tablo figürleri listesinin raporda yer almasını istiyorsanız "show-list-of-table-figures: true", istemiyorsanız "show-list-of-table-figures: false" yapınız. [If you want the list of table figures to be included in the report, do “show-list-of-table-figures: true”, if not, do “show-list-of-table-figures: false”.]
   show-list-of-table-figures: true,
-  // Şekil figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-image-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-image-figures: false" yapınız. [To show the list of image figures on the page where the list is located, do "show-list-of-image-figures: true". To not show the list, do "show-list-of-image-figures: false".]
+  // Şekil figürleri listesinin raporda yer almasını istiyorsanız "show-list-of-image-figures: true", istemiyorsanız "show-list-of-image-figures: false" yapınız. [If you want the list of image figures to be included in the report, do show-list-of-image-figures: true”, if not, do show-list-of-image-figures: false”.]
   show-list-of-image-figures: true,
-  // Matematiksel Denklemler listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-equations: true" yapınız. Yer almasını istemiyorsanız "show-list-of-equations: false" yapınız. [To show the list of equations on the page where the list is located, do "show-list-of-equations: true". To not show the list, do "show-list-of-equations: false".]
+  // Matematiksel Denklemler listesinin raporda yer almasını istiyorsanız "show-list-of-equations: true", istemiyorsanız "show-list-of-equations: false" yapınız. [If you want the list of equations to be included in the report, do "show-list-of-equations: true", if not, do "show-list-of-equations: false".]
   show-list-of-equations: true,
-  // Kod figürleri listesinin yer aldığı sayfanın çıktıda yer alması için "show-list-of-code-figures: true" yapınız. Yer almasını istemiyorsanız "show-list-of-code-figures: false" yapınız. [To show the list of code figures on the page where the list is located, do "show-list-of-code-figures: true". To not show the list, do "show-list-of-code-figures: false".]
+  // Kod figürleri listesinin raporda yer almasını istiyorsanız "show-list-of-code-figures: true", istemiyorsanız "show-list-of-code-figures: false" yapınız. [If you want the list of code figures to be included in the report, do "show-list-of-code-figures: true", if not, do "show-list-of-code-figures: false".]
   show-list-of-code-figures: true,
-  // Tez çalışmasında simgeler kullandıysanız "Simgeler" başlığındaki içeriğin teze dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik teze dahil edilmeyecektir. [To include the content of the "Symbols" heading in the thesis, do "have-symbols: true". However, if the thesis proposal is "true" or "false", the content of the "Symbols and Abbreviations" heading will not be included in the thesis.]
+  // Raporda simgeler kullandıysanız "Simgeler" başlığındaki içeriğin rapora dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik rapora dahil edilmeyecektir. [To include the content of the "Symbols" heading in the report, do "have-symbols: true". However, if the thesis proposal is "true" or "false", the content of the "Symbols and Abbreviations" heading will not be included in the report.]
   have-symbols: true,
-  // Tez çalışmasında kısaltmalar kullandıysanız "Kısaltmalar" başlığındaki içeriğin teze dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik teze dahil edilmeyecektir. [To include the content of the "Abbreviations" heading in the thesis, do "have-abbreviations: true". However, if the thesis proposal is "true" or "false", the content of the "Symbols and Abbreviations" heading will not be included in the thesis.]
+  // Raporda kısaltmalar kullandıysanız "Kısaltmalar" başlığındaki içeriğin rapora dahil edilmesi için "have-symbols: true" yapınız. Ancak, tez önerisi ise "true" ya da "false" olsa bile "Simgeler ve Kısaltmalar" başlığındaki içerik rapora dahil edilmeyecektir. [To include the content of the "Abbreviations" heading in the report, do "have-abbreviations: true". However, if the thesis proposal is "true" or "false", the content of the "Symbols and Abbreviations" heading will not be included in the report.]
   have-abbreviations: true,
   // Dönem projesinde "Giriş" başlığının teze dahil edilmesi için "have-introduction-in-term-project: true" yapınız. [To include the "Introduction" heading in the term project, do "have-introduction-in-term-project: true".]
   have-introduction-in-term-project: true,
@@ -129,7 +129,7 @@
   have-discussion-conclusion-and-suggestions-in-term-project: true,
   // Tartışma, Sonuç ve Öneriler bölümünü alt başlıklara ayırarak yazmak istiyorsanız "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: true", alt başlıklar olmadan ana başlık altında yazmak istiyorsanız "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: false" yapınız. [To write the Discussion, Conclusion and Suggestions section in subheadings, do "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: true". To write the section in the main heading without subheadings, do "show-separate-sub-headings-in-discussion-conclusion-and-suggestions: false".]
   show-separated-sub-headings-in-discussion-conclusion-and-suggestions: true,
-  // Tez Önerisinde yer alan "Çalışma Takvimi" sayfasındaki "Çalışma Paketleri" kısmını doldurmak için her bir iş paketinizin açıklamasını ve hangi aylarda yapılacağını belirtiniz. Yüksek Lisans Tez Önerisi ise 12 aylık bir süre, Doktora Tez Önerisi ise 16 aylık bir süre için doldurulmalıdır. Yalnızca "report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL" ya da report-type: REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL" olduğunda çıktıda gözükecektir. [To fill in the "Work Packages" section of the "Work Schedule" page of the thesis proposal, specify the description of each work package and when it will be done. The Master's thesis proposal is for 12 months and the doctoral thesis proposal is for 16 months. It will only appear in the output when report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type: REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL.]
+  // Tez Önerisinde yer alan "Çalışma Takvimi" sayfasındaki "Çalışma Paketleri" kısmını doldurmak için her bir iş paketinizin açıklamasını ve hangi aylarda yapılacağını belirtiniz. Yüksek Lisans Tez Önerisi ise 12 aylık bir süre, Doktora Tez Önerisi ise 16 aylık bir süre için doldurulmalıdır. Yalnızca "report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL" ya da report-type: REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL" olduğunda raporda gözükecektir. [To fill in the "Work Packages" section of the "Work Schedule" page of the thesis proposal, specify the description of each work package and when it will be done. The Master's thesis proposal is for 12 months and the doctoral thesis proposal is for 16 months. It will only appear in the report when report-type: REPORT-TYPES.MASTER-THESIS-PROPOSAL or report-type: REPORT-TYPES.DOCTORAL-THESIS-PROPOSAL.]
   work-packages: (
     (
       // İş paketinin açıklaması. [The description of the work package.]
