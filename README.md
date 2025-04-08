@@ -296,7 +296,7 @@ Bu durumda, ilk defa şablonu indirirken internete ihtiyaç vardır. İlk indirm
 
 </details>
 
-Şablonu, şablonun bütün dosyalarının bulunduğu [Geliştirici GitHub Reposu](https://github.com/ertugruluyar-github/turkiye-neu-ies-thesis-and-term-project) üzerinden manuel olarak bilgisayarınızda istediğiniz herhangi bir konuma indirerek kullanıyorsanız aşağıdaki gibi içe aktarma yapabilirsiniz:
+Şablonu, şablonun bütün dosyalarının bulunduğu [geliştiricinin GitHub deposu](https://github.com/ertugruluyar-github/turkiye-neu-ies-thesis-and-term-project) üzerinden manuel olarak bilgisayarınızda istediğiniz herhangi bir konuma indirerek kullanıyorsanız aşağıdaki gibi içe aktarma yapabilirsiniz:
 
 <details>
   <summary>Kodu göstermek/gizlemek için tıklayınız</summary>
@@ -528,7 +528,7 @@ If you are using the template by downloading it to the location mentioned [here]
 
 </details>
 
-If you are using the template by manually downloading it to any location on your computer from the [Developer GitHub Repo](https://github.com/ertugruluyar-github/turkiye-neu-ies-thesis-and-term-project) where all the template files are located, you can import it as follows:
+If you are using the template by manually downloading it to any location on your computer from the [developer's GitHub repository](https://github.com/ertugruluyar-github/turkiye-neu-ies-thesis-and-term-project) where all the template files are located, you can import it as follows:
 
 <details>
   <summary>Click to show/hide the code</summary>
