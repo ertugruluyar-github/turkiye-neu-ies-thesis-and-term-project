@@ -11,7 +11,7 @@
 // Şablonu yukarıda bahsedilen araçlarla çevrim içi kullanmak için aşağıdaki gibi içe aktarma yapabilirsiniz:
 // NOT: Tinymist Typst uzantısının 'Template Gallery'si üzerinden bir şablonu seçerek proje oluşturduğunuzda bu şekilde içe aktarma yapabilirsiniz.
 /*
-#import "@preview/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+#import "@preview/turkiye-neu-ies-thesis-and-term-project:1.0.0": (
   template-configurations,
   LANGUAGES,
   REPORT-TYPES,
@@ -27,7 +27,7 @@
 
 // Şablonu [adresindeki](https://github.com/typst/packages/?tab=readme-ov-file#local-packages) bahsedilen konuma indirerek kullanıyorsanız aşağıdaki gibi içe aktarma yapabilirsiniz:
 /*
-#import "@local/turkiye-neu-ies-thesis-and-term-project:0.1.0": (
+#import "@local/turkiye-neu-ies-thesis-and-term-project:1.0.0": (
   template-configurations,
   LANGUAGES,
   REPORT-TYPES,
