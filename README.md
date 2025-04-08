@@ -15,7 +15,6 @@
     - [Türkçe \[Turkish\]](#türkçe-turkish-1)
     - [İngilizce \[English\]](#i̇ngilizce-english-1)
   - [Türkçe \[Turkish\]](#türkçe-turkish-2)
-    - [Tanıtım Videosu](#tanıtım-videosu)
     - [Teşekkür](#teşekkür)
     - [Kullanılan Paketler](#kullanılan-paketler)
     - [Özellikler](#özellikler)
@@ -30,7 +29,6 @@
         - [Şablonu Tinymist Typst Visual Studio Code Uzantısıyla Kullanmak](#şablonu-tinymist-typst-visual-studio-code-uzantısıyla-kullanmak)
       - [Çevrim Dışı](#çevrim-dışı)
   - [İngilizce \[English\]](#i̇ngilizce-english-2)
-    - [Trailer Video](#trailer-video)
     - [Acknowledgement](#acknowledgement)
     - [Packages Used](#packages-used)
     - [Features](#features)
@@ -84,9 +82,6 @@ Resmî kılavuz ve şablonlar aşağıdaki verilen bağlantılarda yer almaktad�
 - [Term Project Sample Output](assets/sample-outputs/english/main_term-project-sample-output.pdf)
 
 ## Türkçe [Turkish]
-
-### Tanıtım Videosu
-TODO
 
 ### Teşekkür
 Bu proje yazılmadan önce ve sonrasında aşağıdaki projeler incelenerek bazı durumlarda fikir almak için yararlanılmıştır:
@@ -316,9 +311,6 @@ Bu durumda, ilk defa şablonu indirirken internete ihtiyaç vardır. İlk indirm
 </details>
 
 ## İngilizce [English]
-
-### Trailer Video
-TODO
 
 ### Acknowledgement
 Before and after writing this project, the following projects were examined and in some cases used for ideas:
