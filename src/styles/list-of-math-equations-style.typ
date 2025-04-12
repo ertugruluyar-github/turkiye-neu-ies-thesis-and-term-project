@@ -3,7 +3,7 @@
 #import "/src/constants/language-keys.typ": language-keys
 
 // Matematiksel Denklem listesi stili. [List of equations style.]
-#let list-of-equations-style(content) = {
+#let list-of-math-equations-style(content) = {
   // Ana hattın stili. [Outline style.]
   set outline(
     depth: none,
