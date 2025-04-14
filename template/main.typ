@@ -11,7 +11,7 @@
 // Şablonu yukarıda bahsedilen araçlarla çevrim içi kullanmak için aşağıdaki gibi içe aktarma yapabilirsiniz:
 // NOT: Tinymist Typst uzantısının 'Template Gallery'si üzerinden bir şablonu seçerek proje oluşturduğunuzda bu şekilde içe aktarma yapabilirsiniz.
 /*
-#import "@preview/utype-neuies-reports:1.0.1": (
+#import "@preview/utype-neuies-reports:1.1.0": (
   template-configurations,
   LANGUAGES,
   REPORT-TYPES,
@@ -27,7 +27,7 @@
 
 // Şablonu [adresindeki](https://github.com/typst/packages/?tab=readme-ov-file#local-packages) bahsedilen konuma indirerek kullanıyorsanız aşağıdaki gibi içe aktarma yapabilirsiniz:
 /*
-#import "@local/utype-neuies-reports:1.0.1": (
+#import "@local/utype-neuies-reports:1.1.0": (
   template-configurations,
   LANGUAGES,
   REPORT-TYPES,
