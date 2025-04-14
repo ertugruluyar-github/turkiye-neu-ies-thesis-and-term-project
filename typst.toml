@@ -1,6 +1,6 @@
 [package]
 name = "utype-neuies-reports"
-version = "1.0.0"
+version = "1.0.1"
 compiler = "0.13.1"
 entrypoint = "src/lib.typ"
 authors = ["Ertuğrul UYAR <@ertugruluyar-github>"]
