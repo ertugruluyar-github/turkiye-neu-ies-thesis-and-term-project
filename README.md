@@ -271,7 +271,7 @@ PREFACE = "ÖN SÖZ"
  <details>
   <summary>Hareketli görseli göstermek/gizlemek için tıklayınız</summary>
 
-<p align="center"><img src="assets/images/latex-tables.com-convert-tables-from-other-sources.gif" width=90%>&nbsp;</p>
+<p align="center"><img src="assets/images/latex-tables.com-convert-tables-from-other-sources.gif" width=100%>&nbsp;</p>
 
 </details>
 
@@ -537,7 +537,7 @@ The following animated image shows an example where a table copied from [jamovi]
 <details>
   <summary>Click to show/hide the animated image</summary>
 
-<p align="center"><img src="assets/images/latex-tables.com-convert-tables-from-other-sources.gif" width=90%>&nbsp;</p>
+<p align="center"><img src="assets/images/latex-tables.com-convert-tables-from-other-sources.gif" width=100%>&nbsp;</p>
 
 </details>
 
